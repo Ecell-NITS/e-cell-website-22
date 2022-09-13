@@ -11,7 +11,7 @@ router.get('/gallery',(req,res)=>{
     const params={'title':'gallery'}
     res.render('gallery',params)
 });
-router.get('/Ecell-Teams',(req,res)=>{
+router.get('/ecell-team',(req,res)=>{
     // res.send('hello!! this is express from node js')
     const params={'title':'contact'}
     res.render('our-team',params)
