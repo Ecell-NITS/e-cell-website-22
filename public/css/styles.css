@@ -227,8 +227,6 @@ body {
 .navbar li a {
   text-decoration: none;
   font-size: 1.5rem;
-  font-weight: bolder;
-  font-family: "poppins", "sans-serif";
   padding: 13px 12px;
   color: white;
 }
