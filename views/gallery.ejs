@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Cell Gallery</title>
+    <link
+      rel="icon"
+      href="./images/logo/ecell-logo-bw2.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" type="text/css" href="css/ecell-gallery.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <%- include('./partials/gallery/gallery_navbar.ejs'); -%> 
+    <%- include('./partials/gallery/banner_gallery.ejs'); -%> 
+    <%- include('./partials/gallery/all_gallery.ejs'); -%> 
+    <%- include('./partials/gallery/popular_gallery.ejs'); -%> 
+    <%- include('./partials/gallery/srijan_gallery.ejs'); -%> 
+    <%- include('./partials/gallery/empressario_gallery.ejs'); -%> 
+    <%- include('./partials/Shared/footer.ejs'); -%>
+    <!-- <script src="scriptgallery.js" defer></script> -->
+    <script
+      type="text/javascript"
+      src="javascripts/scriptgallery.js"
+      defer
+    ></script>
+  </body>
+</html>
