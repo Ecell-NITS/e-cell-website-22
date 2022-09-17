@@ -156,14 +156,12 @@ top: 0%;
       transform: translateY(-12px) rotate(-45deg);
       background-color:white;
   }
-
 }
 
 .bg-img{
-  background: url(/images/Bg_gallerY.jpg);
+  background: url(/images/Gallery/Bg_gallerY.jpg);
   background-size: cover;
   min-width: 100%;
-  
   padding-top: 56.23%;
   background-repeat: no-repeat;
   position: relative;
@@ -232,7 +230,6 @@ top: 0%;
 }
 
 @media screen and (max-width: 700px){
-
   .Banner_navbar{
     top: -3rem;
     height: 6rem;
