@@ -9,7 +9,7 @@ function App() {
       <BrowserRouter>
           <Routes>
             <Route exact path="/" element={< HomePage />} key='route-home-screen' />
-            <Route exact path="/gallery" element={< GalleryPage />} key='route-gallery-screen' />
+            <Route exact path="/gallery" element={< GalleryPage />} key='route-gallery-screen' />           
           </Routes>
       </BrowserRouter>
   </>
