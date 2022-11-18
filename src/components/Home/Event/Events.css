@@ -1,0 +1,143 @@
+*{
+    font-family: 'Barlow Condensed', sans-serif;
+}
+.heading {
+    text-align: center;
+}
+
+.heading h1 {
+    display: inline-block;
+    border-bottom: 2px solid rgb(10, 10, 70);
+    color: rgb(10, 10, 70);
+    width: 90%;
+    letter-spacing: 0.5px;
+    font-size: 4rem;
+    font-weight: 600;
+}
+
+.item-head{
+    text-align: center;
+    transform: translateY(2vh);
+    position: relative;
+    top: 20%;
+    transition: all .5s ease-out;
+}
+
+.event_items {
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    margin-bottom: 50vh;
+}
+.ev{
+    width: 25%;
+    min-height: 60vh;
+    overflow: hidden;
+    padding: 2rem 0rem;
+    color: white;
+}
+.item1,
+.item2,
+.item3,
+.item4 {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    box-shadow: inset 0 0 0 1000px rgba(1, 51, 91, 0.7);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: all 0.5s ease-out;
+
+}
+
+.item1 {
+    background-image: url(./orientation.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.item2 {
+    background-image: url(./empreserrio.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.item3 {
+    background-image: url(./srijan.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.item4 {
+    background-image: url(./incubation.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.child {
+    visibility: hidden;
+    opacity: 0;
+    transition:all .3s ease-out;
+    transform: translateY(10vh);
+    font-size: 1rem;
+    font-weight: 550;
+}
+
+
+.item1:hover,
+.item2:hover,
+.item3:hover,
+.item4:hover {
+    cursor: pointer;
+    width: 50%;
+    transition: all 0.5s ease-out;
+    padding: 0rem 5rem;
+}
+
+.ev:hover .item-head{
+    transform: scale(1);
+    transform: translateY(-5vh);
+}
+.ev:hover .child,
+.ev:hover .child,
+.ev:hover .child,
+.ev:hover .child {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+@media only screen and (max-width: 1130px) {
+    .event_items{
+        flex-direction: column;
+        visibility: visible;
+    }
+    .ev{
+        width: 100%;
+        min-height: 50vh;
+        overflow: hidden;
+    }
+    .ev:hover .item-head{
+        transform: scale(1);
+        transform: translateY(-2vh);
+    }
+
+    .item1:hover, .item2:hover, .item3:hover, .item4:hover{
+        width: 100%;
+        padding: 1rem 1.5rem;
+    }
+    .item1,
+    .item2,
+    .item3,
+    .item4 {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .child{
+        transform: translateY(3vh);
+
+    }
+}
