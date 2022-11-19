@@ -1,0 +1,123 @@
+.wrapper{
+    width: 100%;
+    max-width: 90rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin: 0 auto;
+  }
+  
+  .brand-logo{
+    width: 3rem;
+}
+  .navbar{
+    width: 100%;
+    height: 5rem;
+    padding: 1.875rem;
+    background-color: transparent;
+    /* background-color: rgba(128, 128, 128, 0.489); */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 20;
+    position: fixed;
+  }
+  
+  .navbar .logo{
+    color: #D9D2C3;
+    font-size: 1.75rem;
+    font-weight: 600;
+  }
+  
+  .navbar .links{
+    list-style: none;
+    display: flex;
+    color: #D9D2C3;
+    cursor: pointer;
+  }
+  
+  .navbar .links li{
+    margin: 0 .9375rem;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .links a{
+    transition: all .15s ease-in-out;
+  }
+
+  /* .links a:visited{
+    color: #4267b2;
+  } */
+
+ 
+  .links a:hover{
+    color: #1da1f2;
+  }
+  
+  .navbar .toggle-icon{
+    display: none
+  }
+  
+  
+  @media(max-width: 768px){
+    .navbar{
+      position: relative;
+      transition: 0.5s all ease-in-out;
+    }
+  
+    .navbar.expanded{
+      height: 100vh;
+      background-color: #161c2f;
+    }
+  
+    .navbar.expanded .links{
+      position: absolute;
+      top: 7.5rem;
+      left: 0;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      opacity: 1;
+    }
+  
+    .navbar.expanded .links li{
+      margin: .9375rem 0;
+      font-size: 1.5rem;
+    }
+  
+    .navbar .logo{
+      position: absolute;
+      top: .75rem;
+      left: .9375rem;
+    }
+  
+    .navbar .toggle-icon{
+      display: block;
+      color: #D9D2C3;
+      position: absolute;
+      top: 1.4rem;
+      right: 1.25rem;
+    }
+  
+    .navbar .links{
+      position: absolute;
+      top: -18.75rem;
+      left: 0;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: all 0.5s ease-in-out;
+    }
+  
+    .navbar .links li{
+      margin: .9375rem 0;
+      font-size: 1.5rem;
+    }
+  }
