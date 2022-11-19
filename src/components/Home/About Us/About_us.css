@@ -28,6 +28,7 @@
 .about_heading {
   /* width: 240px; */
   /* height: fit-content; */
+  margin-top: 2rem;
   font-family: "Barlow Condensed";
   font-style: normal;
   font-weight: 600;
