@@ -15,10 +15,10 @@ const Hero = () => {
         <Typed
           className="typewriter-hero"
           strings={[
-            "Welcome to Entrepreneurship Cell!", //more relevant text can be added
+            "Welcome to Entrepreneurship Cell !", //more relevant text can be added
             "For The NITS by the NITS!",
             "We help startups to achieve their dream.",
-            "This is ECELL NITS!",
+            "This is ECELL NITS !",
           ]}
           typeSpeed={50}
           backSpeed={20}

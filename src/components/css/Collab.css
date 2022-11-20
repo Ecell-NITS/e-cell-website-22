@@ -197,6 +197,8 @@ background-color: white;
 
     .collab-content p{
         font-size: 18px;
+        padding-right: .3rem;
+        text-align: justify;
     }
 }
 
