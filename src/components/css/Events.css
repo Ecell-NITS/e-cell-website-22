@@ -11,8 +11,9 @@
     color: rgb(10, 10, 70);
     width: 90%;
     letter-spacing: 0.5px;
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: 600;
+    margin-bottom: 2rem;
 }
 
 .item-head{
@@ -27,7 +28,6 @@
     display: flex;
     justify-content: space-between;
     overflow: hidden;
-    margin-bottom: 50vh;
 }
 .ev{
     width: 25%;
@@ -52,26 +52,27 @@
 }
 
 .item1 {
-    background-image: url(../../../../public/images/events/orientation.jpg);
+    /* background-image: url(../../../../public/images/events/orientation.jpg); */
+    background: url(../../../public/images/events/orientation.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 .item2 {
-    background-image: url(../../../../public/images/events/empreserrio.jpg);
+    background-image: url(../../../public/images/events/empreserrio.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 .item3 {
-    background-image: url(../../../../public/images/events/srijan.jpg);
+    background-image: url(../../../public/images/events/srijan.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 
 }
 
 .item4 {
-    background-image: url(../../../../public/images/events/incubation.jpg);
+    background-image: url(../../../public/images/events/incubation.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 
@@ -110,6 +111,8 @@
 .ev:hover .child {
     visibility: visible;
     opacity: 1;
+    line-height: 1.5rem;
+    letter-spacing: 0.5px;
 }
 
 
@@ -125,12 +128,12 @@
     }
     .ev:hover .item-head{
         transform: scale(1);
-        transform: translateY(-2vh);
+        transform: translateY(-3vh);
     }
 
     .item1:hover, .item2:hover, .item3:hover, .item4:hover{
         width: 100%;
-        padding: 1rem 1.5rem;
+        padding: 1rem 1rem;
     }
     .item1,
     .item2,
@@ -141,7 +144,6 @@
     }
     .child{
         transform: translateY(3vh);
-        line-height: 2rem;
         letter-spacing: 0.5px;
     }
 }

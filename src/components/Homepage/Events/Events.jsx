@@ -1,5 +1,6 @@
 import React from 'react'
-import './Events.css'
+// import './Events.css'
+import '../../css/Events.css';
 function Events() {
   return (
     <>
