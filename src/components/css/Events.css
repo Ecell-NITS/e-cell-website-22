@@ -1,6 +1,10 @@
 *{
     font-family: 'Barlow Condensed', sans-serif;
 }
+.event_main{
+    position: relative;
+    z-index: 9;
+}
 .heading {
     text-align: center;
 }
@@ -11,7 +15,7 @@
     color: rgb(10, 10, 70);
     width: 90%;
     letter-spacing: 0.5px;
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 600;
     margin-bottom: 2rem;
 }
@@ -28,6 +32,8 @@
     display: flex;
     justify-content: space-between;
     overflow: hidden;
+    /* margin-bottom: 50vh; */
+
 }
 .ev{
     width: 25%;
