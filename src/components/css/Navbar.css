@@ -9,19 +9,25 @@
   .brand-logo{
     width: 3rem;
 }
+
   .navbar{
     width: 100%;
-    height: 5rem;
+    height: 4rem;
     padding: 1.875rem;
     background-color: transparent;
-    /* background-color: rgba(128, 128, 128, 0.489); */
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 20;
+    transition: all .3s ease-out;
     position: fixed;
   }
   
+  .expanded{
+    background-color: #224259;
+    box-shadow: 0px 4px 12px 0px #22425966;
+  }
+
   .navbar .logo{
     color: #D9D2C3;
     font-size: 1.75rem;
@@ -67,9 +73,10 @@
       transition: 0.5s all ease-in-out;
     }
   
+   
     .navbar.expanded{
       height: 100vh;
-      background-color: #161c2f;
+      background-color: #224259;
     }
   
     .navbar.expanded .links{
