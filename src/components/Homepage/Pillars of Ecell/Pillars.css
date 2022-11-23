@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600&display=swap");
 
+.Pillar_of_Ecell {
+  padding: 0 7%;
+  position: relative;
+  z-index: 9;
+}
+
+
 .container {
   text-align: center;
 }
