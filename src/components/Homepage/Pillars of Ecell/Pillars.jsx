@@ -49,7 +49,7 @@ const Pillars = () => {
   ];
 
   return (
-    <div style={{ padding: "0 7%" }}>
+    <div className="Pillar_of_Ecell">
       <div className="container">
         <h1 className="header">PILLARS OF ECELL</h1>
       </div>
