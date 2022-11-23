@@ -11,24 +11,24 @@ const Footerconstant = () => {
                 <a href="https://www.instagram.com/ecell.nitsilchar/" rel="noreferrer" target="_blank" >
                     <button className="ig-btn">
                         {" "}
-                        <AiOutlineInstagram className="ig-icon" size={30} />
+                        <AiOutlineInstagram className="ig-icon" size={31} />
                     </button>
                 </a>
                 <a href="https://www.linkedin.com/in/e-cell-nit-silchar-848602154" rel="noreferrer" target="_blank" >
                     <button className="li-btn">
-                        <RiLinkedinFill className="li-icon" size={30} />
+                        <RiLinkedinFill className="li-icon" size={31} />
                     </button>
                 </a>
                 <a href="https://twitter.com" rel="noreferrer" target="_blank" >
                     <button className="fa-btn tw">
                         {" "}
-                        <BsTwitter className="fa-icon tw-i" size={30} />
+                        <BsTwitter className="fa-icon tw-i" size={28} />
                     </button>
                 </a>
                 <a href="https://www.facebook.com/ecell.nit.silchar/" rel="noreferrer" target="_blank" >
                     <button className="fa-btn">
                         {" "}
-                        <FaFacebookF className="fa-icon" size={30} />
+                        <FaFacebookF className="fa-icon" size={31} />
                     </button>
                 </a>
             </div>

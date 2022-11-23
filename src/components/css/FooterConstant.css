@@ -17,11 +17,12 @@
     cursor: pointer;
     border-radius: 50%;
     margin-top: 1rem;
-    padding: .5rem;
+    width: 3.3rem;
+    height: 3.3rem;
     justify-content: center;
     align-items: center;
     border-color: transparent;
-    box-shadow: 0 0 .9375rem;
+    box-shadow: 0 0 .3375rem;
 }
 
 
@@ -87,17 +88,17 @@
     }
 
     .fa-btn, .li-btn, .ig-btn{
-        margin-top: .8rem;
-        margin-left: 0.8rem;
-        padding: .3rem;
+        height: 2.3rem;
+        width: 2.3rem;
     }
 
     .fa-icon{
-        width: 1.3rem;
+        width: .85rem;
+        /* margin-bottom: .2rem; */
     }
 
     .ig-icon{
-        width: 1.5rem;
+        width: 1.45rem;
     }
 
     .li-icon{

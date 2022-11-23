@@ -10,6 +10,7 @@
    padding-bottom: 0;
    height: 100vh;
    opacity: 1;
+   background-attachment: fixed;
 }
 
 .hero-top-main{
