@@ -2,8 +2,9 @@ import React, { useEffect } from 'react'
 import Collaboration from '../Homepage/Collaboration';
 import Hero from '../Homepage/Hero';
 import Testimonial from '../Homepage/Testimonial';
-import About_us from '../Home/About Us/About_us';
+import Aboutus from '../Home/About Us/About_us';
 import Events from '../Homepage/Events/Events';
+import Pillars from '../Homepage/Pillars of Ecell/Pillars'
 const Home = () => {
   useEffect(() => {
     document.title = "ECELL | NITS >> Home";
@@ -12,9 +13,10 @@ const Home = () => {
     <>
       <Hero />
       <Collaboration />
-      <About_us />
+      <Aboutus />
       <Events />
       <Testimonial />
+      <Pillars />
     </>
   )
 }
