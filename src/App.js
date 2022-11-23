@@ -4,6 +4,7 @@ import Home from "./components/pages/Home";
 import Gallery from "./components/pages/Gallery";
 import Footerconstant from "./components/shared/Footerconstant";
 import NotFound from "./components/shared/NotFound";
+import ScrollToTop from "./components/shared/ScrollToTop";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           />
              <Route path="*" element={<NotFound />} />
         </Routes>
+        <ScrollToTop />
         <Footerconstant />
       </BrowserRouter>
     </>

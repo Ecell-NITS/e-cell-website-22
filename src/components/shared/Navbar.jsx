@@ -10,8 +10,18 @@ const Navbar = () => {
     setToggle(!toggle);
   }
 
+  const changeToggle = () => {
+    if (window.scrollY >= 90 && window.innerWidth > 1000){
+      setToggle(true);
+    } else {
+      setToggle(false);
+    }
+  };
+  window.addEventListener("scroll", changeToggle);
+
+
   return (
-    <nav className={toggle ? 'navbar expanded' : 'navbar'}>
+    <nav className={ toggle ? 'navbar expanded' : 'navbar'}>
       <Link to="/">
         <img className='brand-logo logo' src="./images/ecell-logo-bw2.png" alt="ecell-logo-bw2" />
       </Link>
