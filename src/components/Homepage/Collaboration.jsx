@@ -10,10 +10,10 @@ import Pnb from '../collaboration/Pnb';
 const Collaboration = () => {
     const [active, setActive] = useState("Rupay");
 
-    const [grey, setGrey] = useState(false);
-    const handleClick = () => {
-        setGrey(!grey)
-    };
+    // const [grey, setGrey] = useState(false);
+    // const handleClick = () => {
+    //     setGrey(!grey)
+    // };
 
 
     return (
