@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600&display=swap");
 
+.Pillar_of_Ecell {
+  padding: 0 7%;
+  position: relative;
+  z-index: 9;
+}
+
 .container {
   text-align: center;
 }
@@ -58,16 +64,17 @@
 }
 
 .btns {
+  z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 3% 5% 5%;
+  margin: 0 5% 5%;
 }
 
 .prev,
 .next {
   /* White */
-
+  cursor: pointer;
   background: #ffffff;
   /* Stroke */
 
