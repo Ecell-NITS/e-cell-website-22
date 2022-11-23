@@ -19,33 +19,19 @@
   font-weight: 600;
   font-size: 70px;
   line-height: 84px;
-  /* identical to box height */
-
   text-align: center;
-
-  /* Dark Blue */
-
   color: #224259;
-
-  /* Inside auto layout */
-
   flex: none;
   order: 0;
   flex-grow: 0;
 }
 
 .horizontal-line {
-  /* Vector 1 */
 
   width: 100%;
   height: 0px;
 
-  /* Dark Blue */
-
   border-top: 2px solid #224259;
-
-  /* Inside auto layout */
-
   flex: none;
   order: 1;
   flex-grow: 0;
@@ -73,15 +59,11 @@
 
 .prev,
 .next {
-  /* White */
   cursor: pointer;
   background: #ffffff;
-  /* Stroke */
-
   border: 1px solid #9a9494;
   width: 36px;
   height: 33px;
-
   transition: all 0.2s ease-in-out;
 }
 
@@ -153,7 +135,7 @@
   }
 }
 
-@media only screen and (max-width : 780px) {
+@media only screen and (max-width: 780px) {
   .header {
     font-size: 55px;
   }
