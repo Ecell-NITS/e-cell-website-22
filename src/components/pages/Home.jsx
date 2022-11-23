@@ -14,9 +14,9 @@ const Home = () => {
       <Hero />
       <Collaboration />
       <Aboutus />
+      <Pillars />
       <Events />
       <Testimonial />
-      <Pillars />
     </>
   )
 }
