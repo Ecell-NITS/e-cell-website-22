@@ -2,6 +2,7 @@ import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import HomePage from './pages/HomePage/HomePage';
 import GalleryPage from './pages/GalleryPage/GalleryPage';
+import Timeline from './components/Home/Timeline/Timeline';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
             <Route exact path="/gallery" element={< GalleryPage />} key='route-gallery-screen' />
           </Routes>
       </BrowserRouter>
+      <Timeline />
   </>
   );
 }
