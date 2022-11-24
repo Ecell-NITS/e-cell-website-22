@@ -69,6 +69,7 @@
 
 .description {
   /* Content */
+  margin: 20px 0;
   height: 330px;
   font-family: "Barlow Condensed";
   font-style: normal;
