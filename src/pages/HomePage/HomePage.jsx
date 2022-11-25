@@ -1,16 +1,15 @@
 import React from 'react'
 import Navbar from '../../components/Home/Navbar/Navbar'
 import Hero from '../../components/Home/Hero/Hero'
-// import Timeline from '../../components/Home/Timeline/Timeline'
+import About from '../../components/Home/About Us/About_us'
 
 function HomePage() {
   return (
     <div>
         <Navbar />
         <Hero />
-        {/* <Timeline/> */}
+        <About />
+        
     </div>
   )
 }
-
-export default HomePage

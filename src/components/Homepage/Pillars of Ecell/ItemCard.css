@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600&display=swap");
+
+.Item {
+  /* Pillars of E-Cell */
+
+  /* Auto layout */
+  width: 32%;
+  margin : 5% 0.7%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  gap: 46px;
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.frame {
+  transition: all 0.5s ease-in-out;
+}
+
+.frame:hover {
+  transform: scale(1.01);
+}
+
+.rectangle {
+  /* Rectangle 691 */
+  position: relative;
+  left: 0px;
+  top: 0px;
+
+  background: #ffffff;
+  border-radius: 12px;
+  border: 0.7px solid #b2adad;
+  padding: 0 20px 20px;
+
+  transition: all 0.5s ease-in-out;
+}
+
+.rectangle:hover {
+  box-shadow: 8px 7px 18px rgb(194, 194, 194);
+}
+
+.triangle {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(100%);
+  width: 0; 
+  height: 0; 
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid #b2adad;
+}
+
+.triangle::after{
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 19px solid transparent;
+  border-right: 19px solid transparent;
+  border-top: 19px solid #fff;
+  position: absolute;
+  transform: translateX(-50%) translateY(-106%);
+}
+
+.description {
+  /* Content */
+  margin: 20px 0;
+  height: 330px;
+  font-family: "Barlow Condensed";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+
+  /* Text Color */
+
+  color: #505050;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.name {
+  /* Content Bold */
+
+  font-family: "Barlow Condensed";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 34px;
+  /* identical to box height */
+
+  display: block;
+  text-align: right;
+
+  /* Dark Blue */
+
+  color: #224259;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.designation {
+  font-family: "Barlow Condensed";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  /* identical to box height */
+
+  display: block;
+  text-align: right;
+
+  /* Medium Blue */
+
+  color: #3e618e;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.ellipse img {
+    width: 176px;
+    height: 176px;
+
+    border-radius: 100%;
+}
+
+@media only screen and (max-width : 1170px) {
+  .Item {
+    width: 60%;
+  }
+
+  .description{
+    height: auto;
+  }
+}
+
+@media only screen and (max-width : 780px) {
+  .Item {
+    width: 80%;
+    margin-bottom: 50px;
+  }
+}
