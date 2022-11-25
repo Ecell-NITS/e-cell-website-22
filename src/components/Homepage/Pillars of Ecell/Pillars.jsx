@@ -1,52 +1,31 @@
-import React, {useRef} from "react";
+import React, { useRef, useState, useEffect } from "react";
 import ItemCard from "./ItemCard";
 import "./Pillars.css";
 
-
 const Pillars = () => {
   let cardHolder = useRef();
+
+  function handleNext() {
+    cardHolder.current.scrollLeft += 0.334 * cardHolder.current.offsetWidth;
+  }
+
+  function handlePrev() {
+    cardHolder.current.scrollLeft -= 0.334 * cardHolder.current.offsetWidth;
+  }
+
+  const [info, setinfo] = useState([]);
   
-
-  function handleNext () {
-    cardHolder.current.scrollLeft += (0.334*cardHolder.current.offsetWidth);
-  };
-
-  function handlePrev () {
-    cardHolder.current.scrollLeft -= (0.334*cardHolder.current.offsetWidth);
-  };
-
-  let info = [
-    {
-      id: "1",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus necfringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit Morbi convallis convallis diam sit amet lacinia. Aliquam in elementum tellus.accumsan",
-      name: "Prof. Shivaji Bandhopadhyay",
-      designation: "Director, NIT Sichar",
-    },
-    {
-      id: "2",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus necfringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit Morbi convallis convallis diam sit amet lacinia. Aliquam in elementum tellus.accumsan",
-      name: "Prof. Wasim Arif",
-      designation: "Asso Dean SW, NIT Sichar",
-    },
-    {
-      id: "3",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus necfringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit Morbi convallis convallis diam sit amet lacinia. Aliquam in elementum tellus.accumsan",
-      name: "Prof. Shivaji Bandhopadhyay",
-      designation: "Director, NIT Sichar",
-    },
-    {
-      id: "4",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus necfringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit Morbi convallis convallis diam sit amet lacinia. Aliquam in elementum tellus.accumsan",
-      name: "Prof. Shivaji Bandhopadhyay",
-      designation: "Director, NIT Sichar",
-    },
-    {
-      id: "5",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus necfringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit Morbi convallis convallis diam sit amet lacinia. Aliquam in elementum tellus.accumsan",
-      name: "Prof. Shivaji Bandhopadhyay",
-      designation: "Director, NIT Sichar",
-    }
-  ];
+  useEffect(() => {
+    fetch("/Pillars.json")
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data.People)
+        setinfo(data.People)
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
 
   return (
     <div className="Pillar_of_Ecell">
@@ -55,17 +34,17 @@ const Pillars = () => {
       </div>
       <hr className="horizontal-line" />
       <div className="Card-holder" ref={cardHolder}>
-          {info.map((element) => {
-            return (
-              <ItemCard
-                key={element.id}
-                id={element.id}
-                desc={element.desc}
-                name={element.name}
-                designation={element.designation}
-              />
-            )
-          })}
+        {info.map((element) => {
+          return (
+            <ItemCard
+              key={element.id}
+              id={element.id}
+              desc={element.desc}
+              name={element.name}
+              designation={element.designation}
+            />
+          );
+        })}
       </div>
       <div className="btns">
         <button className="prev" onClick={handlePrev}>
