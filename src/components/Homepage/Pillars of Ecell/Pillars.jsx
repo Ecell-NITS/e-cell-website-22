@@ -19,7 +19,6 @@ const Pillars = () => {
     fetch("/Pillars.json")
       .then((res) => res.json())
       .then((data) => {
-        console.log(data.People)
         setinfo(data.People)
       })
       .catch((err) => {
