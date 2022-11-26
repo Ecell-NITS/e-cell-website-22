@@ -14,12 +14,12 @@ const Pillars = () => {
   }
 
   const [info, setinfo] = useState([]);
-  
+
   useEffect(() => {
     fetch("/Pillars.json")
       .then((res) => res.json())
       .then((data) => {
-        setinfo(data.People)
+        setinfo(data.People);
       })
       .catch((err) => {
         console.log(err);
