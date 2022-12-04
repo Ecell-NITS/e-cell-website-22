@@ -5,8 +5,8 @@ import './Timeline.css'
 function Timeline() {
   return (
     <div className='timeline-section'>
-      <div className="collab bor-btm">
-        <h1 className='h1'>TIMELINE</h1>
+      <div className="bor-btm">
+        <h1 className='testimonial-h1'>TIMELINE</h1>
       </div>
 
       <div className="timeline-main">

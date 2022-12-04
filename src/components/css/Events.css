@@ -15,7 +15,7 @@
     color: rgb(10, 10, 70);
     width: 90%;
     letter-spacing: 0.5px;
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: 600;
     margin-bottom: 2rem;
 }
@@ -33,7 +33,7 @@
     justify-content: space-between;
     overflow: hidden;
     /* margin-bottom: 50vh; */
-
+    height: 72vh;
 }
 .ev{
     width: 25%;

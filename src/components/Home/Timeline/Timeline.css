@@ -68,14 +68,13 @@
     border-bottom: 5px solid white;
 }
 
-.h1 {
+.testimonial-h1 {
     margin: auto;
     width: 1360px;
-    height: 90px;
     font-family: 'Barlow Condensed', sans-serif;
     font-style:normal;
     font-weight: 600;
-    font-size: 5rem;
+    font-size: 4rem;
     line-height: 84px;
     border-bottom: 2px solid white;
     padding-top: 30px;

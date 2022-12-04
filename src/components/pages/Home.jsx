@@ -5,7 +5,8 @@ import Testimonial from '../Homepage/Testimonial';
 import Aboutus from '../Home/About Us/About_us';
 import Events from '../Homepage/Events/Events';
 import Pillars from '../Homepage/Pillars of Ecell/Pillars'
-import Timeline from './components/Home/Timeline/Timeline';
+import Timeline from '../Home/Timeline/Timeline';
+import Footer from '../footer/Footer';
 const Home = () => {
   useEffect(() => {
     document.title = "ECELL | NITS >> Home";
@@ -19,6 +20,7 @@ const Home = () => {
       <Events />
       <Timeline />
       <Testimonial />
+      <Footer />
     </>
   )
 }

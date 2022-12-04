@@ -38,7 +38,7 @@ function About_us() {
       </div>
       {/* for cards */}
       <div className="motto">
-        <h3>MOTTO</h3>
+        <h3 style={{fontSize: "64px"}}>MOTTO</h3>
       </div>
       <div className="test_card">
         <div className="cards-set-1">
