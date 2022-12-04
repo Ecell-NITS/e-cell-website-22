@@ -41,6 +41,10 @@
     overflow: hidden;
     padding-bottom: 2rem;
     color: white;
+    background-attachment: fixed !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .item1,
 .item2,
