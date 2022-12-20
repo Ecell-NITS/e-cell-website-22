@@ -21,7 +21,6 @@
     max-height: 120vh;
 }
 
-
 .c1{
    display: flex;
     width: 90%;
@@ -136,6 +135,7 @@
 }
 
 
+
 .carousel .control-prev.control-arrow{
     left: 70% !important;
     top: 89% !important;
@@ -172,7 +172,10 @@
 }
 
 @media only screen and (max-width:660px){
-    
+    .test-m-t{
+        max-height: 140vh;
+    }
+
     .c1{
        width: 100%;
        flex-direction: column;
@@ -199,6 +202,7 @@
        transform: translateY(-7vh);
        padding: 10vh 3rem 1.5rem 1.2rem !important;
        max-height: fit-content;
+       /* padding-bottom: 20vh !important; */
     }
    
     .main-testi-content{
@@ -226,8 +230,18 @@
 
    }
 
-@media only screen and (max-width:320px){
+   @media only screen and (max-width:361px){
+    .test-m-t{
+        max-height: 145vh;
+    }
+   }
+
+@media only screen and (max-width:321px){
     .carousel .control-next.control-arrow{
         right: 40% !important;
+    }
+
+    .test-m-t{
+        max-height: 175vh;
     }
 }
