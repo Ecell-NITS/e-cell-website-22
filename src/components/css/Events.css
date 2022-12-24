@@ -32,19 +32,13 @@
     display: flex;
     justify-content: space-between;
     overflow: hidden;
-    /* margin-bottom: 50vh; */
-    height: 72vh;
 }
-.ev{
+.ev {
     width: 25%;
     min-height: 60vh;
     overflow: hidden;
     padding-bottom: 2rem;
     color: white;
-    background-attachment: fixed !important;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 .item1,
 .item2,
@@ -62,7 +56,6 @@
 }
 
 .item1 {
-    /* background-image: url(../../../../public/images/events/orientation.jpg); */
     background: url(../../../public/images/events/orientation.jpg);
     background-size: cover;
     background-repeat: no-repeat;
