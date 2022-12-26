@@ -6,13 +6,14 @@ import Team from "./components/pages/Team";
 import Footerconstant from "./components/shared/Footerconstant";
 import NotFound from "./components/shared/NotFound";
 import ScrollToTop from "./components/shared/ScrollToTop";
-
+import Team from "./components/pages/Team";
 function App() {
   return (
     <>
       <BrowserRouter>
         <Routes>
           <Route exact path="/" element={<Home />} key="route-home-screen" />
+          <Route exact path="/team" element={<Team />} />
           <Route
             exact
             path="/gallery"

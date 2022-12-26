@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.team-top{
+    padding-top: 4rem;
+    min-height: 100vh;
+   background: url(../../../public/images/Team/teamhero.jpeg);
+   background-position: right, left;
+  background-repeat: no-repeat;
+  background-size: 60% 100%;
+  background-attachment: scroll;
+  background-color: white;
+}
+
+.team-top h1, .team-top span{
+    color: #224259;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 7.5rem;
+    line-height: 1.2;
+    font-weight: 700;
+    padding-left: 7%;
+}
+
+.er{
+    color: white !important;
+    padding-left: 0 !important;
+}
+
+.mem-part{
+    padding-left: 0 !important;
+}
+
+.me-ou{
+    padding-top: 5%;
+}
+
+@media only screen and (max-width:1225px){
+    .team-top{
+        background-size: cover;
+        background-position: center;
+     }
+}
+
+@media only screen and (max-width:990px){
+   
+
+    .team-top h1, .team-top span{
+        font-size: 4rem;
+        line-height: 1.4;
+        padding-left: 4%;
+    }
+
+    .mem-part{
+        color: white !important;
+    }
+    
+}
+
+@media only screen and (max-width:660px){
+    .team-top{
+        background-attachment: fixed;
+    }
+    
+    .me-ou{
+        padding-top: 37%;
+    }
+}
+
+@media only screen and (max-width:321px){
+    .team-top h1, .team-top span{
+        font-size: 3rem;
+    }
+}
