@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import Navbar from '../shared/Navbar'
+import Tab from '../Teampage/Tab/Tab'
 
 const Team = () => {
   useEffect(() => {
@@ -8,7 +9,7 @@ const Team = () => {
   return (
     <div>
       <Navbar />
-      <h1>Team ECELL</h1>
+      <Tab />
     </div>
 
   )
