@@ -1,0 +1,35 @@
+[
+    {
+        "id": 1,
+        "name": "LOREM IPSUM",
+        "rank": "LOREM IPSUM",
+        "image": "https://www.linkpicture.com/q/Photo.png"
+    },
+    {
+        "id": 2,
+        "name": "LOREM IPSUM",
+        "rank": "LOREM IPSUM",
+        "image": "https://www.linkpicture.com/q/Photo.png"
+
+    },
+    {
+        "id": 3,
+        "name": "LOREM IPSUM",
+        "rank": "LOREM IPSUM",
+        "image": "https://www.linkpicture.com/q/Photo.png"    },
+    {
+        "id": 4,
+        "name": "LOREM IPSUM",
+        "rank": "LOREM IPSUM",
+        "image": "https://www.linkpicture.com/q/Photo.png"    },
+    {
+        "id": 5,
+        "name": "LOREM IPSUM",
+        "rank": "LOREM IPSUM",
+        "image": "https://www.linkpicture.com/q/Photo.png"    },
+    {
+        "id": 6,
+        "name": "LOREM IPSUM",
+        "rank": "LOREM IPSUM",
+        "image": "https://www.linkpicture.com/q/Photo.png"    }
+]
