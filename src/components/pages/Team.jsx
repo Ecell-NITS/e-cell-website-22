@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import NavbarTeam from '../shared/NavbarTeam';
 import '../css/Team.css'
-import Faculties from "../Teampage/Faculties";
+import Tab from '../Teampage/Tab/Tab'
 
 const Team = () => {
   useEffect(() => {
@@ -14,8 +14,8 @@ const Team = () => {
       <h1 className='me-ou'>Meet our</h1>
       <h1>Excellent</h1>
      <span>Team </span> <span className='mem-part'>Memb</span> <span className='er'>ers</span>
-     <Faculties/>
       </div>
+      <Tab />      
     </>
 
   )

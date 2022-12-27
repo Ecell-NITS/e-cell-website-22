@@ -1,6 +1,6 @@
 import React from 'react'
-import '../css/Faculties.css'
-import Data from '../../components/Faculties.json';
+import '../../css/Faculties.css'
+import Data from '../../Faculties.json';
 function Faculties() {
     return (
         <>
