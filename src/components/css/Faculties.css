@@ -2,17 +2,28 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 4rem;
 }
 .profile{
-    border: 2px solid #2c2a2a;
+    border: 1px solid #514f4f;
     border-radius: 10px;
     margin: 1rem;
+    margin-bottom: 3rem;
 
 }
 .name{
     text-align: center;
+    margin: 0.5rem;
 
 }
-.img{
+.name1{
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+.img img{
     margin-bottom: 2rem;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }

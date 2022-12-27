@@ -11,7 +11,7 @@ function Faculties() {
                             return (<div className="profile">
                                 <div className="img" key={data.id}><img src={data.image} alt="Profile of author" /></div>
                                 <div className="name">{data.name}</div>
-                                <div className="name">{data.rank}</div>
+                                <div className="name1">{data.rank}</div>
                             </div>
 
                             )
