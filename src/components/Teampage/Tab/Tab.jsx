@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import Dropdown from 'react-bootstrap/Dropdown'
 import DropdownButton from 'react-bootstrap/DropdownButton'
 
-import Faculty from "../Others/faculties"
+import Faculty from "../Others/Faculties"
 import Alumni from "../Others/alumni"
 import CoreTeam1 from "../Others/coreteam1"
 import CoreTeam2 from "../Others/coreteam2"

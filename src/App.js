@@ -21,6 +21,7 @@ function App() {
           />
           <Route exact path="/team" element={<Team />} key="route-team-screen" />
              <Route path="*" element={<NotFound />} />
+             <Route path="/team" element={<Team />} key="route-team-screen" />
         </Routes>
         <ScrollToTop />
         <Footerconstant />
