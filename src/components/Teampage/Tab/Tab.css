@@ -77,6 +77,12 @@ div.tab_main > *{
     #dropdown-custom-1{
         font-size: 1.50rem;
     }
+    .dropdown-menu > *{
+        font-size: 1.50rem !important;
+    }
+    .dropdown-menu{
+        min-width: 30px !important;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -90,6 +96,12 @@ div.tab_main > *{
         font-size: 0.75rem;
         padding-left: 0%;
         padding-right: 0%;
+    }
+    .dropdown-menu > *{
+        font-size: 0.75rem !important;
+    }
+    .dropdown-menu{
+        min-width: 20px !important;
     }
     
 }

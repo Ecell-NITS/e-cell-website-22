@@ -1,0 +1,86 @@
+[
+    {
+        "id": 1,
+        "name": "LOREM IPSUM",
+        "rank": "LOREM IPSUM",
+        "image": "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bWFufGVufDB8fDB8fA%3D%3D&w=1000&q=80",
+        "fb": "#",
+        "linkdln": "#",
+        "git": "#"
+    },
+    {
+       "id": 2,
+       "name": "LOREM IPSUM",
+       "rank": "LOREM IPSUM",
+       "image": "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bWFufGVufDB8fDB8fA%3D%3D&w=1000&q=80",
+       "fb": "#",
+       "linkdln": "#",
+       "git": "#"
+ 
+    },
+    {
+       "id": 3,
+       "name": "LOREM IPSUM",
+       "rank": "LOREM IPSUM",
+       "image": "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bWFufGVufDB8fDB8fA%3D%3D&w=1000&q=80",
+       "fb": "#",
+       "linkdln": "#",
+       "git": "#"
+    },
+ 
+    {
+       "id": 4,
+        "name": "LOREM IPSUM",
+        "rank": "LOREM IPSUM",
+        "image": "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bWFufGVufDB8fDB8fA%3D%3D&w=1000&q=80",
+        "fb": "#",
+        "linkdln": "#",
+        "git": "#"   
+   },
+    {
+       "id": 5,
+       "name": "LOREM IPSUM",
+       "rank": "LOREM IPSUM",
+       "image": "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bWFufGVufDB8fDB8fA%3D%3D&w=1000&q=80",
+       "fb": "#",
+       "linkdln": "#",
+       "git": "#"
+    },
+    {
+       "id": 6,
+        "name": "LOREM IPSUM",
+        "rank": "LOREM IPSUM",
+        "image": "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bWFufGVufDB8fDB8fA%3D%3D&w=1000&q=80",
+        "fb": "#",
+        "linkdln": "#",
+        "git": "#"
+    },
+    {
+       "id": 7,
+        "name": "LOREM IPSUM",
+        "rank": "LOREM IPSUM",
+        "image": "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bWFufGVufDB8fDB8fA%3D%3D&w=1000&q=80",
+        "fb": "#",
+        "linkdln": "#",
+        "git": "#"
+    },
+    {
+       "id": 8,
+        "name": "LOREM IPSUM",
+        "rank": "LOREM IPSUM",
+        "image": "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bWFufGVufDB8fDB8fA%3D%3D&w=1000&q=80",
+        "fb": "#",
+        "linkdln": "#",
+        "git": "#"
+    },
+    {
+       "id": 9,
+        "name": "LOREM IPSUM",
+        "rank": "LOREM IPSUM",
+        "image": "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bWFufGVufDB8fDB8fA%3D%3D&w=1000&q=80",
+        "fb": "#",
+        "linkdln": "#",
+        "git": "#"
+    }
+    
+ ]
