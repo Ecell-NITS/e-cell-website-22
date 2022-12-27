@@ -144,7 +144,8 @@
 
 @media only screen and (max-width : 1170px) {
   .Item {
-    width: 60%;
+    width: 48%;
+    margin: 5% 1%;
   }
 
   .description{
@@ -155,6 +156,6 @@
 @media only screen and (max-width : 780px) {
   .Item {
     width: 80%;
-    margin-bottom: 50px;
+    margin: 5% 10%;
   }
 }

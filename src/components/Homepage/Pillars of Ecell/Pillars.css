@@ -133,17 +133,13 @@
 }
 
 @media only screen and (max-width: 1170px) {
-  .Card-holder {
+  /* .Card-holder {
     display: flex;
     flex-direction: column;
-  }
+  } */
 
   .header {
     font-size: 60px;
-  }
-
-  .btns {
-    display: none;
   }
 }
 
