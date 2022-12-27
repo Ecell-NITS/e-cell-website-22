@@ -1,0 +1,15 @@
+.profileCard{
+    display: flex;
+    border-radius: 10px;
+    margin: auto;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    width: 100%;
+}
+.profile2{
+    margin: 2rem;
+}
+.content{
+    margin: 2rem;
+    font-size: 1.5rem;
+}
