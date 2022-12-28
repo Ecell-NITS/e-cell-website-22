@@ -9,7 +9,7 @@ import Alumni from "../Others/alumni"
 import CoreTeam1 from "../Others/coreteam1"
 import CoreTeam2 from "../Others/coreteam2"
 import CoreTeam3 from "../Others/coreteam3"
-import Dev from "../Others/Developers"
+import Dev from "../Others/developers"
 
 const Tab = () => {
   const [lebel, setlebel] = useState("faculties");
