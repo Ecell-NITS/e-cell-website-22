@@ -8,11 +8,11 @@ const Pillars = () => {
   
 
   function handleNext () {
-    cardHolder.current.scrollLeft += (0.334*cardHolder.current.offsetWidth);
+    cardHolder.current.scrollLeft += (cardHolder.current.offsetWidth);
   };
 
   function handlePrev () {
-    cardHolder.current.scrollLeft -= (0.334*cardHolder.current.offsetWidth);
+    cardHolder.current.scrollLeft -= (cardHolder.current.offsetWidth);
   };
 
   let info = [

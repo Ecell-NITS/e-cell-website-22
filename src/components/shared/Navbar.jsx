@@ -21,7 +21,7 @@ const Navbar = () => {
 
 
   return (
-    <nav className={ toggle ? 'navbar expanded' : 'navbar'}>
+    <nav className={ toggle ? 'navbar1 expanded' : 'navbar1'}>
       <Link to="/">
         <img className='brand-logo logo' src="./images/ecell-logo-bw2.png" alt="ecell-logo-bw2" />
       </Link>
