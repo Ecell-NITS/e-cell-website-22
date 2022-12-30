@@ -27,6 +27,7 @@
     color: #FFFFFF;
     margin: 5rem;
     padding: auto;
+    margin-top: 40px;
 }
 
 .container2 ul{
@@ -74,18 +75,16 @@
   text-decoration: none;
 }
 
-.socialMediaLogo{
+.footer_social_Logo{
   color:  #FFFFFF;
   margin: 2rem;
   display: flex;
   margin-left: .0rem;
+  align-items: center;
 }
 
 .i-text{
   margin-left: .5rem;
-}
-.socialMediaLogo{
-  align-items: center;
 }
 
 .h2 {
@@ -98,7 +97,7 @@
   text-align: left;
 }
 
-.no-bullets, .p1,.p2, .socialMediaLogo{
+.no-bullets, .p1,.p2, .footer_social_Logo{
 font-family: 'Barlow Condensed', sans-serif;
 font-style: regular;
 font-size: 20px;
@@ -147,48 +146,100 @@ letter-spacing: 0em;
   color:  black;
 }
 
-@media only screen and (max-width:638px) {
-  .container1{
-    margin-top: 25px;
-    margin-bottom: 0px;
-    margin-top: 0px;
-    padding-top: 25px;
+.f_icon{
+  position: relative;
+  bottom: 3px;
+}
+
+
+@media only screen and (max-width:660px) {
+  .fcontainer{
+    padding-top: 0px;
   }
   .container2{
     margin-bottom: 0px;
-   
-  
+    margin-top: 0px;
   }
   .container3{
-    margin-top: 0px;
+    margin-top: 30px;
     margin-bottom: 30px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
   }
+ #link_ln{
+  position: relative;
+  right: 5px;
+ }
   .container4{
-    margin-top: 0px;
-    
+    margin-top: 40px;
+    margin-right: 48  px;
     }
-    .socialMediaLogo{
-     margin-bottom: 0px;
 
+    .container5{
+    margin-bottom: 50px;
+    padding: 0;
+    }
+
+    .footer_social_Logo{
+     margin-bottom: 0px;
     }
 
     .p2{
-      padding-bottom: 2vh;
+      padding-bottom: 1rem;
+    }
+    
+    .h2{
+      display:flex; 
+      justify-content:center;
+    }
+
+    .p1{
+      font-family: Barlow Condensed;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 19px;
+      letter-spacing: 0em;
+      text-align: center;
+    }
+
+    .fill{
+      width: 100%;
     }
 }
 
 @media only screen and (max-width:1280px) and (min-width:661px){
-  .fill{
-    max-width: 40%;
-  }
+ 
+
   .container4{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  flex-grow: 1;
   }
-  #h{
-    position: relative;
-    right: 90px;  
+  .container3{
+    flex-grow: 6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 80px;
   }
+
+.footer_social_Logo{
+  margin-bottom: 0 !important;
+}
+
+#link_ln{
+  position: relative;
+  right: 5px;
+ }
+ 
+ .h2{
+  display:flex; 
+  justify-content:center;
+}
+.p2{
+  padding-bottom: 1rem;
+}
 }
