@@ -3,13 +3,14 @@ import './Tab.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Dropdown from 'react-bootstrap/Dropdown'
 import DropdownButton from 'react-bootstrap/DropdownButton'
+// import { motion } from 'framer-motion'
 
 import Faculty from "../Others/Faculties"
-import Alumni from "../Others/alumni"
-import CoreTeam1 from "../Others/coreteam1"
-import CoreTeam2 from "../Others/coreteam2"
-import CoreTeam3 from "../Others/coreteam3"
-import Dev from "../Others/developers"
+import Alumni from "../Others/Alumni"
+import CoreTeam1 from "../Others/Coreteam1"
+import CoreTeam2 from "../Others/Coreteam2"
+import CoreTeam3 from "../Others/Coreteam3"
+import Dev from "../Others/Developers"
 
 const Tab = () => {
   const [lebel, setlebel] = useState("faculties");

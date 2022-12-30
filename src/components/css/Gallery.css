@@ -1,0 +1,64 @@
+.Gallery-top {
+  max-height: 80vh;
+  display: relative;
+  background: url(../../../public/images/Team/teamhero.jpeg);
+  background-position: left, right;
+  background-repeat: no-repeat;
+  background-size: 60% 100%;
+  background-attachment: scroll;
+  background-color: white;
+}
+
+.Gallery-top h1 {
+  display: absolute;
+  color: #224259;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 7.5rem;
+  line-height: 1.2;
+  font-weight: 700;
+  padding-top: 2em;
+  padding-bottom: 2.3em;
+  transform: translateX(-3%);
+}
+
+.Gall-part {
+  margin-left: 52.5% !important;
+  color: white !important;
+  margin-right: 0 !important;
+}
+
+@media (max-width: 1230px) {
+  .Gallery-top {
+    background-size: cover;
+    background-position: center;
+  }
+
+  .Gallery-top h1 {
+    transform: translate(-50%, 27%);
+  }
+
+  .ery-part {
+    color: white;
+  }
+}
+
+@media only screen and (max-width: 1225px) {
+  .Gallery-top {
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+@media only screen and (max-width: 990px) {
+  .Gallery-top h1 {
+    font-size: 4rem;
+    line-height: 1.4;
+
+  }
+}
+
+@media only screen and (max-width: 321px) {
+  .Gallery-top h1 {
+    font-size: 3rem;
+  }
+}
