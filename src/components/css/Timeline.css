@@ -1,7 +1,7 @@
 .timeline-section {
     position: relative;
     background: linear-gradient(0deg, rgba(4, 27, 55, 0.6), rgba(4, 27, 55, 0.6));
-    background-image: url(/public/images/timeline-bg.png); 
+    background-image: url(/public/images/timeline-bg.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -12,14 +12,14 @@
     z-index: 9;
 }
 
-.time-title{
+.time-title {
     color: white !important;
 }
 
-.timeline-main{
+.timeline-main {
     display: flex;
     overflow-x: scroll;
-    flex-wrap:nowrap;
+    flex-wrap: nowrap;
     justify-content: space-between;
     margin-top: 20vh;
 }
@@ -29,7 +29,7 @@
     overflow-y: hidden;
 }
 
-.timeline-child{
+.timeline-child {
     min-width: 20% !important;
     min-height: 50vh;
     display: flex;
@@ -38,7 +38,7 @@
     align-items: center;
 }
 
-.timeline-child img{
+.timeline-child img {
     display: block;
     margin: 0 auto;
     width: 50%;
@@ -46,17 +46,17 @@
     pointer-events: none;
 }
 
-.arrows{
+.arrows {
     display: inline !important;
     width: 100% !important;
 }
 
 
-.tc2{
+.tc2 {
     min-width: 20% !important;
 }
 
-.child-title{
+.child-title {
     font-family: 'Barlow Condensed', sans-serif;
     font-style: italic;
     font-weight: 600;
@@ -72,7 +72,7 @@
     margin: auto;
     width: 100%;
     font-family: 'Barlow Condensed', sans-serif;
-    font-style:normal;
+    font-style: normal;
     font-weight: 600;
     font-size: 4rem;
     line-height: 84px;
@@ -83,63 +83,105 @@
     flex: none;
     order: 0;
     flex-grow: 0;
- }
+}
 
- @media only screen and (max-width:1200px) and (min-width:661px){
-    .timeline-section{
+@media only screen and (max-width:1200px) and (min-width:661px) {
+    .timeline-section {
         min-height: 50vh;
     }
 
-    .timeline-child img{
-        width: 70%;
+    .timeline-child img {
+        width: 60%;
     }
 
-    .timeline-main{
+    .testimonial-h1 {
+        width: 1065px;
+        border-bottom: 2px solid white;
+
+    }
+
+    .timeline-main {
         transform: translateY(-10vh);
         padding-left: 2rem;
     }
 
-    .child-title{
+    .child-title {
         font-size: 1.5rem;
         margin-top: 2vh;
     }
- }
+}
 
-@media only screen and (max-width:660px){
-    .timeline-section{
+@media only screen and (max-width:660px) {
+    .timeline-section {
+        height: 650px;
         padding-bottom: 10vh;
     }
 
-    .timeline-main{
+    .testimonial-h1 {
+        height: 70px;
+        width: 200px;
+        font-size: 2rem;
+        padding-top: 5px;
+        padding-bottom: 0px;
+        border-bottom: 2.5px solid white 50%;
+    }
+
+    .timeline-main {
         flex-direction: column;
-        overflow-x: hidden;
-        min-height: 30vh !important;
-        margin-top: 0 !important;
+        overflow-x: unset;
+        height: 500px;
+        min-height: 10vh !important;
+        margin-top: 3rem !important;
     }
 
-  .child-title{
-    font-size: 1.5rem;
-    margin-top: 2vh;
-  }
-
-    .arrows{
-       max-height: 13.5vh !important;
-       overflow: hidden;
+    .child-title {
+        font-size: 1rem;
+        margin-top: 2vh;
     }
 
-    .timeline-child{
-    margin: 1rem 0;
+    .arrows {
+        max-height: 7vh !important;
+        overflow: unset;
     }
 
-    .tc2{
-        transform: rotate(-249deg);
-        /* margin: 0 auto !important; */
+    .timeline-child {
+        position: relative;
+        right: 100px;
+        min-height: 5vh;
     }
 
-    /* .tc4{
-        transform: translateY(-20vh);
-    } */
-    .tc3{
-        transform: rotate(68deg)  !important;
+    .timeline-child img {
+        width: 60px;
     }
+
+    .tc2 {
+        transform: rotate(-310deg);
+        width: 40%;
+        position: relative;
+        left: 120px;
+        top: 0px;
+    }
+
+    #srj {
+        position: relative;
+        left: 100px;
+        top: 0px;
+    }
+
+    #emp {
+        position: relative;
+        right: 100px;
+    }
+
+    #prb {
+        position: relative;
+        left: 100px;
+    }
+
+    .tc3 {
+        transform: rotate(130deg) !important;
+        width: 40%;
+
+    }
+
 }
