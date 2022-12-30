@@ -6,9 +6,9 @@ export default function Card(props) {
   return (
     <div className="card">
       <div className="image_style">
-      <img src={props.image} alt="" srcset="" className="image_style" />
+      <img src={props.image} alt="cardimage" className="image_style" />
       </div>
-      <div className="text">
+      <div className="motto_card_text">
         {props.dialogue}
       </div>
     </div>

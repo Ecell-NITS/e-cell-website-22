@@ -22,7 +22,7 @@ return(
                </div>
             <h3 className='title'>{data.name}</h3>
          </div>
-         <p className="text">{data.rank}</p>
+         <p className="dev_card_text">{data.rank}</p>
          <div className="social-media">
             <a href={data.fb} className="MediaLogo"><FaFacebook size={30}/></a>
             <a href={data.linkedln} className="MediaLogo"><FaLinkedin size={30}/></a> 

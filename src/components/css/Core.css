@@ -18,6 +18,9 @@
  border: 0.5px solid #9A9494;
  
  }
+.core-year{
+   color: rgb(10,10, 70);
+}
  
  .core-mem:hover .images img{
  height: 336px;
@@ -67,11 +70,11 @@
  text-align: center;
  }
  
- .social-media{
+ .core-social-media{
     visibility: hidden;
  }
  
- .core-mem:hover .social-media{
+ .core-mem:hover .core-social-media{
     visibility: visible;
     display: flex;
     flex-direction: row;
@@ -83,7 +86,7 @@
  
  }
  
- .socialMediaLogo{
+ .core-socialMediaLogo{
     color:  #232323;
     height: 60px; 
      width: 60px;
@@ -93,11 +96,15 @@
     position: relative;
     align-items: center;
     gap: 12px;
+    margin-right: 2rem;
     padding: 0;
  }
 
  @media only screen and (max-width:660px) {
    .heading h1{
+      display: none;
+   }
+   .core-year{
       display: none;
    }
    .core-mem{
@@ -124,7 +131,7 @@
       margin-bottom: 0rem;
    }
 
-   .social-media{
+   .core-social-media{
       position: relative;
       right: 40px;
    }
@@ -157,7 +164,7 @@
       margin-bottom: 0rem;
    }
 
-   .social-media{
+   .core-social-media{
       position: relative;
       right: 40px;
       margin-top: 1.5rem;

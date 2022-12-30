@@ -1,14 +1,15 @@
 import React, {useState} from 'react'
-import './Tab.css'
+import '../../css/Tab.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Dropdown from 'react-bootstrap/Dropdown'
 import DropdownButton from 'react-bootstrap/DropdownButton'
+// import { motion } from 'framer-motion'
 
 import Faculty from "../Others/Faculties"
-import Alumni from "../Others/alumni"
-import CoreTeam1 from "../Others/coreteam1"
-import CoreTeam2 from "../Others/coreteam2"
-import CoreTeam3 from "../Others/coreteam3"
+import Alumni from "../Others/Alumni"
+import CoreTeam1 from "../Others/Coreteam1"
+import CoreTeam2 from "../Others/Coreteam2"
+import CoreTeam3 from "../Others/Coreteam3"
 import Dev from "../Others/Developers"
 
 const Tab = () => {
@@ -19,6 +20,24 @@ const Tab = () => {
     // console.log(e);
     setActive(e);
   };
+
+  //for framer motion
+  // const containerVariants = {
+  //   visible: {
+  //   width: "55%",
+  //   transition: {
+  //     type: "tween",
+  //     duration: 0.4
+  //   }
+  // },
+  // hidden: {
+  //   width: "15%",
+  //   transition: {
+  //     type: "spring",
+  //     duration: 0.4
+  //   }
+  // }
+  // };
 
   return (
     <>

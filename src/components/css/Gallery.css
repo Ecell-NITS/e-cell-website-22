@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+}
+
+.Gallery-top{
+    /* padding-top: 231px;
+    padding-bottom: 284px; */
+    max-height: 100vh;
+    min-width: 100px;
+    display: relative;
+    background: url(../../../public/images/Team/teamhero.jpeg);
+    background-position: left, right;
+    background-repeat: no-repeat;
+    background-size: 60% 100%;
+    background-attachment: scroll;
+    background-color: white;
+}
+
+.Gallery-top h1{
+    display: absolute;
+    color: #224259;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 7.5rem;
+    line-height: 1.2;
+    font-weight: 700;
+    padding-top: 2em;
+    padding-bottom:2.3em;
+    /* float: right; */
+    /* margin: 0 50%; */
+}
+
+
+/* 
+.ery-part{
+    float: right;
+    margin-right:31% !important;
+} */
+.Gall-part{
+    /* float: left; */
+    margin-left:6.25em !important;
+    color: white !important;
+    margin-right: 0 !important;
+}

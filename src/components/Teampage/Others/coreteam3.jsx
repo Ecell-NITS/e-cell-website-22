@@ -10,7 +10,7 @@ return(
 <section className="core-team">
       <div className="heading">
          <h1>Core Team</h1>
-         {/* <h2>2020-2021</h2> */}
+         <h2 className='core-year'>2020-2021</h2>
       </div>
    <div className="container">
    {
