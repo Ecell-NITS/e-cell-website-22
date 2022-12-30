@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Tab.css";
+import "../css/GalleryTab.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
