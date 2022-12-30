@@ -22,13 +22,13 @@ const Footer = () => {
       <h2 className='h2'>Organisation</h2>
         <ul className='no-bullets'>
           <li>
-           <BiUserCircle /><span className='i-text'> Entrepreneur</span>
+           <BiUserCircle className='f_icon' /><span className='i-text'> Entrepreneur</span>
           </li>
           <li>
-          <MdLocationOn /><span className='i-text'> NIT Silchar, Silchar, Assam, India-788010 </span>
+          <MdLocationOn className='f_icon' /><span className='i-text'> NIT Silchar, Silchar, Assam, India-788010 </span>
           </li>
           <li>
-          <BsFillTelephoneFill /><span className='i-text'>+91 6263 943 064</span>
+          <BsFillTelephoneFill className='f_icon' /><span className='i-text'>+91 6263 943 064</span>
           </li>
         </ul>
       </div>
@@ -36,9 +36,9 @@ const Footer = () => {
 
       <div className="container3">
         <h2 className='h2'>Social</h2>
-        <a href="#" className="socialMediaLogo"><FaFacebook /><span className="i-text">Facebook</span></a>
-        <a href="#" className="socialMediaLogo"><FaLinkedin/><span className="i-text">Linkedln</span></a> 
-        <a href="#" className="socialMediaLogo"><FaInstagram/><span className="i-text">Instagram</span></a> 
+        <a href="#" className="footer_social_Logo"><FaFacebook /><span className="i-text">Facebook</span></a>
+        <a href="#" className="footer_social_Logo" id='link_ln'><FaLinkedin/><span className="i-text">Linkedln</span></a> 
+        <a href="#" className="footer_social_Logo" ><FaInstagram/><span className="i-text">Instagram</span></a> 
       </div>
 
 
