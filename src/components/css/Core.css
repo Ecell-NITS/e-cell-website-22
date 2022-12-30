@@ -36,11 +36,11 @@
  top: 0px;
  }
  
- .text{
+ .text_logo{
     visibility: hidden;
  }
  
- .core-mem:hover .text{
+ .core-mem:hover .text_logo{
     visibility: visible;
  border-radius: nullpx;
  font-family: Barlow Condensed;
@@ -83,17 +83,20 @@
  
  }
  
- .socialMediaLogo{
-    color:  #232323;
-    height: 60px; 
-     width: 60px;
-    left: 190px;
-    top: 0px;
-    border-radius: 0px;
-    position: relative;
-    align-items: center;
-    gap: 12px;
-    padding: 0;
+ .socialLogo{
+   color:  #232323;
+   height: 30px; 
+    width: 30px;
+   left: 190px;
+   top: 0px;
+   border-radius: 0px;
+   position: relative;
+   align-items: center;
+   gap: 12px;
+   padding: 0;
+   margin-top: 0;
+   margin-right:2.50rem;
+   margin-bottom: 1rem;
  }
 
  @media only screen and (max-width:660px) {
