@@ -34,23 +34,27 @@ const Tab = () => {
   return (
     <>
       <div className="tabGallery">
+        <div className="leftTab">
         <div className="sort">Sort By Year</div>
         <div className="years">
-          <DropdownButton id="dropdown-custom-1"
-           title={year}
-           onSelect={handleClick}>
+          <DropdownButton
+            title={year}
+            id="dropdown-custom-2"
+            onSelect={handleClick}
+          >
             <Dropdown.Item eventKey="All">All</Dropdown.Item>
             <Dropdown.Item eventKey="2022-2023">2022-2023</Dropdown.Item>
             <Dropdown.Item eventKey="2021-2022">2021-2022</Dropdown.Item>
             <Dropdown.Item eventKey="2020-2021">2020-2021</Dropdown.Item>
           </DropdownButton>
         </div>
+        </div>
+        <div className="rightTab">
         <div className="sort">Sort By Events</div>
         <div className="events">
           <DropdownButton
-            className="dropText"
             title={event}
-            id="dropdown-custom-1"
+            id="dropdown-custom-2"
             onSelect={handleClick2}
           >
             <Dropdown.Item eventKey="All">All</Dropdown.Item>
@@ -59,8 +63,9 @@ const Tab = () => {
             <Dropdown.Item eventKey="Srijan">Srijan</Dropdown.Item>
           </DropdownButton>
         </div>
-        </div>
-        <div className="galleryCards">
+        </div>      
+       </div>
+        <div className="GalleryCards">
         {filterData.map((item) => {
           return (
             <GalleryCard

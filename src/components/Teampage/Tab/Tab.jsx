@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import '../../css/Tab.css'
+import './Tab.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Dropdown from 'react-bootstrap/Dropdown'
 import DropdownButton from 'react-bootstrap/DropdownButton'
@@ -20,24 +20,6 @@ const Tab = () => {
     // console.log(e);
     setActive(e);
   };
-
-  //for framer motion
-  // const containerVariants = {
-  //   visible: {
-  //   width: "55%",
-  //   transition: {
-  //     type: "tween",
-  //     duration: 0.4
-  //   }
-  // },
-  // hidden: {
-  //   width: "15%",
-  //   transition: {
-  //     type: "spring",
-  //     duration: 0.4
-  //   }
-  // }
-  // };
 
   return (
     <>
