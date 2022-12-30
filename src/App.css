@@ -6,8 +6,8 @@
   -webkit-tap-highlight-color: transparent;
 }
 a{
-  text-decoration: none;
-  color: white;
+  text-decoration: none !important;
+  color: white !important;
 }
 ::-webkit-scrollbar{
   width: 10px;

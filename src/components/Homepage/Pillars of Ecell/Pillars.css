@@ -132,19 +132,12 @@
   }
 }
 
-@media only screen and (max-width: 1170px) {
-  .Card-holder {
-    display: flex;
-    flex-direction: column;
-  }
-
+@media only screen and (max-width: 1200px) {
+  
   .header {
     font-size: 60px;
   }
 
-  .btns {
-    display: none;
-  }
 }
 
 @media only screen and (max-width: 875px) {
