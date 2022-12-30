@@ -6,7 +6,7 @@
 
 .team-top{
     padding-top: 4rem;
-    max-height: 100vh;
+    height: 80vh !important;
    background: url(../../../public/images/Team/teamhero.jpeg);
    background-position: right, left;
   background-repeat: no-repeat;

@@ -28,7 +28,7 @@ const NavbarTeam = () => {
       <div className='toggle-icon' onClick={handleToggle}>
         {toggle ? <ImCross size={20} /> : <GiHamburgerMenu size={25} />}
       </div>
-      <ul className='links'>
+      <ul className='links-nav'>
         <li><Link to="/">HOME</Link></li>
         <li><Link to="/#about">ABOUT</Link></li>
         <li><Link to="/#events">EVENTS</Link></li>

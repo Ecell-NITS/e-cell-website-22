@@ -34,14 +34,14 @@
     font-weight: 600;
   }
   
-  .navbar1 .links{
+  .navbar1 .links-nav{
     list-style: none;
     display: flex;
     color: #D9D2C3;
     cursor: pointer;
   }
   
-  .navbar1 .links li{
+  .navbar1 .links-nav li{
     margin: 0 .9375rem;
     color: white;
     font-size: 1.1rem;
@@ -49,7 +49,7 @@
     font-family: 'Poppins', sans-serif;
   }
   
-  .links a{
+  .links-nav a{
     transition: all .15s ease-in-out;
   }
 
@@ -58,7 +58,7 @@
   } */
 
  
-  .links a:hover{
+  .links-nav a:hover{
     color: #1da1f2;
   }
   
@@ -66,6 +66,9 @@
     display: none
   }
   
+  .links-nav{
+    margin-bottom: 0 !important;
+  }
   
   @media(max-width: 768px){
     .navbar1{
@@ -79,7 +82,7 @@
       background-color: #224259;
     }
   
-    .navbar1.expanded .links{
+    .navbar1.expanded .links-nav{
       position: absolute;
       top: 7.5rem;
       left: 0;
@@ -91,7 +94,7 @@
       opacity: 1;
     }
   
-    .navbar1.expanded .links li{
+    .navbar1.expanded .links-nav li{
       margin: .9375rem 0;
       font-size: 1.5rem;
     }
@@ -110,7 +113,7 @@
       right: 1.25rem;
     }
   
-    .navbar1 .links{
+    .navbar1 .links-nav{
       position: absolute;
       top: -18.75rem;
       left: 0;
@@ -123,7 +126,7 @@
       transition: all 0.5s ease-in-out;
     }
   
-    .navbar1 .links li{
+    .navbar1 .links-nav li{
       margin: .9375rem 0;
       font-size: 1.5rem;
     }

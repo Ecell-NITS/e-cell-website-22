@@ -28,7 +28,7 @@ const Navbar = () => {
       <div className='toggle-icon' onClick={handleToggle}>
         {toggle ? <ImCross size={20} /> : <GiHamburgerMenu size={25} />}
       </div>
-      <ul className='links'>
+      <ul className='links-nav'>
         <li><Link to="/#about">ABOUT</Link></li>
         <li><Link to="/#events">EVENTS</Link></li>
         <li><a href="https://srijan-nits.in/" rel="noreferrer" target="_blank">SRIJAN</a></li>
