@@ -1,5 +1,8 @@
 import React, { useEffect } from 'react'
 import Navbar from '../shared/Navbar'
+import '../css/Gallery.css'
+import Footer from '../footer/Footer';
+import Tab from '../GalleryPage/Tab';
 
 const Gallery = () => {
   useEffect(() => {
@@ -8,7 +11,14 @@ const Gallery = () => {
   return (
     <div>
       <Navbar />
-      <h1>Gallery ECELL</h1>
+      <div className="Gallery-top">
+      <h1>
+        <span className='Gall-part'>Gall</span>
+        <span className='ery-part'>ery</span>
+      </h1>
+      </div>
+      <Tab />
+      <Footer />
     </div>
   )
 }

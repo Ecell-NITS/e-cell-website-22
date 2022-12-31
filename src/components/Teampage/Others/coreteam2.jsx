@@ -10,7 +10,7 @@ return(
 <section className="core-team">
       <div className="heading">
          <h1>Core Team</h1>
-         {/* <h2>2021-2022</h2> */}
+         {/* <h2>2022-2023</h2> */}
       </div>
    <div className="container">
    {
@@ -23,11 +23,11 @@ return(
                </div>
             <h3 className='title'>{data.name}</h3>
          </div>
-         <p className="text">{data.rank}</p>
+         <p className="text_logo">{data.rank}</p>
          <div className="social-media">
-            <a href={data.fb} className="socialMediaLogo"><FaFacebook size={30}/></a>
-            <a href={data.linkedln} className="socialMediaLogo"><FaLinkedin size={30}/></a> 
-            <a href={data.git} className="socialMediaLogo"><BsGithub size={30}/></a>
+            <a href={data.fb} className="socialLogo"><FaFacebook size={30}/></a>
+            <a href={data.linkedln} className="socialLogo"><FaLinkedin size={30}/></a> 
+            <a href={data.git} className="socialLogo"><BsGithub size={30}/></a>
          </div>
       </div>
          )
