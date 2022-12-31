@@ -1,15 +1,46 @@
 .profileCard{
     display: flex;
     border-radius: 10px;
-    margin: auto;
-    margin-bottom: 1rem;
     cursor: pointer;
     width: 100%;
+    background-color: rgb(235, 235, 236);
 }
+
 .profile2{
-    margin: 2rem;
+    margin: 0.2rem;
 }
 .content{
-    margin: 2rem;
+    margin: 0.4rem;
     font-size: 1.5rem;
+    text-overflow: clip;
+}
+@media only screen and (max-width: 992px) {
+.content{
+    font-size: 1.3rem;
+}
+.img2 img{
+   height: 15rem;
+   width: 13rem;
+}
+.one{
+    font-size: 1.5rem;
+}
+.two{
+    font-size: 0.6rem;
+}
+}
+@media only screen and (max-width: 991px) {
+.content{
+    font-size: 1.1rem;
+}
+.img2 img{
+   height: 12rem;
+   width: 9rem;
+}
+
+}
+@media only screen and (max-width: 481px) {
+.content{
+    font-size: 0.9rem;
+}
 }

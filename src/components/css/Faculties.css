@@ -31,3 +31,22 @@
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
+@media only screen and (max-width: 836px) {
+    .profile{
+    width: 45%;
+    }
+    .img img{
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 640px) {
+    .profile{
+    width: 40%;
+    }
+    .name{
+        font-size: 1.5rem;
+    }
+    .name1{
+        font-size: 0.8rem;
+    }
+}
