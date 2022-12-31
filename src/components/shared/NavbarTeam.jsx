@@ -30,7 +30,7 @@ const NavbarTeam = () => {
       </div>
       <ul className='links-nav'>
         <li><Link to="/">HOME</Link></li>
-        <li><Link to="/#about">ABOUT</Link></li>
+        <li><Link to="/#about">ABOUT US</Link></li>
         <li><Link to="/#events">EVENTS</Link></li>
         <li><a href="https://srijan-nits.in/" rel="noreferrer" target="_blank">SRIJAN</a></li>
         <li><Link to="/team">OUR TEAM</Link></li>

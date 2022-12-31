@@ -29,7 +29,8 @@
 .hero-top-main h2{
     font-family: 'Rubik', sans-serif;
     font-size: 1.3rem;
-    letter-spacing: 1.2px;
+    font-weight: 900;
+    letter-spacing: .7px;
 }
 
 .typewriter-hero {
@@ -40,6 +41,7 @@
     left: 50%;
     font-weight: 600;
     padding-right: 4rem;
+    letter-spacing: .5px;
 }
 
 
@@ -78,11 +80,12 @@
 
     .typewriter-hero{
         top: 60%;
-        font-size: 1.1rem;
+        font-size: 1.5rem;
         left: 5%;
         width: 80%;
         margin: 0 auto;
         padding-right: 0;
+        letter-spacing: .3px;
     }
 }
 

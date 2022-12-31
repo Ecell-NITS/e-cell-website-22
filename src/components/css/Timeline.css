@@ -88,6 +88,7 @@
 @media only screen and (max-width:1200px) and (min-width:661px) {
     .timeline-section {
         min-height: 50vh;
+        height: auto;
     }
 
     .timeline-child img {
@@ -95,9 +96,8 @@
     }
 
     .testimonial-h1 {
-        width: 1065px;
+        width: 100%;
         border-bottom: 2px solid white;
-
     }
 
     .timeline-main {
@@ -111,95 +111,125 @@
     }
 }
 
-@media only screen and (max-width:660px) {
-    .timeline-section {
-        width: 375px;
-        height: 650px;
-        padding-bottom: 10vh;
+@media only screen and (min-width:660px){
+    .svg-contained{
+        display: none;
+    }
+}
+
+@media only screen and (max-width:660px){
+    .timeline-section{
+        min-height: 105vh;
     }
 
-    .testimonial-h1 {
-        height: 70px;
-        width: 200px;
-        font-size: 2rem;
-        padding-top: 5px;
-        padding-bottom: 0px;
-        border-bottom: 2.5px solid white 50%;
-    }
 
-    .timeline-main {
+    .timeline-main{
         flex-direction: column;
-        overflow-x: unset;
-        height: 500px;
-        min-height: 10vh !important;
-        margin-top: 3rem !important;
+        margin-top: 5vh;
     }
 
-    .child-title {
-        font-size: 1rem;
-        margin-top: 2vh;
+    .timeline-child{
+        min-height: min-content;
+        
     }
 
-    .arrows {
-        max-height: 7vh !important;
-        overflow: unset;
+    .timeline-child img{
+        width: 50% !important;
+       
     }
 
-    .timeline-child {
-        position: relative;
-        right: 100px;
-        min-height: 5vh;
+    .child-title{
+        font-size: 1.2rem;
     }
 
-    .timeline-child img {
-        width: 60px;
+    #orie{
+        position: absolute;
+        left: 2%;
     }
+
+    #emp{
+        position: absolute;
+        top: 60%;
+        left: 2%;
+    }
+
+    #srj{
+        position: absolute;
+        top: 40%;
+        right: 2%;
+    }
+
+    #prb{
+        position: absolute;
+        top: 80%;
+        right: 2%;
+    }
+
 
     .tc2 {
-        transform: rotate(-310deg);
-        width: 40%;
-        position: relative;
-        left: 120px;
-        top: 0px;
-    }
-
-    #srj {
-        position: relative;
-        left: 0px;
-        top: 0px;
-
-    }
-
-    #srj img {
-        position: relative;
-        left: 100px;
-    }
-
-    #srj-title {
-        position: relative;
-        left: 100px;
-    }
-
-    #emp {
-        position: relative;
-        right: 100px;
-    }
-
-    #prb img {
-        position: relative;
-        left: 200px;
-
-    }
-
-    #prb-title {
-        position: relative;
-        left: 200px;
+        width: 85%;
     }
 
     .tc3 {
-        transform: rotate(130deg) !important;
-        width: 40%;
-
+        width: 85%;
     }
 
+   .arrows{
+    display: none !important;
+   }
+
+   .svg-contained{
+    display: block;
+   }
+
+   .sr-emp{
+    position: absolute;
+    top: 51%;
+    left: 35%;
+   }
+
+   .or-sr{
+    position: absolute;
+    top: 31.5%;
+    left: 37%;
+   }
+
+   .emp-pre{
+    position: absolute;
+    top: 73%;
+    left: 37%;
+   }
+}
+
+@media only screen and (max-width:320px){
+    #orie{
+        position: absolute;
+        left: 0%;
+    }
+
+    #emp{
+        position: absolute;
+        top: 60%;
+        left: 0%;
+    }
+
+    #srj{
+        position: absolute;
+        top: 40%;
+        right: 0%;
+    }
+
+    #prb{
+        position: absolute;
+        top: 80%;
+        right: 0%;
+    }
+
+    .timeline-child img{
+        width: 35% !important;
+    }
+
+    .child-title{
+        font-size: .8rem;
+    }
 }

@@ -44,7 +44,8 @@
   .navbar1 .links-nav li{
     margin: 0 .9375rem;
     color: white;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
+    letter-spacing: .5px;
     font-weight: 600;
     font-family: 'Poppins', sans-serif;
   }
@@ -53,15 +54,15 @@
     transition: all .15s ease-in-out;
   }
 
-  /* .links a:visited{
-    color: #4267b2;
-  } */
-
- 
-  .links-nav a:hover{
-    color: #1da1f2;
+  .links-nav a:active {
+    background-color: #224529 !important;
   }
-  
+
+  .links-nav a:hover{
+    color: #1da1f2 !important;
+  }
+ 
+
   .navbar1 .toggle-icon{
     display: none
   }
@@ -92,6 +93,7 @@
       justify-content: center;
       align-items: center;
       opacity: 1;
+      padding-left: 0 !important;
     }
   
     .navbar1.expanded .links-nav li{
@@ -124,6 +126,8 @@
       align-items: center;
       opacity: 0;
       transition: all 0.5s ease-in-out;
+      
+      
     }
   
     .navbar1 .links-nav li{
