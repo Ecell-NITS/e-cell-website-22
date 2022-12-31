@@ -14,7 +14,7 @@ const Footer = () => {
 
 
       <div className="container1">
-        <img src="./images/E-Cell-Logo-White.png" alt="logo" href="#" />
+        <img className='img-foot-centr' src="./images/E-Cell-Logo-White.png" alt="logo" href="/" />
       </div>
 
 
