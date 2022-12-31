@@ -26,7 +26,8 @@
     font-size: 1.2rem;
     font-weight: 400;
 }
-.img img{
+img, svg {
+    vertical-align: middle;
     margin-bottom: 2rem;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
