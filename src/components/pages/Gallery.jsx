@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import Navbar from '../shared/Navbar'
+import NavbarTeam from '../shared/NavbarTeam'
 import '../css/Gallery.css'
 import Footer from '../footer/Footer';
 import Tab from '../GalleryPage/Tab';
@@ -10,7 +10,7 @@ const Gallery = () => {
   }, []);
   return (
     <div>
-      <Navbar />
+      <NavbarTeam />
       <div className="Gallery-top">
       <h1>
         <span className='Gall-part'>Gall</span>
