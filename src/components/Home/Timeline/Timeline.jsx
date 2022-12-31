@@ -21,7 +21,7 @@ function Timeline() {
 
         <div className="timeline-child child-up tc4" id="srj">
           <img src="./images/Srijan.png" alt="" />
-          <h1 className='child-title'>Srijan</h1>
+          <h1 className='child-title' id="srj-title">Srijan</h1>
         </div>
 
         <div className="timeline-child tc2 tc3" >
@@ -39,7 +39,7 @@ function Timeline() {
 
         <div className="timeline-child tc4" id="prb">
           <img src="./images/Pre-Incubation.png" alt="" />
-          <h1 className='child-title'>Pre-Incubation</h1>
+          <h1 className='child-title' id="prb-title">Pre-Incubation</h1>
         </div>
 
       </div>
