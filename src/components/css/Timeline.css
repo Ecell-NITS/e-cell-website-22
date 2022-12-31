@@ -113,6 +113,7 @@
 
 @media only screen and (max-width:660px) {
     .timeline-section {
+        width: 375px;
         height: 650px;
         padding-bottom: 10vh;
     }
@@ -164,8 +165,19 @@
 
     #srj {
         position: relative;
-        left: 100px;
+        left: 0px;
         top: 0px;
+
+    }
+
+    #srj img {
+        position: relative;
+        left: 100px;
+    }
+
+    #srj-title {
+        position: relative;
+        left: 100px;
     }
 
     #emp {
@@ -173,9 +185,15 @@
         right: 100px;
     }
 
-    #prb {
+    #prb img {
         position: relative;
-        left: 100px;
+        left: 200px;
+
+    }
+
+    #prb-title {
+        position: relative;
+        left: 200px;
     }
 
     .tc3 {
