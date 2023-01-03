@@ -1,7 +1,11 @@
 import React from 'react'
-import '../../css/Timeline.css'
-
-
+import './Timeline.css'
+import orientation from '../../../assets/Orientation.png'
+import arrowup from '../../../assets/arrow-up.png'
+import arrowdown from '../../../assets/arrow-down.png'
+import srjn from '../../../assets/Srijan.png'
+import empressario from '../../../assets/Empressario.png'
+import preencu from '../../../assets/Pre-Incubation.png'
 function Timeline() {
   return (
     <div className='timeline-section'>
@@ -11,34 +15,34 @@ function Timeline() {
 
       <div className="timeline-main">
         <div className="timeline-child" id='orie'>
-          <img src="./images/Orientation.png" alt="" />
+          <img src={orientation} alt="" />
           <h1 className='child-title'>Orientation</h1>
         </div>
 
         <div className="timeline-child tc2 down-reverse">
-          <img className="arrows" src="./images/arrow-up.png" alt="" />
+          <img className="arrows" src={arrowup} alt="" />
         </div>
 
         <div className="timeline-child child-up tc4" id="srj">
-          <img src="./images/Srijan.png" alt="" />
+          <img src={srjn} alt="" />
           <h1 className='child-title' id="srj-title">Srijan</h1>
         </div>
 
         <div className="timeline-child tc2 tc3 mid-ar" >
-          <img className="arrows" src="./images/arrow-down.png" alt="" />
+          <img className="arrows" src={arrowdown} alt="" />
         </div>
 
         <div className="timeline-child tc4" id="emp">
-          <img src="./images/Empressario.png" alt="" />
+          <img src={empressario} alt="" />
           <h1 className='child-title'>Empressario</h1>
         </div>
 
         <div className="timeline-child tc2 tc2impo">
-          <img className="arrows" src="./images/arrow-up.png" alt="" />
+          <img className="arrows" src={arrowup} alt="" />
         </div>
 
         <div className="timeline-child tc4 tc-pre" id="prb">
-          <img src="./images/Pre-Incubation.png" alt="" />
+          <img src={preencu} alt="" />
           <h1 className='child-title' id="prb-title">Pre-Incubation</h1>
         </div>
 

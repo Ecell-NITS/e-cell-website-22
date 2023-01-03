@@ -1,12 +1,12 @@
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "./components/pages/Home";
-import Gallery from "./components/pages/Gallery";
-import Team from "./components/pages/Team";
-import Footerconstant from "./components/shared/Footerconstant";
-import NotFound from "./components/shared/NotFound";
-import ScrollToTop from "./components/shared/ScrollToTop";
-import Scrolling from "./components/Scrolling";
+import Team from './pages/Team/Team'
+import Home from './pages/Home/Home';
+import Gallery from './pages/Gallery/Gallery'
+import Footerconstant from "./components/shared/FooterConstant/Footerconstant";
+import NotFound from './pages/404/NotFound';
+import ScrollToTop from './components/shared/ScrollToTop/ScrollToTop';
+import Scrolling from "./components/shared/ScrollToTop/Scrolling";
 function App() {
   return (
     <>

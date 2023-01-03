@@ -1,8 +1,8 @@
 import React, {useState}  from "react";
-import "../About Us/About_us.css";
-import image1 from "../About Us/image/image1.jpg";
+import "./About_us.css";
+import image1 from "../../../assets/image1.jpg";
 import Card from "./Card";
-import logo from "./image/logo.jpg";
+import logo from "../../../assets/logo.jpg";
 const motto_dialogue = [
   "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla dicta sint facere consequuntur reprehenderit",
   "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla dicta sint facere consequuntur reprehenderit",
