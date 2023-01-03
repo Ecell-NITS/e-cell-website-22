@@ -1,5 +1,5 @@
 import React from 'react'
-import '../Jundev/Developers.css';
+import './SrDevelopers.css';
 import { FaFacebook, FaLinkedin } from 'react-icons/fa'
 import { BsGithub } from 'react-icons/bs'
 import Data from '../../../../../src/Data/Developers.json'

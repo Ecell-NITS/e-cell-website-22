@@ -17,7 +17,7 @@
     box-shadow: 4px 4px 4px 2px rgb(0, 0, 0, 0.1);
 }
 .name{
-    text-align: center;
+    text-align: center !important;
     margin: 0.5rem;
 }
 .name1{
