@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import Navbar from '../shared/Navbar'
+import Navbar from '../shared/NavbarTeam'
 import '../css/Gallery.css'
 import Footer from '../footer/Footer';
 import Tab from '../GalleryPage/Tab';
