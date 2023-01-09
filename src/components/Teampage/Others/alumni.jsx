@@ -11,8 +11,8 @@ function Alumni() {
         <div className="cards">
           {
             Data.map(data => {
-              return (<div className="profile" onClick={() => setmodal(true)}>
-                <div className="img" key={data.id}><img src={data.image} alt="Profile of author" /></div>
+              return (<div key={data.id} className="profile" onClick={() => setmodal(true)}>
+                <div className="img" ><img src={data.image} alt="Profile of author" /></div>
                 <div className="name">{data.name}</div>
                 <div className="name1">{data.rank}</div>
               </div>

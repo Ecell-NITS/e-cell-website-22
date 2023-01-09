@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import NavbarTeam from '../shared/NavbarTeam';
 import '../css/Team.css'
-import Tab from '../Teampage/Tab/Tab'
+// import Tab from '../Teampage/Tab/Tab'
 import Footer from '../footer/Footer';
 
 const Team = () => {
@@ -16,7 +16,7 @@ const Team = () => {
         <h1>Excellent</h1>
         <span>Team </span> <span className='mem-part'>Memb</span> <span className='er'>ers</span>
       </div>
-      <Tab />
+      {/* <Tab /> */}
       <Footer />
     </>
 
