@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import './Tab.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Dropdown from 'react-bootstrap/Dropdown'
@@ -25,20 +25,20 @@ const Tab = () => {
     <>
       <div className="tab_main">
         <div
-          className={`faculties ${lebel==="faculties" ? "active-link" : ""}`}
-          onClick={()=>{setlebel("faculties")}}
+          className={`faculties ${lebel === "faculties" ? "active-link" : ""}`}
+          onClick={() => { setlebel("faculties") }}
         >
           FACULTIES
-        </div> 
+        </div>
         <div
-          className={`alumni ${lebel==="alumni" ? "active-link" : ""}`}
-          onClick={()=>setlebel("alumni")}
+          className={`alumni ${lebel === "alumni" ? "active-link" : ""}`}
+          onClick={() => setlebel("alumni")}
         >
           ALUMNI
         </div>
         <div
-          className={`core-team ${lebel==="core" ? "active-link" : ""}`}
-          onClick={()=>setlebel("core")}
+          className={`core-team ${lebel === "core" ? "active-link" : ""}`}
+          onClick={() => setlebel("core")}
         >
           CORE TEAM
           <DropdownButton
@@ -52,8 +52,8 @@ const Tab = () => {
           </DropdownButton>
         </div>
         <div
-          className={`developers ${lebel==="developers" ? "active-link" : ""}`}
-          onClick={()=>setlebel("developers")}
+          className={`developers ${lebel === "developers" ? "active-link" : ""}`}
+          onClick={() => setlebel("developers")}
         >
           DEVELOPERS
         </div>

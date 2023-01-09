@@ -1,4 +1,4 @@
-import React, {useState}  from "react";
+// import React, { useState } from "react";
 import "../About Us/About_us.css";
 import image1 from "../About Us/image/image1.jpg";
 import Card from "./Card";
@@ -13,7 +13,7 @@ const motto_dialogue = [
 
 
 function About_us() {
-  const [Ind, setInd] =useState(0);
+  // const [Ind, setInd] =useState(0);
   return (
     <div>
       {/* for image and details  */}
@@ -21,7 +21,7 @@ function About_us() {
       <div className="underline"></div>
       <div className="about">
         <img src={image1} alt="image1" className="about_image" />
-        
+
         <div className="about_text_div">
           <p className="about_text">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor minus
@@ -40,7 +40,7 @@ function About_us() {
       </div>
       {/* for cards */}
       <div className="motto">
-        <h3 style={{fontSize: "64px"}}>MOTTO</h3>
+        <h3 style={{ fontSize: "64px" }}>MOTTO</h3>
       </div>
       <div className="test_card">
         <div className="cards-set-1">
