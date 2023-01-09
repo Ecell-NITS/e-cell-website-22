@@ -16,7 +16,7 @@ const Team = () => {
         <h1>Excellent</h1>
         <span>Team </span> <span className='mem-part'>Memb</span> <span className='er'>ers</span>
       </div>
-      {/* <Tab /> */}
+      <Tab />
       <Footer />
     </>
 
