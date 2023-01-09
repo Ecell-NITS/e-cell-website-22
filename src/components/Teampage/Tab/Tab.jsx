@@ -5,7 +5,7 @@ import Dropdown from 'react-bootstrap/Dropdown'
 import DropdownButton from 'react-bootstrap/DropdownButton'
 // import { motion } from 'framer-motion'
 
-import Alumni from "../Others/Alumni"
+// import Alumni from "../Others/Alumni"
 import CoreTeam1 from "../Others/Coreteam1"
 import CoreTeam2 from "../Others/Coreteam2"
 import CoreTeam3 from "../Others/Coreteam3"
@@ -61,7 +61,7 @@ const Tab = () => {
 
       <div className="tab_content">
         {lebel === "faculties" && <Faculties />}
-        {lebel === "alumni" && <Alumni />}
+        {/* {lebel === "alumni" && <Alumni/>} */}
         {lebel === "core" && active === "2022-2023" && <CoreTeam1 />}
         {lebel === "core" && active === "2021-2022" && <CoreTeam2 />}
         {lebel === "core" && active === "2020-2021" && <CoreTeam3 />}
