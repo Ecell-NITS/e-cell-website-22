@@ -1,0 +1,244 @@
+.collab{
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+    border-bottom: 3px solid #161c2f;
+    padding: 3rem 0 0 0;
+    margin-bottom: 3.5rem;
+    }
+    
+    .collab h1{
+        font-size: 4rem;
+        /* font-family: 'Poppins', sans-serif; */
+        font-family: 'Barlow Condensed', sans-serif;
+        color: #161c2f;
+        font-weight: 900;
+    }
+    
+    .ru-collab{
+        width: 90%;
+        object-fit: contain;
+        filter: grayscale(1);
+        transition: all 0.2s ease-out; 
+        padding-bottom: 1.5vh;
+    }
+    
+    .btn:focus .ru-collab{
+        filter: grayscale(0);
+        border-bottom: 3.5px solid #224259;
+        transform: translateY(-2vh);
+    }
+    
+    .btn-junior{
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 2rem !important;
+        margin-bottom: 2rem !important;
+        width: 90%;
+        border-radius: 7px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 1rem 0;
+        color: black;
+        position: relative;
+        z-index: 9;
+      }
+      
+      .btn-junior::-webkit-scrollbar {
+        display: none;
+        overflow-y: hidden;
+    }
+    
+      .btn-junior button{
+        margin: 0 1rem;
+        border: none;
+        cursor: pointer;
+        background-color: transparent;
+        color: white;
+        font-weight: 900;
+      }
+    
+    .rupay-main{
+        background: url('../../../assets/collaboration/RuPay.png');
+        position: relative;
+       justify-content: center;
+       align-items: center;
+       background-position:center;
+       background-repeat: no-repeat;
+       background-size: cover;
+       padding-bottom: 0;
+       height: 90vh;
+       opacity: 1;
+       padding-top: 3rem;
+       background-color: rgb(11, 11, 62);
+    }
+    
+    .unacademy-main{
+        background: url('../../../assets/collaboration/Unacademy-compressed.jpg');
+        position: relative;
+       justify-content: center;
+       align-items: center;
+       background-position:center;
+       background-repeat: no-repeat;
+       background-size: cover;
+       padding-bottom: 0;
+       height: 90vh;
+       opacity: 1;
+       padding-top: 3rem;
+    }
+    
+    .janta-main{
+        background: url('../../../assets/collaboration/Cognizant_Mangalore_Feb7_2020_2_1581097237290_1581335758668-compressed.jpg');
+        position: relative;
+       justify-content: center;
+       align-items: center;
+       background-position:center;
+       background-repeat: no-repeat;
+       background-size: cover;
+       padding-bottom: 0;
+       height: 90vh;
+       opacity: 1;
+       padding-top: 3rem;
+    }
+    
+    .vedantu-main{
+        background: url('../../../assets/collaboration/Vedantu-compressed.jpg');
+        position: relative;
+       justify-content: center;
+       align-items: center;
+       background-position:center;
+       background-repeat: no-repeat;
+       background-size: cover;
+       padding-bottom: 0;
+       height: 90vh;
+       opacity: 1;
+       padding-top: 3rem;
+    }
+    
+    .cocacola-main{
+        background: url('../../../assets/collaboration/CocoCola-compressed.png');
+        position: relative;
+       justify-content: center;
+       align-items: center;
+       background-position:center;
+       background-repeat: no-repeat;
+       background-size: cover;
+       padding-bottom: 0;
+       height: 90vh;
+       opacity: 1;
+       padding-top: 3rem;
+    }
+    
+    .ieee-main{
+        background: url('../../../assets/collaboration/IEEE-compressed.jpg');
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-bottom: 0;
+        height: 90vh;
+        opacity: 1;
+        padding-top: 3rem;
+        background-color: rgb(11, 11, 62);
+    }
+    
+    .pnb-main{
+        background: url('../../../assets/collaboration/PNB-compressed.jpg');
+        position: relative;
+       justify-content: center;
+       align-items: center;
+       background-position:center;
+       background-repeat: no-repeat;
+       background-size: cover;
+       padding-bottom: 0;
+       height: 90vh;
+       opacity: 1;
+       padding-top: 3rem;
+    }
+    
+    .collab-content{
+    background-color: white;
+      padding: 1rem;
+      max-width: 40%;
+      border-radius: 5px;
+      position: absolute;
+      right: 8%;
+    }
+    
+    .collab-content p{
+        color: #505050;
+        font-family: 'Barlow Condensed', sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.5rem;
+        line-height: 2.125rem;
+    }
+    
+    @media only screen and (max-width:660px){
+        .collab{
+            padding-top: 2rem;
+            margin-bottom: 3rem;
+        }
+    
+        .collab h1{
+            font-size: 2rem;
+        }
+    
+        .btn-junior{
+            width: 98%;
+            padding: 0.8rem 0;
+            overflow-x: scroll;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+        }
+        
+       .btn{
+        margin-left: .5rem !important;
+        margin-right: .5rem !important;
+        min-width: 35% !important;
+        object-fit: contain !important;
+       }
+    
+    
+        .btn-junior button{
+          margin: 0 0rem;
+        }
+    
+        .collab-content{
+            left: 5%;
+            max-width: 90%;
+            border-image-source: linear-gradient(114.55deg, rgba(255, 255, 255, 0.4) 2.13%, rgba(255, 255, 255, 0) 98.14%),
+            radial-gradient(97.09% 224.61% at 1.38% 96.94%, rgba(13, 14, 64, 0) 0%, #0D0E40 100%);
+            background: radial-gradient(98.11% 288.82% at 98.11% 2.14%, rgba(255, 255, 255, 0.276) 0%, rgba(255, 255, 255, 0) 100%);
+            background: radial-gradient(97.09% 224.61% at 1.38% 96.94%, rgba(13, 14, 64, 0) 0%, #0D0E40 100%),radial-gradient(97.57% 210.75% at 0.9% 2.98%, rgba(13, 14, 64, 0) 0%, #0D0E40 100%),linear-gradient(114.55deg, rgba(255, 255, 255, 0.4) 2.13%, rgba(255, 255, 255, 0) 98.14%),radial-gradient(98.11% 288.82% at 98.11% 2.14%, rgba(255, 255, 255, 0.276) 0%, rgba(255, 255, 255, 0) 100%);
+            backdrop-filter: blur(25px);
+            border-radius: 8px;
+            border: 1px solid #ACA5A5;
+        }
+    
+        .collab-content p{
+            font-size: 1.125rem;
+            padding-right: .3rem;
+            text-align: justify;
+            color: white;
+        }
+    
+        .btn:focus .ru-collab{
+            filter: grayscale(0);
+            border-bottom: 3px solid #224259;
+            transform: translateY(-1vh);
+        }
+    }
+    
+    @media only screen and (max-width:320px){
+        .btn-junior button{
+          font-size: .5rem;
+      }
+
+      .collab-content p{
+        font-size: .9rem;
+      }
+      }
