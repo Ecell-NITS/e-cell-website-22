@@ -168,7 +168,6 @@ letter-spacing: 0em;
   justify-content: center;
   flex-grow: 1;
   }
-
   .container3{
     flex-grow: 6;
     display: flex;
@@ -220,16 +219,17 @@ letter-spacing: 0em;
     }
 
     .container5{
+    padding-bottom: 50px;
     padding: 0;
-    padding-bottom: 0 !important;
     }
 
     .footer_social_Logo{
      margin-bottom: 0px;
     }
-
+    
     .p2{
-      padding-bottom: 1rem;
+      padding-bottom: 1rem ;
+      margin-bottom: 0px;
     }
     
     .h2{
@@ -248,10 +248,5 @@ letter-spacing: 0em;
 
     .fill{
       width: 100%;
-    }
-
-    .container1{
-      margin-left: auto;
-      margin-right: auto;
     }
 }

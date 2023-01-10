@@ -8,7 +8,7 @@ function Developers(){
 return(
 <>
 <section className="junior-developers">
-      <div className="heading">
+      <div className="jr_heading">
          <h1>JUNIOR DEVELOPERS</h1>
       </div>
    <div className="container">

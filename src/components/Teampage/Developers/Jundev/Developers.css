@@ -87,7 +87,7 @@ text-align: center;
 }
 
 .MediaLogo{
-   color:  #232323;
+   color:  #232323 !important;
    height: 30px; 
     width: 30px;
    left: 190px;
@@ -102,17 +102,26 @@ text-align: center;
    margin-bottom: 1rem;
 }
 
-.heading h1{
+.jr_heading h1{
    border-style: none;
+   text-align: center;
+   font-size: 4rem;
+   margin: 2rem;
 }
 
 @media only screen and (max-width:660px) {
-   .heading h1{
-      font-size: 2.5rem;
+   .container{
+      overflow: hidden;
    }
+   .jr_heading h1{
+      font-size: 2.5rem;
+       text-align: center;  
+       }
+
    .jr-dev{
       height: 408px;
       width: 300px;
+      transition-duration: 0.3 sec;
    }
 
    .images img{
@@ -131,7 +140,6 @@ text-align: center;
 
    .jr-dev:hover .dev_card_text{
       font-size: 20px;
-      margin-bottom: 0rem;
    }
 
    .social-media{
@@ -141,7 +149,7 @@ text-align: center;
 }
 
 @media only screen and (max-width:1200px) and (min-width:661px){
-   .heading h1{
+   .jr_heading h1{
       font-size: 3.5rem;
    }
    .jr-dev{
@@ -174,4 +182,3 @@ text-align: center;
       margin-top: 1.5rem;
    }
 }
-
