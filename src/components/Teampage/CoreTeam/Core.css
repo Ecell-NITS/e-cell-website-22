@@ -84,7 +84,7 @@
  }
  
  .socialLogo{
-   color:  #232323;
+   color:  #232323 !important;
    height: 30px; 
     width: 30px;
    left: 190px;
