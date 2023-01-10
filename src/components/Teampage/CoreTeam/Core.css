@@ -113,12 +113,12 @@ text-align: center;
    .container{
       overflow: hidden;
    }
-   .jr_heading h1{
+   .core_heading h1{
       font-size: 2.5rem;
        text-align: center;  
        }
 
-   .jr-dev{
+   .core-mem{
       height: 408px;
       width: 300px;
       transition-duration: 0.3 sec;
@@ -129,16 +129,16 @@ text-align: center;
       height: 350px;
    }
 
-   .jr-dev:hover .images img{
+   .core-mem:hover .images img{
       height: 250px;
       width: 250px;
    }
 
-   .dev_card_text{
+   .core_mem_text{
       font-size: 2rem;
    }
 
-   .jr-dev:hover .dev_card_text{
+   .core-mem:hover .core_mem_text{
       font-size: 20px;
    }
 
@@ -152,7 +152,7 @@ text-align: center;
    .jr_heading h1{
       font-size: 3.5rem;
    }
-   .jr-dev{
+   .core-mem{
       height: 408px;
       width: 300px;
    }
@@ -162,16 +162,16 @@ text-align: center;
       height: 350px;
    }
 
-   .jr-dev:hover .images img{
+   .core-mem:hover .images img{
       height: 250px;
       width: 250px;
    }
 
-   .dev_card_text{
+   .core_mem_text{
       font-size: 2rem;
    }
 
-   .jr-dev:hover .dev_card_text{
+   .core-mem:hover .core_mem_text{
       font-size: 20px;
       margin-bottom: 0rem;
    }
