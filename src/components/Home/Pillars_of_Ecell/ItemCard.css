@@ -148,7 +148,8 @@
     margin: 5% 1%;
   }
 
-  .description{
+  .description_pillars{
+    font-size: 22px;
     height: auto;
   }
 }
@@ -157,5 +158,12 @@
   .Item {
     width: 80%;
     margin : 5% 10%;
+  }
+
+  .description_pillars{
+    font-size:20px;
+  }
+  .name_pillars{
+    height: 80px;
   }
 }
