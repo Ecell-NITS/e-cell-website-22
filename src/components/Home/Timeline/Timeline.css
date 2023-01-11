@@ -118,6 +118,10 @@
 
 @media only screen and (max-width:660px) {
 
+    .timeline-section {
+        transition: height 99999s;
+    }
+
     .timeline-h1 {
         font-size: 32px;
         width: 80%;
