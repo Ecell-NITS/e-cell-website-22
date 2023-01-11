@@ -13,7 +13,7 @@ const Testimonial = () => {
                 </div>
 
                 <div className="testimonial-main">
-                    <Carousel infiniteLoop useKeyboardArrows autoPlay showStatus={false} showIndicators={false} showThumbs={false} interval={5500} stopOnHover={false}>
+                    <Carousel infiniteLoop useKeyboardArrows autoPlay swipeable={false} showStatus={false} showIndicators={false} showThumbs={false} interval={5500} stopOnHover={false}>
 
                         <div className="c1">
                             <div className="person-img"></div>

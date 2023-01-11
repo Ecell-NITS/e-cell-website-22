@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./About_us.css";
 import image1 from "../../../assets/image1.jpg";
 import Card from "./Card";

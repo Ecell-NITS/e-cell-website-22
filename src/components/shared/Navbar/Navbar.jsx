@@ -12,7 +12,7 @@ const Navbar = () => {
   }
 
   const changeToggle = () => {
-    if (window.scrollY >= 90 && window.innerWidth > 1000){
+    if (window.scrollY >= 90 && window.innerWidth > 768){
       setToggle(true);
     } else {
       setToggle(false);
