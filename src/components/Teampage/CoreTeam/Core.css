@@ -10,7 +10,7 @@
   border-radius: 8px;
 }
 
-.core-mem{
+.core-mem {
 background-color: white;
 height: 508px;
 width: 384px;
@@ -22,7 +22,11 @@ border: 0.5px solid #9A9494;
 box-sizing: border-box;
 box-shadow: -4px -4px 12px 0px #F2F2F240;
 box-shadow: 4px 4px 12px 0px #4F4F4F33;
-transition-duration: 0.3 sec;
+
+}
+
+.core-mem .images img{
+   transition: 0.3s;
 }
 
 .core-mem:hover .images img{
