@@ -10,7 +10,7 @@ function Timeline() {
   return (
     <div className='timeline-section'>
       <div className="bor-btm">
-        <h1 className='testimonial-h1'>TIMELINE</h1>
+        <h1 className='timeline-h1'>TIMELINE</h1>
       </div>
 
       <div className="timeline-main">

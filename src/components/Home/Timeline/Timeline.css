@@ -8,7 +8,6 @@
     min-height: 100vh;
     height: auto;
     background-attachment: fixed;
-    margin-top: 15vh;
     z-index: 9;
 }
 
@@ -68,9 +67,10 @@
     border-bottom: 5px solid white;
 }
 
-.testimonial-h1 {
+.timeline-h1 {
     margin: auto;
-    width: 100%;
+    margin-top: 15vh;
+    width: 90%;
     font-family: 'Barlow Condensed', sans-serif;
     font-style: normal;
     font-weight: 600;
@@ -95,9 +95,8 @@
         width: 60%;
     }
 
-    .testimonial-h1 {
-        width: 100%;
-        border-bottom: 2px solid white;
+    .timeline-h1 {
+        width: 90%;
     }
 
     .timeline-main {
@@ -111,55 +110,57 @@
     }
 }
 
-@media only screen and (min-width:660px){
-    .svg-contained{
+@media only screen and (min-width:660px) {
+    .svg-contained {
         display: none;
     }
 }
 
-@media only screen and (max-width:660px){
-    .timeline-section{
-        min-height: 105vh;
+@media only screen and (max-width:660px) {
+
+    .timeline-h1 {
+        font-size: 32px;
+        width: 80%;
     }
 
 
-    .timeline-main{
+    .timeline-main {
         flex-direction: column;
         margin-top: 5vh;
     }
 
-    .timeline-child{
+    .timeline-child {
         min-height: min-content;
-        
+
     }
 
-    .timeline-child img{
+    .timeline-child img {
         width: 50% !important;
-       
+
     }
 
-    .child-title{
+    .child-title {
         font-size: 1.2rem;
     }
 
-    #orie{
+    #orie {
         position: absolute;
         left: 2%;
     }
 
-    #emp{
+    #emp {
         position: absolute;
         top: 60%;
         left: 2%;
     }
 
-    #srj{
+    #srj {
         position: absolute;
         top: 40%;
         right: 2%;
     }
 
-    #prb{
+    #prb {
         position: absolute;
         top: 80%;
         right: 2%;
@@ -174,62 +175,62 @@
         width: 85%;
     }
 
-   .arrows{
-    display: none !important;
-   }
+    .arrows {
+        display: none !important;
+    }
 
-   .svg-contained{
-    display: block;
-   }
+    .svg-contained {
+        display: block;
+    }
 
-   .sr-emp{
-    position: absolute;
-    top: 51%;
-    left: 35%;
-   }
+    .sr-emp {
+        position: absolute;
+        top: 51%;
+        left: 35%;
+    }
 
-   .or-sr{
-    position: absolute;
-    top: 31.5%;
-    left: 37%;
-   }
+    .or-sr {
+        position: absolute;
+        top: 31.5%;
+        left: 37%;
+    }
 
-   .emp-pre{
-    position: absolute;
-    top: 73%;
-    left: 37%;
-   }
+    .emp-pre {
+        position: absolute;
+        top: 73%;
+        left: 37%;
+    }
 }
 
-@media only screen and (max-width:320px){
-    #orie{
+@media only screen and (max-width:320px) {
+    #orie {
         position: absolute;
         left: 0%;
     }
 
-    #emp{
+    #emp {
         position: absolute;
         top: 60%;
         left: 0%;
     }
 
-    #srj{
+    #srj {
         position: absolute;
         top: 40%;
         right: 0%;
     }
 
-    #prb{
+    #prb {
         position: absolute;
         top: 80%;
         right: 0%;
     }
 
-    .timeline-child img{
+    .timeline-child img {
         width: 35% !important;
     }
 
-    .child-title{
+    .child-title {
         font-size: .8rem;
     }
 }
