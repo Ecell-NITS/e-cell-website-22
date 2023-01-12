@@ -22,7 +22,7 @@ box-sizing: border-box;
 box-shadow: -4px -4px 12px 0px #F2F2F240;
 box-shadow: 4px 4px 12px 0px #4F4F4F33;
 transition-duration: 0.3 sec;
-
+overflow: hidden;
 }
 
 .sr-dev:hover .images img{
@@ -32,6 +32,7 @@ width: 336px;
 left: 24px;
 top: 24px;
 border-radius: 4px;
+transition: all 350ms ease;
 }
 
 .images img{
