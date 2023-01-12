@@ -7,10 +7,10 @@ const ItemCard = (props) => {
     <div className="Item">
       <div className="frame">
         <div className="rectangle">
-          <p className="description">"{props.desc}"</p>
+          <p className="description_pillars">"{props.desc}"</p>
 
-          <span className="name">{props.name}</span>
-          <span className="designation">{props.designation}.</span>
+          <span className="name_pillars">{props.name}</span>
+          <span className="designation_pillars">{props.designation}.</span>
           <div className="triangle"></div>
         </div>
       </div>

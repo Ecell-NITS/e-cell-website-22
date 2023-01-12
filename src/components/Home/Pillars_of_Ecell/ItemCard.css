@@ -67,7 +67,7 @@
   transform: translateX(-50%) translateY(-106%);
 }
 
-.description {
+.description_pillars {
   /* Content */
   margin: 20px 0;
   height: 330px;
@@ -89,7 +89,7 @@
   flex-grow: 0;
 }
 
-.name {
+.name_pillars {
   /* Content Bold */
 
   font-family: "Barlow Condensed";
@@ -113,7 +113,7 @@
   flex-grow: 0;
 }
 
-.designation {
+.designation_pillars {
   font-family: "Barlow Condensed";
   font-style: normal;
   font-weight: 400;
@@ -148,7 +148,8 @@
     margin: 5% 1%;
   }
 
-  .description{
+  .description_pillars{
+    font-size: 22px;
     height: auto;
   }
 }
@@ -157,5 +158,12 @@
   .Item {
     width: 80%;
     margin : 5% 10%;
+  }
+
+  .description_pillars{
+    font-size:20px;
+  }
+  .name_pillars{
+    height: 80px;
   }
 }
