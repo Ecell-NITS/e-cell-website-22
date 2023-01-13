@@ -1,4 +1,4 @@
-.profileCard{
+.profileCard {
     display: flex;
     border-radius: 10px;
     cursor: pointer;
@@ -6,41 +6,65 @@
     background-color: rgb(235, 235, 236);
 }
 
-.profile2{
-    margin: 0.2rem;
-}
-.content{
-    margin: 0.4rem;
-    font-size: 1.5rem;
-    text-overflow: clip;
-}
-@media only screen and (max-width: 992px) {
-.content{
-    font-size: 1.3rem;
-}
-.img2 img{
-   height: 15rem;
-   width: 13rem;
-}
-.one{
-    font-size: 1.5rem;
-}
-.two{
-    font-size: 0.6rem;
-}
-}
-@media only screen and (max-width: 991px) {
-.content{
-    font-size: 1.1rem;
-}
-.img2 img{
-   height: 12rem;
-   width: 9rem;
+.profile2 {
+    margin: 0.35rem;
 }
 
+.content {
+    margin: 0.4rem;
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    text-overflow: clip;
+    overflow: hidden;
 }
+
+.name_modal {
+    text-align: center;
+    font-size: 1.9rem;
+    color: #224259;
+}
+
+.desg_modal {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #3e618e;
+}
+
+@media only screen and (max-width: 992px) {
+    .content {
+        font-size: 1.3rem;
+    }
+
+    .img2 img {
+        height: 15rem;
+        width: 13rem;
+    }
+
+    .one {
+        font-size: 1.5rem;
+    }
+
+    .two {
+        font-size: 0.6rem;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .content {
+        font-size: 1.1rem;
+    }
+
+    .img2 img {
+        height: 12rem;
+        width: 9rem;
+    }
+
+}
+
 @media only screen and (max-width: 481px) {
-.content{
-    font-size: 0.9rem;
-}
+    .content {
+        font-size: 0.9rem;
+    }
 }
