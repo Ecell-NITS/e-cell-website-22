@@ -6,11 +6,11 @@
 
 .team-top{
     padding-top: 2%;
-    height: 80vh !important;
+    /* height: 80vh !important; */
    background: url(../../assets/Team/teamhero.jpeg);
    background-position: right, left;
   background-repeat: no-repeat;
-  background-size: 60% 100%;
+  background-size: 53.5% 100%;
   background-attachment: scroll;
   background-color: white;
 }

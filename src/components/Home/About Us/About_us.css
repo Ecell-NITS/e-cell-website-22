@@ -75,7 +75,9 @@
 @media only screen and (max-width:1050px) {
     .about {
         display: block;
-        height: 90vw;
+        /* height: 90vw; */
+        padding-bottom: 0 !important;
+        margin-bottom: 5vh !important;
     }
 
     .about_text {
@@ -102,20 +104,24 @@
         width: 80vw;*/
         display: block;
         flex-direction: column;
-        height: 120vw;
+        /* height: 120vw; */
         /* margin: 30px 9.5%; */
     }
 
     .about_heading {
         /* width: 240px; */
-        font-size: 24px;
+        font-size: 2rem;
         margin-bottom: 3px;
     }
 
     .motto {
         font-size: 20px;
         /* margin-top: 270px; */
-        padding-top: 88px;
+        padding-top: 0rem;
+    }
+
+    .motto h3{
+        font-size: 2rem !important;
     }
 
     .about_text_div {
@@ -153,11 +159,11 @@
 
 }
 
-@media only screen and (max-width:400px) {
+/* @media only screen and (max-width:400px) {
 
     .motto {
-        font-size: 20px;
-        padding-top: 208px;
+        font-size: 2rem;
+        
     }
 
-}
+} */

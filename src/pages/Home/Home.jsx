@@ -4,7 +4,7 @@ import Hero from '../../components/Home/HeroSection_homepage/Hero'
 import Testimonial from '../../components/Home/Testimonial/Testimonial'
 import Aboutus from '../../components/Home/About Us/About_us'
 import Events from '../../components/Home/Events/Events'
-import Pillars from '../../components/Home/Pillars of Ecell/Pillars'
+import Pillars from '../../components/Home/Pillars_of_Ecell/Pillars'
 import Timeline from '../../components/Home/Timeline/Timeline'
 import Footer from '../../components/shared/Footer/Footer'
 const Home = () => {
