@@ -121,6 +121,7 @@
 
     .timeline-section {
         transition: height 99999s;
+        background-attachment: scroll;
     }
 
     .timeline-h1 {
