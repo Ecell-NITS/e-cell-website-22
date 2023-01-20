@@ -8,7 +8,7 @@
     }
     
     .collab h1{
-        font-size: 4rem;
+        font-size: 4.45vw;
         /* font-family: 'Poppins', sans-serif; */
         font-family: 'Barlow Condensed', sans-serif;
         color: #161c2f;
@@ -172,7 +172,7 @@
         color: #505050;
         font-family: 'Barlow Condensed', sans-serif;
         font-style: normal;
-        font-weight: 600;
+        font-weight: 500;
         font-size: 1.5rem;
         line-height: 2.125rem;
     }
@@ -193,7 +193,7 @@
         }
     
         .collab h1{
-            font-size: 2rem;
+            font-size: 8vw;
         }
     
         .btn-junior{
@@ -222,8 +222,8 @@
             border-image-source: linear-gradient(114.55deg, rgba(255, 255, 255, 0.4) 2.13%, rgba(255, 255, 255, 0) 98.14%),
             radial-gradient(97.09% 224.61% at 1.38% 96.94%, rgba(13, 14, 64, 0) 0%, #0D0E40 100%);
             background: radial-gradient(98.11% 288.82% at 98.11% 2.14%, rgba(255, 255, 255, 0.276) 0%, rgba(255, 255, 255, 0) 100%);
-            background: radial-gradient(97.09% 224.61% at 1.38% 96.94%, rgba(13, 14, 64, 0) 0%, #0D0E40 100%),radial-gradient(97.57% 210.75% at 0.9% 2.98%, rgba(13, 14, 64, 0) 0%, #0D0E40 100%),linear-gradient(114.55deg, rgba(255, 255, 255, 0.4) 2.13%, rgba(255, 255, 255, 0) 98.14%),radial-gradient(98.11% 288.82% at 98.11% 2.14%, rgba(255, 255, 255, 0.276) 0%, rgba(255, 255, 255, 0) 100%);
-            backdrop-filter: blur(25px);
+            background: radial-gradient(97.09% 224.61% at 1.38% 96.94%, rgba(13, 14, 64, 0) 0%, #0d0e407d 100%),radial-gradient(97.57% 210.75% at 0.9% 2.98%, rgba(13, 14, 64, 0) 0%, #0D0E40 100%),linear-gradient(114.55deg, rgba(255, 255, 255, 0.4) 2.13%, rgba(255, 255, 255, 0) 98.14%),radial-gradient(98.11% 288.82% at 98.11% 2.14%, rgba(255, 255, 255, 0.276) 0%, rgba(255, 255, 255, 0) 100%);
+            backdrop-filter: blur(2px);
             border-radius: 8px;
             border: 1px solid #ACA5A5;
         }
@@ -233,6 +233,7 @@
             padding-right: .3rem;
             text-align: justify;
             color: white;
+            font-weight: 400;
         }
     
         .btn:focus .ru-collab{
@@ -247,7 +248,22 @@
           font-size: .5rem;
       }
 
+      .rupay-main{
+        height: 150vh;
+      }
       .collab-content p{
         font-size: .9rem;
       }
+      }
+
+      @media only screen and (max-height:500px){
+        .collab-content{
+            min-width: 90%;
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+
+        .rupay-main,  .unacademy-main,  .pnb-main,  .ieee-main,  .cocacola-main,    .vedantu-main, .janta-main{
+            height: 170vh;
+          }
       }
