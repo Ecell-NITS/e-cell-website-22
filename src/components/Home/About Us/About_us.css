@@ -7,8 +7,9 @@
 }
 
 .about_text {
+    line-height: 1.30em;
     margin: 0 30px;
-    font-size: 24px;
+    font-size: 1.25rem;
 }
 
 .about_image {
@@ -72,7 +73,7 @@
     color: #224259;
 }
 
-@media only screen and (max-width:1050px) {
+@media only screen and (max-width:1500px) {
     .about {
         display: block;
         /* height: 90vw; */
@@ -81,7 +82,8 @@
     }
 
     .about_text {
-        font-size: 18px;
+        /* line-height:normal; */
+        font-size: 1.50em;
         margin: 15px;
         margin-bottom: 20px;
     }
