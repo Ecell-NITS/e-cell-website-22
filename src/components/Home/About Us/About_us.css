@@ -7,7 +7,7 @@
 }
 
 .about_text {
-    line-height: 1.30em;
+    line-height: 1.35em;
     margin: 0 30px;
     font-size: 1.25rem;
 }
@@ -73,7 +73,7 @@
     color: #224259;
 }
 
-@media only screen and (max-width:1500px) {
+@media only screen and (max-width:1350px) {
     .about {
         display: block;
         /* height: 90vw; */
@@ -105,7 +105,7 @@
         display: block;
         flex-direction: column;
     }
-
+    
     .about_heading {
         /* width: 240px; */
         font-size: 2rem;
@@ -122,7 +122,7 @@
     }
 
     .about_text {
-        font-size: 20px;
+        font-size: 1.00rem;
     }
 
     .cards-set-1 {
