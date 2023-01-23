@@ -1,6 +1,5 @@
 import React from "react";
 import "./ItemCard.css";
-import dirsir from '../../../assets/sir.jpg'
 
 const ItemCard = (props) => {
   return (
@@ -15,7 +14,7 @@ const ItemCard = (props) => {
         </div>
       </div>
       <div className="ellipse">
-        <img src={dirsir} alt="" />
+        <img src={props.img} alt="" />
       </div>
     </div>
   );

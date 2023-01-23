@@ -1,72 +1,49 @@
-import React from 'react';
-import './testimonial.css';
-import "react-responsive-carousel/lib/styles/carousel.min.css"; 
+import React from 'react'
+import './testimonial.css'
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
+import { testimonials } from '../../../Data/TestimonialData';
 const Testimonial = () => {
-    return (
-        <>
-            <div className="testimonial-top"></div>
-            <div className="test-m-t">
-                <div className="collab test-ti">
-                    <h1>TEST</h1>
-                    <h1 className='monial'>IMONIALS</h1>
-                </div>
+  return (
+    <>
+      <div className="testi-main">
+        <div className="testi-child">
+          <div className="collab testi-name-head">
+            <h1>TEST<span className='white-monial'>IMONIALS</span></h1>
+          </div>
+          <div className="testi-main main-testimonial">
 
-                <div className="testimonial-main">
-                    <Carousel infiniteLoop useKeyboardArrows autoPlay swipeable={false} showStatus={false} showIndicators={false} showThumbs={false} interval={5500} stopOnHover={false}>
+            <Carousel infiniteLoop useKeyboardArrows autoPlay swipeable={false} showStatus={false} showIndicators={false} showThumbs={false} interval={5500} stopOnHover={false}>
 
-                        <div className="c1">
-                            <div className="person-img"></div>
-                            {/* <img className="testi-pic" src="./images/testimonial/sivaji.jpg" alt="" /> */}
-
-                            <div className="person-content">
-                                <div className="quote"></div>
-                                <div className="main-testi-content">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, earum voluptatem sequi repellat ratione nostrum, animi dolorem obcaecati consequatur asperiores numquam cumque quo non perspiciatis quidem adipisci ab architecto ipsum quae repellendus. Porro iusto quaerat quidem laudantium culpa incidunt quisquam?
-                                </div>
-
-                                <div className="quote quote-rotate"></div>
-
-                                <h1>Prof Sivaji Bandyopadhyay</h1>
-                                <h3>Director, NIT SILCHAR</h3>
-                            </div>
+              {testimonials.map((item) => {
+                return (
+                  <>
+                    <div className="testi-indi" key={item.id}>
+                      <div className="img-testi-holder">
+                        <img src={item.img} alt={item.prof} className="testi-img" />
+                      </div>
+                      <div className="content-testi">
+                        <div className="quote"></div>
+                        <div className="testi-al">
+                          <h3 className='testi-al-cont'>{item.content}</h3>
                         </div>
-                        <div className="c1">
-                            <div className="person-img"></div>
-                            {/* <img className="testi-pic" src="./images/testimonial/sivaji.jpg" alt="" /> */}
-                            <div className="person-content">
-                                <div className="quote"></div>
-                                <div className="main-testi-content">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, earum voluptatem sequi repellat ratione nostrum, animi dolorem obcaecati consequatur asperiores numquam cumque quo non perspiciatis quidem adipisci ab architecto ipsum quae repellendus. Porro iusto quaerat quidem laudantium culpa incidunt quisquam?
-                                </div>
-                                <div className="quote quote-rotate"></div>
-                                <h1>Prof Sivaji Bandyopadhyay</h1>
-                                <h3>Director, NIT SILCHAR</h3>
-                            </div>
+                        <div className="quote quote-rotate"></div>
+                        <div className="speaker-details-testi">
+                          <h1>{item.prof}</h1>
+                          <h2>{item.post}</h2>
                         </div>
-                        <div className="c1">
-                            <div className="person-img"></div>
-                            {/* <img className="testi-pic" src="./images/testimonial/sivaji.jpg" alt="" /> */}
-                            <div className="person-content">
-                                <div className="quote"></div>
-                                <div className="main-testi-content">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, earum voluptatem sequi repellat ratione nostrum, animi dolorem obcaecati consequatur asperiores numquam cumque quo non perspiciatis quidem adipisci ab architecto ipsum quae repellendus. Porro iusto quaerat quidem laudantium culpa incidunt quisquam?
-                                </div>
-                                <div className="quote quote-rotate"></div>
-                                <h1>Prof Sivaji Bandyopadhyay</h1>
-                                <h3>Director, NIT SILCHAR</h3>
-                            </div>
-                        </div>
-                        {/* <div className="c4"></div> */}
-                    </Carousel>
-                </div>
-            </div>
+                      </div>
+                    </div>
+                  </>
+                )
+              })}
+            </Carousel>
 
-
-
-
-        </>
-    )
+          </div>
+        </div>
+      </div>
+    </>
+  )
 }
 
 export default Testimonial

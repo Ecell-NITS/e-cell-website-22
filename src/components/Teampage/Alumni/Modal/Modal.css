@@ -66,5 +66,22 @@
 @media only screen and (max-width: 481px) {
     .content {
         font-size: 0.9rem;
+        padding: 0.5rem;
+    }
+    .profileCard{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .desg_modal {
+        margin-bottom: 0;
+
+    }
+    .img2 img{
+        height: 10rem;
+        width: 7rem;
+    }
+    .one {
+        font-size: 1.2rem;
     }
 }

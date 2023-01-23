@@ -1,7 +1,9 @@
 import React, {useRef} from "react";
 import ItemCard from "./ItemCard";
 import "./Pillars.css";
-
+import WasimArifSir from "../../../assets/WasimArifSir.jpg"
+import RajatGuptaSir from "../../../assets/RajatGuptaSir.jpg"
+import ABDeoghareSir from "../../../assets/ABDeoghareSir.jpg"
 
 const Pillars = () => {
   let cardHolder = useRef();
@@ -18,34 +20,25 @@ const Pillars = () => {
   let info = [
     {
       id: "1",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus necfringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit Morbi convallis convallis diam sit amet lacinia. Aliquam in elementum tellus.accumsan",
-      name: "Prof. Shivaji Bandhopadhyay",
-      designation: "Director, NIT Sichar",
+      desc: "Prof. Rajat Gupta is a professor in the mechanical engineering department and the president of IIC, NIT Silchar. He is the backbone of IIC and has been an excellent mentor to the students and a great support to the organization.",
+      name: "Prof. Rajat Gupta",
+      designation: "Director In-Charge, NIT Sichar",
+      img : RajatGuptaSir
     },
     {
       id: "2",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus necfringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit Morbi convallis convallis diam sit amet lacinia. Aliquam in elementum tellus.accumsan",
-      name: "Prof. Wasim Arif",
+      desc: "Dr. Wasim Arif is an associate professor in the department of Electronics and Communication and is a faculty advisor at E-Cell, NIT Silchar. He has always been a guiding support to the organization and has always guided the members in the right direction.",
+      name: "Dr. Wasim Arif",
       designation: "Asso Dean SW, NIT Sichar",
+      img : WasimArifSir
     },
     {
       id: "3",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus necfringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit Morbi convallis convallis diam sit amet lacinia. Aliquam in elementum tellus.accumsan",
-      name: "Prof. Shivaji Bandhopadhyay",
-      designation: "Director, NIT Sichar",
+      desc: "Dr. A.B. Deoghare is an associate professor in the department of mechanical engineering and supports the Ecell organization as a faculty advisor. We are eternally grateful for the support and guidance that we have received from him.",
+      name: "Dr. A.B. Deoghare",
+      designation: "",
+      img : ABDeoghareSir
     },
-    {
-      id: "4",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus necfringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit Morbi convallis convallis diam sit amet lacinia. Aliquam in elementum tellus.accumsan",
-      name: "Prof. Shivaji Bandhopadhyay",
-      designation: "Director, NIT Sichar",
-    },
-    {
-      id: "5",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus necfringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit Morbi convallis convallis diam sit amet lacinia. Aliquam in elementum tellus.accumsan",
-      name: "Prof. Shivaji Bandhopadhyay",
-      designation: "Director, NIT Sichar",
-    }
   ];
 
   return (
@@ -63,6 +56,7 @@ const Pillars = () => {
                 desc={element.desc}
                 name={element.name}
                 designation={element.designation}
+                img={element.img}
               />
             )
           })}
