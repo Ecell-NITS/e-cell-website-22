@@ -8,12 +8,12 @@ const Hero = () => {
       <div className="hero-top">
         <Navbar />
         <div className="hero-top-main">
-          <h1>E-CELL</h1>
-          <h2>Entrepreneurship Cell NIT SILCHAR</h2>
+          <h1 style={{ userSelect: 'none' }}>E-CELL</h1>
+          <h2 style={{ userSelect: 'none' }}>Entrepreneurship Cell NIT SILCHAR</h2>
         </div>
 
         <Typed
-          className="typewriter-hero"
+          className="typewriter-hero" style={{ userSelect: 'none' }}
           strings={[
             "Welcome to Entrepreneurship Cell!", //more relevant text can be added
             "For The NITS by the NITS!",

@@ -22,7 +22,7 @@ const Navbar = () => {
 
 
   return (
-    <nav className={ toggle ? 'navbar1 expanded' : 'navbar1'}>
+    <nav className={ toggle ? 'navbar1 expanded' : 'navbar1'} style={{ userSelect: 'none' }}>
       <Link to="/">
         {/* <img className='brand-logo logo' src="./images/ecell-logo-bw2.png" alt="ecell-logo-bw2" /> */}
         <img className='brand-logo logo' src={navlogo} alt="ecell-logo-bw2" />

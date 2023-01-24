@@ -1,5 +1,14 @@
 .testi-main {
-  padding: 10vh 0 5vh 10vh;
+  padding: 10vh 0 5vh 0vh;
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: visible;
+  scroll-behavior: smooth;
+  justify-content: space-between;
+}
+
+.testi-main::-webkit-scrollbar {
+  display: none;
 }
 
 .white-monial {
@@ -21,7 +30,7 @@
 .testi-indi {
   display: flex;
   justify-content: space-between;
-  width: 90%;
+  min-width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -41,16 +50,16 @@
 }
 
 .img-testi-holder {
-  width: 30%;
-  /* margin-left: 5%; */
+  width: 27%;
+  margin-left: 8%;
 }
 
 .img-testi-holder img {
-  width: 60%;
+  width: 100%;
   border-radius: .75rem;
   object-fit: contain;
   opacity: 1;
-  
+  box-shadow: 0 0 0.2375rem;
 }
 
 .testi-img{
@@ -65,6 +74,10 @@
 .quote {
   width: 2vw;
   user-select: none;
+}
+
+.quote img{
+  width: 100%;
 }
 
 .quote-rotate {
@@ -101,7 +114,21 @@
   font-size: 1.2vw;
 }
 
+.btn-testimonial{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-indi-testimonial{
+  font-weight: 900;
+}
+
 @media only screen and (max-width: 768px) {
+  .testi-child{
+    max-width: 100%;
+  }
+
   .testi-main {
     padding: 10vh 0;
     margin-bottom: 0;
@@ -154,7 +181,7 @@
   }
 
   .quote{
-    width: 4vw;
+    width: 4vw !important;
   }
 }
 
