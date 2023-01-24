@@ -63,11 +63,8 @@
 }
 
 .quote {
-  background: url(../../../../src/assets/testimonial/Quote.svg);
-  min-height: 5vh;
-  background-position: left;
-  background-repeat: no-repeat;
-  width: 5rem;
+  width: 2vw;
+  user-select: none;
 }
 
 .quote-rotate {
@@ -111,8 +108,8 @@
   }
 
   .testi-al-cont {
-    padding-left: 5vw;
-    padding-right: 5vw;
+    padding-left: 3vw;
+    padding-right: 3vw;
   }
 
   .testi-indi {
@@ -155,6 +152,10 @@
   .speaker-details-testi h2 {
     font-size: 3vw;
   }
+
+  .quote{
+    width: 4vw;
+  }
 }
 
 @media only screen and (max-width:660px){
@@ -166,9 +167,5 @@
 @media only screen and (max-height:500px){
   .content-testi{
     padding-top: 10vh;
-  }
-
-  .quote{
-    min-height: 8vh;
   }
 }
