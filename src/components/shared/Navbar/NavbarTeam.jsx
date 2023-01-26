@@ -22,7 +22,7 @@ const NavbarTeam = () => {
 
 
   return (
-    <nav className={ toggle ? 'navbar0 expanded' : 'navbar0'}>
+    <nav className={ toggle ? 'navbar0 expanded' : 'navbar0'} style={{userSelect:'none'}} >
       <Link to="/">
         <img className='brand-logo logo' src={navlogo} alt="ecell-logo-bw2" />
       </Link>

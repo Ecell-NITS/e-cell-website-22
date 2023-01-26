@@ -49,7 +49,7 @@ top: 0px;
 
 .core_mem_text{
    visibility: hidden;
-   
+   transition: all 350ms ease;
    
 }
 
