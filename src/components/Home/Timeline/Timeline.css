@@ -7,7 +7,7 @@
     background-size: cover;
     min-height: 100vh;
     height: auto;
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
     z-index: 9;
     margin-top: 3.5rem;
 }
@@ -121,6 +121,7 @@
 
     .timeline-section {
         transition: height 99999s;
+        background-attachment: scroll;
     }
 
     .timeline-h1 {

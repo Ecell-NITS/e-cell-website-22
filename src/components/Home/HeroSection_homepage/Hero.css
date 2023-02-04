@@ -43,8 +43,30 @@
      padding-right: 4rem;
      letter-spacing: .5px;
  }
- 
- 
+
+ @media only screen and (max-height: 500px){
+
+    .hero-top-main{
+        position: absolute;
+        top: 20% !important;
+        left: 10%;
+    }
+
+    .hero-top-main h1{
+        font-size: 8rem !important;
+    }
+    
+    .hero-top-main h2{
+        display: none;
+    }
+ }
+
+ @media only screen and (max-height:265px){
+    .hero-top-main h1{
+        font-size: 5rem !important;
+    }
+ }
+
  @media only screen and (max-width:1200px) and (min-width:992px){
      .hero-top-main{
          left: 3%;
@@ -53,13 +75,20 @@
  
  @media only screen and (max-width:1100px) and (min-width:662px){
      .hero-top-main{
-         left: 28%;
-         top: 30%;
+         left: 5%;
      }
  
+     .hero-top-main h1{
+        font-size: 15vw;
+     }
+
+     .hero-top-main h2{
+            font-size: 3vw;
+     }
+
      .typewriter-hero{
-         top: 65%;
-         left: 20%;
+        font-size: 3vw;
+        top: 42%;
      }
  }
  

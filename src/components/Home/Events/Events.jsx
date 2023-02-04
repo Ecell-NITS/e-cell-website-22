@@ -4,7 +4,7 @@ function Events() {
   return (
     <>
       <div className="event_main">
-        <div className="heading"><h1>EVENTS</h1></div>
+        <div className="collab"><h1>EVENTS</h1></div>
         <div className="event_items">
           <div className="ev item1">
             <h1 className='item-head'>ORIENTATION</h1>

@@ -27,7 +27,7 @@ const Collaboration = () => {
     return (
         <>
             <div className="collab">
-                <h1>COLLABORATION</h1>
+                <h1 style={{ userSelect: 'none' }} >COLLABORATION</h1>
             </div>
 
             <div className="top-segment">

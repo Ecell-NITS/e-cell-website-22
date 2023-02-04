@@ -1,134 +1,150 @@
-.wrapper{
-    width: 100%;
-    max-width: 90rem;
-    overflow-x: hidden;
-    overflow-y: auto;
-    margin: 0 auto;
-  }
-  
-  .brand-logo{
-    width: 3rem;
+.wrapper {
+  width: 100%;
+  max-width: 90rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin: 0 auto;
 }
 
-  .navbar0{
+.brand-logo {
+  width: 3rem;
+}
+
+.navbar0 {
+  width: 100%;
+  height: 4rem;
+  padding: 1.875rem;
+  background-color: #224259;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 20;
+  transition: all 0.3s ease-out;
+  position: fixed;
+}
+
+.expanded {
+  background-color: #224259;
+  box-shadow: 0px 4px 12px 0px #22425966;
+}
+
+.navbar0 .logo {
+  color: #d9d2c3;
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+.navbar0 .links-nav {
+  list-style: none;
+  display: flex;
+  color: #d9d2c3;
+  cursor: pointer;
+}
+
+.navbar0 .links-nav li {
+  margin: 0 0.9375rem;
+  color: white;
+  font-size: 1.3rem;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+}
+
+.links-nav a {
+  transition: all 0.15s ease-in-out;
+}
+
+.links-nav a:active {
+  background-color: #224529 !important;
+}
+
+.links-nav a:hover {
+  color: #1da1f2 !important;
+}
+
+.navbar0 .toggle-icon {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .navbar0 {
+    position: relative;
+    transition: 0.5s all ease-in-out;
+  }
+
+  .navbar0.expanded {
+    height: 100vh;
+    background-color: #224259;
+  }
+
+  .navbar0.expanded .links-nav {
+    position: absolute;
+    top: 7.5rem;
+    left: 0;
     width: 100%;
-    height: 4rem;
-    padding: 1.875rem;
-    background-color: #224259;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    z-index: 20;
-    transition: all .3s ease-out;
-    position: fixed;
-  }
-  
-  .expanded{
-    background-color: #224259;
-    box-shadow: 0px 4px 12px 0px #22425966;
+    opacity: 1;
+    padding-left: 0 !important;
   }
 
-  .navbar0 .logo{
-    color: #D9D2C3;
-    font-size: 1.75rem;
-    font-weight: 600;
+  .navbar0.expanded .links-nav li {
+    margin: 0.9375rem 0;
+    font-size: 1.5rem;
   }
-  
-  .navbar0 .links-nav{
-    list-style: none;
+
+  .navbar0 .logo {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.9375rem;
+  }
+
+  .navbar0 .toggle-icon {
+    display: block;
+    color: #d9d2c3;
+    position: absolute;
+    top: 1.3rem;
+    right: 1.25rem;
+  }
+
+  .navbar0 .links-nav {
+    position: absolute;
+    top: -25.75rem;
+    left: 0;
+    width: 100%;
     display: flex;
-    color: #D9D2C3;
-    cursor: pointer;
-  }
-  
-  .navbar0 .links-nav li{
-    margin: 0 .9375rem;
-    color: white;
-    font-size: 1.3rem;
-    letter-spacing: .5px;
-    font-weight: 600;
-    font-family: 'Poppins', sans-serif;
-  }
-  
-  .links-nav a{
-    transition: all .15s ease-in-out;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
   }
 
- 
-  .links-nav a:active {
-    background-color: #224529 !important;
+  .navbar0 .links-nav li {
+    margin: 0.9375rem 0;
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-height: 500px) {
+  .navbar0.expanded .links-nav {
+    top: 4.5rem;
+  }
+}
+
+@media only screen and (max-height: 400px) {
+  .navbar0.expanded .links-nav {
+    top: 3.8rem;
   }
 
- 
-  .links-nav a:hover{
-    color: #1da1f2 !important;
+  .navbar0.expanded .links-nav li {
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
   }
+}
 
- 
-  .navbar0 .toggle-icon{
-    display: none
-  }
-  
-  
-  @media(max-width: 768px){
-    .navbar0{
-      position: relative;
-      transition: 0.5s all ease-in-out;
-    }
-  
-   
-    .navbar0.expanded{
-      height: 100vh;
-      background-color: #224259;
-    }
-  
-    .navbar0.expanded .links-nav{
-      position: absolute;
-      top: 7.5rem;
-      left: 0;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      opacity: 1;
-      padding-left: 0 !important;
-    }
-  
-    .navbar0.expanded .links-nav li{
-      margin: .9375rem 0;
-      font-size: 1.5rem;
-    }
-  
-    .navbar0 .logo{
-      position: absolute;
-      top: .5rem;
-      left: .9375rem;
-    }
-  
-    .navbar0 .toggle-icon{
-      display: block;
-      color: #D9D2C3;
-      position: absolute;
-      top: 1.3rem;
-      right: 1.25rem;
-    }
-  
-    .navbar0 .links-nav{
-      position: absolute;
-      top: 4rem;
-      left: 0;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      opacity: 0;
-      transition: all 0.5s ease-in-out;
-    }
-  
-    .navbar0 .links-nav li{
-      margin: .9375rem 0;
-      font-size: 1.5rem;
-    }
-  }
+ul.links-nav {
+  padding-left: 0;
+}

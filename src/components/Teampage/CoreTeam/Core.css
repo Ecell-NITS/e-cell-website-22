@@ -22,12 +22,13 @@ border: 0.5px solid #9A9494;
 box-sizing: border-box;
 box-shadow: -4px -4px 12px 0px #F2F2F240;
 box-shadow: 4px 4px 12px 0px #4F4F4F33;
+overflow: hidden;
+
 
 }
 
-.core-mem .images img{
-   transition: 0.3s;
-}
+
+
 
 .core-mem:hover .images img{
 margin-top: 30px;
@@ -35,7 +36,8 @@ height: 336px;
 width: 336px;
 left: 24px;
 top: 24px;
-border-radius: 4px;
+border-radius: 50%;
+transition: all 0.2s ease-in; 
 }
 
 .images img{
@@ -47,6 +49,8 @@ top: 0px;
 
 .core_mem_text{
    visibility: hidden;
+   transition: all 350ms ease;
+   
 }
 
 .core-mem:hover .core_mem_text{
@@ -58,6 +62,7 @@ font-weight: 400;
 line-height: 24px;
 letter-spacing: 0em;
 text-align: center;
+
 }
  
 
@@ -77,6 +82,8 @@ text-align: center;
 
 .social-media{
    visibility: hidden;
+   
+   
 }
 
 .core-mem:hover .social-media{
@@ -104,6 +111,7 @@ text-align: center;
    margin-top: 0;
    margin-right:2.50rem;
    margin-bottom: 1rem;
+   
 }
 
 .core_heading h1{

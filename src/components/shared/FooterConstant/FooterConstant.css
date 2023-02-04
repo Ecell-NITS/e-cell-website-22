@@ -119,4 +119,37 @@
     }
 }
 
+@media only screen and (max-height:500px){
+    .footer-c{
+        top: 25%;
+    }
+}
 
+@media only screen and (max-height:450px){
+    .footer-c{
+        top: 13%;
+    }
+}
+
+@media only screen and (max-height:386px){
+    .footer-c{
+        top: 20%;
+    }
+    
+    .fa-btn, .li-btn, .ig-btn{
+        height: 1.8rem;
+        width: 1.8rem;
+    }
+
+    .fa-icon{
+        width: .8rem;
+    }
+
+    .ig-icon{
+        width: 1.2rem;
+    }
+
+    .li-icon{
+        width: 1rem;
+    }
+}
