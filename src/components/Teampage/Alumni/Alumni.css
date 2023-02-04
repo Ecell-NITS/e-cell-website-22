@@ -34,6 +34,8 @@
 }
 
 .img_alumni img {
+    height: 15rem;
+    width: 22rem;
     vertical-align: middle;
     margin-bottom: 1.5rem;
     border-top-left-radius: 10px;
