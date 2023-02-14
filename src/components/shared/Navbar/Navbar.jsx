@@ -32,7 +32,8 @@ const Navbar = () => {
       </div>
       <ul className='links-nav'>
         <li><Link to="/#about">ABOUT</Link></li>
-        <li><Link to="/#events">EVENTS</Link></li>
+        <li><Link to="/events">EVENTS</Link></li>
+        <li><Link to="/resources">RESOURCES</Link></li>
         <li><a href="https://srijan-nits.in/" rel="noreferrer" target="_blank">SRIJAN</a></li>
         <li><Link to="/team">OUR TEAM</Link></li>
         <li><Link to="/gallery">GALLERY</Link></li>

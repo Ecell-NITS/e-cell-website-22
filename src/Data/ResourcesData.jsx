@@ -1,0 +1,70 @@
+
+export const resourcesdta = [
+    {
+        id:1,
+        img:"https://res.cloudinary.com/dp92qug2f/image/upload/c_scale,w_360,f_auto,fl_lossy/v1676397123/resources-ecell/book-demo_gaszyn.jpg"
+    },
+    {
+        id:2,
+        img:"https://res.cloudinary.com/dp92qug2f/image/upload/c_scale,w_360,f_auto,fl_lossy/v1676397123/resources-ecell/book-demo_gaszyn.jpg"
+    },
+    {
+        id:3,
+        img:"https://res.cloudinary.com/dp92qug2f/image/upload/c_scale,w_360,f_auto,fl_lossy/v1676397123/resources-ecell/book-demo_gaszyn.jpg"
+    },
+    {
+        id:4,
+        img:"https://res.cloudinary.com/dp92qug2f/image/upload/c_scale,w_360,f_auto,fl_lossy/v1676397123/resources-ecell/book-demo_gaszyn.jpg"
+    },
+    {
+        id:5,
+        img:"https://res.cloudinary.com/dp92qug2f/image/upload/c_scale,w_360,f_auto,fl_lossy/v1676397123/resources-ecell/book-demo_gaszyn.jpg"
+    },
+    {
+        id:6,
+        img:"https://res.cloudinary.com/dp92qug2f/image/upload/c_scale,w_360,f_auto,fl_lossy/v1676397123/resources-ecell/book-demo_gaszyn.jpg"
+    },
+    {
+        id:7,
+        img:"https://res.cloudinary.com/dp92qug2f/image/upload/c_scale,w_360,f_auto,fl_lossy/v1676397123/resources-ecell/book-demo_gaszyn.jpg"
+    },
+    {
+        id:8,
+        img:"https://res.cloudinary.com/dp92qug2f/image/upload/c_scale,w_360,f_auto,fl_lossy/v1676397123/resources-ecell/book-demo_gaszyn.jpg"
+    }
+]
+
+export const podcastdata = [
+    {
+        id:1,
+        img:"https://res.cloudinary.com/dp92qug2f/image/upload/c_scale,w_360,f_auto,fl_lossy/v1676399429/resources-ecell/45bfa9a6-734b-45fd-b38a-0d749ce74bee_awa66h.jpg"
+    },
+    {
+        id:2,
+        img:"https://res.cloudinary.com/dp92qug2f/image/upload/c_scale,w_360,f_auto,fl_lossy/v1676399429/resources-ecell/45bfa9a6-734b-45fd-b38a-0d749ce74bee_awa66h.jpg"
+    },
+    {
+        id:3,
+        img:"https://res.cloudinary.com/dp92qug2f/image/upload/c_scale,w_360,f_auto,fl_lossy/v1676399429/resources-ecell/45bfa9a6-734b-45fd-b38a-0d749ce74bee_awa66h.jpg"
+    },
+    {
+        id:4,
+        img:"https://res.cloudinary.com/dp92qug2f/image/upload/c_scale,w_360,f_auto,fl_lossy/v1676399429/resources-ecell/45bfa9a6-734b-45fd-b38a-0d749ce74bee_awa66h.jpg"
+    },
+    {
+        id:5,
+        img:"https://res.cloudinary.com/dp92qug2f/image/upload/c_scale,w_360,f_auto,fl_lossy/v1676399429/resources-ecell/45bfa9a6-734b-45fd-b38a-0d749ce74bee_awa66h.jpg"
+    },
+    {
+        id:6,
+        img:"https://res.cloudinary.com/dp92qug2f/image/upload/c_scale,w_360,f_auto,fl_lossy/v1676399429/resources-ecell/45bfa9a6-734b-45fd-b38a-0d749ce74bee_awa66h.jpg"
+    },
+    {
+        id:7,
+        img:"https://res.cloudinary.com/dp92qug2f/image/upload/c_scale,w_360,f_auto,fl_lossy/v1676399429/resources-ecell/45bfa9a6-734b-45fd-b38a-0d749ce74bee_awa66h.jpg"
+    },
+    {
+        id:8,
+        img:"https://res.cloudinary.com/dp92qug2f/image/upload/c_scale,w_360,f_auto,fl_lossy/v1676399429/resources-ecell/45bfa9a6-734b-45fd-b38a-0d749ce74bee_awa66h.jpg"
+    },
+]

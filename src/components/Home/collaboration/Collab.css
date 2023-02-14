@@ -2,7 +2,7 @@
     text-align: center;
     width: 90%;
     margin: 0 auto;
-    border-bottom: 3px solid #161c2f;
+    border-bottom: 3px solid #224259;
     padding: 3rem 0 0 0;
     margin-bottom: 3.5rem;
     }
@@ -11,7 +11,7 @@
         font-size: 4.45vw;
         /* font-family: 'Poppins', sans-serif; */
         font-family: 'Barlow Condensed', sans-serif;
-        color: #161c2f;
+        color: #224259;
         font-weight: 900;
     }
     

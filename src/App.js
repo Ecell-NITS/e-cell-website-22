@@ -7,6 +7,8 @@ import Footerconstant from "./components/shared/FooterConstant/Footerconstant";
 import NotFound from './pages/404/NotFound';
 import ScrollToTop from './components/shared/ScrollToTop/ScrollToTop';
 import Scrolling from "./components/shared/ScrollToTop/Scrolling";
+import Events from "./pages/Events/Events";
+import Resources from "./pages/Resources/Resources";
 function App() {
   return (
     <>
@@ -25,6 +27,18 @@ function App() {
               path="/team"
               element={<Team />}
               key="route-team-screen"
+            />
+             <Route
+              exact
+              path="/events"
+              element={<Events />}
+              key="route-events-screen"
+            />
+              <Route
+              exact
+              path="/resources"
+              element={<Resources />}
+              key="route-events-screen"
             />
             <Route path="*" element={<NotFound />} />
           </Routes>

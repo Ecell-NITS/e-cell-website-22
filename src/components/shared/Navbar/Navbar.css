@@ -117,7 +117,7 @@
 
   .navbar1 .links-nav{
     position: absolute;
-    top: -20.75rem;
+    top: -30.75rem;
     left: 0;
     width: 100%;
     display: flex;
@@ -131,6 +131,12 @@
   .navbar1 .links-nav li{
     margin: .9375rem 0;
     font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width:991px) and (min-width:768px){
+  .navbar1 .links-nav li{
+    font-size: 1.3vw;
   }
 }
 
