@@ -7,6 +7,7 @@ import Events from '../../components/Home/Events/Events'
 import Pillars from '../../components/Home/Pillars_of_Ecell/Pillars'
 import Timeline from '../../components/Home/Timeline/Timeline'
 import Footer from '../../components/shared/Footer/Footer'
+import Footerconstant from '../../components/shared/FooterConstant/Footerconstant'
 const Home = () => {
   useEffect(() => {
     document.title = "ECELL | NITS";
@@ -20,6 +21,7 @@ const Home = () => {
       <Events />
       <Timeline />
       <Testimonial />
+      <Footerconstant />
       <Footer />
     </>
   )

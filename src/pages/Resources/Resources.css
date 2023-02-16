@@ -36,9 +36,17 @@
 }
 
 .resource-indi{
-    min-width: 24%;
-    margin-left: 1%;
+    width: 22.6%;
+    flex: none;
+    order: 1;
+    margin-left: 1.2%;
+    margin-right: 1.2%;
     border: 1px solid #224259;
+    transition: all 0.5s ease-in-out;
+}
+
+.resource-indi:hover{
+    box-shadow: 8px 7px 18px rgb(194 194 194);
 }
 
 .hjloq{
@@ -75,7 +83,7 @@
     }
 
     .resource-indi{
-        min-width: 100%;
+        width: 100%;
       margin: 0 auto;
         border: none;
        
