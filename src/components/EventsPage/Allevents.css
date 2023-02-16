@@ -12,8 +12,14 @@
     font-family: "Barlow Condensed", sans-serif;
 }
 
-/* @media only screen and (max-width:660px){
-    .top-hro-all-evnts-pol h1{
-        font-size: 8vw;
+.eic-hd-ttle{
+    padding-left: 1.2vw;
+    padding-right: 1.2vw;
+}
+
+@media only screen and (max-width:660px){
+    .eic-hd-ttle{
+        margin-top: 17vw !important;
+        /* margin-bottom: 2vw !important; */
     }
-} */
+}

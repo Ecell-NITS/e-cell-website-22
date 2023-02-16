@@ -17,8 +17,7 @@
     border: 1px solid #224259;
     border-radius: 1vw;
     transition: all 0.5s ease-in-out;
-    margin: 1.5vw 0;
-    margin-left: 2%;
+    margin: 1.5vw 1.1%;
 }
 
 .past-evvnts-parnt::-webkit-scrollbar {
