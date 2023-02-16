@@ -5,7 +5,7 @@
 
   /* Auto layout */
   width: 32%;
-  margin : 5% 0.7%;
+  margin : 5% 0.7;
   display: flex;
   flex-direction: column;
   align-items: center;

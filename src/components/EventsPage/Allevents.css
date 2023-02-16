@@ -1,0 +1,19 @@
+.top-hro-all-evnts-pol{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.top-hro-all-evnts-pol h1{
+    color: white;
+    font-weight: 900;
+    font-size: 7.5vw;
+    font-family: "Barlow Condensed", sans-serif;
+}
+
+/* @media only screen and (max-width:660px){
+    .top-hro-all-evnts-pol h1{
+        font-size: 8vw;
+    }
+} */

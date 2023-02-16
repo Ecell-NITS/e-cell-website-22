@@ -1,10 +1,15 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Footer from '../../components/shared/Footer/Footer'
 import NavbarTeam from '../../components/shared/Navbar/NavbarTeam'
 import './Events.css'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
+import UpcomingEvents from '../../components/EventsPage/UpcomingEvents';
+import PastEvents from '../../components/EventsPage/PastEvents';
 const Events = () => {
+  useEffect(() => {
+    document.title = "Events ECELL | NITS";
+  }, []);
   return (
     <>
       <NavbarTeam />
@@ -63,8 +68,8 @@ const Events = () => {
           </div>
 
           <div className="vw-dtls-evnt-hro">
-                <button>View details</button>
-              </div>
+            <button>View details</button>
+          </div>
         </div>
 
         <div className="events-main-hero">
@@ -91,11 +96,12 @@ const Events = () => {
           </div>
 
           <div className="vw-dtls-evnt-hro">
-                <button>View details</button>
-              </div>
+            <button>View details</button>
+          </div>
         </div>
-
       </Carousel>
+      <UpcomingEvents />
+      <PastEvents />
       <Footer />
     </>
   )
