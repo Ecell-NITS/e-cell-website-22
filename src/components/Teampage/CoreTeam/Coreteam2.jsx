@@ -2,7 +2,7 @@ import React from 'react'
 import './Core.css'
 import { FaFacebook, FaLinkedin } from 'react-icons/fa'
 import { BsGithub } from 'react-icons/bs'
-import Data from '../../../Data/Core.json'
+import Data from '../../../Data/Core2.json'
 
 function CoreTeam1() {
    return (
