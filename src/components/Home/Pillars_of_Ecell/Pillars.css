@@ -65,10 +65,7 @@
 }
 
 .btns {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 3% 5% 5%;
+  display: none;
 }
 
 .prev,
@@ -138,6 +135,12 @@
     font-size: 60px;
   }
 
+  .btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3% 5% 5%;
+  }
 }
 
 @media only screen and (max-width: 875px) {
