@@ -2,7 +2,7 @@ import React from 'react'
 import './Core.css'
 import { FaFacebook, FaLinkedin } from 'react-icons/fa'
 import { BsGithub } from 'react-icons/bs'
-import Data from '../../../Data/Core.json'
+import Data from '../../../Data/Core1.json'
 
 
 function CoreTeam3() {
@@ -26,7 +26,7 @@ function CoreTeam3() {
          <p className="core_mem_text">{data.rank}</p>
          <div className="social-media">
             <a href={data.fb} className="SocialLogo"><FaFacebook size={30}/></a>
-            <a href={data.linkedln} className="SocialLogo"><FaLinkedin size={30}/></a> 
+            <a href={data.linkdln} className="SocialLogo"><FaLinkedin size={30}/></a> 
             <a href={data.git} className="SocialLogo"><BsGithub size={30}/></a>
          </div>
       </div>

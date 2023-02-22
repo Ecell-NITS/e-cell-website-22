@@ -1,0 +1,151 @@
+[
+    {
+        "id": 1,
+        "name": "Shriti Mishra",
+        "rank": "President",
+        "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1676965316/core%20team%20e-cell/Shriti_1_pgbvsp.jpg",
+        "fb": "https://www.facebook.com/shriti.mishra.33",
+        "linkdln": "https://www.linkedin.com/in/shriti-mishra-m15",
+        "git": "#"
+    },
+    {
+       "id": 2,
+       "name": "Mayur Mulchandani",
+       "rank": "Vice President",
+       "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1676952502/core%20team%20e-cell/Mayur_DP_hzxk2j.jpg",
+       "fb": "https://www.facebook.com/profile.php?id=100009396306613",
+       "linkdln": "https://www.linkedin.com/in/mayur-mulchandani-898973198",
+       "git": "#"
+ 
+    },
+    {
+        "id": 3,
+         "name": "Swaraj Pal Kesari",
+         "rank": "Executive Co-Head",
+         "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1676965428/core%20team%20e-cell/Swaraj_1_ztcxzg.jpg",
+         "fb": "https://www.facebook.com/swarajpalkesari/",
+         "linkdln": "https://www.linkedin.com/in/swaraj-pal-kesari-4b39311b3/",
+         "git": "#"
+     },
+     {
+        "id": 4,
+         "name": "Manav Sanghi ",
+         "rank": "Executive Co-Head",
+         "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1676965465/core%20team%20e-cell/manav_gfvlll.jpg",
+         "fb": "https://www.facebook.com/manav.sanghi",
+         "linkdln": "https://www.linkedin.com/in/manav-sanghi-3a355b198 ",
+         "git": "#"
+     },
+    {
+       "id": 5,
+       "name": "Aadi Verma",
+       "rank": "Technical Head",
+       "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1676965722/core%20team%20e-cell/PicsArt_11-25-07.05.12_1_jovq3c.jpg",
+       "fb": "https://www.facebook.com/aadi.verma.96780671",
+       "linkdln": "https://www.linkedin.com/in/aadi-verma-429453199",
+       "git": "#"
+    },
+
+ 
+    {
+       "id": 6,
+        "name": "Debanga Choudhury",
+        "rank": "Design Co-Head",
+        "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1676965778/core%20team%20e-cell/Debanga_Choudhury_uncgzb.jpg",
+        "fb": "https://www.facebook.com/debanga.choudhury",
+        "linkdln": "https://www.linkedin.com/in/debanga-choudhury-3b6b131b6",
+        "git": "#"   
+   },
+    {
+       "id": 7,
+       "name": "Sohan Paul",
+       "rank": "Design Co-Head",
+       "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1676965818/core%20team%20e-cell/SohanPaul_wbeg3n.jpg",
+       "fb": "https://www.facebook.com/paulsohan2",
+       "linkdln": "https://www.linkedin.com/in/sohan-paul/",
+       "git": "#"
+    },
+    
+    {
+       "id": 8,
+        "name": "Teresa Louis",
+        "rank": "Collaboration & Outreach Co-Head",
+        "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1676965830/core%20team%20e-cell/Teresa_kj2wf2.jpg",
+        "fb": "https://www.facebook.com/teresa.louis1",
+        "linkdln": "https://www.linkedin.com/in/teresa-louis",
+        "git": "#"
+    },
+    {
+       "id": 9,
+        "name": "Nihar Jyoti Basistha",
+        "rank": "Collaboration & Outreach Co-Head",
+        "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1676966046/core%20team%20e-cell/Nihar_uerxnt.jpg",
+        "fb": "https://www.facebook.com/nihar.basisth.7",
+        "linkdln": "https://www.linkedin.com/in/nihar-jyoti-basisth-121b2319b",
+        "git": "#"
+    },
+    {
+      "id": 10,
+       "name": "Tejaswini AVSV",
+       "rank": "Content Co-Heads",
+       "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1676966085/core%20team%20e-cell/Tejaswini_AVSV_wptkym.jpg",
+       "fb": "https://www.facebook.com/Tejaswini.AVSV",
+       "linkdln": "https://www.linkedin.com/in/tejaswiniavsv/",
+       "git": "#"
+   },
+   {
+      "id": 11,
+       "name": "Sai Lahari",
+       "rank": "Content Co-Heads ",
+       "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1676966096/core%20team%20e-cell/Sai_Lahari_p9ajcg.jpg",
+       "fb": "https://www.facebook.com/profile.php?id=100006209748653",
+       "linkdln": "https://www.linkedin.com/in/sai-lahari-jayareddygari-57681a196",
+       "git": "#"
+   },
+   {
+      "id": 12,
+       "name": "Abhishek Bharadwaz",
+       "rank": "Event Management Co-Head",
+       "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1676966110/core%20team%20e-cell/Abhishek_hcw5nu.png",
+       "fb": "https://www.facebook.com/bharadwaz.abhishek",
+       "linkdln": "https://www.linkedin.com/in/abhishek-bharadwaz-458993192",
+       "git": "#"
+   },
+   {
+      "id": 13,
+       "name": "Abhinav Kumar Gupta",
+       "rank": "Event Management Co-Head",
+       "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1676966175/core%20team%20e-cell/Abhinav_kor5zq.jpg",
+       "fb": "https://www.facebook.com/profile.php?id=100003660467689",
+       "linkdln": "#",
+       "git": "#"
+   },
+   {
+      "id": 14,
+       "name": "Amalendu Kumar",
+       "rank": "Marketing & Publicity Co-Head",
+       "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1676966192/core%20team%20e-cell/Amalendu_o1djeh.jpg",
+       "fb": "https://www.facebook.com/amalenduKumarSingh",
+       "linkdln": "https://www.linkedin.com/in/amalendu-singh-9b4a99195",
+       "git": "#"
+   },
+   {
+      "id": 15,
+       "name": "Hemdutt Mishra",
+       "rank": "Marketing & Publicity Co-Heads",
+       "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1676966209/core%20team%20e-cell/Hemdutt_Mishra__ukcxb4.jpg",
+       "fb": "https://www.facebook.com/profile.php?id=100037969845038",
+       "linkdln": "https://www.linkedin.com/in/hem-dutt-mishra-2bbb4a1b5",
+       "git": "#"
+   },
+   {
+      "id": 16,
+       "name": "Arkadeep Kashyap",
+       "rank": "Trading Club Head",
+       "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1676966226/core%20team%20e-cell/Arkadeep_xpwbin.jpg",
+       "fb": "https://www.facebook.com/arko.kashyap",
+       "linkdln": "https://www.linkedin.com/in/kashyaparka",
+       "git": "#"
+   }
+    
+ ]
