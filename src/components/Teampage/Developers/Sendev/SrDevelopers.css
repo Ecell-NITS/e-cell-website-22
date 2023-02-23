@@ -25,7 +25,7 @@ transition-duration: 0.3 sec;
 overflow: hidden;
 }
 
-.sr-dev:hover .images img{
+.sr-dev:hover .images-sr img{
    margin-top: 30px;
 height: 336px;
 width: 336px;
@@ -35,7 +35,7 @@ border-radius: 4px;
 transition: all 350ms ease;
 }
 
-.images img{
+.images-sr img{
    width: 100%;
 height: 450px;
 left: -34px;
@@ -64,7 +64,7 @@ text-align: center;
 
 .title{
 font-family: Barlow Condensed;
-font-size: 36px;
+font-size: 34px;
 font-style: italic;
 font-weight: 600;
 line-height: 43px;
@@ -117,34 +117,45 @@ text-align: center;
       text-align: center;
    }
    .sr-dev{
-      height: 408px;
-      width: 300px;
+      height: 254px;
+      width: 174px;
       transition-duration: 0.3 sec;
    }
 
-   .images img{
-      width: 300px;
-      height: 350px;
+   .images-sr img{
+      width: 174px;
+      height: 189px;
    }
 
-   .sr-dev:hover .images img{
-      height: 250px;
-      width: 250px;
+   .sr-dev:hover .images-sr img{
+      height: 150px;
+      width: 150px;
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-top: 10px;
    }
 
    .title{
-      font-size: 2rem;
+      font-size: 20px;
    }
 
    .sr-dev:hover .dev_card_text{
-      font-size: 20px;
-      margin-top: 0;
+      font-size: 15px;
+      margin-top: -18px;
    }
 
    .social-media{
       position: relative;
-      right: 40px;
+      right: 120px;
+      bottom: 19px;
    }
+   .MediaLogo svg{
+      width: 1.4rem;
+      }
+   
+   .MediaLogo{
+   margin: 13px;
+      }
 }
 
 @media only screen and (max-width:1200px) and (min-width:661px){
@@ -156,12 +167,12 @@ text-align: center;
       width: 300px;
    }
 
-   .images img{
+   .images-sr img{
       width: 300px;
       height: 350px;
    }
 
-   .sr-dev:hover .images img{
+   .sr-dev:hover .images-sr img{
       height: 250px;
       width: 250px;
    }
@@ -180,6 +191,9 @@ text-align: center;
    .social-media{
       position: relative;
       right: 40px;
-      margin-top: 1.5rem;
+      margin-top: 1rem;
    }
+   .MediaLogo svg{
+      width: 1.4rem;
+      }
 }

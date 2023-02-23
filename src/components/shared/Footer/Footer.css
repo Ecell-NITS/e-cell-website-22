@@ -159,9 +159,7 @@ letter-spacing: 0em;
 
 
 @media only screen and (max-width:1280px) and (min-width:661px){
- 
-
-  .container4{
+ .container4{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -175,68 +173,77 @@ letter-spacing: 0em;
     align-items: center;
     margin-left: 80px;
   }
-
-.footer_social_Logo{
+  .footer_social_Logo{
   margin-bottom: 0 !important;
-}
-
-#link_ln{
+  }
+  #link_ln{
   position: relative;
   right: 5px;
- }
- 
+  }
  .h2{
   display:flex; 
   justify-content:center;
-}
-.p2{
+  }
+ .p2{
   padding-bottom: 1rem;
-}
+  }
 }
 
 @media only screen and (max-width:660px) {
+  .img-foot-centr{
+    height: 106px;
+    width: 82px;
+  }
+  .footer_social_Logo .i-text{
+    display: none;
+  }
   .fcontainer{
     padding-top: 0px;
+  }
+  .container1{
+    margin: 2rem;
   }
   .container2{
     margin-bottom: 0px;
     margin-top: 0px;
   }
   .container3{
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 0px;
+    margin-bottom: 0px;
     align-items: center;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
+   
   }
- #link_ln{
-  position: relative;
-  right: 5px;
- }
+  .s_head{
+    position: relative;
+    left: 82px;
+    margin-bottom: 60px;
+  }
+   #link_ln{
+   position: relative;
+   right: 0px;
+   }
   .container4{
     margin-top: 40px;
     margin-right: 48  px;
     }
-
     .container5{
     padding-bottom: 50px;
     padding: 0;
     }
-
     .footer_social_Logo{
      margin-bottom: 0px;
     }
-    
     .p2{
       padding-bottom: 1rem ;
       margin-bottom: 0px;
     }
-    
     .h2{
       display:flex; 
       justify-content:center;
     }
-
     .p1{
       font-family: Barlow Condensed;
       font-size: 16px;
@@ -245,7 +252,6 @@ letter-spacing: 0em;
       letter-spacing: 0em;
       text-align: center;
     }
-
     .fill{
       width: 100%;
     }

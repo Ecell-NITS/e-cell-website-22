@@ -16,7 +16,7 @@ function Developers() {
                             return (
                                 <div className="sr-dev" key={data.id}>
                                     <div className="body">
-                                        <div className="images">
+                                        <div className="images-sr">
                                             <img src={data.image} alt="" />
                                         </div>
                                         <h3 className='title'>{data.name}</h3>

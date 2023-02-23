@@ -36,10 +36,10 @@ const Footer = () => {
 
 
         <div className="container3">
-          <h2 className='h2'>Social</h2>
+          <h2 className='h2'><span className="s_head">Social</span></h2>
           <a href="/" className="footer_social_Logo"><FaFacebook /><span className="i-text">Facebook</span></a>
           <a href="/" className="footer_social_Logo" id='link_ln'><FaLinkedin /><span className="i-text">Linkedln</span></a>
-          <a href="/" className="footer_social_Logo" ><FaInstagram /><span className="i-text">Instagram</span></a>
+          <a href="/" className="footer_social_Logo" ><FaInstagram className='foot_insta' /><span className="i-text">Instagram</span></a>
         </div>
 
 
