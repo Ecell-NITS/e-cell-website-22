@@ -6,7 +6,7 @@
         "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1676952502/core%20team%20e-cell/Mayur_DP_hzxk2j.jpg",
         "fb": "https://www.facebook.com/profile.php?id=100009396306613",
         "linkdln": "https://www.linkedin.com/in/mayur-mulchandani-898973198",
-        "git": "#"
+        "git": ""
     },
     {
        "id": 2,
@@ -44,7 +44,7 @@
        "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1676953914/core%20team%20e-cell/kiran_w59z4b.jpg",
        "fb": "https://www.facebook.com/kiran.sarmah.16",
        "linkdln": "https://www.linkedin.com/in/kiran-sarmah-510aa9223",
-       "git": "#"
+       "git": ""
     },
     {
        "id": 6,
@@ -61,8 +61,8 @@
         "rank": "Marketing Head",
         "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1676954126/core%20team%20e-cell/mrinal_1_p7yzus.jpg",
         "fb": "https://www.facebook.com/mrinal.kalita.549436",
-        "linkdln": "#",
-        "git": "http://linkedin.com/in/mrinal-kalita-281190217"
+        "linkdln": "http://linkedin.com/in/mrinal-kalita-281190217",
+        "git": ""
     },
     {
        "id": 8,
@@ -71,7 +71,7 @@
         "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1676954187/core%20team%20e-cell/rishi_kant_1_uh9edv.jpg",
         "fb": "https://www.facebook.com/rishikant2808/",
         "linkdln": "https://www.linkedin.com/in/rishikant2808/",
-        "git": "#"
+        "git": ""
     },
     {
        "id": 9,
@@ -98,7 +98,7 @@
        "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1676957383/core%20team%20e-cell/sanchita_1_u8qzxl.jpg",
        "fb": "https://www.facebook.com/sanchita.singh.77582359",
        "linkdln": "https://www.linkedin.com/in/singhsanchita2008",
-       "git": "#"
+       "git": ""
    },
    {
       "id": 12,
@@ -143,7 +143,7 @@
        "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1676958071/core%20team%20e-cell/shubham_1_c4e3fe.jpg",
        "fb": "https://www.facebook.com/profile.php?id=100058575665353",
        "linkdln": "http://linkedin.com/in/shubham-kumar-03540b20b",
-       "git": "#"
+       "git": ""
    }
     
  ]

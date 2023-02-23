@@ -18,10 +18,10 @@ function CoreTeam3() {
          return (
          <div className="core-mem" key={data.id}>
          <div className="body">
-            <div className="images">
+            <div className="core-images">
                <img src={data.image} alt="" />
                </div>
-            <h3 className='title'>{data.name}</h3>
+            <h3 className='core-title'>{data.name}</h3>
          </div>
          <p className="core_mem_text">{data.rank}</p>
          <div className="social-media">
