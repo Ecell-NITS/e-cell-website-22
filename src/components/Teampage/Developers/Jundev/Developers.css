@@ -32,7 +32,7 @@ width: 336px;
 left: 24px;
 top: 24px;
 border-radius: 4px;
-transition: all 350ms ease;
+/* transition: all 350ms ease; */
 }
 
 .images img{
