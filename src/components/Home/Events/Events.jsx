@@ -1,6 +1,13 @@
 import React from "react";
 import "./Events.css";
+import { useNavigate } from 'react-router-dom';
 function Events() {
+
+  let navigate = useNavigate(); 
+  const routeChange = () =>{ 
+    let path = `/events_red` ; 
+    navigate(path);
+  }
   return (
     <>
       <div className="event_main">
@@ -31,7 +38,7 @@ function Events() {
               module to bring out the true start-up geek in students.
             </div>
           </div>
-          <div className=" ev item3">
+          <div className=" ev item3" onClick={()=>routeChange()}>
             <h1 className="item-head">SRIJAN</h1>
             <div className="child">
               Srijan is the flagship event of the Entrepreneurship Cell of NIT
