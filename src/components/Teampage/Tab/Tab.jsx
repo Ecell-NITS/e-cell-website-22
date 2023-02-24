@@ -8,7 +8,7 @@ import Alumni from '../Alumni/Alumni'
 import Faculties from '../Faculties/Faculties'
 import CoreTeam1 from '../CoreTeam/Coreteam1'
 import CoreTeam2 from '../CoreTeam/Coreteam2'
-import CoreTeam3 from '../CoreTeam/Coreteam3'
+// import CoreTeam3 from '../CoreTeam/Coreteam3'
 // import Dev from "../Developers/Developers"
 import Developers from '../Developers/Developers';
 
@@ -48,7 +48,7 @@ const Tab = () => {
           >
             <Dropdown.Item eventKey="2022-2023">2022-2023</Dropdown.Item>
             <Dropdown.Item eventKey="2021-2022">2021-2022</Dropdown.Item>
-            <Dropdown.Item eventKey="2020-2021">2020-2021</Dropdown.Item>
+            {/* <Dropdown.Item eventKey="2020-2021">2020-2021</Dropdown.Item> */}
           </DropdownButton>
         </div>
         <div
@@ -64,7 +64,7 @@ const Tab = () => {
         {lebel === "alumni" && <Alumni />}
         {lebel === "core" && active === "2022-2023" && <CoreTeam1 />}
         {lebel === "core" && active === "2021-2022" && <CoreTeam2 />}
-        {lebel === "core" && active === "2020-2021" && <CoreTeam3 />}
+        {/* {lebel === "core" && active === "2020-2021" && <CoreTeam3 />} */}
         {lebel === "developers" && <Developers />}
       </div>
     </>

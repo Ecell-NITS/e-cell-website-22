@@ -12,9 +12,9 @@ const Team = () => {
     <>
       <NavbarTeam />
       <div className="team-top">
-        <h1 className='me-ou'>Meet our</h1>
-        <h1>Excellent</h1>
-        <span>Team </span> <span className='mem-part'>Memb</span> <span className='er'>ers</span>
+        <h1 className='me-ou' style={{ userSelect: 'none' }}>Meet our</h1>
+        <h1 style={{ userSelect: 'none' }}>Excellent</h1>
+        <span className='team-nme-half' style={{ userSelect: 'none' }}>Team </span> <span className='mem-part' style={{ userSelect: 'none' }}>Memb</span> <span className='er' style={{ userSelect: 'none' }}>ers</span>
       </div>
       <Tab />
       <Footer />

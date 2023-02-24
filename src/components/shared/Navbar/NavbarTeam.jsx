@@ -22,7 +22,7 @@ const NavbarTeam = () => {
 
 
   return (
-    <nav className={ toggle ? 'navbar0 expanded' : 'navbar0'}>
+    <nav className={ toggle ? 'navbar0 expanded' : 'navbar0'} style={{userSelect:'none'}} >
       <Link to="/">
         <img className='brand-logo logo' src={navlogo} alt="ecell-logo-bw2" />
       </Link>
@@ -32,7 +32,8 @@ const NavbarTeam = () => {
       <ul className='links-nav'>
         <li><Link to="/">HOME</Link></li>
         <li><Link to="/#about">ABOUT US</Link></li>
-        <li><Link to="/#events">EVENTS</Link></li>
+        <li><Link to="/events">EVENTS</Link></li>
+        <li><Link to="/resources">RESOURCES</Link></li>
         <li><a href="https://srijan-nits.in/" rel="noreferrer" target="_blank">SRIJAN</a></li>
         <li><Link to="/team">OUR TEAM</Link></li>
         <li><Link to="/gallery">GALLERY</Link></li>

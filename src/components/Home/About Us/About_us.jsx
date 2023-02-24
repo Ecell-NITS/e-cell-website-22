@@ -4,11 +4,12 @@ import image1 from "../../../assets/image1.jpg";
 import Card from "./Card";
 import logo from "../../../assets/logo.jpg";
 const motto_dialogue = [
-  "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla dicta sint facere consequuntur reprehenderit",
-  "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla dicta sint facere consequuntur reprehenderit",
-  "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla dicta sint facere consequuntur reprehenderit",
-  "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla dicta sint facere consequuntur reprehenderit",
-  "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla dicta sint facere consequuntur reprehenderit",
+  "Channelizing the budding thoughts of real-world problem solving by providing an optimal platform to generate its physical counterpart",
+  "Educating the students about applicative problem solving, financial literacy, management and leadership in a scholastic manner through various workshops, events and interactive sessions",
+
+  // "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla dicta sint facere consequuntur reprehenderit",
+  // "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla dicta sint facere consequuntur reprehenderit",
+  // "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla dicta sint facere consequuntur reprehenderit",
 ];
 
 
@@ -23,22 +24,23 @@ function About_us() {
         <img src={image1} alt="image1" className="about_image" />
 
         <div className="about_text_div">
-          <p className="about_text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor minus
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id totam
-            exercitationem earum et quis repellat dicta nihil eveniet veritatis.
-            Reprehenderit quas veniam impedit minus hic adipisci repudiandae,
-            molestias totam blanditiis velit autem ab dolore nam at quia dolorem
-            officiis, culpa incidunt. Explicabo eaque officiis eveniet dolorum
-            natus adipisci consequatur ab hic magnam unde, nesciunt, qui debitis
-            odit perferendis laborum voluptatum? Cumque, sunt! Ut, dolorum
-            voluptatibus. Sed adipisci dolore, Lorem, ipsum dolor sit amet
-            consectetur adipisicing elit. Rem doloremque earum architecto harum
-            ipsam? Cumque molestiae qui tenetur? Error, nesciunt.
-          </p>
+          <div className="about_text">
+          <div className="about_e_cell">
+           <b> ABOUT E-CELL: </b> Entrepreneurship Cell or E-Cell, NIT Silchar is a non-profit organization run by the students and was established with the aim of promoting and nurturing the entrepreneurial spirit among the youth of the college. We thrive on fostering a self-reliant mentality among the youth and also helping them work on their ideas and encouraging college-level students to start their own ventures. E-Cell also provided pre-incubation facilities to various start-ups and bootstrapped businesses to turn into colossal enterprises.
+          </div>
+          <div className="about_mission">
+            <b>MISSION:</b>  The Entrepreneurship Cell of NIT Silchar gives students a platform that converges their entrepreneurial passions, focusing mainly on improving the culture of entrepreneurship in the college, both in technical and non-technical fields, and further uplifting the students to innovate, put forth their ideas, and help develop their models by providing them with incubations and also a platform to scale their products through our events.
+          </div>
+          <div className="about_objective">
+            <b> OBJECTIVE:</b> The objective of E-Cell NIT Silchar is to develop the spirit of entrepreneurship among the students. It motivates students and enables them to strengthen their passion and integrity toward entrepreneurial qualities. Activities of this cell also include orientation programs, various workshops, interactive sessions, webinars, and large-scale events like Srijan, which help students to gain experience and educate them about financial literacy, the application of skills to solve real-world problems, and management of events.
+          </div>
+          </div>
         </div>
+
       </div>
+
       {/* for cards */}
+
       <div className="motto">
         <h3 style={{ fontSize: "64px" }}>MOTTO</h3>
       </div>
@@ -46,27 +48,13 @@ function About_us() {
         <div className="cards-set-1">
           <Card image={logo} dialogue={motto_dialogue[0]} />
           <Card image={logo} dialogue={motto_dialogue[1]} />
-          <Card image={logo} dialogue={motto_dialogue[2]} />
+          {/* <Card image={logo} dialogue={motto_dialogue[2]} /> */}
         </div>
-        <div className="cards-set-2">
+        {/* <div className="cards-set-2">
           <Card image={logo} dialogue={motto_dialogue[3]} />
           <Card image={logo} dialogue={motto_dialogue[4]} />
-        </div>
+        </div> */}
       </div>
-
-      {/* <div className="motto_card_carosel">
-        <div className="motto_card_carosel_card">
-           {
-             motto_dialogue.map((motto_dialogue,index) => {
-              if(index==Ind)  return <Card  image={logo} motto_dialogue={motto_dialogue[index]}/>
-           })
-          }
-        </div>
-        <div className="motto_card_carosel_button">
-          <button className="motto_card_carosel_button_left" onClick={() => setInd((Ind-1+motto_dialogue.length)%motto_dialogue.length)}>&lt;</button>
-          <button className="motto_card_carosel_button_right" onClick={() => setInd((Ind+1)%motto_dialogue.length)}>&gt;</button>
-          </div>
-      </div> */}
     </div>
   );
 }
