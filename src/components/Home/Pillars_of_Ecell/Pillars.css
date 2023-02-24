@@ -65,6 +65,13 @@
 }
 
 .btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3% 5% 5%;
+}
+
+.btns0{
   display: none;
 }
 
@@ -135,7 +142,7 @@
     font-size: 60px;
   }
 
-  .btns {
+  .btns0 {
     display: flex;
     justify-content: center;
     align-items: center;
