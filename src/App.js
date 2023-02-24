@@ -9,6 +9,7 @@ import Scrolling from "./components/shared/ScrollToTop/Scrolling";
 import Events from "./pages/Events/Events";
 import Resources from "./pages/Resources/Resources";
 import AllEvents from "./components/EventsPage/AllEvents";
+import Eventsred from "./pages/Events_red/Events_red";
 function App() {
   return (
     <>
@@ -44,6 +45,12 @@ function App() {
               exact
               path="/allevents"
               element={<AllEvents />}
+              key="route-allevents-screen"
+            />
+             <Route
+              exact
+              path="/events_red"
+              element={<Eventsred/>}
               key="route-allevents-screen"
             />
             <Route path="*" element={<NotFound />} />
