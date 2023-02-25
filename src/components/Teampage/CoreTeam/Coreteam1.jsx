@@ -25,9 +25,9 @@ function CoreTeam3() {
          </div>
          <p className="core_mem_text">{data.rank}</p>
          <div className="social-media">
-            <a href={data.fb} className="SocialLogo"><FaFacebook size={30}/></a>
-            <a href={data.linkdln} className="SocialLogo"><FaLinkedin size={30}/></a> 
-            <a href={data.git} className="SocialLogo"><BsGithub size={30}/></a>
+            <a href={data.fb} className="SocialLogo" target="_blank"><FaFacebook size={30}/></a>
+            <a href={data.linkdln} className="SocialLogo" target="_blank"><FaLinkedin size={30}/></a> 
+            <a href={data.git} className="SocialLogo" target="_blank"><BsGithub size={30}/></a>
          </div>
       </div>
          )
