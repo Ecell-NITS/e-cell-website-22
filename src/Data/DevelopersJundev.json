@@ -1,94 +1,102 @@
 [
    {
        "id": 1,
-       "name": "LOREM IPSUM",
-       "rank": "LOREM IPSUM",
-       "image": "https://www.linkpicture.com/q/Card-image.jpg",
-       "fb": "#",
-       "linkedln": "#",
-       "git": "#"
+       "name": "Aditya Ranjan",
+       "rank": "Junior developer",
+       "image": "https://res.cloudinary.com/duejpnj1y/image/upload/c_scale,w_360,f_auto,fl_lossy/v1676893491/Juniordev/Aditya_Ranjan_uwpqgq.jpg",
+       "fb": "https://www.facebook.com/profile.php?id=100076402945936",
+       "linkedln": "https://www.linkedin.com/in/aditya-ranjan-77a6a522b/",
+       "git": "https://github.com/hereisadi"
    },
    {
       "id": 2,
-      "name": "LOREM IPSUM",
-      "rank": "LOREM IPSUM",
-      "image": "https://www.linkpicture.com/q/Card-image.jpg",
-      "fb": "#",
-      "linkedln": "#",
-      "git": "#"
-
+       "name": "Aditya Kumar",
+       "rank": "Junior developer",
+       "image": "https://res.cloudinary.com/duejpnj1y/image/upload/c_scale,w_360,f_auto,fl_lossy/v1676893490/Juniordev/Aditya_Kumar_xuhagf.png",
+       "fb": "https://www.facebook.com/profile.php?id=100071791456601&mibextid=ZbWKwL",
+       "linkedln": "https://www.linkedin.com/in/adityakr31",
+       "git": "https://github.com/31adityakumar"
    },
    {
       "id": 3,
-      "name": "LOREM IPSUM",
-      "rank": "LOREM IPSUM",
-      "image": "https://www.linkpicture.com/q/Card-image.jpg",
-      "fb": "#",
-      "linkedln": "#",
-      "git": "#"
-   },
+      "name": "Maharnav Deka",
+      "rank": "Junior developer",
+      "image": "https://res.cloudinary.com/duejpnj1y/image/upload/c_scale,w_360,f_auto,fl_lossy/v1676911903/Juniordev/Maharnav_Deka_vkv8zo.jpg",
+      "fb": "https://www.facebook.com/profile.php?id=100076295825121",
+      "linkedln": "https://www.linkedin.com/in/maharnav-deka-06742815a/",
+      "git": "https://github.com/mdekaa"
 
+   },
    {
       "id": 4,
-       "name": "LOREM IPSUM",
-       "rank": "LOREM IPSUM",
-       "image": "https://www.linkpicture.com/q/Card-image.jpg",
-       "fb": "#",
-       "linkedln": "#",
-       "git": "#"   
+       "name": "Nikita Sinha",
+       "rank": "Junior developer",
+       "image": "https://res.cloudinary.com/duejpnj1y/image/upload/v1677166430/Juniordev/Nikita_jjczrj.jpg",
+       "fb": "https://www.facebook.com/profile.php?id=100076463865684",
+       "linkedln": "https://www.linkedin.com/in/nikita-sinha-071a69237/",
+       "git": "https://github.com/nikita-sinha22"   
   },
    {
       "id": 5,
-      "name": "LOREM IPSUM",
-      "rank": "LOREM IPSUM",
-      "image": "https://www.linkpicture.com/q/Card-image.jpg",
-      "fb": "#",
-      "linkedln": "#",
-      "git": "#"
+      "name": "Bipangshu Saha",
+      "rank": "Junior developer",
+      "image": "https://res.cloudinary.com/duejpnj1y/image/upload/c_scale,w_360,f_auto,fl_lossy/v1676893507/Juniordev/Bipangshu_Saha_qn2goh.jpg",
+      "fb": "https://www.facebook.com/ronny.kumar.7186896",
+      "linkedln": "https://www.linkedin.com/in/bipangshu-saha-2aab9b228/",
+      "git": "https://github.com/BIPS8812"
    },
    {
       "id": 6,
-       "name": "LOREM IPSUM",
-       "rank": "LOREM IPSUM",
-       "image": "https://www.linkpicture.com/q/Card-image.jpg",
-       "fb": "#",
-       "linkedln": "#",
-       "git": "#"
+       "name": "Anamika Das",
+       "rank": "Junior developer",
+       "image": "https://res.cloudinary.com/duejpnj1y/image/upload/c_scale,w_360,f_auto,fl_lossy/v1676893495/Juniordev/Anamika_Das_frare7.jpg",
+       "fb": "https://www.facebook.com/profile.php?id=100075782332137",
+       "linkedln": "http://www.linkedin.com/in/anamika-das092",
+       "git": "https://github.com/anamika-ds"
    },
    {
       "id": 7,
-       "name": "LOREM IPSUM",
-       "rank": "LOREM IPSUM",
-       "image": "https://www.linkpicture.com/q/Card-image.jpg",
-       "fb": "#",
-       "linkedln": "#",
-       "git": "#"
+       "name": "Jacinth Mahanta",
+       "rank": "Junior developer",
+       "image": "https://res.cloudinary.com/duejpnj1y/image/upload/c_scale,w_360,f_auto,fl_lossy/v1676893510/Juniordev/Jacinth_Mahanta_r8dvek.png",
+       "fb": "https://www.facebook.com/jacinth.mahanta/",
+       "linkedln": "https://www.linkedin.com/in/jacinth-mahanta-63b279229/",
+       "git": "https://github.com/Jacinth-Mahanta"
    },
    {
       "id": 8,
-       "name": "LOREM IPSUM",
-       "rank": "LOREM IPSUM",
-       "image": "https://www.linkpicture.com/q/Card-image.jpg",
-       "fb": "#",
-       "linkedln": "#",
-       "git": "#"
+       "name": "Dimpal Kalita",
+       "rank": "Junior developer",
+       "image": "https://res.cloudinary.com/duejpnj1y/image/upload/c_scale,w_360,f_auto,fl_lossy/v1676893509/Juniordev/Dimpal_Kalita_narhle.jpg",
+       "fb": "https://www.facebook.com/dimpalkalita99/",
+       "linkedln": "https://www.linkedin.com/in/dimpal-kalita-819121226/",
+       "git": "https://github.com/Dimpal-Kalita"
    },
    {
       "id": 9,
-       "name": "LOREM IPSUM",
-       "rank": "LOREM IPSUM",
-       "image": "https://www.linkpicture.com/q/Card-image.jpg",
-       "fb": "#",
-       "linkedln": "#",
-       "git": "#"
+       "name": "Priyabrat Duarah",
+       "rank": "Junior developer",
+       "image": "https://res.cloudinary.com/duejpnj1y/image/upload/v1676957414/Juniordev/Priyabrat_Duarah_1_vhpqfi.jpg",
+       "fb": "https://www.facebook.com/profile.php?id=100076231446828",
+       "linkedln": "https://www.linkedin.com/in/priyabrat-duarah-6a6132221/",
+       "git": "https://github.com/Prybrt06"
    },
    {
       "id": 10,
-       "name": "LOREM IPSUM",
-       "rank": "LOREM IPSUM",
-       "image": "https://www.linkpicture.com/q/Card-image.jpg",
-       "fb": "#",
-       "linkedln": "#",
-       "git": "#"
+       "name": "Pragya Annesha Baruah",
+       "rank": "Junior developer",
+       "image": "https://res.cloudinary.com/duejpnj1y/image/upload/c_scale,w_360,f_auto,fl_lossy/v1676893518/Juniordev/Pragya_byge9d.jpg",
+       "fb": "https://www.facebook.com/profile.php?id=100075204826742",
+       "linkedln": "https://www.linkedin.com/in/pragya-annesha-baruah-34a043229",
+       "git": "https://github.com/Prag03"
+   },
+   {
+      "id": 11,
+      "name": "Abhishek Ranjan",
+      "rank": "Junior developer",
+      "image": "https://res.cloudinary.com/duejpnj1y/image/upload/v1676957662/Juniordev/Abhishek_gril56.jpg",
+      "fb": "https://www.facebook.com/profile.php?id=100009413930965&mibextid=ZbWKwL",
+      "linkedln": "https://www.linkedin.com/in/abhishek-ranjan-31044223a/",
+      "git": "https://github.com/AbhiRanj123"
    }
 ]
