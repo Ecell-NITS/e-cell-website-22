@@ -26,7 +26,7 @@ overflow: hidden;
 }
 
 .sr-dev:hover .images-sr img{
-   margin-top: 30px;
+margin-top: 30px;
 height: 336px;
 width: 336px;
 left: 24px;
@@ -36,18 +36,18 @@ transition: all 350ms ease;
 }
 
 .images-sr img{
-   width: 100%;
+width: 100%;
 height: 450px;
 left: -34px;
 top: 0px;
 }
 
 .dev_card_text{
-   visibility: hidden;
+visibility: hidden;
 }
 
 .sr-dev:hover .dev_card_text{
-   visibility: visible;
+visibility: visible;
 border-radius: nullpx;
 font-family: Barlow Condensed;
 font-size: 20px;
@@ -118,21 +118,22 @@ text-align: center;
    }
    .sr-dev{
       height: 254px;
-      width: 174px;
+      width: 167px;
       transition-duration: 0.3 sec;
    }
 
    .images-sr img{
-      width: 174px;
+      width: 167px;
       height: 189px;
    }
 
    .sr-dev:hover .images-sr img{
       height: 150px;
-      width: 150px;
+      width: 145px;
       margin-left: 10px;
       margin-right: 10px;
       margin-top: 10px;
+      transition: all 350ms ease;
    }
 
    .title{
@@ -146,7 +147,7 @@ text-align: center;
 
    .social-media{
       position: relative;
-      right: 120px;
+      right: 126px;
       bottom: 19px;
    }
    .MediaLogo svg{
@@ -155,7 +156,7 @@ text-align: center;
    
    .MediaLogo{
    margin: 13px;
-      }
+   }
 }
 
 @media only screen and (max-width:1200px) and (min-width:661px){

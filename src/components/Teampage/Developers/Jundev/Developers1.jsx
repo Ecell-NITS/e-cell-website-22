@@ -24,9 +24,9 @@ return(
          </div>
          <p className="jrdev_card_text">{data.rank}</p>
          <div className="social-media-jr">
-            <a href={data.fb} className="MediaLogo-jr"><FaFacebook size={30}/></a>
-            <a href={data.linkedln} className="MediaLogo-jr"><FaLinkedin  size={30}/></a> 
-            <a href={data.git} className="MediaLogo-jr"><BsGithub size={30}/></a>
+            <a href={data.fb} className="MediaLogo-jr" target={'_blank'}><FaFacebook size={30}/></a>
+            <a href={data.linkedln} className="MediaLogo-jr" target={'_blank'}><FaLinkedin  size={30}/></a> 
+            <a href={data.git} className="MediaLogo-jr" target={'_blank'}><BsGithub size={30}/></a>
          </div>
       </div>
          )
