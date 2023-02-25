@@ -1,252 +1,198 @@
-.testimonial-top {
-    background: url(../../../../src/assets/testimonial/TESTIMONIAL\ IMAGE.png);
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    background-position: right;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding-bottom: 0;
-    min-height: 100vh;
-    height: auto;
-    opacity: 1;
-    width: 54%;
-    float: right;
-    margin-top: 10vh;
-    background-attachment: fixed;
+.testi-main {
+  padding: 10vh 0 5vh 0vh;
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: visible;
+  scroll-behavior: smooth;
+  justify-content: space-between;
+}
+
+.testi-main::-webkit-scrollbar {
+  display: none;
+}
+
+.white-monial {
+  color: white !important;
+}
+
+.testi-child {
+  background: url(../../../../src/assets/testimonial/TESTIMONIAL\ IMAGE.png);
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: 53.4% 100%;
+  min-height: 100vh;
+}
+
+.main-testimonial {
+  padding-top: 1.5vh !important;
+}
+
+.testi-indi {
+  display: flex;
+  justify-content: space-between;
+  min-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.content-testi {
+  width: 65%;
+  margin-right: 2.5%;
+  margin-left: 2.5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: red;
+  margin-top: 5vh;
+  background-color: white;
+  border-radius: 0.625rem;
+  padding: 2vw;
+}
+
+.img-testi-holder {
+  width: 27%;
+  margin-left: 8%;
+}
+
+.img-testi-holder img {
+  width: 100%;
+  border-radius: .75rem;
+  object-fit: contain;
+  opacity: 1;
+  box-shadow: 0 0 0.2375rem;
+}
+
+.testi-img{
+  filter: grayscale(1);
+  transition: all 0.15s ease-in-out;
+}
+
+.testi-img:hover {
+  filter: grayscale(0);
+}
+
+.quote {
+  width: 2vw;
+  user-select: none;
+}
+
+.quote img{
+  width: 100%;
+}
+
+.quote-rotate {
+  transform: rotate(180deg);
+  margin: 0 0 0 auto;
+}
+
+.testi-al {
+  text-align: justify;
+  padding-left: 2vw;
+  padding-right: 2vw;
+}
+
+.testi-al-cont {
+  font-size: 1.5vw;
+  line-height: 1.6;
+  color: #505050;
+  font-weight: 400;
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+.speaker-details-testi {
+  text-align: right;
+  margin: 2vh 0 0 auto;
+}
+
+.speaker-details-testi h1 {
+  color: #224259;
+  font-size: 1.9vw;
+}
+
+.speaker-details-testi h2 {
+  color: #3e618e;
+  font-size: 1.2vw;
+}
+
+.btn-testimonial{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-indi-testimonial{
+  font-weight: 900;
+}
+
+@media only screen and (max-width: 768px) {
+  .testi-child{
+    max-width: 100%;
   }
-  
-  .test-m-t {
-    transform: translateY(-100vh);
-    max-height: 120vh;
+
+  .testi-main {
+    padding: 10vh 0;
+    margin-bottom: 0;
   }
-  
-  .c1 {
-    display: flex;
-    width: 90%;
-    margin: 0 auto;
-    min-height: 75vh;
+
+  .testi-al-cont {
+    padding-left: 3vw;
+    padding-right: 3vw;
+  }
+
+  .testi-indi {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
     /* background-color: red; */
-  }
-  
-  .person-img {
-    margin-left: 10vh;
-    width: 27%;
-    background: url(../../../../src/assets/testimonial/sivaji.jpg);
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding-bottom: 0;
-    opacity: 1;
-    height: 60vh;
-    border-radius: 0.625rem;
-    filter: grayscale(1);
-    transition: all 0.15s ease-out;
-  }
-  
-  .person-img:hover {
-    filter: grayscale(0);
-  }
-  
-  .person-content {
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-    background-color: white;
-    min-width: 40%;
-    max-width: 60%;
-    border-radius: 0.825rem;
-    margin-top: 2rem;
-    padding: 1.5rem;
-    padding-left: 3rem !important;
-    padding-right: 3rem !important;
-    text-align: left;
-    max-height: 55vh;
-    font-family: "Barlow Condensed", sans-serif;
-    font-size: 1.4rem;
-    line-height: 1.6;
   }
-  
-  .quote {
-    background: url(../../../../src/assets/testimonial/Quote.svg);
-    min-height: 5vh;
-    background-position: left;
-    background-repeat: no-repeat;
-    width: 5rem;
+
+  .img-testi-holder {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
   }
-  
-  .quote-rotate {
-    transform: rotate(180deg);
-    margin: 0 0 0 auto;
+
+  .img-testi-holder img {
+    width: 100%;
+    object-fit: contain;
+    position: relative;
+    z-index: 5;
   }
-  
-  .main-testi-content {
-    padding-left: 3rem;
-    padding-right: 3rem;
+
+  .content-testi {
+    width: 78%;
+    margin-left: auto;
+    margin-right: auto;
+    transform: translateY(-9vh);
+    padding-top: 5vh;
   }
-  
-  .person-content h1 {
-    text-align: right;
-    font-size: 1.9rem;
-    color: #224259;
-    margin-top: 3vh;
+
+  .testi-al-cont {
+    font-size: 3.2vw;
   }
-  
-  .person-content h3 {
-    text-align: right;
-    font-size: 1rem;
-    color: #3e618e;
+
+  .speaker-details-testi h1 {
+    font-size: 5vw;
   }
-  
-  .test-ti {
-    display: flex;
-    justify-content: center;
+
+  .speaker-details-testi h2 {
+    font-size: 3vw;
   }
-  
-  .monial {
-    color: white !important;
+
+  .quote{
+    width: 4vw !important;
   }
-  
-  .testimonial-main {
-    margin: 5vh auto 0 auto;
+}
+
+@media only screen and (max-width:660px){
+  .testi-child {
+    background-size: 56% 100%;
   }
-  
-  .control-arrow {
-    color: red !important;
+}
+
+@media only screen and (max-height:500px){
+  .content-testi{
+    padding-top: 10vh;
   }
-  
-  .control-arrow {
-    height: 5vh !important;
-    opacity: 0.4 !important;
-    background-color: #07131c !important;
-    border-radius: 0.4rem !important;
-  }
-  
-  .control-arrow:hover {
-    background-color: #1da1f2 !important;
-    color: #000 !important;
-  }
-  
-  .carousel .control-prev.control-arrow {
-    left: 70% !important;
-    top: 89% !important;
-  }
-  
-  .carousel .control-next.control-arrow {
-    right: 26% !important;
-    top: 89% !important;
-  }
-  
-  @media only screen and (max-width: 1025px) and (min-width: 661px) {
-    .person-img {
-      margin-left: 5vh;
-      width: 40%;
-    }
-  
-    .c1 {
-      width: 97%;
-    }
-  
-    .person-content {
-      /* padding: .5rem !important; */
-      margin-top: 0.5rem !important;
-      font-size: 1.2rem;
-      line-height: 1.4;
-      padding-top: 0 !important;
-    }
-  
-    .quote {
-      width: 3rem;
-    }
-  
-    .main-testi-content {
-      padding-left: 1.5rem;
-      padding-right: 1.5rem;
-    }
-  
-    .carousel .control-prev.control-arrow {
-      left: 60% !important;
-    }
-  
-    .carousel .control-next.control-arrow {
-      right: 32% !important;
-    }
-  }
-  
-  @media only screen and (max-width: 660px) {
-    .test-m-t {
-      max-height: 140vh;
-    }
-  
-    .c1 {
-      width: 100%;
-      flex-direction: column;
-      min-height: 90vh;
-      height: auto;
-    }
-  
-    .person-img {
-      margin-left: 2vh;
-      z-index: 20;
-      width: 70%;
-      max-height: 30vh;
-      margin: 1rem auto;
-      object-fit: contain;
-    }
-  
-    .testimonial-top {
-      width: 100%;
-    }
-  
-    .person-content {
-      min-width: 100% !important;
-      margin: 0 auto;
-      transform: translateY(-7vh);
-      padding: 10vh 3rem 1.5rem 1.2rem !important;
-      max-height: fit-content;
-      /* padding-bottom: 20vh !important; */
-    }
-  
-    .main-testi-content {
-      padding-left: 0rem;
-      padding-right: 0rem;
-      font-size: 1.3rem;
-      text-align: justify;
-      font-family: 900;
-    }
-  
-    .person-content h1 {
-      font-size: 1.3rem;
-    }
-  
-    .carousel .control-prev.control-arrow {
-      left: 40% !important;
-      top: 93% !important;
-      /* margin-top: 1rem; */
-    }
-  
-    .carousel .control-next.control-arrow {
-      right: 42% !important;
-      top: 93% !important;
-    }
-  }
-  
-  @media only screen and (max-width: 361px) {
-    .test-m-t {
-      max-height: 145vh;
-    }
-  }
-  
-  @media only screen and (max-width: 321px) {
-    .carousel .control-next.control-arrow {
-      right: 40% !important;
-    }
-  
-    .test-m-t {
-      max-height: 175vh;
-    }
-  }
-  
+}

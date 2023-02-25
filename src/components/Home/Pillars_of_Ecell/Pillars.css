@@ -71,6 +71,10 @@
   margin: 3% 5% 5%;
 }
 
+.btns0{
+  display: none;
+}
+
 .prev,
 .next {
   /* White */
@@ -138,6 +142,12 @@
     font-size: 60px;
   }
 
+  .btns0 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3% 5% 5%;
+  }
 }
 
 @media only screen and (max-width: 875px) {

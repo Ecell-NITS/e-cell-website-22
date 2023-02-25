@@ -27,12 +27,6 @@
     top: 20%;
     transition: all .5s ease-out;
 }
-.one{
-    top: 5%;
-    transform: scale(1);
-    transform: translateY(-3vh);
-}
-
 .event_items {
     display: flex;
     justify-content: space-between;
@@ -64,10 +58,6 @@
     background: url(../../../../src/assets/events/orientation.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    cursor: pointer;
-    width: 50%;
-    transition: all 0.5s ease-out;
-    padding: 0rem 5rem;
 }
 
 .item2 {
@@ -95,16 +85,11 @@
     opacity: 0;
     transition:all .3s ease-out;
     transform: translateY(5vh);
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: 550;
     letter-spacing: 0.5px;
 }
-.one{
-    visibility: visible;
-    opacity: 1;
-    line-height: 1.5rem;
-    letter-spacing: 0.5px;
-}
+
 
 .item1:hover,
 .item2:hover,
@@ -113,7 +98,7 @@
     cursor: pointer;
     width: 50%;
     transition: all 0.5s ease-out;
-    padding: 0rem 5rem;
+    padding: 0rem 3.5rem;
 
 }
 

@@ -117,7 +117,7 @@
 
   .navbar1 .links-nav{
     position: absolute;
-    top: -18.75rem;
+    top: -30.75rem;
     left: 0;
     width: 100%;
     display: flex;
@@ -126,12 +126,33 @@
     align-items: center;
     opacity: 0;
     transition: all 0.5s ease-in-out;
-    
-    
   }
 
   .navbar1 .links-nav li{
     margin: .9375rem 0;
     font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width:991px) and (min-width:768px){
+  .navbar1 .links-nav li{
+    font-size: 1.3vw;
+  }
+}
+
+@media only screen and (max-height:500px){
+  .navbar1.expanded .links-nav{
+    top: 4.5rem;
+  }
+}
+
+@media only screen and (max-height:400px){
+  .navbar1.expanded .links-nav{
+    top: 3.8rem;
+  }
+
+  .navbar1.expanded .links-nav li{
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
   }
 }
