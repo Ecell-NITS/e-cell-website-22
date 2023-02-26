@@ -1,37 +1,24 @@
-*{
+* {
     font-family: 'Barlow Condensed', sans-serif;
 }
-.event_main{
+
+.event_main {
     position: relative;
     z-index: 9;
 }
-.heading {
-    text-align: center;
-}
 
-.heading h1 {
-    display: inline-block;
-    border-bottom: 2px solid rgb(10, 10, 70);
-    color: rgb(10, 10, 70);
-    width: 90%;
-    letter-spacing: 0.5px;
-    font-size: 4rem;
-    font-weight: 600;
-    margin-bottom: 2rem;
-}
-
-.item-head{
+.item-head {
     text-align: center;
-    transform: translateY(2vh);
+    transform: translateY(2.5vh);
     position: relative;
-    top: 20%;
-    transition: all .5s ease-out;
+    transition: all .5s ease;
 }
 .event_items {
     display: flex;
     justify-content: space-between;
     overflow: hidden;
 }
+
 .ev {
     width: 25%;
     min-height: 60vh;
@@ -39,6 +26,7 @@
     padding-bottom: 2rem;
     color: white;
 }
+
 .item1,
 .item2,
 .item3,
@@ -81,37 +69,38 @@
 }
 
 .child {
-    visibility: hidden;
+    display: none;
     opacity: 0;
-    transition:all .3s ease-out;
+    transition: all .3s ease-out;
     transform: translateY(5vh);
     font-size: 1.1rem;
     font-weight: 550;
     letter-spacing: 0.5px;
+    transition: all 0.3s ease-out;
+
 }
-
-
 .item1:hover,
 .item2:hover,
 .item3:hover,
 .item4:hover {
     cursor: pointer;
     width: 50%;
-    transition: all 0.5s ease-out;
     padding: 0rem 3.5rem;
 
 }
 
-.ev:hover .item-head{
+.ev:hover .item-head {
     top: 5%;
     transform: scale(1);
     transform: translateY(-3vh);
+    transition: all 0.5s ease-out;
 }
+
 .ev:hover .child,
 .ev:hover .child,
 .ev:hover .child,
 .ev:hover .child {
-    visibility: visible;
+    display: block;
     opacity: 1;
     line-height: 1.5rem;
     letter-spacing: 0.5px;
@@ -119,24 +108,30 @@
 
 
 @media only screen and (max-width: 1130px) {
-    .event_items{
+    .event_items {
         flex-direction: column;
         visibility: visible;
     }
-    .ev{
+
+    .ev {
         width: 100%;
         min-height: 50vh;
         overflow: hidden;
     }
-    .ev:hover .item-head{
+
+    .ev:hover .item-head {
         transform: scale(1);
         transform: translateY(-3vh);
     }
 
-    .item1:hover, .item2:hover, .item3:hover, .item4:hover{
+    .item1:hover,
+    .item2:hover,
+    .item3:hover,
+    .item4:hover {
         width: 100%;
         padding: 1rem 1rem;
     }
+
     .item1,
     .item2,
     .item3,
@@ -144,7 +139,8 @@
         width: 100%;
         box-sizing: border-box;
     }
-    .child{
+
+    .child {
         transform: translateY(3vh);
         letter-spacing: 0.5px;
     }
