@@ -61,7 +61,7 @@ const Pillars = () => {
             )
           })}
       </div>
-      <div className="btns">
+      <div className="btns btns0">
         <button className="prev" onClick={handlePrev}>
           <i className="arrow left" />
         </button>

@@ -156,6 +156,7 @@ const AllEvents = () => {
                     );
                 })}
             </div>
+            
             <div className="btns">
                 <button className="prev btn-testimonial" onClick={empressariobackPrevbk}>
                     <AiOutlineArrowLeft className="btn-indi-testimonial" />

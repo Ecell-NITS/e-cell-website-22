@@ -11,22 +11,22 @@ return(
       <div className="jr_heading">
          <h1>JUNIOR DEVELOPERS</h1>
       </div>
-   <div className="container">
+   <div className="container_jrdev">
    {
       Data.map(data=>{
          return (
          <div className="jr-dev" key={data.id}>
          <div className="body">
-            <div className="images">
+            <div className="images_jrdev">
                <img src={data.image} alt="" />
-               </div>
-            <h3 className='title'>{data.name}</h3>
+            </div>
+            <h3 className='jrdev_title'>{data.name}</h3>
          </div>
-         <p className="dev_card_text">{data.rank}</p>
-         <div className="social-media">
-            <a href={data.fb} className="MediaLogo"><FaFacebook size={30}/></a>
-            <a href={data.linkedln} className="MediaLogo"><FaLinkedin size={30}/></a> 
-            <a href={data.git} className="MediaLogo"><BsGithub size={30}/></a>
+         <p className="jrdev_card_text">{data.rank}</p>
+         <div className="social-media-jr">
+            <a href={data.fb} className="MediaLogo-jr" target={'_blank'}><FaFacebook size={30}/></a>
+            <a href={data.linkedln} className="MediaLogo-jr" target={'_blank'}><FaLinkedin  size={30}/></a> 
+            <a href={data.git} className="MediaLogo-jr" target={'_blank'}><BsGithub size={30}/></a>
          </div>
       </div>
          )
