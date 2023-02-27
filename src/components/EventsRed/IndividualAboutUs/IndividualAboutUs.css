@@ -28,3 +28,15 @@ padding: 2% 8%;
 
 
 }
+@media only screen and (max-width:1350px) {
+
+   .aboutus_content{
+    font-size: 1.5rem;
+   }
+
+}
+@media only screen and (max-width:600px) {
+    aboutus_content{
+        font-size: 1rem;
+       }
+}
