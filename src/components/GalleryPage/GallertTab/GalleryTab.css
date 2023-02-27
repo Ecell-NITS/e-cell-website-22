@@ -65,6 +65,7 @@ div.tabGallery > *{
 
 .GalleryCards{
     display: flex;
+    gap: 1em;
     flex-wrap: wrap;
     justify-content: center;
     padding-top: 2em;

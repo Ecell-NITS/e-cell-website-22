@@ -1,59 +1,192 @@
 [
-    {
-        "id": 1,
-        "year": "2020-2021",
-        "event": "Emprassario",
-        "imgsrc": "https://www.linkpicture.com/q/Picture-Card.svg"
-    },
-    {
-       "id": 2,
-       "year": "2021-2022",
-       "event": "Orientation",
-       "imgsrc": "https://www.linkpicture.com/q/Picture-Card.svg"
-    },
-    {
-       "id": 3,
-       "year": "2021-2022",
-       "event": "Srijan",
-       "imgsrc": "https://www.linkpicture.com/q/Picture-Card.svg"
-
-    },
- 
-    {
-       "id": 4,
+    {   "id":1,
         "year": "2022-2023",
-        "event": "Orientation",
-        "imgsrc": "https://www.linkpicture.com/q/Picture-Card.svg"
+        "event": "Srijan",
+        "imgsrc": "https://res.cloudinary.com/dfriijrmr/image/upload/v1677396003/samples/GalleryPage/srijan2022-2023/start3_tqu8nr.jpg"
+    },
+    {
+      "id":2,
+      "year":"2022-2023",
+      "event":"Srijan",
+      "imgsrc": "https://res.cloudinary.com/dfriijrmr/image/upload/v1677395999/samples/GalleryPage/srijan2022-2023/idk_knmujl.jpg"
+    },
+    {
+      "id":3,
+      "year":"2022-2023",
+      "event":"Srijan",
+      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1677395996/samples/GalleryPage/srijan2022-2023/277772067_532544878220799_7467461624549756321_n_vfylc8.jpg"
+    },
+    {
+      "id":4,
+      "year":"2022-2023",
+      "event":"Srijan",
+      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1677474955/GalleryPage/Srijan%202022-23/teams_uu7dec.jpg"
+    },
+    {
+      "id":5,
+      "year":"2022-2023",
+      "event":"Srijan",
+      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1677474945/GalleryPage/Srijan%202022-23/imaugural_ceremony_xihtp2.jpg"
+    },
+    {
+      "id":6,
+      "year":"2022-2023",
+      "event":"Srijan",
+      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1677474942/GalleryPage/Srijan%202022-23/group_pic_wqdelr.jpg"
+    },
+    {
+      "id":7,
+      "year":"2022-2023",
+      "event":"Srijan",
+      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1677474940/GalleryPage/Srijan%202022-23/crying_vgczef.jpg"
+    },
+    {
+      "id":8,
+      "year":"2022-2023",
+      "event":"Srijan",
+      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1677474888/GalleryPage/Srijan%202022-23/278647849_532986591509961_3049151441003914535_n_nv4dg4.jpg"
+    },
+    {
+      "id":9,
+      "year":"2022-2023",
+      "event":"Srijan",
+      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1677474885/GalleryPage/Srijan%202022-23/278422694_532980904843863_3162676106950133638_n_by17db.jpg"
+    },
+    {
+      "id":10,
+      "year":"2022-2023",
+      "event":"Srijan",
+      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1677474885/GalleryPage/Srijan%202022-23/278332086_532980968177190_3407856614422230693_n_unaf2s.jpg"
+    },
+    {
+      "id":11,
+      "year":"2022-2023",
+      "event":"Srijan",
+      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1677474882/GalleryPage/Srijan%202022-23/278126023_532544801554140_7365133572541381614_n_ggswsn.jpg"
+    },
+    {
+      "id":12,
+      "year":"2022-2023",
+      "event":"Srijan",
+      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1677474882/GalleryPage/Srijan%202022-23/277806645_532985668176720_3858823300515326543_n_s5rtty.jpg"
+    },
+    {
+      "id":13,
+      "year":"2022-2023",
+      "event":"Srijan",
+      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1677474884/GalleryPage/Srijan%202022-23/278247721_532984378176849_8300906852035734564_n_aydgse.jpg"
+    },
+    {
+      "id":14,
+      "year":"2022-2023",
+      "event":"Srijan",
+      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1677474887/GalleryPage/Srijan%202022-23/278596414_532986014843352_4474012601936729890_n_x6b6xs.jpg"
+    },
+
+    {
+      "id":1000,
+      "year":"2022-2023",
+      "event":"Orientation",
+      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1677473927/GalleryPage/Orientation%202022-2023/IMG_1473_wvo4vr.jpg"
+    },
+    {
+      "id":1001,
+      "year":"2022-2023",
+      "event":"Orientation",
+      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1677472654/GalleryPage/Orientation%202022-2023/IMG_1582_fjqenz.jpg"
+    },
+    {
+      "id":1002,
+      "year":"2022-2023",
+      "event":"Orientation",
+      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1677472654/GalleryPage/Orientation%202022-2023/IMG_1579_i7tuyk.jpg"
+    },
+
+    {
+      "id":1003,
+      "year":"2022-2023",
+      "event":"Orientation",
+      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1677474386/GalleryPage/Orientation%202022-2023/IMG_1558_vjql6g.jpg"
+    },
+    {
+      "id":1004,
+      "year":"2022-2023",
+      "event":"Orientation",
+      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1677472653/GalleryPage/Orientation%202022-2023/IMG_1479_oiyz1p.jpg"
+    },
+    {
+      "id":1005,
+      "year":"2022-2023",
+      "event":"Orientation",
+      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1677473928/GalleryPage/Orientation%202022-2023/IMG_1482_uyf84a.jpg"
    },
-    {
-       "id": 5,
-       "year": "2022-2023",
-       "event": "Srijan",
-       "imgsrc": "https://www.linkpicture.com/q/Picture-Card.svg"
+
+   
+   {
+      "id":10001,
+      "year":"2020-2021",
+      "event":"Srijan",
+      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1677528539/GalleryPage/Srijan%201.0/73504844_2690552797675835_6353087079890550784_n_hr8ekg.jpg"
+    },
+   {
+     "id":10002,
+     "year":"2020-2021",
+     "event":"Srijan",
+      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1677528540/GalleryPage/Srijan%201.0/74794788_2695786133819168_8113573893685379072_n_lobip1.jpg"
+   },
+   {
+      "id":10003,
+      "year":"2020-2021",
+      "event":"Srijan",
+      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1677528541/GalleryPage/Srijan%201.0/74802724_2693318890732559_7952600327612530688_n_wlqg3z.jpg"
+   },
+   {
+      "id":10004,
+      "year":"2020-2021",
+      "event":"Srijan",
+      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1677528540/GalleryPage/Srijan%201.0/73284285_2690551787675936_116357986967879680_n_p5hwap.jpg"
+   },
+   {
+     "id":10005,
+     "year":"2020-2021",
+     "event":"Srijan",
+     "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1677528539/GalleryPage/Srijan%201.0/73187906_2695788557152259_1331224357480955904_n_unf8sj.jpg"
+   },
+   {
+     "id":10006,
+      "year":"2020-2021",
+      "event":"Srijan",
+      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1677528542/GalleryPage/Srijan%201.0/75293856_2690551991009249_1320737430323593216_n_jbnbck.jpg"
     },
     {
-       "id": 6,
-        "year": "2020-2021",
-        "event": "Emprassario",
-        "imgsrc": "https://www.linkpicture.com/q/Picture-Card.svg"
+      "id":10007,
+      "year":"2020-2021",
+      "event":"Srijan",
+      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1677528542/GalleryPage/Srijan%201.0/74165655_2690552234342558_521364714261839872_n_qib32i.jpg"
+   },
+   {
+      "id":10008,
+      "year":"2020-2021",
+      "event":"Srijan",
+      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1677528544/GalleryPage/Srijan%201.0/75418900_2695788787152236_6160675869334437888_n_be6t9k.jpg"
+    },
+   {
+      "id":10009,
+      "year":"2020-2021",
+      "event":"Srijan",
+      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1677528539/GalleryPage/Srijan%201.0/74158682_2693318850732563_1879555148464783360_n_up4plx.jpg"
     },
     {
-       "id": 7,
-        "year": "2021-2022",
-        "event": "Orientation",
-        "imgsrc": "https://www.linkpicture.com/q/Picture-Card.svg"
+      "id":10010,
+      "year":"2020-2021",
+      "event":"Srijan",
+      "imgsrc": "https://res.cloudinary.com/dfriijrmr/image/upload/v1677528546/GalleryPage/Srijan%201.0/76605202_2690552351009213_9048639225221611520_n_owwhgs.jpg"
     },
-    {
-       "id": 8,
-        "year": "2020-2021",
-        "event": "Emprassario",
-        "imgsrc": "https://www.linkpicture.com/q/Picture-Card.svg"
-    },
-    {
-       "id": 9,
-        "year": "2021-2022",
-        "event": "Emprassario",
-        "imgsrc": "https://www.linkpicture.com/q/Picture-Card.svg"
+   {
+      "id":10011,
+      "year":"2020-2021",
+      "event":"Srijan",
+      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1677528549/GalleryPage/Srijan%201.0/76705240_2695791563818625_4162529024490340352_n_hoggcp.jpg"
     }
     
  ]
