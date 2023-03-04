@@ -15,7 +15,7 @@
     }
     
     .ru-collab{
-        width: 100%;
+        width:70%;
         height: 100%;
         filter: grayscale(1);
         transition: all 0.2s ease-out; 
@@ -31,16 +31,16 @@
     .btn-junior{
         text-align: center;
         margin: 0 auto;
-        margin-top: 2rem !important;
+        /* margin-top: 2vh !important; */
         display: flex;
         overflow-x: scroll;
         flex-wrap: nowrap;
-        margin-bottom: 2rem !important;
+        /* margin-bottom: 2rem !important; */
         width: 90%;
         border-radius: 7px;
         display: flex;
         align-items: center;
-        padding: 1rem 0;
+        /* padding: 1rem 0; */
         color: black;
         position: relative;
         z-index: 9;
@@ -77,6 +77,7 @@
         width: 90%;
         height: 100%;
         margin-left: auto;
+        padding-top: 2vh;
         margin-right: auto;
       }
 

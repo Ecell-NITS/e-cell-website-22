@@ -16,16 +16,16 @@ function Developers() {
                             return (
                                 <div className="sr-dev" key={data.id}>
                                     <div className="body">
-                                        <div className="images">
+                                        <div className="images-sr">
                                             <img src={data.image} alt="" />
                                         </div>
                                         <h3 className='title'>{data.name}</h3>
                                     </div>
                                     <p className="dev_card_text">{data.rank}</p>
                                     <div className="social-media">
-                                        <a href={data.fb} className="MediaLogo"><FaFacebook size={30} /></a>
-                                        <a href={data.linkedln} className="MediaLogo"><FaLinkedin size={30} /></a>
-                                        <a href={data.git} className="MediaLogo"><BsGithub size={30} /></a>
+                                        <a href={data.fb} className="MediaLogo" target={'_blank'}><FaFacebook size={30} /></a>
+                                        <a href={data.linkedln} className="MediaLogo" target={'_blank'}><FaLinkedin size={30} /></a>
+                                        <a href={data.git} className="MediaLogo" target={'_blank'}><BsGithub size={30} /></a>
                                     </div>
                                 </div>
                             )

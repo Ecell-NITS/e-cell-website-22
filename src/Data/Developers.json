@@ -1,50 +1,50 @@
 [
     {
         "id": 1,
-        "name": "LOREM IPSUM",
-        "rank": "LOREM IPSUM",
-        "image": "https://www.linkpicture.com/q/Card-image.jpg",
-        "fb": "#",
-        "linkdln": "#",
-        "git": "#"
+        "name": "Manash Pratim Pathak",
+        "rank": "Senior Developer",
+        "image": "https://res.cloudinary.com/dk4b8plah/image/upload/v1676958798/Senior%20developers/manash_tqm3wa.jpg",
+        "fb": " https://www.facebook.com/manashpratim.pathak.73 ",
+        "linkdln": "https://www.linkedin.com/in/manash-pratim-pathak-6039b81b6/",
+        "git": "https://github.com/ManashPratimPathak"
     },
     {
        "id": 2,
-       "name": "LOREM IPSUM",
-       "rank": "LOREM IPSUM",
-       "image": "https://www.linkpicture.com/q/Card-image.jpg",
-       "fb": "#",
-       "linkdln": "#",
-       "git": "#"
+       "name": "Sankit Kundu",
+       "rank": "Senior Developer",
+       "image": "https://res.cloudinary.com/dk4b8plah/image/upload/v1677166035/Senior%20developers/sankit1_kfs81k.jpg",
+       "fb": "https://www.facebook.com/sankit.kundu.370",
+       "linkdln": "https://www.linkedin.com/in/sankit-kundu-7677131b9/",
+       "git": "https://github.com/san234751"
  
     },
     {
        "id": 3,
-       "name": "LOREM IPSUM",
-       "rank": "LOREM IPSUM",
-       "image": "https://www.linkpicture.com/q/Card-image.jpg",
-       "fb": "#",
-       "linkdln": "#",
-       "git": "#"
+       "name": "Biju Borah",
+       "rank": "Senior Developer",
+       "image": "https://res.cloudinary.com/dk4b8plah/image/upload/v1677164373/Senior%20developers/biju_1_xsdoac.jpg",
+       "fb": "https://www.facebook.com/biju.borah.77582",
+       "linkdln": "https://www.linkedin.com/in/biju-borah-1bb78620a/?originalSubdomain=in",
+       "git": "https://github.com/biju-borah"
     },
  
     {
        "id": 4,
-        "name": "LOREM IPSUM",
-        "rank": "LOREM IPSUM",
-        "image": "https://www.linkpicture.com/q/Card-image.jpg",
-        "fb": "#",
-        "linkdln": "#",
-        "git": "#"   
+        "name": "Doneela Das",
+        "rank": "Senior Developer",
+        "image": "https://res.cloudinary.com/dk4b8plah/image/upload/v1677166033/Senior%20developers/doneela1_co4hl2.jpg",
+        "fb": "https://www.facebook.com/doneela.das.71",
+        "linkdln": "https://www.linkedin.com/in/ddas7",
+        "git": "https://github.com/doneela"   
     },
     {
        "id": 5,
-       "name": "LOREM IPSUM",
-       "rank": "LOREM IPSUM",
-       "image": "https://www.linkpicture.com/q/Card-image.jpg",
-       "fb": "#",
-       "linkdln": "#",
-       "git": "#"
+       "name": "Bhaskar Wary",
+       "rank": "Senior UI&UX Designer",
+       "image": "https://res.cloudinary.com/dk4b8plah/image/upload/v1677164047/Senior%20developers/bhaskar_vk8otb.jpg",
+       "fb": "https://www.linkedin.com/in/bhaskar-wary/",
+       "linkdln": "https://www.linkedin.com/in/bhaskar-wary/",
+       "git": "https://www.behance.net/bhaskarwary "
     }
     
  ]

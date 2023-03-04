@@ -1,13 +1,12 @@
 import React from "react";
 import "./Events.css";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 function Events() {
-
-  let navigate = useNavigate(); 
-  const routeChange = () =>{ 
-    let path = `/events_red` ; 
+  let navigate = useNavigate();
+  const routeChange = () => {
+    let path = `/events_red`;
     navigate(path);
-  }
+  };
   return (
     <>
       <div className="event_main">
@@ -16,15 +15,15 @@ function Events() {
         </div>
         <div className="event_items">
           <div className="ev item1">
-            <h1 className="item-head">ORIENTATION</h1>
+            <h1 className="item-head">EIC</h1>
             <div className="child">
-              Entrepreneurship cannot be simply confined to making an idea
-              successful; it involves constant hard work, passion and
-              perseverance. Its a process involving a person or a group of
-              people coming up with innovative ideas, researching, conducting
-              surveys, studying the market, and leaving no stone unturned in
-              converting his dream into a Million-Dollar Reality by starting
-              from scratch.
+              ENTREPRENEURSHIP & INNOVATION CHALLENGE, Entrepreneurship cannot
+              be simply confined to making an idea successful; it involves
+              constant hard work, passion and perseverance. Its a process
+              involving a person or a group of people coming up with innovative
+              ideas, researching, conducting surveys, studying the market, and
+              leaving no stone unturned in converting his dream into a
+              Million-Dollar Reality by starting from scratch.
             </div>
           </div>
           <div className="ev item2">
@@ -38,7 +37,7 @@ function Events() {
               module to bring out the true start-up geek in students.
             </div>
           </div>
-          <div className=" ev item3" onClick={()=>routeChange()}>
+          <div className=" ev item3" onClick={() => routeChange()}>
             <h1 className="item-head">SRIJAN</h1>
             <div className="child">
               Srijan is the flagship event of the Entrepreneurship Cell of NIT

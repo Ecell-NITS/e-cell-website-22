@@ -4,8 +4,8 @@ import "./IndividualHero.css"
 
 const IndividualHero = () => {
   return (
-    <div>
-      <img src={srijanImage} alt="Srijan" />
+    <div className='IndividualHeroTop'>
+      {/* <img src={srijanImage} alt="Srijan" /> */}
     </div>
   )
 }
