@@ -26,7 +26,7 @@ const BooksSummary = () => {
             <div className="resources-indi" ref={resourcesHolder}>
                 {resourcesdta.map((item) => {
                     return (
-                        <>
+                        
                             <div
                                 className="resource-indi"
                                 key={item.id}>
@@ -39,7 +39,7 @@ const BooksSummary = () => {
                                         alt="" />
                                 </div>
                             </div>
-                        </>
+                        
                     );
                 })}
             </div>

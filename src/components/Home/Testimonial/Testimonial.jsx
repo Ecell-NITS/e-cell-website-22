@@ -26,7 +26,7 @@ const Testimonial = () => {
 
             {testimonials.map((item) => {
               return (
-                <>
+               
                   <div className="testi-indi" key={item.id}>
                     <div className="img-testi-holder">
                       <img style={{ userSelect: 'none' }} src={item.img} alt={item.prof} className="testi-img" />
@@ -62,7 +62,7 @@ const Testimonial = () => {
                     </div>
                   </div>
 
-                </>
+               
               )
             })}
 

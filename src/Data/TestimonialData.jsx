@@ -4,13 +4,13 @@ export const testimonials = [
         img:"https://res.cloudinary.com/dnvhl9pru/image/upload/v1676298110/E-Cell%20Alumni/mayankYadavSir_nrtzop.png",
         content:"It was nostalgic to see NIT Silchar students and faculty. I really enjoyed the candid conversation with students and the energy in the room to do something big. Would love to come back soon and work towards building a solid entrepreneurial ecosystem in the campus.",
         prof:"Mayank yadav",
-        // post:"Director, NIT Silchar",
+        post:"Senior Director (Products) Turing",
     },
     {
         id:2,
-        img:"https://www.linkpicture.com/q/sivaji.jpg",
+        img:"https://res.cloudinary.com/dp92qug2f/image/upload/v1677997136/collaboration-ecell/WhatsApp_Image_2023-03-01_at_22.55.01-min_xdpxqy.jpg",
         content:"It was a great honor for me to share my experience as an entrepreneur with highly interested and ambitious students from NIT Silchar. It fills me with joy to see how these young committed people are determined to realize their visions and have the courage to build a business themselves.",
-        // post:"Director, NIT Silchar",
+        post:"Co-Founder and COO FlyNow Aviation GmbH",
         prof:"Yvonne",
     },
     // {
