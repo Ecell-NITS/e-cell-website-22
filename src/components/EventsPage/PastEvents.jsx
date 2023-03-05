@@ -24,7 +24,7 @@ const PastEvents = () => {
             <div className="past-evvnts-parnt " ref={pastevntHolder}>
                 {pastents.map((item) => {
                     return (
-                        <>
+                        
                             <div className="past-evnt-indi" key={item.id}>
                                 <div className="img-upcom-evnt">
                                     <img src={item.img}
@@ -52,7 +52,7 @@ const PastEvents = () => {
                                     <h3>{item.content}</h3>
                                 </div>
                             </div>
-                        </>
+                        
                     );
                 })}
             </div>

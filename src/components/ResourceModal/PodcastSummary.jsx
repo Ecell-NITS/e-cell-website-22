@@ -25,7 +25,7 @@ const PodcastSummary = () => {
             <div className="resources-indi" ref={podcastHolder}>
                 {podcastdata.map((item) => {
                     return (
-                        <>
+                        
                             <div className="resource-indi hjloq" key={item.id}>
                                 <div className="img-resour">
                                     <img src={item.img} onClick={() => {
@@ -35,7 +35,7 @@ const PodcastSummary = () => {
                                         alt="" />
                                 </div>
                             </div>
-                        </>
+                        
                     );
                 })}
             </div>
