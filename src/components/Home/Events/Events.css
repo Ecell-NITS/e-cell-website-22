@@ -12,7 +12,7 @@
     text-align: center;
     transform: translateY(2.5vh);
     position: relative;
-    top: 15vh;
+    top: 20vh;
     transition: all .5s ease;
 }
 
@@ -79,6 +79,7 @@
     font-size: 1rem;
     font-weight: 550;
     letter-spacing: 0.5px;
+    margin-bottom: 2rem;
 }
 
 .item1:hover,
