@@ -15,9 +15,9 @@ function Events() {
         </div>
         <div className="event_items">
           <div className="ev item1">
-            <h1 className="item-head">EIC</h1>
+            <h2 className="item-head">ENTREPRENEURSHIP & INNOVATION CHALLENGE</h2>
             <div className="child">
-              ENTREPRENEURSHIP & INNOVATION CHALLENGE, Entrepreneurship cannot
+              Entrepreneurship cannot
               be simply confined to making an idea successful; it involves
               constant hard work, passion and perseverance. Its a process
               involving a person or a group of people coming up with innovative
@@ -27,7 +27,7 @@ function Events() {
             </div>
           </div>
           <div className="ev item2">
-            <h1 className="item-head">EPRESERRIO</h1>
+            <h2 className="item-head">EPRESERRIO</h2>
             <div className="child">
               Empressario is the entrepreneurship module in the annual Techfest
               of NIT Silchar, Tecnoesis where participants showcase their
@@ -38,7 +38,7 @@ function Events() {
             </div>
           </div>
           <div className=" ev item3" onClick={() => routeChange()}>
-            <h1 className="item-head">SRIJAN</h1>
+            <h2 className="item-head">SRIJAN</h2>
             <div className="child">
               Srijan is the flagship event of the Entrepreneurship Cell of NIT
               Silchar, which is an initiative to motivate and educate people
@@ -49,7 +49,7 @@ function Events() {
             </div>
           </div>
           <div className="ev item4 ">
-            <h1 className="item-head">INCUBATION</h1>
+            <h2 className="item-head">INCUBATION</h2>
             <div className="child">
               The Institutional Innovation Cell (IIC) of the Ministry of
               Education, which fosters innovation and entrepreneurship within
