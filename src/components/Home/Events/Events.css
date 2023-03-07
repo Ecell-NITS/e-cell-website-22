@@ -71,7 +71,7 @@
 
 }
 
-.child {
+.event_child {
     visibility: hidden;
     opacity: 0;
     transition: all 0.6s ease-out;
@@ -100,10 +100,10 @@
     font-size: 1.5rem;
 }
 
-.ev:hover .child,
-.ev:hover .child,
-.ev:hover .child,
-.ev:hover .child {
+.ev:hover .event_child,
+.ev:hover .event_child,
+.ev:hover .event_child,
+.ev:hover .event_child {
     visibility: visible;
     opacity: 1;
     line-height: 1.5rem;
@@ -148,7 +148,7 @@
         box-sizing: border-box;
     }
 
-    .child {
+    .event_child {
         transform: translateY(3vh);
         letter-spacing: 0.5px;
     }
