@@ -3,7 +3,7 @@ import "./GalleryTab.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
-import Data from '../../../Data/GalleryTab.json'
+import Data from "../../../Data/GalleryTab.json";
 import GalleryCard from "../GalleryCard/GalleryCard";
 
 const Tab = () => {
@@ -31,84 +31,74 @@ const Tab = () => {
   });
 
   // Function to filter the years according to the event dropdown.
-  const filterYear= Data.filter((item) =>{
-    if(event==="All"){
-        return item;
-      }
-     else if(item.event===event){
+  const filterYear = Data.filter((item) => {
+    if (event === "All") {
+      return item;
+    } else if (item.event === event) {
       return item.year;
-     }
-     else {
+    } else {
       return null;
-     }
-  }
-  )
+    }
+  });
 
   // Function to filter the events according to the year dropdown.
-  const filterEvent= Data.filter((item) =>{
-    if(year==="All"){
-        return item;
-      }
-     else if(item.year===year){
+  const filterEvent = Data.filter((item) => {
+    if (year === "All") {
+      return item;
+    } else if (item.year === year) {
       return item.event;
-     }
-     else {
+    } else {
       return null;
-     }
     }
-  )
+  });
 
- 
   return (
     <>
       <div className="tabGallery">
         <div className="leftTab">
-        <div className="sort">Sort By Year</div>
-        <div className="years">
-          <DropdownButton
-            title={year}
-            id="dropdown-custom-2"
-            onSelect={handleClick}
-          >
-            {
-             ['All', ...new Set(filterYear.map((item) => item.year))].map((year) => (
-              <Dropdown.Item eventKey={year}>{year}</Dropdown.Item>
-              ))
-            }
-          </DropdownButton>
-        </div>
+          <div className="sort">Sort By Year</div>
+          <div className="years">
+            <DropdownButton
+              title={year}
+              id="dropdown-custom-2"
+              onSelect={handleClick}
+            >
+              {["All", ...new Set(filterYear.map((item) => item.year))].map(
+                (year) => (
+                  <Dropdown.Item eventKey={year}>{year}</Dropdown.Item>
+                )
+              )}
+            </DropdownButton>
+          </div>
         </div>
         <div className="rightTab">
-        <div className="sort">Sort By Events</div>
-        <div className="events">
-          <DropdownButton
-            title={event}
-            id="dropdown-custom-2"
-            onSelect={handleClick2}
-          >
-            {
-              ['All', ...new Set(filterEvent.map((item) => item.event))].map((event) => (
-              <Dropdown.Item eventKey={event}>{event}</Dropdown.Item>
-              ))
-            }
-
-          </DropdownButton>
+          <div className="sort">Sort By Events</div>
+          <div className="events">
+            <DropdownButton
+              title={event}
+              id="dropdown-custom-2"
+              onSelect={handleClick2}
+            >
+              {["All", ...new Set(filterEvent.map((item) => item.event))].map(
+                (event) => (
+                  <Dropdown.Item eventKey={event}>{event}</Dropdown.Item>
+                )
+              )}
+            </DropdownButton>
+          </div>
         </div>
-        </div>      
-       </div>
-        <div className="GalleryCards">
+      </div>
+      <div className="GalleryCards">
         {filterData.map((item) => {
           return (
             <GalleryCard
               key={item.id}
               id={item.id}
               imgsrc={item.imgsrc}
-              ></GalleryCard>
+            ></GalleryCard>
           );
-        })
-      }
+        })}
       </div>
-
     </>
   );
 };
