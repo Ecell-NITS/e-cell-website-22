@@ -3,7 +3,6 @@ import "./GalleryTab.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
-// import Data from "./GalleryTab.json";
 import Data from '../../../Data/GalleryTab.json'
 import GalleryCard from "../GalleryCard/GalleryCard";
 
@@ -31,6 +30,34 @@ const Tab = () => {
     }
   });
 
+  // Function to filter the years according to the event dropdown.
+  const filterYear= Data.filter((item) =>{
+    if(event==="All"){
+        return item;
+      }
+     else if(item.event===event){
+      return item.year;
+     }
+     else {
+      return null;
+     }
+  }
+  )
+
+  // Function to filter the events according to the year dropdown.
+  const filterEvent= Data.filter((item) =>{
+    if(year==="All"){
+        return item;
+      }
+     else if(item.year===year){
+      return item.event;
+     }
+     else {
+      return null;
+     }
+    }
+  )
+
  
   return (
     <>
@@ -43,10 +70,11 @@ const Tab = () => {
             id="dropdown-custom-2"
             onSelect={handleClick}
           >
-            <Dropdown.Item eventKey="All">All</Dropdown.Item>
-            <Dropdown.Item eventKey="2022-2023">2022-2023</Dropdown.Item>
-            <Dropdown.Item eventKey="2021-2022">2021-2022</Dropdown.Item>
-            <Dropdown.Item eventKey="2020-2021">2020-2021</Dropdown.Item>
+            {
+             ['All', ...new Set(filterYear.map((item) => item.year))].map((year) => (
+              <Dropdown.Item eventKey={year}>{year}</Dropdown.Item>
+              ))
+            }
           </DropdownButton>
         </div>
         </div>
@@ -58,10 +86,12 @@ const Tab = () => {
             id="dropdown-custom-2"
             onSelect={handleClick2}
           >
-            <Dropdown.Item eventKey="All">All</Dropdown.Item>
-            <Dropdown.Item eventKey="Orientation">Orientation</Dropdown.Item>
-            <Dropdown.Item eventKey="Emprassario">Emprassario</Dropdown.Item>
-            <Dropdown.Item eventKey="Srijan">Srijan</Dropdown.Item>
+            {
+              ['All', ...new Set(filterEvent.map((item) => item.event))].map((event) => (
+              <Dropdown.Item eventKey={event}>{event}</Dropdown.Item>
+              ))
+            }
+
           </DropdownButton>
         </div>
         </div>      
