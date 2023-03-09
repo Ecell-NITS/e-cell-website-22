@@ -15,7 +15,7 @@ const Footer = () => {
 
 
         <div className="container1">
-          <Link to="/"><img className='img-foot-centr' src={footlogo} alt="logo" /></Link>
+          <Link to="/"><img className='img-foot-centr' src="https://res.cloudinary.com/dp92qug2f/image/upload/v1678341670/Ecell%20website/E-Cell-Logo-White_qhkb0q.webp" alt="logo" /></Link>
         </div>
 
 

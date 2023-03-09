@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import './Collab.css';
 import Rupay from '../collaboration/Rupay';
 import Unacademy from '../collaboration/Unacademy';
@@ -19,7 +19,34 @@ import Ivycap from './Ivycap';
 import Finlatics from './Finlatics';
 import LearnTravel from './LearnTravel';
 const Collaboration = () => {
+    const config = {
+        rootMargin: "0px 0px 0px 0px",
+        threshold: 0.2,
+    };
+    const [loaded, setIsLoaded] = useState(false);
+    useEffect(() => {
+        let observer = new window.IntersectionObserver(function (entries, self) {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    loadImages(entry.target);
+                    self.unobserve(entry.target);
+                }
+            });
+        }, config);
+        const imgs = document.querySelectorAll("[data-src]");
+        imgs.forEach((img) => {
+            observer.observe(img);
+        });
+        return () => {
+            imgs.forEach((img) => {
+                observer.unobserve(img);
+            });
+        };
+    }, []);
 
+    const loadImages = (image) => {
+        image.src = image.dataset.src;
+    };
     let collabHolder = useRef();
 
     function swipecollabNext() {
@@ -44,132 +71,133 @@ const Collaboration = () => {
                         <button
                             id="btn-collab-indi-po"
                             onClick={() => { setAcccollab("Rupay") }}>
-                            <img className="ru-collab" src="https://res.cloudinary.com/dp92qug2f/image/upload/v1676989598/collaboration-ecell/Cubeleloresized_jimc2g.png" alt="Rupay" />
+                            <img className={`${loaded ? "loaded" : "loading"} ru-collab`}
+                                onLoad={() => setIsLoaded(true)} src="" data-src="https://res.cloudinary.com/dp92qug2f/image/upload/v1676989598/collaboration-ecell/Cubeleloresized_jimc2g.png" alt="Rupay" />
                         </button>
                     </div>
 
                     <div id='tbn-indi-collab-po' className={`Unacademy ${accollab === "Unacademy" ? " njkl021" : ""}`}>
                         <button id="btn-collab-indi-po"
                             onClick={() => { setAcccollab("Unacademy") }}>
-                            <img className="ru-collab " src="https://res.cloudinary.com/dp92qug2f/image/upload/v1676990266/collaboration-ecell/blackmarble00_q3mowc.png" alt="Unacademy" />
+                            <img className={`${loaded ? "loaded" : "loading"} ru-collab`} onLoad={() => setIsLoaded(true)} src="" data-src="https://res.cloudinary.com/dp92qug2f/image/upload/v1676990266/collaboration-ecell/blackmarble00_q3mowc.png" alt="Unacademy" />
                         </button>
                     </div>
 
                     <div id='tbn-indi-collab-po' className={`Vedantu ${accollab === "Vedantu" ? " njkl021" : ""}`}>
                         <button id="btn-collab-indi-po"
                             onClick={() => { setAcccollab("Vedantu") }}>
-                            <img className="ru-collab" src="https://res.cloudinary.com/dp92qug2f/image/upload/v1676990589/collaboration-ecell/gfgre_xzhxha.png" alt="Vedantu" />
+                            <img className={`${loaded ? "loaded" : "loading"} ru-collab`} onLoad={() => setIsLoaded(true)} src="" data-src="https://res.cloudinary.com/dp92qug2f/image/upload/v1676990589/collaboration-ecell/gfgre_xzhxha.png" alt="Vedantu" />
                         </button>
                     </div>
 
                     <div id='tbn-indi-collab-po' className={`Coca Cola ${accollab === "Coca Cola" ? " njkl021" : ""}`}>
                         <button id="btn-collab-indi-po"
                             onClick={() => { setAcccollab("Coca Cola") }}>
-                            <img className="ru-collab" src="https://res.cloudinary.com/dp92qug2f/image/upload/v1676990660/collaboration-ecell/truscholarres_korsx7.png" alt="Coca cola" />
+                            <img className={`${loaded ? "loaded" : "loading"} ru-collab`} onLoad={() => setIsLoaded(true)} src="" data-src="https://res.cloudinary.com/dp92qug2f/image/upload/v1676990660/collaboration-ecell/truscholarres_korsx7.png" alt="Coca cola" />
                         </button>
                     </div>
 
                     <div id='tbn-indi-collab-po' className={`IEEE ${accollab === "IEEE" ? " njkl021" : ""}`}>
                         <button id="btn-collab-indi-po"
                             onClick={() => { setAcccollab("IEEE") }}>
-                            <img className="ru-collab" src="https://res.cloudinary.com/dp92qug2f/image/upload/v1676990737/collaboration-ecell/assamStartUpres_n2fbxv.png" alt="IEEE" />
+                            <img className={`${loaded ? "loaded" : "loading"} ru-collab`} onLoad={() => setIsLoaded(true)} src="" data-src="https://res.cloudinary.com/dp92qug2f/image/upload/v1676990737/collaboration-ecell/assamStartUpres_n2fbxv.png" alt="IEEE" />
                         </button>
                     </div>
 
                     <div id='tbn-indi-collab-po' className={`Finlatics ${accollab === "Finlatics" ? " njkl021" : ""}`}>
                         <button id="btn-collab-indi-po"
                             onClick={() => { setAcccollab("Finlatics") }}>
-                            <img className="ru-collab" src="https://res.cloudinary.com/dp92qug2f/image/upload/v1676989494/collaboration-ecell/finlatics_dh1suv.png" alt="Janta group" />
+                            <img className={`${loaded ? "loaded" : "loading"} ru-collab`} onLoad={() => setIsLoaded(true)} src="" data-src="https://res.cloudinary.com/dp92qug2f/image/upload/v1676989494/collaboration-ecell/finlatics_dh1suv.png" alt="Janta group" />
                         </button>
                     </div>
 
                     <div id='tbn-indi-collab-po' className={`Punjab National Bank ${accollab === "Punjab National Bank" ? " njkl021" : ""}`}>
                         <button id="btn-collab-indi-po"
                             onClick={() => { setAcccollab("Punjab National Bank") }}>
-                            <img className="ru-collab" src="https://res.cloudinary.com/dp92qug2f/image/upload/c_scale,w_360,f_auto,fl_lossy/v1676524279/collaboration-ecell/PNB_Icon-resize_aghkjd.png" alt="PNB" />
+                            <img className={`${loaded ? "loaded" : "loading"} ru-collab`} onLoad={() => setIsLoaded(true)} src="" data-src="https://res.cloudinary.com/dp92qug2f/image/upload/c_scale,w_360,f_auto,fl_lossy/v1676524279/collaboration-ecell/PNB_Icon-resize_aghkjd.png" alt="PNB" />
                         </button>
                     </div>
 
                     <div id='tbn-indi-collab-po' className={`Kwikpic ${accollab === "Kwikpic" ? " njkl021" : ""}`}>
                         <button id="btn-collab-indi-po"
                             onClick={() => { setAcccollab("Kwikpic") }}>
-                            <img className="ru-collab" src="https://res.cloudinary.com/dp92qug2f/image/upload/v1676988769/collaboration-ecell/kwikpicghj_x7cy2p.png" alt="PNB" />
+                            <img className={`${loaded ? "loaded" : "loading"} ru-collab`} onLoad={() => setIsLoaded(true)} src="" data-src="https://res.cloudinary.com/dp92qug2f/image/upload/v1676988769/collaboration-ecell/kwikpicghj_x7cy2p.png" alt="PNB" />
                         </button>
                     </div>
 
                     <div id='tbn-indi-collab-po' className={`Ssstart ${accollab === "Ssstart" ? " njkl021" : ""}`}>
                         <button id="btn-collab-indi-po"
                             onClick={() => { setAcccollab("Ssstart") }}>
-                            <img className="ru-collab" src="https://res.cloudinary.com/dp92qug2f/image/upload/v1676988848/collaboration-ecell/ssstartRe_xea2cl.png" alt="PNB" />
+                            <img className={`${loaded ? "loaded" : "loading"} ru-collab`} onLoad={() => setIsLoaded(true)} src="" data-src="https://res.cloudinary.com/dp92qug2f/image/upload/v1676988848/collaboration-ecell/ssstartRe_xea2cl.png" alt="PNB" />
                         </button>
                     </div>
 
                     <div id='tbn-indi-collab-po' className={`Allay ${accollab === "Allay" ? " njkl021" : ""}`}>
                         <button id="btn-collab-indi-po"
                             onClick={() => { setAcccollab("Allay") }}>
-                            <img className="ru-collab" src="https://res.cloudinary.com/dp92qug2f/image/upload/v1676988923/collaboration-ecell/allayRes_bljauc.png" alt="PNB" />
+                            <img className={`${loaded ? "loaded" : "loading"} ru-collab`} onLoad={() => setIsLoaded(true)} src="" data-src="https://res.cloudinary.com/dp92qug2f/image/upload/v1676988923/collaboration-ecell/allayRes_bljauc.png" alt="PNB" />
                         </button>
                     </div>
 
                     <div id='tbn-indi-collab-po' className={`EngineerHub ${accollab === "EngineerHub" ? " njkl021" : ""}`}>
                         <button id="btn-collab-indi-po"
                             onClick={() => { setAcccollab("EngineerHub") }}>
-                            <img className="ru-collab" src="https://res.cloudinary.com/dp92qug2f/image/upload/v1676989080/collaboration-ecell/engineer_hubRe_ggety2.png" alt="PNB" />
+                            <img className={`${loaded ? "loaded" : "loading"} ru-collab`} onLoad={() => setIsLoaded(true)} src="" data-src="https://res.cloudinary.com/dp92qug2f/image/upload/v1676989080/collaboration-ecell/engineer_hubRe_ggety2.png" alt="PNB" />
                         </button>
                     </div>
 
                     <div id='tbn-indi-collab-po' className={`StockGro ${accollab === "StockGro" ? " njkl021" : ""}`}>
                         <button id="btn-collab-indi-po"
                             onClick={() => { setAcccollab("StockGro") }}>
-                            <img className="ru-collab" src="https://res.cloudinary.com/dp92qug2f/image/upload/v1676989170/collaboration-ecell/stockGroRE_ymge3d.png" alt="PNB" />
+                            <img className={`${loaded ? "loaded" : "loading"} ru-collab`} onLoad={() => setIsLoaded(true)} src="" data-src="https://res.cloudinary.com/dp92qug2f/image/upload/v1676989170/collaboration-ecell/stockGroRE_ymge3d.png" alt="PNB" />
                         </button>
                     </div>
 
                     <div id='tbn-indi-collab-po' className={`Yen ${accollab === "Yen" ? " njkl021" : ""}`}>
                         <button id="btn-collab-indi-po"
                             onClick={() => { setAcccollab("Yen") }}>
-                            <img className="ru-collab" src="https://res.cloudinary.com/dp92qug2f/image/upload/v1676989292/collaboration-ecell/yenRE_zgrknu.png" alt="PNB" />
+                            <img className={`${loaded ? "loaded" : "loading"} ru-collab`} onLoad={() => setIsLoaded(true)} src="" data-src="https://res.cloudinary.com/dp92qug2f/image/upload/v1676989292/collaboration-ecell/yenRE_zgrknu.png" alt="PNB" />
                         </button>
                     </div>
 
                     <div id='tbn-indi-collab-po' className={`Anterprerna ${accollab === "Anterprerna" ? " njkl021" : ""}`}>
                         <button id="btn-collab-indi-po"
                             onClick={() => { setAcccollab("Anterprerna") }}>
-                            <img className="ru-collab" src="https://res.cloudinary.com/dp92qug2f/image/upload/v1676989412/collaboration-ecell/anterprerna_susjet.png" alt="PNB" />
+                            <img className={`${loaded ? "loaded" : "loading"} ru-collab`} onLoad={() => setIsLoaded(true)} src="" data-src="https://res.cloudinary.com/dp92qug2f/image/upload/v1676989412/collaboration-ecell/anterprerna_susjet.png" alt="PNB" />
                         </button>
                     </div>
 
                     <div id='tbn-indi-collab-po' className={`Ivycap ${accollab === "Ivycap" ? " njkl021" : ""}`}>
                         <button id="btn-collab-indi-po"
                             onClick={() => { setAcccollab("Ivycap") }}>
-                            <img className="ru-collab" src="https://res.cloudinary.com/dp92qug2f/image/upload/v1676989729/collaboration-ecell/IvyCap_bnxqmc.png" alt="PNB" />
+                            <img className={`${loaded ? "loaded" : "loading"} ru-collab`} onLoad={() => setIsLoaded(true)} src="" data-src="https://res.cloudinary.com/dp92qug2f/image/upload/v1676989729/collaboration-ecell/IvyCap_bnxqmc.png" alt="PNB" />
                         </button>
                     </div>
 
                     <div id='tbn-indi-collab-po' className={`Janta group ${accollab === "Janta group" ? " njkl021" : ""}`}>
                         <button id="btn-collab-indi-po"
                             onClick={() => { setAcccollab("Janta group") }}>
-                            <img className="ru-collab" src="https://res.cloudinary.com/dp92qug2f/image/upload/v1676989825/collaboration-ecell/jantaGroup_apsnyg.png" alt="PNB" />
+                            <img className={`${loaded ? "loaded" : "loading"} ru-collab`} onLoad={() => setIsLoaded(true)} src="" data-src="https://res.cloudinary.com/dp92qug2f/image/upload/v1676989825/collaboration-ecell/jantaGroup_apsnyg.png" alt="PNB" />
                         </button>
                     </div>
 
                     <div id='tbn-indi-collab-po' className={`LearnTravel ${accollab === "LearnTravel" ? " njkl021" : ""}`}>
                         <button id="btn-collab-indi-po"
                             onClick={() => { setAcccollab("LearnTravel") }}>
-                            <img className="ru-collab" src="https://res.cloudinary.com/dp92qug2f/image/upload/v1676990018/collaboration-ecell/learningWhileTraveling_bmf0fj.png" alt="PNB" />
+                            <img className={`${loaded ? "loaded" : "loading"} ru-collab`} onLoad={() => setIsLoaded(true)} src="" data-src="https://res.cloudinary.com/dp92qug2f/image/upload/v1676990018/collaboration-ecell/learningWhileTraveling_bmf0fj.png" alt="PNB" />
                         </button>
                     </div>
                     {/* </div> */}
                 </div>
 
                 <div className="btns">
-                        <button className="prev btn-testimonial" onClick={swipecollabPrev}>
-                            <AiOutlineArrowLeft className="btn-indi-testimonial" />
-                        </button>
-                        <button className="next btn-testimonial" onClick={swipecollabNext}>
-                            <AiOutlineArrowRight className="btn-indi-testimonial" />
-                        </button>
-                    </div>
+                    <button className="prev btn-testimonial" onClick={swipecollabPrev}>
+                        <AiOutlineArrowLeft className="btn-indi-testimonial" />
+                    </button>
+                    <button className="next btn-testimonial" onClick={swipecollabNext}>
+                        <AiOutlineArrowRight className="btn-indi-testimonial" />
+                    </button>
+                </div>
                 {accollab === "Rupay" && <Rupay />}
                 {accollab === "Unacademy" && <Unacademy />}
                 {accollab === "Vedantu" && <Vedantu />}

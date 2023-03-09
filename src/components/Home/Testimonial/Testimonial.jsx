@@ -1,7 +1,7 @@
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import './testimonial.css'
 import { testimonials } from '../../../Data/TestimonialData';
-import quote from '../../../assets/testimonial/Quote.svg'
+// import quote from '../../../assets/testimonial/Quote.svg'
 import {AiOutlineArrowRight, AiOutlineArrowLeft} from 'react-icons/ai'
 
 const Testimonial = () => {
@@ -15,6 +15,35 @@ const Testimonial = () => {
     testimonHolder.current.scrollLeft -= (testimonHolder.current.offsetWidth);
   };
 
+  const config = {
+    rootMargin: "0px 0px 0px 0px",
+    threshold: 0.2,
+ };
+
+ const [loaded, setIsLoaded] = useState(false);
+ useEffect(() => {
+    let observer = new window.IntersectionObserver(function (entries, self) {
+       entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+             loadImages(entry.target);
+             self.unobserve(entry.target);
+          }
+       });
+    }, config);
+    const imgs = document.querySelectorAll("[data-src]");
+    imgs.forEach((img) => {
+       observer.observe(img);
+    });
+    return () => {
+       imgs.forEach((img) => {
+          observer.unobserve(img);
+       });
+    };
+ }, []);
+
+ const loadImages = (image) => {
+    image.src = image.dataset.src;
+ };
   return (
     <>
       <div className="testi-main">
@@ -29,11 +58,14 @@ const Testimonial = () => {
                
                   <div className="testi-indi" key={item.id}>
                     <div className="img-testi-holder">
-                      <img style={{ userSelect: 'none' }} src={item.img} alt={item.prof} className="testi-img" />
+                      <img style={{ userSelect: 'none' }} src={""} data-src={item.img} alt={item.prof}
+                        className={`${loaded ? "loaded" : "loading"} testi-img`}
+                        onLoad={() => setIsLoaded(true)}
+                      />
                     </div>
                     <div className="content-testi">
                       <div className="quote">
-                        <img style={{ pointerEvents: 'none' }} src={quote} alt="" />
+                        <img style={{ pointerEvents: 'none' }} src="https://res.cloudinary.com/dp92qug2f/image/upload/v1678340563/Ecell%20website/testimonial/Quote_duku2f.webp" alt="" />
                       </div>
 
                       <div className="testi-al">
@@ -41,7 +73,7 @@ const Testimonial = () => {
                       </div>
 
                       <div className="quote quote-rotate">
-                        <img style={{ pointerEvents: 'none' }} src={quote} alt="" />
+                        <img style={{ pointerEvents: 'none' }} src="https://res.cloudinary.com/dp92qug2f/image/upload/v1678340563/Ecell%20website/testimonial/Quote_duku2f.webp" alt="" />
                       </div>
 
                       <div className="speaker-details-testi">

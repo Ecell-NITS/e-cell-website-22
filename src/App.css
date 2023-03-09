@@ -22,3 +22,13 @@ a{
 ::-webkit-scrollbar-thumb:hover{
   background: #0072b1;
 }
+
+.loading {
+  filter: blur(20px);
+  clip-path: inset(0);
+}
+
+.loaded {
+  filter: blur(0px);
+  transition: filter 0.8s linear;
+}
