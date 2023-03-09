@@ -45,7 +45,6 @@ transition: all 350ms ease;
 
 .dev_card_text{
 visibility: hidden;
-   visibility: hidden;
    transition: all 350ms ease;
 }
 
@@ -77,16 +76,16 @@ text-align: center;
 
 .social-media{
    visibility: hidden;
-}
-
-.sr-dev:hover .social-media{
-   visibility: visible;
    display: flex;
-   flex-direction: row;
    justify-content: center;
    align-items: center;
    width: 2.5rem;
    height: 2.5rem;
+   transition: all 350ms ease;
+}
+
+.sr-dev:hover .social-media{
+   visibility: visible;
 }
 
 .MediaLogo{
