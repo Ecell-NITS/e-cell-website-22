@@ -3,7 +3,7 @@ import { ImCross } from "react-icons/im";
 import { GiHamburgerMenu } from "react-icons/gi"
 import { Link } from 'react-router-dom';
 import './NavbarTeam.css';
-import navlogo from '../../../assets/ecell-logo-bw2.png'
+
 const NavbarTeam = () => {
   const [toggle, setToggle] = useState(false);
 
@@ -22,9 +22,9 @@ const NavbarTeam = () => {
 
 
   return (
-    <nav className={ toggle ? 'navbar0 expanded' : 'navbar0'}>
+    <nav className={ toggle ? 'navbar0 expanded' : 'navbar0'} style={{userSelect:'none'}} >
       <Link to="/">
-        <img className='brand-logo logo' src={navlogo} alt="ecell-logo-bw2" />
+        <img className='brand-logo logo' src="https://res.cloudinary.com/dp92qug2f/image/upload/v1678341163/Ecell%20website/ecell-logo-bw2_sayvqp.webp" alt="ecell-logo-bw2" />
       </Link>
       <div className='toggle-icon' onClick={handleToggle}>
         {toggle ? <ImCross size={20} /> : <GiHamburgerMenu size={25} />}
@@ -32,7 +32,8 @@ const NavbarTeam = () => {
       <ul className='links-nav'>
         <li><Link to="/">HOME</Link></li>
         <li><Link to="/#about">ABOUT US</Link></li>
-        <li><Link to="/#events">EVENTS</Link></li>
+        <li><Link to="/events">EVENTS</Link></li>
+        <li><Link to="/resources">RESOURCES</Link></li>
         <li><a href="https://srijan-nits.in/" rel="noreferrer" target="_blank">SRIJAN</a></li>
         <li><Link to="/team">OUR TEAM</Link></li>
         <li><Link to="/gallery">GALLERY</Link></li>

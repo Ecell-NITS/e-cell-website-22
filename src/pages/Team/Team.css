@@ -1,86 +1,51 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.team-top{
-    padding-top: 2%;
-    height: 80vh !important;
-   background: url(../../assets/Team/teamhero.jpeg);
-   background-position: right, left;
+.team-top {
+  padding-top: 2%;
+  background: url(https://res.cloudinary.com/dp92qug2f/image/upload/v1678340964/Ecell%20website/hero%20section/teamhero_vu5coo.webp);
+  background-position: right;
   background-repeat: no-repeat;
-  background-size: 60% 100%;
+  background-size: 61.5% 100%;
   background-attachment: scroll;
   background-color: white;
 }
 
-.team-top h1, .team-top span{
-    color: #224259;
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 7.5rem;
-    line-height: 1.2;
-    font-weight: 700;
-    padding-left: 7%;
+.team-top h1,
+.team-top span {
+  color: #224259;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 7.5vw;
+  line-height: 1.2;
+  font-weight: 700;
+  padding-left: 7%;
 }
 
-.er{
+.er {
+  color: white !important;
+  padding-left: 0 !important;
+}
+
+.mem-part {
+  padding-left: 0 !important;
+}
+
+.me-ou {
+  padding-top: 5%;
+}
+
+@media only screen and (max-width: 1225px) {
+  .team-top {
     color: white !important;
-    padding-left: 0 !important;
+  }
 }
 
-.mem-part{
-    padding-left: 0 !important;
-}
-
-.me-ou{
-    padding-top: 5%;
-}
-
-@media only screen and (max-width:1225px){
-    .team-top{
-        background-size: cover;
-        background-position: center;
-     }
-}
-
-
-
-@media only screen and (max-width:990px){
-   
-
-    .team-top h1, .team-top span{
-        font-size: 4rem;
-        line-height: 1.3;
-        padding-left: 4%;
-        color: white !important;
-    }
-
-    .mem-part{
-        color: white !important;
-    }
-    
-}
-
-@media only screen and (max-width:1030px) and (min-width:663px){
-    .team-top h1, .team-top span{
-        font-size: 7rem;
-        padding-left: 9.5%;
-    }
-}
-
-@media only screen and (max-width:660px){
-    .team-top{
-        background-attachment: fixed;
-    }
-    
-    .me-ou{
-        padding-top: 30%;
-    }
-}
-
-@media only screen and (max-width:321px){
-    .team-top h1, .team-top span{
-        font-size: 3rem;
-    }
+@media only screen and (max-width: 990px) {
+  .team-top h1,
+  .team-top span {
+    line-height: 1.3;
+  }
 }

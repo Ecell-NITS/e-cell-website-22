@@ -1,36 +1,19 @@
-*{
+* {
     font-family: 'Barlow Condensed', sans-serif;
 }
-.event_main{
+
+.event_main {
     position: relative;
     z-index: 9;
 }
-.heading {
-    text-align: center;
-}
 
-.heading h1 {
-    display: inline-block;
-    border-bottom: 2px solid rgb(10, 10, 70);
-    color: rgb(10, 10, 70);
-    width: 90%;
-    letter-spacing: 0.5px;
-    font-size: 4rem;
-    font-weight: 600;
-    margin-bottom: 2rem;
-}
-
-.item-head{
+.item-head {
+    margin: 0rem 1rem;
     text-align: center;
-    transform: translateY(2vh);
+    transform: translateY(2.5vh);
     position: relative;
-    top: 20%;
-    transition: all .5s ease-out;
-}
-.one{
-    top: 5%;
-    transform: scale(1);
-    transform: translateY(-3vh);
+    top: 20vh;
+    transition: all .5s ease;
 }
 
 .event_items {
@@ -38,13 +21,15 @@
     justify-content: space-between;
     overflow: hidden;
 }
+
 .ev {
     width: 25%;
-    min-height: 60vh;
+    min-height: 65vh;
     overflow: hidden;
     padding-bottom: 2rem;
     color: white;
 }
+
 .item1,
 .item2,
 .item3,
@@ -64,10 +49,6 @@
     background: url(../../../../src/assets/events/orientation.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    cursor: pointer;
-    width: 50%;
-    transition: all 0.5s ease-out;
-    padding: 0rem 5rem;
 }
 
 .item2 {
@@ -90,20 +71,15 @@
 
 }
 
-.child {
+.event_child {
     visibility: hidden;
     opacity: 0;
-    transition:all .3s ease-out;
+    transition: all 0.6s ease-out;
     transform: translateY(5vh);
     font-size: 1rem;
     font-weight: 550;
     letter-spacing: 0.5px;
-}
-.one{
-    visibility: visible;
-    opacity: 1;
-    line-height: 1.5rem;
-    letter-spacing: 0.5px;
+    margin-bottom: 2rem;
 }
 
 .item1:hover,
@@ -112,20 +88,22 @@
 .item4:hover {
     cursor: pointer;
     width: 50%;
-    transition: all 0.5s ease-out;
-    padding: 0rem 5rem;
+    padding: 0rem 3.5rem;
 
 }
 
-.ev:hover .item-head{
+.ev:hover .item-head {
     top: 5%;
-    transform: scale(1);
-    transform: translateY(-3vh);
+    transform: scale(1.5);
+    transform: translateY(-3.5vh);
+    transition: all 0.5s ease-out;
+    font-size: 1.5rem;
 }
-.ev:hover .child,
-.ev:hover .child,
-.ev:hover .child,
-.ev:hover .child {
+
+.ev:hover .event_child,
+.ev:hover .event_child,
+.ev:hover .event_child,
+.ev:hover .event_child {
     visibility: visible;
     opacity: 1;
     line-height: 1.5rem;
@@ -134,24 +112,34 @@
 
 
 @media only screen and (max-width: 1130px) {
-    .event_items{
+    .event_items {
         flex-direction: column;
         visibility: visible;
     }
-    .ev{
+
+    .ev {
         width: 100%;
         min-height: 50vh;
         overflow: hidden;
     }
-    .ev:hover .item-head{
+
+    .item-head {
+        top: 10vh;
+    }
+
+    .ev:hover .item-head {
         transform: scale(1);
         transform: translateY(-3vh);
     }
 
-    .item1:hover, .item2:hover, .item3:hover, .item4:hover{
+    .item1:hover,
+    .item2:hover,
+    .item3:hover,
+    .item4:hover {
         width: 100%;
         padding: 1rem 1rem;
     }
+
     .item1,
     .item2,
     .item3,
@@ -159,8 +147,15 @@
         width: 100%;
         box-sizing: border-box;
     }
-    .child{
+
+    .event_child {
         transform: translateY(3vh);
         letter-spacing: 0.5px;
+    }
+}
+
+@media only screen and (max-width: 1130px) {
+    .item-head {
+        top: 8vh;
     }
 }

@@ -1,0 +1,42 @@
+.aboutus_header h1{
+
+    font-family: 'Barlow Condensed';
+font-style: normal;
+font-weight: 600;
+font-size: 4.375rem;
+line-height: 5.25rem;
+text-align: center;
+margin-top: 2%;
+
+/* Dark Blue */
+
+color: #224259;
+
+text-shadow: 2px 2px 4px rgba(245, 92, 5, 0.5);
+}
+.aboutus_content{
+    font-family: 'Barlow Condensed';
+font-style: normal;
+font-weight: 400;
+font-size: 2rem;
+line-height: 2.2rem;
+
+/* Text Color */
+
+color: #505050;
+padding: 2% 8%;
+
+
+}
+@media only screen and (max-width:1350px) {
+
+   .aboutus_content{
+    font-size: 1.5rem;
+   }
+
+}
+@media only screen and (max-width:600px) {
+    aboutus_content{
+        font-size: 1rem;
+       }
+}

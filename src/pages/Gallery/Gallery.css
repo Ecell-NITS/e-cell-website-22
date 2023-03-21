@@ -1,7 +1,7 @@
 .Gallery-top {
-  max-height: 80vh;
-  display: relative;
-  background: url(../../assets/Team/teamhero.jpeg);
+  /* padding-top: 4rem; */
+  height:36vw;
+  background: url(https://res.cloudinary.com/dp92qug2f/image/upload/v1678340964/Ecell%20website/hero%20section/teamhero_vu5coo.webp);
   background-position: left, right;
   background-repeat: no-repeat;
   background-size: 60% 100%;
@@ -13,52 +13,31 @@
   display: absolute;
   color: #224259;
   font-family: "Barlow Condensed", sans-serif;
-  font-size: 7.5rem;
-  line-height: 1.2;
-  font-weight: 700;
-  padding-top: 2em;
-  padding-bottom: 2.3em;
-  transform: translateX(-3%);
+  font-size: 8vw;
+  line-height: 1.6;
+  font-weight: 900;
+padding-top:13vw;
 }
 
 .Gall-part {
-  margin-left: 52.5% !important;
+  margin-left: 49.5% !important;
   color: white !important;
   margin-right: 0 !important;
 }
 
-@media (max-width: 1230px) {
-  .Gallery-top {
-    background-size: cover;
-    background-position: center;
+@media only screen and (max-width:660px){
+  .Gallery-top{
+    background-size: 61.5% 100%;
+    height: 72vw;
   }
 
-  .Gallery-top h1 {
-    transform: translate(-50%, 27%);
+  .Gallery-top h1{
+    font-size: 16vw;
+    line-height: 1.3;
+    padding-top: 26vw;
   }
 
-  .ery-part {
-    color: white;
-  }
-}
-
-@media only screen and (max-width: 1225px) {
-  .Gallery-top {
-    background-size: cover;
-    background-position: center;
-  }
-}
-
-@media only screen and (max-width: 990px) {
-  .Gallery-top h1 {
-    font-size: 4rem;
-    line-height: 1.4;
-
-  }
-}
-
-@media only screen and (max-width: 321px) {
-  .Gallery-top h1 {
-    font-size: 3rem;
+  .Gall-part{
+    margin-left: 40.5% !important;
   }
 }

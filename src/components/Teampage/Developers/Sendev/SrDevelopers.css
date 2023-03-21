@@ -21,7 +21,7 @@ border: 0.5px solid #9A9494;
 box-sizing: border-box;
 box-shadow: -4px -4px 12px 0px #F2F2F240;
 box-shadow: 4px 4px 12px 0px #4F4F4F33;
-transition-duration: 0.3 sec;
+transition: all 350ms ease;
 overflow: hidden;
 }
 
@@ -33,7 +33,7 @@ width: 336px;
 left: 24px;
 top: 24px;
 border-radius: 4px;
-transition: all 350ms ease;
+/* transition: all 350ms ease; */
 }
 
 .images-sr img{
@@ -42,10 +42,12 @@ width: 100%;
 height: 450px;
 left: -34px;
 top: 0px;
+transition: all 350ms ease;
 }
 
 .dev_card_text{
 visibility: hidden;
+   transition: all 350ms ease;
 }
 
 .sr-dev:hover .dev_card_text{
@@ -76,16 +78,16 @@ text-align: center;
 
 .social-media{
    visibility: hidden;
-}
-
-.sr-dev:hover .social-media{
-   visibility: visible;
    display: flex;
-   flex-direction: row;
    justify-content: center;
    align-items: center;
    width: 2.5rem;
    height: 2.5rem;
+   transition: all 350ms ease;
+}
+
+.sr-dev:hover .social-media{
+   visibility: visible;
 }
 
 .MediaLogo{

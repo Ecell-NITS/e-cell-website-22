@@ -10,10 +10,10 @@ a{
   color: white !important;
 }
 ::-webkit-scrollbar{
-  width: 10px;
+  width: 7px;
 }
 ::-webkit-scrollbar-track{
-  background: #1DA1F2;
+  background: #224259;
 }
 ::-webkit-scrollbar-thumb{
   background: #161c2f;
@@ -21,4 +21,14 @@ a{
 }
 ::-webkit-scrollbar-thumb:hover{
   background: #0072b1;
+}
+
+.loading {
+  filter: blur(20px);
+  clip-path: inset(0);
+}
+
+.loaded {
+  filter: blur(0px);
+  transition: filter 0.8s linear;
 }

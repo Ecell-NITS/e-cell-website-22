@@ -7,8 +7,9 @@
 }
 
 .about_text {
+    line-height: 1.35em;
     margin: 0 30px;
-    font-size: 24px;
+    font-size: 1.25rem;
 }
 
 .about_image {
@@ -72,14 +73,17 @@
     color: #224259;
 }
 
-@media only screen and (max-width:1050px) {
+@media only screen and (max-width:1350px) {
     .about {
         display: block;
-        height: 90vw;
+        /* height: 90vw; */
+        padding-bottom: 0 !important;
+        margin-bottom: 5vh !important;
     }
 
     .about_text {
-        font-size: 18px;
+        /* line-height:normal; */
+        font-size: 1.50em;
         margin: 15px;
         margin-bottom: 20px;
     }
@@ -98,46 +102,35 @@
 @media only screen and (max-width:600px) {
 
     .about {
-        /* height: 60vh;
-        width: 80vw;*/
         display: block;
         flex-direction: column;
-        height: 120vw;
-        /* margin: 30px 9.5%; */
     }
-
+    
     .about_heading {
         /* width: 240px; */
-        font-size: 24px;
+        font-size: 2rem;
         margin-bottom: 3px;
     }
 
     .motto {
-        font-size: 20px;
-        /* margin-top: 270px; */
-        padding-top: 88px;
+        display: none;
     }
 
     .about_text_div {
         display: flex;
         flex-wrap: wrap;
-
     }
 
-    .about_test {
-        font-size: 16px;
+    .about_text {
+        font-size: 1.00rem;
     }
 
     .cards-set-1 {
-        display: block;
-        padding: 2% 5%;
-        padding-bottom: 0px;
+        display: none;
     }
 
     .cards-set-2 {
-        display: block;
-        padding: 2% 5%;
-        padding-top: 0px;
+        display: none;
     }
 
     .about_text_div {
@@ -153,11 +146,11 @@
 
 }
 
-@media only screen and (max-width:400px) {
+/* @media only screen and (max-width:400px) {
 
     .motto {
-        font-size: 20px;
-        padding-top: 208px;
+        font-size: 2rem;
+        
     }
 
-}
+} */

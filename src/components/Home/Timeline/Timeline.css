@@ -7,8 +7,9 @@
     background-size: cover;
     min-height: 100vh;
     height: auto;
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
     z-index: 9;
+    margin-top: 3.5rem;
 }
 
 .time-title {
@@ -69,7 +70,7 @@
 
 .timeline-h1 {
     margin: auto;
-    margin-top: 15vh;
+    /* margin-top: 15vh; */
     width: 90%;
     font-family: 'Barlow Condensed', sans-serif;
     font-style: normal;
@@ -120,6 +121,7 @@
 
     .timeline-section {
         transition: height 99999s;
+        background-attachment: scroll;
     }
 
     .timeline-h1 {

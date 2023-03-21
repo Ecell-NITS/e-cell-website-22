@@ -1,31 +1,69 @@
-import React from 'react'
-import './Events.css';
+import React from "react";
+import "./Events.css";
+import { useNavigate } from "react-router-dom";
 function Events() {
+  let navigate = useNavigate();
+  const routeChange = () => {
+    let path = `/events_red`;
+    navigate(path);
+  };
   return (
     <>
       <div className="event_main">
-        <div className="heading"><h1>EVENTS</h1></div>
+        <div className="collab">
+          <h1>EVENTS</h1>
+        </div>
         <div className="event_items">
           <div className="ev item1">
-            <h1 className='item-head one'>ORIENTATION</h1>
-            <div className="child one">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat a alias nemo voluptates. Quae, eum exercitationem? Nobis, ad omnis! Totam vitae, harum illo explicabo dolores, ipsa aliquid ad officiis nemo aperiam ea ullam repellendus? Suscipit perferendis maiores nostrum veritatis sequi!</div>
+            <h2 className="item-head">ENTREPRENEURSHIP & INNOVATION CHALLENGE</h2>
+            <div className="event_child">
+              Entrepreneurship cannot
+              be simply confined to making an idea successful; it involves
+              constant hard work, passion and perseverance. Its a process
+              involving a person or a group of people coming up with innovative
+              ideas, researching, conducting surveys, studying the market, and
+              leaving no stone unturned in converting his dream into a
+              Million-Dollar Reality by starting from scratch.
+            </div>
           </div>
           <div className="ev item2">
-            <h1 className='item-head'>EPRESERRIO</h1>
-            <div className="child">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat a alias nemo voluptates. Quae, eum exercitationem? Nobis, ad omnis! Totam vitae, harum illo explicabo dolores, ipsa aliquid ad officiis nemo aperiam ea ullam repellendus? Suscipit perferendis maiores nostrum veritatis sequi!</div>
+            <h2 className="item-head">EMPRESSARIO</h2>
+            <div className="event_child">
+              Empressario is the entrepreneurship module in the annual Techfest
+              of NIT Silchar, Tecnoesis where participants showcase their
+              entrepreneurial spirit and management skills through different
+              business ventures. Various events like “Bech ke Dikhao” “Pitch
+              Your Way” “Stock Market Simulation” are organized under this
+              module to bring out the true start-up geek in students.
+            </div>
           </div>
-          <div className=" ev item3">
-            <h1 className='item-head'>SRIJAN</h1>
-            <div className="child">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat a alias nemo voluptates. Quae, eum exercitationem? Nobis, ad omnis! Totam vitae, harum illo explicabo dolores, ipsa aliquid ad officiis nemo aperiam ea ullam repellendus? Suscipit perferendis maiores nostrum veritatis sequi!</div>
+          <div className=" ev item3" onClick={() => routeChange()}>
+            <h2 className="item-head">SRIJAN</h2>
+            <div className="event_child">
+              Srijan is the flagship event of the Entrepreneurship Cell of NIT
+              Silchar, which is an initiative to motivate and educate people
+              about entrepreneurship as well as have a community-based learning
+              experience with people from varied domains. Numerous events and
+              webinars are held whose main motive is to give shape to the
+              innovative ideas put forward by all the creative minds.
+            </div>
           </div>
           <div className="ev item4 ">
-            <h1 className='item-head'>INCUBATION</h1>
-            <div className="child">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat a alias nemo voluptates. Quae, eum exercitationem? Nobis, ad omnis! Totam vitae, harum illo explicabo dolores, ipsa aliquid ad officiis nemo aperiam ea ullam repellendus? Suscipit perferendis maiores nostrum veritatis sequi!</div>
+            <h2 className="item-head">INCUBATION</h2>
+            <div className="event_child">
+              The Institutional Innovation Cell (IIC) of the Ministry of
+              Education, which fosters innovation and entrepreneurship within
+              the institution, also powers the E-Cell. The IIC encourages
+              networking, honors inventions, and organizes conferences on
+              entrepreneurship. It also invites educators and students to
+              participate in events organized by the IIC to promote
+              entrepreneurship and innovation.
+            </div>
           </div>
         </div>
       </div>
     </>
-  )
+  );
 }
 
-export default Events
+export default Events;

@@ -12,12 +12,12 @@
     color: white;
     font-family: 'Barlow Condensed', sans-serif;
     font-weight: 900;
-    font-size: 3rem;
+    font-size: 3vw;
     font-style: italic;
 }
 
 .link-btn-btm{
-    margin-top: 7vh;
+    margin-top: 4vw;
     background-color: #0072b1;
     border-bottom: 3px solid grey;
     transition: all .2s ease-out;
@@ -27,19 +27,25 @@
     background-color: #1DA1F2;
     border-bottom: 3px solid rgb(54, 214, 29);
 }
+
 .p-by{
     color: white;
     font-family: 'Barlow Condensed', sans-serif;
     font-weight: 900;
-    font-size: 1.5rem;
+    font-size: 1.5vw;
     letter-spacing: 1px;
+    margin-bottom: 0 !important;
 }
 
 @media only screen and (max-width:660px){
     .notfound-main h1{
-        font-size: 1.7rem;
+        font-size: 6vw;
         padding-left: 1rem;
         padding-right: 1rem;
         text-align: center;
+    }
+
+    .p-by{
+        font-size: 5vw;
     }
 }

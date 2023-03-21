@@ -1,10 +1,11 @@
-.cards{
+.cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 4rem;
 }
-.profile{
+
+.profile {
     border: 1px solid #514f4f;
     border-radius: 10px;
     margin: 1rem;
@@ -13,41 +14,54 @@
     transition: all ease-in-out 0.2s;
 
 }
-.profile:hover{
+
+.profile:hover {
     box-shadow: 4px 4px 4px 2px rgb(0, 0, 0, 0.1);
 }
-.name{
+
+.name_alumni {
     text-align: center;
-    margin: 0.5rem;
+    font-size: 1.9rem;
+    color: #224259;
 }
-.name1{
+
+.desg_alumni {
     text-align: center;
     margin-bottom: 1.5rem;
     font-size: 1.2rem;
     font-weight: 400;
+    color: #3e618e;
 }
-/* img, svg {
+
+.img_alumni img {
+    height: 15rem;
+    width: 22rem;
     vertical-align: middle;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-} */
+}
+
 @media only screen and (max-width: 836px) {
-    .profile{
-    width: 45%;
+    .profile {
+        width: 45%;
     }
-    .img img{
+
+    .img_alumni img {
         width: 100%;
     }
 }
+
 @media only screen and (max-width: 640px) {
-    .profile{
-    width: 40%;
+    .profile {
+        width: 40%;
     }
-    .name{
+
+    .name_alumni {
         font-size: 1.5rem;
     }
-    .name1{
+
+    .desg_alumni {
         font-size: 0.8rem;
     }
 }
