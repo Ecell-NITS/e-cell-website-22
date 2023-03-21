@@ -1,11 +1,39 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './Faculties.css'
 import Data from '../../../Data/Faculties.json'
 import ModalCard from '../Alumni/Modal/ModalCardFaculties';
 import { Modal, ModalBody, ModalHeader } from "reactstrap"
+const config = {
+    rootMargin: "0px 0px 0px 0px",
+    threshold: 0.2,
+ };
 function Faculties() {
     const [modal, setmodal] = useState(false)
     const [modalid, setmodalid] = useState(1);
+    const [loaded, setIsLoaded] = useState(false);
+    useEffect(() => {
+       let observer = new window.IntersectionObserver(function (entries, self) {
+          entries.forEach((entry) => {
+             if (entry.isIntersecting) {
+                loadImages(entry.target);
+                self.unobserve(entry.target);
+             }
+          });
+       }, config);
+       const imgs = document.querySelectorAll("[data-src]");
+       imgs.forEach((img) => {
+          observer.observe(img);
+       });
+       return () => {
+          imgs.forEach((img) => {
+             observer.unobserve(img);
+          });
+       };
+    }, []);
+ 
+    const loadImages = (image) => {
+       image.src = image.dataset.src;
+    };
     return (
         <>
             <section className="faculties">
@@ -17,7 +45,10 @@ function Faculties() {
                                 setmodalid(data.id)
                                 setmodal(true)
                                 }}>
-                                <div className="img_faculties" ><img src={data.image} alt="Profile of author" /></div>
+                                <div className="img_faculties" ><img src={""} data-src={data.image}
+                                className={loaded ? "loaded" : "loading"}
+                                onLoad={() => setIsLoaded(true)}
+                                alt="Profile of author" /></div>
                                 <div className="name_faculties">{data.name}</div>
                                 <div className="desg_faculties">{data.rank}</div>
                             </div>
