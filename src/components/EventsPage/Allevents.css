@@ -1,0 +1,25 @@
+.top-hro-all-evnts-pol{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.top-hro-all-evnts-pol h1{
+    color: white;
+    font-weight: 900;
+    font-size: 7.5vw;
+    font-family: "Barlow Condensed", sans-serif;
+}
+
+.eic-hd-ttle{
+    padding-left: 1.2vw;
+    padding-right: 1.2vw;
+}
+
+@media only screen and (max-width:660px){
+    .eic-hd-ttle{
+        margin-top: 17vw !important;
+        /* margin-bottom: 2vw !important; */
+    }
+}

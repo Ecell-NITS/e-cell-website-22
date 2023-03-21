@@ -1,0 +1,198 @@
+.testi-main {
+  padding: 10vh 0 5vh 0vh;
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: visible;
+  scroll-behavior: smooth;
+  justify-content: space-between;
+}
+
+.testi-main::-webkit-scrollbar {
+  display: none;
+}
+
+.white-monial {
+  color: white !important;
+}
+
+.testi-child {
+  background: url(../../../../src/assets/testimonial/TESTIMONIAL\ IMAGE.png);
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: 53.4% 100%;
+  min-height: 100vh;
+}
+
+.main-testimonial {
+  padding-top: 1.5vh !important;
+}
+
+.testi-indi {
+  display: flex;
+  justify-content: space-between;
+  min-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.content-testi {
+  width: 65%;
+  margin-right: 2.5%;
+  margin-left: 2.5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: red;
+  margin-top: 5vh;
+  background-color: white;
+  border-radius: 0.625rem;
+  padding: 2vw;
+}
+
+.img-testi-holder {
+  width: 27%;
+  margin-left: 8%;
+}
+
+.img-testi-holder img {
+  width: 100%;
+  border-radius: .75rem;
+  object-fit: contain;
+  opacity: 1;
+  box-shadow: 0 0 0.2375rem;
+}
+
+.testi-img{
+  filter: grayscale(1);
+  transition: all 0.15s ease-in-out;
+}
+
+.testi-img:hover {
+  filter: grayscale(0);
+}
+
+.quote {
+  width: 2vw;
+  user-select: none;
+}
+
+.quote img{
+  width: 100%;
+}
+
+.quote-rotate {
+  transform: rotate(180deg);
+  margin: 0 0 0 auto;
+}
+
+.testi-al {
+  text-align: justify;
+  padding-left: 2vw;
+  padding-right: 2vw;
+}
+
+.testi-al-cont {
+  font-size: 1.5vw;
+  line-height: 1.6;
+  color: #505050;
+  font-weight: 400;
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+.speaker-details-testi {
+  text-align: right;
+  margin: 2vh 0 0 auto;
+}
+
+.speaker-details-testi h1 {
+  color: #224259;
+  font-size: 1.9vw;
+}
+
+.speaker-details-testi h2 {
+  color: #3e618e;
+  font-size: 1.2vw;
+}
+
+.btn-testimonial{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-indi-testimonial{
+  font-weight: 900;
+}
+
+@media only screen and (max-width: 768px) {
+  .testi-child{
+    max-width: 100%;
+  }
+
+  .testi-main {
+    padding: 10vh 0;
+    margin-bottom: 0;
+  }
+
+  .testi-al-cont {
+    padding-left: 3vw;
+    padding-right: 3vw;
+  }
+
+  .testi-indi {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    /* background-color: red; */
+    flex-direction: column;
+  }
+
+  .img-testi-holder {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .img-testi-holder img {
+    width: 100%;
+    object-fit: contain;
+    position: relative;
+    z-index: 5;
+  }
+
+  .content-testi {
+    width: 78%;
+    margin-left: auto;
+    margin-right: auto;
+    transform: translateY(-9vh);
+    padding-top: 5vh;
+  }
+
+  .testi-al-cont {
+    font-size: 3.2vw;
+  }
+
+  .speaker-details-testi h1 {
+    font-size: 5vw;
+  }
+
+  .speaker-details-testi h2 {
+    font-size: 3vw;
+  }
+
+  .quote{
+    width: 4vw !important;
+  }
+}
+
+@media only screen and (max-width:660px){
+  .testi-child {
+    background-size: 56% 100%;
+  }
+}
+
+@media only screen and (max-height:500px){
+  .content-testi{
+    padding-top: 10vh;
+  }
+}
