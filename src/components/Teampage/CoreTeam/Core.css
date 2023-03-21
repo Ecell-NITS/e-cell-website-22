@@ -22,6 +22,7 @@ box-shadow: -4px -4px 12px 0px #F2F2F240;
 box-shadow: 4px 4px 12px 0px #4F4F4F33;
 overflow: hidden;
 transition: all 350ms ease;
+margin-bottom: 20px;
 
 }
 
@@ -188,7 +189,7 @@ text-align: center;
      font-size: 3.5rem;
   }
   .core-mem{
-     height: 26rem;
+     height: 25.5rem;
      width: 19rem;
   }
 
