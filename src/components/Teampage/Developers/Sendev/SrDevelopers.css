@@ -26,6 +26,7 @@ overflow: hidden;
 }
 
 .sr-dev:hover .images-sr img{
+object-fit: cover;
 margin-top: 30px;
 height: 336px;
 width: 336px;
@@ -36,6 +37,7 @@ border-radius: 4px;
 }
 
 .images-sr img{
+object-fit: cover;
 width: 100%;
 height: 450px;
 left: -34px;
