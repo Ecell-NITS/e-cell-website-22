@@ -21,7 +21,8 @@ box-sizing: border-box;
 box-shadow: -4px -4px 12px 0px #F2F2F240;
 box-shadow: 4px 4px 12px 0px #4F4F4F33;
 overflow: hidden;
-transition: all 250ms ease;
+transition: all 350ms ease;
+margin-bottom: 20px;
 
 }
 
@@ -35,7 +36,7 @@ width: 21rem;
 left: 1.4rem;
 top: 1.4rem;
 border-radius: 50%;
-transition: all 250ms ease-in; 
+
 }
 
 .core-images{
@@ -48,7 +49,7 @@ transition: all 250ms ease-in;
    width: 100%;
    height: 28rem;
    top: 0px;
-   transition: all 250ms ease-in;
+   transition: all 350ms ease-in;
 }
 
 .core_mem_text{
@@ -56,7 +57,7 @@ transition: all 250ms ease-in;
   justify-content: center;
   align-items: center;
   visibility: hidden;
-  transition: all 250ms ease-in;
+  
    
 }
 
@@ -128,8 +129,101 @@ text-align: center;
    font-size: 4rem;
    margin: 2rem;
 }
+@media only screen and (max-width:660px) {
+  .container{
+     overflow: hidden;
+  }
+  .core_heading h1{
+     font-size: 2.5rem;
+      text-align: center;  
+      }
 
-@media only screen and (max-width: 1200px) {
+  .core-mem{
+     height: 16rem;
+     width: 11rem;
+     transition-duration: 0.3 sec;
+  }
+
+  .core-images img{
+     width: 11rem;
+     height: 13rem;
+  }
+  .core-mem:hover .core-images img{
+     height: 150px;
+     width: 150px;
+     margin-left: 10px;
+     margin-right: 10px;
+     margin-top: 10px;
+     transition: all 350ms ease;
+  }
+  .core-title{
+     font-size: 20px;
+  }
+ 
+  .core_mem_text{
+     font-size: 2rem;
+  }
+
+  .core-mem:hover .core_mem_text{
+     font-size: 15px;
+     margin-top: -18px;
+  }
+
+  .social-media{
+     position: relative;
+     right: 120px;
+     bottom: 19px;
+  }
+  
+  .SocialLogo svg{
+  width: 1.4rem;
+  }
+
+  .SocialLogo{
+     margin: 13px;
+  }
+}
+
+@media only screen and (max-width:1200px) and (min-width:661px){
+  .core_heading h1{
+     font-size: 3.5rem;
+  }
+  .core-mem{
+     height: 25.5rem;
+     width: 19rem;
+  }
+
+  .core-images img{
+     width: 19rem;
+     height: 22rem;
+  }
+
+  .core-mem:hover .core-images img{
+     height: 250px;
+     width: 250px;
+  }
+
+  .core_mem_text{
+     font-size: 2rem;
+  }
+
+  .core-mem:hover .core_mem_text{
+     font-size: 20px;
+     margin-bottom: 0rem;
+  }
+
+  .social-media{
+     position: relative;
+     right: 40px;
+     margin-top: 1rem;
+  }
+  .SocialLogo svg{
+     width: 2rem;
+     }
+  
+}
+
+/* @media only screen and (max-width: 1200px) {
    .container {
      overflow: hidden;
      gap: 0.3rem;
@@ -210,7 +304,7 @@ text-align: center;
       font-size: 1.4rem;
       }
  }
- @media only screen and (max-width: 685px) {
+ @media only screen and (max-width: 661px) {
    .core-mem {
      height: 20rem;
      width: 15rem;
@@ -228,8 +322,9 @@ text-align: center;
       font-size: 1.4rem;
       }
       .core-mem:hover .social-media{
-         width: 1.3rem;
+         width: 13rem;
          height: 1rem;
+         padding-top: 2rem;
       
       }
       .SocialLogo svg{
@@ -265,18 +360,21 @@ text-align: center;
       font-size: 1.4rem;
       }
       .core-mem:hover .social-media{
-         width: 0rem;
-         height: 2.5rem;
-      
-      }
+        width: 11rem;
+        height: 1rem;
+        padding-top: 2rem;
+     
+     }
       .SocialLogo{
          
          height: 1rem; 
           width: 1rem;
          left: 9.9rem;
-         
-      
-         
+     
+      }
+      .core-mem:hover .core-images img {
+        height: 9rem;
+        width: 9rem;
       }
  }
  @media only screen and (max-width: 460px) {
@@ -285,7 +383,7 @@ text-align: center;
      width: 10rem;
    }
    .core-images img {
-     height: 12rem;
+     height: 11.5rem;
    }
    .core-title {
      font-size: 1rem;
@@ -300,17 +398,20 @@ text-align: center;
      margin: 0.4rem;
    }
    .core-title{
-      font-size: 1.3rem;
+      
+      font-size: 1.1rem;
       }
       .SocialLogo svg{
-         width: 1.3rem;
+         width: 1.1rem;
       }
       .core-mem:hover .social-media{
-         width: 0rem;
-         height: 2.5rem;
-         
-      
-      }
+        width: 11rem;
+        height: 0.5rem;
+        padding-top: 2rem;
+        gap: 1px;
+       
+     
+     }
       .SocialLogo{
          
          height: 1rem; 
@@ -318,6 +419,9 @@ text-align: center;
          left: 8.5rem;
         
       }
+      .core-mem:hover .core-images img {
+        height: 7.5rem;
+      }
 }
  
- 
+  */
