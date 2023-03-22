@@ -3,13 +3,14 @@ import IndividualAboutUs from '../../components/EventsRed/IndividualAboutUs/Indi
 import IndividualHero from '../../components/EventsRed/IndividualHero/IndividualHero'
 import NavbarTeam from '../../components/shared/Navbar/NavbarTeam'
 import Sponsor from '../../components/EventsRed/Sponsor/Sponsor'
+import { sponsors } from '../../Data/Sponsor'
 const Events_red = () => {
   return (
     <div>
       <NavbarTeam/>
       <IndividualHero/>
       <IndividualAboutUs/>
-      <Sponsor/>
+      <Sponsor key={sponsors}/>
     </div>
   )
 }

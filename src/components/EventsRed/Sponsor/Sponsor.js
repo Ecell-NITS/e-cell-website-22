@@ -11,16 +11,13 @@ let sponsor = useRef();
                 <h1><span style={{ fontFamily: "Barlow Condensed", color: "#224259", fontWeight: "900" }}>SPONSORS</span></h1>
     </div>
     <div className="img-parnt" ref={sponsor}>
-                {sponsors.map((item) => {
+                {sponsors.map(item => {
                     return (
-                        <>
-                            <div className="row" >
-                                <div className="col" key={item.id}>
-                                    <img src={item.image}
-                                        alt="" />
+                            <div className="row" key={item.id}>
+                                <div className="col">
+                                    <img src={item.image} alt="" />
                                 </div>
                                 </div>
-                        </>
                     );
                 })}
                 </div>
