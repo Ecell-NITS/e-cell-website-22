@@ -22,7 +22,7 @@ const UpcomingEvents = () => {
             <div className="upcomi-evvnts-parnt" ref={upcomevntHolder}>
                 {upcomingevnt.map((item) => {
                     return (
-                        <>
+                        
                             <div className="upcom-evnt-indi" key={item.id}>
                                 <div className="img-upcom-evnt">
                                     <img src={item.img}
@@ -50,7 +50,7 @@ const UpcomingEvents = () => {
                                     <h3>{item.content}</h3>
                                 </div>
                             </div>
-                        </>
+                        
                     );
                 })}
             </div>

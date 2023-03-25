@@ -1,5 +1,5 @@
 
-.container{
+.container_jrdev{
    margin-top: 1rem;
    margin-bottom: 2rem;
    display: flex;
@@ -23,9 +23,12 @@ box-sizing: border-box;
 box-shadow: -4px -4px 12px 0px #F2F2F240;
 box-shadow: 4px 4px 12px 0px #4F4F4F33;
 overflow: hidden;
+transition: all 350ms ease;
+text-align: center;
 }
 
-.jr-dev:hover .images img{
+.jr-dev:hover .images_jrdev img{
+object-fit: cover;
 margin-top: 30px;
 height: 336px;
 width: 336px;
@@ -33,20 +36,25 @@ left: 24px;
 top: 24px;
 border-radius: 4px;
 /* transition: all 350ms ease; */
+/* margin-left: 24px; */
 }
 
-.images img{
+.images_jrdev img{
+object-fit: cover;
 width: 100%;
 height: 450px;
 left: -34px;
 top: 0px;
+transition: all 350ms ease;
 }
 
-.dev_card_text{
+.jrdev_card_text{
    visibility: hidden;
+   transition: all 350ms ease;
+   text-align: center;
 }
 
-.jr-dev:hover .dev_card_text{
+.jr-dev:hover .jrdev_card_text{
 visibility: visible;
 border-radius: nullpx;
 font-family: Barlow Condensed;
@@ -62,9 +70,9 @@ text-align: center;
    width: 100%;
 }
 
-.title{
+.jrdev_title{
 font-family: Barlow Condensed;
-font-size: 36px;
+font-size: 34px;
 font-style: italic;
 font-weight: 600;
 line-height: 43px;
@@ -72,22 +80,21 @@ letter-spacing: 0em;
 text-align: center;
 }
 
-.social-media{
+.social-media-jr{
    visibility: hidden;
-}
-
-.jr-dev:hover .social-media{
-   visibility: visible;
+   transition: all 350ms ease;
    display: flex;
-   flex-direction: row;
    justify-content: center;
    align-items: center;
    width: 2.5rem;
    height: 2.5rem;
-
 }
 
-.MediaLogo{
+.jr-dev:hover .social-media-jr{
+   visibility: visible;
+}
+
+.MediaLogo-jr{
    color:  #232323 !important;
    height: 30px;
    width: 30px;
@@ -99,7 +106,7 @@ text-align: center;
    gap: 12px;
    padding: 0;
    margin-top: 0;
-   margin-right:2.50rem;
+   margin-right: 2.5rem;
    margin-bottom: 1rem;
 }
 
@@ -111,7 +118,7 @@ text-align: center;
 }
 
 @media only screen and (max-width:660px) {
-   .container{
+   .container_jrdev{
       overflow: hidden;
    }
    .jr_heading h1{
@@ -120,32 +127,48 @@ text-align: center;
        }
 
    .jr-dev{
-      height: 408px;
-      width: 300px;
+      height: 254px;
+      width: 174px;
       transition-duration: 0.3 sec;
    }
 
-   .images img{
-      width: 300px;
-      height: 350px;
+   .images_jrdev img{
+      width: 174px;
+      height: 189px;
    }
-
-   .jr-dev:hover .images img{
-      height: 250px;
-      width: 250px;
+   .jr-dev:hover .images_jrdev img{
+      height: 150px;
+      width: 150px;
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-top: 10px;
+      transition: all 350ms ease;
    }
-
-   .dev_card_text{
+   .jrdev_title{
+      font-size: 20px;
+   }
+  
+   .jrdev_card_text{
       font-size: 2rem;
    }
 
-   .jr-dev:hover .dev_card_text{
-      font-size: 20px;
+   .jr-dev:hover .jrdev_card_text{
+      font-size: 15px;
+      margin-top: -18px;
    }
 
-   .social-media{
+   .social-media-jr{
       position: relative;
-      right: 40px;
+      right: 120px;
+      bottom: 19px;
+   }
+   
+   .MediaLogo-jr svg{
+   width: 1.4rem;
+   }
+
+   .MediaLogo-jr{
+      margin: 13px;
    }
 }
 
@@ -158,28 +181,32 @@ text-align: center;
       width: 300px;
    }
 
-   .images img{
+   .images_jrdev img{
       width: 300px;
       height: 350px;
    }
 
-   .jr-dev:hover .images img{
+   .jr-dev:hover .images_jrdev img{
       height: 250px;
       width: 250px;
    }
 
-   .dev_card_text{
+   .jrdev_card_text{
       font-size: 2rem;
    }
 
-   .jr-dev:hover .dev_card_text{
+   .jr-dev:hover .jrdev_card_text{
       font-size: 20px;
       margin-bottom: 0rem;
    }
 
-   .social-media{
+   .social-media-jr{
       position: relative;
       right: 40px;
-      margin-top: 1.5rem;
+      margin-top: 1rem;
    }
+   .MediaLogo-jr svg{
+      width: 2rem;
+      }
+   
 }

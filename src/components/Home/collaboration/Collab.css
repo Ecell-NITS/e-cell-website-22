@@ -15,7 +15,7 @@
     }
     
     .ru-collab{
-        width: 100%;
+        width:70%;
         height: 100%;
         filter: grayscale(1);
         transition: all 0.2s ease-out; 
@@ -31,16 +31,16 @@
     .btn-junior{
         text-align: center;
         margin: 0 auto;
-        margin-top: 2rem !important;
+        /* margin-top: 2vh !important; */
         display: flex;
         overflow-x: scroll;
         flex-wrap: nowrap;
-        margin-bottom: 2rem !important;
+        /* margin-bottom: 2rem !important; */
         width: 90%;
         border-radius: 7px;
         display: flex;
         align-items: center;
-        padding: 1rem 0;
+        /* padding: 1rem 0; */
         color: black;
         position: relative;
         z-index: 9;
@@ -77,6 +77,7 @@
         width: 90%;
         height: 100%;
         margin-left: auto;
+        padding-top: 2vh;
         margin-right: auto;
       }
 
@@ -95,7 +96,7 @@
       }
     
     .rupay-main{
-        background: url('../../../assets/collaboration/RuPay.png');
+        background: url('https://res.cloudinary.com/dp92qug2f/image/upload/v1678341853/Ecell%20website/collaboration%20backgrounds/RuPay_nqxcfb.webp');
         position: relative;
        justify-content: center;
        align-items: center;
@@ -110,7 +111,7 @@
     }
     
     .unacademy-main{
-        background: url('../../../assets/collaboration/Unacademy-compressed.jpg');
+        background: url('https://res.cloudinary.com/dp92qug2f/image/upload/v1678341920/Ecell%20website/collaboration%20backgrounds/Unacademy-compressed_a8pgag.webp');
         position: relative;
        justify-content: center;
        align-items: center;
@@ -124,7 +125,7 @@
     }
     
     .janta-main{
-        background: url('../../../assets/collaboration/Cognizant_Mangalore_Feb7_2020_2_1581097237290_1581335758668-compressed.jpg');
+        background: url('https://res.cloudinary.com/dp92qug2f/image/upload/v1678341972/Ecell%20website/collaboration%20backgrounds/Cognizant_Mangalore_Feb7_2020_2_1581097237290_1581335758668-compressed_o4homm.webp');
         position: relative;
        justify-content: center;
        align-items: center;
@@ -138,7 +139,7 @@
     }
     
     .vedantu-main{
-        background: url('../../../assets/collaboration/Vedantu-compressed.jpg');
+        background: url('https://res.cloudinary.com/dp92qug2f/image/upload/v1678342018/Ecell%20website/collaboration%20backgrounds/Vedantu-compressed_omnnsh.webp');
         position: relative;
        justify-content: center;
        align-items: center;
@@ -152,7 +153,7 @@
     }
     
     .cocacola-main{
-        background: url('../../../assets/collaboration/CocoCola-compressed.png');
+        background: url('https://res.cloudinary.com/dp92qug2f/image/upload/v1678342066/Ecell%20website/collaboration%20backgrounds/CocoCola-compressed_lssgks.webp');
         position: relative;
        justify-content: center;
        align-items: center;
@@ -166,7 +167,7 @@
     }
     
     .ieee-main{
-        background: url('../../../assets/collaboration/IEEE-compressed.jpg');
+        background: url('https://res.cloudinary.com/dp92qug2f/image/upload/v1678342106/Ecell%20website/collaboration%20backgrounds/IEEE-compressed_n7szc0.webp');
         position: relative;
         justify-content: center;
         align-items: center;
@@ -181,7 +182,7 @@
     }
     
     .pnb-main{
-        background: url('../../../assets/collaboration/PNB-compressed.jpg');
+        background: url('https://res.cloudinary.com/dp92qug2f/image/upload/v1678342143/Ecell%20website/collaboration%20backgrounds/PNB-compressed_whhy37.webp');
         position: relative;
        justify-content: center;
        align-items: center;
