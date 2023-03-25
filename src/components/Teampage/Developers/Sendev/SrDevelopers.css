@@ -119,19 +119,19 @@ text-align: center;
       text-align: center;
    }
    .sr-dev{
-      height: 254px;
-      width: 167px;
+      height: 240px;
+      width: 152px;
       transition-duration: 0.3 sec;
    }
 
    .images-sr img{
-      width: 167px;
-      height: 189px;
+      width: 152px;
+      height: 200px;
    }
 
    .sr-dev:hover .images-sr img{
       height: 150px;
-      width: 145px;
+      width: 131px;
       margin-left: 10px;
       margin-right: 10px;
       margin-top: 10px;
@@ -139,12 +139,16 @@ text-align: center;
    }
 
    .title{
-      font-size: 20px;
+      font-size: 18px;
+   }
+
+   .sr-dev:hover .title{
+      margin-top: -4px;
    }
 
    .sr-dev:hover .dev_card_text{
       font-size: 15px;
-      margin-top: -18px;
+      margin-top: -22px;
    }
 
    .social-media{
@@ -153,7 +157,7 @@ text-align: center;
       bottom: 19px;
    }
    .MediaLogo svg{
-      width: 1.4rem;
+      width: 1.3rem;
       }
    
    .MediaLogo{
@@ -187,7 +191,7 @@ text-align: center;
    }
 
    .sr-dev:hover .dev_card_text{
-      font-size: 20px;
+      font-size: 25px;
       margin-bottom: 0rem ;
    }
 
@@ -197,6 +201,6 @@ text-align: center;
       margin-top: 1rem;
    }
    .MediaLogo svg{
-      width: 1.4rem;
+      width: 2.2rem;
       }
 }

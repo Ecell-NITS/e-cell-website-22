@@ -1,13 +1,13 @@
 
 .container_jrdev{
-   margin-top: 1rem;
-   margin-bottom: 2rem;
-   display: flex;
-   flex-wrap: wrap;
-   flex-direction: row;
-  gap: 2rem;
-  justify-content: center;
-  border-radius: 8px;
+margin-top: 1rem;
+margin-bottom: 2rem;
+display: flex;
+flex-wrap: wrap;
+flex-direction: row;
+gap: 2rem;
+justify-content: center;
+border-radius: 8px;
 }
 
 .jr-dev{
@@ -122,25 +122,28 @@ text-align: center;
        }
 
    .jr-dev{
-      height: 254px;
-      width: 174px;
+      height: 230px;
+      width: 164px;
       transition-duration: 0.3 sec;
    }
 
    .images_jrdev img{
-      width: 174px;
-      height: 189px;
+      width: 164px;
+      height: 190px;
    }
    .jr-dev:hover .images_jrdev img{
-      height: 150px;
-      width: 150px;
+      height: 140px;
+      width: 143px;
       margin-left: 10px;
       margin-right: 10px;
       margin-top: 10px;
       transition: all 350ms ease;
    }
    .jrdev_title{
-      font-size: 20px;
+      font-size: 19px;
+   }
+   .jr-dev:hover .jrdev_title{
+      margin: -6px;
    }
   
    .jrdev_card_text{
@@ -149,7 +152,7 @@ text-align: center;
 
    .jr-dev:hover .jrdev_card_text{
       font-size: 15px;
-      margin-top: -18px;
+      margin-top: -14px;
    }
 
    .social-media-jr{
@@ -159,7 +162,7 @@ text-align: center;
    }
    
    .MediaLogo-jr svg{
-   width: 1.4rem;
+   width: 1.3rem;
    }
 
    .MediaLogo-jr{
