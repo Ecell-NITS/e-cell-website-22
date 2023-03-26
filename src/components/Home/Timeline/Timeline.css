@@ -17,12 +17,40 @@
 }
 
 .timeline-main {
+    width: 1330px;
     display: flex;
-    overflow-x: scroll;
+    justify-items: center;
+    align-items: center;
+    overflow: hidden;
     flex-wrap: nowrap;
-    justify-content: space-between;
+    margin-left: 13vh;
+    margin-right: 13vh;
     margin-top: 20vh;
+
 }
+
+.timeline-sub {
+    display: flex;
+    animation: slide 15s linear infinite;
+    animation-play-state: running;
+}
+
+.timeline-main:hover .timeline-sub {
+    animation-play-state: paused;
+    cursor: pointer;
+}
+
+
+@keyframes slide {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-200%);
+    }
+}
+
 
 .timeline-main::-webkit-scrollbar {
     display: none;
@@ -41,19 +69,21 @@
 .timeline-child img {
     display: block;
     margin: 0 auto;
-    width: 50%;
+    width: 60%;
     object-fit: contain;
     pointer-events: none;
 }
 
 .arrows {
     display: inline !important;
-    width: 100% !important;
+    width: 100%;
 }
 
 
 .tc2 {
     min-width: 20% !important;
+    transform: scaleX(1.5);
+
 }
 
 .child-title {
@@ -88,60 +118,74 @@
 
 @media only screen and (max-width:1200px) and (min-width:661px) {
     .timeline-section {
-        min-height: 50vh;
+        min-height: 30vh;
+        width:100%;
         height: auto;
     }
 
+    .timeline-main {
+        width:78%;
+        margin-left:7vh;
+        margin-top: 5vh;
+
+    }
+
     .timeline-child img {
-        width: 60%;
+        width: 90%;
     }
 
     .timeline-h1 {
         width: 90%;
     }
 
-    .timeline-main {
-        transform: translateY(-10vh);
-        padding-left: 2rem;
-    }
 
     .child-title {
         font-size: 1.5rem;
         margin-top: 2vh;
     }
-}
 
-@media only screen and (min-width:660px) {
-    .svg-contained {
-        display: none;
+    .timeline-sub {
+        display: flex;
+        animation: slide 10s linear infinite;
     }
 }
+
+
 
 @media only screen and (max-width:660px) {
 
     .timeline-section {
         transition: height 99999s;
         background-attachment: scroll;
+        height: auto;
+        min-height: 50vh;
     }
 
     .timeline-h1 {
         font-size: 32px;
         width: 80%;
+        height: 6.5rem;
     }
 
 
     .timeline-main {
-        flex-direction: column;
+        width: 73%;
+        overflow: hidden;
+        flex-direction: row;
+        margin-left:7vh;
+        margin-right:7vh;
         margin-top: 5vh;
+        height: auto;
     }
 
     .timeline-child {
         min-height: min-content;
 
+
     }
 
     .timeline-child img {
-        width: 50% !important;
+        width: 75% !important;
 
     }
 
@@ -149,94 +193,21 @@
         font-size: 1.2rem;
     }
 
-    #orie {
-        position: absolute;
-        left: 2%;
+    .timeline-sub {
+        display: flex;
+        animation: slide 15s linear infinite;
+        
     }
 
-    #emp {
-        position: absolute;
-        top: 60%;
-        left: 2%;
-    }
-
-    #srj {
-        position: absolute;
-        top: 40%;
-        right: 2%;
-    }
-
-    #prb {
-        position: absolute;
-        top: 80%;
-        right: 2%;
-    }
-
-
-    .tc2 {
-        width: 85%;
-    }
-
-    .tc3 {
-        width: 85%;
-    }
-
-    .arrows {
-        display: none !important;
-    }
-
-    .svg-contained {
-        display: block;
-    }
-
-    .sr-emp {
-        position: absolute;
-        top: 51%;
-        left: 35%;
-    }
-
-    .or-sr {
-        position: absolute;
-        top: 31.5%;
-        left: 37%;
-    }
-
-    .emp-pre {
-        position: absolute;
-        top: 73%;
-        left: 37%;
-    }
 }
 
 @media only screen and (max-width:320px) {
-    #orie {
-        position: absolute;
-        left: 0%;
-    }
-
-    #emp {
-        position: absolute;
-        top: 60%;
-        left: 0%;
-    }
-
-    #srj {
-        position: absolute;
-        top: 40%;
-        right: 0%;
-    }
-
-    #prb {
-        position: absolute;
-        top: 80%;
-        right: 0%;
-    }
 
     .timeline-child img {
-        width: 35% !important;
+        width: 65% !important;
     }
 
     .child-title {
-        font-size: .8rem;
+        font-size: 1rem;
     }
 }
