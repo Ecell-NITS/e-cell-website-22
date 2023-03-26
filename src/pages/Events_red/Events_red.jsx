@@ -18,8 +18,8 @@ const Events_red = () => {
       <IndividualAboutUs />
       <div className="container">
        
-        {alleventsrjn.map(() => {
-          return( <Eventscards />);
+        {alleventsrjn.map((item) => {
+          return( <Eventscards key={item.id} name={item.title} date={item.date}   />);
         })}
         
         
