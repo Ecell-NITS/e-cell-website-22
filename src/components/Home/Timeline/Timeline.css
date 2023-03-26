@@ -17,12 +17,16 @@
 }
 
 .timeline-main {
+    width: 1330px;
     display: flex;
-    overflow-x: scroll;
+    justify-items: center;
+    align-items: center;
     overflow: hidden;
     flex-wrap: nowrap;
-    justify-content: space-between;
+    margin-left: 13vh;
+    margin-right: 13vh;
     margin-top: 20vh;
+
 }
 
 .timeline-sub {
@@ -39,11 +43,11 @@
 
 @keyframes slide {
     0% {
-        transform: translateX(20%);
+        transform: translateX(0%);
     }
 
     100% {
-        transform: translateX(-100%);
+        transform: translateX(-200%);
     }
 }
 
@@ -65,7 +69,7 @@
 .timeline-child img {
     display: block;
     margin: 0 auto;
-    width: 50%;
+    width: 60%;
     object-fit: contain;
     pointer-events: none;
 }
@@ -77,7 +81,7 @@
 
 
 .tc2 {
-    min-width: 30% !important;
+    min-width: 20% !important;
     transform: scaleX(1.5);
 
 }
@@ -115,20 +119,25 @@
 @media only screen and (max-width:1200px) and (min-width:661px) {
     .timeline-section {
         min-height: 30vh;
+        width:100%;
         height: auto;
     }
 
+    .timeline-main {
+        width:78%;
+        margin-left:7vh;
+        margin-top: 5vh;
+
+    }
+
     .timeline-child img {
-        width: 65%;
+        width: 90%;
     }
 
     .timeline-h1 {
         width: 90%;
     }
 
-    /*.timeline-main {
-        padding-left: 2rem;
-    }*/
 
     .child-title {
         font-size: 1.5rem;
@@ -160,7 +169,11 @@
 
 
     .timeline-main {
+        width: 73%;
+        overflow: hidden;
         flex-direction: row;
+        margin-left:7vh;
+        margin-right:7vh;
         margin-top: 5vh;
         height: auto;
     }
@@ -172,7 +185,7 @@
     }
 
     .timeline-child img {
-        width: 65% !important;
+        width: 75% !important;
 
     }
 
@@ -182,12 +195,8 @@
 
     .timeline-sub {
         display: flex;
-        animation: slide 10s linear infinite;
-    }
-
-
-    #orie {
-        margin-left: 1rem;
+        animation: slide 15s linear infinite;
+        
     }
 
 }
