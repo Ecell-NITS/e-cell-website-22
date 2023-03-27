@@ -1,6 +1,6 @@
 import React from "react";
 import "./About_us.css";
-import image1 from "../../../assets/startup.jpeg";
+
 import Card from "./Card";
 import logo from "../../../assets/logo.jpg";
 const motto_dialogue = [
@@ -16,30 +16,11 @@ const motto_dialogue = [
 function About_us() {
   // const [Ind, setInd] =useState(0);
   return (
+
+    // About Us section
+
     <div>
-      {/* for image and details  */}
-      {/* <div className="about-us"> */}
-      {/* <div className="about">
-        <div className="imageBox">
-          <img src={image1} alt="" />
-        </div>
-        <div className="content-about">
-          <h1>About Us</h1>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum soluta vel possimus eaque pariatur distinctio,
-             reprehenderit illum asperiores laborum autem hic nisi repellendus. Saepe nemo, iure distinctio facilis soluta dolore.
-             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum soluta vel possimus eaque pariatur distinctio,
-             reprehenderit illum asperiores laborum autem hic nisi repellendus. Saepe nemo, iure distinctio facilis soluta dolore.</p>
-        </div>
-      </div>  */}
-
       
-
-
-            
-      
-        
-
-      {/* </div> */}
       
 
 
@@ -56,24 +37,7 @@ function About_us() {
         </div>
       </div>
       
-      {/* <div className="about">
-        <img src={image1} alt="image1" className="about_image" />
-
-        <div className="about_text_div">
-          <div className="about_text">
-          <div className="about_e_cell">
-           <b> ABOUT E-CELL: </b> Entrepreneurship Cell or E-Cell, NIT Silchar is a non-profit organization run by the students and was established with the aim of promoting and nurturing the entrepreneurial spirit among the youth of the college. We thrive on fostering a self-reliant mentality among the youth and also helping them work on their ideas and encouraging college-level students to start their own ventures. E-Cell also provided pre-incubation facilities to various start-ups and bootstrapped businesses to turn into colossal enterprises.
-          </div>
-          <div className="about_mission">
-            <b>MISSION:</b>  The Entrepreneurship Cell of NIT Silchar gives students a platform that converges their entrepreneurial passions, focusing mainly on improving the culture of entrepreneurship in the college, both in technical and non-technical fields, and further uplifting the students to innovate, put forth their ideas, and help develop their models by providing them with incubations and also a platform to scale their products through our events.
-          </div>
-          <div className="about_objective">
-            <b> OBJECTIVE:</b> The objective of E-Cell NIT Silchar is to develop the spirit of entrepreneurship among the students. It motivates students and enables them to strengthen their passion and integrity toward entrepreneurial qualities. Activities of this cell also include orientation programs, various workshops, interactive sessions, webinars, and large-scale events like Srijan, which help students to gain experience and educate them about financial literacy, the application of skills to solve real-world problems, and management of events.
-          </div>
-          </div>
-        </div>
-
-      </div> */}
+      
 
       {/* for cards */}
 
