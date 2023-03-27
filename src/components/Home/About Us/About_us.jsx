@@ -1,6 +1,6 @@
 import React from "react";
 import "./About_us.css";
-import image1 from "../../../assets/image1.jpg";
+import image1 from "../../../assets/startup.jpeg";
 import Card from "./Card";
 import logo from "../../../assets/logo.jpg";
 const motto_dialogue = [
@@ -18,9 +18,45 @@ function About_us() {
   return (
     <div>
       {/* for image and details  */}
-      <h3 className="about_heading">ABOUT US</h3>
-      <div className="underline"></div>
-      <div className="about">
+      {/* <div className="about-us"> */}
+      {/* <div className="about">
+        <div className="imageBox">
+          <img src={image1} alt="" />
+        </div>
+        <div className="content-about">
+          <h1>About Us</h1>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum soluta vel possimus eaque pariatur distinctio,
+             reprehenderit illum asperiores laborum autem hic nisi repellendus. Saepe nemo, iure distinctio facilis soluta dolore.
+             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum soluta vel possimus eaque pariatur distinctio,
+             reprehenderit illum asperiores laborum autem hic nisi repellendus. Saepe nemo, iure distinctio facilis soluta dolore.</p>
+        </div>
+      </div>  */}
+
+      
+
+
+            
+      
+        
+
+      {/* </div> */}
+      
+
+
+      <div className="aboutSection">
+        <h3 className="about_heading">ABOUT US</h3>
+        <div className="underline"></div>
+        <div className="contentAbout">
+          <p>Lorem ipsum dolor sit amet consectetur. Malesuada mauris auctor nisl pellentesque facilisis ornare euismod sit. Fermentum velit cras sed nullam maecenas 
+            tincidunt gravida fringilla augue. Dignissi tellus scelerisque a sem penatibus lacus diam quis. 
+             Tempus dui enim neque pretium posuere blandit. Cras nullam vulputate eleifend vitae enim morbi adipiscing. Habitasse vestibulum eget sed sed risus sed sed. Pellentesque pulvinar id non sed scelerisque odio commodo tincidunt egestas. Purus hac rutrum id cursus posuere. Vitae nulla elit risus ut potenti. Arcu ultricies volutpat urna ridiculus interdum vulputate mattis.
+              Malesuada nisi mauris est feugiat aliquet. Elementum facilisis at senectus in nisi sagittis. 
+              Leo in sed arcu neque at. Venenatis congue sit eu fringilla commodo tellus in vitae. Nisl cras sit nunc neque sem mauris id tempor laoreet.
+               Odio urna amet nullam dictum. Ut aliquet scelerisque at vulputate sem sit egestas. Nunc felis </p>
+        </div>
+      </div>
+      
+      {/* <div className="about">
         <img src={image1} alt="image1" className="about_image" />
 
         <div className="about_text_div">
@@ -37,7 +73,7 @@ function About_us() {
           </div>
         </div>
 
-      </div>
+      </div> */}
 
       {/* for cards */}
 

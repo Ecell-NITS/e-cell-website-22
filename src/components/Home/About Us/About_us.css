@@ -1,5 +1,6 @@
-.about {
-    /* height: 60vh; */
+
+/* .about {
+    
     width: 80vw;
     display: flex;
     margin: 30px 9.5%;
@@ -15,7 +16,7 @@
 .about_image {
     width: 30vw;
     height: 30vw;
-    /* padding-left:2vh; */
+   
 }
 
 .underline {
@@ -23,7 +24,7 @@
     background-color: #224259;
     width: 80vw;
     height: 2px;
-    /* display: flex; */
+  
     margin-left: auto;
     margin-right: auto;
     margin-top: 0px;
@@ -31,19 +32,182 @@
 }
 
 .about_heading {
-    /* width: 240px; */
-    /* height: fit-content; */
+   
     margin-top: 2rem;
     font-family: "Barlow Condensed";
     font-style: normal;
     font-weight: 600;
     font-size: 64px;
-    /* line-height: 84px; */
+   
     text-align: center;
     color: #224259;
     margin-bottom: auto;
 
+} */
+
+/* .about-us{
+    margin: 0;
+    font-family: "Barlow Condensed";
+    display: flex;
+    width: 80vw;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 40vh;
+    margin: 30px 9.5% ;
+    
+} */
+/* .about{
+    display: flex;
+    height: 55vh;
+    margin: 2em;
+    box-shadow: 0 0 15px rgba(0,0,0,0.7);
+
 }
+
+
+.imageBox img{
+    width: 47em;
+    height: 100%;
+    overflow: hidden;
+    
+}
+.content-about{
+    display: flex;
+    padding: 3em;
+    flex-direction: column;
+    gap: 8%;
+}
+.content-about h1{
+    padding-left: 32%;
+    color: #224259;
+    font-size: 4em;
+    
+}
+.content-about p{
+    font-size: 1.3em;
+} */
+
+/* .skewed {
+    
+    display: flex;
+    margin: 2em 0;
+    box-shadow: 0 0 15px rgba(0,0,0,0.7);
+    height: 55vh;
+    width: 80vw;
+    margin: 0;
+    font-family: "Barlow Condensed";
+    
+    
+    
+    margin: 30px 9.5% ;
+}
+ 
+
+
+
+.imageBox{
+    width: 80%;
+    height: 55vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.imageBox img{
+    height: 55vh;
+    width: 120%;
+    object-position: -7em;
+    overflow: hidden;
+   
+}
+
+.imageBox::before{
+    content: "";
+    position: absolute;
+    right: -6.1em;
+    left: initial;
+    top: 50%;
+    transform: translateY(-50%) rotate(9deg);
+    border: 1rem solid transparent;
+    background: #fff;
+    width: 30%;
+    height: 85vh;
+    box-shadow: 0 0 0 1rem #224259,
+                inset 0 0 0 1rem #224259;
+    
+} 
+
+.content-about{
+    display: flex;
+    width: 60%;
+    flex-direction: column;
+    gap: 5%;
+    
+    padding-top: 1rem;
+}
+.content-about h1{
+    padding-left: 6.5rem;
+    color: #224259;
+    font-size: 4em;
+    
+}
+.content-about p{
+    font-size: 1.15rem;
+    padding-right: 3rem; */
+
+    .aboutSection{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 5rem;
+        
+       
+    
+      
+        
+    }
+
+    .underline {
+        
+        background-color: #224259;
+        width: 80vw;
+        height: 2px;
+      
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0px;
+    
+    }
+
+    .about_heading {
+   
+        margin-top: 2rem;
+        font-family: "Barlow Condensed";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 64px;
+       
+        text-align: center;
+        color: #224259;
+        margin-bottom: auto;
+    }
+
+    .contentAbout{
+        padding-top: 3rem;
+        width: 80vw;
+        margin: auto;
+        font-size: 1.3rem;
+        text-align: center;
+    }
+
+
+
+    
+
+
+
+
+
+
 
 .cards-set-1 {
     display: flex;
@@ -73,78 +237,32 @@
     color: #224259;
 }
 
-@media only screen and (max-width:1350px) {
-    .about {
-        display: block;
-        /* height: 90vw; */
-        padding-bottom: 0 !important;
-        margin-bottom: 5vh !important;
+
+
+@media only screen and (max-width:1200px) {
+    .contentAbout{
+        font-size: 1.2rem;
     }
 
-    .about_text {
-        /* line-height:normal; */
-        font-size: 1.50em;
-        margin: 15px;
-        margin-bottom: 20px;
-    }
-
-    .about_image {
-        margin-left: 25px;
-        margin-bottom: 0px;
-        width: 75vw;
-        height: 60vw;
-    }
-
-
-}
-
-
-@media only screen and (max-width:600px) {
-
-    .about {
-        display: block;
-        flex-direction: column;
-    }
     
-    .about_heading {
-        /* width: 240px; */
-        font-size: 2rem;
-        margin-bottom: 3px;
-    }
-
-    .motto {
-        display: none;
-    }
-
-    .about_text_div {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .about_text {
-        font-size: 1.00rem;
-    }
-
-    .cards-set-1 {
-        display: none;
-    }
-
-    .cards-set-2 {
-        display: none;
-    }
-
-    .about_text_div {
-        margin-bottom: 40px;
-    }
-
-    .about_image {
-        margin-left: 12px;
-    }
-
-
-
+    
 
 }
+@media only screen and (max-width:400x) {
+    .contentAbout{
+        font-size: 1.1rem;
+    }
+
+    
+    
+
+}
+
+    
+
+
+
+
 
 /* @media only screen and (max-width:400px) {
 
