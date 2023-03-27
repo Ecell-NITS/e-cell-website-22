@@ -7,9 +7,7 @@ const motto_dialogue = [
   "Channelizing the budding thoughts of real-world problem solving by providing an optimal platform to generate its physical counterpart",
   "Educating the students about applicative problem solving, financial literacy, management and leadership in a scholastic manner through various workshops, events and interactive sessions",
 
-  // "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla dicta sint facere consequuntur reprehenderit",
-  // "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla dicta sint facere consequuntur reprehenderit",
-  // "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla dicta sint facere consequuntur reprehenderit",
+
 ];
 
 
