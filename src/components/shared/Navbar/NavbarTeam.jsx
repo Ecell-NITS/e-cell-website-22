@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { ImCross } from "react-icons/im";
 import { GiHamburgerMenu } from "react-icons/gi"
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import './NavbarTeam.css';
 
 const NavbarTeam = () => {
@@ -30,13 +30,14 @@ const NavbarTeam = () => {
         {toggle ? <ImCross size={20} /> : <GiHamburgerMenu size={25} />}
       </div>
       <ul className='links-nav'>
-        <li><Link to="/">HOME</Link></li>
-        <li><Link to="/#about">ABOUT US</Link></li>
-        <li><Link to="/events">EVENTS</Link></li>
-        <li><Link to="/resources">RESOURCES</Link></li>
+        <li> <NavLink to="/">HOME</NavLink></li>
+        <li> <NavLink to="/#aboutecellnits">ABOUT</NavLink></li>
+        {/* <li><a href="/#aboutecellnits">ABOUT</a></li> */}
+        <li> <NavLink to="/events">EVENTS</NavLink></li>
+        <li><NavLink to="/resources">RESOURCES</NavLink></li>
         <li><a href="https://srijan-nits.in/" rel="noreferrer" target="_blank">SRIJAN</a></li>
-        <li><Link to="/team">OUR TEAM</Link></li>
-        <li><Link to="/gallery">GALLERY</Link></li>
+        <li><NavLink to="/team">OUR TEAM</NavLink></li>
+        <li><NavLink to="/gallery">GALLERY</NavLink></li>
       </ul>
     </nav>
   )

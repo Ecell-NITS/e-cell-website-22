@@ -16,7 +16,7 @@ const motto_dialogue = [
 function About_us() {
   // const [Ind, setInd] =useState(0);
   return (
-    <div>
+    <div id="aboutecellnits">
       {/* for image and details  */}
       <h3 className="about_heading">ABOUT US</h3>
       <div className="underline"></div>
