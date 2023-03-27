@@ -32,7 +32,7 @@ const Navbar = () => {
       </div>
       <ul className='links-nav'>
       <li> <NavLink to="/">HOME</NavLink></li>
-        <li><a href="#aboutecellnits">ABOUT</a></li>
+        <li><a href="#aboutecellnits">ABOUT US</a></li>
         <li> <NavLink to="/events">EVENTS</NavLink></li>
         <li><NavLink to="/resources">RESOURCES</NavLink></li>
         <li><a href="https://srijan-nits.in/" rel="noreferrer" target="_blank">SRIJAN</a></li>

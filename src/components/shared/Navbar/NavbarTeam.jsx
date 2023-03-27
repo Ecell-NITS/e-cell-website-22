@@ -31,7 +31,7 @@ const NavbarTeam = () => {
       </div>
       <ul className='links-nav'>
         <li> <NavLink to="/">HOME</NavLink></li>
-        <li> <NavLink to="/#aboutecellnits">ABOUT</NavLink></li>
+        <li> <NavLink to="/#aboutecellnits">ABOUT US</NavLink></li>
         {/* <li><a href="/#aboutecellnits">ABOUT</a></li> */}
         <li> <NavLink to="/events">EVENTS</NavLink></li>
         <li><NavLink to="/resources">RESOURCES</NavLink></li>
