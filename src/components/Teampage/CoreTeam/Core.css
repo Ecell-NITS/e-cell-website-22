@@ -10,7 +10,7 @@
 
 .core-mem {
 background-color: white;
-height: 31.75rem;
+height: 27.75rem;
 width: 24rem;
 left: 1.25rem;
 top: 1.25rem;
@@ -31,8 +31,8 @@ margin-bottom: 20px;
 
 .core-mem:hover .core-images img{
 margin-top: 2rem;
-height: 21rem;
-width: 21rem;
+height: 17.5rem;
+width: 17.5rem;
 left: 1.4rem;
 top: 1.4rem;
 border-radius: 50%;
@@ -47,9 +47,12 @@ border-radius: 50%;
 
 .core-images img{
    width: 100%;
-   height: 28rem;
+   height: 24rem;
    top: 0px;
    transition: all 350ms ease-in;
+   vertical-align: middle;
+   object-fit: cover;
+
 }
 
 .core_mem_text{
@@ -57,6 +60,7 @@ border-radius: 50%;
   justify-content: center;
   align-items: center;
   visibility: hidden;
+  transition: all 350ms ease;
   
    
 }
@@ -129,7 +133,8 @@ text-align: center;
    font-size: 4rem;
    margin: 2rem;
 }
-@media only screen and (max-width:660px) {
+
+@media only screen and (max-width:660px) and (min-width:407px) {
   .container{
      overflow: hidden;
   }
@@ -147,6 +152,8 @@ text-align: center;
   .core-images img{
      width: 11rem;
      height: 13rem;
+     vertical-align: middle;
+   object-fit: cover;
   }
   .core-mem:hover .core-images img{
      height: 150px;
@@ -183,24 +190,80 @@ text-align: center;
      margin: 13px;
   }
 }
+@media only screen and (max-width:407px){
+   .container{
+      overflow: hidden;
+   }
+   .core_heading h1{
+      font-size: 2.4rem;
+       text-align: center;  
+       }
+ 
+   .core-mem{
+      height: 15rem;
+      width: 10rem;
+      transition-duration: 0.3 sec;
+   }
+ 
+   .core-images img{
+      width: 11rem;
+      height: 12rem;
+      vertical-align: middle;
+      object-fit: cover;
+   }
+   .core-mem:hover .core-images img{
+      height: 8rem;
+      width: 8rem;
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-top: 10px;
+      transition: all 350ms ease;
+   }
+   .core-title{
+      font-size: 1.1rem;
+   }
+  
+   .core_mem_text{
+      font-size: 2rem;
+   }
+ 
+   .core-mem:hover .core_mem_text{
+      font-size: 15px;
+      margin-top: -18px;
+   }
+ 
+   .social-media{
+      position: relative;
+      right: 120px;
+      bottom: 19px;
+   }
+   
+   .SocialLogo svg{
+   width: 1.4rem;
+   }
+ 
+   .SocialLogo{
+      margin: 13px;
+   }
+}
 
 @media only screen and (max-width:1200px) and (min-width:661px){
   .core_heading h1{
      font-size: 3.5rem;
   }
   .core-mem{
-     height: 25.5rem;
+     height: 22rem;
      width: 19rem;
   }
 
   .core-images img{
      width: 19rem;
-     height: 22rem;
+     height: 19rem;
   }
 
   .core-mem:hover .core-images img{
-     height: 250px;
-     width: 250px;
+     height: 12rem;
+     width: 12rem;
   }
 
   .core_mem_text{
