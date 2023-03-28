@@ -17,7 +17,7 @@
 }
 
 .timeline-main {
-    width: 1330px;
+    /* width: 1330px; */
     display: flex;
     justify-items: center;
     align-items: center;
