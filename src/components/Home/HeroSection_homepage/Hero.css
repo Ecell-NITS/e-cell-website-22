@@ -40,7 +40,7 @@
      top:50%;
      left: 50%;
      font-weight: 600;
-     padding-right: 4rem;
+     padding-right: 10vw;
      letter-spacing: .5px;
  }
 
@@ -88,11 +88,15 @@
 
      .typewriter-hero{
         font-size: 3vw;
-        top: 42%;
+        top: 38%;
      }
  }
  
  @media only screen and (max-width:660px){
+    .hero-top{
+        background-attachment: scroll;
+     }
+     
      .hero-top-main{
          top: 29%;
          left: 5%;
