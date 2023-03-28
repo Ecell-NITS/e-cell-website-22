@@ -74,7 +74,7 @@ const AllEvents = () => {
             <div className="upcomi-evvnts-parnt" ref={allevntorientation}>
                 {alleventsrjn.map((item) => {
                     return (
-                        <>
+                        
                             <div className="upcom-evnt-indi" key={item.id}>
                                 <div className="img-upcom-evnt">
                                     <img src={item.img}
@@ -102,7 +102,7 @@ const AllEvents = () => {
                                     <h3>{item.content}</h3>
                                 </div>
                             </div>
-                        </>
+                        
                     );
                 })}
             </div>
@@ -124,7 +124,7 @@ const AllEvents = () => {
             <div className="upcomi-evvnts-parnt" ref={allevntempressario}>
                 {alleventsrjn.map((item) => {
                     return (
-                        <>
+                        
                             <div className="upcom-evnt-indi" key={item.id}>
                                 <div className="img-upcom-evnt">
                                     <img src={item.img}
@@ -152,7 +152,7 @@ const AllEvents = () => {
                                     <h3>{item.content}</h3>
                                 </div>
                             </div>
-                        </>
+                        
                     );
                 })}
             </div>
@@ -175,7 +175,7 @@ const AllEvents = () => {
             <div className="upcomi-evvnts-parnt" ref={allevnteic}>
                 {alleventsrjn.map((item) => {
                     return (
-                        <>
+                        
                             <div className="upcom-evnt-indi" key={item.id}>
                                 <div className="img-upcom-evnt">
                                     <img src={item.img}
@@ -203,7 +203,7 @@ const AllEvents = () => {
                                     <h3>{item.content}</h3>
                                 </div>
                             </div>
-                        </>
+                        
                     );
                 })}
             </div>
@@ -224,7 +224,7 @@ const AllEvents = () => {
             <div className="upcomi-evvnts-parnt" ref={allevntsrjn}>
                 {alleventsrjn.map((item) => {
                     return (
-                        <>
+                        
                             <div className="upcom-evnt-indi" key={item.id}>
                                 <div className="img-upcom-evnt">
                                     <img src={item.img}
@@ -252,7 +252,7 @@ const AllEvents = () => {
                                     <h3>{item.content}</h3>
                                 </div>
                             </div>
-                        </>
+                        
                     );
                 })}
             </div>
@@ -273,7 +273,7 @@ const AllEvents = () => {
             <div className="upcomi-evvnts-parnt" ref={allevntincubation}>
                 {alleventsrjn.map((item) => {
                     return (
-                        <>
+                        
                             <div className="upcom-evnt-indi" key={item.id}>
                                 <div className="img-upcom-evnt">
                                     <img src={item.img}
@@ -301,7 +301,7 @@ const AllEvents = () => {
                                     <h3>{item.content}</h3>
                                 </div>
                             </div>
-                        </>
+                        
                     );
                 })}
             </div>

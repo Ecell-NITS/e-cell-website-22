@@ -1,13 +1,13 @@
 
 .container_jrdev{
-   margin-top: 1rem;
-   margin-bottom: 2rem;
-   display: flex;
-   flex-wrap: wrap;
-   flex-direction: row;
-  gap: 2rem;
-  justify-content: center;
-  border-radius: 8px;
+margin-top: 1rem;
+margin-bottom: 2rem;
+display: flex;
+flex-wrap: wrap;
+flex-direction: row;
+gap: 2rem;
+justify-content: center;
+border-radius: 8px;
 }
 
 .jr-dev{
@@ -23,28 +23,35 @@ box-sizing: border-box;
 box-shadow: -4px -4px 12px 0px #F2F2F240;
 box-shadow: 4px 4px 12px 0px #4F4F4F33;
 overflow: hidden;
+transition: all 350ms ease;
+text-align: center;
 }
 
 .jr-dev:hover .images_jrdev img{
+object-fit: cover;
 margin-top: 30px;
 height: 336px;
 width: 336px;
 left: 24px;
 top: 24px;
 border-radius: 4px;
-transition: all 350ms ease;
-margin-left: 24px;
+/* transition: all 350ms ease; */
+/* margin-left: 24px; */
 }
 
 .images_jrdev img{
+object-fit: cover;
 width: 100%;
 height: 450px;
 left: -34px;
 top: 0px;
+transition: all 350ms ease;
 }
 
 .jrdev_card_text{
    visibility: hidden;
+   transition: all 350ms ease;
+   text-align: center;
 }
 
 .jr-dev:hover .jrdev_card_text{
@@ -75,16 +82,16 @@ text-align: center;
 
 .social-media-jr{
    visibility: hidden;
-}
-
-.jr-dev:hover .social-media-jr{
-   visibility: visible;
+   transition: all 350ms ease;
    display: flex;
-   flex-direction: row;
    justify-content: center;
    align-items: center;
    width: 2.5rem;
    height: 2.5rem;
+}
+
+.jr-dev:hover .social-media-jr{
+   visibility: visible;
 }
 
 .MediaLogo-jr{
@@ -120,25 +127,28 @@ text-align: center;
        }
 
    .jr-dev{
-      height: 254px;
-      width: 174px;
+      height: 230px;
+      width: 164px;
       transition-duration: 0.3 sec;
    }
 
    .images_jrdev img{
-      width: 174px;
-      height: 189px;
+      width: 164px;
+      height: 190px;
    }
    .jr-dev:hover .images_jrdev img{
-      height: 150px;
-      width: 150px;
+      height: 140px;
+      width: 143px;
       margin-left: 10px;
       margin-right: 10px;
       margin-top: 10px;
       transition: all 350ms ease;
    }
    .jrdev_title{
-      font-size: 20px;
+      font-size: 19px;
+   }
+   .jr-dev:hover .jrdev_title{
+      margin: -6px;
    }
   
    .jrdev_card_text{
@@ -147,7 +157,7 @@ text-align: center;
 
    .jr-dev:hover .jrdev_card_text{
       font-size: 15px;
-      margin-top: -18px;
+      margin-top: -14px;
    }
 
    .social-media-jr{
@@ -157,7 +167,7 @@ text-align: center;
    }
    
    .MediaLogo-jr svg{
-   width: 1.4rem;
+   width: 1.3rem;
    }
 
    .MediaLogo-jr{

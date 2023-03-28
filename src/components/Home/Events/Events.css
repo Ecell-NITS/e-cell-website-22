@@ -8,11 +8,14 @@
 }
 
 .item-head {
+    margin: 0rem 1rem;
     text-align: center;
     transform: translateY(2.5vh);
     position: relative;
+    top: 20vh;
     transition: all .5s ease;
 }
+
 .event_items {
     display: flex;
     justify-content: space-between;
@@ -21,7 +24,7 @@
 
 .ev {
     width: 25%;
-    min-height: 60vh;
+    min-height: 65vh;
     overflow: hidden;
     padding-bottom: 2rem;
     color: white;
@@ -68,17 +71,17 @@
 
 }
 
-.child {
-    display: none;
+.event_child {
+    visibility: hidden;
     opacity: 0;
-    transition: all .3s ease-out;
+    transition: all 0.6s ease-out;
     transform: translateY(5vh);
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 550;
     letter-spacing: 0.5px;
-    transition: all 0.3s ease-out;
-
+    margin-bottom: 2rem;
 }
+
 .item1:hover,
 .item2:hover,
 .item3:hover,
@@ -91,16 +94,17 @@
 
 .ev:hover .item-head {
     top: 5%;
-    transform: scale(1);
-    transform: translateY(-3vh);
+    transform: scale(1.5);
+    transform: translateY(-3.5vh);
     transition: all 0.5s ease-out;
+    font-size: 1.5rem;
 }
 
-.ev:hover .child,
-.ev:hover .child,
-.ev:hover .child,
-.ev:hover .child {
-    display: block;
+.ev:hover .event_child,
+.ev:hover .event_child,
+.ev:hover .event_child,
+.ev:hover .event_child {
+    visibility: visible;
     opacity: 1;
     line-height: 1.5rem;
     letter-spacing: 0.5px;
@@ -117,6 +121,10 @@
         width: 100%;
         min-height: 50vh;
         overflow: hidden;
+    }
+
+    .item-head {
+        top: 10vh;
     }
 
     .ev:hover .item-head {
@@ -140,8 +148,14 @@
         box-sizing: border-box;
     }
 
-    .child {
+    .event_child {
         transform: translateY(3vh);
         letter-spacing: 0.5px;
+    }
+}
+
+@media only screen and (max-width: 1130px) {
+    .item-head {
+        top: 8vh;
     }
 }

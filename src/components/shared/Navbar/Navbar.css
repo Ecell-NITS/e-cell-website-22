@@ -43,7 +43,7 @@
 
 .navbar1 .links-nav li{
   margin: 0 .9375rem;
-  color: white;
+  color: rgba(255, 255, 255, 0.58);
   font-size: 1.3rem;
   letter-spacing: .5px;
   font-weight: 600;
@@ -52,16 +52,16 @@
 
 .links-nav a{
   transition: all .15s ease-in-out;
-}
-
-.links-nav a:active {
-  background-color: #224529 !important;
+  color: rgba(255, 255, 255, 0.58) !important;
 }
 
 .links-nav a:hover{
   color: #1da1f2 !important;
-}
+} 
 
+.links-nav  a.active{
+  color: rgba(255, 255, 255, 1) !important;
+}
 
 .navbar1 .toggle-icon{
   display: none

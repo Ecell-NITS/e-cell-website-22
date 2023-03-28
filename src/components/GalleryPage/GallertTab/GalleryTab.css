@@ -1,9 +1,11 @@
 
 .tabGallery {
     display: flex;
+    width: 80%;
+    margin: auto;
     padding-top: 2em;
     justify-content: center;
-    font-size: 2.25rem;
+    font-size: 2rem;
     font-weight: 600;
     cursor: pointer;
 }
@@ -65,6 +67,7 @@ div.tabGallery > *{
 
 .GalleryCards{
     display: flex;
+    gap: 1em;
     flex-wrap: wrap;
     justify-content: center;
     padding-top: 2em;
