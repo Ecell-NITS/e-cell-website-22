@@ -34,13 +34,22 @@
     margin-bottom: auto;
 }
 
-.contentAbout{
-    padding-top: 3rem;
-    width: 80vw;
-    margin: auto;
-    font-size: 1.3rem;
-    text-align: center;
-}
+    .contentAbout{
+        display: flex;
+        padding-top: 2rem;
+        width: 80vw;
+        margin: auto;
+        font-size: 1.3rem;
+        flex-direction: column;
+        
+        gap: 2rem;
+    }
+    /* .about_mission{
+        text-align: center;
+    }
+    .about_objective{
+        text-align: right;
+    } */
 
 
 
