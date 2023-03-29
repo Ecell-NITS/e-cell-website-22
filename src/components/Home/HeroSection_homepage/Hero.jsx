@@ -15,10 +15,10 @@ const Hero = () => {
         <Typed
           className="typewriter-hero" style={{ userSelect: 'none' }}
           strings={[
-            "Welcome to Entrepreneurship Cell!", //more relevant text can be added
-            "For The NITS by the NITS!",
-            "We help startups to achieve their dream.",
-            "This is ECELL NITS!",
+            "E-Cell, NITS welcomes you with open arms.", //more relevant text can be added
+            "Take a tour of the lands of entrepreneurship!",
+            "Curated with love for you by the family of entrepreneurship enthusiasts in NITS.",
+            "The path to a successful business career is now easier and less messier.",
           ]}
           typeSpeed={50}
           backSpeed={20}
