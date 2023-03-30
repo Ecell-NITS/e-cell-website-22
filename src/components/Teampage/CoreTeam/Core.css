@@ -26,13 +26,12 @@ margin-bottom: 20px;
  }
 
  
- .core_heading {
-   width: 100%;
-   margin: 0;
+ .core_heading h1{
+   border-style: none;
    text-align: center;
-   color: white;
-   font-family: Elianto, sans-serif;
- }
+   font-size: 4rem;
+   margin: 2rem;
+}
  
  .core-images {
    display: flex;
@@ -245,24 +244,24 @@ margin-bottom: 20px;
   
   
    .core-title{
-      font-size: 1.17rem;
+      font-size: 1.11rem;
       font-family: Barlow Condensed;
   
    font-style: italic;
    font-weight: 600;
-   line-height: 1.5rem;
+   line-height: 1.2rem;
    
    }
    .core-mem:hover .core_mem_text {
-      font-size: 0.8rem;
-      line-height: 0.1rem;
+      font-size: 0.9rem;
+      line-height: -0.1rem;
       }
    .core-mem:hover .social-media-core {
-      gap: 0.6rem;
+      gap: 0.5rem;
     }
    
    .SocialLogoCore svg {
-      padding: 0.6rem;
+      padding: 0.5rem;
     }
  }
 /* .core-container{
