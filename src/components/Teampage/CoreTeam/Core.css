@@ -112,6 +112,11 @@ margin-bottom: 20px;
    padding: 0.2rem;
  }
  @media only screen and (max-width: 1200px) {
+   .core_heading h1{
+      
+      font-size: 3.8rem;
+      
+   }
    .core-container {
      overflow: hidden;
      gap: 0.3rem;
@@ -135,6 +140,11 @@ margin-bottom: 20px;
    }
  }
  @media only screen and (max-width: 975px) {
+   .core_heading h1{
+      
+      font-size: 3.3rem;
+      
+   }
    .core-container {
      gap: 0.5rem;
    }
@@ -169,11 +179,21 @@ margin-bottom: 20px;
     }
  }
  @media only screen and (max-width: 750px) {
+   .core_heading h1{
+      
+      font-size: 3.1rem;
+      
+   }
    .core-container {
      margin: 5% 3%;
    }
  }
  @media only screen and (max-width: 685px) {
+   .core_heading h1{
+      
+      font-size: 3rem;
+      
+   }
    .core-mem {
      height: 20rem;
      width: 15rem;
@@ -202,6 +222,11 @@ margin-bottom: 20px;
     }
  }
  @media only screen and (max-width: 525px) {
+   .core_heading h1{
+      
+      font-size: 2.7rem;
+      
+   }
    .core-mem {
      height: 18rem;
      width: 13rem;
@@ -230,6 +255,11 @@ margin-bottom: 20px;
     }
  }
  @media only screen and (max-width: 460px) {
+   .core_heading h1{
+      
+      font-size: 2.5rem;
+      
+   }
    .core-mem {
      height: 14rem;
      width: 10rem;
