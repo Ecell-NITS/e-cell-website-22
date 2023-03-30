@@ -38,7 +38,7 @@
 .timeline-sub {
     display: flex;
     animation: slide 13s linear infinite;
-    width: calc(20vw*18);
+    width: calc(20vw*20);
     /* animation-play-state: running; */
 }
 
@@ -61,7 +61,7 @@
     }
 
     100% {
-        transform: translateX(calc(-20vw*9));
+        transform: translateX(calc(-20vw*10));
     }
 }
 
@@ -223,7 +223,7 @@
     .timeline-sub {
         display: flex;
         animation: slide 9.5s linear infinite;
-        width: calc(25vw*18);
+        width: calc(25vw*20);
     }
 
     @keyframes slide {
@@ -232,7 +232,7 @@
         }
     
         100% {
-            transform: translateX(calc(-25vw*9));
+            transform: translateX(calc(-25vw*10));
         }
     }
 
