@@ -43,23 +43,24 @@
 
 .navbar0 .links-nav li {
   margin: 0 0.9375rem;
-  color: white;
+  color: rgba(255, 255, 255, 0.58) !important;
   font-size: 1.3rem;
   letter-spacing: 0.5px;
   font-weight: 600;
   font-family: "Poppins", sans-serif;
 }
 
-.links-nav a {
-  transition: all 0.15s ease-in-out;
-}
-
-.links-nav a:active {
-  background-color: #224529 !important;
+.links-nav a{
+  transition: all .15s ease-in-out;
+  color: rgba(255, 255, 255, 0.58) !important;
 }
 
 .links-nav a:hover {
   color: #1da1f2 !important;
+}
+
+.links-nav  a.active{
+  color: rgba(255, 255, 255, 1) !important;
 }
 
 .navbar0 .toggle-icon {
