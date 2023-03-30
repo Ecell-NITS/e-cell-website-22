@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import './Faculties.css'
 import Data from '../../../Data/Faculties.json'
-import ModalCard from '../Alumni/Modal/ModalCardFaculties';
+import ModalCard from '../Modal/ModalCardFaculties';
 import { Modal, ModalBody, ModalHeader } from "reactstrap"
 const config = {
     rootMargin: "0px 0px 0px 0px",
