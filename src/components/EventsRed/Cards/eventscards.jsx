@@ -5,14 +5,14 @@ import "./eventscard.css";
 const eventscards = (props) => {
   return (
       <div className="eventscardscontent">
-        <div class="card eventcard" style={{ width: "100%" }}>
-          <img src={eventcard} class="card-img-top cardimage" alt="..." />
-          <div class="card-body">
-            <p class="card-text">
-              <p className="cardhead">EVENT NAME</p>
-              <p className="carddate">Sunday, Feb 05 3:00 PM</p>
+        <div className="card eventcard" style={{ width: "100%" }}>
+          <img src={eventcard} className="card-img-top cardimage" alt="..." />
+          <div className="card-body">
+            <div className="card-text">
+              <p className="cardhead">{props.name}</p>
+              <p className="carddate">{props.date}</p>
               <p className="cardlocation">Location</p>
-            </p>
+            </div>
           </div>
         </div>
       </div>
