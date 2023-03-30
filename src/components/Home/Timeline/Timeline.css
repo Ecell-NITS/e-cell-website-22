@@ -1,7 +1,7 @@
 .timeline-section {
     position: relative;
     background: linear-gradient(0deg, rgba(4, 27, 55, 0.6), rgba(4, 27, 55, 0.6));
-    background-image: url(../../../assets/timeline-bg.png);
+    background-image: url(https://res.cloudinary.com/dp92qug2f/image/upload/v1680212562/Ecell%20website/timeline/timeline-bg_iohtpn.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
