@@ -1,7 +1,9 @@
 import React, { useEffect } from 'react'
 import NavbarTeam from '../../components/shared/Navbar/NavbarTeam'
 import './notfound.css'
-import { Link } from 'react-router-dom'
+import Footer from '../../components/shared/Footer/Footer'
+import Error from '../../assets/404Error.json'
+import Lottie from "lottie-react"
 const NotFound = () => {
     useEffect(() => {
         document.title = "404 | Not Found";
@@ -11,11 +13,13 @@ const NotFound = () => {
         <div>
             <NavbarTeam />
             <div className="notfound-main">
-                <h1 style={{userSelect:'none'}} > Sorry. The page you requested doesn't exist.</h1>
-                <div className="link-btn-btm" style={{userSelect:'none'}}>
-                    <Link to="/"><p className='p-by'>Go Home</p></Link>
-                </div>
+                <Lottie className='error' animationData={Error}/>
+                
+                
+                    
+               
             </div>
+            <Footer/>
         </div>
     )
 }
