@@ -41,10 +41,10 @@ const PastEvents = () => {
 
                                 <div className="btns-info-klp">
                                     <div className="btns-1-ent-indi">
-                                        <button>Research</button>
+                                    <button>{item.btn1}</button>
                                     </div>
                                     <div className="btns-1-ent-indi">
-                                        <button>Srijan</button>
+                                    <button>{item.btn2}</button>
                                     </div>
                                 </div>
 

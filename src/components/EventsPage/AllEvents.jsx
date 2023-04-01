@@ -4,6 +4,8 @@ import NavbarTeam from '../shared/Navbar/NavbarTeam'
 import { AiOutlineArrowRight, AiOutlineArrowLeft } from "react-icons/ai";
 import './Allevents.css'
 import { alleventsrjn } from '../../Data/EventsData';
+import { alleventeic } from '../../Data/EventsData';
+import { alleventsrijan } from '../../Data/EventsData';
 const AllEvents = () => {
     useEffect(() => {
         document.title = "Past Events ECELL | NITS";
@@ -173,7 +175,7 @@ const AllEvents = () => {
             </div>
 
             <div className="upcomi-evvnts-parnt" ref={allevnteic}>
-                {alleventsrjn.map((item) => {
+                {alleventeic.map((item) => {
                     return (
                         
                             <div className="upcom-evnt-indi" key={item.id}>
@@ -192,10 +194,10 @@ const AllEvents = () => {
 
                                 <div className="btns-info-klp">
                                     <div className="btns-1-ent-indi">
-                                        <button>Research</button>
+                                        <button>{item.btn1}</button>
                                     </div>
                                     <div className="btns-1-ent-indi">
-                                        <button>Srijan</button>
+                                        <button>{item.btn2}</button>
                                     </div>
                                 </div>
 
@@ -222,7 +224,7 @@ const AllEvents = () => {
                 <h1><span style={{ fontFamily: "Barlow Condensed", color: "#224259", fontWeight: "900" }}>SRIJAN</span></h1>
             </div>
             <div className="upcomi-evvnts-parnt" ref={allevntsrjn}>
-                {alleventsrjn.map((item) => {
+                {alleventsrijan.map((item) => {
                     return (
                         
                             <div className="upcom-evnt-indi" key={item.id}>
@@ -241,10 +243,10 @@ const AllEvents = () => {
 
                                 <div className="btns-info-klp">
                                     <div className="btns-1-ent-indi">
-                                        <button>Research</button>
+                                    <button>{item.btn1}</button>
                                     </div>
                                     <div className="btns-1-ent-indi">
-                                        <button>Srijan</button>
+                                    <button>{item.btn2}</button>
                                     </div>
                                 </div>
 
