@@ -1,5 +1,5 @@
 import React from 'react'
-import srijanImage from "../../../assets/events_red/srijanImage.png"
+// import srijanImage from "../../../assets/events_red/srijanImage.png"
 import "./IndividualHero.css"
 
 const IndividualHero = () => {
