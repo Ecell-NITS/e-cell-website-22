@@ -1,15 +1,14 @@
 .timeline-section {
     position: relative;
     background: linear-gradient(0deg, rgba(4, 27, 55, 0.6), rgba(4, 27, 55, 0.6));
-    background-image: url(../../../assets/timeline-bg.png);
+    background-image: url(https://res.cloudinary.com/dp92qug2f/image/upload/v1680212562/Ecell%20website/timeline/timeline-bg_iohtpn.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 100vh;
     height: auto;
-    /* background-attachment: fixed; */
     z-index: 9;
-    margin-top: 3.5rem;
+    margin-top: 3.5vw;
+    user-select: none;
 }
 
 .time-title {
@@ -17,29 +16,44 @@
 }
 
 .timeline-main {
-    width: 1330px;
     display: flex;
     justify-items: center;
     align-items: center;
     overflow: hidden;
     flex-wrap: nowrap;
-    margin-left: 13vh;
-    margin-right: 13vh;
-    margin-top: 20vh;
+    padding: 7vw 0;
+}
 
+.timeline-main::after{
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+}
+
+.timeline-main::before{
+    left: 0;
+    top: 0;
 }
 
 .timeline-sub {
     display: flex;
-    animation: slide 15s linear infinite;
-    animation-play-state: running;
+    animation: slide 13s linear infinite;
+    width: calc(20vw*20);
+    /* animation-play-state: running; */
 }
 
-.timeline-main:hover .timeline-sub {
+.timeline-sub:hover {
     animation-play-state: paused;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
+.bnjkop:hover{
+    transform: scale(1.1);
+}
+
+/* .timeline-child:hover .arrows{
+    transform: none !important;
+} */
 
 @keyframes slide {
     0% {
@@ -47,7 +61,7 @@
     }
 
     100% {
-        transform: translateX(-200%);
+        transform: translateX(calc(-20vw*10));
     }
 }
 
@@ -64,6 +78,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transition: all 0.2s ease-in-out;
 }
 
 .timeline-child img {
@@ -118,20 +133,20 @@
 
 @media only screen and (max-width:1200px) and (min-width:661px) {
     .timeline-section {
-        min-height: 30vh;
+        /* min-height: 30vh; */
         width:100%;
         height: auto;
     }
 
-    .timeline-main {
+    /* .timeline-main {
         width:78%;
         margin-left:7vh;
         margin-top: 5vh;
 
-    }
+    } */
 
     .timeline-child img {
-        width: 90%;
+        width: 70%;
     }
 
     .timeline-h1 {
@@ -146,8 +161,12 @@
 
     .timeline-sub {
         display: flex;
-        animation: slide 10s linear infinite;
+        /* animation: slide 10s linear infinite; */
     }
+
+    /* .tc2{
+        transform: scaleX(1);
+    } */
 }
 
 
@@ -158,24 +177,26 @@
         transition: height 99999s;
         background-attachment: scroll;
         height: auto;
-        min-height: 50vh;
+        /* min-height: 50vh; */
     }
 
     .timeline-h1 {
         font-size: 32px;
+        padding-top: 0px;
         width: 80%;
-        height: 6.5rem;
+        /* height: 6.5rem; */
     }
 
 
     .timeline-main {
-        width: 73%;
+        /* width: 73%; */
         overflow: hidden;
         flex-direction: row;
-        margin-left:7vh;
-        margin-right:7vh;
-        margin-top: 5vh;
-        height: auto;
+        /* margin-left:7vh;
+        margin-right:7vh; */
+        /* margin-top: 5vh; */
+        /* height: auto; */
+        padding: 15vw 0;
     }
 
     .timeline-child {
@@ -190,15 +211,34 @@
     }
 
     .child-title {
-        font-size: 1.2rem;
+        font-size: 3.2vw;
+        border-top: 2.5px solid white;
+        border-bottom: 2.5px solid white;
+    }
+
+    .preinvunmkj{
+        font-size: 2.5vw !important;
     }
 
     .timeline-sub {
         display: flex;
-        animation: slide 15s linear infinite;
-        
+        animation: slide 9.5s linear infinite;
+        width: calc(25vw*20);
     }
 
+    @keyframes slide {
+        0% {
+            transform: translateX(0%);
+        }
+    
+        100% {
+            transform: translateX(calc(-25vw*10));
+        }
+    }
+
+    .tc2{
+        transform: scaleX(1);
+    }
 }
 
 @media only screen and (max-width:320px) {
