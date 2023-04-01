@@ -1,3 +1,6 @@
+.modal-dialog.modal-lg {
+    top: 8%;
+}
 .profileCard {
     display: flex;
     border-radius: 10px;

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './Alumni.css'
 import Data from '../../../Data/Alumni.json'
-import ModalCard from '../Alumni/Modal/ModalCardAlumni';
+import ModalCard from '../Modal/ModalCardAlumni';
 import { Modal, ModalBody, ModalHeader } from "reactstrap"
 function Alumni() {
     const [modal, setmodal] = useState(false)
