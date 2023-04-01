@@ -1,300 +1,5 @@
 
-.core-container {
-   margin: 5% 7%;
-   display: flex;
-   flex-wrap: wrap;
-   flex-direction: row;
-   gap: 2rem;
-   justify-content: center;
- }
- .core-mem {
-   
-   background-color: white;
-height: 25rem;
-width: 20rem;
-left: 1.25rem;
-top: 1.25rem;
-border-radius: 8px;
-gap: 0.75rem;
-border: 0.5px solid #9A9494;
-box-sizing: border-box;
-box-shadow: -4px -4px 12px 0px #F2F2F240;
-box-shadow: 4px 4px 12px 0px #4F4F4F33;
-overflow: hidden;
-transition: all 350ms ease;
-margin-bottom: 20px;
- }
-
- 
- .core_heading h1{
-   border-style: none;
-   text-align: center;
-   font-size: 4rem;
-   margin: 2rem;
-}
- 
- .core-images {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   object-fit: cover;
- }
- .core-images img {
-   width: 100%;
-   height: 21rem;
-   top: 0px;
-   transition: all 350ms ease;
-   vertical-align: middle;
-   object-fit: cover;
- }
- .core-mem:hover .core-images img {
-   margin-top: 1rem;
-   height: 15rem;
-   width: 15rem;
-   border-radius: 50%;
- }
- .core-title {
-   font-family: Barlow Condensed;
-   font-size: 2.25rem;
-   font-style: italic;
-   font-weight: 600;
-   line-height: 2.7rem;
-   letter-spacing: 0em; 
-   text-align: center;
-   margin-top: 0.5rem;
- }
- .core_mem_text {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   visibility: hidden;
-   transition: all 350ms ease;
- }
- .core-mem:hover .core_mem_text {
-   
-   visibility: visible;
-   border-radius: nullpx;
-   font-family: Barlow Condensed;
-   font-size: 1.5rem;
-   font-weight: 400;
-   line-height: 1.2rem;
-   letter-spacing: 0em;
-   text-align: center;
-   margin: 1rem;
- }
- .body {
-   width: 100%;
- }
-.social-media-core {
-   visibility: hidden;
-   
- }
- 
- .core-mem:hover .social-media-core {
-   visibility: visible;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   margin: auto;
-   gap: 2.5rem;
- 
- }
-.SocialLogoCore {
-   color: #232323 !important;
-   top: 0px;
-   border-radius: 0px;
-   position: relative;
-   align-items: center;
-   gap: 0.75rem;
- }
-.SocialLogoCore svg {
-   color: #232323 !important;
-   padding: 0.2rem;
- }
- @media only screen and (max-width: 1200px) {
-   .core_heading h1{
-      
-      font-size: 3.8rem;
-      
-   }
-   .core-container {
-     overflow: hidden;
-     gap: 0.3rem;
-   }
-   .core-mem {
-     height: 22rem;
-     width: 17rem;
-     transition-duration: 0.3 sec;
-   }
-   .core-images img {
-     width: 100%;
-     height: 17rem;
-   }
-   .core-mem:hover .core-images img {
-     height: 12rem;
-     width: 12rem;
-     margin-top: 0.5rem;
-   }
-   .core-title {
-     font-size: 1.9rem;
-   }
- }
- @media only screen and (max-width: 975px) {
-   .core_heading h1{
-      
-      font-size: 3.3rem;
-      
-   }
-   .core-container {
-     gap: 0.5rem;
-   }
-   .core-mem {
-     height: 18rem;
-     width: 13rem;
-     transition-duration: 0.3 sec;
-   }
-   .core-images img {
-     width: 100%;
-     height: 14rem;
-   }
- 
-   .core-mem:hover .core-images img {
-     height: 10rem;
-     width: 10rem;
-   }
-   .core-title{
-      font-size: 1.5rem;
-      line-height: 2rem;
-   }
-   .core-mem:hover .core_mem_text {
-      font-size: 1.1rem;
-      line-height: 0.11rem;
-      }
-   .core-mem:hover .social-media-core {
-      gap: 2.1rem;
-    }
-   
-   .SocialLogoCore svg {
-      padding: 0.4rem;
-    }
- }
- @media only screen and (max-width: 750px) {
-   .core_heading h1{
-      
-      font-size: 3.1rem;
-      
-   }
-   .core-container {
-     margin: 5% 3%;
-   }
- }
- @media only screen and (max-width: 685px) {
-   .core_heading h1{
-      
-      font-size: 3rem;
-      
-   }
-   .core-mem {
-     height: 20rem;
-     width: 15rem;
-   }
-   .core-images img {
-     height: 16rem;
-   }
- 
-   .core-mem:hover .core-images img {
-     height: 11rem;
-     width: 11rem;
-   }
-   .core-title{
-      font-size: 1.5rem;
-   }
-   .core-mem:hover .core_mem_text {
-      font-size: 1.3rem;
-      line-height: 0.5rem;
-      }
-   .core-mem:hover .social-media-core {
-      gap: 2.1rem;
-    }
-   
-   .SocialLogoCore svg {
-      padding: 0.4rem;
-    }
- }
- @media only screen and (max-width: 525px) {
-   .core_heading h1{
-      
-      font-size: 2.7rem;
-      
-   }
-   .core-mem {
-     height: 18rem;
-     width: 13rem;
-   }
-   .core-images img {
-     height: 14.3rem;
-   }
- 
-   .core-mem:hover .core-images img {
-     height: 9rem;
-     width: 9rem;
-   }
-   .core-title{
-      font-size: 1.5rem;
-   }
-   .core-mem:hover .core_mem_text {
-      font-size: 1.1rem;
-      line-height: 0.5rem;
-      }
-   .core-mem:hover .social-media-core {
-      gap: 1.8rem;
-    }
-   
-   .SocialLogoCore svg {
-      padding: 0.4rem;
-    }
- }
- @media only screen and (max-width: 460px) {
-   .core_heading h1{
-      
-      font-size: 2.5rem;
-      
-   }
-   .core-mem {
-     height: 14rem;
-     width: 10rem;
-   }
-   .core-images img {
-     height: 10.8rem;
-   }
-   .core-mem:hover .core-images img {
-      height: 7rem;
-      width: 7rem;
-    }
-  
-  
-   .core-title{
-      font-size: 1.11rem;
-      font-family: Barlow Condensed;
-  
-   font-style: italic;
-   font-weight: 600;
-   line-height: 1.2rem;
-   
-   }
-   .core-mem:hover .core_mem_text {
-      font-size: 0.9rem;
-      line-height: -0.1rem;
-      }
-   .core-mem:hover .social-media-core {
-      gap: 0.5rem;
-    }
-   
-   .SocialLogoCore svg {
-      padding: 0.5rem;
-    }
- }
-/* .core-container{
+.container{
    margin: 5% 7%;
   display: flex;
   flex-wrap: wrap;
@@ -305,8 +10,8 @@ margin-bottom: 20px;
 
 .core-mem {
 background-color: white;
-height: 25rem;
-width: 20rem;
+height: 27.75rem;
+width: 24rem;
 left: 1.25rem;
 top: 1.25rem;
 border-radius: 8px;
@@ -325,16 +30,16 @@ margin-bottom: 20px;
 
 
 .core-mem:hover .core-images img{
-margin-top: 1rem;
-height: 15rem;
-width: 15rem;
-
+margin-top: 2rem;
+height: 17.5rem;
+width: 17.5rem;
+left: 1.4rem;
+top: 1.4rem;
 border-radius: 50%;
 
 }
 
 .core-images{
-   
    display: flex;
    justify-content: center;
    align-items: center;
@@ -342,7 +47,7 @@ border-radius: 50%;
 
 .core-images img{
    width: 100%;
-   height: 21rem;
+   height: 24rem;
    top: 0px;
    transition: all 350ms ease-in;
    vertical-align: middle;
@@ -364,12 +69,11 @@ border-radius: 50%;
 visibility: visible;
 border-radius: nullpx;
 font-family: Barlow Condensed;
-font-size: 1.5rem;
+font-size: 1.25rem;
 font-weight: 400;
 line-height: 1.5rem;
 letter-spacing: 0em;
 text-align: center;
-margin: 1rem;
 
 }
  
@@ -386,7 +90,6 @@ font-weight: 600;
 line-height: 2.7rem;
 letter-spacing: 0em;
 text-align: center;
-margin-top: 0.5rem;
 }
 
 .social-media{
@@ -401,26 +104,27 @@ margin-top: 0.5rem;
    flex-direction: row;
    justify-content: center;
    align-items: center;
-   margin: auto;
+   width: 2.5rem;
+   height: 2.5rem;
 
 }
 
-.SocialLogoCore{
+.SocialLogo{
    color:  #232323 !important;
-   
+   height: 1.9rem; 
+    width: 1.9rem;
+   left: 12rem;
    top: 0px;
    border-radius: 0px;
    position: relative;
    align-items: center;
    gap: 0.75rem;
-   
+   padding: 0;
+   margin-top: 0;
+   margin-right:2.50rem;
+   margin-bottom: 1rem;
 
    
-}
-
-.SocialLogoCore svg{
-   color: #232323 !important;
-   padding: 0.2rem;
 }
 
 .core_heading h1{
@@ -431,7 +135,7 @@ margin-top: 0.5rem;
 }
 
 @media only screen and (max-width:660px) and (min-width:407px) {
-  .core-container{
+  .container{
      overflow: hidden;
   }
   .core_heading h1{
@@ -478,16 +182,16 @@ margin-top: 0.5rem;
      bottom: 19px;
   }
   
- .SocialLogoCoreCore svg{
+  .SocialLogo svg{
   width: 1.4rem;
   }
 
- .SocialLogoCoreCore{
+  .SocialLogo{
      margin: 13px;
   }
 }
 @media only screen and (max-width:407px){
-   .core-container{
+   .container{
       overflow: hidden;
    }
    .core_heading h1{
@@ -534,11 +238,11 @@ margin-top: 0.5rem;
       bottom: 19px;
    }
    
-  .SocialLogoCoreCore svg{
+   .SocialLogo svg{
    width: 1.4rem;
    }
  
-  .SocialLogoCoreCore{
+   .SocialLogo{
       margin: 13px;
    }
 }
@@ -576,9 +280,211 @@ margin-top: 0.5rem;
      right: 40px;
      margin-top: 1rem;
   }
- .SocialLogoCoreCore svg{
+  .SocialLogo svg{
      width: 2rem;
      }
   
-} */
+}
 
+/* @media only screen and (max-width: 1200px) {
+   .container {
+     overflow: hidden;
+     gap: 0.3rem;
+   }
+   .core-mem {
+     height: 22rem;
+     width: 17rem;
+     transition-duration: 0.3 sec;
+   }
+   .core-images img {
+     width: 100%;
+     height: 19rem;
+   }
+   .core-mem:hover .core-images img {
+     height: 12rem;
+     width: 12rem;
+     margin-top: 0.5rem;
+   }
+   .core-title {
+     font-size: 1.5rem;
+   }
+   .core-mem:hover .social-media{
+      width: 0.5rem;
+      height: 2.5rem;
+   
+   }
+ }
+ @media only screen and (max-width: 975px) {
+   .container {
+     gap: 0.5rem;
+   }
+   .core-mem {
+     height: 18rem;
+     width: 13rem;
+     transition-duration: 0.3 sec;
+   }
+   .core-images img {
+     width: 100%;
+     height: 15rem;
+   }
+ 
+   .core-mem:hover .core-images img {
+     height: 9rem;
+     width: 9rem;
+   }
+
+   .core-title{
+      font-size: 1.4rem;
+      }
+   .core_mem_text{
+     
+      padding-bottom: 0.5rem;
+      font-size: 0.9rem;
+   }
+   .core-mem:hover .social-media{
+      width: 0rem;
+      height: 0rem;
+   
+   }
+   .SocialLogo svg{
+      width: 1.5rem;
+   }
+   .SocialLogo{
+      
+      height: 1rem; 
+       width: 1rem;
+      left: 9.9rem;
+      
+   
+      
+   }
+ }
+ @media only screen and (max-width: 750px) {
+   .container {
+     margin: 5% 3%;
+   }
+   .core-title{
+      font-size: 1.4rem;
+      }
+ }
+ @media only screen and (max-width: 661px) {
+   .core-mem {
+     height: 20rem;
+     width: 15rem;
+   }
+   .core-images img {
+     height: 17rem;
+   }
+ 
+   .core-mem:hover .core-images img {
+     height: 10rem;
+     width: 10rem;
+   } 
+   
+   .core-title{
+      font-size: 1.4rem;
+      }
+      .core-mem:hover .social-media{
+         width: 13rem;
+         height: 1rem;
+         padding-top: 2rem;
+      
+      }
+      .SocialLogo svg{
+         width: 1.5rem;
+      }
+      .SocialLogo{
+         
+         height: 1rem; 
+          width: 1rem;
+         left: 9.9rem;
+         
+      
+         
+      }
+  
+     
+ }
+ @media only screen and (max-width: 525px) {
+   .core-mem {
+     height: 18rem;
+     width: 13rem;
+   }
+   .core-images img {
+     height: 15rem;
+   }
+ 
+   .core-mem:hover .core-images img {
+     height: 7rem;
+     width: 7rem;
+   }
+   
+   .core-title{
+      font-size: 1.4rem;
+      }
+      .core-mem:hover .social-media{
+        width: 11rem;
+        height: 1rem;
+        padding-top: 2rem;
+     
+     }
+      .SocialLogo{
+         
+         height: 1rem; 
+          width: 1rem;
+         left: 9.9rem;
+     
+      }
+      .core-mem:hover .core-images img {
+        height: 9rem;
+        width: 9rem;
+      }
+ }
+ @media only screen and (max-width: 460px) {
+   .core-mem {
+     height: 14rem;
+     width: 10rem;
+   }
+   .core-images img {
+     height: 11.5rem;
+   }
+   .core-title {
+     font-size: 1rem;
+     font-weight: 600;
+     line-height: 1rem;
+     margin-top: 0.5rem;
+   }
+   .core-mem:hover .core_mem_text {
+     font-size: 0.8rem;
+     font-weight: 500;
+     line-height: 0.8rem;
+     margin: 0.4rem;
+   }
+   .core-title{
+      
+      font-size: 1.1rem;
+      }
+      .SocialLogo svg{
+         width: 1.1rem;
+      }
+      .core-mem:hover .social-media{
+        width: 11rem;
+        height: 0.5rem;
+        padding-top: 2rem;
+        gap: 1px;
+       
+     
+     }
+      .SocialLogo{
+         
+         height: 1rem; 
+          width: 1rem;
+         left: 8.5rem;
+        
+      }
+      .core-mem:hover .core-images img {
+        height: 7.5rem;
+      }
+}
+ 
+  */
