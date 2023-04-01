@@ -3,7 +3,7 @@ import Footer from '../shared/Footer/Footer'
 import NavbarTeam from '../shared/Navbar/NavbarTeam'
 import { AiOutlineArrowRight, AiOutlineArrowLeft } from "react-icons/ai";
 import './Allevents.css'
-import { alleventsrjn } from '../../Data/EventsData';
+import { alleventsrjn, alleventorientation } from '../../Data/EventsData';
 const AllEvents = () => {
     useEffect(() => {
         document.title = "Past Events ECELL | NITS";
@@ -72,7 +72,7 @@ const AllEvents = () => {
                 <h1><span style={{ fontFamily: "Barlow Condensed", color: "#224259", fontWeight: "900" }}>ORIENTATION</span></h1>
             </div>
             <div className="upcomi-evvnts-parnt" ref={allevntorientation}>
-                {alleventsrjn.map((item) => {
+                {alleventorientation.map((item) => {
                     return (
                         
                             <div className="upcom-evnt-indi" key={item.id}>
@@ -91,10 +91,10 @@ const AllEvents = () => {
 
                                 <div className="btns-info-klp">
                                     <div className="btns-1-ent-indi">
-                                        <button>Research</button>
+                                        <button>{item.btn1}</button>
                                     </div>
                                     <div className="btns-1-ent-indi">
-                                        <button>Srijan</button>
+                                        <button>{item.btn2}</button>
                                     </div>
                                 </div>
 
@@ -141,10 +141,10 @@ const AllEvents = () => {
 
                                 <div className="btns-info-klp">
                                     <div className="btns-1-ent-indi">
-                                        <button>Research</button>
+                                        <button>{item.btn1}</button>
                                     </div>
                                     <div className="btns-1-ent-indi">
-                                        <button>Srijan</button>
+                                        <button>{item.btn2}</button>
                                     </div>
                                 </div>
 
