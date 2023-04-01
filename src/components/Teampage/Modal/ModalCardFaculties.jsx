@@ -1,6 +1,6 @@
 import React from 'react'
 import './Modal.css'
-import Data from '../../../../Data/Faculties.json'
+import Data from '../../../Data/Faculties.json'
 
 function ModalCard({dataid}) {
     let imgsrc = "", name = "", content = "", rank = "";
