@@ -85,12 +85,12 @@
 
 .btns-1-ent-indi button{
     background-color: #3e618e;
-    color: white;
+    color: #fff;
     padding: 0vw .5vw;
     border-radius: .5vw;
     font-size: 1.2vw;
     border: none;
-    margin-right: .5vw;
+    margin: 0.2vw;
 }
 
 .abt-content-indi-evnt h3{
