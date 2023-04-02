@@ -14,7 +14,7 @@
     background-color: #224259;
     width: 80vw;
     height: 2px;
-  
+
     margin-left: auto;
     margin-right: auto;
     margin-top: 0px;
@@ -39,7 +39,7 @@
     width: 80vw;
     margin: auto;
     font-size: 1.2rem;
-    text-align: center;
+    text-align: center !important;
     text-align: left;
     display: flex;
     flex-direction: column;
@@ -58,7 +58,10 @@
 
 .cards-set-1 {
 display: flex;
-flex-direction: row;
+flex-wrap: wrap;
+gap: 2rem;
+justify-content: center;
+align-items: center;
 flex-basis: 20%;
 flex-shrink: 1;
 padding: 2% 7.7%;
