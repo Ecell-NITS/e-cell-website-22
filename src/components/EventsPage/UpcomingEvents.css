@@ -26,6 +26,7 @@
 }
 
 .upcom-evnt-indi{
+    height: max-content !important;
     width: 31%;
     flex: none;
     order: 1;
@@ -50,6 +51,7 @@
 .img-upcom-evnt img{
     width: 100%;
     height: 100%;
+    /* object-fit: cover; */
 }
 
 .title-announc-upcom-evnt{
@@ -83,7 +85,7 @@
 
 .btns-1-ent-indi button{
     background-color: #3e618e;
-    color: white;
+    color: #fff;
     padding: 0vw .5vw;
     border-radius: .5vw;
     font-size: 1.2vw;
@@ -145,7 +147,7 @@
 
     .img-upcom-evnt{
         width: 100%;
-        height: 55vw;
+        height: 60vw;
         margin: 0 auto;
     }
 
