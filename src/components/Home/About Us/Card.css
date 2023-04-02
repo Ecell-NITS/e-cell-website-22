@@ -44,5 +44,8 @@
         font-size: 20px;
         padding-bottom: 10px;
     }
+    .about_card_{
+        display: none;
+    }
 
 }
