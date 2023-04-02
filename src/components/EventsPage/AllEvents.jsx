@@ -3,7 +3,7 @@ import Footer from '../shared/Footer/Footer'
 import NavbarTeam from '../shared/Navbar/NavbarTeam'
 import { AiOutlineArrowRight, AiOutlineArrowLeft } from "react-icons/ai";
 import './Allevents.css'
-import { alleventsrjn } from '../../Data/EventsData';
+import { alleventsrjn, alleventorientation , alleventempresario} from '../../Data/EventsData';
 import { alleventeic } from '../../Data/EventsData';
 import { alleventsrijan } from '../../Data/EventsData';
 const AllEvents = () => {
@@ -106,7 +106,7 @@ const AllEvents = () => {
                 <h1><span style={{ fontFamily: "Barlow Condensed", color: "#224259", fontWeight: "900" }}>ORIENTATION</span></h1>
             </div>
             <div className="upcomi-evvnts-parnt" ref={allevntorientation}>
-                {alleventsrjn.map((item) => {
+                {alleventorientation.map((item) => {
                     return (
 
                         <div className="upcom-evnt-indi" key={item.id}>
@@ -121,19 +121,20 @@ const AllEvents = () => {
                             <div className="title-announc-upcom-evnt">
                                 <h1>{item.title}</h1>
                             </div>
-
                             <div className="dte-locn-upcomi-event">
                                 <h2>{item.date}</h2>
                             </div>
 
-                            <div className="btns-info-klp">
-                                <div className="btns-1-ent-indi">
-                                    <button>Research</button>
+                                <div className="btns-info-klp">
+                                    <div className="btns-1-ent-indi">
+                                        <button>{item.btn1}</button>
+                                    </div>
+                                    <div className="btns-1-ent-indi">
+                                        <button>{item.btn2}</button>
+                                    </div>
                                 </div>
-                                <div className="btns-1-ent-indi">
-                                    <button>Srijan</button>
-                                </div>
-                            </div>
+
+                           
 
                             <div className="abt-content-indi-evnt">
                                 <h3>{item.content}</h3>
@@ -159,7 +160,7 @@ const AllEvents = () => {
             </div>
 
             <div className="upcomi-evvnts-parnt" ref={allevntempressario}>
-                {alleventsrjn.map((item) => {
+                {alleventempresario.map((item) => {
                     return (
 
                         <div className="upcom-evnt-indi" key={item.id}>
@@ -174,19 +175,20 @@ const AllEvents = () => {
                             <div className="title-announc-upcom-evnt">
                                 <h1>{item.title}</h1>
                             </div>
-
                             <div className="dte-locn-upcomi-event">
                                 <h2>{item.date}</h2>
                             </div>
 
-                            <div className="btns-info-klp">
-                                <div className="btns-1-ent-indi">
-                                    <button>Research</button>
+                                <div className="btns-info-klp">
+                                    <div className="btns-1-ent-indi">
+                                        <button>{item.btn1}</button>
+                                    </div>
+                                    <div className="btns-1-ent-indi">
+                                        <button>{item.btn2}</button>
+                                    </div>
                                 </div>
-                                <div className="btns-1-ent-indi">
-                                    <button>Srijan</button>
-                                </div>
-                            </div>
+
+                            
 
                             <div className="abt-content-indi-evnt">
                                 <h3>{item.content}</h3>
@@ -267,7 +269,6 @@ const AllEvents = () => {
             <div className="upcomi-evvnts-parnt" ref={allevntsrjn}>
                 {alleventsrijan.map((item) => {
                     return (
-
                         <div className="upcom-evnt-indi" key={item.id}>
                             <div className="img-upcom-evnt">
                                 <img src=''

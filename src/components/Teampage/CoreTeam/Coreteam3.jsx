@@ -23,10 +23,10 @@ function CoreTeam2() {
             <h3 className='core-title'>{data.name}</h3>
          </div>
          <p className="core_mem_text">{data.rank}</p>
-         <div className="social-media">
-            <a href={data.fb} className="SocialLogo" target="_blank" rel="noreferrer"><FaFacebook size={30}/></a>
-            <a href={data.linkdln} className="SocialLogo" target="_blank" rel="noreferrer"><FaLinkedin size={30}/></a> 
-            <a href={data.git} className="SocialLogo" target="_blank" rel="noreferrer"><BsGithub size={30}/></a>
+         <div className="social-media-core">
+            <a href={data.fb} className="SocialLogoCore" target="_blank" rel="noreferrer"><FaFacebook size={30}/></a>
+            <a href={data.linkdln} className="SocialLogoCore" target="_blank" rel="noreferrer"><FaLinkedin size={30}/></a> 
+            <a href={data.git} className="SocialLogoCore" target="_blank" rel="noreferrer"><BsGithub size={30}/></a>
          </div>
       </div>
          )
