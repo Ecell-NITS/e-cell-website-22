@@ -4,7 +4,7 @@ import NavbarTeam from '../../components/shared/Navbar/NavbarTeam'
 import './Events.css'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
-import UpcomingEvents from '../../components/EventsPage/UpcomingEvents';
+// import UpcomingEvents from '../../components/EventsPage/UpcomingEvents';
 import PastEvents from '../../components/EventsPage/PastEvents';
 const Events = () => {
   useEffect(() => {
@@ -100,7 +100,7 @@ const Events = () => {
           </div>
         </div>
       </Carousel>
-      <UpcomingEvents />
+      {/* <UpcomingEvents /> */}
       <PastEvents />
       <Footer />
     </>
