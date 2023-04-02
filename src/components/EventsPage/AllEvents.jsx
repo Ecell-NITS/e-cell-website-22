@@ -1,13 +1,15 @@
-import React, { useRef, useEffect} from 'react'
+import React, { useRef, useState, useEffect } from 'react'
 import Footer from '../shared/Footer/Footer'
 import NavbarTeam from '../shared/Navbar/NavbarTeam'
 import { AiOutlineArrowRight, AiOutlineArrowLeft } from "react-icons/ai";
 import './Allevents.css'
 import { alleventsrjn } from '../../Data/EventsData';
+import { alleventeic } from '../../Data/EventsData';
+import { alleventsrijan } from '../../Data/EventsData';
 const AllEvents = () => {
     useEffect(() => {
         document.title = "Past Events ECELL | NITS";
-      }, []);
+    }, []);
 
     let allevntsrjn = useRef();
 
@@ -58,6 +60,38 @@ const AllEvents = () => {
     function incubationbackPrevbk() {
         allevntincubation.current.scrollLeft -= allevntincubation.current.offsetWidth;
     }
+
+    /* implementing ioa */
+    const config = {
+        rootMargin: "0px 0px 0px 0px",
+        threshold: 0.2,
+    };
+
+    const [loaded, setIsLoaded] = useState(false);
+    useEffect(() => {
+        let observer = new window.IntersectionObserver(function (entries, self) {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    loadImages(entry.target);
+                    self.unobserve(entry.target);
+                }
+            });
+        }, config);
+        const imgs = document.querySelectorAll("[data-src]");
+        imgs.forEach((img) => {
+            observer.observe(img);
+        });
+        return () => {
+            imgs.forEach((img) => {
+                observer.unobserve(img);
+            });
+        };
+    }, []);
+
+    const loadImages = (image) => {
+        image.src = image.dataset.src;
+    };
+
     return (
         <>
             <NavbarTeam />
@@ -74,35 +108,38 @@ const AllEvents = () => {
             <div className="upcomi-evvnts-parnt" ref={allevntorientation}>
                 {alleventsrjn.map((item) => {
                     return (
-                        
-                            <div className="upcom-evnt-indi" key={item.id}>
-                                <div className="img-upcom-evnt">
-                                    <img src={item.img}
-                                        alt="" />
-                                </div>
 
-                                <div className="title-announc-upcom-evnt">
-                                    <h1>{item.title}</h1>
-                                </div>
+                        <div className="upcom-evnt-indi" key={item.id}>
+                            <div className="img-upcom-evnt">
+                                <img src=''
+                                    data-src={item.img}
+                                    className={loaded ? "loaded" : "loading"}
+                                    onLoad={() => setIsLoaded(true)}
+                                    alt="" />
+                            </div>
 
-                                <div className="dte-locn-upcomi-event">
-                                    <h2>{item.date}</h2>
-                                </div>
+                            <div className="title-announc-upcom-evnt">
+                                <h1>{item.title}</h1>
+                            </div>
 
-                                <div className="btns-info-klp">
-                                    <div className="btns-1-ent-indi">
-                                        <button>Research</button>
-                                    </div>
-                                    <div className="btns-1-ent-indi">
-                                        <button>Srijan</button>
-                                    </div>
-                                </div>
+                            <div className="dte-locn-upcomi-event">
+                                <h2>{item.date}</h2>
+                            </div>
 
-                                <div className="abt-content-indi-evnt">
-                                    <h3>{item.content}</h3>
+                            <div className="btns-info-klp">
+                                <div className="btns-1-ent-indi">
+                                    <button>Research</button>
+                                </div>
+                                <div className="btns-1-ent-indi">
+                                    <button>Srijan</button>
                                 </div>
                             </div>
-                        
+
+                            <div className="abt-content-indi-evnt">
+                                <h3>{item.content}</h3>
+                            </div>
+                        </div>
+
                     );
                 })}
             </div>
@@ -124,39 +161,42 @@ const AllEvents = () => {
             <div className="upcomi-evvnts-parnt" ref={allevntempressario}>
                 {alleventsrjn.map((item) => {
                     return (
-                        
-                            <div className="upcom-evnt-indi" key={item.id}>
-                                <div className="img-upcom-evnt">
-                                    <img src={item.img}
-                                        alt="" />
-                                </div>
 
-                                <div className="title-announc-upcom-evnt">
-                                    <h1>{item.title}</h1>
-                                </div>
+                        <div className="upcom-evnt-indi" key={item.id}>
+                            <div className="img-upcom-evnt">
+                                <img src=''
+                                    data-src={item.img}
+                                    className={loaded ? "loaded" : "loading"}
+                                    onLoad={() => setIsLoaded(true)}
+                                    alt="" />
+                            </div>
 
-                                <div className="dte-locn-upcomi-event">
-                                    <h2>{item.date}</h2>
-                                </div>
+                            <div className="title-announc-upcom-evnt">
+                                <h1>{item.title}</h1>
+                            </div>
 
-                                <div className="btns-info-klp">
-                                    <div className="btns-1-ent-indi">
-                                        <button>Research</button>
-                                    </div>
-                                    <div className="btns-1-ent-indi">
-                                        <button>Srijan</button>
-                                    </div>
-                                </div>
+                            <div className="dte-locn-upcomi-event">
+                                <h2>{item.date}</h2>
+                            </div>
 
-                                <div className="abt-content-indi-evnt">
-                                    <h3>{item.content}</h3>
+                            <div className="btns-info-klp">
+                                <div className="btns-1-ent-indi">
+                                    <button>Research</button>
+                                </div>
+                                <div className="btns-1-ent-indi">
+                                    <button>Srijan</button>
                                 </div>
                             </div>
-                        
+
+                            <div className="abt-content-indi-evnt">
+                                <h3>{item.content}</h3>
+                            </div>
+                        </div>
+
                     );
                 })}
             </div>
-            
+
             <div className="btns">
                 <button className="prev btn-testimonial" onClick={empressariobackPrevbk}>
                     <AiOutlineArrowLeft className="btn-indi-testimonial" />
@@ -173,37 +213,40 @@ const AllEvents = () => {
             </div>
 
             <div className="upcomi-evvnts-parnt" ref={allevnteic}>
-                {alleventsrjn.map((item) => {
+                {alleventeic.map((item) => {
                     return (
-                        
-                            <div className="upcom-evnt-indi" key={item.id}>
-                                <div className="img-upcom-evnt">
-                                    <img src={item.img}
-                                        alt="" />
-                                </div>
 
-                                <div className="title-announc-upcom-evnt">
-                                    <h1>{item.title}</h1>
-                                </div>
+                        <div className="upcom-evnt-indi" key={item.id}>
+                            <div className="img-upcom-evnt">
+                                <img src=''
+                                    data-src={item.img}
+                                    className={loaded ? "loaded" : "loading"}
+                                    onLoad={() => setIsLoaded(true)}
+                                    alt="" />
+                            </div>
 
-                                <div className="dte-locn-upcomi-event">
-                                    <h2>{item.date}</h2>
-                                </div>
+                            <div className="title-announc-upcom-evnt">
+                                <h1>{item.title}</h1>
+                            </div>
 
-                                <div className="btns-info-klp">
-                                    <div className="btns-1-ent-indi">
-                                        <button>Research</button>
-                                    </div>
-                                    <div className="btns-1-ent-indi">
-                                        <button>Srijan</button>
-                                    </div>
-                                </div>
+                            <div className="dte-locn-upcomi-event">
+                                <h2>{item.date}</h2>
+                            </div>
 
-                                <div className="abt-content-indi-evnt">
-                                    <h3>{item.content}</h3>
+                            <div className="btns-info-klp">
+                                <div className="btns-1-ent-indi">
+                                    <button>{item.btn1}</button>
+                                </div>
+                                <div className="btns-1-ent-indi">
+                                    <button>{item.btn2}</button>
                                 </div>
                             </div>
-                        
+
+                            <div className="abt-content-indi-evnt">
+                                <h3>{item.content}</h3>
+                            </div>
+                        </div>
+
                     );
                 })}
             </div>
@@ -222,37 +265,40 @@ const AllEvents = () => {
                 <h1><span style={{ fontFamily: "Barlow Condensed", color: "#224259", fontWeight: "900" }}>SRIJAN</span></h1>
             </div>
             <div className="upcomi-evvnts-parnt" ref={allevntsrjn}>
-                {alleventsrjn.map((item) => {
+                {alleventsrijan.map((item) => {
                     return (
-                        
-                            <div className="upcom-evnt-indi" key={item.id}>
-                                <div className="img-upcom-evnt">
-                                    <img src={item.img}
-                                        alt="" />
-                                </div>
 
-                                <div className="title-announc-upcom-evnt">
-                                    <h1>{item.title}</h1>
-                                </div>
+                        <div className="upcom-evnt-indi" key={item.id}>
+                            <div className="img-upcom-evnt">
+                                <img src=''
+                                    data-src={item.img}
+                                    className={loaded ? "loaded" : "loading"}
+                                    onLoad={() => setIsLoaded(true)}
+                                    alt="" />
+                            </div>
 
-                                <div className="dte-locn-upcomi-event">
-                                    <h2>{item.date}</h2>
-                                </div>
+                            <div className="title-announc-upcom-evnt">
+                                <h1>{item.title}</h1>
+                            </div>
 
-                                <div className="btns-info-klp">
-                                    <div className="btns-1-ent-indi">
-                                        <button>Research</button>
-                                    </div>
-                                    <div className="btns-1-ent-indi">
-                                        <button>Srijan</button>
-                                    </div>
-                                </div>
+                            <div className="dte-locn-upcomi-event">
+                                <h2>{item.date}</h2>
+                            </div>
 
-                                <div className="abt-content-indi-evnt">
-                                    <h3>{item.content}</h3>
+                            <div className="btns-info-klp">
+                                <div className="btns-1-ent-indi">
+                                    <button>{item.btn1}</button>
+                                </div>
+                                <div className="btns-1-ent-indi">
+                                    <button>{item.btn2}</button>
                                 </div>
                             </div>
-                        
+
+                            <div className="abt-content-indi-evnt">
+                                <h3>{item.content}</h3>
+                            </div>
+                        </div>
+
                     );
                 })}
             </div>
@@ -266,42 +312,45 @@ const AllEvents = () => {
             </div>
             {/* Srijan ends */}
 
-            {/* Incunation starts */}
+            {/* Incubation starts */}
             <div className="upcom-evnts-top eic-hd-ttle">
                 <h1><span style={{ fontFamily: "Barlow Condensed", color: "#224259", fontWeight: "900" }}>INCUBATION</span></h1>
             </div>
             <div className="upcomi-evvnts-parnt" ref={allevntincubation}>
                 {alleventsrjn.map((item) => {
                     return (
-                        
-                            <div className="upcom-evnt-indi" key={item.id}>
-                                <div className="img-upcom-evnt">
-                                    <img src={item.img}
-                                        alt="" />
-                                </div>
 
-                                <div className="title-announc-upcom-evnt">
-                                    <h1>{item.title}</h1>
-                                </div>
+                        <div className="upcom-evnt-indi" key={item.id}>
+                            <div className="img-upcom-evnt">
+                                <img src=''
+                                    data-src={item.img}
+                                    className={loaded ? "loaded" : "loading"}
+                                    onLoad={() => setIsLoaded(true)}
+                                    alt="" />
+                            </div>
 
-                                <div className="dte-locn-upcomi-event">
-                                    <h2>{item.date}</h2>
-                                </div>
+                            <div className="title-announc-upcom-evnt">
+                                <h1>{item.title}</h1>
+                            </div>
 
-                                <div className="btns-info-klp">
-                                    <div className="btns-1-ent-indi">
-                                        <button>Research</button>
-                                    </div>
-                                    <div className="btns-1-ent-indi">
-                                        <button>Srijan</button>
-                                    </div>
-                                </div>
+                            <div className="dte-locn-upcomi-event">
+                                <h2>{item.date}</h2>
+                            </div>
 
-                                <div className="abt-content-indi-evnt">
-                                    <h3>{item.content}</h3>
+                            <div className="btns-info-klp">
+                                <div className="btns-1-ent-indi">
+                                    <button>Research</button>
+                                </div>
+                                <div className="btns-1-ent-indi">
+                                    <button>Srijan</button>
                                 </div>
                             </div>
-                        
+
+                            <div className="abt-content-indi-evnt">
+                                <h3>{item.content}</h3>
+                            </div>
+                        </div>
+
                     );
                 })}
             </div>
@@ -313,7 +362,7 @@ const AllEvents = () => {
                     <AiOutlineArrowRight className="btn-indi-testimonial" />
                 </button>
             </div>
-            {/* Incunation ends */}
+            {/* Incubation ends */}
             <Footer />
         </>
     )
