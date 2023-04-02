@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef, useState, useEffect } from 'react'
 import { podcastdata } from "../../Data/ResourcesData";
 import { AiOutlineArrowRight, AiOutlineArrowLeft } from "react-icons/ai";
 import { Modal, ModalBody, ModalHeader } from "reactstrap";
@@ -17,6 +17,38 @@ const PodcastSummary = () => {
     const [modal, setmodal] = useState(false);
     const [modalid, setmodalid] = useState(1);
 
+    /* implementing ioa */
+    const config = {
+        rootMargin: "0px 0px 0px 0px",
+        threshold: 0.2,
+    };
+
+    const [loaded, setIsLoaded] = useState(false);
+    useEffect(() => {
+        let observer = new window.IntersectionObserver(function (entries, self) {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    loadImages(entry.target);
+                    self.unobserve(entry.target);
+                }
+            });
+        }, config);
+        const imgs = document.querySelectorAll("[data-src]");
+        imgs.forEach((img) => {
+            observer.observe(img);
+        });
+        return () => {
+            imgs.forEach((img) => {
+                observer.unobserve(img);
+            });
+        };
+    }, []);
+
+    const loadImages = (image) => {
+        image.src = image.dataset.src;
+    };
+
+
     return (
         <>
             <div className="collab">
@@ -25,17 +57,21 @@ const PodcastSummary = () => {
             <div className="resources-indi" ref={podcastHolder}>
                 {podcastdata.map((item) => {
                     return (
-                        
-                            <div className="resource-indi hjloq" key={item.id}>
-                                <div className="img-resour">
-                                    <img src={item.img} onClick={() => {
+
+                        <div className="resource-indi hjloq" key={item.id}>
+                            <div className="img-resour">
+                                <img src=''
+                                    data-src={item.img}
+                                    className={loaded ? "loaded" : "loading"}
+                                    onLoad={() => setIsLoaded(true)}
+                                    onClick={() => {
                                         setmodalid(item.id);
                                         setmodal(true);
                                     }}
-                                        alt="" />
-                                </div>
+                                    alt="" />
                             </div>
-                        
+                        </div>
+
                     );
                 })}
             </div>

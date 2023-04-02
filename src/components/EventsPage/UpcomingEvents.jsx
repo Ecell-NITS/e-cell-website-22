@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState, useEffect} from 'react'
 import './UpcomingEvents.css'
 import { upcomingevnt } from '../../Data/EventsData'
 import { AiOutlineArrowRight, AiOutlineArrowLeft } from "react-icons/ai";
@@ -13,6 +13,38 @@ const UpcomingEvents = () => {
         upcomevntHolder.current.scrollLeft -= upcomevntHolder.current.offsetWidth;
     }
 
+    /* implementing ioa */
+    const config = {
+        rootMargin: "0px 0px 0px 0px",
+        threshold: 0.2,
+    };
+    
+    const [loaded, setIsLoaded] = useState(false);
+    useEffect(() => {
+        let observer = new window.IntersectionObserver(function (entries, self) {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    loadImages(entry.target);
+                    self.unobserve(entry.target);
+                }
+            });
+        }, config);
+        const imgs = document.querySelectorAll("[data-src]");
+        imgs.forEach((img) => {
+            observer.observe(img);
+        });
+        return () => {
+            imgs.forEach((img) => {
+                observer.unobserve(img);
+            });
+        };
+    }, []);
+
+    const loadImages = (image) => {
+        image.src = image.dataset.src;
+    };
+
+    
     return (
         <>
             <div className="upcom-evnts-top">
@@ -25,7 +57,9 @@ const UpcomingEvents = () => {
                         
                             <div className="upcom-evnt-indi" key={item.id}>
                                 <div className="img-upcom-evnt">
-                                    <img src={item.img}
+                                    <img src='' data-src={item.img}
+                                       className={loaded ? "loaded" : "loading"}
+                                       onLoad={() => setIsLoaded(true)}
                                         alt="" />
                                 </div>
 
