@@ -314,7 +314,7 @@ const AllEvents = () => {
             {/* Srijan ends */}
 
             {/* Incubation starts */}
-            <div className="upcom-evnts-top eic-hd-ttle">
+            {/* <div className="upcom-evnts-top eic-hd-ttle">
                 <h1><span style={{ fontFamily: "Barlow Condensed", color: "#224259", fontWeight: "900" }}>INCUBATION</span></h1>
             </div>
             <div className="upcomi-evvnts-parnt" ref={allevntincubation}>
@@ -362,7 +362,7 @@ const AllEvents = () => {
                 <button className="next btn-testimonial" onClick={incubationfwdNextgo}>
                     <AiOutlineArrowRight className="btn-indi-testimonial" />
                 </button>
-            </div>
+            </div> */}
             {/* Incubation ends */}
             <Footer />
         </>

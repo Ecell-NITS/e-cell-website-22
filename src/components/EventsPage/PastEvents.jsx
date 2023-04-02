@@ -1,6 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react'
 import { pastents } from '../../Data/EventsData';
 import './Pastevents.css'
+import './UpcomingEvents.css'
 import { Link } from 'react-router-dom';
 import { AiOutlineArrowRight, AiOutlineArrowLeft } from "react-icons/ai";
 const PastEvents = () => {
