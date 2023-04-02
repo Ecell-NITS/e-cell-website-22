@@ -1,7 +1,7 @@
 .aboutSection{
     display: flex;
     flex-direction: column;
-    margin-bottom: 5rem;
+    margin-bottom: 4rem;
     
    
 
@@ -38,8 +38,12 @@
     padding-top: 3rem;
     width: 80vw;
     margin: auto;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     text-align: center;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
 }
 
 
@@ -90,11 +94,18 @@ color: #224259;
 
 
 
+
+}
+@media only screen and (max-width:610px){
+    .motto{
+        display: none;
+    }
 }
 @media only screen and (max-width:400x) {
 .contentAbout{
     font-size: 1.1rem;
 }
+
 
 
 
