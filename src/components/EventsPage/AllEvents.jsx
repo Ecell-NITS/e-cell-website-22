@@ -3,7 +3,7 @@ import Footer from '../shared/Footer/Footer'
 import NavbarTeam from '../shared/Navbar/NavbarTeam'
 import { AiOutlineArrowRight, AiOutlineArrowLeft } from "react-icons/ai";
 import './Allevents.css'
-import { alleventsrjn, alleventorientation } from '../../Data/EventsData';
+import { alleventsrjn, alleventorientation , alleventempresario} from '../../Data/EventsData';
 const AllEvents = () => {
     useEffect(() => {
         document.title = "Past Events ECELL | NITS";
@@ -122,7 +122,7 @@ const AllEvents = () => {
             </div>
 
             <div className="upcomi-evvnts-parnt" ref={allevntempressario}>
-                {alleventsrjn.map((item) => {
+                {alleventempresario.map((item) => {
                     return (
                         
                             <div className="upcom-evnt-indi" key={item.id}>
