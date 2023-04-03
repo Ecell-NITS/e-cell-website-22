@@ -1,49 +1,31 @@
+.error{
+    height: 100vh;
+    width: 100%;
+    margin-right: 2rem;
+    margin-top: 0;
+}
 .notfound-main{
     display: flex;
-    padding-top: 5rem;
+    
     justify-content: center;
     align-items: center;
-    background-color: #224259;
+    background-color: white;
     min-height: 100vh;
     flex-direction: column;
 }
 
-.notfound-main h1{
-    color: white;
-    font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 900;
-    font-size: 3vw;
-    font-style: italic;
-}
-
-.link-btn-btm{
-    margin-top: 4vw;
-    background-color: #0072b1;
-    border-bottom: 3px solid grey;
-    transition: all .2s ease-out;
-}
-
-.link-btn-btm:hover{
-    background-color: #1DA1F2;
-    border-bottom: 3px solid rgb(54, 214, 29);
-}
-
 .p-by{
-    color: white;
+    color: #1C374B;
     font-family: 'Barlow Condensed', sans-serif;
     font-weight: 900;
-    font-size: 1.5vw;
+    font-size: 3rem;
     letter-spacing: 1px;
     margin-bottom: 0 !important;
+    
 }
 
 @media only screen and (max-width:660px){
-    .notfound-main h1{
-        font-size: 6vw;
-        padding-left: 1rem;
-        padding-right: 1rem;
-        text-align: center;
-    }
+    
 
     .p-by{
         font-size: 5vw;
