@@ -26,7 +26,6 @@
 }
 
 .upcom-evnt-indi{
-    height: max-content !important;
     width: 31%;
     flex: none;
     order: 1;
@@ -85,12 +84,12 @@
 
 .btns-1-ent-indi button{
     background-color: #3e618e;
-    color: white;
+    color: #fff;
     padding: 0vw .5vw;
     border-radius: .5vw;
     font-size: 1.2vw;
     border: none;
-    margin-right: .5vw;
+    margin: 0.2vw;
 }
 
 .abt-content-indi-evnt h3{
@@ -103,6 +102,10 @@
 @media only screen and (min-width:660px){
     .nmjkop{
         display: none;
+    }
+
+    .upcom-evnt-indi{
+        height: 42vw !important;
     }
 }
 
@@ -147,7 +150,7 @@
 
     .img-upcom-evnt{
         width: 100%;
-        height: 60vw;
+        height: 70vw;
         margin: 0 auto;
     }
 
