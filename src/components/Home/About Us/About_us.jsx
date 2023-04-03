@@ -2,11 +2,7 @@ import React from "react";
 import "./About_us.css";
 
 import Card from "./Card";
-import logo1 from "../../../assets/logos/moto-1.png";
-import logo2 from "../../../assets/logos/moto-2.png";
-import logo3 from "../../../assets/logos/moto-3.png";
-import logo4 from "../../../assets/logos/moto-4.png";
-import logo5 from "../../../assets/logos/moto-5.png";
+
 
 const motto_dialogue = [
 
@@ -24,6 +20,13 @@ const motto_dialogue = [
 
 ];
 
+const moto_image = [
+  'https://res.cloudinary.com/dp92qug2f/image/upload/v1680524127/Ecell%20website/moto/moto-1_uoycz4.webp',
+  'https://res.cloudinary.com/dp92qug2f/image/upload/v1680524127/Ecell%20website/moto/moto-2_hvs2rq.webp',
+  'https://res.cloudinary.com/dp92qug2f/image/upload/v1680524128/Ecell%20website/moto/moto-3_thwnrc.webp',
+  'https://res.cloudinary.com/dp92qug2f/image/upload/v1680524127/Ecell%20website/moto/moto-4_krbq3h.webp',
+  'https://res.cloudinary.com/dp92qug2f/image/upload/v1680524130/Ecell%20website/moto/moto-5_jzewcc.webp'
+]
 
 function About_us() {
   // const [Ind, setInd] =useState(0);
@@ -33,8 +36,11 @@ function About_us() {
 
     <div id="aboutecellnits">
       <div className="aboutSection">
-        <h3 className="about_heading">ABOUT US</h3>
-        <div className="underline"></div>
+        {/* <h3 className="about_heading">ABOUT US</h3> */}
+        <div className="collab">
+          <h1>ABOUT US</h1>
+        </div>
+        {/* <div className="underline"></div> */}
         <div className="contentAbout">
           <p>E-Cell, NIT Silchar is a non-profit student-run organization promoting and nurturing the entrepreneurial spirit among students. It offers pre-incubation facilities to startups and encourages students to work on their ideas through events. E-Cell's mission is to improve the culture of entrepreneurship in technical and non-technical fields and uplift students to innovate and develop their models. Its objective is to develop the spirit of entrepreneurship by providing various programs and events such as Srijan to educate students on financial literacy, real-world problem-solving skills, and event management. </p>
         </div>
@@ -49,11 +55,11 @@ function About_us() {
       </div>
       <div className="test_card">
         <div className="cards-set-1">
-        <Card image={logo1} dialogue={motto_dialogue[0]} />
-          <Card image={logo2} dialogue={motto_dialogue[1]} />
-          <Card image={logo3} dialogue={motto_dialogue[2]} />
-          <Card image={logo4} dialogue={motto_dialogue[3]} />
-          <Card image={logo5} dialogue={motto_dialogue[4]} />
+        <Card image={moto_image[0]} dialogue={motto_dialogue[0]} />
+          <Card image={moto_image[1]} dialogue={motto_dialogue[1]} />
+          <Card image={moto_image[2]} dialogue={motto_dialogue[2]} />
+          <Card image={moto_image[3]} dialogue={motto_dialogue[3]} />
+          <Card image={moto_image[4]} dialogue={motto_dialogue[4]} />
           {/* <Card image={logo} dialogue={motto_dialogue[2]} /> */}
         </div>
         {/* <div className="cards-set-2">
