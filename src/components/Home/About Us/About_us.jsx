@@ -2,10 +2,24 @@ import React from "react";
 import "./About_us.css";
 
 import Card from "./Card";
-import logo from "../../../assets/logo.jpg";
+import logo1 from "../../../assets/logos/moto-1.png";
+import logo2 from "../../../assets/logos/moto-2.png";
+import logo3 from "../../../assets/logos/moto-3.png";
+import logo4 from "../../../assets/logos/moto-4.png";
+import logo5 from "../../../assets/logos/moto-5.png";
+
 const motto_dialogue = [
-  "Channelizing the budding thoughts of real-world problem solving by providing an optimal platform to generate its physical counterpart",
-  "Educating the students about applicative problem solving, financial literacy, management and leadership in a scholastic manner through various workshops, events and interactive sessions",
+
+  '"Inspiring Ideas, Igniting Innovation." We encourage students to brainstorm innovative ideas and nurture their creativity.',
+
+'"Guiding You Towards Success." We provide guidance to students in the form of mentorship programs, workshops, and networking events to help them refine their ideas and develop their skills.',
+
+'"Transforming Ideas into Reality." We provide incubation facilities and funding support to promising startups and ideas, helping them take off the ground. ',
+
+'"Connecting Ideas, Building Networks." We organize various events like business plan competitions, hackathons, and networking sessions to help students showcase their ideas and connect with investors, mentors, and other entrepreneurs.',
+
+'"Creating a Community of Entrepreneurs."We aim to create a culture of entrepreneurship on campus by celebrating success stories, organizing interactive sessions, and inspiring students to think beyond traditional career paths.',
+  
 
 
 ];
@@ -18,23 +32,11 @@ function About_us() {
     // About Us section
 
     <div id="aboutecellnits">
-      
-      
-
-
       <div className="aboutSection">
         <h3 className="about_heading">ABOUT US</h3>
         <div className="underline"></div>
         <div className="contentAbout">
-        <div className="about_e_cell">
-           <b> ABOUT E-CELL: </b>  Entrepreneurship Cell or E-Cell, NIT Silchar is a non-profit organization run by the students and was established with the aim of promoting and nurturing the entrepreneurial spirit among the youth of the college. We thrive on fostering a self-reliant mentality among the youth and also helping them work on their ideas and encouraging college-level students to start their own ventures. E-Cell also provided pre-incubation facilities to various start-ups and bootstrapped businesses to turn into colossal enterprises.
-          </div>
-          <div className="about_mission">
-            <b>MISSION:</b>  The Entrepreneurship Cell of NIT Silchar gives students a platform that converges their entrepreneurial passions, focusing mainly on improving the culture of entrepreneurship in the college, both in technical and non-technical fields, and further uplifting the students to innovate, put forth their ideas, and help develop their models by providing them with incubations and also a platform to scale their products through our events.
-          </div>
-          <div className="about_objective">
-            <b> OBJECTIVE:</b> The objective of E-Cell NIT Silchar is to develop the spirit of entrepreneurship among the students. It motivates students and enables them to strengthen their passion and integrity toward entrepreneurial qualities. Activities of this cell also include orientation programs, various workshops, interactive sessions, webinars, and large-scale events like Srijan, which help students to gain experience and educate them about financial literacy, the application of skills to solve real-world problems, and management of events.
-          </div>
+          <p>E-Cell, NIT Silchar is a non-profit student-run organization promoting and nurturing the entrepreneurial spirit among students. It offers pre-incubation facilities to startups and encourages students to work on their ideas through events. E-Cell's mission is to improve the culture of entrepreneurship in technical and non-technical fields and uplift students to innovate and develop their models. Its objective is to develop the spirit of entrepreneurship by providing various programs and events such as Srijan to educate students on financial literacy, real-world problem-solving skills, and event management. </p>
         </div>
       </div>
       
@@ -47,8 +49,11 @@ function About_us() {
       </div>
       <div className="test_card">
         <div className="cards-set-1">
-          <Card image={logo} dialogue={motto_dialogue[0]} />
-          <Card image={logo} dialogue={motto_dialogue[1]} />
+        <Card image={logo1} dialogue={motto_dialogue[0]} />
+          <Card image={logo2} dialogue={motto_dialogue[1]} />
+          <Card image={logo3} dialogue={motto_dialogue[2]} />
+          <Card image={logo4} dialogue={motto_dialogue[3]} />
+          <Card image={logo5} dialogue={motto_dialogue[4]} />
           {/* <Card image={logo} dialogue={motto_dialogue[2]} /> */}
         </div>
         {/* <div className="cards-set-2">
