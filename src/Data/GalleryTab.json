@@ -211,5 +211,83 @@
       "year":"2022-2023",
       "event":"Empressario",
       "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1678297818/GalleryPage/Emprassario%202022-23/WhatsApp_Image_2022-11-20_at_11.43.05_AM_kfcxb3.jpg"
+    },
+    {
+      "id": 36,
+      "year":"2022-2023",
+      "event":"EIC",
+      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1680503445/GalleryPage/EIC/EIC_2022_3_aoi9gr.jpg"
+    },
+    {
+      "id": 37,
+      "year":"2022-2023",
+      "event":"EIC",
+      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1680503445/GalleryPage/EIC/EIC_2022_2_oy4m4o.jpg"
+    },
+    {
+      "id": 38,
+      "year":"2022-2023",
+      "event":"EIC",
+      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1680503444/GalleryPage/EIC/EIC_2022_l7c1cl.jpg"
+    },
+    {
+      "id": 39,
+      "year":"2022-2023",
+      "event":"EIC",
+      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1680503444/GalleryPage/EIC/EIC_2022_4_oqmmno.jpg"
+    },
+    {
+      "id":40,
+      "year":"2022-2023",
+      "event":"EIC",
+      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1680503444/GalleryPage/EIC/EIC_2022_6_a71r2s.jpg"
+    },
+    {
+      "id":41,
+      "year":"2022-2023",
+      "event":"EIC",
+      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1680503444/GalleryPage/EIC/EIC_2022_1_pxpx1h.jpg"
+    },
+    {
+      "id":42,
+      "year":"2022-2023",
+      "event":"EIC",
+      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1680503444/GalleryPage/EIC/EIC_2022_7_oelrai.jpg"
+    },
+    {
+      "id":43,
+      "year":"2022-2023",
+      "event":"EIC",
+      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1680503442/GalleryPage/EIC/EIC_2022_8_i2fvof.jpg"
+    },
+    {
+      "id":44,
+      "year":"2022-2023",
+      "event":"EIC",
+      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1680503443/GalleryPage/EIC/EIC_2022_5_n29tm0.jpg"
+    },
+    {
+      "id":45,
+      "year":"2022-2023",
+      "event":"EIC",
+      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1680503443/GalleryPage/EIC/EIC_2022_9_dtp9en.jpg"
+    },
+    {
+      "id":46,
+      "year":"2022-2023",
+      "event":"EIC",
+      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1680503442/GalleryPage/EIC/EIC_2022_11_pszgha.jpg"
+    },
+    {
+      "id":47,
+      "year":"2022-2023",
+      "event":"EIC",
+      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1680503442/GalleryPage/EIC/EIC_2022_12_dkujie.jpg"
+    },
+    {
+      "id":48,
+      "year":"2022-2023",
+      "event":"EIC",
+      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1680503441/GalleryPage/EIC/EIC_2022_10_olgxqh.jpg"
     }
  ]
