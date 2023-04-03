@@ -26,7 +26,6 @@
 }
 
 .upcom-evnt-indi{
-    height: max-content !important;
     width: 31%;
     flex: none;
     order: 1;
@@ -103,6 +102,10 @@
 @media only screen and (min-width:660px){
     .nmjkop{
         display: none;
+    }
+
+    .upcom-evnt-indi{
+        height: 42vw !important;
     }
 }
 
