@@ -12,7 +12,7 @@ function CoreTeam3() {
       <div className="core_heading">
          <h1>Core Team</h1>
       </div>
-   <div className="container">
+   <div className="core-container">
    {
       Data.map(data=>{
          return (
