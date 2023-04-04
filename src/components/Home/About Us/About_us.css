@@ -35,7 +35,7 @@
 }
 
 .contentAbout{
-    padding-top: 3rem;
+    /* padding-top: 3rem; */
     width: 80vw;
     margin: auto;
     font-size: 1.2rem;
@@ -102,6 +102,10 @@ color: #224259;
 @media only screen and (max-width:610px){
     .motto{
         display: none;
+    }
+
+    .contentAbout{
+        padding-top: 0;
     }
 }
 @media only screen and (max-width:400x) {

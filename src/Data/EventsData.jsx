@@ -76,7 +76,7 @@ export const upcomingevnt = [
 export const pastents = [
     {
             id:1,
-            img:"https://res.cloudinary.com/dz7qkvqyj/image/upload/v1680458874/orientation%20and%20empressario/past%20event/WhatsApp_Image_2023-04-02_at_22.41.29_vinbvs.jpg",
+            img:"https://res.cloudinary.com/dp92qug2f/image/upload/v1680505883/Ecell%20website/events/international_symposium_final_yjhtst.webp",
             title:"International Symposium",
             btn1:"Research",
             btn2:"Symposium",
@@ -112,7 +112,7 @@ export const pastents = [
         },
         {
             id:5,
-            img:"https://res.cloudinary.com/dz7qkvqyj/image/upload/v1680458876/orientation%20and%20empressario/past%20event/WhatsApp_Image_2023-04-02_at_22.41.25_jjtcl9.jpg",
+            img:"https://res.cloudinary.com/dp92qug2f/image/upload/v1680505889/Ecell%20website/events/smart_india_hackathon_fmz63j.webp",
             title:"Smart India Hackathon",
             btn1:"Technical",
             btn2:"Hackathon",
