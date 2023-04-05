@@ -9,6 +9,7 @@ import Timeline from '../../components/Home/Timeline/Timeline'
 import Footer from '../../components/shared/Footer/Footer'
 import Footerconstant from '../../components/shared/FooterConstant/Footerconstant'
 import Chatbot from 'react-chatbot-kit'
+import axios from 'axios'
 import 'react-chatbot-kit/build/main.css'
 import { createChatBotMessage } from 'react-chatbot-kit';
 import Hello from './hello'
@@ -24,46 +25,88 @@ const config = {
   ],
 };
 
-const messages = ["Name", "alumini name", "question", "Email", "Message"];
-var index = 0;
+var data = {};
+const messages = ["Name", "alumini name",];
+// "question", "Email", "Message"
+// const options = {
+//   1: "Questions",
+//   2: "Contact us",
+// }
+var optionId = 0;
+var index = -1;
 
 const ActionProvider = ({ createChatBotMessage, setState, children }) => {
-  const processMessage = () => {
+  const processContactMessage = async () => {
     var message;
-    if (index == messages.length) message = createChatBotMessage('Thank you for your response. We will get back to you soon. Have a nice day.', { delay: 500 })
+    if (index == messages.length) {
+      console.log(data);
+      var text;
+      await axios.post('https://ecell.nits.ac.in/api/contact', data).then((res) => {
+        console.log(res);
+        text = "Thank you for your response. We will get back to you soon. Have a nice day."
+      }).catch((err) => {
+        text = "Sorry, we are facing some technical issues. Please try again later."
+        optionId = 0;
+        index = -1;
+        console.log(err);
+      });
+      message = createChatBotMessage(text, { delay: 500 })
+    }
     else message = createChatBotMessage(messages[index], { delay: 500 })
+
     setState((prevState) => ({
       ...prevState,
       messages: [...prevState.messages, message],
     }));
   };
+
+  const processMessage = () => {
+    const message = createChatBotMessage(`Hi I'm Ecell Bot and I'm here to help you. What do you want to know?`,
+      { widget: "options", delay: 500 });
+    setState((prevState) => ({
+      ...prevState,
+      messages: [...prevState.messages, message],
+    }));
+  };
+
+
   return (
     <div>
       {React.Children.map(children, (child) => {
         return React.cloneElement(child, {
           actions: {
-            processMessage
+            processMessage,
+            processContactMessage,
           },
         });
       })}
     </div>
   );
 };
-var data = {};
 
 const MessageParser = ({ children, actions }) => {
+
   const parseContact = (message) => {
-    actions.processMessage();
+    optionId = 1;
     if (typeof (message) == "object") index++;
-    else if (index < messages.length) {
-      data[messages[index - 1]] = message;
+    else if (index <= messages.length) {
+      console.log(index);
+      data[messages[index]] = message;
       index++;
     }
     else console.log(data);
+    actions.processContactMessage();
   };
 
   const parse = (message) => {
-    actions.processMessage();
+    switch (optionId) {
+      case 1:
+        parseContact(message);
+        break;
+      default:
+        actions.processMessage();
+        break;
+    }
   };
 
   return (
