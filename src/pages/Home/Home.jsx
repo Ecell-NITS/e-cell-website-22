@@ -52,7 +52,7 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
 var data = {};
 
 const MessageParser = ({ children, actions }) => {
-  const parse = (message) => {
+  const parseContact = (message) => {
     actions.processMessage();
     if (typeof (message) == "object") index++;
     else if (index < messages.length) {
@@ -62,13 +62,18 @@ const MessageParser = ({ children, actions }) => {
     else console.log(data);
   };
 
+  const parse = (message) => {
+    actions.processMessage();
+  };
+
   return (
     <div>
       {React.Children.map(children, (child) => {
         return React.cloneElement(child, {
           parse: parse,
           actions: {
-            parse
+            parse,
+            parseContact
           },
         });
       })}

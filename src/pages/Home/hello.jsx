@@ -4,7 +4,7 @@ import "./hello.css";
 
 const Hello = (props) => {
     const options = [
-        { text: "questions", handler: props.actions.parse, id: 1 },
+        { text: "questions", handler: props.actions.parseContact, id: 1 },
         { text: "Contact us", handler: () => { }, id: 2 },
     ];
 
