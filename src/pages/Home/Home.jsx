@@ -26,8 +26,7 @@ const config = {
 };
 
 var data = {};
-const messages = ["Name", "alumini name",];
-// "question", "Email", "Message"
+const messages = ["name", "email", "title", "description"];
 // const options = {
 //   1: "Questions",
 //   2: "Contact us",
@@ -41,7 +40,7 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
     if (index == messages.length) {
       console.log(data);
       var text;
-      await axios.post('https://ecell.nits.ac.in/api/contact', data).then((res) => {
+      await axios.post('https://ecell-backend-cb8y.onrender.com/api/message', data).then((res) => {
         console.log(res);
         text = "Thank you for your response. We will get back to you soon. Have a nice day."
       }).catch((err) => {
