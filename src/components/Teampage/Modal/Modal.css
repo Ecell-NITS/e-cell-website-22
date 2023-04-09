@@ -1,16 +1,25 @@
 .modal-dialog.modal-lg {
-    top: 8%;
+    top: 7%;
 }
+
 .profileCard {
     display: flex;
     border-radius: 10px;
     cursor: pointer;
     width: 100%;
-    background-color: rgb(235, 235, 236);
 }
 
 .profile2 {
     margin: 0.35rem;
+}
+.img2 {
+    width: 24vw;
+    height: 24vw;
+}
+.img2 img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 .content {
@@ -40,9 +49,9 @@
         font-size: 1.3rem;
     }
 
-    .img2 img {
-        height: 15rem;
-        width: 13rem;
+    .img2 {
+        width: 24vw;
+        height: 24vw;
     }
 
     .one {
@@ -59,7 +68,7 @@
         font-size: 1.1rem;
     }
 
-    .img2 img {
+    .img2 {
         height: 12rem;
         width: 9rem;
     }
@@ -67,23 +76,30 @@
 }
 
 @media only screen and (max-width: 481px) {
+    .modal-dialog.modal-lg {
+        top: 4%;
+    }
     .content {
         font-size: 0.9rem;
         padding: 0.5rem;
     }
-    .profileCard{
+
+    .profileCard {
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
+
     .desg_modal {
         margin-bottom: 0;
 
     }
-    .img2 img{
+
+    .img2 {
         height: 10rem;
         width: 7rem;
     }
+
     .one {
         font-size: 1.2rem;
     }
