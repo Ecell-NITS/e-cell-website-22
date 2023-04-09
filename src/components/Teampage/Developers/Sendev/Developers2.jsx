@@ -39,12 +39,12 @@ function Developers() {
                 <div className="sr_heading">
                     <h1>SENIOR DEVELOPERS</h1>
                 </div>
-                <div className="container">
+                <div className="container_sr">
                     {
                         Data.map(data => {
                             return (
                                 <div className="sr-dev" key={data.id}>
-                                    <div className="body">
+                                    <div className="body_sr">
                                         <div className="images-sr">
                                             <img src={""} data-src={data.image} alt="" 
                                               className={loaded ? "loaded" : "loading"}

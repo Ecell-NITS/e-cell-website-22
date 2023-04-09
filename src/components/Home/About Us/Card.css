@@ -1,20 +1,24 @@
 .about_card_ {
-  width: 60rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 25rem;
   min-height: 18rem;
   max-height: fit-content;
-  margin: auto;
   box-shadow: 4px 4px 12px rgba(79, 79, 79, 0.2), -4px -4px 12px rgba(242, 242, 242, 0.25);
   border-radius: 8px;
-  margin-left: 2vw;
+  text-align: center;
 }
 .image_style{
+    width: 80px;
     display: flex;
     justify-content: center;
     margin: 12px 0;
 }
 .motto_card_text{
     margin: 0 24px 24px 24px;
-    font-size:24px;
+    font-size:1rem;
 }
 
 
@@ -29,9 +33,11 @@
         font-size: 18px;
         padding-bottom: 10px;
     }
+    .about_card_{
+        width: 17.5rem;
+     }
 
 }
-
 
 
 
@@ -43,6 +49,9 @@
     .motto_card_text{
         font-size: 20px;
         padding-bottom: 10px;
+    }
+    .about_card_{
+        display: none;
     }
 
 }

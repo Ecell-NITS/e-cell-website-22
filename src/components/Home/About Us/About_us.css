@@ -1,7 +1,7 @@
 .aboutSection{
     display: flex;
     flex-direction: column;
-    margin-bottom: 5rem;
+    margin-bottom: 4rem;
     
    
 
@@ -14,7 +14,7 @@
     background-color: #224259;
     width: 80vw;
     height: 2px;
-  
+
     margin-left: auto;
     margin-right: auto;
     margin-top: 0px;
@@ -35,11 +35,15 @@
 }
 
 .contentAbout{
-    padding-top: 3rem;
+    /* padding-top: 3rem; */
     width: 80vw;
     margin: auto;
-    font-size: 1.3rem;
-    text-align: center;
+    font-size: 1.2rem;
+    text-align: center !important;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
 }
 
 
@@ -54,7 +58,10 @@
 
 .cards-set-1 {
 display: flex;
-flex-direction: row;
+flex-wrap: wrap;
+gap: 2rem;
+justify-content: center;
+align-items: center;
 flex-basis: 20%;
 flex-shrink: 1;
 padding: 2% 7.7%;
@@ -90,11 +97,22 @@ color: #224259;
 
 
 
+
+}
+@media only screen and (max-width:610px){
+    .motto{
+        display: none;
+    }
+
+    .contentAbout{
+        padding-top: 0;
+    }
 }
 @media only screen and (max-width:400x) {
 .contentAbout{
     font-size: 1.1rem;
 }
+
 
 
 
