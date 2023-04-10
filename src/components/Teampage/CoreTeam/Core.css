@@ -136,7 +136,7 @@ background-color: white;
      margin-top: 0.5rem;
    }
    .core-mem:hover .core_mem_text {
-      font-size: 1.4rem;
+      font-size: 1.2rem;
       line-height: 0.4rem;
       margin: 1.7rem;
       margin-top: 1rem;
@@ -165,7 +165,7 @@ background-color: white;
    }
    .core-images img {
      width: 100%;
-     height: 14rem;
+     height: 15rem;
    }
  
    .core-mem:hover .core-images img {
@@ -177,17 +177,19 @@ background-color: white;
       line-height: 2rem;
    }
    .core-mem:hover .core_mem_text {
-      font-size: 0.9rem;
+      width: 11rem;
+      font-size: 1rem;
       line-height: 0.11rem;
       margin-top: 1.1rem;
       margin-bottom: 1.4rem;
+      margin-left: 1rem;
       }
    .core-mem:hover .social-media-core {
       gap: 2.1rem;
     }
    
    .SocialLogoCore svg {
-      padding: 0.2rem;
+      padding: 0.1rem;
     }
  }
  @media only screen and (max-width: 750px) {
@@ -226,6 +228,7 @@ background-color: white;
       font-size: 1.5rem;
    }
    .core-mem:hover .core_mem_text {
+      width: 13rem;
       font-size: 1.2rem;
       line-height: 0.5rem;
       margin-bottom: 1.7rem;
@@ -236,7 +239,7 @@ background-color: white;
     }
    
    .SocialLogoCore svg {
-      padding: 0.2rem;
+      padding: 0.05rem;
     }
  }
  @media only screen and (max-width: 525px) {
@@ -261,7 +264,8 @@ background-color: white;
       font-size: 1.5rem;
    }
    .core-mem:hover .core_mem_text {
-      font-size: 0.9rem;
+      width: 11rem;
+      font-size: 1rem;
       line-height: 0.5rem;
       margin-bottom: 1.6rem;
       margin-top: 1rem;
@@ -271,7 +275,7 @@ background-color: white;
     }
    
    .SocialLogoCore svg {
-      padding: 0.3rem;
+      padding: 0.1rem;
     }
  }
  @media only screen and (max-width: 460px) {
@@ -303,16 +307,18 @@ background-color: white;
    
    }
    .core-mem:hover .core_mem_text {
+      width: 10rem;
       font-size: 0.8rem;
       line-height: -0.1rem;
       margin: 1rem;
+      margin-left: 0.1rem;
       }
    .core-mem:hover .social-media-core {
       gap: 0.7rem;
     }
    
    .SocialLogoCore svg {
-      padding: 0.5rem;
+      padding: 0.25rem;
     }
  }
  @media only screen and (max-width: 360px) {
@@ -353,9 +359,13 @@ background-color: white;
    
    }
    .core-mem:hover .core_mem_text {
-      font-size: 0.51rem;
-      line-height: -0.7rem;
+      width: 7rem;
+      text-align: right;
+      font-size: 0.6rem;
+      line-height: 0.7rem;
       margin: 0.5rem;
+      margin-left: 0rem;
+      margin-right: 1rem;
       
       }
    .core-mem:hover .social-media-core {
@@ -363,7 +373,7 @@ background-color: white;
     }
    
    .SocialLogoCore svg {
-      padding: 0.5rem;
+      padding: 0.4rem;
     }
  }
 /* .core-container{

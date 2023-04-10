@@ -93,12 +93,14 @@ color: #224259;
 .contentAbout{
     font-size: 1.2rem;
 }
-
-
-
-
-
 }
+
+@media (max-width:660px){
+    .motto h3{
+        font-size: 8vw;
+    }
+}
+
 @media only screen and (max-width:610px){
     .motto{
         display: none;

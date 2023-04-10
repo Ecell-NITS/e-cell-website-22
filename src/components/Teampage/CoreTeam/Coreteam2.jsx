@@ -1,24 +1,59 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import './Core.css'
 import { FaFacebook, FaLinkedin } from 'react-icons/fa'
 // import { BsGithub } from 'react-icons/bs'
 import Data from '../../../Data/Core2.json'
 
 function CoreTeam1() {
+    /*  implementing lazy load via ioa */
+    const config = {
+      rootMargin: "0px 0px 0px 0px",
+      threshold: 0.2,
+  };
+
+  const [loaded, setIsLoaded] = useState(false);
+  useEffect(() => {
+      let observer = new window.IntersectionObserver(function (entries, self) {
+          entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                  loadImages(entry.target);
+                  self.unobserve(entry.target);
+              }
+          });
+      }, config);
+      const imgs = document.querySelectorAll("[data-src]");
+      imgs.forEach((img) => {
+          observer.observe(img);
+      });
+      return () => {
+          imgs.forEach((img) => {
+              observer.unobserve(img);
+          });
+      };
+  }, []);
+
+  const loadImages = (image) => {
+      image.src = image.dataset.src;
+  };
+  
    return (
       <>
          <section className="core_team">
       <div className="core_heading">
          <h1>Core Team</h1>
       </div>
-   <div className="container">
+   <div className="core-container">
    {
       Data.map(data=>{
          return (
          <div className="core-mem" key={data.id}>
          <div className="body">
             <div className="core-images">
-               <img src={data.image} alt="" />
+               <img src={""}
+               data-src={data.image}
+               className={loaded ? "loaded" : "loading"}
+               onLoad={() => setIsLoaded(true)}
+               alt="" />
                </div>
             <h3 className='core-title'>{data.name}</h3>
          </div>
