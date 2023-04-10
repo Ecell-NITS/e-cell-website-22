@@ -121,7 +121,7 @@
     font-family: 'Barlow Condensed', sans-serif;
     font-style: normal;
     font-weight: 600;
-    font-size: 4rem;
+    font-size: 4.45vw;
     line-height: 84px;
     border-bottom: 2px solid white;
     padding-top: 30px;
@@ -182,7 +182,7 @@
     }
 
     .timeline-h1 {
-        font-size: 32px;
+        font-size: 8vw;
         padding-top: 0px;
         width: 80%;
         /* height: 6.5rem; */

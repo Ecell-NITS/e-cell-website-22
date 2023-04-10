@@ -18,7 +18,7 @@
   font-family: "Barlow Condensed";
   font-style: normal;
   font-weight: 600;
-  font-size: 64px;
+  font-size: 4.45vw;
   line-height: 84px;
   /* identical to box height */
 
@@ -162,8 +162,12 @@
   }
 }
 
-@media only screen and (max-width: 550px) {
-  .header {
-    font-size: 45px;
+@media (max-width:660px){
+  .header{
+    font-size: 8vw;
+  }
+
+  .horizontal-line{
+    margin-top: -2vw;
   }
 }
