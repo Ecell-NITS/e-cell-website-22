@@ -3,7 +3,7 @@
     display: flex;
     padding-top: 2em;
     justify-content: center;
-    font-size: 2.25rem;
+    font-size: 2.35vw;
     font-weight: 600;
     color:#9A9494;
     cursor: pointer;
@@ -30,7 +30,7 @@ div.tab_main > *{
     color: #9A9494;
     border: white;   
     font-weight: 600;
-    font-size: 2.25rem;
+    font-size: 2.35vw;
     margin-top: 0%;
     padding-top:0%;
     margin-bottom: 0%;
@@ -41,7 +41,7 @@ div.tab_main > *{
     background-color: white !important;
     color: #9A9494 !important;
     font-weight: 600 !important; 
-    font-size: 2.25rem !important;
+    font-size: 2.35vw !important;
 }
 .dropdown-menu > *:hover{
     color: #224259 !important;
@@ -50,7 +50,7 @@ div.tab_main > *{
 .active-link {
     color: #224259;
     text-decoration: none;
-    border-bottom: 4px solid #224259;
+    border-bottom: 3.5px solid #224259;
     /* padding-bottom: 1px; */
 }
 
@@ -62,43 +62,62 @@ div.tab_main > *{
 
 
 
-
+@media (max-width:1025px){
+    .tab_main{
+        font-size: 3.8vw;
+    }
+  
+    #dropdown-custom-1{
+        font-size: 3.8vw;
+    }
+    .dropdown-menu > *{
+        font-size: 3.8vw !important;
+    }
+  
+}
 
 
 
 
 @media screen and (max-width: 768px) {
     .tab_main{
-        font-size: 1.5rem;
+        font-size: 3.5vw;
     }
     div.tab_main > *{
-        margin-left: 1.00rem;
+        margin-left: 1.00vw;
     }
     #dropdown-custom-1{
-        font-size: 1.50rem;
+        font-size: 3.50vw;
     }
     .dropdown-menu > *{
-        font-size: 1.50rem !important;
+        font-size: 3.50vw !important;
     }
     .dropdown-menu{
         min-width: 30px !important;
+    }
+
+    .active-link {
+        color: #224259;
+        text-decoration: none;
+        border-bottom: 2.5px solid #224259;
+        /* padding-bottom: 1px; */
     }
 }
 
 @media screen and (max-width: 480px) {
     .tab_main{
-        font-size: 0.75rem;
+        font-size: 3.2vw;
     }
     div.tab_main > *{
-        margin-left: 0.25rem;
+        margin-left: 0.25vw;
     }
     #dropdown-custom-1{
-        font-size: 0.75rem;
+        font-size: 3.2vw;
         padding-left: 0%;
         padding-right: 0%;
     }
     .dropdown-menu > *{
-        font-size: 0.75rem !important;
+        font-size: 3.2vw !important;
     }
     .dropdown-menu{
         min-width: 20px !important;
