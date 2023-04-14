@@ -36,7 +36,7 @@ function GalleryCard(props) {
         {/* <div className="card_body">
                 <h5 className="card_title">{props.id}</h5>
              </div> */}
-        <img src={""} data-src={props.imgsrc} alt="img"
+        <img src={""} key={props.id} data-src={props.imgsrc} alt="img"
           className={`${loaded ? "loaded" : "loading"} card-img-top`}
           onLoad={() => setIsLoaded(true)}
         />
