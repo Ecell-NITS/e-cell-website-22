@@ -53,7 +53,7 @@ const Tab = () => {
   });
 
   return (
-    <>
+    <div>
       <div className="tabGallery">
         <div className="leftTab">
           <div className="sort">Sort By Year</div>
@@ -95,11 +95,11 @@ const Tab = () => {
               key={item.id}
               id={item.id}
               imgsrc={item.imgsrc}
-            ></GalleryCard>
+            />
           );
         })}
       </div>
-    </>
+    </div>
   );
 };
 
