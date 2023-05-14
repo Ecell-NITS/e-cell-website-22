@@ -5,7 +5,7 @@ import { BiUserCircle } from 'react-icons/bi'
 import { MdLocationOn } from 'react-icons/md'
 import { MdSend } from 'react-icons/md'
 import { BsFillTelephoneFill } from 'react-icons/bs'
-import footlogo from '../../../assets/E-Cell-Logo-White.png'
+// import footlogo from '../../../assets/E-Cell-Logo-White.png'
 import { Link } from 'react-router-dom';
 const Footer = () => {
   return (
