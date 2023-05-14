@@ -1,8 +1,10 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from 'react'
 import { ImCross } from "react-icons/im";
 import { GiHamburgerMenu } from "react-icons/gi"
 import { Link, NavLink } from 'react-router-dom';
 import './NavbarTeam.css';
+import {useNavigate} from "react-router-dom"
 
 const NavbarTeam = () => {
   const [toggle, setToggle] = useState(false);
@@ -20,6 +22,12 @@ const NavbarTeam = () => {
   };
   window.addEventListener("scroll", changeToggle);
 
+  const navigate = useNavigate();
+
+  const movetoaboutsection = () => {
+    navigate("/");
+    document.getElementById("aboutecellnits").scrollIntoView(true);
+  }
 
   return (
     <nav className={ toggle ? 'navbar0 expanded' : 'navbar0'} style={{userSelect:'none'}} >
@@ -31,7 +39,9 @@ const NavbarTeam = () => {
       </div>
       <ul className='links-nav'>
         <li> <NavLink to="/">HOME</NavLink></li>
-        <li> <NavLink to="/#aboutecellnits">ABOUT US</NavLink></li>
+        
+        <li><a role='button' tabindex="0" onClick={movetoaboutsection}>ABOUT US</a></li>
+      {/* <li>  <NavHashLink to="/#aboutecell">ABOUT US</NavHashLink></li> */}
         {/* <li><a href="/#aboutecellnits">ABOUT</a></li> */}
         <li> <NavLink to="/events">EVENTS</NavLink></li>
         <li><NavLink to="/resources">RESOURCES</NavLink></li>
