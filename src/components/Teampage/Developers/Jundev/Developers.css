@@ -1,13 +1,20 @@
 
 .container_jrdev{
-   margin-top: 1rem;
+   /* margin-top: 1rem;
    margin-bottom: 2rem;
    display: flex;
    flex-wrap: wrap;
    flex-direction: row;
    gap: 2rem;
    justify-content: center;
-   border-radius: 8px;
+   border-radius: 8px; */
+
+   margin: 5% 7%;
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: row;
+   gap: 2rem;
+   justify-content: center;
 }
 
 .jr-dev{
@@ -114,11 +121,30 @@ visibility: visible;
    margin: 2rem;
 }
 
-@media only screen and (max-width:660px) {
+@media (max-width:1200px){
    .container_jrdev{
+      overflow: hidden;
+      gap: 0.3rem;
+    }
+}
+
+@media (max-width:975px){
+  .container_jrdev{
+   gap: .5rem;
+  }
+}
+
+@media (max-width:750px){
+   .container_jrdev{
+      margin: 5% 3%;
+   }
+}
+
+@media only screen and (max-width:660px) {
+   /* .container_jrdev{
       row-gap: 1.9rem;
       column-gap: 0.5rem;
-   }
+   } */
    .jr_heading h1{
       font-size: 9.5vw;
    }
@@ -168,10 +194,10 @@ visibility: visible;
 }
 
 @media only screen and (max-width:460px){
-   .container_jrdev {
+   /* .container_jrdev {
       row-gap: 2rem;
       column-gap: 0.5rem;
-   }
+   } */
    .jr_heading h1{
       font-size: 9.5vw;
    }
@@ -216,8 +242,12 @@ visibility: visible;
 }
 @media only screen and (max-width:362px) { 
    .container_jrdev {
-      row-gap: 2rem;
-      column-gap: 0.9rem;
+      margin: 3% 5%;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      gap: 1.7rem;
+      justify-content: center;
    }
    .jr_heading h1 {
       font-size: 9.5vw;
@@ -265,7 +295,7 @@ visibility: visible;
 
    .container_jrdev{
       overflow: hidden;
-      column-gap: 0.8rem;
+      column-gap: 0.5rem;
    }
 
    .jr_heading h1{
