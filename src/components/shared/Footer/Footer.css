@@ -197,6 +197,7 @@ letter-spacing: 0em;
   border-radius: 5px;
   outline: none;
   border: 2px solid #1da1f2;
+  margin-right: 8.5vw !important;
 }
 
 .btnregistrnews:hover{
@@ -232,6 +233,10 @@ letter-spacing: 0em;
   color: red !important;
   font-weight: 900;
 margin-bottom: 1vw;
+}
+
+.secondlastname{
+  margin: 0.25vw 0;
 }
 
 @media only screen and (max-width:1280px) and (min-width:661px){
@@ -343,4 +348,20 @@ margin-bottom: 1vw;
       margin-left: .6vw;
       padding-bottom: 4vw;
     }
+
+    .errormsgs{
+      margin-bottom:5vw;
+    }
+
+    .btnregistrnews{
+      padding: 1vw 2vw;
+      margin: 10vw 0 0 0;
+      font-size: 3vw;
+      margin-right: 23.5vw !important;
+    }
+
+    .secondlastname{
+      margin: 5vw 0;
+    }
+    
 }

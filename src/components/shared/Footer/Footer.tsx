@@ -148,7 +148,7 @@ const Footer = () => {
           <h2 className="h2" id="h">
             Subscribe
           </h2>
-          <p className="p1" style={{ marginTop: "2rem", marginBottom:'2rem' }}>
+          <p className="p1" style={{ marginTop: "2rem", marginBottom: "2rem" }}>
             Keep yourself updated. Subscribe to our newsletter
           </p>
 
@@ -164,7 +164,6 @@ const Footer = () => {
                     htmlFor="firstName"
                     text="First Name"
                     required={true}
-                  
                   />{" "}
                 </div>
                 <Field
@@ -178,24 +177,28 @@ const Footer = () => {
                   name="firstName"
                 />
 
-                <div className="indiformhlderformik">
-                  <Label htmlFor="lastName" text="Last Name" />{" "}
+                <div className="secondlastname">
+                  <div className="indiformhlderformik">
+                    <Label htmlFor="lastName" text="Last Name" />{" "}
+                  </div>
+                  <Field
+                    name="lastName"
+                    id="lastName"
+                    className="nameformik"
+                  ></Field>
                 </div>
-                <Field
-                  name="lastName"
-                  id="lastName"
-                  className="nameformik"
-                ></Field>
 
-                <div className="indiformhlderformik">
-                  <Label htmlFor="email" text="Email" required={true} />{" "}
+                <div className="secondlastname">
+                  <div className="indiformhlderformik">
+                    <Label htmlFor="email" text="Email" required={true} />{" "}
+                  </div>
+                  <Field name="email" id="email" className="nameformik"></Field>
+                  <ErrorMessage
+                    className="errormsgs"
+                    component="div"
+                    name="email"
+                  />
                 </div>
-                <Field name="email" id="email" className="nameformik"></Field>
-                <ErrorMessage
-                  className="errormsgs"
-                  component="div"
-                  name="email"
-                />
 
                 <button
                   type="submit"

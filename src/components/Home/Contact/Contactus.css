@@ -127,7 +127,7 @@
         border: 2px solid grey;
         border-radius: 8px;
         font-size: 3vw;
-        font-family: 'Courier New', Courier, monospace;
+        /* font-family: 'Courier New', Courier, monospace; */
         font-weight: 900;
         transition: all .15s ease-in-out ;
     }
