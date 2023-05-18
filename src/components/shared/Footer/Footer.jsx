@@ -50,6 +50,14 @@ const Footer = () => {
             <input type="email" placeholder="Your email" />
             <MdSend className='send' />
           </div>
+          <div className='fill'>
+            <input type="email" placeholder="Your email" />
+            <MdSend className='send' />
+          </div>
+          <div className='fill'>
+            <input type="email" placeholder="Your email" />
+            <MdSend className='send' />
+          </div>
 
         </div>
         <div className="container5">
