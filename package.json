@@ -8,7 +8,9 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.4.0",
     "bootstrap": "^5.2.3",
+    "formik": "^2.2.9",
     "lottie-react": "^2.4.0",
+    "netlify-lambda": "^2.0.16",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.0",
     "react-dom": "^18.2.0",
@@ -20,9 +22,12 @@
     "react-typed": "^1.2.0",
     "react-use": "^17.4.0",
     "reactstrap": "^9.1.5",
-    "web-vitals": "^2.1.4"
+    "typescript": "^5.0.4",
+    "web-vitals": "^2.1.4",
+    "yup": "^1.1.1"
   },
   "scripts": {
+    "start:api": "netlify-lambda serve .netlify/functions",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -45,5 +50,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.3"
   }
 }

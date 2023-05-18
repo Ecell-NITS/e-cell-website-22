@@ -26,9 +26,11 @@ const Contactus = () => {
   const [submitting, setSubmitting] = useState<boolean>(false);
   const [message, setMessage] = useState<ServiceMessage>();
   const [recaptchaToken, setRecaptchaToken] = useState<string>();
-  const formId = "aVA9w9fy";
+  const formId = process.env.REACT_APP_FORMSPARKFORMID;
+  
   const formSparkUrl = `https://submit-form.com/${formId}`;
-  const recaptchakey = "6LetQxwmAAAAALnlzARQmafPqZGe1E9iljemI9CB";
+  const recaptchakey = process.env.REACT_APP_RECAPTCHAKEY;
+ 
   const recaptchaRef = useRef<any>();
 
   const updateRecaptchaToken = (token: string | null) => {
@@ -53,7 +55,7 @@ const Contactus = () => {
       console.log(result);
       setMessage({
         class: "msgclass",
-        text: "Thanks, Someone will be in touch with you very soon!",
+        text: "Thanks, We will be in touch with you very soon!",
       });
       setFormState(initialFormState);
       recaptchaRef.current.reset();
@@ -83,7 +85,7 @@ const Contactus = () => {
           Contact Us <FaTelegramPlane />
         </h1>
       </div>
-
+      <h2 className="contactpromo">Have any query? Feel free to contact us.</h2>
       <div className="formcontact">
         {message && (
           <div className={`msgtext ${message.class}`}>{message.text}</div>

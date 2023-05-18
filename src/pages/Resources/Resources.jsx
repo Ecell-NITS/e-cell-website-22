@@ -1,5 +1,5 @@
 import React, {useEffect} from "react";
-import Footer from "../../components/shared/Footer/Footer";
+import Footer from "../../components/shared/Footer/Footer.tsx";
 import NavbarTeam from "../../components/shared/Navbar/NavbarTeam";
 import "./Resources.css";
 import BooksSummary from "../../components/ResourceModal/BooksSummary";

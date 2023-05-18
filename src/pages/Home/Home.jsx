@@ -6,7 +6,7 @@ import Aboutus from '../../components/Home/About Us/About_us'
 import Events from '../../components/Home/Events/Events'
 import Pillars from '../../components/Home/Pillars_of_Ecell/Pillars'
 import Timeline from '../../components/Home/Timeline/Timeline'
-import Footer from '../../components/shared/Footer/Footer'
+import Footer from '../../components/shared/Footer/Footer.tsx'
 import Footerconstant from '../../components/shared/FooterConstant/Footerconstant'
 import Contactus from '../../components/Home/Contact/Contactus.tsx'
 const Home = () => {
