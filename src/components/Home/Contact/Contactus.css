@@ -70,7 +70,7 @@
     border: 2px solid grey;
     border-radius: 4px;
     font-size: 1.25vw;
-    font-family: 'Courier New', Courier, monospace;
+    /* font-family: 'Courier New', Courier, monospace; */
     font-weight: 900;
     letter-spacing: .5px;
     transition: all .1s ease-in-out ;
