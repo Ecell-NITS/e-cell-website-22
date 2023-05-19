@@ -1,0 +1,138 @@
+.formcontact{
+    text-align: center;
+    width: 30%;
+    margin: 2vw auto;
+}
+
+.formcontact form button{
+    background-color: #224259;
+    transition: all .15s ease-out;
+    color: white;
+    cursor: pointer;
+    padding: .25vw 2vw;
+    margin: 1.5vw 0;
+    font-size: 1.8vw;
+    border-radius: 5px;
+    outline: none;
+    border: 2px solid #1da1f2;
+}
+
+.formcontact form button:hover{
+    background-color: #1da1f2;
+    border: 2px solid #224259;
+}
+
+.formcontact form button:active{
+    box-shadow: 0 0 0 5px #224259;
+    transition: 0.3s;
+}
+
+.forminclass{
+    display: flex;
+    flex-direction: column;
+}
+
+.childform{
+    margin: 1vw 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.msgclass{
+    background-color: rgba(0, 128, 0);
+    border-radius: 5px;
+    padding: .25vw 0;
+    user-select: none;
+}
+
+.msgclasserror{
+    background-color: rgba(255, 0, 0);
+    padding: .25vw 0;
+    border-radius: 5px;
+    user-select: none;
+}
+
+.msgtext{
+    color: white;
+    width: 100%;
+    margin: 1vw 0;
+}
+
+.labeltitle{
+    font-weight: 900;
+    font-size: 1.5vw;
+    text-align: left;
+    margin: .25vw 0;
+}
+
+.textwriting{
+    padding: .5vw;
+    border: 2px solid grey;
+    border-radius: 4px;
+    font-size: 1.25vw;
+    /* font-family: 'Courier New', Courier, monospace; */
+    font-weight: 900;
+    letter-spacing: .5px;
+    transition: all .1s ease-in-out ;
+}
+
+.textwriting:focus{
+    outline: none;
+    border: 2px solid green;
+}
+
+.captchagugl{
+    text-align: center;
+    margin: 1.5vw auto;
+}
+
+.contactpromo{
+    text-align: center;
+    font-size: 2vw;
+    /* color: #224259; */
+    color: grey;
+    font-style: italic;
+    margin-top: -15px;
+}
+
+@media (max-width:660px){
+    .formcontact{
+        text-align: center;
+        width: 80%;
+        margin: 2vw auto;
+    }
+
+    .labeltitle{
+        font-size: 4vw;
+        margin: 2vw 0;
+    }
+
+    .captchagugl{
+        margin: 5vw auto;
+    }
+
+    .childform{
+        margin: 3vw 0;
+    }
+
+    .formcontact form button{
+        padding: 1vw 4vw;
+        margin: 3vw 0 6vw 0;
+        font-size: 4vw;
+        border-radius: 10px;
+    }
+
+    .textwriting{
+        padding: 1.5vw;
+        border: 2px solid grey;
+        border-radius: 8px;
+        font-size: 3vw;
+        /* font-family: 'Courier New', Courier, monospace; */
+        font-weight: 900;
+        transition: all .15s ease-in-out ;
+    }
+
+    .contactpromo{
+        font-size: 5.5vw;
+    }
+}

@@ -156,8 +156,110 @@ letter-spacing: 0em;
 }
 
 
+.mnjkl{
+  display: flex !important;
+  justify-content: center;
+  margin-top: 1vw;
+  font-size: 1.2vw;
+  color: grey;
+  user-select: none;
+}
+
+.ipdtls{
+  margin-left: .3vw;
+  padding-bottom: 2vw;
+}
+
+.nameformik{
+  margin: 1vw 0;
+  padding: 1vw;
+  border: 1.5px solid grey;
+  border-radius: 7px;
+  font-weight: 900;
+}
+
+.nameformik:active{
+  box-shadow: 0 0 0 5px #224259 !important;
+  transition: 0.3s !important;
+}
+
+.btnregistrnews{
+  width: 50%;
+  margin-left: auto !important ;
+  margin-right: auto !important;
+  background-color: #224259;
+  transition: all .15s ease-out;
+  color: white;
+  cursor: pointer;
+  padding: .25vw 1vw;
+  margin: 1.5vw 0;
+  font-size: 1.3vw;
+  border-radius: 5px;
+  outline: none;
+  border: 2px solid #1da1f2;
+  margin-right: 8.5vw !important;
+}
+
+.btnregistrnews:hover{
+  background-color: #1da1f2;
+  border: 2px solid #224259;
+}
+
+.btnregistrnews:disabled{
+  background-color: #2242597d;
+}
+
+.btnregistrnews:active{
+  box-shadow: 0 0 0 5px #224259;
+  transition: 0.3s;
+}
+
+.formiksubscribeform{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* .indiformhlderformik{
+  display: flex;
+  flex-direction: column;
+} */
+
+.labelformikfrms{
+  font-weight: 900;
+}
+
+.errormsgs{
+  color: red !important;
+  font-weight: 900;
+margin-bottom: 1vw;
+}
+
+.secondlastname{
+  margin: 0.25vw 0;
+}
 
 
+.newsletterform00{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.btnnewsformletter{
+  border: none;
+  outline: none;
+ background: none !important;
+}
+
+.inputtakingnewsletter{
+  font-weight: 500 !important;
+  font-family: 'Nunito', sans-serif;
+}
+
+.inputtakingnewsletter:focus{
+  border: none !important;
+}
 @media only screen and (max-width:1280px) and (min-width:661px){
  .container4{
   display: flex;
@@ -188,6 +290,8 @@ letter-spacing: 0em;
   padding-bottom: 1rem;
   }
 }
+
+
 
 @media only screen and (max-width:660px) {
   .img-foot-centr{
@@ -255,4 +359,30 @@ letter-spacing: 0em;
     .fill{
       width: 100%;
     }
+
+    .mnjkl{
+      margin-top: .5vw;
+      font-size:4vw;
+    }
+    
+    .ipdtls{
+      margin-left: .6vw;
+      padding-bottom: 4vw;
+    }
+
+    .errormsgs{
+      margin-bottom:5vw;
+    }
+
+    .btnregistrnews{
+      padding: 1vw 2vw;
+      margin: 10vw 0 0 0;
+      font-size: 3vw;
+      margin-right: 23.5vw !important;
+    }
+
+    .secondlastname{
+      margin: 5vw 0;
+    }
+    
 }
