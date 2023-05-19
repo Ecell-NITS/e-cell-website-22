@@ -8,9 +8,9 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.4.0",
     "bootstrap": "^5.2.3",
-    "formik": "^2.2.9",
+    "firebase": "^9.22.0",
+    "firebase-tools": "^12.0.1",
     "lottie-react": "^2.4.0",
-    "netlify-lambda": "^2.0.16",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.0",
     "react-dom": "^18.2.0",
@@ -23,8 +23,7 @@
     "react-use": "^17.4.0",
     "reactstrap": "^9.1.5",
     "typescript": "^5.0.4",
-    "web-vitals": "^2.1.4",
-    "yup": "^1.1.1"
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start:api": "netlify-lambda serve .netlify/functions",
@@ -52,6 +51,7 @@
     ]
   },
   "devDependencies": {
+    "@types/react-google-recaptcha": "^2.1.5",
     "dotenv": "^16.0.3"
   }
 }

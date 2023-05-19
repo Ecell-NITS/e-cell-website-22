@@ -1,63 +1,85 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Footer.css";
-import { Formik, Form, Field, ErrorMessage, FormikHelpers } from "formik";
-import * as Yup from "yup";
-import Label from "./Label";
+// import { Formik, Form, Field, ErrorMessage, FormikHelpers } from "formik";
+// import * as Yup from "yup";
+// import Label from "./Label";
 import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { BiUserCircle } from "react-icons/bi";
 import { MdLocationOn } from "react-icons/md";
-// import { MdSend } from "react-icons/md";
+import { MdSend } from "react-icons/md";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { FiMail } from "react-icons/fi";
-// import footlogo from '../../../assets/E-Cell-Logo-White.png'
 import { Link } from "react-router-dom";
 import Ip from "../User/Ip";
-import axios from "axios";
+import db from "./Firebase";
+import firebase from "firebase/compat/app";
+import "firebase/firestore";
 
 const Footer = () => {
-  interface FormValues {
-    firstName: string;
-    lastName: string;
-    email: string;
-  }
+  const [input, setInput] = useState("");
+  const inputHandler = (e: {
+    target: { value: React.SetStateAction<string> };
+  }) => {
+    setInput(e.target.value);
+  };
+  const submitHandler = (e: { preventDefault: () => void }) => {
+    e.preventDefault();
+    if (input) {
+      console.log(input);
 
-  const submitForm = async (
-    values: FormValues,
-    formik: FormikHelpers<FormValues>
-  ) => {
-    console.log(values);
-    const { firstName, lastName, email } = values;
-    try {
-      const payload = {
-        merge_fields: {
-          FNAME: firstName,
-          LNAME: lastName,
-        },
-        email_address: email,
-      };
-
-      await axios.post("/.netlify/functions/add-email-subscriber", payload);
+      db.collection("emails").add({
+        email: input,
+        time: firebase.firestore.FieldValue.serverTimestamp(),
+      });
+      setInput("");
       alert(
-        "Congratulations! You have successfully subscribed to our newsletter."
+        "Congratulations! You have successfully subscribed to our Newsletter! 🎉"
       );
-      formik.resetForm();
-    } catch (error) {
-      alert(error.message);
     }
   };
+  // interface FormValues {
+  //   firstName: string;
+  //   lastName: string;
+  //   email: string;
+  // }
 
-  const signUpSchema = Yup.object().shape({
-    firstName: Yup.string()
-      .min(3, "Too Short bruhh!")
-      .max(20, "Too long bruhh!")
-      .required("Required!"),
+  // const submitForm = async (
+  //   values: FormValues,
+  //   formik: FormikHelpers<FormValues>
+  // ) => {
+  //   console.log(values);
+  //   const { firstName, lastName, email } = values;
+  //   try {
+  //     const payload = {
+  //       merge_fields: {
+  //         FNAME: firstName,
+  //         LNAME: lastName,
+  //       },
+  //       email_address: email,
+  //     };
 
-    lastName: Yup.string()
-      .min(3, "Too Short bruhh!")
-      .max(20, "Too long bruhh!"),
+  //     await axios.post("/.netlify/functions/add-email-subscriber", payload);
+  //     alert(
+  //       "Congratulations! You have successfully subscribed to our newsletter."
+  //     );
+  //     formik.resetForm();
+  //   } catch (error) {
+  //     alert(error.message);
+  //   }
+  // };
 
-    email: Yup.string().email("Invalid email!").required("Required!"),
-  });
+  // const signUpSchema = Yup.object().shape({
+  //   firstName: Yup.string()
+  //     .min(3, "Too Short bruhh!")
+  //     .max(20, "Too long bruhh!")
+  //     .required("Required!"),
+
+  //   lastName: Yup.string()
+  //     .min(3, "Too Short bruhh!")
+  //     .max(20, "Too long bruhh!"),
+
+  //   email: Yup.string().email("Invalid email!").required("Required!"),
+  // });
 
   return (
     <div className="footer-section">
@@ -152,73 +174,37 @@ const Footer = () => {
             Keep yourself updated. Subscribe to our newsletter
           </p>
 
-          <Formik
-            initialValues={{ firstName: "", lastName: "", email: "" }}
-            onSubmit={submitForm}
-            validationSchema={signUpSchema}
-          >
-            {(formik) => (
-              <Form className="formiksubscribeform">
-                <div className="indiformhlderformik">
-                  <Label
-                    htmlFor="firstName"
-                    text="First Name"
-                    required={true}
-                  />{" "}
-                </div>
-                <Field
-                  id="firstName"
-                  name="firstName"
-                  className="nameformik"
-                ></Field>
-                <ErrorMessage
-                  className="errormsgs"
-                  component="div"
-                  name="firstName"
-                />
+          <form onSubmit={submitHandler} className="newsletterform00">
+            <div className="fill">
+              <input
+                type="email"
+                required
+                onChange={inputHandler}
+                placeholder="Your Email"
+                value={input}
+                className="inputtakingnewsletter"
+              />
+              <button type="submit" className="btnnewsformletter">
+                {" "}
+                <MdSend className="send" />
+              </button>{" "}
+            </div>
+          </form>
 
-                <div className="secondlastname">
-                  <div className="indiformhlderformik">
-                    <Label htmlFor="lastName" text="Last Name" />{" "}
-                  </div>
-                  <Field
-                    name="lastName"
-                    id="lastName"
-                    className="nameformik"
-                  ></Field>
-                </div>
-
-                <div className="secondlastname">
-                  <div className="indiformhlderformik">
-                    <Label htmlFor="email" text="Email" required={true} />{" "}
-                  </div>
-                  <Field name="email" id="email" className="nameformik"></Field>
-                  <ErrorMessage
-                    className="errormsgs"
-                    component="div"
-                    name="email"
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  className="btnregistrnews"
-                  disabled={!formik.isValid || !formik.dirty}
-                >
-                  Subscribe
-                </button>
-              </Form>
-            )}
-          </Formik>
+          {/* <form onSubmit={submitHandler} className="newsletterform00">
+            <label htmlFor="email">Email<span style={{color:'red'}}>*</span></label>
+            <input type="email" required onChange={inputHandler} placeholder="john@doe.com" value={input} />
+            <button type="submit">Subscribe</button>
+          </form> */}
         </div>
         <div className="container5">
           <p className="p2">All Rights Reserved @E-Cell, NIT Silchar </p>
-          <p className="p2 mnjkl">
+          <div className="p2 mnjkl">
             Current user :{" "}
             <div className="ipdtls">
               <Ip />
             </div>{" "}
-          </p>
+          </div>
         </div>
       </div>
     </div>
