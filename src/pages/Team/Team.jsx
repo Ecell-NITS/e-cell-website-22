@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import NavbarTeam from '../../components/shared/Navbar/NavbarTeam'
 import './Team.css';
 import Tab from '../../components/Teampage/Tab/Tab'
-import Footer from '../../components/shared/Footer/Footer';
+import Footer from '../../components/shared/Footer/Footer.tsx';
 
 const Team = () => {
   useEffect(() => {

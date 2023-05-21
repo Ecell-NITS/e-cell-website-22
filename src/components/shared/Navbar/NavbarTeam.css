@@ -155,3 +155,13 @@
 ul.links-nav {
   padding-left: 0;
 }
+
+@media (max-height:350px){
+  .links-nav{
+    margin-top: -5vh !important;
+  }
+
+  .navbar0 .links-nav li{
+    font-size: 6vh !important;
+  }
+}

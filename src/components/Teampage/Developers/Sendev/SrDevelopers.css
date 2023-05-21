@@ -1,12 +1,19 @@
 .container_sr {
-   margin-top: 1rem;
+   /* margin-top: 1rem;
    margin-bottom: 2rem;
    display: flex;
    flex-wrap: wrap;
    flex-direction: row;
    gap: 2rem;
    justify-content: center;
-   border-radius: 8px;
+   border-radius: 8px; */
+
+   margin: 5% 7%;
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: row;
+   gap: 2rem;
+   justify-content: center;
 }
 
 .sr-dev {
@@ -50,6 +57,7 @@
    display: flex;
    justify-content: center;
    align-items: center;
+   transition: all 350ms ease;
    visibility: hidden;
 }
 
@@ -86,6 +94,7 @@
 .social-media {
    visibility: hidden;
    display: flex;
+   transition: all 350ms ease;
    justify-content: center;
    align-items: center;
 }
@@ -114,11 +123,30 @@
    margin: 2rem;
 }
 
+@media (max-width:1200px){
+   .container_sr{
+      overflow: hidden;
+      gap: 0.3rem;
+    }
+}
+
+@media (max-width:975px){
+  .container_sr{
+   gap: .5rem;
+  }
+}
+
+@media (max-width:750px){
+   .container_sr{
+      margin: 5% 3%;
+   }
+}
+
 @media only screen and (max-width:660px) {
-   .container_sr {
+   /* .container_sr {
       row-gap: 1.9rem;
       column-gap: 0.5rem;
-   }
+   } */
 
    .sr_heading h1 {
       font-size: 9.5vw;
@@ -172,10 +200,10 @@
 }
 
 @media only screen and (max-width:460px) {
-   .container_sr {
+   /* .container_sr {
       row-gap: 2rem;
       column-gap: 0.5rem;
-   }
+   } */
 
    .sr_heading h1 {
       font-size: 9.5vw;
@@ -226,8 +254,12 @@
 
 @media only screen and (max-width:362px) {
    .container_sr {
-      row-gap: 2rem;
-      column-gap: 0.9rem;
+      margin: 3% 5%;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      gap: 1.7rem;
+      justify-content: center;
    }
 
    .sr_heading h1 {
@@ -283,7 +315,7 @@
 
    .container_sr {
       overflow: hidden;
-      column-gap: 0.8rem;
+      column-gap: 0.5rem;
    }
 
    .sr_heading h1 {
@@ -336,7 +368,7 @@
 @media only screen and (max-width:975px) and (min-width:661px) {
    .container_sr {
       row-gap: 2rem;
-      column-gap: 0.8rem;
+      column-gap: 0.7rem;
    }
 
    .sr_heading h1 {

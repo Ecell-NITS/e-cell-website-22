@@ -36,9 +36,13 @@ function Developers() {
    return (
       <>
          <section className="junior-developers">
-            <div className="jr_heading">
-               <h1>JUNIOR DEVELOPERS</h1>
+
+         <div className="core_heading">
+               <h1>Junior Developers</h1>
             </div>
+            {/* <div className="jr_heading">
+               <h1>JUNIOR DEVELOPERS</h1>
+            </div> */}
             <div className="container_jrdev">
                {
                   Data.map(data => {

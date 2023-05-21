@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import { ImCross } from "react-icons/im";
 import { GiHamburgerMenu } from "react-icons/gi"
 import { Link, NavLink } from 'react-router-dom';
@@ -20,6 +21,9 @@ const Navbar = () => {
   };
   window.addEventListener("scroll", changeToggle);
 
+  const movetosection = () => {
+    document.getElementById("aboutecellnits").scrollIntoView();
+  }
 
   return (
     <nav className={toggle ? 'navbar1 expanded' : 'navbar1'} style={{ userSelect: 'none' }}>
@@ -32,7 +36,7 @@ const Navbar = () => {
       </div>
       <ul className='links-nav'>
       <li> <NavLink to="/">HOME</NavLink></li>
-        <li><a href="#aboutecellnits">ABOUT US</a></li>
+        <li><a onClick={movetosection}>ABOUT US</a></li>
         <li> <NavLink to="/events">EVENTS</NavLink></li>
         <li><NavLink to="/resources">RESOURCES</NavLink></li>
         <li><a href="https://srijan-nits.in/" rel="noreferrer" target="_blank">SRIJAN</a></li>

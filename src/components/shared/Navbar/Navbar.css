@@ -156,3 +156,13 @@
     margin-bottom: 0.2rem;
   }
 }
+
+@media (max-height:350px){
+  .links-nav{
+    margin-top: -5vh !important;
+  }
+
+  .navbar1 .links-nav li{
+    font-size: 6vh !important;
+  }
+}

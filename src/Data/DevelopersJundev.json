@@ -1,43 +1,60 @@
 [
    {
-       "id": 1,
-       "name": "Aditya Ranjan",
-       "rank": "Junior developer",
-       "image": "https://res.cloudinary.com/duejpnj1y/image/upload/v1679409535/Juniordev/Aditya_Ranjan_y0ysjt.webp",
-       "fb": "https://www.facebook.com/profile.php?id=100076402945936",
-       "linkedln": "https://www.linkedin.com/in/aditya-ranjan-77a6a522b/",
-       "git": "https://github.com/hereisadi"
+      "id": 1,
+      "name": "Nikita Sinha",
+      "rank": "Junior developer",
+      "image": "https://res.cloudinary.com/duejpnj1y/image/upload/v1679412594/Juniordev/Nikita_ksh2fh.webp",
+      "fb": "https://www.facebook.com/profile.php?id=100076463865684",
+      "linkedln": "https://www.linkedin.com/in/nikita-sinha-071a69237/",
+      "git": "https://github.com/nikita-sinha22"
    },
    {
       "id": 2,
-       "name": "Aditya Kumar",
-       "rank": "Junior developer",
-       "image": "https://res.cloudinary.com/duejpnj1y/image/upload/v1679414227/Juniordev/Aditya_Kumar_zwecbl.webp",
-       "fb": "https://www.facebook.com/profile.php?id=100071791456601&mibextid=ZbWKwL",
-       "linkedln": "https://www.linkedin.com/in/adityakr31",
-       "git": "https://github.com/31adityakumar"
+      "name": "Pragya Annesha Baruah",
+      "rank": "UI/UX",
+      "image": "https://res.cloudinary.com/duejpnj1y/image/upload/v1679409544/Juniordev/Pragya_ho7rbf.webp",
+      "fb": "https://www.facebook.com/profile.php?id=100075204826742",
+      "linkedln": "https://www.linkedin.com/in/pragya-annesha-baruah-34a043229",
+      "git": "https://github.com/Prag03"
    },
    {
       "id": 3,
+      "name": "Anamika Das",
+      "rank": "Junior developer",
+      "image": "https://res.cloudinary.com/duejpnj1y/image/upload/v1679413458/Juniordev/Anamika_Das_xenkz2.webp",
+      "fb": "https://www.facebook.com/profile.php?id=100075782332137",
+      "linkedln": "http://www.linkedin.com/in/anamika-das092",
+      "git": "https://github.com/anamika-ds"
+   },
+   {
+      "id": 4,
+      "name": "Aditya Ranjan",
+      "rank": "Junior developer",
+      "image": "https://res.cloudinary.com/dp92qug2f/image/upload/v1681359339/perosnal/edited_aditya_ranjan_lyx5ns.webp",
+      "fb": "https://www.facebook.com/profile.php?id=100076402945936",
+      "linkedln": "https://www.linkedin.com/in/aditya-ranjan-77a6a522b/",
+      "git": "https://github.com/hereisadi"
+   },
+   {
+      "id": 5,
+      "name": "Aditya Kumar",
+      "rank": "Junior developer",
+      "image": "https://res.cloudinary.com/dnvhl9pru/image/upload/v1681064509/proflie-picpng_2-removebg-preview_qeckz9.webp",
+      "fb": "https://www.facebook.com/profile.php?id=100071791456601&mibextid=ZbWKwL",
+      "linkedln": "https://www.linkedin.com/in/adityakr31",
+      "git": "https://github.com/31adityakumar"
+   },
+   {
+      "id": 6,
       "name": "Maharnav Deka",
       "rank": "Junior developer",
       "image": "https://res.cloudinary.com/duejpnj1y/image/upload/v1679413749/Juniordev/Maharnav_Deka_x5edso.webp",
       "fb": "https://www.facebook.com/profile.php?id=100076295825121",
       "linkedln": "https://www.linkedin.com/in/maharnav-deka-06742815a/",
       "git": "https://github.com/mdekaa"
-
    },
    {
-      "id": 4,
-       "name": "Nikita Sinha",
-       "rank": "Junior developer",
-       "image": "https://res.cloudinary.com/duejpnj1y/image/upload/v1679412594/Juniordev/Nikita_ksh2fh.webp",
-       "fb": "https://www.facebook.com/profile.php?id=100076463865684",
-       "linkedln": "https://www.linkedin.com/in/nikita-sinha-071a69237/",
-       "git": "https://github.com/nikita-sinha22"   
-  },
-   {
-      "id": 5,
+      "id": 7,
       "name": "Bipangshu Saha",
       "rank": "Junior developer",
       "image": "https://res.cloudinary.com/duejpnj1y/image/upload/v1679413454/Juniordev/Bipangshu_Saha_dt37it.webp",
@@ -46,49 +63,31 @@
       "git": "https://github.com/BIPS8812"
    },
    {
-      "id": 6,
-       "name": "Anamika Das",
-       "rank": "Junior developer",
-       "image": "https://res.cloudinary.com/duejpnj1y/image/upload/v1679413458/Juniordev/Anamika_Das_xenkz2.webp",
-       "fb": "https://www.facebook.com/profile.php?id=100075782332137",
-       "linkedln": "http://www.linkedin.com/in/anamika-das092",
-       "git": "https://github.com/anamika-ds"
-   },
-   {
-      "id": 7,
-       "name": "Jacinth Mahanta",
-       "rank": "Junior developer",
-       "image": "https://res.cloudinary.com/duejpnj1y/image/upload/v1679409539/Juniordev/Jacinth_Mahanta_jdikht.webp",
-       "fb": "https://www.facebook.com/jacinth.mahanta/",
-       "linkedln": "https://www.linkedin.com/in/jacinth-mahanta-63b279229/",
-       "git": "https://github.com/Jacinth-Mahanta"
-   },
-   {
       "id": 8,
-       "name": "Dimpal Kalita",
-       "rank": "Junior developer",
-       "image": "https://res.cloudinary.com/duejpnj1y/image/upload/v1679412991/Juniordev/Dimpal_Kalita_dkxvfn.webp",
-       "fb": "https://www.facebook.com/dimpalkalita99/",
-       "linkedln": "https://www.linkedin.com/in/dimpal-kalita-819121226/",
-       "git": "https://github.com/Dimpal-Kalita"
+      "name": "Dimpal Kalita",
+      "rank": "Junior developer",
+      "image": "https://res.cloudinary.com/duejpnj1y/image/upload/v1679412991/Juniordev/Dimpal_Kalita_dkxvfn.webp",
+      "fb": "https://www.facebook.com/dimpalkalita99/",
+      "linkedln": "https://www.linkedin.com/in/dimpal-kalita-819121226/",
+      "git": "https://github.com/Dimpal-Kalita"
    },
    {
       "id": 9,
-       "name": "Priyabrat Duarah",
-       "rank": "Junior developer",
-       "image": "https://res.cloudinary.com/duejpnj1y/image/upload/v1679411855/Juniordev/Priyabrat_Duarah_zoxlhj.webp",
-       "fb": "https://www.facebook.com/profile.php?id=100076231446828",
-       "linkedln": "https://www.linkedin.com/in/priyabrat-duarah-6a6132221/",
-       "git": "https://github.com/Prybrt06"
+      "name": "Jacinth Mahanta",
+      "rank": "UI/UX",
+      "image": "https://res.cloudinary.com/duejpnj1y/image/upload/v1679409539/Juniordev/Jacinth_Mahanta_jdikht.webp",
+      "fb": "https://www.facebook.com/jacinth.mahanta/",
+      "linkedln": "https://www.linkedin.com/in/jacinth-mahanta-63b279229/",
+      "git": "https://github.com/Jacinth-Mahanta"
    },
    {
       "id": 10,
-       "name": "Pragya Annesha Baruah",
-       "rank": "Junior developer",
-       "image": "https://res.cloudinary.com/duejpnj1y/image/upload/v1679409544/Juniordev/Pragya_ho7rbf.webp",
-       "fb": "https://www.facebook.com/profile.php?id=100075204826742",
-       "linkedln": "https://www.linkedin.com/in/pragya-annesha-baruah-34a043229",
-       "git": "https://github.com/Prag03"
+      "name": "Priyabrat Duarah",
+      "rank": "Junior developer",
+      "image": "https://res.cloudinary.com/duejpnj1y/image/upload/v1679411855/Juniordev/Priyabrat_Duarah_zoxlhj.webp",
+      "fb": "https://www.facebook.com/profile.php?id=100076231446828",
+      "linkedln": "https://www.linkedin.com/in/priyabrat-duarah-6a6132221/",
+      "git": "https://github.com/Prybrt06"
    },
    {
       "id": 11,
