@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react'
-import Footer from '../shared/Footer/Footer.tsx'
+import Footer from '../shared/Footer/Footer'
 import NavbarTeam from '../shared/Navbar/NavbarTeam'
 import { AiOutlineArrowRight, AiOutlineArrowLeft } from "react-icons/ai";
 import './Allevents.css'

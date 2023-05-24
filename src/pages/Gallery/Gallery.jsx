@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import './Gallery.css'
-import Footer from '../../components/shared/Footer/Footer.tsx';
+import Footer from '../../components/shared/Footer/Footer';
 // import Tab from '../../GalleryPage/Tab';
 import Tab from '../../components/GalleryPage/GallertTab/Tab'
 import NavbarTeam from '../../components/shared/Navbar/NavbarTeam';

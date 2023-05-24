@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import Footer from '../../components/shared/Footer/Footer.tsx'
+import Footer from '../../components/shared/Footer/Footer'
 import NavbarTeam from '../../components/shared/Navbar/NavbarTeam'
 import './Events.css'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
