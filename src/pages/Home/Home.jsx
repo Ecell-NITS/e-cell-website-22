@@ -8,7 +8,7 @@ import Pillars from '../../components/Home/Pillars_of_Ecell/Pillars'
 import Timeline from '../../components/Home/Timeline/Timeline'
 import Footer from '../../components/shared/Footer/Footer'
 import Footerconstant from '../../components/shared/FooterConstant/Footerconstant'
-import Contactus from '../../components/Home/Contact/Contactus.tsx'
+import Contactus from '../../components/Home/Contact/Contactus'
 const Home = () => {
   useEffect(() => {
     document.title = "ECELL | NITS";
