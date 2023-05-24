@@ -20,6 +20,8 @@ const Footer = () => {
     return emailRegex.test(email);
   };
 
+  const [checkingemail, setCheckingemail] = useState(false)
+
   const createUser = async (event) => {
     event.preventDefault();
 
@@ -33,6 +35,7 @@ const Footer = () => {
       return;
     }
 
+    setCheckingemail(true)
     try {
       const response = await axios.post(
         process.env.REACT_APP_AXIOSPOST_CHECKEMAIL_RENDER,
@@ -43,24 +46,26 @@ const Footer = () => {
       );
 
       if (!response.data.unique) {
+        setCheckingemail(false)
         alert("You have already subscribed to our newsletter");
         return;
       }
     } catch (error) {
       console.log("Error checking email uniqueness:", error);
       alert("An error occurred while checking email uniqueness");
+      setCheckingemail(false)
       return;
     }
 
 
     axios
       .post(process.env.REACT_APP_AXIOSPOST_POSTMAIN_RENDER, {
-      // .post('http://localhost:3001/createUser', {
+        // .post('http://localhost:3001/createUser', {
         email
       })
       .then((response) => {
         setEmail("");
-       
+        setCheckingemail(false)
         alert("Subscribed to Our Newsletter.🥳");
       });
   };
@@ -173,7 +178,7 @@ const Footer = () => {
               </button>
             </div>
           </form>
-
+          {checkingemail && <p>Verifying email...</p>}
         </div>
         <div className="container5">
           <p className="p2">All Rights Reserved @E-Cell, NIT Silchar </p>
