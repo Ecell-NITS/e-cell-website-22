@@ -4,11 +4,12 @@
   justify-content: center;
   align-items: center;
   width: 25rem;
-  min-height: 18rem;
+  min-height: 22vw;
   max-height: fit-content;
   box-shadow: 4px 4px 12px rgba(79, 79, 79, 0.2), -4px -4px 12px rgba(242, 242, 242, 0.25);
   border-radius: 8px;
   text-align: center;
+  user-select: none;
 }
 .image_style{
     width: 80px;
@@ -18,9 +19,21 @@
 }
 .motto_card_text{
     margin: 0 24px 24px 24px;
-    font-size:1rem;
+    font-size:1.35vw;
 }
 
+@media (max-width:1200px){
+    .about_card_{
+        min-height: 33vw;
+        margin-top:4vw;
+        margin-left: 1.5vw;
+        margin-right: 1.5vw;
+    }
+
+    .motto_card_text{
+        font-size: 2vw;
+    }
+}
 
 @media only screen and (max-width:1000px){
     .card{
@@ -30,7 +43,7 @@
         /* margin-top: 2rem; */
     }
     .motto_card_text{
-        font-size: 18px;
+        font-size: 2.5vw;
         padding-bottom: 10px;
     }
     .about_card_{
@@ -40,7 +53,11 @@
 
 }
 
-
+@media (max-width:660px){
+    .about_card_{
+        display: none;
+    }
+}
 
 @media only screen and (max-width:610px){
     .card{
@@ -51,8 +68,4 @@
         font-size: 20px;
         padding-bottom: 10px;
     }
-    .about_card_{
-        display: none;
-    }
-
 }

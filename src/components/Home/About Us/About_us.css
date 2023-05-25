@@ -2,33 +2,23 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 4rem;
-    
-   
-
-  
-    
 }
 
 .underline {
-    
     background-color: #224259;
     width: 80vw;
     height: 2px;
-
     margin-left: auto;
     margin-right: auto;
     margin-top: 0px;
-
 }
 
 .about_heading {
-
     margin-top: 2rem;
     font-family: "Barlow Condensed";
     font-style: normal;
     font-weight: 600;
     font-size: 64px;
-   
     text-align: center;
     color: #224259;
     margin-bottom: auto;
@@ -38,23 +28,13 @@
     /* padding-top: 3rem; */
     width: 80vw;
     margin: auto;
-    font-size: 1.2rem;
+    font-size: 1.7vw;
     text-align: center !important;
     text-align: left;
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
 }
-
-
-
-
-
-
-
-
-
-
 
 .cards-set-1 {
 display: flex;
@@ -74,7 +54,6 @@ flex-direction: row;
 /* justify-content: space-between; */
 padding: 2% 22.22%;
 /* justify-content: center; */
-
 }
 
 .motto {
@@ -91,13 +70,23 @@ color: #224259;
 
 @media only screen and (max-width:1200px) {
 .contentAbout{
-    font-size: 1.2rem;
+    font-size: 2.5vw;
 }
 }
 
+@media(max-width:991px){
+    .contentAbout{
+        font-size: 4vw;
+    }
+}
+
 @media (max-width:660px){
-    .motto h3{
-        font-size: 8vw;
+    .motto {
+       display: none;
+    }
+
+    .contentAbout{
+        font-size: 5.5vw;
     }
 }
 
@@ -109,14 +98,4 @@ color: #224259;
     .contentAbout{
         padding-top: 0;
     }
-}
-@media only screen and (max-width:400x) {
-.contentAbout{
-    font-size: 1.1rem;
-}
-
-
-
-
-
 }
