@@ -1,35 +1,34 @@
 .events-main-hero{
     position: relative;
-    background: url(https://res.cloudinary.com/dp92qug2f/image/upload/v1685014862/Ecell%20website/events/srijanImage.1bea0cab22ef6b9b012b_nwzypf.webp);
+    background: url(https://res.cloudinary.com/dp92qug2f/image/upload/v1685019690/Ecell%20website/collaboration%20backgrounds/Srijan-1_h0kpas.webp);
     background-position: center;
-    background-size: 100% 100%;
-    object-fit: contain;
+    background-size: cover;
+    /* object-fit: contain; */
     background-repeat: no-repeat;
-    height: 48vw;
+    height: 52vw;
+    box-shadow: inset 0 0 0 1000px #1f18349c;
     background-attachment: scroll;
     background-position-x: center;
 }
 
 .eicimpextra{
     position: relative;
-    background: url(https://res.cloudinary.com/dp92qug2f/image/upload/v1676465592/events/main_hero_vxumvs.png);
+    background: url(https://res.cloudinary.com/dp92qug2f/image/upload/v1685019690/Ecell%20website/collaboration%20backgrounds/EIC_qqeeua.webp);
     background-position: center;
-    background-size: 100% 100%;
-    object-fit: contain;
+    background-size: cover;
     background-repeat: no-repeat;
-    height: 48vw;
+    height: 52vw;
     background-attachment: scroll;
     background-position-x: center;
 }
 
 .entremodulebg{
     position: relative;
-    background: url(https://res.cloudinary.com/dp92qug2f/image/upload/v1685015622/Ecell%20website/events/business-people-blue-background_53876-101889_reuz8y.avif);
+    background: url(https://res.cloudinary.com/dp92qug2f/image/upload/v1685019690/Ecell%20website/collaboration%20backgrounds/Empressario-1_ewb2al.webp);
     background-position: center;
-    background-size: 100% 100%;
-    object-fit: contain;
+    background-size: cover;
     background-repeat: no-repeat;
-    height: 48vw;
+    height: 52vw;
     background-attachment: scroll;
     background-position-x: center;
 }
