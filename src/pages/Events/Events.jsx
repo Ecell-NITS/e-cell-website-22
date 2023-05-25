@@ -15,6 +15,7 @@ const Events = () => {
       <NavbarTeam />
 
       <Carousel showArrows={false} stopOnHover={false} showThumbs={false} useKeyboardArrows={true} swipeable={false} transitionTime={300} interval={4000} infiniteLoop={true} showStatus={false} autoPlay={true}>
+        {/* srijann 3.0 */}
         <div className="events-main-hero">
           <div className="spkr-cont-event">
             <h1>Srijan E-Summit</h1>
@@ -45,7 +46,10 @@ const Events = () => {
           </div>
         </div>
 
-        <div className="events-main-hero">
+
+
+        {/* The Entrepreneurship and Innovation Challenge */}
+        <div className="events-main-hero eicimpextra">
           <div className="spkr-cont-event">
             <h1>The Entrepreneurship and Innovation Challenge</h1>
           </div>
@@ -74,7 +78,9 @@ const Events = () => {
           </div>
         </div>
 
-        <div className="events-main-hero">
+
+        {/*The Entrepreneurship Module */}
+        <div className="events-main-hero entremodulebg">
           <div className="spkr-cont-event">
             <h1>The Entrepreneurship Module</h1>
           </div>

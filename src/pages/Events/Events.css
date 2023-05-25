@@ -1,5 +1,17 @@
 .events-main-hero{
     position: relative;
+    background: url(https://res.cloudinary.com/dp92qug2f/image/upload/v1685014862/Ecell%20website/events/srijanImage.1bea0cab22ef6b9b012b_nwzypf.webp);
+    background-position: center;
+    background-size: 100% 100%;
+    object-fit: contain;
+    background-repeat: no-repeat;
+    height: 48vw;
+    background-attachment: scroll;
+    background-position-x: center;
+}
+
+.eicimpextra{
+    position: relative;
     background: url(https://res.cloudinary.com/dp92qug2f/image/upload/v1676465592/events/main_hero_vxumvs.png);
     background-position: center;
     background-size: 100% 100%;
@@ -10,6 +22,17 @@
     background-position-x: center;
 }
 
+.entremodulebg{
+    position: relative;
+    background: url(https://res.cloudinary.com/dp92qug2f/image/upload/v1685015622/Ecell%20website/events/business-people-blue-background_53876-101889_reuz8y.avif);
+    background-position: center;
+    background-size: 100% 100%;
+    object-fit: contain;
+    background-repeat: no-repeat;
+    height: 48vw;
+    background-attachment: scroll;
+    background-position-x: center;
+}
 .spkr-cont-event{
     background-color: white;
     display: inline-block;
@@ -104,7 +127,7 @@
 @media only screen and (max-width:660px){
     .events-main-hero{
         height: 130vw;
-        aspect-ratio: auto;
+        /* aspect-ratio: auto; */
         background-position-y: center;
         background-position-x: center;
     }
