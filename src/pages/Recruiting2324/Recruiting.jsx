@@ -31,6 +31,10 @@ const Recruiting = () => {
         generateCaptchaNumbers();
     }, []);
 
+    useEffect(() => {
+        document.title = "Recruitment ECELL | NITS";
+    }, []);
+
     const generateCaptchaNumbers = () => {
         const first = Math.floor(Math.random() * 20);
         const second = Math.floor(Math.random() * 20);
@@ -131,7 +135,7 @@ const Recruiting = () => {
         try {
             setEmailVerification(true); // Display "Verifying email" message
             const response = await axios.post(process.env.REACT_APP_RECRUITMENT_CHECKEMAIL, {
-            // const response = await axios.post("http://localhost:3000/check-email", {
+                // const response = await axios.post("http://localhost:3000/check-email", {
                 email: email
             });
             setEmailVerification(false);
@@ -149,7 +153,7 @@ const Recruiting = () => {
         try {
             setScholarIdVerification(true);
             const response = await axios.post(process.env.REACT_APP_RECRUITMENT_CHECKSCHOLARID, {
-            // const response = await axios.post("http://localhost:3000/check-scholarid", {
+                // const response = await axios.post("http://localhost:3000/check-scholarid", {
                 scholarId: scholarId
             });
             setScholarIdVerification(false);
@@ -167,7 +171,7 @@ const Recruiting = () => {
         try {
             setVerifyotp(true)
             const response = await axios.post(process.env.REACT_APP_RECRUITMENT_VERIFYOTP, {
-            // const response = await axios.post("http://localhost:3000/verify-otp", {
+                // const response = await axios.post("http://localhost:3000/verify-otp", {
                 otp,
             });
 
@@ -210,7 +214,7 @@ const Recruiting = () => {
         axios
 
             .post(process.env.REACT_APP_RECRUITMENT_CREATE, {
-            // .post('http://localhost:3000/createUser', {
+                // .post('http://localhost:3000/createUser', {
                 name,
                 mobileno,
                 whyecell,
@@ -478,23 +482,23 @@ const Recruiting = () => {
 
                 <h3 className='common-form-recuit'>Prove you're not an robot<span className='reqdinput'>*</span></h3>
                 <span className='robottxt'>{firstNumber} + {secondNumber} = </span>
-                <span>   
+                <span>
                     <input
-                    type="text"
-                    required
-                    className=' robotinptt'
-                    placeholder="Enter the answer"
-                    value={captchaAnswer}
-                    onChange={(event) => {
-                        setCaptchaAnswer(event.target.value);
-                    }}
-                />
+                        type="text"
+                        required
+                        className=' robotinptt'
+                        placeholder="Enter the answer"
+                        value={captchaAnswer}
+                        onChange={(event) => {
+                            setCaptchaAnswer(event.target.value);
+                        }}
+                    />
                 </span>
-               
+
                 <button onClick={createUser} className='submtformrecuit' >
                     {submitting ? "Submitting..." : "Submit"}{" "}
                 </button>
-             
+
                 {emailVerification && <p className='statusmsgssubmt'>Verifying email...</p>}
                 {scholarIdVerification && <p className='statusmsgssubmt'>Verifying Scholar Id...</p>}
                 {verifyotp && <p className='statusmsgssubmt'>Verifying otp...</p>}
