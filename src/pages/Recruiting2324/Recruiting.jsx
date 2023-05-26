@@ -107,10 +107,12 @@ const Recruiting = () => {
         }
 
         // Check if the scholarId is valid
-        if (!/^221\d{4}$/.test(scholarId)) {
+        // Check if the scholarId is valid
+        if (!/^221[1-6][01]\d{2}$/.test(scholarId) || (scholarId[3] === '1' && parseInt(scholarId.slice(-3)) > 157) || (scholarId[3] === '2' && parseInt(scholarId.slice(-3)) > 167) || (scholarId[3] === '3' && parseInt(scholarId.slice(-3)) > 167) || (scholarId[3] === '4' && parseInt(scholarId.slice(-3)) > 166) || (scholarId[3] === '5' && parseInt(scholarId.slice(-3)) > 84) || (scholarId[3] === '6' && parseInt(scholarId.slice(-3)) > 160)) {
             alert("Invalid scholar id");
             return;
         }
+
 
         // Check if the email contains uppercase letters
         if (/[A-Z]/.test(email)) {
@@ -193,18 +195,10 @@ const Recruiting = () => {
         }
 
         // Check if the email matches the allowed domains i.e only institute emails are accepted
-        const allowedDomains = [
-            "cse.nits.ac.in",
-            "civil.nits.ac.in",
-            "me.nits.ac.in",
-            "ece.nits.ac.in",
-            "ee.nits.ac.in",
-            "ei.nits.ac.in",
-        ];
-        const domain = email.split("@")[1];
+        const emailRegex = /^.+22@(cse|civil|mech|ece|ee|ei)\.nits\.ac\.in$/;
 
-        if (!allowedDomains.includes(domain)) {
-            alert("Only nits insitute email accepted.");
+        if (!emailRegex.test(email)) {
+            alert("Only first year's INSTITUTE email id are accepted.");
             return;
         }
 
@@ -239,7 +233,7 @@ const Recruiting = () => {
                 setPoster("")
                 setProject("")
                 setSubmitting(false);
-                alert("User created 😍");
+                alert("Form successfully submitted😍");
             });
     };
 
@@ -250,19 +244,11 @@ const Recruiting = () => {
             return;
         }
 
-        // Check if the email matches the allowed domains i.e only nits institute email are accepted
-        const allowedDomains = [
-            "cse.nits.ac.in",
-            "civil.nits.ac.in",
-            "me.nits.ac.in",
-            "ece.nits.ac.in",
-            "ee.nits.ac.in",
-            "ei.nits.ac.in",
-        ];
-        const domain = email.split("@")[1];
+        // Check if the email matches the allowed domains i.e only nits first years institute email are accepted
+        const emailRegex = /^.+22@(cse|civil|mech|ece|ee|ei)\.nits\.ac\.in$/;
 
-        if (!allowedDomains.includes(domain)) {
-            alert("Only NITS institute email is accepted.");
+        if (!emailRegex.test(email)) {
+            alert("Only first year's INSTITUTE email id are accepted.");
             return;
         }
 
@@ -276,7 +262,7 @@ const Recruiting = () => {
                 }
             );
             if (response.status === 200) {
-                alert('OTP sent successfully! Please check your inbox as well as spam folder.');
+                alert('OTP sent successfully! Please check your inbox as well as SPAM folder.');
                 setOtpSent(true);
             }
         } catch (error) {
