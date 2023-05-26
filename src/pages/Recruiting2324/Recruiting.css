@@ -210,4 +210,9 @@
         font-size: 5vw;
         margin: 20vw auto;
     }
+
+    .statusmsgssubmt{
+        font-size: 5vw;
+        margin-top: 2vw;
+    }
 }
