@@ -10,6 +10,7 @@ import Events from "./pages/Events/Events";
 import Resources from "./pages/Resources/Resources";
 import AllEvents from "./components/EventsPage/AllEvents";
 import Eventsred from "./pages/Events_red/Events_red";
+import Recruiting from "./pages/Recruiting2324/Recruiting";
 function App() {
   return (
     <>
@@ -53,6 +54,7 @@ function App() {
               element={<Eventsred/>}
               key="route-allevents-screen"
             />
+            <Route exact path="/recruiting" element={<Recruiting />} key="route-recruitment-screen" />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Scrolling>
