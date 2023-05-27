@@ -4,7 +4,7 @@ const Yen = () => {
     return (
         <div className="cocacola-main">
             <div className="collab-content">
-                <p>In order to create tamper-proof and legitimate digital credentials, certificates, and badges, TruScholar provides a secure infrastructure to universities all over the world. We are proud to have TruScholar on board with us as our Credential partner.</p>
+                <p>We are gratified to proudly announce the collaboration of Young Entrepreneurs Network with us as a Networking Partner. <br/><br/>Y.E.N. is a visionary incubator that equips entrepreneurs with practical implementation tools to bring their dreams to life. Y.E.N. leads with the vision is to establish itself as the world's premier network for young entrepreneurs, with a focus on enhancing the success rate of entrepreneurial ventures globally. Y.E.N. provides an extensive array of entrepreneurial services, benefits, tools, consulting, and resources at affordable prices.</p>
             </div>
         </div>
     )

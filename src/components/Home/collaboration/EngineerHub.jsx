@@ -4,7 +4,7 @@ const EngineerHub = () => {
     return (
         <div className="cocacola-main">
             <div className="collab-content">
-                <p>In order to create tamper-proof and legitimate digital credentials, certificates, and badges, TruScholar provides a secure infrastructure to universities all over the world. We are proud to have TruScholar on board with us as our Credential partner.</p>
+                <p>We were grateful to engineerHUB for being our networking partner. The partnership resulted in the smooth operation of the event and was really beneficial for both the company as well as the event being held. We extend our heartfelt gratitude for engineerHUB’s endless support.</p>
             </div>
         </div>
     )

@@ -4,7 +4,7 @@ const Pnb = () => {
     return (
         <div className="pnb-main">
             <div className="collab-content">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, vel impedit praesentium architecto velit error tempora enim delectus aspernatur omnis fugit. Sapiente, provident eum repellat, itaque obcaecati suscipit excepturi corrupti amet consequuntur, tenetur a quasi? Velit a repellat cumque adipisci ut, vitae eius incidunt enim et quis? Eaque optio quod rerum iste dignissimos nisi nemo fugit soluta qui quis, ut et quo ea culpa ipsum</p>
+                <p>We were fortunate and blessed to be sponsored by "Punjab National Bank" (PNB). Their invaluable support has enabled us to pursue our goals and endeavors, fostering growth and success. We are grateful for PNB's commitment to empowering individuals and organizations, and we deeply value their partnership in making a positive impact.</p>
             </div>
         </div>
     )

@@ -4,7 +4,7 @@ const StockGro = () => {
     return (
         <div className="cocacola-main">
             <div className="collab-content">
-                <p>In order to create tamper-proof and legitimate digital credentials, certificates, and badges, TruScholar provides a secure infrastructure to universities all over the world. We are proud to have TruScholar on board with us as our Credential partner.</p>
+                <p>We were extremely gratified to collaborate with StockGro as our platform partner. StockGro is India’s first and largest ‘Social Investment’ platform aimed at helping everyone master the art of ‘Trading & Investment’. The collaboration helped in the smooth conduction of the event and was an opportunity for the platform to enhance and expand. We are extremely grateful to StockGro for their unwavering support.</p>
             </div>
         </div>
     )
