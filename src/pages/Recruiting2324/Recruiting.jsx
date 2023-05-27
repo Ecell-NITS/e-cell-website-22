@@ -10,6 +10,8 @@ const Recruiting = () => {
     const [mobileno, setMobileno] = useState("")
     const [whyecell, setWhyecell] = useState("");
     const [branch, setBranch] = useState("");
+    const [team, setTeam] = useState("")
+    const [techteam, setTechteam] = useState("");
     const [email, setEmail] = useState("");
     const [scholarId, setScholarId] = useState("");
     const [submitting, setSubmitting] = useState(false);
@@ -25,7 +27,7 @@ const Recruiting = () => {
     const [verifyotp, setVerifyotp] = useState(false)
     const [poster, setPoster] = useState("")
     const [resume, setResume] = useState("")
-    const [project, setProject] = useState("")
+    // const [project, setProject] = useState("")
 
     useEffect(() => {
         generateCaptchaNumbers();
@@ -42,6 +44,17 @@ const Recruiting = () => {
         setSecondNumber(second);
     };
 
+    /* for multiple checkbox team selection */
+    const handleTeamSelection = (event) => {
+        const { value, checked } = event.target;
+
+        if (checked) {
+            setTeam((prevTeam) => [...prevTeam, value]);
+        } else {
+            setTeam((prevTeam) => prevTeam.filter((team) => team !== value));
+        }
+    };
+
     //checking if all required fiels are filled
     const isFormValid = () => {
         return (
@@ -50,7 +63,8 @@ const Recruiting = () => {
             whyecell !== "" &&
             mobileno !== "" &&
             branch !== "" &&
-            scholarId !== "" && resume !== "" && project !== ""
+            scholarId !== "" && resume !== ""  && techteam !== ""
+            // team.length > 0
             // poster !== ""
         );
     };
@@ -106,7 +120,6 @@ const Recruiting = () => {
             return;
         }
 
-        // Check if the scholarId is valid
         // Check if the scholarId is valid
         if (!/^221[1-6][01]\d{2}$/.test(scholarId) || (scholarId[3] === '1' && parseInt(scholarId.slice(-3)) > 157) || (scholarId[3] === '2' && parseInt(scholarId.slice(-3)) > 167) || (scholarId[3] === '3' && parseInt(scholarId.slice(-3)) > 167) || (scholarId[3] === '4' && parseInt(scholarId.slice(-3)) > 166) || (scholarId[3] === '5' && parseInt(scholarId.slice(-3)) > 84) || (scholarId[3] === '6' && parseInt(scholarId.slice(-3)) > 160)) {
             alert("Invalid scholar id");
@@ -208,7 +221,7 @@ const Recruiting = () => {
         axios
 
             .post(process.env.REACT_APP_RECRUITMENT_CREATE, {
-                // .post('http://localhost:3000/createUser', {
+            // .post('http://localhost:3001/createUser', {
                 name,
                 mobileno,
                 whyecell,
@@ -216,8 +229,8 @@ const Recruiting = () => {
                 branch,
                 scholarId,
                 timestamp,
-                poster,
-                resume, project
+                // poster,
+                resume,  techteam
             })
             .then((response) => {
                 setName("");
@@ -230,8 +243,10 @@ const Recruiting = () => {
                 setCaptchaAnswer("");
                 generateRandomNumbers()
                 setOtp("")
-                setPoster("")
-                setProject("")
+                // setPoster("")
+                // setProject("")
+                // setTeam([]);
+                setTechteam("")
                 setSubmitting(false);
                 alert("Form successfully submitted😍");
             });
@@ -424,6 +439,68 @@ const Recruiting = () => {
                     }}
                 />
 
+
+                <h3 className='common-form-recuit'>Which domain in technical team of ECELL you want to apply for?<span className='reqdinput'>*</span></h3>
+                <div className='radioinptholder'>
+                    <label className='radioinpt'>
+                        <input
+                            type="radio"
+                            name="techteam"
+                            value="Web Development"
+                            checked={techteam === "Web Development"}
+                            onChange={(event) => {
+                                setTechteam(event.target.value);
+                            }}
+                        />
+                        Web Development
+                    </label>
+
+                    <label className='radioinpt'>
+                        <input
+                            type="radio"
+                            name="techteam"
+                            value="UI/UX"
+                            checked={techteam === "UI/UX"}
+                            onChange={(event) => {
+                                setTechteam(event.target.value);
+                            }}
+                        />
+                        UI/UX
+                    </label>
+
+                    <label className='radioinpt'>
+                        <input
+                            type="radio"
+                            name="techteam"
+                            value="Flutter"
+                            checked={techteam === "Flutter"}
+                            onChange={(event) => {
+                                setTechteam(event.target.value);
+                            }}
+                        />
+                        Flutter
+                    </label>
+                </div>
+
+
+
+                {/* for checkbox multiple team selection */}
+                {/* <h3 className='common-form-recuit'>Which team you want to apply for?<span className='reqdinput'>*</span></h3>
+                <div className='radioinptholder'>
+                    <label className='radioinpt'>
+                        <input type="checkbox" name="team" value="UI" checked={team.includes("UI")}
+                            onChange={handleTeamSelection} />
+                        UI
+                    </label>
+
+                    <label className='radioinpt'>
+                        <input type="checkbox" name='team' value="UX" checked={team.includes("UX")}
+                            onChange={handleTeamSelection} />
+                        UX
+                    </label>
+                </div> */}
+
+
                 <h3 className='common-form-recuit'>Why do you want to join E-Cell?<span className='reqdinput'>*</span></h3>
                 <input
                     type="text"
@@ -434,6 +511,7 @@ const Recruiting = () => {
                         setWhyecell(event.target.value);
                     }}
                 />
+
 
 
                 <h3 className='common-form-recuit'>Resume Link (Upload in Google Drive)<span className='reqdinput'>*</span></h3>
@@ -447,7 +525,7 @@ const Recruiting = () => {
                     }}
                 />
 
-                <h3 className='common-form-recuit'>Task/Project Link (Upload in Google Drive in zip form or GitHub)<span className='reqdinput'>*</span></h3>
+                {/* <h3 className='common-form-recuit'>Task/Project Link (Upload in Google Drive in zip form or GitHub)<span className='reqdinput'>*</span></h3>
                 <input
                     type="text"
                     placeholder="Your Project link"
@@ -456,7 +534,7 @@ const Recruiting = () => {
                     onChange={(event) => {
                         setProject(event.target.value);
                     }}
-                />
+                /> */}
 
                 {/* <p>If you're applying for deisgn team then provide links of best 3 posters</p>
                 <input type="text" placeholder='poster links only for candidate applying for design team'

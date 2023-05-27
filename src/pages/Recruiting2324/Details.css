@@ -1,0 +1,38 @@
+.topdetailsre{
+  padding-top:10vw;
+  min-height: 50vw;
+ text-align: center;
+}
+
+.halfinptdtls{
+  width: 50% !important;
+  margin: 0 auto !important;
+}
+
+.deialsorgio{
+  padding-top: 5vw;
+}
+
+.rsmlink{
+  color: red;
+  text-decoration: underline;
+  font-size: 2.5vw;
+}
+
+@media (max-width:660px){
+  .topdetailsre{
+    padding-top:20vw;
+    padding-bottom:20vw;
+  }
+
+  .halfinptdtls{
+    width: 70% !important;
+    margin: 0 auto !important;
+  }
+
+  .rsmlink{
+    color: red;
+    text-decoration: underline;
+    font-size: 6vw;
+  }
+}
