@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
-import NavbarTeam from "../../components/shared/Navbar/NavbarTeam";
-import Footer from "../../components/shared/Footer/Footer";
-import './Details.css'
-const Recuitmentdetails = () => {
+import NavbarTeam from "../../shared/Navbar/NavbarTeam";
+import Footer from "../../shared/Footer/Footer";
+import '../../../pages/Recruiting2324/Details.css'
+const Contactresponse = () => {
     const [listOfUsers, setListOfUsers] = useState([]);
     const [password, setPassword] = useState("");
     const [loggedIn, setLoggedIn] = useState(false);
@@ -14,6 +14,10 @@ const Recuitmentdetails = () => {
         setPassword(event.target.value);
     };
 
+    useEffect(() => {
+        document.title = "Contact Responses ECELL | NITS";
+    }, []);
+
     const handleSubmit = async (event) => {
         event.preventDefault();
         if (password.trim() === "") {
@@ -21,10 +25,11 @@ const Recuitmentdetails = () => {
             return;
         }
 
-        if (password === process.env.REACT_APP_DETAILS_PWD) {
+        if (password === process.env.REACT_APP_PWD_CONTACT_DETAILS) {
             try {
                 setLoading(true);
-                const response = await axios.get(process.env.REACT_APP_AXIOSGET);
+                // const response = await axios.get('http://localhost:3001/getUsers');
+                const response = await axios.get(process.env.REACT_APP_AXIOSGET_ECELLWEBSITE);
                 setListOfUsers(response.data);
                 setLoggedIn(true);
             } catch (error) {
@@ -66,28 +71,20 @@ const Recuitmentdetails = () => {
 
     return (
         <>
-            {/* <NavbarTeam /> */}
             {listOfUsers.map((user) => (
                 <div >
                     <div key={user.id} >
-                    <h1>name: <span style={{color:"red"}}>{user.name}</span></h1>
-                    <h1>email: <span style={{color:"red"}}>{user.email}</span> </h1>
-                    <h1>Scholar Id: <span style={{color:"red"}}>{user.scholarId}</span> </h1>
-                    <h1>branch: <span style={{color:"red"}}>{user.branch}</span> </h1>
-                    <h1>WP number: <span style={{color:"red"}}>{user.mobileno}</span></h1>
-                    <h1>domain in technical team of ecell: <span style={{color:"red"}}>{user.techteam}</span></h1>
-                    <a href={user.resume} target="_blank" rel="noreferrer">
-                        <p className="rsmlink"> Resume link</p>
-                    </a>
-                    <h1>why ecell: <span style={{color:"red"}} >{user.whyecell}</span> </h1>
-                    <hr />
+                        <h1>name: <span style={{ color: "red" }}>{user.name}</span></h1>
+                        <h1>email: <span style={{ color: "red" }}>{user.email}</span> </h1>
+                        <h1>Message: <span style={{ color: "red" }}>{user.message}</span></h1>
+                        <hr />
+                    </div>
                 </div>
-                </div>
-                
+
             ))}
             <Footer />
         </>
     );
 };
 
-export default Recuitmentdetails;
+export default Contactresponse;

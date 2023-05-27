@@ -12,6 +12,7 @@ import AllEvents from "./components/EventsPage/AllEvents";
 import Eventsred from "./pages/Events_red/Events_red";
 import Recruiting from "./pages/Recruiting2324/Recruiting";
 import Recuitmentdetails from "./pages/Recruiting2324/Recuitmentdetails";
+import Contactresponse from "./components/Home/Contact/Contactresponse";
 function App() {
   return (
     <>
@@ -57,6 +58,8 @@ function App() {
             />
             <Route exact path="/recruiting" element={<Recruiting />} key="route-recruitment-screen" />
             <Route exact path="/recruitusers" element={<Recuitmentdetails />} key="route-recruitment-screen" />
+
+            <Route exact path="/contactresponses" element={<Contactresponse />} key="route-contactresponse-screen" />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Scrolling>
