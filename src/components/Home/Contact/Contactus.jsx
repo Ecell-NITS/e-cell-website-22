@@ -63,9 +63,7 @@ const Contactus = () => {
       <div className="formcontact">
         <form className="forminclass">
           <div className="childform">
-            <label htmlFor="name" className="labeltitle">
-              Name
-            </label>
+          <h3 className='common-form-recuit ewrtyh'>Name<span className='reqdinput'>*</span></h3>
             <input
               type="text"
               id="name"
@@ -75,14 +73,13 @@ const Contactus = () => {
                 setName(event.target.value);
               }}
               placeholder="John Doe"
-              className="textwriting"
+              // className="textwriting"
+              className='input-common-recruit'
             />
           </div>
 
           <div className="childform">
-            <label htmlFor="email" className="labeltitle">
-              Email
-            </label>
+          <h3 className='common-form-recuit ewrtyh'>Email<span className='reqdinput'>*</span></h3>
             <input
               type="email"
               value={email}
@@ -90,14 +87,12 @@ const Contactus = () => {
                 setEmail(event.target.value);
               }}
               required
-              className="textwriting"
+              className='input-common-recruit'
               placeholder="john@doe.com"
             />
           </div>
           <div className="childform">
-            <label htmlFor="message" className="labeltitle">
-              Message
-            </label>
+          <h3 className='common-form-recuit ewrtyh'>Message<span className='reqdinput'>*</span></h3>
             <textarea
               value={message}
               onChange={(event) => {
@@ -105,7 +100,7 @@ const Contactus = () => {
               }}
               required
               placeholder="Lorem Ipsum...."
-              className="textwriting"
+              className='input-common-recruit'
             ></textarea>
           </div>
 

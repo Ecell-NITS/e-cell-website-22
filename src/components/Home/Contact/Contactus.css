@@ -95,6 +95,11 @@
     margin-top: -15px;
 }
 
+.ewrtyh{
+    text-align: left !important;
+    margin: 0 0 .75vw 0 !important;
+}
+
 @media (max-width:660px){
     .formcontact{
         text-align: center;
@@ -134,5 +139,9 @@
 
     .contactpromo{
         font-size: 5.5vw;
+    }
+
+    .ewrtyh{
+        margin: 0 0 2.25vw 0 !important;
     }
 }
