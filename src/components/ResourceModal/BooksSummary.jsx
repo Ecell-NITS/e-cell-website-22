@@ -53,7 +53,7 @@ const BooksSummary = () => {
     return (
         <>
             <div className="collab">
-                <h1 style={{ userSelect: "none" }}>BOOKS SUMMARY</h1>
+                <h1 style={{ userSelect: "none" }}>BOOKS RECOMMENDATIONS</h1>
             </div>
 
             <div className="resources-indi" ref={resourcesHolder}>

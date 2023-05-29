@@ -38,7 +38,7 @@ const Navbar = () => {
       <li> <NavLink to="/">HOME</NavLink></li>
         <li><a onClick={movetosection}>ABOUT US</a></li>
         <li> <NavLink to="/events">EVENTS</NavLink></li>
-        {/* <li><NavLink to="/resources">RESOURCES</NavLink></li> */}
+        <li><NavLink to="/resources">RESOURCES</NavLink></li>
         {/* <li><a href="https://srijan-nits.in/" rel="noreferrer" target="_blank">SRIJAN</a></li> */}
         <li><NavLink to="/team">OUR TEAM</NavLink></li>
         <li><NavLink to="/gallery">GALLERY</NavLink></li>
