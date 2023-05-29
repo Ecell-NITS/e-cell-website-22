@@ -1,11 +1,11 @@
-import React, {useState, useEffect} from 'react'
+import React,{useState, useEffect} from 'react'
 import './Core.css'
 import { FaFacebook, FaLinkedin } from 'react-icons/fa'
 import { BsGithub } from 'react-icons/bs'
-import Data from '../../../Data/Core1.json'
+import Data from '../../../Data/Core3.json'
 
-function CoreTeam2() {
 
+function CoreTeam3() {
     /*  implementing lazy load via ioa */
     const config = {
       rootMargin: "0px 0px 0px 0px",
@@ -36,7 +36,7 @@ function CoreTeam2() {
   const loadImages = (image) => {
       image.src = image.dataset.src;
   };
-
+  
    return (
       <>
          <section className="core_team">
@@ -74,4 +74,4 @@ function CoreTeam2() {
    )
 }
 
-export default CoreTeam2;
+export default CoreTeam3;
