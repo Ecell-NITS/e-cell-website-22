@@ -426,7 +426,7 @@ const Recruiting = () => {
                 <div>
                     <button onClick={sendOTP} className='btnotpsend'>Send OTP to Institute email</button>
                 </div>
-                {otpgoing && <p className='statusmsgssubmt'>Sending otp...</p>}
+                {otpgoing && <p className='statusmsgssubmt'>Sending otp...Please be patient it might take 10 seconds.</p>}
 
                 <h3 className='common-form-recuit'>OTP<span className='reqdinput'>*</span></h3>
                 <input

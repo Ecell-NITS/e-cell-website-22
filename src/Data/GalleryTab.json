@@ -120,8 +120,6 @@
       "event":"Orientation",
       "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1677473928/GalleryPage/Orientation%202022-2023/IMG_1482_uyf84a.jpg"
    },
-
-   
    {
       "id":21,
       "year":"2020-2021",
@@ -289,5 +287,17 @@
       "year":"2022-2023",
       "event":"EIC",
       "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1680503441/GalleryPage/EIC/EIC_2022_10_olgxqh.jpg"
-    }
+    },
+    {
+      "id":49,
+      "year":"2022-2023",
+      "event":"Orientation",
+      "imgsrc":"https://res.cloudinary.com/dp92qug2f/image/upload/v1685353486/Ecell%20website/IMG_1708_jjc1aj.webp"
+     },
+     {
+      "id":50,
+      "year":"2022-2023",
+      "event":"Orientation",
+      "imgsrc":"https://res.cloudinary.com/dp92qug2f/image/upload/v1685353487/Ecell%20website/IMG_1707_kxtmnu.webp"
+     }
  ]

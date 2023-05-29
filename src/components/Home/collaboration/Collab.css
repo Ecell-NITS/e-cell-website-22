@@ -195,7 +195,19 @@
        padding-top: 3rem;
     }
     
- 
+ .edtimes-main{
+    background: url('https://res.cloudinary.com/dp92qug2f/image/upload/v1685354621/Ecell%20website/blog_bg_vbqias.webp');
+        position: relative;
+       justify-content: center;
+       align-items: center;
+       background-position:center;
+       background-repeat: no-repeat;
+       background-size: cover;
+       padding-bottom: 0;
+       height: 90vh;
+       opacity: 1;
+       padding-top: 3rem;
+ }
 
     .collab-content{
     background-color: white;
@@ -318,6 +330,7 @@
       }
       .collab-content p{
         font-size: .9rem;
+        line-height: 1.6;
       }
       }
 
