@@ -5,7 +5,7 @@ import { BsGithub } from 'react-icons/bs'
 import Data from '../../../Data/Core1.json'
 
 
-function CoreTeam3() {
+function CoreTeam1() {
     /*  implementing lazy load via ioa */
     const config = {
       rootMargin: "0px 0px 0px 0px",
@@ -74,4 +74,4 @@ function CoreTeam3() {
    )
 }
 
-export default CoreTeam3;
+export default CoreTeam1;
