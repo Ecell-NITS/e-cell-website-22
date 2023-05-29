@@ -61,34 +61,22 @@ export const resourcesdta = [
 export const podcastdata = [
     {
         id:1,
-        img:"https://res.cloudinary.com/dp92qug2f/image/upload/c_scale,w_360,f_auto,fl_lossy/v1676399429/resources-ecell/45bfa9a6-734b-45fd-b38a-0d749ce74bee_awa66h.jpg"
+        img:"https://res.cloudinary.com/dp92qug2f/image/upload/v1685381429/Ecell%20website/resources/Joyfilmposter_zushtq.webp"
     },
     {
         id:2,
-        img:"https://res.cloudinary.com/dp92qug2f/image/upload/c_scale,w_360,f_auto,fl_lossy/v1676399429/resources-ecell/45bfa9a6-734b-45fd-b38a-0d749ce74bee_awa66h.jpg"
+        img:"https://res.cloudinary.com/dp92qug2f/image/upload/v1685381429/Ecell%20website/resources/Big_night_wxzeh5.webp"
     },
     {
         id:3,
-        img:"https://res.cloudinary.com/dp92qug2f/image/upload/c_scale,w_360,f_auto,fl_lossy/v1676399429/resources-ecell/45bfa9a6-734b-45fd-b38a-0d749ce74bee_awa66h.jpg"
+        img:"https://res.cloudinary.com/dp92qug2f/image/upload/v1685381429/Ecell%20website/resources/Poster-pursuithappyness_zp7la0.webp"
     },
     {
         id:4,
-        img:"https://res.cloudinary.com/dp92qug2f/image/upload/c_scale,w_360,f_auto,fl_lossy/v1676399429/resources-ecell/45bfa9a6-734b-45fd-b38a-0d749ce74bee_awa66h.jpg"
+        img:"https://res.cloudinary.com/dp92qug2f/image/upload/v1685381429/Ecell%20website/resources/SteveJobsposter_vdvbbw.webp"
     },
     {
         id:5,
-        img:"https://res.cloudinary.com/dp92qug2f/image/upload/c_scale,w_360,f_auto,fl_lossy/v1676399429/resources-ecell/45bfa9a6-734b-45fd-b38a-0d749ce74bee_awa66h.jpg"
-    },
-    {
-        id:6,
-        img:"https://res.cloudinary.com/dp92qug2f/image/upload/c_scale,w_360,f_auto,fl_lossy/v1676399429/resources-ecell/45bfa9a6-734b-45fd-b38a-0d749ce74bee_awa66h.jpg"
-    },
-    {
-        id:7,
-        img:"https://res.cloudinary.com/dp92qug2f/image/upload/c_scale,w_360,f_auto,fl_lossy/v1676399429/resources-ecell/45bfa9a6-734b-45fd-b38a-0d749ce74bee_awa66h.jpg"
-    },
-    {
-        id:8,
-        img:"https://res.cloudinary.com/dp92qug2f/image/upload/c_scale,w_360,f_auto,fl_lossy/v1676399429/resources-ecell/45bfa9a6-734b-45fd-b38a-0d749ce74bee_awa66h.jpg"
+        img:"https://res.cloudinary.com/dp92qug2f/image/upload/v1685381430/Ecell%20website/resources/Chef_2014_bwz5dv.webp"
     },
 ]

@@ -52,7 +52,7 @@ const PodcastSummary = () => {
     return (
         <>
             <div className="collab">
-                <h1 style={{ userSelect: "none" }}>PODCAST SUMMARY</h1>
+                <h1 style={{ userSelect: "none" }}>MOVIE RECOMMENDATIONS</h1>
             </div>
             <div className="resources-indi" ref={podcastHolder}>
                 {podcastdata.map((item) => {
