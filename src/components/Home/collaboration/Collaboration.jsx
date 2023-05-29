@@ -10,7 +10,7 @@ import Jantagrp from '../collaboration/Jantagrp';
 import Pnb from '../collaboration/Pnb';
 import Kwikpic from './Kwikpic'
 import Ssstart from './Ssstart';
-import Allay from './Allay';
+// import Allay from './Allay';
 import EngineerHub from './EngineerHub';
 import StockGro from './StockGro';
 import Yen from './Yen';
@@ -57,7 +57,7 @@ const Collaboration = () => {
     function swipecollabPrev() {
         collabHolder.current.scrollLeft -= (collabHolder.current.offsetWidth);
     };
-    const [accollab, setAcccollab] = useState("Rupay")
+    const [accollab, setAcccollab] = useState("Edtimes")
 
     return (
         <>
@@ -142,12 +142,12 @@ const Collaboration = () => {
                         </button>
                     </div>
 
-                    <div id='tbn-indi-collab-po' className={`Allay ${accollab === "Allay" ? " njkl021" : ""}`}>
+                    {/* <div id='tbn-indi-collab-po' className={`Allay ${accollab === "Allay" ? " njkl021" : ""}`}>
                         <button id="btn-collab-indi-po"
                             onClick={() => { setAcccollab("Allay") }}>
                             <img className={`${loaded ? "loaded" : "loading"} ru-collab`} onLoad={() => setIsLoaded(true)} src="" data-src="https://res.cloudinary.com/dp92qug2f/image/upload/v1676988923/collaboration-ecell/allayRes_bljauc.png" alt="PNB" />
                         </button>
-                    </div>
+                    </div> */}
 
                     <div id='tbn-indi-collab-po' className={`EngineerHub ${accollab === "EngineerHub" ? " njkl021" : ""}`}>
                         <button id="btn-collab-indi-po"
@@ -218,7 +218,7 @@ const Collaboration = () => {
                 {accollab === "Punjab National Bank" && <Pnb />}
                 {accollab === "Kwikpic" && <Kwikpic />}
                 {accollab === "Ssstart" && <Ssstart />}
-                {accollab === "Allay" && <Allay />}
+                {/* {accollab === "Allay" && <Allay />} */}
                 {accollab === "EngineerHub" && <EngineerHub />}
                 {accollab === "StockGro" && <StockGro />}
                 {accollab === "Yen" && <Yen />}

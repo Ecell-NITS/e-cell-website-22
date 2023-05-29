@@ -96,20 +96,47 @@
       }
     
     .rupay-main{
-        background: url('https://res.cloudinary.com/dp92qug2f/image/upload/v1678341853/Ecell%20website/collaboration%20backgrounds/RuPay_nqxcfb.webp');
+        background: url('https://res.cloudinary.com/dp92qug2f/image/upload/v1685366025/Cubelelo_Logo_for_Light_Background_mpnanj.webp');
         position: relative;
        justify-content: center;
        align-items: center;
        background-position:center;
        background-repeat: no-repeat;
-       background-size: cover;
+       background-size: contain;
        padding-bottom: 0;
        height: 90vh;
        opacity: 1;
        padding-top: 3rem;
-       background-color: rgb(11, 11, 62);
+       /* background-color: rgb(11, 11, 62); */
     }
     
+    .kwikpic-main{
+        background: url('https://res.cloudinary.com/dp92qug2f/image/upload/v1685366405/Kwikpic_gu1ywv.webp');
+        position: relative;
+       justify-content: center;
+       align-items: center;
+       background-position:center;
+       background-repeat: no-repeat;
+       background-size: contain;
+       padding-bottom: 0;
+       height: 90vh;
+       opacity: 1;
+       padding-top: 3rem;
+    }
+
+    .ssstart-main{
+        background: url('https://res.cloudinary.com/dp92qug2f/image/upload/v1685366545/Ecell%20website/collaboration%20backgrounds/S.S.Start_im4suh.webp');
+        position: relative;
+       justify-content: center;
+       align-items: center;
+       background-position:center;
+       background-repeat: no-repeat;
+       background-size: contain;
+       padding-bottom: 0;
+       height: 90vh;
+       opacity: 1;
+       padding-top: 3rem;
+    }
     .unacademy-main{
         background: url('https://res.cloudinary.com/dp92qug2f/image/upload/v1678341920/Ecell%20website/collaboration%20backgrounds/Unacademy-compressed_a8pgag.webp');
         position: relative;
@@ -125,7 +152,7 @@
     }
     
     .janta-main{
-        background: url('https://res.cloudinary.com/dp92qug2f/image/upload/v1678341972/Ecell%20website/collaboration%20backgrounds/Cognizant_Mangalore_Feb7_2020_2_1581097237290_1581335758668-compressed_o4homm.webp');
+        background: url('https://res.cloudinary.com/dp92qug2f/image/upload/v1685368953/Ecell%20website/collaboration%20backgrounds/Janta-group_ddbgea.webp');
         position: relative;
        justify-content: center;
        align-items: center;
@@ -139,7 +166,7 @@
     }
     
     .vedantu-main{
-        background: url('https://res.cloudinary.com/dp92qug2f/image/upload/v1685003501/Ecell%20website/collaboration%20backgrounds/gfg_bg_wgyufn.webp');
+        background: url('https://res.cloudinary.com/dp92qug2f/image/upload/v1685365530/geeks_for_geeks_vqzx6g.webp');
         position: relative;
        justify-content: center;
        align-items: center;
@@ -152,8 +179,21 @@
        padding-top: 3rem;
     }
     
+    .stockgro-main{
+        background: url('https://res.cloudinary.com/dp92qug2f/image/upload/v1685365530/Stockgro_q6aqrf.webp');
+        position: relative;
+       justify-content: center;
+       align-items: center;
+       background-position:center;
+       background-repeat: no-repeat;
+       background-size: cover;
+       padding-bottom: 0;
+       height: 90vh;
+       opacity: 1;
+       padding-top: 3rem;
+    }
     .cocacola-main{
-        background: url('https://res.cloudinary.com/dp92qug2f/image/upload/v1685003961/Ecell%20website/collaboration%20backgrounds/truscholar_bg_ziyrqj.webp');
+        background: url('https://res.cloudinary.com/dp92qug2f/image/upload/v1685364813/Ecell%20website/collaboration%20backgrounds/truscholar_ftiiei.webp');
         position: relative;
        justify-content: center;
        align-items: center;
@@ -167,7 +207,7 @@
     }
     
     .ieee-main{
-        background: url('https://res.cloudinary.com/dp92qug2f/image/upload/v1678342106/Ecell%20website/collaboration%20backgrounds/IEEE-compressed_n7szc0.webp');
+        background: url('https://res.cloudinary.com/dp92qug2f/image/upload/v1685365641/assam_startup_ewttjk.webp');
         position: relative;
         justify-content: center;
         align-items: center;
@@ -182,7 +222,21 @@
     }
     
     .pnb-main{
-        background: url('https://res.cloudinary.com/dp92qug2f/image/upload/v1678342143/Ecell%20website/collaboration%20backgrounds/PNB-compressed_whhy37.webp');
+        background: url('https://res.cloudinary.com/dp92qug2f/image/upload/v1685364814/Ecell%20website/collaboration%20backgrounds/Punjab_national_bank_k5lvqs.webp');
+        position: relative;
+       justify-content: center;
+       align-items: center;
+       background-position:center;
+       background-repeat: no-repeat;
+       background-size: cover;
+       padding-bottom: 0;
+       height: 90vh;
+       opacity: 1;
+       padding-top: 3rem;
+    }
+
+    .lwt-main{
+        background: url('https://res.cloudinary.com/dp92qug2f/image/upload/v1685364813/Ecell%20website/collaboration%20backgrounds/Travelling_while_learning_b45snu.webp');
         position: relative;
        justify-content: center;
        align-items: center;
@@ -195,6 +249,19 @@
        padding-top: 3rem;
     }
     
+    .ehub-main{
+        background: url('https://res.cloudinary.com/dp92qug2f/image/upload/v1685365212/Engineer_hub_nkfq82.webp');
+        position: relative;
+       justify-content: center;
+       align-items: center;
+       background-position:center;
+       background-repeat: no-repeat;
+       background-size: cover;
+       padding-bottom: 0;
+       height: 90vh;
+       opacity: 1;
+       padding-top: 3rem;
+    }
  .edtimes-main{
     background: url('https://res.cloudinary.com/dp92qug2f/image/upload/v1685354621/Ecell%20website/blog_bg_vbqias.webp');
         position: relative;
@@ -207,6 +274,34 @@
        height: 90vh;
        opacity: 1;
        padding-top: 3rem;
+ }
+
+ .finlatics-main{
+    background: url('https://res.cloudinary.com/dp92qug2f/image/upload/v1685364813/Ecell%20website/collaboration%20backgrounds/Finlatics_sd9fth.webp');
+    position: relative;
+   justify-content: center;
+   align-items: center;
+   background-position:center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   padding-bottom: 0;
+   height: 90vh;
+   opacity: 1;
+   padding-top: 3rem;
+ }
+
+ .ivy-main{
+    background: url('https://res.cloudinary.com/dp92qug2f/image/upload/v1685364812/Ecell%20website/collaboration%20backgrounds/Ivy_camp_bvdulr.webp');
+    position: relative;
+   justify-content: center;
+   align-items: center;
+   background-position:center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   padding-bottom: 0;
+   height: 90vh;
+   opacity: 1;
+   padding-top: 3rem;
  }
 
     .collab-content{
@@ -235,6 +330,14 @@
 
     .njkl021 img{
         filter: grayscale(0);
+    }
+
+    .yenbg{
+        background-image: url(https://res.cloudinary.com/dp92qug2f/image/upload/v1685366650/Ecell%20website/collaboration%20backgrounds/Young_entrepreneur_network_xaqmip.webp);
+    }
+
+    .anterpreenabg{
+        background-image: url("https://res.cloudinary.com/dp92qug2f/image/upload/v1685366807/Ecell%20website/collaboration%20backgrounds/Anterprerna_1_o48vay.webp");
     }
 
     @media only screen and (max-width:1100px) and (min-width:662px){
