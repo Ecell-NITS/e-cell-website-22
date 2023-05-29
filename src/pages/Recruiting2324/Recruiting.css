@@ -1,0 +1,220 @@
+.topbgrecuit{
+    position: relative;
+    padding-top: 4rem;
+    height: 40vw;
+    background: url("https://res.cloudinary.com/dp92qug2f/image/upload/v1685070970/Ecell%20website/recruitment/WhatsApp_Image_2023-05-26_at_08.42.10_yns82i.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+}
+
+.titlerecuit{
+    position: absolute;
+    top: 32%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 7.5vw;
+    font-weight: 900;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+.titlerecuit-for{
+    position: absolute;
+    top: 54%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 7.5vw;
+    font-weight: 900;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+.titlerecuit-tenure{
+    position: absolute;
+    top: 78%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 7.5vw;
+    font-weight: 900;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+.toprecuitcontent{
+    margin: 5vw 3.5vw;
+}
+
+.toprecuitcontent h2{
+    color: rgba(34, 66, 89, 1);
+    font-weight: 400;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.recruitingmain{
+    margin: 1.5vw 8vw;
+}
+
+.common-form-recuit{
+    font-weight: 900;
+    color: rgba(62, 97, 142, 1);
+    font-size: 2vw;
+    margin: 1.5vw 0;
+}
+
+.input-common-recruit{
+    display: block;
+    width: 100%;
+    border: solid 2px rgba(62, 97, 142, 1);
+    border-radius: 10px;
+    padding: .5vw;
+    color: rgba(62, 97, 142, 1);
+    font-weight: 600;
+    font-size: 1.6vw;
+    letter-spacing: .5px;
+    /* font-family: 'Nunito', sans-serif; */
+    /* font-family: 'Roboto', sans-serif; */
+}
+
+
+.radioinpt{
+    display: flex;
+    font-size: 1.6vw;
+    cursor: pointer;
+    font-weight: 600;
+    color: rgba(34, 66, 89, 1);
+}
+
+.radioinpt input{
+    margin-right: .5vw;
+}
+
+.branchradio{
+    font-size: 5vw;
+}
+
+.btnotpsend{
+    background-color: rgba(62, 97, 142, 1);
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    padding: .5vw 1.5vw;
+    font-size: 1.4vw;
+    margin: 1.5vw 0 0 0;
+}
+
+.robottxt{
+    color: rgba(62, 97, 142, 1);
+    font-size: 1.6vw;
+    font-weight: 900;
+}
+
+.robotinptt{
+    display: inline !important;
+    border: solid 2px rgba(62, 97, 142, 1);
+    border-radius: 10px;
+    padding: .5vw;
+    color: rgba(62, 97, 142, 1);
+    font-weight: 600;
+    font-size: 1.6vw;
+    letter-spacing: .5px;
+}
+
+.submtformrecuit{
+    display: block;
+    background-color: rgba(62, 97, 142, 1);
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    padding: .5vw 1.5vw;
+    font-size: 2vw;
+    margin: 3.5vw auto;
+}
+
+.statusmsgssubmt{
+    text-align: center;
+    font-size: 1.5vw;
+    color: rgba(34, 66, 89, 1);
+}
+
+.reqdinput{
+    color: red;
+}
+
+@media (max-width:660px){
+    .topbgrecuit{
+        position: relative;
+        padding-top: 4rem;
+        height: 100vw;
+        background: url("https://res.cloudinary.com/dp92qug2f/image/upload/v1685070970/Ecell%20website/recruitment/WhatsApp_Image_2023-05-26_at_08.42.10_yns82i.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-x: center;
+        background-position-y: center;
+    }
+
+    .titlerecuit,.titlerecuit-for, .titlerecuit-tenure{
+        font-size: 15vw;
+    }
+
+    .tenure-recuit{
+        display: none;
+    }
+
+    .toprecuitcontent{
+        margin: 10vw 7vw;
+    }
+
+    .common-form-recuit{
+        font-size: 5vw;
+        margin: 8vw 0 3vw 0;
+    }
+
+    .input-common-recruit{
+        font-size: 4.9vw;
+        padding: 1vw 2vw;
+    }
+
+    .radioinpt{
+        font-size: 4.9vw;
+    }
+    
+    .radioinpt input{
+        margin-right: 1.5vw;
+    }
+
+    .btnotpsend{
+        padding: 1.5vw 3.5vw;
+        font-size: 4vw;
+        margin: 3.2vw 0 0 0;
+    }
+
+    .robottxt{
+        font-size: 5vw;
+    }
+
+    .robotinptt{
+        padding: 1vw 2vw;
+        font-size: 4vw;
+        letter-spacing: .5px;
+    }
+
+    .submtformrecuit{
+        padding: 2vw 7vw;
+        font-size: 5vw;
+        margin: 20vw auto;
+    }
+
+    .statusmsgssubmt{
+        font-size: 5vw;
+        margin-top: 2vw;
+    }
+}

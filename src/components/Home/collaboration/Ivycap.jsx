@@ -2,9 +2,9 @@ import React from 'react'
 
 const Ivycap = () => {
     return (
-        <div className="cocacola-main">
+        <div className="ivy-main">
             <div className="collab-content">
-                <p>In order to create tamper-proof and legitimate digital credentials, certificates, and badges, TruScholar provides a secure infrastructure to universities all over the world. We are proud to have TruScholar on board with us as our Credential partner.</p>
+                <p>IvyCamp, the Indian startup incubator and venture accelerator that offers mentoring, fundraising, and access to corporate partners for startups. This organization basically helps small startups that are just formed with its network of 1,500 mentors and partnerships with venture capital firms, angel investors, and family offices. IvyCamp also collaborates with corporations to help startups in different industries grow and scale their businesses. We feel proud to have such an sponsor for our events under E-cell NIT SIlchar.</p>
             </div>
         </div>
     )

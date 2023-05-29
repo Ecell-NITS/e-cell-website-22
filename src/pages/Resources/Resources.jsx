@@ -1,9 +1,9 @@
 import React, {useEffect} from "react";
-import Footer from "../../components/shared/Footer/Footer.tsx";
+import Footer from "../../components/shared/Footer/Footer";
 import NavbarTeam from "../../components/shared/Navbar/NavbarTeam";
 import "./Resources.css";
 import BooksSummary from "../../components/ResourceModal/BooksSummary";
-import PodcastSummary from "../../components/ResourceModal/PodcastSummary";
+// import PodcastSummary from "../../components/ResourceModal/PodcastSummary";
 
 const Resources = () => {
   useEffect(() => {
@@ -16,7 +16,7 @@ const Resources = () => {
         <h1>Resources</h1>
       </div>
       <BooksSummary />
-      <PodcastSummary />
+      {/* <PodcastSummary /> */}
       <Footer />
     </>
   );

@@ -2,9 +2,9 @@ import React from 'react'
 
 const Kwikpic = () => {
     return (
-        <div className="cocacola-main">
+        <div className="kwikpic-main">
             <div className="collab-content">
-                <p>In order to create tamper-proof and legitimate digital credentials, certificates, and badges, TruScholar provides a secure infrastructure to universities all over the world. We are proud to have TruScholar on board with us as our Credential partner.</p>
+                <p>We are delighted to have Kwikpic as our sponsor, a Mumbai-based AI-powered photo-sharing software. Kwikpic simplifies the process of sharing moments by establishing groups and automatically identifying and notifying our loved ones. With 99.9% accuracy, Kwikpic saves us time in sorting and selecting the best event pictures for our socials. It's a game-changing tool that enhances our photo-sharing experience. We are extremely grateful to Kwikpic for their support in making memories more memorable.</p>
             </div>
         </div>
     )

@@ -294,6 +294,10 @@ margin-bottom: 1vw;
 
 
 @media only screen and (max-width:660px) {
+  .footer-section{
+    background-attachment: scroll;
+  }
+  
   .img-foot-centr{
     height: 106px;
     width: 82px;

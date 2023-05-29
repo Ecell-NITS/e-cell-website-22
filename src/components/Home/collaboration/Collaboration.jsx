@@ -10,7 +10,7 @@ import Jantagrp from '../collaboration/Jantagrp';
 import Pnb from '../collaboration/Pnb';
 import Kwikpic from './Kwikpic'
 import Ssstart from './Ssstart';
-import Allay from './Allay';
+// import Allay from './Allay';
 import EngineerHub from './EngineerHub';
 import StockGro from './StockGro';
 import Yen from './Yen';
@@ -18,6 +18,7 @@ import Anterprerna from './Anterprerna';
 import Ivycap from './Ivycap';
 import Finlatics from './Finlatics';
 import LearnTravel from './LearnTravel';
+import Edtimes from './Edtimes';
 const Collaboration = () => {
     const config = {
         rootMargin: "0px 0px 0px 0px",
@@ -56,7 +57,7 @@ const Collaboration = () => {
     function swipecollabPrev() {
         collabHolder.current.scrollLeft -= (collabHolder.current.offsetWidth);
     };
-    const [accollab, setAcccollab] = useState("Rupay")
+    const [accollab, setAcccollab] = useState("Edtimes")
 
     return (
         <>
@@ -67,6 +68,15 @@ const Collaboration = () => {
             <div className="top-segment">
                 <div className="btn-junior" ref={collabHolder}>
                     {/* <div className="slide-track-m"> */}
+                    <div id='tbn-indi-collab-po' className={`Edtimes ${accollab === "Edtimes" ? " njkl021" : ""}`}>
+                        <button
+                            id="btn-collab-indi-po"
+                            onClick={() => { setAcccollab("Edtimes") }}>
+                            <img className={`${loaded ? "loaded" : "loading"} ru-collab`}
+                                onLoad={() => setIsLoaded(true)} src="" data-src="https://res.cloudinary.com/dp92qug2f/image/upload/v1685354010/Ecell%20website/edtimes_logo_bhl4ec.webp" alt="Rupay" />
+                        </button>
+                    </div>
+
                     <div id='tbn-indi-collab-po' className={`Rupay ${accollab === "Rupay" ? " njkl021" : ""}`}>
                         <button
                             id="btn-collab-indi-po"
@@ -132,12 +142,12 @@ const Collaboration = () => {
                         </button>
                     </div>
 
-                    <div id='tbn-indi-collab-po' className={`Allay ${accollab === "Allay" ? " njkl021" : ""}`}>
+                    {/* <div id='tbn-indi-collab-po' className={`Allay ${accollab === "Allay" ? " njkl021" : ""}`}>
                         <button id="btn-collab-indi-po"
                             onClick={() => { setAcccollab("Allay") }}>
                             <img className={`${loaded ? "loaded" : "loading"} ru-collab`} onLoad={() => setIsLoaded(true)} src="" data-src="https://res.cloudinary.com/dp92qug2f/image/upload/v1676988923/collaboration-ecell/allayRes_bljauc.png" alt="PNB" />
                         </button>
-                    </div>
+                    </div> */}
 
                     <div id='tbn-indi-collab-po' className={`EngineerHub ${accollab === "EngineerHub" ? " njkl021" : ""}`}>
                         <button id="btn-collab-indi-po"
@@ -198,6 +208,7 @@ const Collaboration = () => {
                         <AiOutlineArrowRight className="btn-indi-testimonial" />
                     </button>
                 </div>
+                {accollab === "Edtimes" && <Edtimes />}
                 {accollab === "Rupay" && <Rupay />}
                 {accollab === "Unacademy" && <Unacademy />}
                 {accollab === "Vedantu" && <Vedantu />}
@@ -207,7 +218,7 @@ const Collaboration = () => {
                 {accollab === "Punjab National Bank" && <Pnb />}
                 {accollab === "Kwikpic" && <Kwikpic />}
                 {accollab === "Ssstart" && <Ssstart />}
-                {accollab === "Allay" && <Allay />}
+                {/* {accollab === "Allay" && <Allay />} */}
                 {accollab === "EngineerHub" && <EngineerHub />}
                 {accollab === "StockGro" && <StockGro />}
                 {accollab === "Yen" && <Yen />}

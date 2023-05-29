@@ -1,8 +1,5 @@
 import React, { useState } from "react";
 import "./Footer.css";
-// import { Formik, Form, Field, ErrorMessage, FormikHelpers } from "formik";
-// import * as Yup from "yup";
-// import Label from "./Label";
 import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { BiUserCircle } from "react-icons/bi";
 import { MdLocationOn } from "react-icons/md";
@@ -11,75 +8,67 @@ import { BsFillTelephoneFill } from "react-icons/bs";
 import { FiMail } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import Ip from "../User/Ip";
-import db from "./Firebase";
-import firebase from "firebase/compat/app";
-import "firebase/firestore";
-
+import axios from 'axios';
 const Footer = () => {
-  const [input, setInput] = useState("");
-  const inputHandler = (e: {
-    target: { value: React.SetStateAction<string> };
-  }) => {
-    setInput(e.target.value);
+  const [email, setEmail] = useState("");
+  const isFormValid = () => {
+    return email !== "";
   };
-  const submitHandler = (e: { preventDefault: () => void }) => {
-    e.preventDefault();
-    if (input) {
-      console.log(input);
 
-      db.collection("emails").add({
-        email: input,
-        time: firebase.firestore.FieldValue.serverTimestamp(),
-      });
-      setInput("");
-      alert(
-        "Congratulations! You have successfully subscribed to our Newsletter! 🎉"
-      );
+  const isValidEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  const [checkingemail, setCheckingemail] = useState(false)
+
+  const createUser = async (event) => {
+    event.preventDefault();
+
+    if (!isFormValid()) {
+      alert("Please fill all the required fields");
+      return;
     }
+
+    if (!isValidEmail(email)) {
+      alert("Please enter a correct email");
+      return;
+    }
+
+    setCheckingemail(true)
+    try {
+      const response = await axios.post(
+        process.env.REACT_APP_AXIOSPOST_CHECKEMAIL_RENDER,
+        // "http://localhost:3001/check-email",
+        {
+          email: email,
+        }
+      );
+
+      if (!response.data.unique) {
+        setCheckingemail(false)
+        alert("You have already subscribed to our newsletter");
+        return;
+      }
+    } catch (error) {
+      console.log("Error checking email uniqueness:", error);
+      alert("An error occurred while checking email uniqueness");
+      setCheckingemail(false)
+      return;
+    }
+
+
+    axios
+      .post(process.env.REACT_APP_AXIOSPOST_POSTMAIN_RENDER, {
+        // .post('http://localhost:3001/createUser', {
+        email
+      })
+      .then((response) => {
+        setEmail("");
+        setCheckingemail(false)
+        alert("Subscribed to Our Newsletter.🥳");
+      });
   };
-  // interface FormValues {
-  //   firstName: string;
-  //   lastName: string;
-  //   email: string;
-  // }
-
-  // const submitForm = async (
-  //   values: FormValues,
-  //   formik: FormikHelpers<FormValues>
-  // ) => {
-  //   console.log(values);
-  //   const { firstName, lastName, email } = values;
-  //   try {
-  //     const payload = {
-  //       merge_fields: {
-  //         FNAME: firstName,
-  //         LNAME: lastName,
-  //       },
-  //       email_address: email,
-  //     };
-
-  //     await axios.post("/.netlify/functions/add-email-subscriber", payload);
-  //     alert(
-  //       "Congratulations! You have successfully subscribed to our newsletter."
-  //     );
-  //     formik.resetForm();
-  //   } catch (error) {
-  //     alert(error.message);
-  //   }
-  // };
-
-  // const signUpSchema = Yup.object().shape({
-  //   firstName: Yup.string()
-  //     .min(3, "Too Short bruhh!")
-  //     .max(20, "Too long bruhh!")
-  //     .required("Required!"),
-
-  //   lastName: Yup.string()
-  //     .min(3, "Too Short bruhh!")
-  //     .max(20, "Too long bruhh!"),
-
-  //   email: Yup.string().email("Invalid email!").required("Required!"),
-  // });
 
   return (
     <div className="footer-section">
@@ -174,28 +163,22 @@ const Footer = () => {
             Keep yourself updated. Subscribe to our newsletter
           </p>
 
-          <form onSubmit={submitHandler} className="newsletterform00">
+          <form className="newsletterform00">
             <div className="fill">
               <input
                 type="email"
-                required
-                onChange={inputHandler}
-                placeholder="Your Email"
-                value={input}
-                className="inputtakingnewsletter"
+                placeholder="Your email"
+                value={email}
+                onChange={(event) => {
+                  setEmail(event.target.value);
+                }}
               />
-              <button type="submit" className="btnnewsformletter">
-                {" "}
+              <button onClick={createUser} className="btnnewsformletter">
                 <MdSend className="send" />
-              </button>{" "}
+              </button>
             </div>
           </form>
-
-          {/* <form onSubmit={submitHandler} className="newsletterform00">
-            <label htmlFor="email">Email<span style={{color:'red'}}>*</span></label>
-            <input type="email" required onChange={inputHandler} placeholder="john@doe.com" value={input} />
-            <button type="submit">Subscribe</button>
-          </form> */}
+          {checkingemail && <p>Verifying email...</p>}
         </div>
         <div className="container5">
           <p className="p2">All Rights Reserved @E-Cell, NIT Silchar </p>

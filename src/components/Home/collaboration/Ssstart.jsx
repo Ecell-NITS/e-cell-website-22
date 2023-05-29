@@ -2,9 +2,9 @@ import React from 'react'
 
 const Ssstart = () => {
     return (
-        <div className="cocacola-main">
+        <div className="ssstart-main">
             <div className="collab-content">
-                <p>In order to create tamper-proof and legitimate digital credentials, certificates, and badges, TruScholar provides a secure infrastructure to universities all over the world. We are proud to have TruScholar on board with us as our Credential partner.</p>
+                <p>We are privileged to be sponsored by S.S.Start, a pioneering organization that revolutionizes human communication. With their innovative methodologies and playful yet professional approach, S.S.Start challenges conventional norms. Through workshops, awareness programs, and advocacy campaigns, they normalize diverse speech disabilities and communication styles. We are grateful for their support in transforming communication norms and embracing inclusivity.</p>
             </div>
         </div>
     )
