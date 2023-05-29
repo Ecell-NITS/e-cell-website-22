@@ -78,8 +78,8 @@
          "rank": "Content Co-Heads ",
          "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1685376231/23-24%20core/IMG_20230410_212104_480_-_ECE_144_Uttirna_Talukdar_1_magstj.webp",
          "fb": "https://www.facebook.com/uttirna.talukdar?mibextid=ZbWKwL",
-         "linkdln": "https://in.linkedin.com/in/vanshkumarpoddar",
-         "git": "https://github.com/Vansh156"
+         "linkdln": "https://www.linkedin.com/in/uttirna-talukdar/",
+         "git": "https://github.com/Uttirna14"
      },
  
     {
@@ -195,6 +195,16 @@
              "linkdln": "https://www.linkedin.com/in/bipangshu-saha-2aab9b228/",
              "git": "https://github.com/BIPS8812"
             },
+            
+         {
+            "id": 27,
+             "name": "Maharnav Deka",
+            "rank": "Senior Technical Associate",
+             "image": "https://res.cloudinary.com/duejpnj1y/image/upload/v1679413749/Juniordev/Maharnav_Deka_x5edso.webp",
+             "fb": "https://www.facebook.com/profile.php?id=100076295825121",
+             "linkdln": "https://www.linkedin.com/in/maharnav-deka-06742815a/",
+             "git": "https://github.com/mdekaa"
+          },
             {
                 "id": 22,
                  "name": "Devanshu Singh",
@@ -239,15 +249,6 @@
                                  "fb": "https://www.facebook.com/profile.php?id=100073130336199",
                                  "linkdln": "https://in.linkedin.com/in/vanshkumarpoddar",
                                  "git": "https://github.com/Vansh156"
-                            },
-                            {
-                                "id": 27,
-                                 "name": "Maharnav Deka",
-                                 "rank": "Senior Technical Associate",
-                                 "image": "https://res.cloudinary.com/duejpnj1y/image/upload/v1679413749/Juniordev/Maharnav_Deka_x5edso.webp",
-                                 "fb": "https://www.facebook.com/profile.php?id=100076295825121",
-                                 "linkdln": "https://www.linkedin.com/in/maharnav-deka-06742815a/",
-                                 "git": "https://github.com/mdekaa"
-                                }
+                            }
  
                             ]
