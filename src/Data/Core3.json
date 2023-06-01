@@ -120,6 +120,15 @@
         "linkdln": "https://www.linkedin.com/in/priyajit-paul-4b4840213/",
         "git": "https://github.com/Priyajit27"
     },
+    {
+        "id": 27,
+         "name": "Protoy Debroy",
+         "rank": "Marketing Head",
+         "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1685605007/WhatsApp-Image-2023-05-30-at-19.42.42-ECE_064-Protoy-Debroy_heer3b.webp",
+         "fb": "https://www.facebook.com/profile.php?id=100076149041275",
+         "linkdln": "https://www.linkedin.com/in/protoy-debroy-593561256/",
+         "git": "https://github.com/protoy2003debroy"
+     },
     
    
    {
@@ -249,6 +258,15 @@
                                  "fb": "https://www.facebook.com/profile.php?id=100073130336199",
                                  "linkdln": "https://in.linkedin.com/in/vanshkumarpoddar",
                                  "git": "https://github.com/Vansh156"
+                            },
+                            {
+                                "id": 28,
+                                 "name": "Bikash Baruah",
+                                 "rank": "Senior Associate",
+                                 "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1685605007/picture-ECE_093_Bikash_ytxjmx.webp",
+                                 "fb": "https://www.facebook.com/bikash.baruah.23/",
+                                 "linkdln": "https://www.linkedin.com/in/bikash-baruah-89426a231/",
+                                 "git": "https://github.com/Bikashxb"
                             }
  
                             ]
