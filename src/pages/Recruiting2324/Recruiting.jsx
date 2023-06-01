@@ -63,7 +63,7 @@ const Recruiting = () => {
             whyecell !== "" &&
             mobileno !== "" &&
             branch !== "" &&
-            scholarId !== "" && resume !== ""  && techteam !== ""
+            scholarId !== "" && resume !== "" && techteam !== ""
             // team.length > 0
             // poster !== ""
         );
@@ -221,7 +221,7 @@ const Recruiting = () => {
         axios
 
             .post(process.env.REACT_APP_RECRUITMENT_CREATE, {
-            // .post('http://localhost:3001/createUser', {
+                // .post('http://localhost:3001/createUser', {
                 name,
                 mobileno,
                 whyecell,
@@ -230,7 +230,7 @@ const Recruiting = () => {
                 scholarId,
                 timestamp,
                 // poster,
-                resume,  techteam
+                resume, techteam
             })
             .then((response) => {
                 setName("");
@@ -298,7 +298,7 @@ const Recruiting = () => {
             </div>
 
             <div className="toprecuitcontent">
-                <h2>Lorem ipsum dolor sit amet consectetur. Malesuada mauris auctor nisl pellentesque facilisis ornare euismod sit. Fermentum velit cras sed nullam maecenas tincidunt gravida fringilla augue. Dignissim tellus scelerisque a sem penatibus lacus diam quis. Tempus dui enim neque pretium posuere blandit. Cras nullam vulputate eleifend vitae enim morbi adipiscing. Habitasse vestibulum eget sed sed risus sed sed. </h2>
+                <h2>Are you passionate about the entrepreneurial world and are looking for a platform to learn as well as showcase your knowledge? Look no further. The Entrepreneurship Cell (E-Cell) of NIT Silchar is thrilled to announce recruitment of talented individuals for the academic year 2023-2024.<br /><br />At E-Cell, we believe in empowering aspiring individuals to become exceptional communicators and influencers in the entrepreneurial ecosystem. As a part of our team, you will have the opportunity to engage with a diverse audience, promote entrepreneurship, and contribute to our vision of fostering innovation and creativity.<br /><br />So, what are you waiting for? The application forms are on our website, go fill them out and join our mighty league of entrepreneurial mavens E-Cell, NIT Silchar. </h2>
             </div>
 
             <div className='recruitingmain'>
@@ -502,7 +502,7 @@ const Recruiting = () => {
 
 
                 <h3 className='common-form-recuit'>Why do you want to join E-Cell?<span className='reqdinput'>*</span></h3>
-                <input
+                {/* <input
                     type="text"
                     className='input-common-recruit'
                     placeholder="Why do you want to be a part of ecell?"
@@ -510,8 +510,14 @@ const Recruiting = () => {
                     onChange={(event) => {
                         setWhyecell(event.target.value);
                     }}
-                />
+                /> */}
 
+                <textarea typeof='text' rows="3" className='input-common-recruit'
+                    placeholder="Why do you want to be a part of ecell?"
+                    value={whyecell}
+                    onChange={(event) => {
+                        setWhyecell(event.target.value);
+                    }}></textarea>
 
 
                 <h3 className='common-form-recuit'>Resume Link (Upload in Google Drive)<span className='reqdinput'>*</span></h3>
