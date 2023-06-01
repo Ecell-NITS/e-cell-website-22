@@ -44,7 +44,7 @@ const NavbarTeam = () => {
       {/* <li>  <NavHashLink to="/#aboutecell">ABOUT US</NavHashLink></li> */}
         {/* <li><a href="/#aboutecellnits">ABOUT</a></li> */}
         <li> <NavLink to="/events">EVENTS</NavLink></li>
-        {/* <li><NavLink to="/resources">RESOURCES</NavLink></li> */}
+        <li><NavLink to="/resources">RESOURCES</NavLink></li>
         {/* <li><a href="https://srijan-nits.in/" rel="noreferrer" target="_blank">SRIJAN</a></li> */}
         <li><NavLink to="/team">OUR TEAM</NavLink></li>
         <li><NavLink to="/gallery">GALLERY</NavLink></li>
