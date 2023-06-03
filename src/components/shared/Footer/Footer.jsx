@@ -88,7 +88,7 @@ const Footer = () => {
           <ul className="no-bullets">
             <li>
               <BiUserCircle className="f_icon" />
-              <span className="i-text"> Entrepreneur</span>
+              <span className="i-text">StartUp Center</span>
             </li>
             <a
               href="https://www.google.com/maps/place/Startup+Centre,+NIT+Silchar/@24.7579056,92.7889985,19z/data=!4m15!1m8!3m7!1s0x374e491f73d2d93d:0x40b0c4ddd14239f4!2sStartup+Centre,+NIT+Silchar!8m2!3d24.7577034!4d92.7895376!10e5!16s%2Fg%2F11h1klwlpg!3m5!1s0x374e491f73d2d93d:0x40b0c4ddd14239f4!8m2!3d24.7577034!4d92.7895376!16s%2Fg%2F11h1klwlpg"
@@ -115,7 +115,7 @@ const Footer = () => {
               {" "}
               <li>
                 <BsFillTelephoneFill className="f_icon" />
-                <span className="i-text">+91 6263 943 064</span>
+                <span className="i-text">+91 70803 21990</span>
               </li>
             </a>
           </ul>
