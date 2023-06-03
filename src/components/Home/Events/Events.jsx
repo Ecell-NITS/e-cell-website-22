@@ -1,12 +1,9 @@
 import React from "react";
 import "./Events.css";
-import { useNavigate } from "react-router-dom";
+
 function Events() {
-  let navigate = useNavigate();
-  const routeChange = () => {
-    let path = `/events_red`;
-    navigate(path);
-  };
+ 
+ 
   return (
     <>
       <div className="event_main">
@@ -37,7 +34,7 @@ function Events() {
               module to bring out the true start-up geek in students.
             </div>
           </div>
-          <div className=" ev item3" onClick={() => routeChange()}>
+          <div className=" ev item3">
             <h2 className="item-head">SRIJAN</h2>
             <div className="event_child">
               Srijan is the flagship event of the Entrepreneurship Cell of NIT
