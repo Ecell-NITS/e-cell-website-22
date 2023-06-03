@@ -53,7 +53,11 @@ const BooksSummary = () => {
     return (
         <>
             <div className="collab">
-                <h1 style={{ userSelect: "none" }}>BOOKS RECOMMENDATIONS</h1>
+                <h1 style={{ userSelect: "none" }}>BOOK RECOMMENDATIONS</h1>
+            </div>
+
+            <div className="toprecuitcontent fdfdfere">
+                <h2>When Elon Musk was asked how he learned to build rockets, he gave a simple and striking answer: “I read books”. Here are some recommendations to read which are on the list of every entrepreneur out there! </h2>
             </div>
 
             <div className="resources-indi" ref={resourcesHolder}>

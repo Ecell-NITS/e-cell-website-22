@@ -1,0 +1,272 @@
+[
+    {
+        "id": 1,
+        "name": "Shriyal Tandon",
+        "rank": "President",
+        "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1685375276/23-24%20core/IMG_1502_-_E-Cell_NIT_Silchar_bn00rj.webp",
+        "fb": "https://www.facebook.com/shriyal.tandon.7?mibextid=LQQJ4d",
+        "linkdln": "https://www.linkedin.com/in/shriyal-tandon-39717b200",
+        "git": "https://github.com/shriyal22"
+    },
+    {
+        "id": 13,
+         "name": "Mrinal kalita ",
+         "rank": "General Secretary ",
+         "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1685375264/23-24%20core/IMG_Mon_May_08_14_10_52_GMT05_30_2023_-_ECE-A027_MRINAL_KALITA_izmoqr.webp",
+         "fb": "https://www.facebook.com/mrinal.kalita.549436",
+         "linkdln": "http://linkedin.com/in/mrinal-kalita-281190217",
+         "git": "https://github.com/mrinalpy20"
+     },
+    {
+       "id": 2,
+       "name": "Arpit Dhankani",
+       "rank": "Vice President",
+       "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1685375265/23-24%20core/IMG_20230209_000433_-_EEB_143_Arpit_1_yk76xm.webp",
+       "fb": "https://www.facebook.com/arpit.dhankani?mibextid=ZbWKwL",
+       "linkdln": "https://www.linkedin.com/in/arpit-dhankani-27238b219/",
+       "git": "https://github.com/ArpitDhankani"
+ 
+    },
+    {
+        "id": 3,
+         "name": "Chayan Gulgulia",
+         "rank": "Executive Co-Head",
+         "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1685375273/23-24%20core/IMG_5310-min_-_CE_131_Chayan_Gulgulia_1_lcfy8e.webp",
+         "fb": "https://www.facebook.com/karya.jain.3/",
+         "linkdln": "https://www.linkedin.com/in/chayan-gulgulia/",
+         "git": "https://github.com/chayanjn24"
+     },
+     {
+        "id": 4,
+         "name": "Aditi Archita Khataniar ",
+         "rank": "Executive Co-Head",
+         "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1685375265/23-24%20core/IMG_20230227_011043_369_-_CSE_185_Aditi_Archita_Khataniar_1_sjuylx.webp",
+         "fb": "https://www.facebook.com/mumpyyyyyyy?mibextid=ZbWKwL",
+         "linkdln": "https://www.linkedin.com/in/aditi-archita-khataniar-2189a3226 ",
+         "git": "https://github.com/adzzzzzzzz"
+     },
+    {
+       "id": 5,
+       "name": "Aditya Ranjan",
+       "rank": "Technical Co-Head",
+       "image": "https://res.cloudinary.com/dp92qug2f/image/upload/v1681359339/perosnal/edited_aditya_ranjan_lyx5ns.webp",
+       "fb": "https://www.facebook.com/profile.php?id=100076402945936",
+       "linkdln": "https://www.linkedin.com/in/aditya-ranjan-77a6a522b/",
+       "git": "https://github.com/hereisadi"
+    },
+    {
+        "id": 6,
+        "name": "Aditya Kumar",
+        "rank": "Technical Co-Head",
+        "image": "https://res.cloudinary.com/dnvhl9pru/image/upload/v1681064509/proflie-picpng_2-removebg-preview_qeckz9.webp",
+        "fb": "https://www.facebook.com/profile.php?id=100071791456601&mibextid=ZbWKwL",
+        "linkdln": "https://www.linkedin.com/in/adityakr31",
+        "git": "https://github.com/31adityakumar"
+     },
+     {
+        "id": 11,
+         "name": "Vidhi Shrimali ",
+         "rank": "Content Co-Heads",
+         "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1685375287/23-24%20core/IMG_20220629_190742_-_CE050_Vidhi_Shrimali_1_lnovlx.webp",
+         "fb": "https://www.facebook.com/profile.php?id=100076114603753&mibextid=ZbWKwL",
+         "linkdln": "https://www.linkedin.com/in/vidhi-shrimali-87164422b",
+         "git": "#"
+     },
+     {
+        "id": 12,
+         "name": "Uttirna Talukdar ",
+         "rank": "Content Co-Heads ",
+         "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1685376231/23-24%20core/IMG_20230410_212104_480_-_ECE_144_Uttirna_Talukdar_1_magstj.webp",
+         "fb": "https://www.facebook.com/uttirna.talukdar?mibextid=ZbWKwL",
+         "linkdln": "https://www.linkedin.com/in/uttirna-talukdar/",
+         "git": "https://github.com/Uttirna14"
+     },
+ 
+    {
+       "id": 7,
+        "name": "Amrita Kashyap",
+        "rank": "Design Co-Head",
+        "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1685376231/23-24%20core/20220711_023231_204_-_ECE_016_Amrita_Kashyap_1_1_vf3gxe.webp",
+        "fb": "https://www.facebook.com/profile.php?id=100076495782914&sk=about_overview",
+        "linkdln": "https://www.linkedin.com/in/amrita-kashyap-a33069230",
+        "git": "https://github.com/amrita7734"   
+   },
+    {
+       "id": 8,
+       "name": "Ashutosh Ojha",
+       "rank": "Design Co-Head",
+       "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1685375277/23-24%20core/Ashutosh_-_EEB_121_Ashutosh_ebhxkb.webp",
+       "fb": "https://www.facebook.com/profile.php?id=100073385629944",
+       "linkdln": "https://www.linkedin.com/in/ashutosh-ojha-850353227",
+       "git": "https://github.com/ashutoshkr7070"
+    },
+
+    
+    {
+       "id": 9,
+        "name": "Rituraj Gautam",
+        "rank": "Collaboration & Outreach Co-Head",
+        "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1685375264/23-24%20core/IMG_20230524_000513_-_Rituraj_xap1sh.webp",
+        "fb": "https://www.facebook.com/thisisrg/",
+        "linkdln": "https://www.linkedin.com/in/riturajgautam/",
+        "git": "https://github.com/yourgitcoder"
+    },
+    {
+       "id": 10,
+        "name": "Priyajit Paul",
+        "rank": "Collaboration & Outreach Co-Head",
+        "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1685375280/23-24%20core/WhatsApp-Image-2023-05-24-at-10.44.39-PM-14_Priyajit-_Paul_tp7p1u.webp",
+        "fb": "https://www.facebook.com/priyajit.paul.75",
+        "linkdln": "https://www.linkedin.com/in/priyajit-paul-4b4840213/",
+        "git": "https://github.com/Priyajit27"
+    },
+    {
+        "id": 27,
+         "name": "Protoy Debroy",
+         "rank": "Marketing Head",
+         "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1685605007/WhatsApp-Image-2023-05-30-at-19.42.42-ECE_064-Protoy-Debroy_heer3b.webp",
+         "fb": "https://www.facebook.com/profile.php?id=100076149041275",
+         "linkdln": "https://www.linkedin.com/in/protoy-debroy-593561256/",
+         "git": "https://github.com/protoy2003debroy"
+     },
+    
+   
+   {
+      "id": 14,
+       "name": "Vedant Agarwal ",
+       "rank": "Event Management Co-Head",
+       "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1685375263/23-24%20core/Screenshot_20230524_230007_-_CSE_128_Vedant_sxtc05.webp",
+       "fb": "https://www.facebook.com/vedant.agarwal.14811",
+       "linkdln": "https://www.linkedin.com/in/vedant-agarwal-30984222b/",
+       "git": "https://github.com/VAO2"
+   },
+   {
+    "id": 15,
+     "name": "Somya Kasaudhan ",
+     "rank": "Event Management Co-Head ",
+     "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1685375281/23-24%20core/WhatsApp-Image-2023-05-27-at-09.05.18-173_-Somya_Kasaudhan_bfmlfn.webp",
+     "fb": "https://www.facebook.com/profile.php?id=100076107792266",
+     "linkdln": "https://www.linkedin.com/in/somya-kasaudhan-365133229/",
+     "git": "https://github.com/somyakasaudhan02"
+ },
+   {
+      "id": 16,
+       "name": "Ankit Upadhaya ",
+       "rank": "Curation Head",
+       "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1685375264/23-24%20core/IMG_20230526_101749_-_EI087_Ankit_Upadhaya_aourw8.webp",
+       "fb": "https://www.facebook.com/profile.php?id=100004528696175&mibextid=ZbWKwL",
+       "linkdln": "https://www.linkedin.com/in/ankit-upadhaya07",
+       "git": "http://github.com/ankit07an"
+   },
+   
+   {
+      "id": 17,
+       "name": "Abhishek Kumar Prasad ",
+       "rank": "Publicity Co-heads",
+       "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1685375275/23-24%20core/IMG20230323170310_3_-_CE027_Abhishek_uznhst.webp",
+       "fb": "https://www.facebook.com/profile.php?id=100010634221532",
+       "linkdln": "https://www.linkedin.com/in/abhishek-kumar-prasad-b2220424b",
+       "git": "#"
+   },
+   {
+    "id": 18,
+     "name": "Amlan Mohapatra",
+     "rank": "Publicity Co-heads",
+     "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1685375263/23-24%20core/profile_pic_-_32_Amlan__Mohapatra_jtqkow.webp",
+     "fb": "https://www.facebook.com/amlan.mohapatra2003",
+     "linkdln": "https://www.linkedin.com/in/amlan-mohapatra/",
+     "git": "https://github.com/Amlan-Mohapatra-247"
+    },
+    {
+        "id": 19,
+         "name": "Jacinth Mahanta",
+         "rank": "General Associate",
+         "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1685375281/23-24%20core/Pic-ECE_182_Jacinth-Mahanta_nypvrq.webp",
+         "fb": "https://www.facebook.com/jacinth.mahanta",
+         "linkdln": "https://www.linkedin.com/in/jacinth-mahanta-63b279229/",
+         "git": "https://github.com/Jacinth-Mahanta"
+    },
+    {
+        "id": 20,
+         "name": "Dipali Garg",
+         "rank": "General Associate",
+         "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1685375264/23-24%20core/IMG_20230526_185122_-_CE078_Dipali_Garg_tviwig.webp",
+         "fb": "https://www.facebook.com/profile.php?id=100076291058104&mibextid=ZbWKwL",
+         "linkdln": "https://www.linkedin.com/in/dipali-garg-7119ba228",
+         "git": "#"
+    },
+        {
+            "id": 21,
+             "name": "Bipangshu Saha",
+             "rank": "General Associate",
+             "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1685375276/23-24%20core/Bipangshu_Saha_-_67_Bipangshu_Saha_la3j0c.webp",
+             "fb": "https://www.facebook.com/ronny.kumar.7186896/",
+             "linkdln": "https://www.linkedin.com/in/bipangshu-saha-2aab9b228/",
+             "git": "https://github.com/BIPS8812"
+            },
+            
+         {
+            "id": 27,
+             "name": "Maharnav Deka",
+            "rank": "Senior Technical Associate",
+             "image": "https://res.cloudinary.com/duejpnj1y/image/upload/v1679413749/Juniordev/Maharnav_Deka_x5edso.webp",
+             "fb": "https://www.facebook.com/profile.php?id=100076295825121",
+             "linkdln": "https://www.linkedin.com/in/maharnav-deka-06742815a/",
+             "git": "https://github.com/mdekaa"
+          },
+            {
+                "id": 22,
+                 "name": "Devanshu Singh",
+                 "rank": "Senior Associate",
+                 "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1685375268/23-24%20core/Devanshu_Singh_-_EE_126_Devanshu_t0ht30.webp",
+                 "fb": "https://www.facebook.com/profile.php?id=100009443903285",
+                 "linkdln": "https://www.linkedin.com/in/devanshu-singh-541622242/",
+                 "git": "https://github.com/devanshusingh76"
+                },
+                {
+                    "id": 23,
+                     "name": "Adarsh Kumar",
+                     "rank": "Senior Associate",
+                     "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1685375276/23-24%20core/IMG_20220617_232515_0817_-_CSE_187_Adarsh_rhmust.webp",
+                     "fb": "https://www.facebook.com/adarsh.yousant.7?mibextid=ZbWKwL",
+                     "linkdln": "https://www.linkedin.com/in/adarsh-kumar-b6b868224",
+                     "git": "https://github.com/yousant"
+                    },
+                    {
+                        "id": 24,
+                         "name": "Vivek kumar",
+                         "rank": "Senior Associate",
+                         "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1685375263/23-24%20core/WhatsApp_Image_2023-05-06_at_7.27.29_PM_1_-_EEB_096_Vivek_1_ax7zkr.webp",
+                         "fb": "https://www.facebook.com/profile.php?id=100075873505564",
+                         "linkdln": "http://www.linkedin.com/in/vivek-kumar-69086119b",
+                         "git": "https://github.com/vivekumar096"
+                        },
+                        {
+                            "id": 25,
+                             "name": "Tanishq Keshari",
+                             "rank": "Senior Associate",
+                             "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1685375274/23-24%20core/IMG_20230526_114624_-_EI069_Tanishq_Keshari_rxqte1.webp",
+                             "fb": "https://www.facebook.com/profile.php?id=100005469919478",
+                             "linkdln": "https://www.linkedin.com/in/tanishq-keshari-838645228/",
+                             "git": "#"
+                            },
+                            {
+                                "id": 26,
+                                 "name": "Vansh Kumar Poddar",
+                                 "rank": "Senior Associate",
+                                 "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1685375264/23-24%20core/IMG-20220911-WA0021_-_ECE_156_Vansh_Kumar_Poddar_jymldz.webp",
+                                 "fb": "https://www.facebook.com/profile.php?id=100073130336199",
+                                 "linkdln": "https://in.linkedin.com/in/vanshkumarpoddar",
+                                 "git": "https://github.com/Vansh156"
+                            },
+                            {
+                                "id": 28,
+                                 "name": "Bikash Baruah",
+                                 "rank": "Senior Associate",
+                                 "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1685605007/picture-ECE_093_Bikash_ytxjmx.webp",
+                                 "fb": "https://www.facebook.com/bikash.baruah.23/",
+                                 "linkdln": "https://www.linkedin.com/in/bikash-baruah-89426a231/",
+                                 "git": "https://github.com/Bikashxb"
+                            }
+ 
+                            ]

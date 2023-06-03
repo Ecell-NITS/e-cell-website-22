@@ -52,7 +52,10 @@ const PodcastSummary = () => {
     return (
         <>
             <div className="collab">
-                <h1 style={{ userSelect: "none" }}>PODCAST SUMMARY</h1>
+                <h1 style={{ userSelect: "none" }}>MOVIE RECOMMENDATIONS</h1>
+            </div>
+            <div className="toprecuitcontent fdfdfere">
+                <h2>Everyone needs inspiration from time to time and who wouldn’t like it if it’s served with a little entertainment? A great film can bring imagination, originality, and creativity while keeping everyone engrossed in the story.<br/><br/>Here are some movie recommendations that might inspire you and teach you some life lessons. </h2>
             </div>
             <div className="resources-indi" ref={podcastHolder}>
                 {podcastdata.map((item) => {

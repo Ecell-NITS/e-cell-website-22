@@ -4,13 +4,13 @@ import Data from "../../Data/PodcastResorce.json";
 
 function PodcastModal({ dataid }) {
   let imgsrc = "",
-    name = "",
+    // name = "",
     content = "",
     head = "";
   for (const item of Data) {
     if (item.id === dataid) {
       imgsrc = item.img;
-      name = item.author;
+      // name = item.author;
       head = item.head;
       content = item.content;
       break;
@@ -27,7 +27,7 @@ function PodcastModal({ dataid }) {
           </div>
           <div className="modalRight">
             <div className="modalHead one">{head}</div>
-            <div className="authHead two">{name}</div>
+            {/* <div className="authHead two">{name}</div> */}
             <div className="content">{content}</div>
           </div>
         </div>
