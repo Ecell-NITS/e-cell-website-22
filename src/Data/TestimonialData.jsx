@@ -6,13 +6,13 @@ export const testimonials = [
         prof:"Mayank yadav",
         post:"Senior Director (Products) Turing",
     },
-    {
-        id:2,
-        img:"https://res.cloudinary.com/dp92qug2f/image/upload/v1678340751/Ecell%20website/testimonial/WhatsApp_Image_2023-03-01_at_22.55.01-min_xdpxqy_wyleep.webp",
-        content:"It was a great honor for me to share my experience as an entrepreneur with highly interested and ambitious students from NIT Silchar. It fills me with joy to see how these young committed people are determined to realize their visions and have the courage to build a business themselves.",
-        post:"Co-Founder and COO FlyNow Aviation GmbH",
-        prof:"Yvonne",
-    },
+    // {
+    //     id:2,
+    //     img:"https://res.cloudinary.com/dp92qug2f/image/upload/v1678340751/Ecell%20website/testimonial/WhatsApp_Image_2023-03-01_at_22.55.01-min_xdpxqy_wyleep.webp",
+    //     content:"It was a great honor for me to share my experience as an entrepreneur with highly interested and ambitious students from NIT Silchar. It fills me with joy to see how these young committed people are determined to realize their visions and have the courage to build a business themselves.",
+    //     post:"Co-Founder and COO FlyNow Aviation GmbH",
+    //     prof:"Yvonne",
+    // },
     // {
     //     id:3,
     //     img:"https://www.linkpicture.com/q/sivaji.jpg",
