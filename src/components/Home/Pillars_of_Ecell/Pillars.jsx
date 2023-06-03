@@ -22,14 +22,14 @@ const Pillars = () => {
       id: "1",
       desc: "Prof. Rajat Gupta is a professor in the mechanical engineering department and the president of IIC, NIT Silchar. He is the backbone of IIC and has been an excellent mentor to the students and a great support to the organization.",
       name: "Prof. Rajat Gupta",
-      designation: "IIC President, NIT Sichar",
+      designation: "IIC President, NIT Silchar",
       img : RajatGuptaSir
     },
     {
       id: "2",
       desc: "Dr. Wasim Arif is an associate professor in the department of Electronics and Communication and is a faculty advisor at E-Cell, NIT Silchar. He has always been a guiding support to the organization and has always guided the members in the right direction.",
       name: "Dr. Wasim Arif",
-      designation: " Convener IIC, NIT Sichar",
+      designation: " Convener IIC, NIT Silchar",
       img : WasimArifSir
     },
     {
