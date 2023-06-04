@@ -21,7 +21,7 @@
     {
        "id": 17,
        "name": "Sakshi Garg",
-       "rank": "Convenor",
+       "rank": "Convenor & Curation Head",
        "image": "https://res.cloudinary.com/dnvhl9pru/image/upload/v1685774397/sakshi_el0nlh.jpg",
        "fb": "https://www.facebook.com/people/Sakshi-Agarwal/100009843640334/?paipv=0&eav=AfZIU6qorLfdsJDbGVgZsj2WrlBScMbg-3ShUXDMiRNd_GszaLnxPWJRmln_ul_YRV8&_rdr",
        "linkdln": "https://www.linkedin.com/in/sakshi-garg-95563a215/",
@@ -153,6 +153,15 @@
        "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1680524907/webp%20pics/shubham-_1__1_kcgxaw.webp",
        "fb": "https://www.facebook.com/profile.php?id=100058575665353",
        "linkdln": "http://linkedin.com/in/shubham-kumar-03540b20b",
+       "git": ""
+   },
+   {
+      "id": 17,
+       "name": "Rithyam Pathak",
+       "rank": "Senior Associate ",
+       "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1685862263/Rithyam_kbjusn.jpg",
+       "fb": "https://www.facebook.com/ridam.pathak.9/",
+       "linkdln": "http://linkedin.com/in/rithyam-pathak-5b478220a",
        "git": ""
    }
     
