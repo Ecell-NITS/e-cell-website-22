@@ -2,10 +2,13 @@ import React, { useState } from 'react'
 import './Createblog.css'
 import NavbarTeam from '../../../components/shared/Navbar/NavbarTeam'
 import axios from 'axios'
+import moment from "moment-timezone";
 const Createblog = () => {
     const [title, setTitle] = useState("")
     const [intro, setIntro] = useState("")
     const [tag, setTag] = useState("")
+    const [tag2, setTag2] = useState("")
+    const [topicpic, setTopicpic] = useState("")
     const [content, setContent] = useState("")
     const [writernmae, setWritername] = useState("")
     const [writerintro, setWriterintro] = useState("")
@@ -13,24 +16,26 @@ const Createblog = () => {
     const [submitting, setSubmitting] = useState(false);
 
     const iscreateblogempty = () => {
-        return title !== "" && intro !== "" && tag !== "" && content !== "" && writernmae!== "" && writerintro!=="" && writerpic!== "";
+        return title !== "" && intro !== "" && tag !== "" && content !== "" && writernmae!== "" && writerintro!=="" && writerpic!== "" && topicpic!=="" ;
     };
 
     /* button onclick function */
     const submitform = async (event) => {
         event.preventDefault();
         if (!iscreateblogempty()) {
-            alert("Please fill all the required fields");
+            alert("Please fill all the required blog details");
             return;
         }
+
+        const timestamp = moment().tz("Asia/Kolkata").format();
         setSubmitting(true);
         axios
-            // .post(process.env.REACT_APP_AXIOSPOST_POST_SENDEMAIL, {
-            .post('http://localhost:2226/createblog', {
+            // .post('http://localhost:2226/createblog', {
+            .post(process.env.REACT_APP_CREATEBLOG_RENDER, {
                 title,
                 tag,
                 intro,
-                content,writernmae,writerintro,writerpic
+                content,writernmae,writerintro,writerpic,timestamp,topicpic
             })
             .then((response) => {
                 setTitle("");
@@ -40,6 +45,8 @@ const Createblog = () => {
                 setWritername("")
                 setWriterintro("")
                 setWriterpic("")
+                setTopicpic("")
+                // setTag2("")
                 setSubmitting(false);
                 alert("Blog created but publish subject to verification");
             });
@@ -61,7 +68,6 @@ const Createblog = () => {
                             setTitle(event.target.value);
                         }}
                         placeholder="Enter your title"
-                        // className="textwriting"
                         className='input-common-recruit'
                     />
                 </div>
@@ -71,7 +77,6 @@ const Createblog = () => {
                     <h4 className='specificttle'>Write a brief introduction to your blog in about 40-50 words</h4>
                     <input
                         type="text"
-
                         required
                         value={intro}
                         onChange={(event) => {
@@ -107,6 +112,36 @@ const Createblog = () => {
                             setTag(event.target.value);
                         }}
                         placeholder="Enter tags"
+                        className='input-common-recruit'
+                    />
+                </div>
+
+                {/* <div className="firstboxvreateblog">
+                    <h2>Second tag</h2>
+                    <h4 className='specificttle'>Add second tag</h4>
+                    <input
+                        type="text"
+                        required
+                        value={tag2}
+                        onChange={(event) => {
+                            setTag2(event.target.value);
+                        }}
+                        placeholder="Enter tag"
+                        className='input-common-recruit'
+                    />
+                </div> */}
+
+                <div className="firstboxvreateblog">
+                    <h2>Topic picture</h2>
+                    <h4 className='specificttle'>Add a picture to your blog</h4>
+                    <input
+                        type="text"
+                        required
+                        value={topicpic}
+                        onChange={(event) => {
+                            setTopicpic(event.target.value);
+                        }}
+                        placeholder="Enter image link"
                         className='input-common-recruit'
                     />
                 </div>
@@ -150,7 +185,7 @@ const Createblog = () => {
                     />
                 </div>
 
-                <button onClick={submitform}>
+                <button onClick={submitform} className='kretrhereading'>
                     {submitting ? "Posting Blog" : "Post Blog"}{" "}
                 </button>
             </div>

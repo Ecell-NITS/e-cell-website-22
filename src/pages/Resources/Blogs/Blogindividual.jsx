@@ -13,7 +13,8 @@ const Blogindividual = () => {
     useEffect(() => {
         const fetchBlog = async () => {
             try {
-                const response = await axios.get(`http://localhost:2226/getblogs/${_id}`);
+         
+                const response = await axios.get(process.env.REACT_APP_FETCHBLOG_RENDER + '/' + _id);
                 setContent(response.data.content);
                 setTitle(response.data.title);
                 setWriterpic(response.data.writerpic);
