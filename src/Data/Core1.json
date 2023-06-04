@@ -154,6 +154,15 @@
        "fb": "https://www.facebook.com/profile.php?id=100058575665353",
        "linkdln": "http://linkedin.com/in/shubham-kumar-03540b20b",
        "git": ""
+   },
+   {
+      "id": 17,
+       "name": "Rithyam Pathak",
+       "rank": "Senior Associate ",
+       "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1685862263/Rithyam_kbjusn.jpg",
+       "fb": "https://www.facebook.com/ridam.pathak.9/",
+       "linkdln": "http://linkedin.com/in/rithyam-pathak-5b478220a",
+       "git": ""
    }
     
  ]
