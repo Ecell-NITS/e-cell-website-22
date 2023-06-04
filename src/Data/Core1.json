@@ -19,6 +19,16 @@
  
     },
     {
+       "id": 17,
+       "name": "Sakshi Garg",
+       "rank": "Convenor & Curation Head",
+       "image": "https://res.cloudinary.com/dnvhl9pru/image/upload/v1685774397/sakshi_el0nlh.jpg",
+       "fb": "https://www.facebook.com/people/Sakshi-Agarwal/100009843640334/?paipv=0&eav=AfZIU6qorLfdsJDbGVgZsj2WrlBScMbg-3ShUXDMiRNd_GszaLnxPWJRmln_ul_YRV8&_rdr",
+       "linkdln": "https://www.linkedin.com/in/sakshi-garg-95563a215/",
+       "git": "https://github.com/Sakshiagarwaal"
+ 
+    },
+    {
        "id": 3,
        "name": "Manash Pratim Pathak ",
        "rank": "Technical Head",

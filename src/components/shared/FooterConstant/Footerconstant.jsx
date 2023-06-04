@@ -20,7 +20,7 @@ const Footerconstant = () => {
 
                     </button>
                 </a>
-                <a href="https://twitter.com" rel="noreferrer" target="_blank" >
+                {/* <a href="https://twitter.com" rel="noreferrer" target="_blank" >
                     <button className="fa-btn tw">
                         {" "}
                         <svg className='insta-ft-const-svg' width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -28,7 +28,7 @@ const Footerconstant = () => {
                         </svg>
 
                     </button>
-                </a>
+                </a> */}
                 <a href="https://www.facebook.com/ecell.nit.silchar/" rel="noreferrer" target="_blank" >
                     <button className="fa-btn">
                         {" "}

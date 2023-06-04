@@ -1,1 +1,1 @@
-# Offical website of E-Cell NIT Silchar
+# Offiical website of E-Cell NIT Silchar

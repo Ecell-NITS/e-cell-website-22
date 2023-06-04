@@ -80,7 +80,7 @@ const Testimonial = () => {
                         <h1 style={{ userSelect: 'none' }}>{item.prof}</h1>
                         <h2 style={{ userSelect: 'none' }}>{item.post}</h2>
                       </div>
-                      <div className="btns">
+                      {/* <div className="btns">
 
                         <button className="prev btn-testimonial" onClick={swipePrev}>
                           <AiOutlineArrowLeft className="btn-indi-testimonial" />
@@ -89,7 +89,7 @@ const Testimonial = () => {
                           <AiOutlineArrowRight className="btn-indi-testimonial" />
                         </button>
 
-                      </div>
+                      </div> */}
 
                     </div>
                   </div>

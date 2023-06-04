@@ -33,6 +33,10 @@
     font-weight: 600;
 }
 
+.fdfdfere h2{
+    font-style: normal !important;
+}
+
 @media only screen and (max-width: 992px) {
     .content {
         font-size: 1.3rem;
@@ -66,7 +70,7 @@
 
 @media only screen and (max-width: 481px) {
     .content {
-        font-size: 0.9rem;
+        font-size: 1.1rem;
         padding: 0.5rem;
     }
     .profile_Card{
@@ -84,5 +88,10 @@
     }
     .one {
         font-size: 1.2rem;
+    }
+
+    .authHead{
+        font-size: 4.5vw;
+        margin-top: 1.25vw;
     }
 }
