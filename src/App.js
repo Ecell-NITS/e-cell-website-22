@@ -14,6 +14,8 @@ import Recruiting from "./pages/Recruiting2324/Recruiting";
 import Recuitmentdetails from "./pages/Recruiting2324/Recuitmentdetails";
 import Contactresponse from "./components/Home/Contact/Contactresponse";
 import Newsletter from "./components/shared/Footer/Newsletter";
+import Createblog from "./pages/Resources/Blogs/Createblog";
+import Blogindividual from "./pages/Resources/Blogs/Blogindividual";
 function App() {
   return (
     <>
@@ -63,6 +65,8 @@ function App() {
             <Route exact path="/contactresponses" element={<Contactresponse />} key="route-contactresponse-screen" />
 
             <Route exact path="/newsletterresponses" element={<Newsletter />} key="route-newsletterresponse-screen" />
+            <Route exact path="/createblog" element={<Createblog />} key="route-createblog-screen" />
+            <Route exact path="/blog/:_id" element={<Blogindividual />} key="route-infividualblog-screen" />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Scrolling>

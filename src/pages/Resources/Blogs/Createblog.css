@@ -1,0 +1,23 @@
+.mainblogmake{
+    padding-top: 10vw;
+    padding-bottom: 10vw;
+    width: 93%;
+    margin: 0 auto;
+}
+
+.titletopcbl{
+    margin-bottom: 4vw;
+}
+
+.firstboxvreateblog{
+    width: 75%;
+    border-radius: 5px;
+    margin-bottom: 4vw;
+    padding: .5vw 1vw;
+    border: 2px solid grey;
+}
+
+.specificttle{
+    color: rgba(154, 148, 148, 1);
+    font-size: 1.5vw;
+}

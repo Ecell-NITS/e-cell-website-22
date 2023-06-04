@@ -1,0 +1,48 @@
+.indiviualblog{
+    padding-top: 4rem;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.indiviualblog h1{
+    padding-top: 3vw;
+    padding-bottom: 2vw;
+    color: rgba(28, 55, 75, 1);
+    font-size: 3.5vw;
+    text-align: center;
+}
+
+.indiviualblog p{
+    color: rgba(96, 96, 96, 1);
+    font-size: 1.7vw;
+    line-height: 1.6;
+    padding-bottom: 5vw;
+}
+
+.writerdetails{
+    display: flex;
+    background-color: rgba(102, 108, 116, 0.4);
+    border: 1px solid red;
+    margin-bottom: 10vw;
+    padding-left: 3.5vw;
+    padding-top: 1.5vw;
+    padding-bottom: 1.5vw;
+    border-radius: 15px;
+}
+
+.imgholderwriter{
+    min-width: 15vw;
+    height: 15vw;
+}
+
+.imgholderwriter img{
+width: 100%;
+height: 100%;
+ border-radius: 50%;
+}
+
+.writerintro p{
+    color: rgba(34, 66, 89, 1);
+    font-size: 1.5vw;
+    padding: 3vw 1.2vw 0 3vw;
+}
