@@ -3,7 +3,7 @@ import ItemCard from "./ItemCard";
 import "./Pillars.css";
 import WasimArifSir from "../../../assets/WasimArifSir.jpg"
 import RajatGuptaSir from "../../../assets/RajatGuptaSir.jpg"
-import ABDeoghareSir from "../../../assets/ABDeoghareSir.jpg"
+// import ABDeoghareSir from "../../../assets/ABDeoghareSir.jpg"
 
 const Pillars = () => {
   let cardHolder = useRef();
@@ -37,7 +37,7 @@ const Pillars = () => {
       desc: "Dr. A.B. Deoghare is an associate professor in the department of mechanical engineering and supports the Ecell organization as a faculty advisor. We are eternally grateful for the support and guidance that we have received from him.",
       name: "Dr. A.B. Deoghare",
       designation: "Asso Prof, Mechanical Engineering",
-      img : ABDeoghareSir
+      img :"https://res.cloudinary.com/dfriijrmr/image/upload/v1677474386/GalleryPage/Orientation%202022-2023/IMG_1558_vjql6g.jpg"
     },
   ];
 
