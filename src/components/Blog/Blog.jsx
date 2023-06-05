@@ -13,8 +13,9 @@ const Blog = () => {
       try {
         setSortingMessage(` ${sortingOrder} blogs coming...`);
         setIsFetching(true);
-        // const response = await axios.get('http://localhost:2226/getblogs');
-        const response = await axios.get(process.env.REACT_APP_FETCHBLOG_RENDER);
+        const response = await axios.get(process.env.REACT_APP_ACCEPTEDBLOGS_RENDER);
+        // const response = await axios.get('http://localhost:2226/acceptedblogs');
+        // const response = await axios.get(process.env.REACT_APP_FETCHBLOG_RENDER);
         const sortedBlogs = response.data.sort((a, b) => {
           if (sortingOrder === 'latest') {
             return new Date(b.timestamp) - new Date(a.timestamp);
@@ -82,7 +83,7 @@ const Blog = () => {
           )}
 
 
-          <p>{sortingMessage}</p>
+          {/* <p>{sortingMessage}</p> */}
           {sortingMessage ? null : (
             <>
               {filteredBlogs.length === 0 ? (
@@ -111,7 +112,7 @@ const Blog = () => {
                         <div className="briefintrohldman">
                           <p>{blog.intro}</p>
                         </div>
-
+                        
                         <Link to={`/blog/${blog._id}`}> <button className='kretrhereading'>
                           Read more
                         </button></Link>
