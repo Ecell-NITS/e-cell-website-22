@@ -73,17 +73,15 @@ const Blog = () => {
           {activeTagFilter ? (
             <>
               {filteredBlogs.length === 0 ? (
-                <p>No blogs found with the tag "{activeTagFilter}".</p>
+                <p className='msgonblogcnt'>No blogs found with the tag "{activeTagFilter}"</p>
               ) : (
-                <p>{filteredBlogs.length} blogs found with the tag "{activeTagFilter}".</p>
+                <p className='msgonblogcnt'>{filteredBlogs.length} blogs found with the tag "{activeTagFilter}"</p>
               )}
             </>
           ) : (
-            <p>{filteredBlogs.length} total blogs found on the server.</p>
+            <p className='msgonblogcnt'>{filteredBlogs.length} blogs found on the server.</p>
           )}
 
-
-          {/* <p>{sortingMessage}</p> */}
           {sortingMessage ? null : (
             <>
               {filteredBlogs.length === 0 ? (
@@ -133,7 +131,7 @@ const Blog = () => {
           <div className="btnfiltertag">
             <button onClick={() => handleTagFilter('startup')} className={`activetagcolored ${activeTagFilter === 'startup' ? 'active' : ''}`}>Startup</button>
             <button onClick={() => handleTagFilter('technology')} className={`activetagcolored ${activeTagFilter === 'technology' ? 'active' : ''}`}>Technology</button>
-            <button onClick={() => handleTagFilter('entrepreneur')} className={`activetagcolored ${activeTagFilter === 'entrepreneur' ? 'active' : ''}`}>Entrepreneur</button>
+            <button onClick={() => handleTagFilter('entrepreneur')} className={`activetagcolored ${activeTagFilter === 'entrepreneur' ? 'active' : ''}`} id='btnthirdtag'>Entrepreneur</button>
           </div>
         </div>
       </div>

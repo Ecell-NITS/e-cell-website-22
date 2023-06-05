@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Createblog.css'
 import NavbarTeam from '../../../components/shared/Navbar/NavbarTeam'
 import axios from 'axios'
@@ -13,10 +13,11 @@ const Createblog = () => {
     const [writernmae, setWritername] = useState("")
     const [writerintro, setWriterintro] = useState("")
     const [writerpic, setWriterpic] = useState("")
+    const [writeremail, setWriteremail] = useState("")
     const [submitting, setSubmitting] = useState(false);
 
     const iscreateblogempty = () => {
-        return title !== "" && intro !== "" && tag !== "" && content !== "" && writernmae!== "" && writerintro!=="" && writerpic!== "" && topicpic!=="" ;
+        return title !== "" && intro !== "" && tag !== "" && writeremail !== "" && content !== "" && writernmae !== "" && writerintro !== "" && writerpic !== "" && topicpic !== "";
     };
 
     /* button onclick function */
@@ -27,6 +28,11 @@ const Createblog = () => {
             return;
         }
 
+        if (!writeremail.includes("@") || !writeremail.includes(".")) {
+            alert("Invalid email");
+            return
+        }
+
         const timestamp = moment().tz("Asia/Kolkata").format();
         setSubmitting(true);
         axios
@@ -35,7 +41,7 @@ const Createblog = () => {
                 title,
                 tag,
                 intro,
-                content,writernmae,writerintro,writerpic,timestamp,topicpic
+                content, writernmae, writerintro, writerpic, timestamp, topicpic, writeremail
             })
             .then((response) => {
                 setTitle("");
@@ -46,22 +52,27 @@ const Createblog = () => {
                 setWriterintro("")
                 setWriterpic("")
                 setTopicpic("")
-                // setTag2("")
+                setWriteremail("")
                 setSubmitting(false);
                 alert("Blog created but publish subject to verification");
             });
     }
+
+    useEffect(() => {
+        document.title = "Create blog | ECELL NITS"
+    }, [])
+
     return (
         <div>
             <NavbarTeam />
             <div className="mainblogmake">
                 <h2 className='titletopcbl'>Add New Blog </h2>
                 <div className="firstboxvreateblog">
-                    <h2>Title</h2>
+                    <h2 className='ttleinptcrteblog'>Title</h2>
                     <h4 className='specificttle'>Be specific with your title</h4>
                     <input
                         type="text"
-                        id="name"
+                        id="cretaeblogsinpt"
                         required
                         value={title}
                         onChange={(event) => {
@@ -73,11 +84,12 @@ const Createblog = () => {
                 </div>
 
                 <div className="firstboxvreateblog">
-                    <h2>Brief Introduction</h2>
+                    <h2 className='ttleinptcrteblog'>Brief Introduction</h2>
                     <h4 className='specificttle'>Write a brief introduction to your blog in about 40-50 words</h4>
-                    <input
+                    {/* <input
                         type="text"
                         required
+                        id="cretaeblogsinpt"
                         value={intro}
                         onChange={(event) => {
                             setIntro(event.target.value);
@@ -85,14 +97,23 @@ const Createblog = () => {
                         placeholder="Enter your intro"
 
                         className='input-common-recruit'
-                    />
+                    /> */}
+
+                    <textarea cols="10" rows="5" id="cretaeblogsinpt" typeof='text' required
+                        value={intro}
+                        onChange={(event) => {
+                            setIntro(event.target.value);
+                        }}
+                        placeholder="Enter your intro"
+                        className='input-common-recruit'></textarea>
                 </div>
 
                 <div className="firstboxvreateblog">
-                    <h2>Content</h2>
+                    <h2 className='ttleinptcrteblog'>Content</h2>
                     <h4 className='specificttle'>Write about your topic</h4>
                     <textarea cols="30" rows="10" className='input-common-recruit' type="text"
                         required
+                        id="cretaeblogsinpt"
                         value={content}
                         onChange={(event) => {
                             setContent(event.target.value);
@@ -102,12 +123,13 @@ const Createblog = () => {
                 </div>
 
                 <div className="firstboxvreateblog">
-                    <h2>Tags</h2>
+                    <h2 className='ttleinptcrteblog'>Tags</h2>
                     <h4 className='specificttle'>Add tags to describe your blog</h4>
                     <input
                         type="text"
                         required
                         value={tag}
+                        id="cretaeblogsinpt"
                         onChange={(event) => {
                             setTag(event.target.value);
                         }}
@@ -132,11 +154,12 @@ const Createblog = () => {
                 </div> */}
 
                 <div className="firstboxvreateblog">
-                    <h2>Topic picture</h2>
+                    <h2 className='ttleinptcrteblog'>Topic picture</h2>
                     <h4 className='specificttle'>Add a picture to your blog</h4>
                     <input
                         type="text"
                         required
+                        id="cretaeblogsinpt"
                         value={topicpic}
                         onChange={(event) => {
                             setTopicpic(event.target.value);
@@ -147,10 +170,11 @@ const Createblog = () => {
                 </div>
 
                 <div className="firstboxvreateblog">
-                    <h2>Writer Details</h2>
+                    <h2 className='ttleinptcrteblog'>Writer Details</h2>
                     <h4 className='specificttle'>Name</h4>
                     <input
                         type="text"
+                        id="cretaeblogsinpt"
                         required
                         value={writernmae}
                         onChange={(event) => {
@@ -160,10 +184,24 @@ const Createblog = () => {
                         className='input-common-recruit'
                     />
 
+                    <h4 className='specificttle'>Email</h4>
+                    <input
+                        type="email"
+                        required
+                        value={writeremail}
+                        id="cretaeblogsinpt"
+                        onChange={(event) => {
+                            setWriteremail(event.target.value);
+                        }}
+                        placeholder="Enter your email"
+                        className='input-common-recruit'
+                    />
+
                     <h4 className='specificttle'>Brief Introduction</h4>
                     <input
                         type="text"
                         required
+                        id="cretaeblogsinpt"
                         value={writerintro}
                         onChange={(event) => {
                             setWriterintro(event.target.value);
@@ -176,6 +214,7 @@ const Createblog = () => {
                     <input
                         type="text"
                         required
+                        id="cretaeblogsinpt"
                         value={writerpic}
                         onChange={(event) => {
                             setWriterpic(event.target.value);

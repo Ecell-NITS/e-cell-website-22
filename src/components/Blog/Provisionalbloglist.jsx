@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import './Blog.css'
 import Footer from '../shared/Footer/Footer';
-// import NavbarTeam from '../shared/Navbar/NavbarTeam';
+import NavbarTeam from '../shared/Navbar/NavbarTeam';
 const Provisionalbloglist = () => {
     const [blogscreated, setBlogscreated] = useState([]);
     const [sortingOrder, setSortingOrder] = useState('latest');
@@ -28,7 +28,7 @@ const Provisionalbloglist = () => {
             try {
                 setSortingMessage(` ${sortingOrder} blogs coming...`);
                 setIsFetching(true);
-                
+
                 // const response = await axios.get('http://localhost:2226/getblogs');
                 const response = await axios.get(process.env.REACT_APP_FETCHBLOG_RENDER);
                 const sortedBlogs = response.data.sort((a, b) => {
@@ -78,10 +78,15 @@ const Provisionalbloglist = () => {
         ? blogscreated.filter((blog) => blog.tag.toLowerCase().includes(activeTagFilter.toLowerCase()))
         : blogscreated;
 
+        useEffect(()=>{
+            document.title = "Provisional Blogs | ECELL NITS"
+        }, [])
+
+       
     return (
         <>
-        {/* <NavbarTeam /> */}
-            <div className="collab">
+            <NavbarTeam />
+            <div className="collab dewefd">
                 <h1 style={{ userSelect: 'none' }}> PROVISIONAL BLOGS</h1>
             </div>
 
@@ -100,13 +105,13 @@ const Provisionalbloglist = () => {
                     {activeTagFilter ? (
                         <>
                             {filteredBlogs.length === 0 ? (
-                                <p>No blogs found with the tag "{activeTagFilter}".</p>
+                                <p className='msgonblogcnt'>No blogs found with the tag "{activeTagFilter}".</p>
                             ) : (
-                                <p>{filteredBlogs.length} blogs found with the tag "{activeTagFilter}".</p>
+                                <p className='msgonblogcnt'>{filteredBlogs.length} blogs found with the tag "{activeTagFilter}".</p>
                             )}
                         </>
                     ) : (
-                        <p>{filteredBlogs.length} total blogs found on the server.</p>
+                        <p className='msgonblogcnt'>{filteredBlogs.length} total Provisional blogs found on the server.</p>
                     )}
 
                     {sortingMessage ? null : (
@@ -138,17 +143,20 @@ const Provisionalbloglist = () => {
                                                     <p>{blog.intro}</p>
                                                 </div>
 
-                                                <div>
-                                                    {publishedBlogIds.includes(blog._id) ? (
-                                                        <button disabled className='kretrhereading' id='pblshbtn'>Published</button>
-                                                    ) : (
-                                                        <button onClick={() => handlePublish(blog._id)} className='kretrhereading' id='pblshbtn'>Publish</button>
-                                                    )}
+                                                <div className="btnholderprovisi">
+                                                    <div>
+                                                        {publishedBlogIds.includes(blog._id) ? (
+                                                            <button disabled className='kretrhereading' id='pblshbtn'>Published</button>
+                                                        ) : (
+                                                            <button onClick={() => handlePublish(blog._id)} className='kretrhereading' id='pblshbtn'>Publish</button>
+                                                        )}
+                                                    </div>
+
+                                                    <Link to={`/blog/${blog._id}`}> <button className='kretrhereading'>
+                                                        Read more
+                                                    </button></Link>
                                                 </div>
 
-                                                <Link to={`/blog/${blog._id}`}> <button className='kretrhereading'>
-                                                    Read more
-                                                </button></Link>
 
                                             </div>
                                         ))}
@@ -160,17 +168,17 @@ const Provisionalbloglist = () => {
                     )}
                 </div>
 
-                <div className="rightblogcontent">
+                <div   className="rightblogcontent">
                     <Link to="/createblog"><button className="newblogaddbtn">ADD NEW BLOG +</button></Link>
 
                     <div className="btnfiltertag">
                         <button onClick={() => handleTagFilter('startup')} className={`activetagcolored ${activeTagFilter === 'startup' ? 'active' : ''}`}>Startup</button>
                         <button onClick={() => handleTagFilter('technology')} className={`activetagcolored ${activeTagFilter === 'technology' ? 'active' : ''}`}>Technology</button>
-                        <button onClick={() => handleTagFilter('entrepreneur')} className={`activetagcolored ${activeTagFilter === 'entrepreneur' ? 'active' : ''}`}>Entrepreneur</button>
+                        <button onClick={() => handleTagFilter('entrepreneur')} className={`activetagcolored ${activeTagFilter === 'entrepreneur' ? 'active' : ''}`} id='btnthirdtag'>Entrepreneur</button>
                     </div>
                 </div>
             </div>
-<Footer />
+            <Footer />
         </>
     );
 };
