@@ -4,7 +4,7 @@ import './Blogindi.css';
 import { useParams } from 'react-router-dom';
 import NavbarTeam from '../../../components/shared/Navbar/NavbarTeam';
 import Footer from '../../../components/shared/Footer/Footer';
-
+import {Helmet} from "react-helmet";
 const Blogindividual = () => {
     const { _id } = useParams();
     const [content, setContent] = useState('');
@@ -12,6 +12,7 @@ const Blogindividual = () => {
     const [writerpic, setWriterpic] = useState("")
     const [writerintro, setWriterintro] = useState("")
     const [topicpic, setTopicpic] = useState("")
+    const [intro, setIntro] = useState("")
     useEffect(() => {
         const fetchBlog = async () => {
             try {
@@ -23,6 +24,7 @@ const Blogindividual = () => {
                 setWriterpic(response.data.writerpic);
                 setWriterintro(response.data.writerintro);
                 setTopicpic(response.data.topicpic);
+                setIntro(response.data.intro);
             } catch (error) {
                 console.log('Error fetching blog:', error);
             }
@@ -38,8 +40,12 @@ const Blogindividual = () => {
     return (
         <>
             <NavbarTeam />
+            <Helmet>
+                <title>{title}</title>
+            </Helmet>
             <div className='indiviualblog'>
                 <h1>{title}</h1>
+                <p>{intro}</p>
                 <div className="imgoldermainblogindi">
                     <img src={topicpic} alt="" />
                 </div>
