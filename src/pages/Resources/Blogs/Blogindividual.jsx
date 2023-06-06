@@ -3,6 +3,7 @@ import axios from 'axios';
 import './Blogindi.css';
 import { useParams } from 'react-router-dom';
 import NavbarTeam from '../../../components/shared/Navbar/NavbarTeam';
+import Footer from '../../../components/shared/Footer/Footer';
 
 const Blogindividual = () => {
     const { _id } = useParams();
@@ -10,6 +11,7 @@ const Blogindividual = () => {
     const [title, setTitle] = useState("")
     const [writerpic, setWriterpic] = useState("")
     const [writerintro, setWriterintro] = useState("")
+    const [topicpic, setTopicpic] = useState("")
     useEffect(() => {
         const fetchBlog = async () => {
             try {
@@ -20,6 +22,7 @@ const Blogindividual = () => {
                 setTitle(response.data.title);
                 setWriterpic(response.data.writerpic);
                 setWriterintro(response.data.writerintro);
+                setTopicpic(response.data.topicpic);
             } catch (error) {
                 console.log('Error fetching blog:', error);
             }
@@ -37,6 +40,11 @@ const Blogindividual = () => {
             <NavbarTeam />
             <div className='indiviualblog'>
                 <h1>{title}</h1>
+                <div className="imgoldermainblogindi">
+                    <img src={topicpic} alt="" />
+                </div>
+
+
                 <p> {content}</p>
 
                 <div className="writerdetails">
@@ -49,6 +57,7 @@ const Blogindividual = () => {
                     </div>
                 </div>
             </div>
+            <Footer />
         </>
     );
 };

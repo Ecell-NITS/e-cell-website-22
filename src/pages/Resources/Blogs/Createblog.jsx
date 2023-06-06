@@ -3,6 +3,7 @@ import './Createblog.css'
 import NavbarTeam from '../../../components/shared/Navbar/NavbarTeam'
 import axios from 'axios'
 import moment from "moment-timezone";
+import Footer from '../../../components/shared/Footer/Footer';
 const Createblog = () => {
     const [title, setTitle] = useState("")
     const [intro, setIntro] = useState("")
@@ -229,7 +230,7 @@ const Createblog = () => {
                 </button>
             </div>
 
-
+            <Footer />
         </div>
     )
 }

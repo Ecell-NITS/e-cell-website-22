@@ -31,6 +31,7 @@
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
     color: rgba(34, 66, 89, 1);
+    font-size: 2vw;
 }
 
 #cretaeblogsinpt{
@@ -43,6 +44,30 @@
 
 @media (max-width:660px){
     .mainblogmake, .firstboxvreateblog{
-        width: 90%;
+        width: 95%;
+    }
+
+    .firstboxvreateblog{
+        margin-bottom: 8vw;
+        padding:  3vw;
+    }
+
+    .titletopcbl{
+        margin-bottom: 8vw;
+        font-size: 8vw;
+    }
+
+    .ttleinptcrteblog{
+        font-size: 4vw;
+    }
+    
+    .specificttle{
+        font-size: 3.2vw;
+        margin-top: 1vw;
+    }
+
+    #cretaeblogsinpt{
+        font-size: 3.6vw;
+        margin: 3vw 0;
     }
 }

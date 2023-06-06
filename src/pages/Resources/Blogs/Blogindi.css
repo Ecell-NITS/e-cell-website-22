@@ -21,8 +21,8 @@
 
 .writerdetails{
     display: flex;
-    background-color: rgba(102, 108, 116, 0.4);
-    border: 1px solid red;
+    background-color: rgba(232, 246, 250, 1);
+    border: 1px solid rgba(102, 108, 116, 0.4);
     margin-bottom: 10vw;
     padding-left: 3.5vw;
     padding-top: 1.5vw;
@@ -31,7 +31,7 @@
 }
 
 .imgholderwriter{
-    min-width: 15vw;
+    width: 15vw;
     height: 15vw;
 }
 
@@ -45,4 +45,52 @@ height: 100%;
     color: rgba(34, 66, 89, 1);
     font-size: 1.5vw;
     padding: 3vw 1.2vw 0 3vw;
+}
+
+.imgoldermainblogindi{
+    width: 70%;
+    /* height: 10%; */
+    margin: 2vw auto;
+}
+
+.imgoldermainblogindi img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 6.456px;
+    pointer-events: none;
+    user-select: none;
+}
+
+@media (max-width:660px){
+    .indiviualblog{
+        width: 90%;
+        padding-top: 10vw;
+    }
+
+    .indiviualblog h1{
+        font-size: 7vw;
+        padding-top: 0;
+        /* margin-bottom: 5vw; */
+    }
+
+    .indiviualblog p{
+        font-size: 5vw;
+        margin-top: 10vw;
+    }
+
+    /* .imgholderwriter{
+        width: 25vw;
+        height: 25vw;
+    } */
+
+    .writerintro{
+        padding: 3vw;
+    }
+
+    .writerintro p{
+        margin: 0;
+        padding: 0;
+        font-size: 4vw;
+    }
 }

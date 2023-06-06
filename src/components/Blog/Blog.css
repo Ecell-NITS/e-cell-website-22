@@ -12,6 +12,7 @@
     width: 25%;
     position: sticky;
     top: 0;
+    /* z-index: 9999; */
     /* background-color: red; */
 }
 
@@ -181,7 +182,98 @@
 }
 
 #btnthirdtag{
-    /* margin-top: 2vw;
-    margin-left: 3vw; */
     margin: 2vw 0 50vw 3vw;
+}
+
+@media (max-width:660px){
+    .mainblogstarts{
+        width: 100%;
+        flex-direction: column-reverse;
+    }
+
+    .leftblogcontent{
+        padding: 4vw;
+        width: 100%;
+    }
+
+    .sortkaro{
+        font-size:6vw;
+    }
+
+    .btnlatestoldest button{
+        font-size: 6vw;
+    }
+
+    #moreold{
+        margin-left: 5vw;
+    }
+
+    .msgonblogcnt{
+        margin-top: 4vw;
+        font-size: 4vw;
+    }
+
+    .mainparentblogindicard{
+        margin-top: 10vw;
+    }
+
+    .indicardblog{
+        width: 90%;
+        margin: 5vw auto;
+        padding: 2vw;
+    }
+
+    .imgholdercontblog{
+        width: 100%;
+        height: 50vw;
+    }
+
+    .titlehainlogindi{
+        font-size: 5.25vw;
+        margin-top: 3vw;
+        margin-bottom: 2vw !important;
+    }
+
+    .whowrittenblog h2{
+        font-size:4.5vw;
+        margin-bottom:.35vw;
+    }
+
+    .whoholdsthetag button{
+        font-size: 4vw;
+        padding: .75vw;
+        margin: 2.3vw 0;
+    }
+
+    .kretrhereading{
+        padding: 1vw 4vw;
+        font-size: 4vw;
+        margin-bottom: 4vw;
+    }
+    
+    .rightblogcontent{
+        text-align: center;
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .newblogaddbtn{
+        font-size: 5.45vw;
+        padding: 1.5vw 5vw;
+       display: block;
+       margin: 4vw auto;
+    }
+
+    .btnfiltertag button{
+        font-size: 3.8vw;
+        font-weight: 500;
+        border-radius: 6.76px;
+        padding: 3vw;
+    }
+
+    #btnthirdtag{
+        margin: 0 2vw;
+       margin-top: 8vw;
+        padding: 3vw !important;
+    }
 }
