@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import './Blog.css'
 import Footer from '../shared/Footer/Footer';
 import NavbarTeam from '../shared/Navbar/NavbarTeam';
+import Authprovblog from './Authprovblog';
 const Provisionalbloglist = () => {
     const [blogscreated, setBlogscreated] = useState([]);
     const [sortingOrder, setSortingOrder] = useState('latest');
@@ -11,6 +12,7 @@ const Provisionalbloglist = () => {
     const [activeTagFilter, setActiveTagFilter] = useState('');
     const [isFetching, setIsFetching] = useState(true);
     const [publishedBlogIds, setPublishedBlogIds] = useState([]);
+    const [isLoggedIn, setLoggedIn] = useState(false);
 
     const handlePublish = async (blogId) => {
         try {
@@ -78,11 +80,18 @@ const Provisionalbloglist = () => {
         ? blogscreated.filter((blog) => blog.tag.toLowerCase().includes(activeTagFilter.toLowerCase()))
         : blogscreated;
 
-        useEffect(()=>{
-            document.title = "Provisional Blogs | ECELL NITS"
-        }, [])
+    useEffect(() => {
+        document.title = "Provisional Blogs | ECELL NITS"
+    }, [])
 
-       
+    const handleAuthentication = (authenticated) => {
+        setLoggedIn(authenticated);
+    };
+
+    if (!isLoggedIn) {
+        return <Authprovblog onAuthentication={handleAuthentication} />;
+    }
+
     return (
         <>
             <NavbarTeam />
@@ -168,7 +177,7 @@ const Provisionalbloglist = () => {
                     )}
                 </div>
 
-                <div   className="rightblogcontent">
+                <div className="rightblogcontent">
                     <Link to="/createblog"><button className="newblogaddbtn">ADD NEW BLOG +</button></Link>
 
                     <div className="btnfiltertag">

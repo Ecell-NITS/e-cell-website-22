@@ -39,7 +39,7 @@
     font-weight: 500;
     font-size: 1.3vw;
     margin: 1.5vw 0;
-    border-color: rgba(80, 80, 80, 1);
+    /* border-color: rgba(80, 80, 80, 1); */
 }
 
 @media (max-width:660px){
