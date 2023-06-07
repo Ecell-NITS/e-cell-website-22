@@ -42,6 +42,16 @@
     /* border-color: rgba(80, 80, 80, 1); */
 }
 
+#crteblogbtn0{
+    font-size: 2vw;
+    padding: .5vw 2vw;
+    transition: 0.3s;
+}
+
+#crteblogbtn0:active{
+    box-shadow: 0 0 0 5px #224259;
+}
+
 @media (max-width:660px){
     .mainblogmake, .firstboxvreateblog{
         width: 95%;

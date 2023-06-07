@@ -8,13 +8,12 @@
     width: 75%;
 }
 
-.rightblogcontent{
+/* .rightblogcontent{
     width: 25%;
     position: sticky;
     top: 0;
-    /* z-index: 9999; */
-    /* background-color: red; */
-}
+    
+} */
 
 .btnsorting{
     display: flex;
@@ -74,6 +73,11 @@
     padding: .7vw 3.8vw;
    display: block;
    margin: 0 auto;
+   transition: all 0.3s;
+}
+
+.newblogaddbtn:focus{
+    box-shadow: 0 0 0 5px #224259;
 }
 
 .mainparentblogindicard{
@@ -161,8 +165,12 @@
     outline: none;
     border-radius: 5.05px;
     padding: .5vw 1vw;
+    transition: all 0.3s;
 }
 
+.kretrhereading:active{
+    box-shadow: 0 0 0 5px #224259;
+}
 #pblshbtn{
     margin-bottom: .35vw;
 }

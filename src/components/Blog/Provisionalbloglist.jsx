@@ -148,9 +148,16 @@ const Provisionalbloglist = () => {
                                                     {/* <button className='secondtaghlder'>{blog.tag2}</button> */}
                                                 </div>
 
-                                                <div className="briefintrohldman">
+                                                {/* <div className="briefintrohldman">
                                                     <p>{blog.intro}</p>
+                                                </div> */}
+
+                                                <div className="briefintrohldman">
+                                                    {blog.intro.split('\n').map((paragraph, index) => (
+                                                        <p key={index}>{paragraph}</p>
+                                                    ))}
                                                 </div>
+
 
                                                 <div className="btnholderprovisi">
                                                     <div>

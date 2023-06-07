@@ -4,7 +4,7 @@ import './Blogindi.css';
 import { useParams } from 'react-router-dom';
 import NavbarTeam from '../../../components/shared/Navbar/NavbarTeam';
 import Footer from '../../../components/shared/Footer/Footer';
-import {Helmet} from "react-helmet";
+import { Helmet } from "react-helmet";
 const Blogindividual = () => {
     const { _id } = useParams();
     const [content, setContent] = useState('');
@@ -16,7 +16,7 @@ const Blogindividual = () => {
     useEffect(() => {
         const fetchBlog = async () => {
             try {
-         
+
                 const response = await axios.get(process.env.REACT_APP_FETCHBLOG_RENDER + '/' + _id);
                 // const response = await axios.get(`http://localhost:2226/getblogs/${_id}`);
                 setContent(response.data.content);
@@ -45,13 +45,22 @@ const Blogindividual = () => {
             </Helmet>
             <div className='indiviualblog'>
                 <h1>{title}</h1>
-                <p>{intro}</p>
+                {/* <p>{intro}</p> */}
+
+                {intro.split('\n').map((paragraph, index) => (
+                    <p key={index}>{paragraph}</p>
+                ))}
+
+
                 <div className="imgoldermainblogindi">
                     <img src={topicpic} alt="" />
                 </div>
 
 
-                <p> {content}</p>
+                {/* <p> {content}</p> */}
+                {content.split('\n').map((paragraph, index) => (
+                    <p key={index} style={{ whiteSpace: "pre-line" }}>{paragraph}</p>
+                ))}
 
                 <div className="writerdetails">
                     <div className="imgholderwriter">

@@ -106,7 +106,9 @@ const Createblog = () => {
                             setIntro(event.target.value);
                         }}
                         placeholder="Enter your intro"
-                        className='input-common-recruit'></textarea>
+                        className='input-common-recruit'  style={{ whiteSpace: "pre-wrap" }}></textarea>
+
+
                 </div>
 
                 <div className="firstboxvreateblog">
@@ -199,7 +201,7 @@ const Createblog = () => {
                     />
 
                     <h4 className='specificttle'>Brief Introduction</h4>
-                    <input
+                    {/* <input
                         type="text"
                         required
                         id="cretaeblogsinpt"
@@ -209,7 +211,17 @@ const Createblog = () => {
                         }}
                         placeholder="Enter intro to be displayed"
                         className='input-common-recruit'
-                    />
+                    /> */}
+
+                    <textarea rows="3" type="text"
+                        required
+                        id="cretaeblogsinpt"
+                        value={writerintro}
+                        onChange={(event) => {
+                            setWriterintro(event.target.value);
+                        }}
+                        placeholder="Enter intro to be displayed"
+                        className='input-common-recruit'></textarea>
 
                     <h4 className='specificttle'>Photograph</h4>
                     <input
@@ -225,7 +237,7 @@ const Createblog = () => {
                     />
                 </div>
 
-                <button onClick={submitform} className='kretrhereading'>
+                <button onClick={submitform} className='kretrhereading' id='crteblogbtn0'>
                     {submitting ? "Posting Blog" : "Post Blog"}{" "}
                 </button>
             </div>

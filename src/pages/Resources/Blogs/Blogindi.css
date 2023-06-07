@@ -16,13 +16,14 @@
     color: rgba(96, 96, 96, 1);
     font-size: 1.7vw;
     line-height: 1.6;
-    padding-bottom: 5vw;
+    /* padding-bottom: 5vw; */
 }
 
 .writerdetails{
     display: flex;
     background-color: rgba(232, 246, 250, 1);
     border: 1px solid rgba(102, 108, 116, 0.4);
+    margin-top: 5vw;
     margin-bottom: 10vw;
     padding-left: 3.5vw;
     padding-top: 1.5vw;
@@ -76,13 +77,23 @@ height: 100%;
 
     .indiviualblog p{
         font-size: 5vw;
-        margin-top: 10vw;
+        /* margin-top: 10vw; */
     }
 
     /* .imgholderwriter{
         width: 25vw;
         height: 25vw;
     } */
+
+    .writerdetails{
+        flex-direction: column;
+    }
+
+    .imgholderwriter{
+    margin: 2.5vw auto;
+    width: 25vw;
+    height: 25vw;
+    }
 
     .writerintro{
         padding: 3vw;

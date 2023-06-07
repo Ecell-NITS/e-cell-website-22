@@ -110,6 +110,11 @@
     padding: .5vw 1.5vw;
     font-size: 1.4vw;
     margin: 1.5vw 0 0 0;
+    transition: all 0.3s;
+}
+
+.btnotpsend:active{
+    box-shadow: 0 0 0 0.2rem #224529;
 }
 
 .robottxt{
@@ -150,8 +155,8 @@
     transition: all 0.3s;
 }
 
-.submtformrecuit:focus{
-    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+.submtformrecuit:active{
+    box-shadow: 0 0 0 0.2rem #224529;
 }
 
 .statusmsgssubmt{
