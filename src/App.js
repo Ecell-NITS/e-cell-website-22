@@ -17,6 +17,8 @@ import Newsletter from "./components/shared/Footer/Newsletter";
 import Createblog from "./pages/Resources/Blogs/Createblog";
 import Blogindividual from "./pages/Resources/Blogs/Blogindividual";
 import Provisionalbloglist from "./components/Blog/Provisionalbloglist";
+import Signup from "./pages/Auth/Signup/Signup";
+import Login from "./pages/Auth/Login/Login";
 function App() {
   return (
     <>
@@ -68,6 +70,10 @@ function App() {
             <Route exact path="/newsletterresponses" element={<Newsletter />} key="route-newsletterresponse-screen" />
             <Route exact path="/createblog" element={<Createblog />} key="route-createblog-screen" />
             <Route exact path="/provisionalblog" element={<Provisionalbloglist />} key="route-provisionalblog-screen" />
+
+            <Route exact path="/signup" element={<Signup />} key="route-signup-screen" />
+            <Route exact path="/login" element={<Login />} key="route-login-screen" />
+
             <Route exact path="/blog/:_id" element={<Blogindividual />} key="route-infividualblog-screen" />
             <Route path="*" element={<NotFound />} />
           </Routes>
