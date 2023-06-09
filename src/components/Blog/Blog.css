@@ -193,6 +193,17 @@
     margin: 2vw 0 50vw 3vw;
 }
 
+#allblogswrittenbuuser{
+    width: 75%;
+    margin: 0 auto;
+    padding-top: 5vw;
+}
+
+#paddinginpublishlist{
+    padding-top: 7vw;
+}
+
+
 @media (max-width:660px){
     .mainblogstarts{
         width: 100%;

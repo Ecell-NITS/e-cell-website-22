@@ -4,7 +4,9 @@ import NavbarTeam from '../../../components/shared/Navbar/NavbarTeam'
 import axios from 'axios'
 import moment from "moment-timezone";
 import Footer from '../../../components/shared/Footer/Footer';
+import { useNavigate } from 'react-router-dom';
 const Createblog = () => {
+    const navigate = useNavigate()
     const [title, setTitle] = useState("")
     const [intro, setIntro] = useState("")
     const [tag, setTag] = useState("")
@@ -17,6 +19,32 @@ const Createblog = () => {
     const [writeremail, setWriteremail] = useState("")
     const [submitting, setSubmitting] = useState(false);
 
+    useEffect(() => {
+        document.title = 'Create blog | ECELL NITS';
+        const token = localStorage.getItem('token');
+        if (!token) {
+          navigate('/login');
+        } else {
+          // Fetch user data and populate the form fields
+          axios
+            .get('http://localhost:2226/fetchprofile', {
+              headers: {
+                Authorization: `Bearer ${token}`,
+              },
+            })
+            .then((response) => {
+              const user = response.data;
+              setWritername(user.name);
+              setWriterintro(user.bio);
+              setWriterpic(user.userimg);
+              setWriteremail(user.email);
+            })
+            .catch((error) => {
+              console.error('Failed to fetch user data', error);
+              // Handle error
+            });
+        }
+      }, [navigate]);
     const iscreateblogempty = () => {
         return title !== "" && intro !== "" && tag !== "" && writeremail !== "" && content !== "" && writernmae !== "" && writerintro !== "" && writerpic !== "" && topicpic !== "";
     };
@@ -59,9 +87,7 @@ const Createblog = () => {
             });
     }
 
-    useEffect(() => {
-        document.title = "Create blog | ECELL NITS"
-    }, [])
+
 
     return (
         <div>
@@ -172,7 +198,7 @@ const Createblog = () => {
                     />
                 </div>
 
-                <div className="firstboxvreateblog">
+                <div className="firstboxvreateblog" id='writerdivid'>
                     <h2 className='ttleinptcrteblog'>Writer Details</h2>
                     <h4 className='specificttle'>Name</h4>
                     <input

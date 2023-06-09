@@ -8,8 +8,13 @@ const Login = () => {
     const [message, setMessage] = useState('');
 
     useEffect(() => {
-        document.title = "Login | ECELL NITS"
-    })
+        document.title = 'Login | ECELL NITS';
+        const token = localStorage.getItem('token');
+        if (token) {
+          navigate('/dashboard');
+        }
+      }, [navigate]);
+    
 
     const handlelogin = (e) => {
         e.preventDefault()
@@ -18,8 +23,8 @@ const Login = () => {
             return;
         }
 
-        // axios.post('http://localhost:2226/login', 
-        axios.post(process.env.REACT_APP_LOGIN, 
+        axios.post('http://localhost:2226/login', 
+        // axios.post(process.env.REACT_APP_LOGIN, 
         { email, password })
             .then(response => {
                 const token = response.data.token;
