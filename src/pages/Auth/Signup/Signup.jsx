@@ -23,10 +23,12 @@ const Signup = () => {
             return;
         }
 
-        // Send a POST request to the backend API
-        axios.post('http://localhost:2226/signup', { name, email, password })
+       
+        // axios.post('http://localhost:2226/signup', 
+        axios.post(process.env.REACT_APP_SIGNUP, 
+        { name, email, password })
             .then(response => {
-                console.log(response.data); // Handle the response from the server
+                console.log(response.data); 
                 setName("")
                 setEmail("")
                 setPassword("")

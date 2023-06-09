@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 const Login = () => {
+    const navigate = useNavigate();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [message, setMessage] = useState('');
@@ -16,18 +18,27 @@ const Login = () => {
             return;
         }
 
-        axios.post('http://localhost:2226/login', { email, password })
-        .then(response => {
-          setMessage(response.data.message);
-      
-        })
-        .catch(error => {
-          if (error.response) {
-            setMessage(error.response.data.error);
-          } else {
-            setMessage('Login failed. Please try again.');
-          }
-        });
+        // axios.post('http://localhost:2226/login', 
+        axios.post(process.env.REACT_APP_LOGIN, 
+        { email, password })
+            .then(response => {
+                const token = response.data.token;
+                localStorage.setItem('token', token);
+                // setMessage(response.data.message);
+                // setMessage(`Welcome, ${email}`);
+               
+                navigate('/dashboard')
+                // setTimeout(() => {
+                //     navigate('/dashboard')
+                // },3000)
+            })
+            .catch(error => {
+                if (error.response) {
+                    setMessage(error.response.data.error);
+                } else {
+                    setMessage('Login failed. Please try again.');
+                }
+            });
     }
 
     return (

@@ -19,6 +19,7 @@ import Blogindividual from "./pages/Resources/Blogs/Blogindividual";
 import Provisionalbloglist from "./components/Blog/Provisionalbloglist";
 import Signup from "./pages/Auth/Signup/Signup";
 import Login from "./pages/Auth/Login/Login";
+import Dashboard from "./pages/Auth/Dashboard/Dashboard";
 function App() {
   return (
     <>
@@ -73,6 +74,7 @@ function App() {
 
             <Route exact path="/signup" element={<Signup />} key="route-signup-screen" />
             <Route exact path="/login" element={<Login />} key="route-login-screen" />
+            <Route exact path="/dashboard" element={<Dashboard />} key="route-dashboard-screen" />
 
             <Route exact path="/blog/:_id" element={<Blogindividual />} key="route-infividualblog-screen" />
             <Route path="*" element={<NotFound />} />
