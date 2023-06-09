@@ -136,6 +136,9 @@ letter-spacing: 0em;
   height: 0.1px;
   position: relative;
 }
+.fill input{
+  outline: none;
+}
 
 .send{
   cursor: pointer;
