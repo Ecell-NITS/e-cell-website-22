@@ -13,8 +13,8 @@ const Dashboard = () => {
       },
     };
 
-    axios.get('http://localhost:2226/dashboard', 
-    // axios.get(process.env.REACT_APP_DASHBOARD, 
+    // axios.get('http://localhost:2226/dashboard', 
+    axios.get(process.env.REACT_APP_DASHBOARD, 
     config)
       .then(response => {
         const { name, email, bio ,userimg} = response.data; 

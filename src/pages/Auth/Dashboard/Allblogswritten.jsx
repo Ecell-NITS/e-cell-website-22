@@ -23,7 +23,8 @@ const Allblogspublished = () => {
         };
 
         axios
-            .get('http://localhost:2226/mypublishedblogs', config)
+            // .get('http://localhost:2226/mypublishedblogs', config)
+            .get(process.env.REACT_APP_PUBLISHEDBLOGS, config)
             .then((response) => {
                 setBlogs(response.data.blogs);
             })

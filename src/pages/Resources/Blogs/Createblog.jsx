@@ -27,7 +27,8 @@ const Createblog = () => {
         } else {
           // Fetch user data and populate the form fields
           axios
-            .get('http://localhost:2226/fetchprofile', {
+            .get(process.env.REACT_APP_FETCHPROFILE, {
+            // .get('http://localhost:2226/fetchprofile', {
               headers: {
                 Authorization: `Bearer ${token}`,
               },

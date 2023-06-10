@@ -23,7 +23,8 @@ const Allprovblogs = () => {
         };
 
         axios
-            .get('http://localhost:2226/myprovisionalblogs', config)
+            .get(process.env.REACT_APP_ALLPROVBLOGS, config)
+            // .get('http://localhost:2226/myprovisionalblogs', config)
             .then((response) => {
                 setBlogs(response.data.blogs);
             })

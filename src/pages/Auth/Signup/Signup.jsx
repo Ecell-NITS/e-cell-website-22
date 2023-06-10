@@ -39,8 +39,8 @@ const [confirmpwd, setConfirmpwd] = useState("")
         return
        }
 
-        axios.post('http://localhost:2226/signup', 
-        // axios.post(process.env.REACT_APP_SIGNUP, 
+        // axios.post('http://localhost:2226/signup', 
+        axios.post(process.env.REACT_APP_SIGNUP, 
         { name, email, password })
             .then(response => {
                 console.log(response.data); 

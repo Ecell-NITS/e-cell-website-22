@@ -38,7 +38,8 @@ const EditProfile = () => {
     }
 
     axios
-      .put('http://localhost:2226/editprofile', { name, bio, userimg }, {
+      // .put('http://localhost:2226/editprofile', { name, bio, userimg }, {
+      .put(process.env.REACT_APP_EDITPROFILE, { name, bio, userimg }, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

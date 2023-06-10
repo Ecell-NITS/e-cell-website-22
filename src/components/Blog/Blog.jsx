@@ -17,7 +17,7 @@ const Blog = () => {
       return;
     }
     try {
-      const response = await axios.post(`http://localhost:2226/api/blogs/${blogId}/like`, {}, {
+      const response = await axios.post(`${process.env.REACT_APP_APIMAIN}/api/blogs/${blogId}/like`, {}, {
         headers: {
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${localStorage.getItem('token')}`
