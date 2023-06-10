@@ -68,17 +68,21 @@
 .input-common-recruit{
     display: block;
     width: 100%;
-    border: solid 2px rgba(62, 97, 142, 1);
+    border: solid 2px #ccc;
     border-radius: 10px;
     padding: .5vw;
     color: rgba(62, 97, 142, 1);
     font-weight: 600;
     font-size: 1.6vw;
     letter-spacing: .5px;
-    /* font-family: 'Nunito', sans-serif; */
-    /* font-family: 'Roboto', sans-serif; */
+    transition: all 0.3s;
 }
 
+.input-common-recruit:focus{
+    outline: none;
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
 
 .radioinpt{
     display: flex;
@@ -106,6 +110,11 @@
     padding: .5vw 1.5vw;
     font-size: 1.4vw;
     margin: 1.5vw 0 0 0;
+    transition: all 0.3s;
+}
+
+.btnotpsend:active{
+    box-shadow: 0 0 0 0.2rem #224529;
 }
 
 .robottxt{
@@ -116,13 +125,20 @@
 
 .robotinptt{
     display: inline !important;
-    border: solid 2px rgba(62, 97, 142, 1);
+    border: solid 2px #ccc;
     border-radius: 10px;
     padding: .5vw;
     color: rgba(62, 97, 142, 1);
     font-weight: 600;
     font-size: 1.6vw;
     letter-spacing: .5px;
+    transition: all 0.3s;
+}
+
+.robotinptt:focus{
+    outline: none;
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 
 .submtformrecuit{
@@ -136,6 +152,11 @@
     padding: .5vw 1.5vw;
     font-size: 2vw;
     margin: 3.5vw auto;
+    transition: all 0.3s;
+}
+
+.submtformrecuit:active{
+    box-shadow: 0 0 0 0.2rem #224529;
 }
 
 .statusmsgssubmt{
