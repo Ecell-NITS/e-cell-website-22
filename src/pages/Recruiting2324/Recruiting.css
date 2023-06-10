@@ -169,6 +169,26 @@
     color: red;
 }
 
+.importantinstructionsrecuit{
+    width: 85%;
+    margin: 2vw auto 5vw auto;
+}
+
+.importantinstructionsrecuit ul li a{
+    color: black !important;
+    text-decoration: underline !important;
+}
+
+.importantinstructionsrecuit h2{
+    color: red;
+    font-size: 2vw;
+    text-align: center;
+    margin-bottom: 2vw;
+}
+
+.importantinstructionsrecuit ul li{
+    font-size: 1.5vw;
+}
 @media (max-width:660px){
     .topbgrecuit{
         position: relative;
@@ -237,5 +257,22 @@
     .statusmsgssubmt{
         font-size: 5vw;
         margin-top: 2vw;
+    }
+
+    .importantinstructionsrecuit{
+        width: 95%;
+        margin: 2vw auto 15vw auto;
+    }
+    
+  
+    .importantinstructionsrecuit h2{
+        color: red;
+        font-size: 4vw;
+        text-align: center;
+        margin-bottom: 2vw;
+    }
+    
+    .importantinstructionsrecuit ul li{
+        font-size: 4vw;
     }
 }
