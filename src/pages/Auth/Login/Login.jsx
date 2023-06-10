@@ -46,6 +46,10 @@ const Login = () => {
             });
     }
 
+    const HandleSignupMove = () => {
+        navigate("/signup")
+    }
+    
     return (
         <div><h1>Login</h1>
 
@@ -66,6 +70,7 @@ const Login = () => {
             </form>
 
             {message && <p>{message}</p>}
+            <button onClick={HandleSignupMove}>Go to Signup</button>
         </div>
     )
 }

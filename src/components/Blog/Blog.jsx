@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './Blog.css'
 const Blog = () => {
   const [blogscreated, setBlogscreated] = useState([]);
@@ -8,6 +9,40 @@ const Blog = () => {
   const [sortingMessage, setSortingMessage] = useState('');
   const [activeTagFilter, setActiveTagFilter] = useState('');
   const [isFetching, setIsFetching] = useState(true);
+  const navigate = useNavigate()
+
+  const handleLikeKarp = async (blogId) => {
+    if (!localStorage.getItem('token')) {
+      navigate("/login")
+      return;
+    }
+    try {
+      const response = await axios.post(`http://localhost:2226/api/blogs/${blogId}/like`, {}, {
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${localStorage.getItem('token')}`
+        }
+      });
+
+      const updatedLikes = response.data.likes;
+      setBlogscreated(prevBlogs => {
+        return prevBlogs.map(blog => {
+          if (blog._id === blogId) {
+            return { ...blog, likesCount: updatedLikes };
+          }
+          return blog;
+        });
+      });
+      alert('You have liked the blog');
+    } catch (error) {
+      if (error.response && error.response.status === 400 && error.response.data.error === 'You have already liked this blog') {
+        alert('You have already liked this blog');
+      } else {
+        console.error('Error liking the blog:', error);
+      }
+    }
+  };
+
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
@@ -19,6 +54,10 @@ const Blog = () => {
         const sortedBlogs = response.data.sort((a, b) => {
           if (sortingOrder === 'latest') {
             return new Date(b.timestamp) - new Date(a.timestamp);
+          }  else if (sortingOrder === 'likes') {
+            const likesA = a.likes ? a.likes.length : 0;
+            const likesB = b.likes ? b.likes.length : 0;
+            return likesB - likesA;
           } else {
             return new Date(a.timestamp) - new Date(b.timestamp);
           }
@@ -28,7 +67,7 @@ const Blog = () => {
         setBlogscreated(sortedBlogs);
       } catch (error) {
         console.log('Error fetching blogs:', error);
-      }finally{
+      } finally {
         setIsFetching(false);
       }
     };
@@ -65,6 +104,7 @@ const Blog = () => {
             <div className='btnlatestoldest'>
               <button onClick={() => handleSortingOrderChange('latest')} className={sortingOrder === 'latest' ? 'active' : ''}>Latest</button>
               <button onClick={() => handleSortingOrderChange('oldest')} id='moreold' className={sortingOrder === 'oldest' ? 'active' : ''}>Oldest</button>
+              <button onClick={() => handleSortingOrderChange('likes')} id='moreold' className={sortingOrder === 'likes' ? 'active' : ''}>Most Liked</button>
             </div>
           </div>
 
@@ -110,10 +150,14 @@ const Blog = () => {
                         <div className="briefintrohldman">
                           <p>{blog.intro}</p>
                         </div>
-                        
+
                         <Link to={`/blog/${blog._id}`}> <button className='kretrhereading'>
                           Read more
                         </button></Link>
+
+                        <button onClick={() => handleLikeKarp(blog._id)}>
+                          Like ({blog.likes ? blog.likes.length : 0})
+                        </button>
 
                       </div>
                     ))}
@@ -132,6 +176,8 @@ const Blog = () => {
             <button onClick={() => handleTagFilter('startup')} className={`activetagcolored ${activeTagFilter === 'startup' ? 'active' : ''}`}>Startup</button>
             <button onClick={() => handleTagFilter('technology')} className={`activetagcolored ${activeTagFilter === 'technology' ? 'active' : ''}`}>Technology</button>
             <button onClick={() => handleTagFilter('entrepreneur')} className={`activetagcolored ${activeTagFilter === 'entrepreneur' ? 'active' : ''}`} id='btnthirdtag'>Entrepreneur</button>
+         
+
           </div>
         </div>
       </div>
