@@ -298,11 +298,11 @@ const Recruiting = () => {
             </div>
 
             <div className="toprecuitcontent">
-                <h2>Are you passionate about the entrepreneurial world and are looking for a platform to learn as well as showcase your knowledge? Look no further. The Entrepreneurship Cell (E-Cell) of NIT Silchar is thrilled to announce recruitment of talented individuals for the academic year 2023-2024.<br /><br />At E-Cell, we believe in empowering aspiring individuals to become exceptional communicators and influencers in the entrepreneurial ecosystem. As a part of our team, you will have the opportunity to engage with a diverse audience, promote entrepreneurship, and contribute to our vision of fostering innovation and creativity.<br /><br />So, what are you waiting for? The application forms are on our website, go fill them out and join our mighty league of entrepreneurial mavens E-Cell, NIT Silchar. </h2>
+                <h2>Are you passionate about the entrepreneurial world and are looking for a platform to learn as well as showcase your knowledge? Look no further. The Entrepreneurship Cell (E-Cell) of NIT Silchar is thrilled to announce recruitment of talented individuals for the academic year 2023-2024.<br /><br />At E-Cell, we believe in empowering aspiring individuals to become exceptional communicators and influencers in the entrepreneurial ecosystem. As a part of our team, you will have the opportunity to engage with a diverse audience, promote entrepreneurship, and contribute to our vision of fostering innovation and creativity. </h2>
             </div>
 
             <div className="importantinstructionsrecuit">
-                <h2>Imporatant instructions. Please read thoroughly before filling the form.</h2>
+                <h2>Important instructions. Please read thoroughly before filling the form.</h2>
                 <ul>
                     <li>Only first year students of NITS are eligible to fill this form.</li>
                     <li>Use ONLY your Institute email id.</li>
