@@ -8,7 +8,7 @@ const EditProfile = () => {
   const [userimg, setUserimg] = useState("")
   const [error, setError] = useState('');
   const [message, setMessage] = useState("")
-
+  const [saving, setSaving] = useState(false)
   useEffect(() => {
     document.title = "Edit Profile | Dashboard"
     const token = localStorage.getItem('token');
@@ -36,7 +36,7 @@ const EditProfile = () => {
     if (!token) {
       return;
     }
-
+    setSaving(true)
     axios
       // .put('http://localhost:2226/editprofile', { name, bio, userimg }, {
       .put(process.env.REACT_APP_EDITPROFILE, { name, bio, userimg }, {
@@ -52,11 +52,14 @@ const EditProfile = () => {
         setName('');
         setBio("")
         setUserimg("")
+        setSaving(false)
       })
       .catch((error) => {
         console.error('Failed to update name', error);
         setError('Failed to update name. Please try again.');
+        setSaving(false)
       });
+    
   };
 
 
@@ -85,7 +88,9 @@ const EditProfile = () => {
         </div>
 
 
-        <button type="submit">Save</button>
+        <button type="submit">
+          {saving ? "Saving..." : "Save"}
+        </button>
       </form>
       {message && <p>{message}</p>}
       {error && <p>{error}</p>}

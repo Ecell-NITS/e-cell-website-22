@@ -6,15 +6,15 @@ const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [message, setMessage] = useState('');
-
+    const [loggingin, setLoggingin] = useState(false)
     useEffect(() => {
         document.title = 'Login | ECELL NITS';
         const token = localStorage.getItem('token');
         if (token) {
-          navigate('/dashboard');
+            navigate('/dashboard');
         }
-      }, [navigate]);
-    
+    }, [navigate]);
+
 
     const handlelogin = (e) => {
         e.preventDefault()
@@ -22,20 +22,21 @@ const Login = () => {
             setMessage('Please fill all required fields');
             return;
         }
-
-        axios.post('http://localhost:2226/login', 
-        // axios.post(process.env.REACT_APP_LOGIN, 
-        { email, password })
+        setLoggingin(true)
+        // axios.post('http://localhost:2226/login', 
+        axios.post(process.env.REACT_APP_LOGIN,
+            { email, password })
             .then(response => {
                 const token = response.data.token;
                 localStorage.setItem('token', token);
                 // setMessage(response.data.message);
                 // setMessage(`Welcome, ${email}`);
-               
+
                 navigate('/dashboard')
                 // setTimeout(() => {
                 //     navigate('/dashboard')
                 // },3000)
+                setLoggingin(false)
             })
             .catch(error => {
                 if (error.response) {
@@ -43,13 +44,14 @@ const Login = () => {
                 } else {
                     setMessage('Login failed. Please try again.');
                 }
+                setLoggingin(false)
             });
     }
 
     const HandleSignupMove = () => {
         navigate("/signup")
     }
-    
+
     return (
         <div><h1>Login</h1>
 
@@ -66,7 +68,9 @@ const Login = () => {
                     value={password}
                     onChange={e => setPassword(e.target.value)}
                 />
-                <button type="submit">Log in</button>
+                <button type="submit">
+                    {loggingin ? "Logging in..." : "Log in"}
+                </button>
             </form>
 
             {message && <p>{message}</p>}

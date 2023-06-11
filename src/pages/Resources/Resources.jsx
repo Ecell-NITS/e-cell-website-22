@@ -4,7 +4,7 @@ import NavbarTeam from "../../components/shared/Navbar/NavbarTeam";
 import "./Resources.css";
 import BooksSummary from "../../components/ResourceModal/BooksSummary";
 import PodcastSummary from "../../components/ResourceModal/PodcastSummary";
-// import Blog from "../../components/Blog/Blog";
+import Blog from "../../components/Blog/Blog";
 
 const Resources = () => {
   useEffect(() => {
@@ -18,7 +18,7 @@ const Resources = () => {
       </div>
       <BooksSummary />
       <PodcastSummary />
-      {/* <Blog /> */}
+      <Blog />
       <Footer />
     </>
   );

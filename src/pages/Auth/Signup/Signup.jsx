@@ -7,16 +7,20 @@ const Signup = () => {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const [message, setMessage] = useState("")
-const [confirmpwd, setConfirmpwd] = useState("")
+    const [confirmpwd, setConfirmpwd] = useState("")
+    const [signingup, setSigningup] = useState(false)
     
+
+
     useEffect(() => {
         document.title = "Signup | ECELL NITS"
         const token = localStorage.getItem('token');
         if (token) {
-          navigate('/dashboard');
+            navigate('/dashboard');
         }
     }, [navigate])
 
+   
 
     const isSignUpFormFilled = () => {
         return (
@@ -34,25 +38,27 @@ const [confirmpwd, setConfirmpwd] = useState("")
             return;
         }
 
-       if(confirmpwd !== password){
-        setMessage("Passwords are not same.")
-        return
-       }
+        if (confirmpwd !== password) {
+            setMessage("Passwords are not same.")
+            return
+        }
 
-        axios.post('http://localhost:2226/signup', 
-        // axios.post(process.env.REACT_APP_SIGNUP, 
-        { name, email, password })
+        setSigningup(true)
+        // axios.post('http://localhost:2226/signup', 
+        axios.post(process.env.REACT_APP_SIGNUP,
+            { name, email, password })
             .then(response => {
-                console.log(response.data); 
+                console.log(response.data);
                 setName("")
                 setEmail("")
                 setPassword("")
                 setConfirmpwd("")
-                setMessage("Signup completed! You will be redirected to login page after 5 seconds.")
+                setMessage(`Signup completed! You will be redirected to login page after 5 seconds.`)
                 setTimeout(() => {
                     setMessage("")
                     navigate('/login');
                 }, 5000)
+                setSigningup(false)
             })
             .catch(error => {
                 setName("")
@@ -70,7 +76,7 @@ const [confirmpwd, setConfirmpwd] = useState("")
                 setTimeout(() => {
                     setMessage("")
                 }, 5000)
-
+                setSigningup(false)
             });
     }
 
@@ -84,7 +90,9 @@ const [confirmpwd, setConfirmpwd] = useState("")
                 <input type="password" placeholder='Password' value={password} onChange={e => setPassword(e.target.value)} />
 
                 <input type="password" placeholder='Confirm password' value={confirmpwd} onChange={e => setConfirmpwd(e.target.value)} />
-                <button type="submit">Sign up</button>
+                <button type="submit">
+                    {signingup ? "Creating account" : "Sign up"}
+                </button>
             </form>
             {message && <p>{message}</p>}
         </>

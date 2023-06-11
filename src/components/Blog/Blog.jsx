@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
+import { BiLike } from 'react-icons/bi'
+// import { AiTwotoneLike } from 'react-icons/ai'
 import './Blog.css'
 const Blog = () => {
   const [blogscreated, setBlogscreated] = useState([]);
@@ -9,6 +11,7 @@ const Blog = () => {
   const [sortingMessage, setSortingMessage] = useState('');
   const [activeTagFilter, setActiveTagFilter] = useState('');
   const [isFetching, setIsFetching] = useState(true);
+  // const [likedBlogs, setLikedBlogs] = useState([]);
   const navigate = useNavigate()
 
   const handleLikeKarp = async (blogId) => {
@@ -54,7 +57,7 @@ const Blog = () => {
         const sortedBlogs = response.data.sort((a, b) => {
           if (sortingOrder === 'latest') {
             return new Date(b.timestamp) - new Date(a.timestamp);
-          }  else if (sortingOrder === 'likes') {
+          } else if (sortingOrder === 'likes') {
             const likesA = a.likes ? a.likes.length : 0;
             const likesB = b.likes ? b.likes.length : 0;
             return likesB - likesA;
@@ -151,13 +154,18 @@ const Blog = () => {
                           <p>{blog.intro}</p>
                         </div>
 
-                        <Link to={`/blog/${blog._id}`}> <button className='kretrhereading'>
-                          Read more
-                        </button></Link>
+                        <div id='btnholderslikeread'>
+                          <button className='likekarobhaiblog' onClick={() => handleLikeKarp(blog._id)}>
+                            <BiLike  /> {blog.likes ? blog.likes.length : 0}
+                          </button>
+                         
+                          <Link to={`/blog/${blog._id}`}> <button className='kretrhereading'>
+                            Read more
+                          </button></Link>
 
-                        <button onClick={() => handleLikeKarp(blog._id)}>
-                          Like ({blog.likes ? blog.likes.length : 0})
-                        </button>
+
+                        </div>
+
 
                       </div>
                     ))}
@@ -176,7 +184,7 @@ const Blog = () => {
             <button onClick={() => handleTagFilter('startup')} className={`activetagcolored ${activeTagFilter === 'startup' ? 'active' : ''}`}>Startup</button>
             <button onClick={() => handleTagFilter('technology')} className={`activetagcolored ${activeTagFilter === 'technology' ? 'active' : ''}`}>Technology</button>
             <button onClick={() => handleTagFilter('entrepreneur')} className={`activetagcolored ${activeTagFilter === 'entrepreneur' ? 'active' : ''}`} id='btnthirdtag'>Entrepreneur</button>
-         
+
 
           </div>
         </div>

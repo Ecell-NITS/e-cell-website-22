@@ -54,6 +54,10 @@ const Dashboard = () => {
     navigate("/myallblogs")
   }
   
+  const handlelikedblogs = () =>{
+    navigate("/likedblogs")
+  }
+  
   return (
     <>
       <p>This is a protected dashboard page</p>
@@ -69,6 +73,7 @@ const Dashboard = () => {
         <button onClick={handleEditProfile}>Edit Profile</button>
         <button onClick={handleallblogsbtn}>My Published blogs</button>
         <button onClick={handleallprovblogs}>My all blogs</button>
+        <button onClick={handlelikedblogs}>Liked blogs</button>
       </div>
     </>
   )
