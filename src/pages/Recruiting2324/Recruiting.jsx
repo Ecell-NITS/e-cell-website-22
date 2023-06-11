@@ -309,7 +309,7 @@ const Recruiting = () => {
                     <li>Check your Institute email inbox or SPAM folder for the otp.</li>
                     <li>It might take 10 seconds to send the otp, so please be patient.</li>
                     <li>You can only fill this form once so please be attentive while filling the form.</li>
-                    <li>Give Google drive link of the resume and make sure it is accessible by anyone on the internet.</li>
+                    <li>Give Google drive link of the resume and make sure it is <span style={{color:"red"}}>accessible by anyone on the internet</span>. You can find a sample resume <a href="https://www.overleaf.com/latex/templates/minimal-cv-template/hnvkvrchysmg" target='_blank' rel="noreferrer">here</a>.</li>
                     <li>In case of any issue while filling the form please contact <a style={{color:"black"}} href="https://api.whatsapp.com/send/?phone=%2B919431875819&text&type=phone_number&app_absent=0" target='_blank' rel="noreferrer">here</a>.</li>
                     <li>Keep checking your inbox for further instructions.</li>
                 </ul>
