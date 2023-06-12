@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import './Signup.css'
+import NavbarTeam from '../../../components/shared/Navbar/NavbarTeam';
+import Footer from '../../../components/shared/Footer/Footer';
 const Signup = () => {
     const navigate = useNavigate();
     const [name, setName] = useState("")
@@ -9,8 +12,9 @@ const Signup = () => {
     const [message, setMessage] = useState("")
     const [confirmpwd, setConfirmpwd] = useState("")
     const [signingup, setSigningup] = useState(false)
-    
-
+    const [verifyotp, setVerifyotp] = useState(false)
+    const [otp, setOtp] = useState('');
+    const [otpgoing, setOtpgoing] = useState(false)
 
     useEffect(() => {
         document.title = "Signup | ECELL NITS"
@@ -20,27 +24,53 @@ const Signup = () => {
         }
     }, [navigate])
 
-   
-
     const isSignUpFormFilled = () => {
         return (
             name !== "" &&
             email !== "" &&
-            password !== ""
+            password !== "" && otp !== "" && confirmpwd !== ""
         );
     };
 
-    const formhandlesubmit = (e) => {
+    const formhandlesubmit = async (e) => {
         e.preventDefault()
 
+        console.log("isSignUpFormFilled:", isSignUpFormFilled());
         if (!isSignUpFormFilled()) {
             alert("Please fill all the required signup form fields");
             return;
         }
 
         if (confirmpwd !== password) {
-            setMessage("Passwords are not same.")
+            setMessage("! Passwords are not same.")
+            setTimeout(() => {
+                setMessage("")
+            }, 5000)
             return
+        }
+
+        try {
+            setVerifyotp(true)
+            // const response = await axios.post(process.env.REACT_APP_RECRUITMENT_VERIFYOTP, {
+            const response = await axios.post("http://localhost:2226/verify-otp", {
+                otp,
+            });
+
+            if (response.data.message === "OTP verified successfully") {
+
+
+                console.log('OTP verified');
+            } else {
+
+                alert('Wrong OTP. Please try again');
+                return;
+            }
+        } catch (error) {
+            console.log('Error verifying OTP:', error);
+            alert('Wrong OTP. Please try again');
+            return
+        } finally {
+            setVerifyotp(false)
         }
 
         setSigningup(true)
@@ -53,6 +83,7 @@ const Signup = () => {
                 setEmail("")
                 setPassword("")
                 setConfirmpwd("")
+                setOtp("")
                 setMessage(`Signup completed! You will be redirected to login page after 5 seconds.`)
                 setTimeout(() => {
                     setMessage("")
@@ -81,20 +112,93 @@ const Signup = () => {
     }
 
 
+    const hangleGoToLogin = () => {
+        navigate("/login")
+    }
+
+    const sendOTP = async (e) => {
+        e.preventDefault()
+        if (email === "") {
+            alert("Please enter your email id");
+            return;
+        }
+
+        try {
+            setOtpgoing(true);
+            const response = await axios.post(
+                "http://localhost:2226/send-otp",
+                {
+                    email,
+                }
+            );
+            if (response.status === 200) {
+                alert('OTP sent successfully! Please check your inbox as well as SPAM folder.');
+            }
+        } catch (error) {
+            console.log('Error sending OTP:', error);
+            alert('An error occurred while sending the OTP');
+        } finally {
+            setOtpgoing(false);
+        }
+    };
+
     return (
         <>
-            <h1>Sign up</h1>
-            <form onSubmit={formhandlesubmit}>
-                <input type="text" placeholder='Name' value={name} onChange={e => setName(e.target.value)} />
-                <input type="email" placeholder='Email' value={email} onChange={e => setEmail(e.target.value)} />
-                <input type="password" placeholder='Password' value={password} onChange={e => setPassword(e.target.value)} />
+            <NavbarTeam />
+            <div className='signuptopcont'>
+                <div className="formcontsignup">
+                    <h1 className='okwelcometoecell'>Welcome to E-Cell, NITS</h1>
+                    <h4 className='enterdtlssignup'>Please enter your details.</h4>
+                    <form className='formsignaccoutn'>
+                        <div className="inputdicdignup">
+                            <h3>Name</h3>
+                            <input type="text" placeholder='Enter your Name' value={name} onChange={e => setName(e.target.value)} />
+                        </div>
+                        <div className="inputdicdignup">
+                            <h3>Email</h3>
+                            <input type="email" placeholder='Enter your Email' value={email} onChange={e => setEmail(e.target.value)} />
+                        </div>
 
-                <input type="password" placeholder='Confirm password' value={confirmpwd} onChange={e => setConfirmpwd(e.target.value)} />
-                <button type="submit">
-                    {signingup ? "Creating account" : "Sign up"}
-                </button>
-            </form>
-            {message && <p>{message}</p>}
+                        <div>
+                            <button onClick={sendOTP} className='btnotpsend' id='newotpsending'>Send OTP</button>
+                        </div>
+                        {otpgoing && <p className='statusmsgssubmt'>Sending otp...Please be patient it might take 10 seconds.</p>}
+
+                        <div className="inputdicdignup">
+                            <h3>OTP</h3>
+                            <input type="text" placeholder='Enter OTP' value={otp} onChange={e => setOtp(e.target.value)} />
+                        </div>
+
+                        <div className="inputdicdignup">
+                            <h3>Password</h3>
+                            <input type="password" placeholder='Enter Password' value={password} onChange={e => setPassword(e.target.value)} />
+                        </div>
+                        <div className="inputdicdignup">
+                            <h3>Confirm Password</h3>
+                            <input type="password" placeholder='Confirm password' value={confirmpwd} onChange={e => setConfirmpwd(e.target.value)} />
+                        </div>
+
+                        <button type="submit" className='btnsubmittodb' onClick={formhandlesubmit}>
+                            {signingup ? "Creating account" : "Sign up"}
+                        </button>
+                        
+                        <div className="statusmeshs">
+                            {message && <p className='msgaftersignuplogin'>{message}</p>}
+                            {verifyotp && <p className='statusmsgssubmt'>Verifying otp...</p>}
+                        </div>
+                        <div className="bottomredirectlogin">
+                            <h4 className='logexistingaccount'>Already have an account?</h4>
+                            <button onClick={hangleGoToLogin}>Sign In</button>
+                        </div>
+
+                    </form>
+                </div>
+
+                <div className="imgbgholdersignup">
+                    <img src="https://res.cloudinary.com/dp92qug2f/image/upload/v1686499643/Photo_zxxmw5.svg" alt="" />
+                </div>
+            </div>
+            <Footer />
         </>
     )
 }

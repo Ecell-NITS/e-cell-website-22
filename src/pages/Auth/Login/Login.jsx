@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import NavbarTeam from '../../../components/shared/Navbar/NavbarTeam';
+import Footer from '../../../components/shared/Footer/Footer';
 const Login = () => {
     const navigate = useNavigate();
     const [email, setEmail] = useState('');
@@ -41,6 +43,11 @@ const Login = () => {
             .catch(error => {
                 if (error.response) {
                     setMessage(error.response.data.error);
+                    setTimeout(()=>{
+                        setMessage("")
+                    },5000)
+                    setEmail("")
+                    setPassword("")
                 } else {
                     setMessage('Login failed. Please try again.');
                 }
@@ -53,29 +60,54 @@ const Login = () => {
     }
 
     return (
-        <div><h1>Login</h1>
+        <>
+            <NavbarTeam />
+            <div className='signuptopcont'>
+                <div className="formcontsignup">
+                    <h1 className='okwelcometoecell'>Welcome back</h1>
+                    <h4 className='enterdtlssignup'>Please enter your details.</h4>
+                    <form onSubmit={handlelogin} className='formsignaccoutn'>
+                        <div className="inputdicdignup">
+                            <h3>Email</h3>
+                            <input
+                                type="email"
+                                placeholder="Email"
+                                value={email}
+                                onChange={e => setEmail(e.target.value)}
+                            />
+                        </div>
+                        <div className="inputdicdignup">
+                            <h3>Password</h3>
+                            <input
+                                type="password"
+                                placeholder="Password"
+                                value={password}
+                                onChange={e => setPassword(e.target.value)}
+                            />
+                        </div>
 
-            <form onSubmit={handlelogin}>
-                <input
-                    type="email"
-                    placeholder="Email"
-                    value={email}
-                    onChange={e => setEmail(e.target.value)}
-                />
-                <input
-                    type="password"
-                    placeholder="Password"
-                    value={password}
-                    onChange={e => setPassword(e.target.value)}
-                />
-                <button type="submit">
-                    {loggingin ? "Logging in..." : "Log in"}
-                </button>
-            </form>
+                        <button className='btnsubmittodb' type="submit">
+                            {loggingin ? "Signing in" : "Sign in"}
+                        </button>
+                        {message && <p className='msgaftersignuplogin'>{message}</p>}
+                        <div className="bottomredirectlogin">
+                            <h4 className='logexistingaccount'>Don’t have an account?</h4>
+                            <button onClick={HandleSignupMove}>Sign Up</button>
+                        </div>
+                    </form>
+                </div>
 
-            {message && <p>{message}</p>}
-            <button onClick={HandleSignupMove}>Go to Signup</button>
-        </div>
+                <div className="imgbgholdersignup">
+                    <img src="https://res.cloudinary.com/dp92qug2f/image/upload/v1686499643/Photo_zxxmw5.svg" alt="" />
+                </div>
+
+            </div>
+
+            <Footer />
+        </>
+
+
+
     )
 }
 
