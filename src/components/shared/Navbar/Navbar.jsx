@@ -1,11 +1,12 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import { ImCross } from "react-icons/im";
 import { GiHamburgerMenu } from "react-icons/gi"
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 import './Navbar.css';
-
+import axios from 'axios';
 const Navbar = () => {
+  const navigate = useNavigate();
   const [toggle, setToggle] = useState(false);
 
   const handleToggle = () => {
@@ -25,6 +26,34 @@ const Navbar = () => {
     document.getElementById("aboutecellnits").scrollIntoView();
   }
 
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [profilePicture, setProfilePicture] = useState('');
+ 
+  useEffect(() => {
+    const fetchUserProfile = async () => {
+      try {
+        const response = await axios.get(process.env.REACT_APP_FETCHPROFILE, {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem('token')}`,
+          },
+        });
+        setProfilePicture(response.data.userimg);
+        console.log(response.data.userimg)
+        setIsLoggedIn(true);
+      } catch (error) {
+        console.error('Error fetching user profile:', error);
+      }
+    };
+
+    if (localStorage.getItem('token')) {
+      fetchUserProfile();
+    }
+  }, []);
+
+  const handleGoToDashboard = ()=>{
+    navigate("/dashboard")
+  }
+
   return (
     <nav className={toggle ? 'navbar1 expanded' : 'navbar1'} style={{ userSelect: 'none' }}>
       <Link to="/">
@@ -42,7 +71,16 @@ const Navbar = () => {
         {/* <li><a href="https://srijan-nits.in/" rel="noreferrer" target="_blank">SRIJAN</a></li> */}
         <li><NavLink to="/team">OUR TEAM</NavLink></li>
         <li><NavLink to="/gallery">GALLERY</NavLink></li>
-        <li><NavLink to="/recruiting">RECRUITING</NavLink></li>
+        {/* <li><NavLink to="/signup">SIGN UP</NavLink></li> */}
+
+        {isLoggedIn ? (
+          <li><div className='imgactivehlder' onClick={handleGoToDashboard}>
+            <img  className='profileactivesignin' src={profilePicture} alt="Profile Pic" />
+            </div></li>
+        ) : (
+          <li><NavLink to="/signup">SIGN UP</NavLink></li>
+        )}
+
       </ul>
     </nav>
   )

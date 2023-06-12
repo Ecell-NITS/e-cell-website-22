@@ -200,7 +200,7 @@
 }
 
 #paddinginpublishlist{
-    padding-top: 7vw;
+    padding-top: 0vw;
 }
 
 #btnholderslikeread{
@@ -215,6 +215,9 @@
     font-size: 1.5vw;
 }
 
+#akwmidthsamedesign{
+    width: 35%;
+}
 @media (max-width:660px){
     .mainblogstarts{
         width: 100%;

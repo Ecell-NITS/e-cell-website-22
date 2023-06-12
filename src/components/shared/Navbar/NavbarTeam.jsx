@@ -1,11 +1,11 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { ImCross } from "react-icons/im";
 import { GiHamburgerMenu } from "react-icons/gi"
 import { Link, NavLink } from 'react-router-dom';
 import './NavbarTeam.css';
 import {useNavigate} from "react-router-dom"
-
+import axios from 'axios';
 const NavbarTeam = () => {
   const [toggle, setToggle] = useState(false);
 
@@ -29,6 +29,34 @@ const NavbarTeam = () => {
     document.getElementById("aboutecellnits").scrollIntoView(true);
   }
 
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [profilePicture, setProfilePicture] = useState('');
+ 
+  useEffect(() => {
+    const fetchUserProfile = async () => {
+      try {
+        const response = await axios.get(process.env.REACT_APP_FETCHPROFILE, {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem('token')}`,
+          },
+        });
+        setProfilePicture(response.data.userimg);
+        console.log(response.data.userimg)
+        setIsLoggedIn(true);
+      } catch (error) {
+        console.error('Error fetching user profile:', error);
+      }
+    };
+
+    if (localStorage.getItem('token')) {
+      fetchUserProfile();
+    }
+  }, []);
+
+const handleGoToDashboard = ()=>{
+  navigate("/dashboard")
+}
+
   return (
     <nav className={ toggle ? 'navbar0 expanded' : 'navbar0'} style={{userSelect:'none'}} >
       <Link to="/">
@@ -48,7 +76,13 @@ const NavbarTeam = () => {
         {/* <li><a href="https://srijan-nits.in/" rel="noreferrer" target="_blank">SRIJAN</a></li> */}
         <li><NavLink to="/team">OUR TEAM</NavLink></li>
         <li><NavLink to="/gallery">GALLERY</NavLink></li>
-        <li><NavLink to="/recruiting">RECRUITING</NavLink></li>
+        {isLoggedIn ? (
+          <li><div className='imgactivehlder' onClick={handleGoToDashboard}>
+            <img  className='profileactivesignin' src={profilePicture} alt="Profile Pic" />
+            </div></li>
+        ) : (
+          <li><NavLink to="/signup">SIGN UP</NavLink></li>
+        )}
       </ul>
     </nav>
   )

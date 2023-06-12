@@ -1,0 +1,81 @@
+.dashboardmain{
+    padding-top: 7vw;
+}
+
+.flexingphotocontent{
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 5vw;
+}
+
+.phhotodash{
+    width: 30%;
+    height: 30vw;
+   
+}
+
+.phhotodash img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10.67px;
+}
+
+.biodashboardd{
+    padding-left: 3%;
+    width: 67%;
+}
+
+.accountusername{
+    font-weight: 600;
+    font-size: 3.5vw;
+}
+
+.firstseconndchild{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.editkryieprof{
+    color: rgba(193, 0, 0, 1);
+    border: 2px solid rgba(193, 0, 0, 1);
+    background-color: white;
+    padding: .25vw 1.5vw !important;
+    border-radius: 7.59px;
+    font-size: 1.7vw;
+}
+
+.biohbhauidhar{
+    margin: 4vw 0 2.9vw 0;
+    padding: 1.3vw;
+    border: 2px solid rgba(160, 160, 160, 0.55);
+    border-radius: 16.7px;
+}
+
+.biohbhauidhar h3{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    color: rgba(80, 80, 80, 1);
+    font-size: 1.3vw;
+}
+
+#tabchangerdashboard{
+    padding-top: 0;
+}
+
+.profeftcontparnt{
+    text-align: right;
+}
+
+#sirfcolorchng{
+    color: rgba(34, 66, 89, 1);
+    border: 2px solid rgba(34, 66, 89, 1);
+    margin-left: 17vw;
+    padding: .25vw 2.5vw !important;
+}
+
+@media (max-width:660px){
+  
+}

@@ -3,13 +3,13 @@ import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import '../../../components/Blog/Blog.css'
-import NavbarTeam from '../../../components/shared/Navbar/NavbarTeam';
-import Footer from '../../../components/shared/Footer/Footer';
+// import NavbarTeam from '../../../components/shared/Navbar/NavbarTeam';
+// import Footer from '../../../components/shared/Footer/Footer';
 const Allprovblogs = () => {
     const navigate = useNavigate()
     const [blogs, setBlogs] = useState([]);
     useEffect(() => {
-        document.title = "My all blogs | Dashboard"
+        // document.title = "My all blogs | Dashboard"
         const token = localStorage.getItem('token');
         if (!token) {
             navigate("/login")
@@ -34,13 +34,13 @@ const Allprovblogs = () => {
     }, [navigate])
     return (
         <div>
-            <NavbarTeam />
+            {/* <NavbarTeam /> */}
             <div id='paddinginpublishlist'>
-                <h1 style={{textAlign:"center"}}>My all Blogs</h1>
+                {/* <h1 style={{textAlign:"center"}}>My all Blogs</h1> */}
                 <div className="mainparentblogindicard" id='allblogswrittenbuuser'>
 
                     {blogs.map((blog) => (
-                        <div key={blog._id} className='indicardblog'>
+                        <div key={blog._id} className='indicardblog' >
                             {/* <h1>id: {blog._id}</h1> */}
                             <div className="imgholdercontblog">
                                 <img src={blog.topicpic} alt="" />
@@ -67,7 +67,7 @@ const Allprovblogs = () => {
                 </div>
 
             </div>
-            <Footer />
+            {/* <Footer /> */}
         </div>
     )
 }

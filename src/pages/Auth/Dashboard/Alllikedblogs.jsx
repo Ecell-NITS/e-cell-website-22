@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
 import axios from 'axios'
-import NavbarTeam from '../../../components/shared/Navbar/NavbarTeam'
-import Footer from '../../../components/shared/Footer/Footer'
+// import NavbarTeam from '../../../components/shared/Navbar/NavbarTeam'
+// import Footer from '../../../components/shared/Footer/Footer'
 const Alllikedblogs = () => {
     const navigate = useNavigate()
     const [likedBlogs, setLikedBlogs] = useState([]);
     useEffect(() => {
-        document.title = "Liked blogs | Dashboard"
+        // document.title = "Liked blogs | Dashboard"
         const token = localStorage.getItem('token')
         if (!token) {
             navigate("/login")
@@ -36,9 +36,9 @@ const Alllikedblogs = () => {
     }, []);
     return (
         <div>
-           <NavbarTeam />
+           {/* <NavbarTeam /> */}
             <div id='paddinginpublishlist'>
-                <h1 style={{ textAlign: "center" }}>Liked Blogs</h1>
+                {/* <h1 style={{ textAlign: "center" }}>Liked Blogs</h1> */}
                 <div className="mainparentblogindicard" id='allblogswrittenbuuser'>
 
                     {likedBlogs.map((blog) => (
@@ -69,7 +69,7 @@ const Alllikedblogs = () => {
                 </div>
 
             </div>
-         <Footer />
+         {/* <Footer /> */}
         </div>
     )
 }

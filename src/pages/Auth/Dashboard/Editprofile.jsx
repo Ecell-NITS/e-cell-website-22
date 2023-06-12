@@ -78,7 +78,7 @@ const EditProfile = () => {
         </div>
 
         <div>
-          <label htmlFor="bioInput">Bio:</label>
+          <label htmlFor="bioInput"> About:</label>
           <textarea id="bioInput" value={bio} onChange={handleBioChange} />
         </div>
 
