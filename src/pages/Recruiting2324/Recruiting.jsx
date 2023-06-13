@@ -208,12 +208,12 @@ const Recruiting = () => {
         }
 
         // Check if the email matches the allowed domains i.e only institute emails are accepted
-        // const emailRegex = /^.+22@(cse|civil|mech|ece|ee|ei)\.nits\.ac\.in$/;
+        const emailRegex = /^.+22@(cse|civil|mech|ece|ee|ei)\.nits\.ac\.in$/;
 
-        // if (!emailRegex.test(email)) {
-        //     alert("Only first year's INSTITUTE email id are accepted.");
-        //     return;
-        // }
+        if (!emailRegex.test(email)) {
+            alert("Only first year's INSTITUTE email id are accepted.");
+            return;
+        }
 
         //retrieve time in ist
         const timestamp = moment().tz("Asia/Kolkata").format();
@@ -260,12 +260,12 @@ const Recruiting = () => {
         }
 
         // Check if the email matches the allowed domains i.e only nits first years institute email are accepted
-        // const emailRegex = /^.+22@(cse|civil|mech|ece|ee|ei)\.nits\.ac\.in$/;
+        const emailRegex = /^.+22@(cse|civil|mech|ece|ee|ei)\.nits\.ac\.in$/;
 
-        // if (!emailRegex.test(email)) {
-        //     alert("Only first year's INSTITUTE email id are accepted.");
-        //     return;
-        // }
+        if (!emailRegex.test(email)) {
+            alert("Only first year's INSTITUTE email id are accepted.");
+            return;
+        }
 
         try {
             setOtpgoing(true); // Display "Sending OTP" message
