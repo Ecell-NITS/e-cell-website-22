@@ -120,11 +120,11 @@ const Recruiting = () => {
             return;
         }
 
-        // // Check if the scholarId is valid
-        // if (!/^221[1-6][01]\d{2}$/.test(scholarId) || (scholarId[3] === '1' && parseInt(scholarId.slice(-3)) > 157) || (scholarId[3] === '2' && parseInt(scholarId.slice(-3)) > 167) || (scholarId[3] === '3' && parseInt(scholarId.slice(-3)) > 167) || (scholarId[3] === '4' && parseInt(scholarId.slice(-3)) > 166) || (scholarId[3] === '5' && parseInt(scholarId.slice(-3)) > 84) || (scholarId[3] === '6' && parseInt(scholarId.slice(-3)) > 160)) {
-        //     alert("Invalid scholar id");
-        //     return;
-        // }
+        // Check if the scholarId is valid
+        if (!/^221[1-6][01]\d{2}$/.test(scholarId) || (scholarId[3] === '1' && parseInt(scholarId.slice(-3)) > 157) || (scholarId[3] === '2' && parseInt(scholarId.slice(-3)) > 167) || (scholarId[3] === '3' && parseInt(scholarId.slice(-3)) > 167) || (scholarId[3] === '4' && parseInt(scholarId.slice(-3)) > 166) || (scholarId[3] === '5' && parseInt(scholarId.slice(-3)) > 84) || (scholarId[3] === '6' && parseInt(scholarId.slice(-3)) > 160)) {
+            alert("Invalid scholar id");
+            return;
+        }
 
 
         // Check if the email contains uppercase letters
@@ -186,10 +186,8 @@ const Recruiting = () => {
         try {
             setVerifyotp(true)
             const response = await axios.post(process.env.REACT_APP_RECRUITMENT_VERIFYOTP, {
-                // const response = await axios.post("http://localhost:8000/verify-otp", {
+                // const response = await axios.post("http://localhost:3000/verify-otp", {
                 otp,
-            }, {
-                withCredentials: true,
             });
 
             if (response.data.message === "OTP verified successfully") {
@@ -202,25 +200,20 @@ const Recruiting = () => {
                 return;
             }
         } catch (error) {
-            if (error.response && error.response.status === 400 && error.response.data.message === "No OTP found. Please generate a new OTP") {
-                alert("No OTP found. Please generate a new OTP");
-            }
-            else {
-                console.log('Error verifying OTP:', error);
-                alert('Wrong OTP. Please try again');
-            }
+            console.log('Error verifying OTP:', error);
+            alert('Wrong OTP. Please try again');
             return
         } finally {
             setVerifyotp(false)
         }
 
         // Check if the email matches the allowed domains i.e only institute emails are accepted
-        // const emailRegex = /^.+22@(cse|civil|mech|ece|ee|ei)\.nits\.ac\.in$/;
+        const emailRegex = /^.+22@(cse|civil|mech|ece|ee|ei)\.nits\.ac\.in$/;
 
-        // if (!emailRegex.test(email)) {
-        //     alert("Only first year's INSTITUTE email id are accepted.");
-        //     return;
-        // }
+        if (!emailRegex.test(email)) {
+            alert("Only first year's INSTITUTE email id are accepted.");
+            return;
+        }
 
         //retrieve time in ist
         const timestamp = moment().tz("Asia/Kolkata").format();
@@ -267,23 +260,21 @@ const Recruiting = () => {
         }
 
         // Check if the email matches the allowed domains i.e only nits first years institute email are accepted
-        // const emailRegex = /^.+22@(cse|civil|mech|ece|ee|ei)\.nits\.ac\.in$/;
+        const emailRegex = /^.+22@(cse|civil|mech|ece|ee|ei)\.nits\.ac\.in$/;
 
-        // if (!emailRegex.test(email)) {
-        //     alert("Only first year's INSTITUTE email id are accepted.");
-        //     return;
-        // }
+        if (!emailRegex.test(email)) {
+            alert("Only first year's INSTITUTE email id are accepted.");
+            return;
+        }
 
         try {
             setOtpgoing(true); // Display "Sending OTP" message
             const response = await axios.post(
                 process.env.REACT_APP_RECRUITMENT_SENDOTP,
-                // "http://localhost:8000/send-otp",
+                // "http://localhost:3000/send-otp",
                 {
                     email,
-                }, {
-                withCredentials: true,
-            }
+                }
             );
             if (response.status === 200) {
                 alert('OTP sent successfully! Please check your inbox as well as SPAM folder.');
@@ -318,10 +309,10 @@ const Recruiting = () => {
                     <li>Check your Institute email inbox or SPAM folder for the otp.</li>
                     <li>It might take 10 seconds to send the otp, so please be patient.</li>
                     <li>You can only fill this form once so please be attentive while filling the form.</li>
-                    <li>Give Google drive link of the resume and make sure it is <span style={{ color: "red" }}>accessible by anyone on the internet</span>. You can find a sample resume <a href="https://drive.google.com/file/d/1owqrOT6OxY1MKTh-tVp7hV31OohZcv-H/view?usp=drive_link" target='_blank' rel="noreferrer">here</a>.</li>
-                    <li>In case of any issue while filling the form please contact <a style={{ color: "black" }} href="https://api.whatsapp.com/send/?phone=%2B919431875819&text&type=phone_number&app_absent=0" target='_blank' rel="noreferrer">here</a>.</li>
+                    <li>Give Google drive link of the resume and make sure it is <span style={{color:"red"}}>accessible by anyone on the internet</span>. You can find a sample resume <a href="https://drive.google.com/file/d/1owqrOT6OxY1MKTh-tVp7hV31OohZcv-H/view?usp=drive_link" target='_blank' rel="noreferrer">here</a>.</li>
+                    <li>In case of any issue while filling the form please contact <a style={{color:"black"}} href="https://api.whatsapp.com/send/?phone=%2B919431875819&text&type=phone_number&app_absent=0" target='_blank' rel="noreferrer">here</a>.</li>
                     <li>Keep checking your inbox for further instructions.</li>
-                    <li>Last date to fill the form is June <span style={{ color: "red" }}>13th</span> 2023 11:59pm.</li>
+                    <li>Last date to fill the form is June <span style={{color:"red"}}>13th</span> 2023 11:59pm.</li>
                 </ul>
             </div>
             <div className='recruitingmain'>
