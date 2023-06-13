@@ -77,12 +77,22 @@ const Dashboard = () => {
           </div>
           <div className="biodashboardd">
             <div className="firstseconndchild">
-              <h1 className='accountusername'>{user.name}</h1>
-              <div className='profeftcontparnt'>
-                <button onClick={handleEditProfile} className='editkryieprof' id='sirfcolorchng'>Edit Profile</button>
+              <div className="namenadbtnsinsame">
+                <div className="usernamehlderdash">
+                  <h1 className='accountusername'>{user.name}</h1>
+                </div>
+
+                <div className="btnholrgdashbo">
+                  <div className='profeftcontparnt'>
+                    <button onClick={handleEditProfile} className='editkryieprof' >Edit Profile</button>
+                    <button onClick={ButtonSignout} className='editkryieprof'>Sign Out</button>
+                  </div>
+                </div>
               </div>
-              <button onClick={ButtonSignout} className='editkryieprof'>Sign Out</button>
-             
+
+
+
+
             </div>
 
             <div className="biohbhauidhar">

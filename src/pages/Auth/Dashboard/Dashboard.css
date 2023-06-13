@@ -29,7 +29,7 @@
 
 .accountusername{
     font-weight: 600;
-    font-size: 3.5vw;
+    font-size: 3vw;
 }
 
 .firstseconndchild{
@@ -74,6 +74,21 @@
     border: 2px solid rgba(34, 66, 89, 1);
     margin-left: 17vw;
     padding: .25vw 2.5vw !important;
+}
+
+.namenadbtnsinsame{
+    display: flex;
+    
+}
+
+.usernamehlderdash{
+    width: 80% !important;
+}
+
+.btnholrgdashbo{
+    width: 40%;
+    display: flex !important;
+    justify-content: flex-end !important;
 }
 
 @media (max-width:660px){
