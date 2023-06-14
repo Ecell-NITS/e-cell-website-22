@@ -187,7 +187,7 @@ const Recruiting = () => {
             setVerifyotp(true)
             const response = await axios.post(process.env.REACT_APP_RECRUITMENT_VERIFYOTP, {
                 // const response = await axios.post("http://localhost:3000/verify-otp", {
-                otp,
+                otp,email
             });
 
             if (response.data.message === "OTP verified successfully") {

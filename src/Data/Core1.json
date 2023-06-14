@@ -163,6 +163,15 @@
        "fb": "https://www.facebook.com/ridam.pathak.9/",
        "linkdln": "http://linkedin.com/in/rithyam-pathak-5b478220a",
        "git": ""
+   },
+   {
+      "id": 17,
+       "name": "Agneesh Dasgupta",
+       "rank": "Senior Associate ",
+       "image": "https://res.cloudinary.com/dp92qug2f/image/upload/v1686713010/1682973324116_bnb3z6.jpg",
+       "fb": "https://www.facebook.com/agneesh.dasgupta",
+       "linkdln": "https://www.linkedin.com/in/agneesh-dasgupta-81090a1bb/",
+       "git": "https://github.com/Agneeshz"
    }
     
  ]
