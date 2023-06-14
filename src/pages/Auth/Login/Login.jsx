@@ -9,6 +9,7 @@ const Login = () => {
     const [password, setPassword] = useState('');
     const [message, setMessage] = useState('');
     const [loggingin, setLoggingin] = useState(false)
+    const [disablelogin, setDisablelogin] = useState(false)
     useEffect(() => {
         document.title = 'Login | ECELL NITS';
         const token = localStorage.getItem('token');
@@ -19,11 +20,14 @@ const Login = () => {
 
 
     const handlelogin = (e) => {
+    
         e.preventDefault()
         if (!email || !password) {
             setMessage('Please fill all required fields');
             return;
         }
+     
+        setDisablelogin(true)
         setLoggingin(true)
         // axios.post('http://localhost:2226/login', 
         axios.post(process.env.REACT_APP_LOGIN,
@@ -39,19 +43,21 @@ const Login = () => {
                 //     navigate('/dashboard')
                 // },3000)
                 setLoggingin(false)
+                setDisablelogin(false)
             })
             .catch(error => {
                 if (error.response) {
                     setMessage(error.response.data.error);
-                    setTimeout(()=>{
+                    setTimeout(() => {
                         setMessage("")
-                    },5000)
+                    }, 5000)
                     setEmail("")
                     setPassword("")
                 } else {
                     setMessage('Login failed. Please try again.');
                 }
                 setLoggingin(false)
+                setDisablelogin(false)
             });
     }
 
@@ -86,7 +92,7 @@ const Login = () => {
                             />
                         </div>
 
-                        <button className='btnsubmittodb' type="submit">
+                        <button className='btnsubmittodb' type="submit" disabled={disablelogin} style={{ opacity: disablelogin ? 0.5 : 1, cursor: disablelogin ? "not-allowed" : "pointer" }}>
                             {loggingin ? "Signing in" : "Sign in"}
                         </button>
                         {message && <p className='msgaftersignuplogin'>{message}</p>}

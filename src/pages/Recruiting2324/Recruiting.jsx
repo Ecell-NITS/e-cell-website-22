@@ -27,6 +27,8 @@ const Recruiting = () => {
     const [verifyotp, setVerifyotp] = useState(false)
     const [poster, setPoster] = useState("")
     const [resume, setResume] = useState("")
+    const [disableotpsend, setDisableotpsend] = useState(false)
+    const [disablesubmitreg, setDisablesubmitreg] = useState(false)
     // const [project, setProject] = useState("")
 
     useEffect(() => {
@@ -149,11 +151,12 @@ const Recruiting = () => {
         // Check if the email is unique on the server i.e user already registered or not
         try {
             setEmailVerification(true); // Display "Verifying email" message
+            setDisablesubmitreg(true)
             const response = await axios.post(process.env.REACT_APP_RECRUITMENT_CHECKEMAIL, {
                 // const response = await axios.post("http://localhost:3000/check-email", {
                 email: email
             });
-            setEmailVerification(false);
+
             if (!response.data.unique) {
                 alert("Email already exist");
                 return;
@@ -162,16 +165,20 @@ const Recruiting = () => {
             console.log("Error checking email uniqueness:", error);
             alert("An error occurred while checking email uniqueness");
             return;
+        } finally {
+            setEmailVerification(false);
+            setDisablesubmitreg(false)
         }
 
         // check if scholar id is unique i.e user already registered or not
         try {
             setScholarIdVerification(true);
+            setDisablesubmitreg(true)
             const response = await axios.post(process.env.REACT_APP_RECRUITMENT_CHECKSCHOLARID, {
                 // const response = await axios.post("http://localhost:3000/check-scholarid", {
                 scholarId: scholarId
             });
-            setScholarIdVerification(false);
+
             if (!response.data.unique) {
                 alert("Scholar Id already exist");
                 return;
@@ -180,14 +187,18 @@ const Recruiting = () => {
             console.log("Error checking scholar id uniqueness:", error);
             alert("An error occurred while checking scholar id uniqueness");
             return;
+        } finally {
+            setScholarIdVerification(false);
+            setDisablesubmitreg(false)
         }
 
         //verifying otp if correct or not
         try {
             setVerifyotp(true)
+            setDisablesubmitreg(true)
             const response = await axios.post(process.env.REACT_APP_RECRUITMENT_VERIFYOTP, {
                 // const response = await axios.post("http://localhost:3000/verify-otp", {
-                otp,email
+                otp, email
             });
 
             if (response.data.message === "OTP verified successfully") {
@@ -205,6 +216,7 @@ const Recruiting = () => {
             return
         } finally {
             setVerifyotp(false)
+            setDisablesubmitreg(false)
         }
 
         // Check if the email matches the allowed domains i.e only institute emails are accepted
@@ -218,6 +230,7 @@ const Recruiting = () => {
         //retrieve time in ist
         const timestamp = moment().tz("Asia/Kolkata").format();
         setSubmitting(true);
+        setDisablesubmitreg(true)
         axios
 
             .post(process.env.REACT_APP_RECRUITMENT_CREATE, {
@@ -248,6 +261,7 @@ const Recruiting = () => {
                 // setTeam([]);
                 setTechteam("")
                 setSubmitting(false);
+                setDisablesubmitreg(false)
                 alert("Form successfully submitted😍");
             });
     };
@@ -268,7 +282,8 @@ const Recruiting = () => {
         }
 
         try {
-            setOtpgoing(true); // Display "Sending OTP" message
+            setOtpgoing(true);
+            setDisableotpsend(true)
             const response = await axios.post(
                 process.env.REACT_APP_RECRUITMENT_SENDOTP,
                 // "http://localhost:3000/send-otp",
@@ -285,6 +300,7 @@ const Recruiting = () => {
             alert('An error occurred while sending the OTP');
         } finally {
             setOtpgoing(false);
+            setDisableotpsend(false)
         }
     };
     return (
@@ -309,10 +325,10 @@ const Recruiting = () => {
                     <li>Check your Institute email inbox or SPAM folder for the otp.</li>
                     <li>It might take 10 seconds to send the otp, so please be patient.</li>
                     <li>You can only fill this form once so please be attentive while filling the form.</li>
-                    <li>Give Google drive link of the resume and make sure it is <span style={{color:"red"}}>accessible by anyone on the internet</span>. You can find a sample resume <a href="https://drive.google.com/file/d/1owqrOT6OxY1MKTh-tVp7hV31OohZcv-H/view?usp=drive_link" target='_blank' rel="noreferrer">here</a>.</li>
-                    <li>In case of any issue while filling the form please contact <a style={{color:"black"}} href="https://api.whatsapp.com/send/?phone=%2B919431875819&text&type=phone_number&app_absent=0" target='_blank' rel="noreferrer">here</a>.</li>
+                    <li>Give Google drive link of the resume and make sure it is <span style={{ color: "red" }}>accessible by anyone on the internet</span>. You can find a sample resume <a href="https://drive.google.com/file/d/1owqrOT6OxY1MKTh-tVp7hV31OohZcv-H/view?usp=drive_link" target='_blank' rel="noreferrer">here</a>.</li>
+                    <li>In case of any issue while filling the form please contact <a style={{ color: "black" }} href="https://api.whatsapp.com/send/?phone=%2B919431875819&text&type=phone_number&app_absent=0" target='_blank' rel="noreferrer">here</a>.</li>
                     <li>Keep checking your inbox for further instructions.</li>
-                    <li>Last date to fill the form is June <span style={{color:"red"}}>13th</span> 2023 11:59pm.</li>
+                    <li>Last date to fill the form is June <span style={{ color: "red" }}>13th</span> 2023 11:59pm.</li>
                 </ul>
             </div>
             <div className='recruitingmain'>
@@ -438,8 +454,9 @@ const Recruiting = () => {
                 />
 
                 <div>
-                    <button onClick={sendOTP} className='btnotpsend'>Send OTP to Institute email</button>
+                    <button onClick={sendOTP} className='btnotpsend' disabled={disableotpsend} style={{ opacity: disableotpsend ? 0.5 : 1, cursor: disableotpsend ? "not-allowed" : "pointer" }}>Send OTP to Institute email</button>
                 </div>
+
                 {otpgoing && <p className='statusmsgssubmt'>Sending otp...Please be patient it might take 10 seconds.</p>}
 
                 <h3 className='common-form-recuit'>OTP<span className='reqdinput'>*</span></h3>
@@ -579,7 +596,7 @@ const Recruiting = () => {
                     />
                 </span>
 
-                <button onClick={createUser} className='submtformrecuit' >
+                <button onClick={createUser} className='submtformrecuit' disabled={disablesubmitreg} style={{ opacity: disablesubmitreg ? 0.5 : 1, cursor: disablesubmitreg ? "not-allowed" : "pointer" }} >
                     {submitting ? "Submitting..." : "Submit"}{" "}
                 </button>
 

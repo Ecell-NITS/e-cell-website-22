@@ -18,34 +18,34 @@ const Createblog = () => {
     const [writerpic, setWriterpic] = useState("")
     const [writeremail, setWriteremail] = useState("")
     const [submitting, setSubmitting] = useState(false);
-
+    const [disablecreate, setDisablecreate] = useState(false)
     useEffect(() => {
         document.title = 'Create blog | ECELL NITS';
         const token = localStorage.getItem('token');
         if (!token) {
-          navigate('/login');
+            navigate('/login');
         } else {
-          // Fetch user data and populate the form fields
-          axios
-            .get(process.env.REACT_APP_FETCHPROFILE, {
-            // .get('http://localhost:2226/fetchprofile', {
-              headers: {
-                Authorization: `Bearer ${token}`,
-              },
-            })
-            .then((response) => {
-              const user = response.data;
-              setWritername(user.name);
-              setWriterintro(user.bio);
-              setWriterpic(user.userimg);
-              setWriteremail(user.email);
-            })
-            .catch((error) => {
-              console.error('Failed to fetch user data', error);
-              // Handle error
-            });
+            // Fetch user data and populate the form fields
+            axios
+                .get(process.env.REACT_APP_FETCHPROFILE, {
+                    // .get('http://localhost:2226/fetchprofile', {
+                    headers: {
+                        Authorization: `Bearer ${token}`,
+                    },
+                })
+                .then((response) => {
+                    const user = response.data;
+                    setWritername(user.name);
+                    setWriterintro(user.bio);
+                    setWriterpic(user.userimg);
+                    setWriteremail(user.email);
+                })
+                .catch((error) => {
+                    console.error('Failed to fetch user data', error);
+                    // Handle error
+                });
         }
-      }, [navigate]);
+    }, [navigate]);
     const iscreateblogempty = () => {
         return title !== "" && intro !== "" && tag !== "" && writeremail !== "" && content !== "" && writernmae !== "" && writerintro !== "" && writerpic !== "" && topicpic !== "";
     };
@@ -65,6 +65,7 @@ const Createblog = () => {
 
         const timestamp = moment().tz("Asia/Kolkata").format();
         setSubmitting(true);
+        setDisablecreate(true)
         axios
             // .post('http://localhost:2226/createblog', {
             .post(process.env.REACT_APP_CREATEBLOG_RENDER, {
@@ -84,6 +85,7 @@ const Createblog = () => {
                 setTopicpic("")
                 setWriteremail("")
                 setSubmitting(false);
+                setDisablecreate(false)
                 alert("Blog created but publish subject to verification");
             });
     }
@@ -133,7 +135,7 @@ const Createblog = () => {
                             setIntro(event.target.value);
                         }}
                         placeholder="Enter your intro"
-                        className='input-common-recruit'  style={{ whiteSpace: "pre-wrap" }}></textarea>
+                        className='input-common-recruit' style={{ whiteSpace: "pre-wrap" }}></textarea>
 
 
                 </div>
@@ -264,7 +266,7 @@ const Createblog = () => {
                     />
                 </div>
 
-                <button onClick={submitform} className='kretrhereading' id='crteblogbtn0'>
+                <button onClick={submitform} className='kretrhereading' id='crteblogbtn0' disabled={disablecreate} style={{ opacity: disablecreate ? 0.5 : 1, cursor: disablecreate ? "not-allowed" : "pointer" }}>
                     {submitting ? "Posting Blog" : "Post Blog"}{" "}
                 </button>
             </div>

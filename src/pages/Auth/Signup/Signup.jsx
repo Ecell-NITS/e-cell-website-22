@@ -15,6 +15,11 @@ const Signup = () => {
     const [verifyotp, setVerifyotp] = useState(false)
     const [otp, setOtp] = useState('');
     const [otpgoing, setOtpgoing] = useState(false)
+    const [disablebtn, setDisablebtn] = useState(false)
+    const [disablesendotp, setDisablesendotp] = useState(false)
+
+    const [userimg, setUserimg] = useState("https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png")
+    const [bio, setBio] = useState("Author")
 
     useEffect(() => {
         document.title = "Signup | ECELL NITS"
@@ -28,7 +33,7 @@ const Signup = () => {
         return (
             name !== "" &&
             email !== "" &&
-            password !== "" && otp !== "" && confirmpwd !== ""
+            password !== "" && otp !== "" && confirmpwd !== "" && bio!=="" && userimg!==""
         );
     };
 
@@ -48,12 +53,14 @@ const Signup = () => {
             }, 5000)
             return
         }
-
+        setDisablebtn(true)
         try {
+
             setVerifyotp(true)
             // const response = await axios.post(process.env.REACT_APP_RECRUITMENT_VERIFYOTP, {
-            const response = await axios.post("http://localhost:2226/verify-otp", {
-                otp,email
+            // const response = await axios.post("http://localhost:2226/verify-otp", {
+            const response = await axios.post(`${process.env.REACT_APP_APIMAIN}/verify-otp`, {
+                otp, email
             });
 
             if (response.data.message === "OTP verified successfully") {
@@ -71,12 +78,13 @@ const Signup = () => {
             return
         } finally {
             setVerifyotp(false)
+            setDisablebtn(false)
         }
-
+        setDisablebtn(true)
         setSigningup(true)
         // axios.post('http://localhost:2226/signup', 
         axios.post(process.env.REACT_APP_SIGNUP,
-            { name, email, password })
+            { name, email, password, bio, userimg })
             .then(response => {
                 console.log(response.data);
                 setName("")
@@ -90,12 +98,14 @@ const Signup = () => {
                     navigate('/login');
                 }, 5000)
                 setSigningup(false)
+                setDisablebtn(false)
             })
             .catch(error => {
                 setName("")
                 setEmail("")
                 setPassword("")
                 setConfirmpwd("")
+                setOtp("")
                 if (error.response && error.response.data.error === 'Email already exists') {
                     setMessage('Email already exists');
                 } else if (error.response && error.response.data.error === 'Password should not be less than 8 characters') {
@@ -108,6 +118,7 @@ const Signup = () => {
                     setMessage("")
                 }, 5000)
                 setSigningup(false)
+                setDisablebtn(false)
             });
     }
 
@@ -124,9 +135,11 @@ const Signup = () => {
         }
 
         try {
+            setDisablesendotp(true)
             setOtpgoing(true);
             const response = await axios.post(
-                "http://localhost:2226/send-otp",
+                // "http://localhost:2226/send-otp",
+                `${process.env.REACT_APP_APIMAIN}/send-otp`,
                 {
                     email,
                 }
@@ -139,6 +152,7 @@ const Signup = () => {
             alert('An error occurred while sending the OTP');
         } finally {
             setOtpgoing(false);
+            setDisablesendotp(false)
         }
     };
 
@@ -159,9 +173,22 @@ const Signup = () => {
                             <input type="email" placeholder='Enter your Email' value={email} onChange={e => setEmail(e.target.value)} />
                         </div>
 
-                        <div>
-                            <button onClick={sendOTP} className='btnotpsend' id='newotpsending'>Send OTP</button>
+                        <div style={{ display: "none" }}>
+                            <div className="inputdicdignup">
+                                <h3>Bio</h3>
+                                <input type="text" placeholder='Enter your Bio' value={bio} onChange={e => setBio(e.target.value)} />
+                            </div>
+
+                            <div className="inputdicdignup">
+                                <h3>Profile pic</h3>
+                                <input type="text" placeholder='Enter your Profile img link' value={userimg} onChange={e => setUserimg(e.target.value)} />
+                            </div>
                         </div>
+
+                        <div>
+                            <button onClick={sendOTP} disabled={disablesendotp} style={{ opacity: disablesendotp ? 0.5 : 1, cursor: disablesendotp ? "not-allowed" : "pointer" }} className='btnotpsend' id='newotpsending'>Send OTP</button>
+                        </div>
+
                         {otpgoing && <p className='statusmsgssubmt'>Sending otp...Please be patient it might take 10 seconds.</p>}
 
                         <div className="inputdicdignup">
@@ -178,10 +205,10 @@ const Signup = () => {
                             <input type="password" placeholder='Confirm password' value={confirmpwd} onChange={e => setConfirmpwd(e.target.value)} />
                         </div>
 
-                        <button type="submit" className='btnsubmittodb' onClick={formhandlesubmit}>
+                        <button type="submit" className='btnsubmittodb' onClick={formhandlesubmit} disabled={disablebtn} style={{ opacity: disablebtn ? 0.5 : 1, cursor: disablebtn ? "not-allowed" : "pointer" }}>
                             {signingup ? "Creating account" : "Sign up"}
                         </button>
-                        
+
                         <div className="statusmeshs">
                             {message && <p className='msgaftersignuplogin'>{message}</p>}
                             {verifyotp && <p className='statusmsgssubmt'>Verifying otp...</p>}

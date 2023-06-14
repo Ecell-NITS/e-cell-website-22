@@ -12,6 +12,7 @@ const EditProfile = () => {
   const [error, setError] = useState('');
   const [message, setMessage] = useState("")
   const [saving, setSaving] = useState(false)
+  const [disableedit, setDisableedit] = useState(false)
   useEffect(() => {
     document.title = "Edit Profile | Dashboard"
     const token = localStorage.getItem('token');
@@ -40,6 +41,7 @@ const EditProfile = () => {
       return;
     }
     setSaving(true)
+    setDisableedit(true)
     axios
       // .put('http://localhost:2226/editprofile', { name, bio, userimg }, {
       .put(process.env.REACT_APP_EDITPROFILE, { name, bio, userimg }, {
@@ -56,11 +58,13 @@ const EditProfile = () => {
         setBio("")
         setUserimg("")
         setSaving(false)
+        setDisableedit(false)
       })
       .catch((error) => {
         console.error('Failed to update name', error);
         setError('Failed to update name. Please try again.');
         setSaving(false)
+        setDisableedit(false)
       });
 
   };
@@ -102,7 +106,7 @@ const EditProfile = () => {
               />
             </div>
 
-            <button type="submit" className='btnsubmittodb'>
+            <button type="submit" className='btnsubmittodb' disabled={disableedit} style={{ opacity: disableedit ? 0.5 : 1, cursor: disableedit ? "not-allowed" : "pointer" }}>
               {saving ? "Saving..." : "Save"}
             </button>
 
