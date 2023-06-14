@@ -39,10 +39,10 @@ const Alllikedblogs = () => {
            {/* <NavbarTeam /> */}
             <div id='paddinginpublishlist'>
                 {/* <h1 style={{ textAlign: "center" }}>Liked Blogs</h1> */}
-                <div className="mainparentblogindicard" id='allblogswrittenbuuser'>
+                <div id='blogs_under_profile_protected'>
 
                     {likedBlogs.map((blog) => (
-                        <div key={blog._id} className='indicardblog'>
+                        <div key={blog._id} id='indicardblog_protct'>
                             {/* <h1>id: {blog._id}</h1> */}
                             <div className="imgholdercontblog">
                                 <img src={blog.topicpic} alt="" />

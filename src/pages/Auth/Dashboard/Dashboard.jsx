@@ -34,7 +34,7 @@ const Dashboard = () => {
         }
 
       });
-  }, []);
+  }, [navigate]);
 
 
   useEffect(() => {
@@ -77,7 +77,8 @@ const Dashboard = () => {
           </div>
           <div className="biodashboardd">
             <div className="firstseconndchild">
-              <div className="namenadbtnsinsame">
+
+              {/* <div className="namenadbtnsinsame">
                 <div className="usernamehlderdash">
                   <h1 className='accountusername'>{user.name}</h1>
                 </div>
@@ -88,11 +89,10 @@ const Dashboard = () => {
                     <button onClick={ButtonSignout} className='editkryieprof'>Sign Out</button>
                   </div>
                 </div>
-              </div>
-
-
-
-
+              </div> */}
+              <h1 className='accountusername'>{user.name}</h1>
+              <button onClick={handleEditProfile} className='editkryieprof ' id='sirfcolorchng' >Edit Profile</button>
+              <button onClick={ButtonSignout} className='editkryieprof'>Sign Out</button>
             </div>
 
             <div className="biohbhauidhar">

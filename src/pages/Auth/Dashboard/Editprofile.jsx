@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import Footer from '../../../components/shared/Footer/Footer';
+import NavbarTeam from '../../../components/shared/Navbar/NavbarTeam';
+import './Editprofile.css'
 const EditProfile = () => {
   const navigate = useNavigate();
   const [name, setName] = useState('');
@@ -59,41 +62,64 @@ const EditProfile = () => {
         setError('Failed to update name. Please try again.');
         setSaving(false)
       });
-    
+
   };
 
 
   return (
     <div>
-      <h1>Edit Profile</h1>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="nameInput">Name:</label>
-          <input
-            type="text"
-            id="nameInput"
-            value={name}
-            onChange={handleNameChange}
-          />
+
+      <NavbarTeam />
+      <div className='signuptopcont'>
+        <div className="formcontsignup">
+          <h1 className='okwelcometoecell'>Give your profile a new look</h1>
+          <h4 className='enterdtlssignup'>Please enter your new details.</h4>
+          <form onSubmit={handleSubmit} className='formsignaccoutn'>
+            <div className="inputdicdignup">
+              <h3>Name</h3>
+              <input
+                type="text"
+                placeholder="Name"
+                value={name}
+                onChange={handleNameChange}
+              />
+            </div>
+            <div className="inputdicdignup">
+              <h3>About</h3>
+              <input
+                type="text"
+                placeholder="About"
+                value={bio} onChange={handleBioChange}
+              />
+            </div>
+
+            <div className="inputdicdignup">
+              <h3>Profile Image</h3>
+              <input
+                type="text"
+                placeholder="new profile pic link"
+                value={userimg} onChange={handleImgChange}
+              />
+            </div>
+
+            <button type="submit" className='btnsubmittodb'>
+              {saving ? "Saving..." : "Save"}
+            </button>
+
+            {message && <p className='msgaftersignuplogin'>{message}</p>}
+            {error && <p className='msgaftersignuplogin'>{error}</p>}
+
+
+
+          </form>
         </div>
 
-        <div>
-          <label htmlFor="bioInput"> About:</label>
-          <textarea id="bioInput" value={bio} onChange={handleBioChange} />
+        <div className="imgbgholdersignup">
+          <img src="https://res.cloudinary.com/dp92qug2f/image/upload/v1686499643/Photo_zxxmw5.svg" alt="" />
         </div>
 
-        <div>
-          <label htmlFor="ImgInput">Profile Image:</label>
-          <input id="ImgInput" value={userimg} onChange={handleImgChange} />
-        </div>
-
-
-        <button type="submit">
-          {saving ? "Saving..." : "Save"}
-        </button>
-      </form>
-      {message && <p>{message}</p>}
-      {error && <p>{error}</p>}
+      </div>
+      <Footer />
     </div>
   );
 };

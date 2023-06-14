@@ -151,6 +151,13 @@
   }
 }
 
+@media (max-width:660px){
+  .imgactivehlder{
+    width: 15vw;
+    height: 15vw;
+  }
+}
+
 @media only screen and (max-height:500px){
   .navbar1.expanded .links-nav{
     top: 4.5rem;

@@ -37,10 +37,10 @@ const Allprovblogs = () => {
             {/* <NavbarTeam /> */}
             <div id='paddinginpublishlist'>
                 {/* <h1 style={{textAlign:"center"}}>My all Blogs</h1> */}
-                <div className="mainparentblogindicard" id='allblogswrittenbuuser'>
+                <div id='blogs_under_profile_protected'>
 
                     {blogs.map((blog) => (
-                        <div key={blog._id} className='indicardblog' >
+                        <div key={blog._id} id='indicardblog_protct' >
                             {/* <h1>id: {blog._id}</h1> */}
                             <div className="imgholdercontblog">
                                 <img src={blog.topicpic} alt="" />

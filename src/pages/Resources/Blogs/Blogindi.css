@@ -32,8 +32,8 @@
 }
 
 .imgholderwriter{
-    width: 15vw;
-    height: 15vw;
+    width: 17%;
+    height: 17%;
 }
 
 .imgholderwriter img{
@@ -42,10 +42,14 @@ height: 100%;
  border-radius: 50%;
 }
 
+.writerintro{
+    width: 83%;
+}
+
 .writerintro p{
     color: rgba(34, 66, 89, 1);
     font-size: 1.5vw;
-    padding: 3vw 1.2vw 0 3vw;
+    padding: 0vw 1.2vw 0 3vw;
 }
 
 .imgoldermainblogindi{

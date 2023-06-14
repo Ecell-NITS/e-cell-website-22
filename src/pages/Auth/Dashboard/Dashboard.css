@@ -12,7 +12,6 @@
 .phhotodash{
     width: 30%;
     height: 30vw;
-   
 }
 
 .phhotodash img{
@@ -72,8 +71,8 @@
 #sirfcolorchng{
     color: rgba(34, 66, 89, 1);
     border: 2px solid rgba(34, 66, 89, 1);
-    margin-left: 17vw;
-    padding: .25vw 2.5vw !important;
+    /* margin-left: 17vw; */
+    padding: .25vw 3vw !important;
 }
 
 .namenadbtnsinsame{
@@ -91,6 +90,76 @@
     justify-content: flex-end !important;
 }
 
+#blogs_under_profile_protected{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#indicardblog_protct{
+    user-select: none;
+    flex: none;
+    order: 1;
+    width: 31%;
+    border: 1.5px solid rgba(80, 80, 80, 1);
+    border-radius: 6.13px;
+    padding: 1vw;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+}
+
 @media (max-width:660px){
-  
+    #indicardblog_protct{
+        width: 90%;
+        margin: 5vw auto;
+        padding: 2vw;
+    }
+
+    .flexingphotocontent{
+        flex-direction: column;
+        width: 90%;
+        margin: 0 auto;
+        padding-bottom: 10vw;
+    }
+
+    .phhotodash{
+        width: 60vw;
+        height: 60vw;
+        margin: 5vw auto;
+    }
+    
+    .biodashboardd{
+        width: 100% !important;
+        padding-left: 0;
+    }
+
+    .accountusername{
+        font-size: 6vw;
+    }
+
+    .editkryieprof{
+        padding: .75vw 3vw !important;
+        border-radius: 7.59px;
+        font-size:3.4vw;
+    }
+
+    #sirfcolorchng{
+        padding: .75vw 5vw !important;
+    }
+
+    .biohbhauidhar{
+        width: 100% !important;
+        margin: 8vw 0 2.9vw 0;
+        padding:3vw;
+      
+    }
+    
+    .biohbhauidhar h3{
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        color: rgba(80, 80, 80, 1);
+        font-size: 3vw;
+    }
 }
