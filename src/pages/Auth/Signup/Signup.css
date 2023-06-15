@@ -41,7 +41,15 @@ align-items: center;
     font-size: 1.8vw;
 }
 
-.formsignaccoutn input{
+.formsignaccoutn textarea{
+    font-family: 'Barlow Condensed', sans-serif !important;
+    font-size: 1.5vw !important;
+    font-weight: 400 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.formsignaccoutn input, .formsignaccoutn textarea{
     width: 70%;
     border: 2px solid rgba(154, 148, 148, 1);
 padding: .215vw .75vw;
@@ -50,7 +58,7 @@ transition: all 0.3s ease-in-out;
 font-size: 1.5vw;
 }
 
-.formsignaccoutn input:focus{
+.formsignaccoutn input:focus,.formsignaccoutn textarea:focus{
     outline: none;
     border-color: #80bdff;
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
@@ -78,7 +86,6 @@ font-size: 1.5vw;
     font-size: 1.5vw;
     text-align: center;
 }
-
 .bottomredirectlogin{
     display: flex;
     align-items: first baseline;
@@ -131,7 +138,7 @@ font-size: 1.5vw;
         margin: 5vw 0;
     }
 
-    .formsignaccoutn input{
+    .formsignaccoutn input,.formsignaccoutn textarea{
         width: 90%;
     padding: .5vw 1.45vw;
     font-size: 4vw;

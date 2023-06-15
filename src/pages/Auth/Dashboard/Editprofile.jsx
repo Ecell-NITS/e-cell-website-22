@@ -90,11 +90,16 @@ const EditProfile = () => {
             </div>
             <div className="inputdicdignup">
               <h3>About</h3>
-              <input
+              {/* <input
                 type="text"
                 placeholder="About"
                 value={bio} onChange={handleBioChange}
-              />
+              /> */}
+
+              <textarea cols="10" rows="5" id="cretaeblogsinpt" typeof='text' 
+                value={bio} onChange={handleBioChange}
+                placeholder="Write your Bio"
+                style={{ whiteSpace: "pre-wrap" }}></textarea>
             </div>
 
             <div className="inputdicdignup">

@@ -10,7 +10,7 @@ import Alllikedblogs from './Alllikedblogs';
 const Dashboard = () => {
   const navigate = useNavigate();
   const [user, setUser] = useState({});
-
+  const [editedbio, setEditedbio] = useState("")
   useEffect(() => {
     const token = localStorage.getItem('token');
     const config = {
@@ -23,8 +23,9 @@ const Dashboard = () => {
     axios.get(process.env.REACT_APP_DASHBOARD,
       config)
       .then(response => {
-        const { name, email, bio, userimg } = response.data;
-        setUser({ name, email, bio, userimg });
+        const { name, email,  userimg } = response.data;
+        setUser({ name, email,  userimg });
+        setEditedbio(response.data.bio)
       })
       .catch(error => {
         if (error.response.status === 401) {
@@ -96,7 +97,10 @@ const Dashboard = () => {
             </div>
 
             <div className="biohbhauidhar">
-              <h3>{user.bio}</h3>
+              {editedbio.split('\n').map((bio, index) => (
+                    <h3 key={index} style={{ whiteSpace: "pre-line" }}>{bio}</h3>
+                ))}
+                
             </div>
 
 
@@ -116,14 +120,14 @@ const Dashboard = () => {
             className={`allblogs ${lebel12 === "allblogs" ? "active-link" : ""}`}
             onClick={() => { setlebel12("allblogs") }}
           >
-            ALL BLOGS
+            All Blogs
           </div>
 
           <div
             className={`likedblogs ${lebel12 === "likedblogs" ? "active-link" : ""}`}
             onClick={() => { setlebel12("likedblogs") }}
           >
-            LIKED BLOGS
+            Liked Blogs
           </div>
 
         </div>
