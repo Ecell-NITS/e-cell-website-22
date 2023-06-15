@@ -186,7 +186,7 @@ const Signup = () => {
                         </div>
 
                         <div>
-                            <button onClick={sendOTP} disabled={disablesendotp} style={{ opacity: disablesendotp ? 0.5 : 1, cursor: disablesendotp ? "not-allowed" : "pointer" }} className='btnotpsend' id='newotpsending'>Send OTP</button>
+                            <button onClick={sendOTP} disabled={disablesendotp || disablebtn} style={{ opacity: disablesendotp || disablebtn ? 0.5 : 1, cursor: disablesendotp || disablebtn ? "not-allowed" : "pointer" }} className='btnotpsend' id='newotpsending'>Send OTP</button>
                         </div>
 
                         {otpgoing && <p className='statusmsgssubmt'>Sending otp...Please be patient it might take 10 seconds.</p>}
@@ -205,7 +205,7 @@ const Signup = () => {
                             <input type="password" placeholder='Confirm password' value={confirmpwd} onChange={e => setConfirmpwd(e.target.value)} />
                         </div>
 
-                        <button type="submit" className='btnsubmittodb' onClick={formhandlesubmit} disabled={disablebtn} style={{ opacity: disablebtn ? 0.5 : 1, cursor: disablebtn ? "not-allowed" : "pointer" }}>
+                        <button type="submit" className='btnsubmittodb' onClick={formhandlesubmit} disabled={disablebtn || disablesendotp} style={{ opacity: disablebtn || disablesendotp ? 0.5 : 1, cursor: disablebtn || disablesendotp ? "not-allowed" : "pointer" }}>
                             {signingup ? "Creating account" : "Sign up"}
                         </button>
 
@@ -215,7 +215,7 @@ const Signup = () => {
                         </div>
                         <div className="bottomredirectlogin">
                             <h4 className='logexistingaccount'>Already have an account?</h4>
-                            <button onClick={hangleGoToLogin} disabled={disablebtn} style={{ cursor: disablebtn ? "not-allowed" : "pointer" }}>Sign In</button>
+                            <button onClick={hangleGoToLogin} disabled={disablebtn || disablesendotp} style={{ cursor: disablebtn || disablesendotp ? "not-allowed" : "pointer" }}>Sign In</button>
                         </div>
 
                     </form>
