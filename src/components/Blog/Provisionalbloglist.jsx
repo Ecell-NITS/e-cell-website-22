@@ -153,8 +153,11 @@ const Provisionalbloglist = () => {
                                                 </div> */}
 
                                                 <div className="briefintrohldman">
-                                                    {blog.intro.split('\n').map((paragraph, index) => (
+                                                    {/* {blog.intro.split('\n').map((paragraph, index) => (
                                                         <p key={index}>{paragraph}</p>
+                                                    ))} */}
+                                                    {blog.intro.split('\n').map((paragraph, index) => (
+                                                        <p key={index} style={{ whiteSpace: "pre-line" }} dangerouslySetInnerHTML={{ __html: paragraph }}></p>
                                                     ))}
                                                 </div>
 

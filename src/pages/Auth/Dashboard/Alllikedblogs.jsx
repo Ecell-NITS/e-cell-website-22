@@ -58,7 +58,10 @@ const Alllikedblogs = () => {
                             </div>
 
                             <div className="briefintrohldman">
-                                <p>{blog.intro}</p>
+                                {/* <p>{blog.intro}</p> */}
+                                {blog.intro.split('\n').map((paragraph, index) => (
+                                    <p key={index} style={{ whiteSpace: "pre-line" }} dangerouslySetInnerHTML={{ __html: paragraph }}></p>
+                                ))}
                             </div>
 
                             <Link to={`/blog/${blog._id}`}> <button className='kretrhereading'>

@@ -1,11 +1,14 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import './Createblog.css'
 import NavbarTeam from '../../../components/shared/Navbar/NavbarTeam'
 import axios from 'axios'
 import moment from "moment-timezone";
 import Footer from '../../../components/shared/Footer/Footer';
 import { useNavigate } from 'react-router-dom';
+import JoditEditor from "jodit-react";
 const Createblog = () => {
+    const editor = useRef(null);
+    const editor0 = useRef(null);
     const navigate = useNavigate()
     const [title, setTitle] = useState("")
     const [intro, setIntro] = useState("")
@@ -68,7 +71,7 @@ const Createblog = () => {
         setDisablecreate(true)
         axios
             // .post('http://localhost:2226/createblog', {
-            .post(process.env.REACT_APP_CREATEBLOG_RENDER, {
+                .post(process.env.REACT_APP_CREATEBLOG_RENDER, {
                 title,
                 tag,
                 intro,
@@ -129,21 +132,26 @@ const Createblog = () => {
                         className='input-common-recruit'
                     /> */}
 
-                    <textarea cols="10" rows="5" id="cretaeblogsinpt" typeof='text' required
+                    {/* <textarea cols="10" rows="5" id="cretaeblogsinpt" typeof='text' required
                         value={intro}
                         onChange={(event) => {
                             setIntro(event.target.value);
                         }}
                         placeholder="Enter your intro"
-                        className='input-common-recruit' style={{ whiteSpace: "pre-wrap" }}></textarea>
-
+                        className='input-common-recruit' style={{ whiteSpace: "pre-wrap" }}></textarea> */}
+                    <JoditEditor
+                        ref={editor0}
+                        value={intro}
+                        onChange={(newIntro) => setIntro(newIntro)}
+                        onBlur={(newIntro) => setIntro(newIntro)}
+                    />
 
                 </div>
 
                 <div className="firstboxvreateblog">
                     <h2 className='ttleinptcrteblog'>Content</h2>
                     <h4 className='specificttle'>Write about your topic</h4>
-                    <textarea cols="30" rows="10" className='input-common-recruit' type="text"
+                    {/* <textarea cols="30" rows="10" className='input-common-recruit' type="text"
                         required
                         id="cretaeblogsinpt"
                         value={content}
@@ -151,7 +159,15 @@ const Createblog = () => {
                             setContent(event.target.value);
                         }}
                     >
-                    </textarea>
+                    </textarea> */}
+
+                    <JoditEditor
+                        ref={editor}
+                        value={content}
+                        onBlur={(newContent) => setContent(newContent)}
+                        onChange={(newContent) => setContent(newContent)}
+                    />
+
                 </div>
 
                 <div className="firstboxvreateblog">

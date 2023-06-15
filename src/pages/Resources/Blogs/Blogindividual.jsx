@@ -48,9 +48,8 @@ const Blogindividual = () => {
                 {/* <p>{intro}</p> */}
 
                 {intro.split('\n').map((paragraph, index) => (
-                    <p key={index}>{paragraph}</p>
+                    <p key={index} style={{ whiteSpace: "pre-line" }} dangerouslySetInnerHTML={{ __html: paragraph }}></p>
                 ))}
-
 
                 <div className="imgoldermainblogindi">
                     <img src={topicpic} alt="" />
@@ -58,8 +57,9 @@ const Blogindividual = () => {
 
 
                 {/* <p> {content}</p> */}
+
                 {content.split('\n').map((paragraph, index) => (
-                    <p key={index} style={{ whiteSpace: "pre-line" }}>{paragraph}</p>
+                    <p key={index} style={{ whiteSpace: "pre-line" }} dangerouslySetInnerHTML={{ __html: paragraph }}></p>
                 ))}
 
                 <div className="writerdetails">
@@ -68,7 +68,9 @@ const Blogindividual = () => {
                     </div>
 
                     <div className="writerintro">
-                        <p>{writerintro}</p>
+                        {writerintro.split('\n').map((writerintro, index) => (
+                            <p key={index} style={{ whiteSpace: "pre-line" }}>{writerintro}</p>
+                        ))}
                     </div>
                 </div>
             </div>

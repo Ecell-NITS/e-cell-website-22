@@ -7,7 +7,7 @@ import '../../../components/Blog/Blog.css'
 const Allblogspublished = () => {
     const navigate = useNavigate()
     const [blogs, setBlogs] = useState([]);
-
+    // const [introedit, setIntroedit] = useState("")
     useEffect(() => {
         // document.title = "My Published Blogs | Dashboard"
         const token = localStorage.getItem('token');
@@ -27,6 +27,7 @@ const Allblogspublished = () => {
             .get(process.env.REACT_APP_PUBLISHEDBLOGS, config)
             .then((response) => {
                 setBlogs(response.data.blogs);
+                // setIntroedit(response.data.intro)
             })
             .catch((error) => {
                 console.error('Failed to fetch blogs', error);
@@ -51,7 +52,7 @@ const Allblogspublished = () => {
 
                     {blogs.map((blog) => (
                         <div key={blog._id} id='indicardblog_protct' >
-                          
+
                             <div className="imgholdercontblog">
                                 <img src={blog.topicpic} alt="" />
                             </div>
@@ -66,7 +67,10 @@ const Allblogspublished = () => {
                             </div>
 
                             <div className="briefintrohldman">
-                                <p>{blog.intro}</p>
+                                {/* <p>{blog.intro}</p> */}
+                                {blog.intro.split('\n').map((paragraph, index) => (
+                                    <p key={index} style={{ whiteSpace: "pre-line" }} dangerouslySetInnerHTML={{ __html: paragraph }}></p>
+                                ))}
                             </div>
 
                             <Link to={`/blog/${blog._id}`}> <button className='kretrhereading'>
