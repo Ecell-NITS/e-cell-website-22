@@ -33,7 +33,7 @@ const Signup = () => {
         return (
             name !== "" &&
             email !== "" &&
-            password !== "" && otp !== "" && confirmpwd !== "" && bio!=="" && userimg!==""
+            password !== "" && otp !== "" && confirmpwd !== "" && bio !== "" && userimg !== ""
         );
     };
 
@@ -215,7 +215,7 @@ const Signup = () => {
                         </div>
                         <div className="bottomredirectlogin">
                             <h4 className='logexistingaccount'>Already have an account?</h4>
-                            <button onClick={hangleGoToLogin}>Sign In</button>
+                            <button onClick={hangleGoToLogin} disabled={disablebtn} style={{ cursor: disablebtn ? "not-allowed" : "pointer" }}>Sign In</button>
                         </div>
 
                     </form>

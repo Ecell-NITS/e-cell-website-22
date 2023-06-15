@@ -20,13 +20,13 @@ const Login = () => {
 
 
     const handlelogin = (e) => {
-    
+
         e.preventDefault()
         if (!email || !password) {
             setMessage('Please fill all required fields');
             return;
         }
-     
+
         setDisablelogin(true)
         setLoggingin(true)
         // axios.post('http://localhost:2226/login', 
@@ -98,7 +98,7 @@ const Login = () => {
                         {message && <p className='msgaftersignuplogin'>{message}</p>}
                         <div className="bottomredirectlogin">
                             <h4 className='logexistingaccount'>Don’t have an account?</h4>
-                            <button onClick={HandleSignupMove}>Sign Up</button>
+                            <button onClick={HandleSignupMove} disabled={disablelogin} style={{ cursor: disablelogin ? "not-allowed" : "pointer" }}>Sign Up</button>
                         </div>
                     </form>
                 </div>

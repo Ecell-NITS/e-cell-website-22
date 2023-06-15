@@ -454,7 +454,7 @@ const Recruiting = () => {
                 />
 
                 <div>
-                    <button onClick={sendOTP} className='btnotpsend' disabled={disableotpsend} style={{ opacity: disableotpsend ? 0.5 : 1, cursor: disableotpsend ? "not-allowed" : "pointer" }}>Send OTP to Institute email</button>
+                    <button onClick={sendOTP} className='btnotpsend' disabled={disableotpsend || disablesubmitreg} style={{ opacity: disableotpsend || disablesubmitreg ? 0.5 : 1, cursor: disableotpsend || disablesubmitreg ? "not-allowed" : "pointer" }}>Send OTP to Institute email</button>
                 </div>
 
                 {otpgoing && <p className='statusmsgssubmt'>Sending otp...Please be patient it might take 10 seconds.</p>}
@@ -596,7 +596,7 @@ const Recruiting = () => {
                     />
                 </span>
 
-                <button onClick={createUser} className='submtformrecuit' disabled={disablesubmitreg} style={{ opacity: disablesubmitreg ? 0.5 : 1, cursor: disablesubmitreg ? "not-allowed" : "pointer" }} >
+                <button onClick={createUser} className='submtformrecuit' disabled={disablesubmitreg || disableotpsend} style={{ opacity: disablesubmitreg || disableotpsend ? 0.5 : 1, cursor: disablesubmitreg || disableotpsend ? "not-allowed" : "pointer" }} >
                     {submitting ? "Submitting..." : "Submit"}{" "}
                 </button>
 
