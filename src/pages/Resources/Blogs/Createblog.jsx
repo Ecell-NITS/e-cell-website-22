@@ -157,6 +157,7 @@ const Createblog = () => {
                 <div className="firstboxvreateblog">
                     <h2 className='ttleinptcrteblog'>Tags</h2>
                     <h4 className='specificttle'>Add tags to describe your blog</h4>
+                    <h4 className='specificttle'>(Separate tags by space like #tag1 #tag2)</h4>
                     <input
                         type="text"
                         required

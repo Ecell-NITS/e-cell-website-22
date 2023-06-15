@@ -33,6 +33,12 @@ const EditProfile = () => {
     setUserimg(event.target.value)
   }
 
+  const isEditProfFilled = () => {
+    return (
+       name!=="" || bio!=="" || userimg!==""
+    );
+};
+
   const handleSubmit = (event) => {
     event.preventDefault();
 
@@ -40,6 +46,12 @@ const EditProfile = () => {
     if (!token) {
       return;
     }
+
+    if(!isEditProfFilled()){
+      alert("Please edit atleast any one field")
+      return
+    }
+
     setSaving(true)
     setDisableedit(true)
     axios
