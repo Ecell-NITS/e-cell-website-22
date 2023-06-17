@@ -23,6 +23,7 @@ import Dashboard from "./pages/Auth/Dashboard/Dashboard";
 import Editprofile from "./pages/Auth/Dashboard/Editprofile";
 import Allblogswritten from "./pages/Auth/Dashboard/Allblogswritten";
 import Allprovblogs from "./pages/Auth/Dashboard/Allprovblogs";
+import Techsubmission from "./pages/Projectsubmission/Techsubmission";
 function App() {
   return (
     <>
@@ -148,6 +149,13 @@ function App() {
               exact
               path="/myallblogs"
               element={<Allprovblogs />}
+              key="route-Allblogswritten-screen"
+            />
+
+            <Route
+              exact
+              path="/techsubmission"
+              element={<Techsubmission />}
               key="route-Allblogswritten-screen"
             />
 
