@@ -24,6 +24,7 @@ import Editprofile from "./pages/Auth/Dashboard/Editprofile";
 import Allblogswritten from "./pages/Auth/Dashboard/Allblogswritten";
 import Allprovblogs from "./pages/Auth/Dashboard/Allprovblogs";
 import Techsubmission from "./pages/Projectsubmission/Techsubmission";
+import Techresults from "./pages/Projectsubmission/Techresults";
 function App() {
   return (
     <>
@@ -157,6 +158,13 @@ function App() {
               path="/techsubmission"
               element={<Techsubmission />}
               key="route-Allblogswritten-screen"
+            />
+
+            <Route
+              exact
+              path="/techresults"
+              element={<Techresults />}
+              key="route-Techresults-screen"
             />
 
             <Route path="*" element={<NotFound />} />
