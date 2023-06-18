@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react'
-import axios from 'axios'
-import '../Projectsubmission/Techresults.css'
 import NavbarTeam from '../../components/shared/Navbar/NavbarTeam'
 import Footer from '../../components/shared/Footer/Footer'
-const Recuitmentdetails = () => {
+import axios from 'axios'
+import './Techresults.css'
+const Techresults = () => {
     useEffect(() => {
-        document.title = "Recruitment responses || ECELL NITS"
+        document.title = "Tech submission result"
     })
 
     const [errormsg, setErrormsg] = useState("")
@@ -13,8 +13,6 @@ const Recuitmentdetails = () => {
     const [password, setPassword] = useState("")
     const [results, setResults] = useState([])
     const [successMessage, setSuccessMessage] = useState("")
-    const [nologin, setNologin] = useState(false)
-    const [loggingin, setLoggingin] = useState(false)
 
 
     const isFormFilled = () => {
@@ -28,31 +26,26 @@ const Recuitmentdetails = () => {
 
         if (!isFormFilled()) {
             setErrormsg("Please fill all the required details")
-            return
+            setTimeout(() => {
+                setErrormsg("")
+            }, 5000)
         }
 
-        setNologin(true)
-        setLoggingin(true)
-        axios.post(`${process.env.REACT_APP_RECRUITMENT_MAIN_API}/sendcred`, {
-            // axios.post("http://localhost:8000/sendcred", {
+        axios.post(`${process.env.REACT_APP_PROJECTSUBMISSION_API}/sendcred`, {
+        // axios.post("http://localhost:4689/sendcred", {
             username, password
         }).then((response) => {
             setUsername("")
             setPassword("")
-            setNologin(false)
-            setLoggingin(false)
             setResults(response.data)
             // console.log(response.data)
-            setSuccessMessage("Credentials sent to the server.")
-
+            setSuccessMessage("Data sent to the server.")
             setTimeout(() => {
                 setSuccessMessage("")
             }, 3000)
         })
             .catch((error) => {
                 console.error('Error:', error)
-                setNologin(false)
-                setLoggingin(false)
                 if (error.response && error.response.data && error.response.data.message) {
                     setErrormsg(error.response.data.message);
                     setUsername("")
@@ -99,12 +92,10 @@ const Recuitmentdetails = () => {
 
                             />
                         </div>
-                        <button disabled={nologin} style={{ opacity: nologin ? 0.5 : 1, cursor: nologin ? "not-allowed" : "pointer" }} type="submit" className='kretrhereading' onClick={submitcred}>
-                            {loggingin ? "Logging in..." : "Log in"}
-                        </button>
+                        <button type="submit" className='kretrhereading' onClick={submitcred}>Login</button>
 
-                        {errormsg && <p style={{ color: "red" }}>{errormsg}</p>}
-                        {successMessage && <p style={{ color: "green" }}>{successMessage}</p>}
+                        {errormsg && <p>{errormsg}</p>}
+                        {successMessage && <p>{successMessage}</p>}
                     </form>
 
 
@@ -115,19 +106,13 @@ const Recuitmentdetails = () => {
                                 {results.map((result, index) => (
                                     <>
                                         <li key={index}>
-
-
                                             <h1>Name: <span style={{ color: "red" }}>{result.name}</span></h1>
-                                            <h1>email: <span style={{ color: "red" }}>{result.email}</span> </h1>
-                                            <h1>Scholar Id: <span style={{ color: "red" }}>{result.scholarId}</span> </h1>
-                                            <h1>branch: <span style={{ color: "red" }}>{result.branch}</span> </h1>
-                                            <h1>WP number: <span style={{ color: "red" }}>{result.mobileno}</span></h1>
-                                            <h1>domain in technical team of ecell: <span style={{ color: "red" }}>{result.techteam}</span></h1>
-                                            <a href={result.resume} target="_blank" rel="noreferrer">
-                                                <p className="rsmlink"> Resume link</p>
-                                            </a>
-                                            <h1>why ecell: <span style={{ color: "red" }} >{result.whyecell}</span> </h1>
-                                            <hr />
+                                            <h1>Mobile No: <span style={{ color: "red" }}>{result.mobileno}</span></h1>
+                                            <h1>Project: <span style={{ color: "red" }}> <a href={result.project} target='_blank' rel="noreferrer"><span style={{color:"red",textDecoration:"underline"}}>Project link</span></a></span></h1>
+                                            <h1>Email: <span style={{ color: "red" }}>{result.email}</span></h1>
+                                            <h1>Tech Team: <span style={{ color: "red" }}>{result.techteam}</span></h1>
+                                            <h1>Scholar ID: <span style={{ color: "red" }}>{result.scholarId}</span></h1>
+                                            <br /><hr />
                                         </li>
                                     </>
                                 ))}
@@ -141,4 +126,4 @@ const Recuitmentdetails = () => {
     )
 }
 
-export default Recuitmentdetails
+export default Techresults

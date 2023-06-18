@@ -214,7 +214,8 @@ const Techsubmission = () => {
                     <li>In case of any issue while filling the form please contact <a style={{ color: "black" }} href="https://api.whatsapp.com/send/?phone=%2B919431875819&text&type=phone_number&app_absent=0" target='_blank' rel="noreferrer">here</a>.</li>
 
                     <li>Last date to fill the project submission form is June <span style={{ color: "red" }}>23rd</span> 2023 11:59pm.</li>
-                    <li>You have to provide only <span style={{ color: "red" }}>Public Github link</span> of the project.</li>
+                    <li>For Web D & Flutter domain: You have to provide only <span style={{ color: "red" }}>Public Github link</span> of the project.</li>
+                    <li>For UI/UX domain: You have to submit the <span style={{ color: "red" }}>figma file link</span>, not the prototype link.</li>
                 </ul>
             </div>
 
@@ -244,7 +245,7 @@ const Techsubmission = () => {
                 <h3 className='common-form-recuit'>WhatsApp Number<span className='reqdinput'>*</span></h3>
                 <input
                     type="text"
-                    placeholder="your Whatsapp number"
+                    placeholder="Your Whatsapp number"
                     className='input-common-recruit'
                     value={mobileno}
                     onChange={(event) => {
@@ -322,11 +323,11 @@ const Techsubmission = () => {
                     </label>
                 </div>
 
-                <h3 className='common-form-recuit'>Github Project link<span className='reqdinput'>*</span></h3>
+                <h3 className='common-form-recuit'>Github/Figma Project link<span className='reqdinput'>*</span></h3>
                 <input
                     type="text"
                     className='input-common-recruit'
-                    placeholder="Your github repo link must be public"
+                    placeholder="Your github repo should be public"
                     value={project}
                     onChange={(event) => {
                         setProject(event.target.value);
