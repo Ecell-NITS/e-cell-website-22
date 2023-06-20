@@ -68,7 +68,8 @@ height: 100%;
 @media (max-width:999px){
     .indiviualblog img {
         width: 90% !important;
-        object-fit: contain !important;
+      height: 50% !important;
+        object-fit: cover !important;
     } 
 }
 
@@ -97,9 +98,15 @@ height: 100%;
 
     .imgholderwriter{
     margin: 2.5vw auto;
-    width: 25vw;
-    height: 25vw;
+    width: 25vw !important;
+    height: 25vw !important;
     }
+
+    .imgholderwriter img{
+        width: 100% !important;
+        height: 100% !important;
+         border-radius: 50%;
+        }
 
     .writerintro{
         width: 95%;
