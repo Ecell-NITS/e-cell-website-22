@@ -146,6 +146,7 @@ const Createblog = () => {
                         }}
                         placeholder="Enter your intro"
                         className='input-common-recruit' style={{ whiteSpace: "pre-wrap" }}></textarea> */}
+                        
                     <JoditEditor
                         ref={editor0}
                         value={intro}

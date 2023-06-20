@@ -51,13 +51,6 @@ const Blogindividual = () => {
                     <p key={index} style={{ whiteSpace: "pre-line" }} dangerouslySetInnerHTML={{ __html: paragraph }}></p>
                 ))}
 
-                {/* <div className="imgoldermainblogindi">
-                    <img src={topicpic} alt="" />
-                </div> */}
-
-
-                {/* <p> {content}</p> */}
-
                 {content.split('\n').map((paragraph, index) => (
                     <p key={index} style={{ whiteSpace: "pre-line" }} dangerouslySetInnerHTML={{ __html: paragraph }}></p>
                 ))}
