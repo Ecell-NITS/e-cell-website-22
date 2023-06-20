@@ -152,6 +152,8 @@ const Createblog = () => {
                         value={intro}
                         onChange={(newIntro) => setIntro(newIntro)}
                         onBlur={(newIntro) => setIntro(newIntro)}
+                        required
+                      
                     />
 
                 </div>
@@ -174,6 +176,8 @@ const Createblog = () => {
                         value={content}
                         onBlur={(newContent) => setContent(newContent)}
                         onChange={(newContent) => setContent(newContent)}
+                        required
+                      
                     />
 
                 </div>

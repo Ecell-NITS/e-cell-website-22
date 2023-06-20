@@ -65,6 +65,13 @@ height: 100%;
     user-select: none;
 }
 
+@media (max-width:999px){
+    .indiviualblog img {
+        width: 90% !important;
+        object-fit: contain !important;
+    } 
+}
+
 @media (max-width:660px){
     .indiviualblog{
         width: 90%;

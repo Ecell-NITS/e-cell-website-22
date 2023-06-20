@@ -56,16 +56,7 @@
     box-shadow: 0 0 0 5px #224259;
 }
 
-/* .jodit-container .jodit-workplace {
-    font-size: 24px !important;
-}
 
-.jodit-container .jodit-workplace img {
-    width: 90%;
-    object-fit: contain;
-    display: block;
-    margin: 2vw auto;
-} */
 
 @media (max-width:660px){
     .mainblogmake, .firstboxvreateblog{
