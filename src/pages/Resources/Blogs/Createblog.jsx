@@ -6,6 +6,7 @@ import moment from "moment-timezone";
 import Footer from '../../../components/shared/Footer/Footer';
 import { useNavigate } from 'react-router-dom';
 import JoditEditor from "jodit-react";
+import FileBase64 from 'react-file-base64';
 const Createblog = () => {
     const editor = useRef(null);
     const editor0 = useRef(null);
@@ -22,6 +23,12 @@ const Createblog = () => {
     const [writeremail, setWriteremail] = useState("")
     const [submitting, setSubmitting] = useState(false);
     const [disablecreate, setDisablecreate] = useState(false)
+
+    const handleImgChange = (base64) => {
+        setTopicpic(base64);
+    };
+
+
     useEffect(() => {
         document.title = 'Create blog | ECELL NITS';
         const token = localStorage.getItem('token');
@@ -205,7 +212,7 @@ const Createblog = () => {
                 <div className="firstboxvreateblog">
                     <h2 className='ttleinptcrteblog'>Topic picture</h2>
                     <h4 className='specificttle'>Add a picture to your blog</h4>
-                    <input
+                    {/* <input
                         type="text"
                         required
                         id="cretaeblogsinpt"
@@ -215,7 +222,9 @@ const Createblog = () => {
                         }}
                         placeholder="Enter image link"
                         className='input-common-recruit'
-                    />
+                    /> */}
+                    <h4 className='specificttle'>Only jpg, jpeg, png or webp file types are accepted</h4>
+                    <FileBase64 multiple={false} onDone={({ base64 }) => handleImgChange(base64)} />
                 </div>
 
                 <div className="firstboxvreateblog" id='writerdivid'>

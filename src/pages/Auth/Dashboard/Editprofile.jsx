@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import Footer from '../../../components/shared/Footer/Footer';
 import NavbarTeam from '../../../components/shared/Navbar/NavbarTeam';
+import FileBase64 from 'react-file-base64';
 import './Editprofile.css'
 const EditProfile = () => {
   const navigate = useNavigate();
@@ -13,6 +14,8 @@ const EditProfile = () => {
   const [message, setMessage] = useState("")
   const [saving, setSaving] = useState(false)
   const [disableedit, setDisableedit] = useState(false)
+
+
   useEffect(() => {
     document.title = "Edit Profile | Dashboard"
     const token = localStorage.getItem('token');
@@ -29,15 +32,16 @@ const EditProfile = () => {
     setBio(event.target.value)
   }
 
-  const handleImgChange = (event) => {
-    setUserimg(event.target.value)
-  }
+  const handleImgChange = (base64) => {
+    setUserimg(base64);
+  };
+
 
   const isEditProfFilled = () => {
     return (
-       name!=="" || bio!=="" || userimg!==""
+      name !== "" || bio !== "" || userimg !== ""
     );
-};
+  };
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -47,7 +51,7 @@ const EditProfile = () => {
       return;
     }
 
-    if(!isEditProfFilled()){
+    if (!isEditProfFilled()) {
       alert("Please edit atleast any one field")
       return
     }
@@ -56,7 +60,7 @@ const EditProfile = () => {
     setDisableedit(true)
     axios
       // .put('http://localhost:2226/editprofile', { name, bio, userimg }, {
-      .put(process.env.REACT_APP_EDITPROFILE, { name, bio, userimg }, {
+        .put(process.env.REACT_APP_EDITPROFILE, { name, bio, userimg }, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -108,7 +112,7 @@ const EditProfile = () => {
                 value={bio} onChange={handleBioChange}
               /> */}
 
-              <textarea cols="10" rows="5" id="cretaeblogsinpt" typeof='text' 
+              <textarea cols="10" rows="5" id="cretaeblogsinpt" typeof='text'
                 value={bio} onChange={handleBioChange}
                 placeholder="Write your Bio"
                 style={{ whiteSpace: "pre-wrap" }}></textarea>
@@ -116,11 +120,19 @@ const EditProfile = () => {
 
             <div className="inputdicdignup">
               <h3>Profile Image</h3>
-              <input
-                type="text"
-                placeholder="new profile pic link"
-                value={userimg} onChange={handleImgChange}
+              <h4 className='specificttle'>Only jpg, jpeg, png or webp file types are accepted</h4>
+              <FileBase64
+                multiple={false}
+                onDone={({ base64, file }) => {
+                  if (file.type === 'image/png' || file.type === 'image/jpeg' || file.type === 'image/jpg'|| file.type === 'image/webp') {
+                    handleImgChange(base64);
+                  } else {
+                    // Show an error message or take appropriate action for invalid file types
+                    console.error('Invalid file type');
+                  }
+                }}
               />
+
             </div>
 
             <button type="submit" className='btnsubmittodb' disabled={disableedit} style={{ opacity: disableedit ? 0.5 : 1, cursor: disableedit ? "not-allowed" : "pointer" }}>
@@ -129,9 +141,6 @@ const EditProfile = () => {
 
             {message && <p className='msgaftersignuplogin'>{message}</p>}
             {error && <p className='msgaftersignuplogin'>{error}</p>}
-
-
-
           </form>
         </div>
 
