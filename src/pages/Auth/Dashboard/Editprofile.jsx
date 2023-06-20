@@ -60,7 +60,7 @@ const EditProfile = () => {
     setDisableedit(true)
     axios
       // .put('http://localhost:2226/editprofile', { name, bio, userimg }, {
-        .put(process.env.REACT_APP_EDITPROFILE, { name, bio, userimg }, {
+      .put(process.env.REACT_APP_EDITPROFILE, { name, bio, userimg }, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -120,15 +120,17 @@ const EditProfile = () => {
 
             <div className="inputdicdignup">
               <h3>Profile Image</h3>
-              <h4 className='specificttle'>Only jpg, jpeg, png or webp file types are accepted</h4>
+              <h4 className='specificttle'>Only jpg, jpeg, png, avif or webp file of less than 300KB are accepted</h4>
               <FileBase64
                 multiple={false}
                 onDone={({ base64, file }) => {
-                  if (file.type === 'image/png' || file.type === 'image/jpeg' || file.type === 'image/jpg'|| file.type === 'image/webp') {
+                  if ((file.type === 'image/png' || file.type === 'image/jpeg' || file.type === 'image/jpg' || file.type === 'image/webp' || file.type === 'image/avif' ) &&
+                    file.size <= 300 * 1024) {
                     handleImgChange(base64);
                   } else {
-                    // Show an error message or take appropriate action for invalid file types
-                    console.error('Invalid file type');
+                    // Show an error message or alert or decline the editing operartion
+                    alert('Invalid file type or image is greater than 300KB');
+                    setUserimg("")
                   }
                 }}
               />

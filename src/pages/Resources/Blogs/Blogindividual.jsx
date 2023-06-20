@@ -51,9 +51,9 @@ const Blogindividual = () => {
                     <p key={index} style={{ whiteSpace: "pre-line" }} dangerouslySetInnerHTML={{ __html: paragraph }}></p>
                 ))}
 
-                <div className="imgoldermainblogindi">
+                {/* <div className="imgoldermainblogindi">
                     <img src={topicpic} alt="" />
-                </div>
+                </div> */}
 
 
                 {/* <p> {content}</p> */}

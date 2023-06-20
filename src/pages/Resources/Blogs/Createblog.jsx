@@ -78,7 +78,7 @@ const Createblog = () => {
         setDisablecreate(true)
         axios
             // .post('http://localhost:2226/createblog', {
-                .post(process.env.REACT_APP_CREATEBLOG_RENDER, {
+            .post(process.env.REACT_APP_CREATEBLOG_RENDER, {
                 title,
                 tag,
                 intro,
@@ -223,8 +223,29 @@ const Createblog = () => {
                         placeholder="Enter image link"
                         className='input-common-recruit'
                     /> */}
-                    <h4 className='specificttle'>Only jpg, jpeg, png or webp file types are accepted</h4>
-                    <FileBase64 multiple={false} onDone={({ base64 }) => handleImgChange(base64)} />
+                    <h4 className='specificttle'>Only jpg, jpeg, png, webp, or avif file types of size less than 300KB are accepted</h4>
+                    <FileBase64
+                        multiple={false}
+                        onDone={({ base64, file }) => {
+                            if (
+                                (file.type === 'image/png' || file.type === 'image/jpeg' || file.type === 'image/jpg' || file.type === 'image/webp' || file.type === 'image/avif') &&
+                                file.size <= 300 * 1024
+                            ) {
+                                handleImgChange(base64);
+                            } else {
+                                alert('Invalid file type or size. Image should be less than 300 KB.');
+                                setTopicpic("");
+                            }
+                        }}
+                    >
+                        {({ file }) => (
+                            <div>
+                                {file && file.size <= 300 * 1024 && (
+                                    <p>Selected file: {file.name}</p>
+                                )}
+                            </div>
+                        )}
+                    </FileBase64>
                 </div>
 
                 <div className="firstboxvreateblog" id='writerdivid'>
