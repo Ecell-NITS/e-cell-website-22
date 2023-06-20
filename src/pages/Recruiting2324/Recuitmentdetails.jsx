@@ -122,10 +122,7 @@ const Recuitmentdetails = () => {
                                             <h1>Scholar Id: <span style={{ color: "red" }}>{result.scholarId}</span> </h1>
                                             <h1>branch: <span style={{ color: "red" }}>{result.branch}</span> </h1>
                                             <h1>WP number: <span style={{ color: "red" }}>{result.mobileno}</span></h1>
-                                            <h1>domain in technical team of ecell: <span style={{ color: "red" }}>{result.techteam}</span></h1>
-                                            <a href={result.resume} target="_blank" rel="noreferrer">
-                                                <p className="rsmlink"> Resume link</p>
-                                            </a>
+                                            <h1>Which team you want to apply for? <span style={{ color: "red" }}> {result.team && result.team.join(", ")}</span></h1>
                                             <h1>why ecell: <span style={{ color: "red" }} >{result.whyecell}</span> </h1>
                                             <hr />
                                         </li>

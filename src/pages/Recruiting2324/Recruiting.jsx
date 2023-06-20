@@ -11,7 +11,6 @@ const Recruiting = () => {
     const [whyecell, setWhyecell] = useState("");
     const [branch, setBranch] = useState("");
     const [team, setTeam] = useState("")
-    const [techteam, setTechteam] = useState("");
     const [email, setEmail] = useState("");
     const [scholarId, setScholarId] = useState("");
     const [submitting, setSubmitting] = useState(false);
@@ -25,8 +24,7 @@ const Recruiting = () => {
     const [otpSent, setOtpSent] = useState(false);
     const [otpgoing, setOtpgoing] = useState(false)
     const [verifyotp, setVerifyotp] = useState(false)
-    const [poster, setPoster] = useState("")
-    const [resume, setResume] = useState("")
+    // const [poster, setPoster] = useState("")
     const [disableotpsend, setDisableotpsend] = useState(false)
     const [disablesubmitreg, setDisablesubmitreg] = useState(false)
     // const [project, setProject] = useState("")
@@ -65,8 +63,8 @@ const Recruiting = () => {
             whyecell !== "" &&
             mobileno !== "" &&
             branch !== "" &&
-            scholarId !== "" && resume !== "" && techteam !== ""
-            // team.length > 0
+            scholarId !== "" &&
+            team.length > 0
             // poster !== ""
         );
     };
@@ -241,9 +239,9 @@ const Recruiting = () => {
                 email,
                 branch,
                 scholarId,
-                timestamp,
+                timestamp, team
                 // poster,
-                resume, techteam
+
             })
             .then((response) => {
                 setName("");
@@ -252,14 +250,12 @@ const Recruiting = () => {
                 setEmail("");
                 setBranch("");
                 setScholarId("");
-                setResume("")
                 setCaptchaAnswer("");
                 generateRandomNumbers()
                 setOtp("")
                 // setPoster("")
                 // setProject("")
-                // setTeam([]);
-                setTechteam("")
+                setTeam([]);
                 setSubmitting(false);
                 setDisablesubmitreg(false)
                 alert("Form successfully submitted😍");
@@ -323,12 +319,12 @@ const Recruiting = () => {
                     <li>Only first year students of NITS are eligible to fill this form.</li>
                     <li>Use ONLY your Institute email id.</li>
                     <li>Check your Institute email inbox or SPAM folder for the otp.</li>
-                    <li>It might take 10 seconds to send the otp, so please be patient.</li>
+
                     <li>You can only fill this form once so please be attentive while filling the form.</li>
-                    <li>Give Google drive link of the resume and make sure it is <span style={{ color: "red" }}>accessible by anyone on the internet</span>. You can find a sample resume <a href="https://drive.google.com/file/d/1owqrOT6OxY1MKTh-tVp7hV31OohZcv-H/view?usp=drive_link" target='_blank' rel="noreferrer">here</a>.</li>
+
                     <li>In case of any issue while filling the form please contact <a style={{ color: "black" }} href="https://api.whatsapp.com/send/?phone=%2B919431875819&text&type=phone_number&app_absent=0" target='_blank' rel="noreferrer">here</a>.</li>
                     <li>Keep checking your inbox for further instructions.</li>
-                    <li>Last date to fill the form is June <span style={{ color: "red" }}>13th</span> 2023 11:59pm.</li>
+                    <li>Last date to fill the form is June <span style={{ color: "red" }}>30th</span> 2023 11:59pm.</li>
                 </ul>
             </div>
             <div className='recruitingmain'>
@@ -434,7 +430,7 @@ const Recruiting = () => {
                 <h3 className='common-form-recuit'>WhatsApp Number<span className='reqdinput'>*</span></h3>
                 <input
                     type="text"
-                    placeholder="955698xxxx"
+                    placeholder="Your whatsapp number"
                     className='input-common-recruit'
                     value={mobileno}
                     onChange={(event) => {
@@ -457,7 +453,7 @@ const Recruiting = () => {
                     <button onClick={sendOTP} className='btnotpsend' disabled={disableotpsend || disablesubmitreg} style={{ opacity: disableotpsend || disablesubmitreg ? 0.5 : 1, cursor: disableotpsend || disablesubmitreg ? "not-allowed" : "pointer" }}>Send OTP to Institute email</button>
                 </div>
 
-                {otpgoing && <p className='statusmsgssubmt'>Sending otp...Please be patient it might take 10 seconds.</p>}
+                {otpgoing && <p className='statusmsgssubmt'>Sending otp...</p>}
 
                 <h3 className='common-form-recuit'>OTP<span className='reqdinput'>*</span></h3>
                 <input
@@ -470,116 +466,60 @@ const Recruiting = () => {
                     }}
                 />
 
-
-                <h3 className='common-form-recuit'>Which domain in technical team of ECELL you want to apply for?<span className='reqdinput'>*</span></h3>
+                {/* for checkbox multiple team selection */}
+                <h3 className='common-form-recuit'>Which team you want to apply for? (multiple team selection allowed)<span className='reqdinput'>*</span></h3>
                 <div className='radioinptholder'>
                     <label className='radioinpt'>
-                        <input
-                            type="radio"
-                            name="techteam"
-                            value="Web Development"
-                            checked={techteam === "Web Development"}
-                            onChange={(event) => {
-                                setTechteam(event.target.value);
-                            }}
-                        />
-                        Web Development
+                        <input type="checkbox" name="team" value="Content" checked={team.includes("Content")}
+                            onChange={handleTeamSelection} />
+                        Content
                     </label>
 
                     <label className='radioinpt'>
-                        <input
-                            type="radio"
-                            name="techteam"
-                            value="UI/UX"
-                            checked={techteam === "UI/UX"}
-                            onChange={(event) => {
-                                setTechteam(event.target.value);
-                            }}
-                        />
-                        UI/UX
+                        <input type="checkbox" name='team' value="Collaboration & Outreach" checked={team.includes("Collaboration & Outreach")}
+                            onChange={handleTeamSelection} />
+                        Collaboration & Outreach
                     </label>
 
                     <label className='radioinpt'>
-                        <input
-                            type="radio"
-                            name="techteam"
-                            value="Flutter"
-                            checked={techteam === "Flutter"}
-                            onChange={(event) => {
-                                setTechteam(event.target.value);
-                            }}
-                        />
-                        Flutter
+                        <input type="checkbox" name="team" value="Curation" checked={team.includes("Curation")}
+                            onChange={handleTeamSelection} />
+                        Curation
+                    </label>
+
+                    <label className='radioinpt'>
+                        <input type="checkbox" name="team" value="Design" checked={team.includes("Design")}
+                            onChange={handleTeamSelection} />
+                        Design
+                    </label>
+
+                    <label className='radioinpt'>
+                        <input type="checkbox" name="team" value="Event Management" checked={team.includes("Event Management")}
+                            onChange={handleTeamSelection} />
+                        Event Management
+                    </label>
+
+                    <label className='radioinpt'>
+                        <input type="checkbox" name="team" value="Marketing" checked={team.includes("Marketing")}
+                            onChange={handleTeamSelection} />
+                        Marketing
+                    </label>
+
+                    <label className='radioinpt'>
+                        <input type="checkbox" name="team" value="Publicity" checked={team.includes("Publicity")}
+                            onChange={handleTeamSelection} />
+                        Publicity
                     </label>
                 </div>
 
 
-
-                {/* for checkbox multiple team selection */}
-                {/* <h3 className='common-form-recuit'>Which team you want to apply for?<span className='reqdinput'>*</span></h3>
-                <div className='radioinptholder'>
-                    <label className='radioinpt'>
-                        <input type="checkbox" name="team" value="UI" checked={team.includes("UI")}
-                            onChange={handleTeamSelection} />
-                        UI
-                    </label>
-
-                    <label className='radioinpt'>
-                        <input type="checkbox" name='team' value="UX" checked={team.includes("UX")}
-                            onChange={handleTeamSelection} />
-                        UX
-                    </label>
-                </div> */}
-
-
                 <h3 className='common-form-recuit'>Why do you want to join E-Cell?<span className='reqdinput'>*</span></h3>
-                {/* <input
-                    type="text"
-                    className='input-common-recruit'
-                    placeholder="Why do you want to be a part of ecell?"
-                    value={whyecell}
-                    onChange={(event) => {
-                        setWhyecell(event.target.value);
-                    }}
-                /> */}
-
                 <textarea typeof='text' rows="3" className='input-common-recruit'
                     placeholder="Why do you want to be a part of ecell?"
                     value={whyecell}
                     onChange={(event) => {
                         setWhyecell(event.target.value);
                     }}></textarea>
-
-
-                <h3 className='common-form-recuit'>Resume Link (Upload in Google Drive)<span className='reqdinput'>*</span></h3>
-                <input
-                    type="text"
-                    className='input-common-recruit'
-                    placeholder="Your resume"
-                    value={resume}
-                    onChange={(event) => {
-                        setResume(event.target.value);
-                    }}
-                />
-
-                {/* <h3 className='common-form-recuit'>Task/Project Link (Upload in Google Drive in zip form or GitHub)<span className='reqdinput'>*</span></h3>
-                <input
-                    type="text"
-                    placeholder="Your Project link"
-                    className='input-common-recruit'
-                    value={project}
-                    onChange={(event) => {
-                        setProject(event.target.value);
-                    }}
-                /> */}
-
-                {/* <p>If you're applying for deisgn team then provide links of best 3 posters</p>
-                <input type="text" placeholder='poster links only for candidate applying for design team'
-                    value={poster}
-                    onChange={(event) => {
-                        setPoster(event.target.value);
-                    }}
-                /> */}
 
                 <h3 className='common-form-recuit'>Prove you're not an robot<span className='reqdinput'>*</span></h3>
                 <span className='robottxt'>{firstNumber} + {secondNumber} = </span>
@@ -595,6 +535,8 @@ const Recruiting = () => {
                         }}
                     />
                 </span>
+
+
 
                 <button onClick={createUser} className='submtformrecuit' disabled={disablesubmitreg || disableotpsend} style={{ opacity: disablesubmitreg || disableotpsend ? 0.5 : 1, cursor: disablesubmitreg || disableotpsend ? "not-allowed" : "pointer" }} >
                     {submitting ? "Submitting..." : "Submit"}{" "}
