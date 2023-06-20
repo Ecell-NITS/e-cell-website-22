@@ -2,14 +2,14 @@ import React, { useEffect, useState } from 'react'
 import { useNavigate, Link } from 'react-router-dom';
 import axios from 'axios';
 import '../../../components/Blog/Blog.css'
-import NavbarTeam from '../../../components/shared/Navbar/NavbarTeam';
-import Footer from '../../../components/shared/Footer/Footer';
+// import NavbarTeam from '../../../components/shared/Navbar/NavbarTeam';
+// import Footer from '../../../components/shared/Footer/Footer';
 const Allblogspublished = () => {
     const navigate = useNavigate()
     const [blogs, setBlogs] = useState([]);
-
+    // const [introedit, setIntroedit] = useState("")
     useEffect(() => {
-        document.title = "My Published Blogs | Dashboard"
+        // document.title = "My Published Blogs | Dashboard"
         const token = localStorage.getItem('token');
         if (!token) {
             navigate("/login")
@@ -27,6 +27,7 @@ const Allblogspublished = () => {
             .get(process.env.REACT_APP_PUBLISHEDBLOGS, config)
             .then((response) => {
                 setBlogs(response.data.blogs);
+                // setIntroedit(response.data.intro)
             })
             .catch((error) => {
                 console.error('Failed to fetch blogs', error);
@@ -44,14 +45,14 @@ const Allblogspublished = () => {
                     <p>{blog.content}</p>
                 </div>
             ))} */}
-            <NavbarTeam />
+            {/* <NavbarTeam /> */}
             <div id='paddinginpublishlist'>
-                <h1 style={{textAlign:"center"}}>My Published Blogs</h1>
-                <div className="mainparentblogindicard" id='allblogswrittenbuuser'>
+                {/* <h1 style={{textAlign:"center"}}>My Published Blogs</h1> */}
+                <div id='blogs_under_profile_protected'>
 
                     {blogs.map((blog) => (
-                        <div key={blog._id} className='indicardblog'>
-                            {/* <h1>id: {blog._id}</h1> */}
+                        <div key={blog._id} id='indicardblog_protct' >
+
                             <div className="imgholdercontblog">
                                 <img src={blog.topicpic} alt="" />
                             </div>
@@ -66,7 +67,10 @@ const Allblogspublished = () => {
                             </div>
 
                             <div className="briefintrohldman">
-                                <p>{blog.intro}</p>
+                                {/* <p>{blog.intro}</p> */}
+                                {blog.intro.split('\n').map((paragraph, index) => (
+                                    <p key={index} style={{ whiteSpace: "pre-line" }} dangerouslySetInnerHTML={{ __html: paragraph }}></p>
+                                ))}
                             </div>
 
                             <Link to={`/blog/${blog._id}`}> <button className='kretrhereading'>
@@ -77,7 +81,7 @@ const Allblogspublished = () => {
                 </div>
 
             </div>
-            <Footer />
+            {/* <Footer /> */}
         </div>
     )
 }

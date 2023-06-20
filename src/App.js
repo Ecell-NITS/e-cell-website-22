@@ -23,6 +23,7 @@ import Dashboard from "./pages/Auth/Dashboard/Dashboard";
 import Editprofile from "./pages/Auth/Dashboard/Editprofile";
 import Allblogswritten from "./pages/Auth/Dashboard/Allblogswritten";
 import Allprovblogs from "./pages/Auth/Dashboard/Allprovblogs";
+import Alllikedblogs from "./pages/Auth/Dashboard/Alllikedblogs";
 import Techsubmission from "./pages/Projectsubmission/Techsubmission";
 import Techresults from "./pages/Projectsubmission/Techresults";
 function App() {
@@ -151,6 +152,13 @@ function App() {
               path="/myallblogs"
               element={<Allprovblogs />}
               key="route-Allblogswritten-screen"
+            />
+
+            <Route
+              exact
+              path="/likedblogs"
+              element={<Alllikedblogs />}
+              key="route-Alllikedblogs-screen"
             />
 
             <Route

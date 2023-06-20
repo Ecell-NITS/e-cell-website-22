@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import Footer from '../../../components/shared/Footer/Footer';
+import NavbarTeam from '../../../components/shared/Navbar/NavbarTeam';
+import FileBase64 from 'react-file-base64';
+import './Editprofile.css'
 const EditProfile = () => {
   const navigate = useNavigate();
   const [name, setName] = useState('');
@@ -8,6 +12,9 @@ const EditProfile = () => {
   const [userimg, setUserimg] = useState("")
   const [error, setError] = useState('');
   const [message, setMessage] = useState("")
+  const [saving, setSaving] = useState(false)
+  const [disableedit, setDisableedit] = useState(false)
+
 
   useEffect(() => {
     document.title = "Edit Profile | Dashboard"
@@ -25,9 +32,16 @@ const EditProfile = () => {
     setBio(event.target.value)
   }
 
-  const handleImgChange = (event) => {
-    setUserimg(event.target.value)
-  }
+  const handleImgChange = (base64) => {
+    setUserimg(base64);
+  };
+
+
+  const isEditProfFilled = () => {
+    return (
+      name !== "" || bio !== "" || userimg !== ""
+    );
+  };
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -37,6 +51,13 @@ const EditProfile = () => {
       return;
     }
 
+    if (!isEditProfFilled()) {
+      alert("Please edit atleast any one field")
+      return
+    }
+
+    setSaving(true)
+    setDisableedit(true)
     axios
       // .put('http://localhost:2226/editprofile', { name, bio, userimg }, {
       .put(process.env.REACT_APP_EDITPROFILE, { name, bio, userimg }, {
@@ -52,43 +73,85 @@ const EditProfile = () => {
         setName('');
         setBio("")
         setUserimg("")
+        setSaving(false)
+        setDisableedit(false)
       })
       .catch((error) => {
         console.error('Failed to update name', error);
         setError('Failed to update name. Please try again.');
+        setSaving(false)
+        setDisableedit(false)
       });
+
   };
 
 
   return (
     <div>
-      <h1>Edit Profile</h1>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="nameInput">Name:</label>
-          <input
-            type="text"
-            id="nameInput"
-            value={name}
-            onChange={handleNameChange}
-          />
+
+      <NavbarTeam />
+      <div className='signuptopcont'>
+        <div className="formcontsignup">
+          <h1 className='okwelcometoecell'>Give your profile a new look</h1>
+          <h4 className='enterdtlssignup'>Please enter your new details.</h4>
+          <form onSubmit={handleSubmit} className='formsignaccoutn'>
+            <div className="inputdicdignup">
+              <h3>Name</h3>
+              <input
+                type="text"
+                placeholder="Name"
+                value={name}
+                onChange={handleNameChange}
+              />
+            </div>
+            <div className="inputdicdignup">
+              <h3>About</h3>
+              {/* <input
+                type="text"
+                placeholder="About"
+                value={bio} onChange={handleBioChange}
+              /> */}
+
+              <textarea cols="10" rows="5" id="cretaeblogsinpt" typeof='text'
+                value={bio} onChange={handleBioChange}
+                placeholder="Write your Bio"
+                style={{ whiteSpace: "pre-wrap" }}></textarea>
+            </div>
+
+            <div className="inputdicdignup">
+              <h3>Profile Image</h3>
+              <h4 className='specificttle'>Only jpg, jpeg, png, avif or webp file of less than 300KB are accepted</h4>
+              <FileBase64
+                multiple={false}
+                onDone={({ base64, file }) => {
+                  if ((file.type === 'image/png' || file.type === 'image/jpeg' || file.type === 'image/jpg' || file.type === 'image/webp' || file.type === 'image/avif' ) &&
+                    file.size <= 300 * 1024) {
+                    handleImgChange(base64);
+                  } else {
+                    // Show an error message or alert or decline the editing operartion
+                    alert('Invalid file type or image is greater than 300KB');
+                    setUserimg("")
+                  }
+                }}
+              />
+
+            </div>
+
+            <button type="submit" className='btnsubmittodb' disabled={disableedit} style={{ opacity: disableedit ? 0.5 : 1, cursor: disableedit ? "not-allowed" : "pointer" }}>
+              {saving ? "Saving..." : "Save"}
+            </button>
+
+            {message && <p className='msgaftersignuplogin'>{message}</p>}
+            {error && <p className='msgaftersignuplogin'>{error}</p>}
+          </form>
         </div>
 
-        <div>
-          <label htmlFor="bioInput">Bio:</label>
-          <textarea id="bioInput" value={bio} onChange={handleBioChange} />
+        <div className="imgbgholdersignup">
+          <img src="https://res.cloudinary.com/dp92qug2f/image/upload/v1686499643/Photo_zxxmw5.svg" alt="" />
         </div>
 
-        <div>
-          <label htmlFor="ImgInput">Profile Image:</label>
-          <input id="ImgInput" value={userimg} onChange={handleImgChange} />
-        </div>
-
-
-        <button type="submit">Save</button>
-      </form>
-      {message && <p>{message}</p>}
-      {error && <p>{error}</p>}
+      </div>
+      <Footer />
     </div>
   );
 };

@@ -1,10 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom';
+import NavbarTeam from '../../../components/shared/Navbar/NavbarTeam';
+import Footer from '../../../components/shared/Footer/Footer';
+import './Dashboard.css'
+import Allblogspublished from './Allblogswritten';
+import Allprovblogs from './Allprovblogs';
+import Alllikedblogs from './Alllikedblogs';
 const Dashboard = () => {
   const navigate = useNavigate();
   const [user, setUser] = useState({});
-
+  const [editedbio, setEditedbio] = useState("")
   useEffect(() => {
     const token = localStorage.getItem('token');
     const config = {
@@ -14,21 +20,22 @@ const Dashboard = () => {
     };
 
     // axios.get('http://localhost:2226/dashboard', 
-    axios.get(process.env.REACT_APP_DASHBOARD, 
-    config)
+    axios.get(process.env.REACT_APP_DASHBOARD,
+      config)
       .then(response => {
-        const { name, email, bio ,userimg} = response.data; 
-        setUser({ name, email, bio,userimg }); 
+        const { name, email,  userimg } = response.data;
+        setUser({ name, email,  userimg });
+        setEditedbio(response.data.bio)
       })
       .catch(error => {
-        if(error.response.status === 401 ){
+        if (error.response.status === 401) {
           navigate('/login');
-        }else {
+        } else {
           console.error('Failed to retrieve user details', error);
         }
-       
+
       });
-  }, []);
+  }, [navigate]);
 
 
   useEffect(() => {
@@ -46,30 +53,94 @@ const Dashboard = () => {
     navigate('/editprofile');
   };
 
-  const handleallblogsbtn = () =>{
+  const handleallblogsbtn = () => {
     navigate("/mypublishedblogs")
   }
 
   const handleallprovblogs = () => {
     navigate("/myallblogs")
   }
-  
+
+  const handlelikedblogs = () => {
+    navigate("/likedblogs")
+  }
+
+  const [lebel12, setlebel12] = useState("publishedblogs");
+
   return (
     <>
-      <p>This is a protected dashboard page</p>
-      <div>
-        <h1>Welcome to the Dashboard, {user.name}</h1>
-        <div>
-          <img src={user.userimg} alt="" />
+      <NavbarTeam />
+      <div className='dashboardmain'>
+
+        <div className="flexingphotocontent">
+          <div className="phhotodash">
+            <img src={user.userimg} alt={user.name} />
+          </div>
+          <div className="biodashboardd">
+            <div className="firstseconndchild">
+
+              {/* <div className="namenadbtnsinsame">
+                <div className="usernamehlderdash">
+                  <h1 className='accountusername'>{user.name}</h1>
+                </div>
+
+                <div className="btnholrgdashbo">
+                  <div className='profeftcontparnt'>
+                    <button onClick={handleEditProfile} className='editkryieprof' >Edit Profile</button>
+                    <button onClick={ButtonSignout} className='editkryieprof'>Sign Out</button>
+                  </div>
+                </div>
+              </div> */}
+              <h1 className='accountusername'>{user.name}</h1>
+              <button onClick={handleEditProfile} className='editkryieprof ' id='sirfcolorchng' >Edit Profile</button>
+              <button onClick={ButtonSignout} className='editkryieprof'>Sign Out</button>
+            </div>
+
+            <div className="biohbhauidhar">
+              {editedbio.split('\n').map((bio, index) => (
+                    <h3 key={index} style={{ whiteSpace: "pre-line" }}>{bio}</h3>
+                ))}
+                
+            </div>
+
+
+          </div>
         </div>
-        <p>Name: {user.name}</p>
-        <p>Email: {user.email}</p>
-        <p>Bio: {user.bio}</p>
-        <button onClick={ButtonSignout}>Sign Out</button>
-        <button onClick={handleEditProfile}>Edit Profile</button>
-        <button onClick={handleallblogsbtn}>My Published blogs</button>
-        <button onClick={handleallprovblogs}>My all blogs</button>
+
+
+        <div className="tab_main" id='tabchangerdashboard'>
+          <div
+            className={`publishedblogs ${lebel12 === "publishedblogs" ? "active-link" : ""}`}
+            onClick={() => { setlebel12("publishedblogs") }}
+          >
+            Published Blogs
+          </div>
+
+          <div
+            className={`allblogs ${lebel12 === "allblogs" ? "active-link" : ""}`}
+            onClick={() => { setlebel12("allblogs") }}
+          >
+            All Blogs
+          </div>
+
+          <div
+            className={`likedblogs ${lebel12 === "likedblogs" ? "active-link" : ""}`}
+            onClick={() => { setlebel12("likedblogs") }}
+          >
+            Liked Blogs
+          </div>
+
+        </div>
+
+        <div className="tab_content">
+          {lebel12 === "publishedblogs" && <Allblogspublished />}
+          {lebel12 === "allblogs" && <Allprovblogs />}
+          {lebel12 === "likedblogs" && <Alllikedblogs />}
+
+        </div>
       </div>
+
+      <Footer />
     </>
   )
 }

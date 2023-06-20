@@ -1,11 +1,15 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import './Createblog.css'
 import NavbarTeam from '../../../components/shared/Navbar/NavbarTeam'
 import axios from 'axios'
 import moment from "moment-timezone";
 import Footer from '../../../components/shared/Footer/Footer';
 import { useNavigate } from 'react-router-dom';
+import JoditEditor from "jodit-react";
+import FileBase64 from 'react-file-base64';
 const Createblog = () => {
+    const editor = useRef(null);
+    const editor0 = useRef(null);
     const navigate = useNavigate()
     const [title, setTitle] = useState("")
     const [intro, setIntro] = useState("")
@@ -18,34 +22,40 @@ const Createblog = () => {
     const [writerpic, setWriterpic] = useState("")
     const [writeremail, setWriteremail] = useState("")
     const [submitting, setSubmitting] = useState(false);
+    const [disablecreate, setDisablecreate] = useState(false)
+
+    const handleImgChange = (base64) => {
+        setTopicpic(base64);
+    };
+
 
     useEffect(() => {
         document.title = 'Create blog | ECELL NITS';
         const token = localStorage.getItem('token');
         if (!token) {
-          navigate('/login');
+            navigate('/login');
         } else {
-          // Fetch user data and populate the form fields
-          axios
-            .get(process.env.REACT_APP_FETCHPROFILE, {
-            // .get('http://localhost:2226/fetchprofile', {
-              headers: {
-                Authorization: `Bearer ${token}`,
-              },
-            })
-            .then((response) => {
-              const user = response.data;
-              setWritername(user.name);
-              setWriterintro(user.bio);
-              setWriterpic(user.userimg);
-              setWriteremail(user.email);
-            })
-            .catch((error) => {
-              console.error('Failed to fetch user data', error);
-              // Handle error
-            });
+            // Fetch user data and populate the form fields
+            axios
+                .get(process.env.REACT_APP_FETCHPROFILE, {
+                    // .get('http://localhost:2226/fetchprofile', {
+                    headers: {
+                        Authorization: `Bearer ${token}`,
+                    },
+                })
+                .then((response) => {
+                    const user = response.data;
+                    setWritername(user.name);
+                    setWriterintro(user.bio);
+                    setWriterpic(user.userimg);
+                    setWriteremail(user.email);
+                })
+                .catch((error) => {
+                    console.error('Failed to fetch user data', error);
+                    // Handle error
+                });
         }
-      }, [navigate]);
+    }, [navigate]);
     const iscreateblogempty = () => {
         return title !== "" && intro !== "" && tag !== "" && writeremail !== "" && content !== "" && writernmae !== "" && writerintro !== "" && writerpic !== "" && topicpic !== "";
     };
@@ -65,6 +75,7 @@ const Createblog = () => {
 
         const timestamp = moment().tz("Asia/Kolkata").format();
         setSubmitting(true);
+        setDisablecreate(true)
         axios
             // .post('http://localhost:2226/createblog', {
             .post(process.env.REACT_APP_CREATEBLOG_RENDER, {
@@ -84,6 +95,7 @@ const Createblog = () => {
                 setTopicpic("")
                 setWriteremail("")
                 setSubmitting(false);
+                setDisablecreate(false)
                 alert("Blog created but publish subject to verification");
             });
     }
@@ -127,21 +139,29 @@ const Createblog = () => {
                         className='input-common-recruit'
                     /> */}
 
-                    <textarea cols="10" rows="5" id="cretaeblogsinpt" typeof='text' required
+                    {/* <textarea cols="10" rows="5" id="cretaeblogsinpt" typeof='text' required
                         value={intro}
                         onChange={(event) => {
                             setIntro(event.target.value);
                         }}
                         placeholder="Enter your intro"
-                        className='input-common-recruit'  style={{ whiteSpace: "pre-wrap" }}></textarea>
-
+                        className='input-common-recruit' style={{ whiteSpace: "pre-wrap" }}></textarea> */}
+                        
+                    <JoditEditor
+                        ref={editor0}
+                        value={intro}
+                        onChange={(newIntro) => setIntro(newIntro)}
+                        onBlur={(newIntro) => setIntro(newIntro)}
+                        required
+                      
+                    />
 
                 </div>
 
                 <div className="firstboxvreateblog">
                     <h2 className='ttleinptcrteblog'>Content</h2>
                     <h4 className='specificttle'>Write about your topic</h4>
-                    <textarea cols="30" rows="10" className='input-common-recruit' type="text"
+                    {/* <textarea cols="30" rows="10" className='input-common-recruit' type="text"
                         required
                         id="cretaeblogsinpt"
                         value={content}
@@ -149,12 +169,23 @@ const Createblog = () => {
                             setContent(event.target.value);
                         }}
                     >
-                    </textarea>
+                    </textarea> */}
+
+                    <JoditEditor
+                        ref={editor}
+                        value={content}
+                        onBlur={(newContent) => setContent(newContent)}
+                        onChange={(newContent) => setContent(newContent)}
+                        required
+                      
+                    />
+
                 </div>
 
                 <div className="firstboxvreateblog">
                     <h2 className='ttleinptcrteblog'>Tags</h2>
                     <h4 className='specificttle'>Add tags to describe your blog</h4>
+                    <h4 className='specificttle'>(Separate tags by space like #tag1 #tag2)</h4>
                     <input
                         type="text"
                         required
@@ -186,7 +217,7 @@ const Createblog = () => {
                 <div className="firstboxvreateblog">
                     <h2 className='ttleinptcrteblog'>Topic picture</h2>
                     <h4 className='specificttle'>Add a picture to your blog</h4>
-                    <input
+                    {/* <input
                         type="text"
                         required
                         id="cretaeblogsinpt"
@@ -196,7 +227,30 @@ const Createblog = () => {
                         }}
                         placeholder="Enter image link"
                         className='input-common-recruit'
-                    />
+                    /> */}
+                    <h4 className='specificttle'>Only jpg, jpeg, png, webp, or avif file types of size less than 300KB are accepted</h4>
+                    <FileBase64
+                        multiple={false}
+                        onDone={({ base64, file }) => {
+                            if (
+                                (file.type === 'image/png' || file.type === 'image/jpeg' || file.type === 'image/jpg' || file.type === 'image/webp' || file.type === 'image/avif') &&
+                                file.size <= 300 * 1024
+                            ) {
+                                handleImgChange(base64);
+                            } else {
+                                alert('Invalid file type or size. Image should be less than 300 KB.');
+                                setTopicpic("");
+                            }
+                        }}
+                    >
+                        {({ file }) => (
+                            <div>
+                                {file && file.size <= 300 * 1024 && (
+                                    <p>Selected file: {file.name}</p>
+                                )}
+                            </div>
+                        )}
+                    </FileBase64>
                 </div>
 
                 <div className="firstboxvreateblog" id='writerdivid'>
@@ -264,7 +318,7 @@ const Createblog = () => {
                     />
                 </div>
 
-                <button onClick={submitform} className='kretrhereading' id='crteblogbtn0'>
+                <button onClick={submitform} className='kretrhereading' id='crteblogbtn0' disabled={disablecreate} style={{ opacity: disablecreate ? 0.5 : 1, cursor: disablecreate ? "not-allowed" : "pointer" }}>
                     {submitting ? "Posting Blog" : "Post Blog"}{" "}
                 </button>
             </div>

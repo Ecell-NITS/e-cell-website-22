@@ -14,9 +14,7 @@
 
 .indiviualblog p{
     color: rgba(96, 96, 96, 1);
-    font-size: 1.7vw;
-    line-height: 1.6;
-    /* padding-bottom: 5vw; */
+  
 }
 
 .writerdetails{
@@ -32,8 +30,8 @@
 }
 
 .imgholderwriter{
-    width: 15vw;
-    height: 15vw;
+    width: 17%;
+    height: 17%;
 }
 
 .imgholderwriter img{
@@ -42,10 +40,14 @@ height: 100%;
  border-radius: 50%;
 }
 
+.writerintro{
+    width: 83%;
+}
+
 .writerintro p{
     color: rgba(34, 66, 89, 1);
     font-size: 1.5vw;
-    padding: 3vw 1.2vw 0 3vw;
+    padding: 0vw 1.2vw 0 3vw;
 }
 
 .imgoldermainblogindi{
@@ -63,6 +65,14 @@ height: 100%;
     user-select: none;
 }
 
+@media (max-width:999px){
+    .indiviualblog img {
+        width: 90% !important;
+      height: 50% !important;
+        object-fit: cover !important;
+    } 
+}
+
 @media (max-width:660px){
     .indiviualblog{
         width: 90%;
@@ -75,10 +85,7 @@ height: 100%;
         /* margin-bottom: 5vw; */
     }
 
-    .indiviualblog p{
-        font-size: 5vw;
-        /* margin-top: 10vw; */
-    }
+   
 
     /* .imgholderwriter{
         width: 25vw;
@@ -91,8 +98,18 @@ height: 100%;
 
     .imgholderwriter{
     margin: 2.5vw auto;
-    width: 25vw;
-    height: 25vw;
+    width: 25vw !important;
+    height: 25vw !important;
+    }
+
+    .imgholderwriter img{
+        width: 100% !important;
+        height: 100% !important;
+         border-radius: 50%;
+        }
+
+    .writerintro{
+        width: 95%;
     }
 
     .writerintro{
