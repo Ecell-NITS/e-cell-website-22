@@ -86,7 +86,7 @@ const Blogindividual = () => {
             <div className='indiviualblog'>
                 <h1>{title}</h1>
                 {/* <p>{intro}</p> */}
-                <h6 className='dateandtimeofpost'>Posted on {timestamp} by <span id='writerimpspan'>{writername} </span></h6>
+                <h6 className='dateandtimeofpost'>Posted by <span id='writerimpspan'>{writername} </span></h6>
                 {intro.split('\n').map((paragraph, index) => (
                     <p key={index} style={{ whiteSpace: "pre-line" }} dangerouslySetInnerHTML={{ __html: paragraph }}></p>
                 ))}
