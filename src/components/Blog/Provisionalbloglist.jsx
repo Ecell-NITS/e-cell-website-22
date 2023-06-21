@@ -153,12 +153,22 @@ const Provisionalbloglist = () => {
                                                 </div> */}
 
                                                 <div className="briefintrohldman">
-                                                    {/* {blog.intro.split('\n').map((paragraph, index) => (
-                                                        <p key={index}>{paragraph}</p>
-                                                    ))} */}
-                                                    {blog.intro.split('\n').map((paragraph, index) => (
-                                                        <p key={index} style={{ whiteSpace: "pre-line" }} dangerouslySetInnerHTML={{ __html: paragraph }}></p>
-                                                    ))}
+                                                    {blog.intro
+                                                        .split('\n')
+                                                        .map((paragraph, index) => (
+                                                            <p
+                                                                key={index}
+                                                                style={{ whiteSpace: 'pre-line' }}
+                                                                dangerouslySetInnerHTML={{
+                                                                    __html:
+                                                                        paragraph
+                                                                            .split(' ')
+                                                                            .slice(0, 25)
+                                                                            .join(' ') +
+                                                                        (paragraph.split(' ').length > 25 ? '...' : ''),
+                                                                }}
+                                                            ></p>
+                                                        ))}
                                                 </div>
 
 
