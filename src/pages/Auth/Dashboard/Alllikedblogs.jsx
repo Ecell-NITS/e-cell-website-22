@@ -36,7 +36,7 @@ const Alllikedblogs = () => {
     }, []);
     return (
         <div>
-           {/* <NavbarTeam /> */}
+            {/* <NavbarTeam /> */}
             <div id='paddinginpublishlist'>
                 {/* <h1 style={{ textAlign: "center" }}>Liked Blogs</h1> */}
                 <div id='blogs_under_profile_protected'>
@@ -58,10 +58,22 @@ const Alllikedblogs = () => {
                             </div>
 
                             <div className="briefintrohldman">
-                                {/* <p>{blog.intro}</p> */}
-                                {blog.intro.split('\n').map((paragraph, index) => (
-                                    <p key={index} style={{ whiteSpace: "pre-line" }} dangerouslySetInnerHTML={{ __html: paragraph }}></p>
-                                ))}
+                                {blog.intro
+                                    .split('\n')
+                                    .map((paragraph, index) => (
+                                        <p
+                                            key={index}
+                                            style={{ whiteSpace: 'pre-line' }}
+                                            dangerouslySetInnerHTML={{
+                                                __html:
+                                                    paragraph
+                                                        .split(' ')
+                                                        .slice(0, 20)
+                                                        .join(' ') +
+                                                    (paragraph.split(' ').length > 20 ? '...' : ''),
+                                            }}
+                                        ></p>
+                                    ))}
                             </div>
 
                             <Link to={`/blog/${blog._id}`}> <button className='kretrhereading'>
@@ -72,7 +84,7 @@ const Alllikedblogs = () => {
                 </div>
 
             </div>
-         {/* <Footer /> */}
+            {/* <Footer /> */}
         </div>
     )
 }

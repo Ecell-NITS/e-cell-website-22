@@ -138,7 +138,7 @@ const Blog = () => {
                       <div key={blog._id} className='indicardblog'>
                         {/* <h1>id: {blog._id}</h1> */}
                         <div className="imgholdercontblog">
-                          <img src={blog.topicpic} alt="" />
+                          <img src={blog.topicpic} alt="" id='hoverscaledown' />
                         </div>
                         <h1 className='titlehainlogindi'>{blog.title}</h1>
                         <div className="whowrittenblog">
@@ -151,17 +151,29 @@ const Blog = () => {
                         </div>
 
                         <div className="briefintrohldman">
-                          {/* <p>{blog.intro}</p> */}
-                          {blog.intro.split('\n').map((paragraph, index) => (
-                                    <p key={index} style={{ whiteSpace: "pre-line" }} dangerouslySetInnerHTML={{ __html: paragraph }}></p>
-                                ))}
+                          {blog.intro
+                            .split('\n')
+                            .map((paragraph, index) => (
+                              <p
+                                key={index}
+                                style={{ whiteSpace: 'pre-line' }}
+                                dangerouslySetInnerHTML={{
+                                  __html:
+                                    paragraph
+                                      .split(' ')
+                                      .slice(0, 20)
+                                      .join(' ') +
+                                    (paragraph.split(' ').length > 20 ? '...' : ''),
+                                }}
+                              ></p>
+                            ))}
                         </div>
 
                         <div id='btnholderslikeread'>
                           <button className='likekarobhaiblog' onClick={() => handleLikeKarp(blog._id)}>
-                            <BiLike  /> {blog.likes ? blog.likes.length : 0}
+                            <BiLike /> {blog.likes ? blog.likes.length : 0}
                           </button>
-                         
+
                           <Link to={`/blog/${blog._id}`}> <button className='kretrhereading'>
                             Read more
                           </button></Link>

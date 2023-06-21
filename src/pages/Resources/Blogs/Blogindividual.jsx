@@ -19,6 +19,9 @@ const Blogindividual = () => {
     const [intro, setIntro] = useState("")
     const navigate = useNavigate();
     const location = useLocation();
+
+    const [writername, setWritername] = useState("")
+    const [timestamp,setTimestamp] = useState("")
     useEffect(() => {
         const fetchBlog = async () => {
             try {
@@ -31,6 +34,8 @@ const Blogindividual = () => {
                 setWriterintro(response.data.writerintro);
                 setTopicpic(response.data.topicpic);
                 setIntro(response.data.intro);
+                setWritername(response.data.writernmae)
+                setTimestamp(response.data.timestamp)
             } catch (error) {
                 console.log('Error fetching blog:', error);
             }
@@ -38,6 +43,8 @@ const Blogindividual = () => {
 
         fetchBlog();
     }, [_id]);
+
+ 
 
     if (!content) {
         return <div>Loading Blog content from the server...</div>;
@@ -79,7 +86,7 @@ const Blogindividual = () => {
             <div className='indiviualblog'>
                 <h1>{title}</h1>
                 {/* <p>{intro}</p> */}
-
+                <h6 className='dateandtimeofpost'>Posted on {timestamp} by <span id='writerimpspan'>{writername} </span></h6>
                 {intro.split('\n').map((paragraph, index) => (
                     <p key={index} style={{ whiteSpace: "pre-line" }} dangerouslySetInnerHTML={{ __html: paragraph }}></p>
                 ))}
@@ -94,6 +101,7 @@ const Blogindividual = () => {
                     </div>
 
                     <div className="writerintro">
+                        <h1 id='nameinwriterindiblog'>{writername}</h1>
                         {writerintro.split('\n').map((writerintro, index) => (
                             <p key={index} style={{ whiteSpace: "pre-line" }}>{writerintro}</p>
                         ))}
