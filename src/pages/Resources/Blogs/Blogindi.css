@@ -22,7 +22,7 @@
     background-color: rgba(232, 246, 250, 1);
     border: 1px solid rgba(102, 108, 116, 0.4);
     margin-top: 5vw;
-    margin-bottom: 10vw;
+    margin-bottom: 2.5vw;
     padding-left: 3.5vw;
     padding-top: 1.5vw;
     padding-bottom: 1.5vw;
@@ -65,6 +65,31 @@ height: 100%;
     user-select: none;
 }
 
+#btnbacktoresoucres{
+    background-color: white;
+    font-size: 1.5vw;
+    border: none;
+    outline: none;
+    color: rgba(28, 55, 75, 1);
+}
+
+.bottomindiblogftr{
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 5vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.smedisharetoicons button{
+    background-color: white;
+    border: none;
+    outline:none;
+    margin: 0 .5vw;
+    font-size: 2vw;
+    color: rgba(28, 55, 75, 1);
+}
+
 @media (max-width:999px){
     .indiviualblog img {
         width: 90% !important;
@@ -85,15 +110,23 @@ height: 100%;
         /* margin-bottom: 5vw; */
     }
 
-   
+    #btnbacktoresoucres{
+        font-size: 4vw;
+    }
 
-    /* .imgholderwriter{
-        width: 25vw;
-        height: 25vw;
-    } */
+    .bottomindiblogftr{
+        width: 90%;
+        margin-bottom: 15vw;
+    }
+
+    .smedisharetoicons button{
+        margin: 0 1vw;
+        font-size: 5vw;
+    }
 
     .writerdetails{
         flex-direction: column;
+        margin-bottom: 12.5vw;
     }
 
     .imgholderwriter{
