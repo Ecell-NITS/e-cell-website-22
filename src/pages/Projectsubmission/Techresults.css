@@ -1,15 +1,45 @@
+.filteredteamdata{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.filteredteamdata button{
+    width: 20%;
+    background-color: white;
+    border: none;
+    outline: none;
+    color: black;
+    font-size: 2vw;
+    margin: 1vw 0;
+}
+
+.anotherpropapp{
+    margin-top: 10vw !important;
+}
+
 @media (max-width:660px){
     #bigonsmallscreen{
         width: 95%;
         margin: 0 auto;
     }
 
-    #ulforsmallwidth{
-        margin-left: 0;
-        padding-left: 0;
-    }
-
     #ulforsmallwidth li h1{
         font-size: 6vw;
+    }
+
+    .filteredteamdata button{
+        width: 20%;
+        background-color: white;
+        border: none;
+        outline: none;
+        color: black;
+        font-size: 4vw;
+        margin: 1vw 0;
+    }
+
+    #ulforsmallwidth{
+        margin-left: 0 !important;
+        padding-left: 0 !important;
     }
 }

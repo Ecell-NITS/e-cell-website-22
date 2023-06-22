@@ -15,7 +15,41 @@ const Recuitmentdetails = () => {
     const [successMessage, setSuccessMessage] = useState("")
     const [nologin, setNologin] = useState(false)
     const [loggingin, setLoggingin] = useState(false)
+    const [selectedTeam, setSelectedTeam] = useState("");
 
+    const handleUnfilteredTeam = () => {
+        setSelectedTeam("")
+    }
+
+    const handleContentTeam = () => {
+        setSelectedTeam('Content');
+    };
+
+    const handlePublicityTeam = () => {
+        setSelectedTeam('Publicity');
+    };
+
+    const handleMarketingTeam = () => {
+        setSelectedTeam("Marketing")
+    }
+
+    const handleDesignTeam = () => {
+        setSelectedTeam("Design")
+    }
+
+    const handleEventManagementTeam = () => {
+        setSelectedTeam("Event Management")
+    }
+
+    const handleCurationTeam = () => {
+        setSelectedTeam("Curation")
+    }
+
+    const handleCollaborationOutreachTeam = () => {
+        setSelectedTeam("Collaboration & Outreach")
+    }
+
+    const filteredResults = selectedTeam === "" ? results : results.filter(result => result.team && result.team.includes(selectedTeam));
 
     const isFormFilled = () => {
         return (
@@ -111,9 +145,31 @@ const Recuitmentdetails = () => {
                     {results.length > 0 && (
                         <div>
                             <h2>Results</h2>
-                            <ul id='ulforsmallwidth'>
-                                {results.map((result, index) => (
+
+                            <div className="filteredteamdata">
+                                <button onClick={handleUnfilteredTeam} style={{ color: selectedTeam === '' ? 'red' : 'initial' }}>All Applicants</button>
+
+                                <button onClick={handleMarketingTeam} style={{ color: selectedTeam === 'Marketing' ? 'red' : 'initial' }}>Marketing Team</button>
+
+                                <button onClick={handleContentTeam} style={{ color: selectedTeam === 'Content' ? 'red' : 'initial' }}>Content Team </button>
+
+                                <button onClick={handlePublicityTeam} style={{ color: selectedTeam === 'Publicity' ? 'red' : 'initial' }}>Publicity Team </button>
+
+                                <button onClick={handleDesignTeam} style={{ color: selectedTeam === 'Design' ? 'red' : 'initial' }}>Design Team </button>
+
+                                <button onClick={handleEventManagementTeam} style={{ color: selectedTeam === 'Event Management' ? 'red' : 'initial' }}>Event Management</button>
+
+                                <button onClick={handleCurationTeam} style={{ color: selectedTeam === 'Curation' ? 'red' : 'initial' }}>Curation Team </button>
+
+                                <button onClick={handleCollaborationOutreachTeam} style={{ color: selectedTeam === 'Collaboration & Outreach' ? 'red' : 'initial' }}>Collaboration & Outreach </button>
+
+                            </div>
+
+
+                            <ul id='ulforsmallwidth' className='anotherpropapp'>
+                                {filteredResults.map((result, index) => (
                                     <>
+
                                         <li key={index}>
 
 
