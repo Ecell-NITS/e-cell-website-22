@@ -313,7 +313,7 @@ const Recruiting = () => {
                 <h2>Are you passionate about the entrepreneurial world and are looking for a platform to learn as well as showcase your knowledge? Look no further. The Entrepreneurship Cell (E-Cell) of NIT Silchar is thrilled to announce recruitment of talented individuals for the academic year 2023-2024.<br /><br />At E-Cell, we believe in empowering aspiring individuals to become exceptional communicators and influencers in the entrepreneurial ecosystem. As a part of our team, you will have the opportunity to engage with a diverse audience, promote entrepreneurship, and contribute to our vision of fostering innovation and creativity. </h2>
             </div>
 
-            <iframe title='E-Cell Recruitment flyer' id='embedflyerad' src="https://drive.google.com/file/d/1DGRnH-xeZwb3mDEaEplTwURUtOabHkdk/preview"
+            <iframe title='E-Cell Recruitment flyer' id='embedflyerad' src="https://drive.google.com/file/d/19YB9kfH2zjien5bIHzwV4qbkcNXrhtdM/preview"
                 ></iframe>
 
             <div className="importantinstructionsrecuit">
@@ -524,7 +524,7 @@ const Recruiting = () => {
                         setWhyecell(event.target.value);
                     }}></textarea>
 
-                <h3 className='common-form-recuit'>Prove you're not an robot<span className='reqdinput'>*</span></h3>
+                <h3 className='common-form-recuit'>Prove you're not a robot<span className='reqdinput'>*</span></h3>
                 <span className='robottxt'>{firstNumber} + {secondNumber} = </span>
                 <span>
                     <input
