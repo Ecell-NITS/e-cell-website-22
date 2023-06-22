@@ -165,11 +165,13 @@ const Recuitmentdetails = () => {
 
                             </div>
 
+                    
 
                             <ul id='ulforsmallwidth' className='anotherpropapp'>
+                            <h1 style={{color:"green"}}>Total applicants: {filteredResults.length}</h1><br/>
                                 {filteredResults.map((result, index) => (
                                     <>
-
+                                   
                                         <li key={index}>
 
 
