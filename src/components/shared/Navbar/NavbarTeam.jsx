@@ -76,6 +76,7 @@ const handleGoToDashboard = ()=>{
         {/* <li><a href="https://srijan-nits.in/" rel="noreferrer" target="_blank">SRIJAN</a></li> */}
         <li><NavLink to="/team">OUR TEAM</NavLink></li>
         <li><NavLink to="/gallery">GALLERY</NavLink></li>
+        <li><NavLink to="/recruiting">RECRUITING</NavLink></li>
         {isLoggedIn ? (
           <li><div className='imgactivehlder' onClick={handleGoToDashboard}>
             <img  className='profileactivesignin' src={profilePicture} alt="Profile Pic" />
