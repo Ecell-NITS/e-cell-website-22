@@ -32,6 +32,12 @@ const Allprovblogs = () => {
                 console.error('Failed to fetch blogs', error);
             });
     }, [navigate])
+
+    const handleEditBlog = () => {
+            navigate("")
+    }
+
+
     return (
         <div>
             {/* <NavbarTeam /> */}
@@ -74,9 +80,13 @@ const Allprovblogs = () => {
                                     ))}
                             </div>
 
-                            <Link to={`/blog/${blog._id}`}> <button className='kretrhereading'>
-                                Read more
-                            </button></Link>
+                            <div id="flextwobtnonedit">
+                                <Link to={`/blog/${blog._id}`}> <button className='kretrhereading'>
+                                    Read more
+                                </button></Link>
+
+                                <button className='kretrhereading' onClick={handleEditBlog}>Edit blog</button>
+                            </div>
                         </div>
                     ))}
                 </div>
