@@ -163,7 +163,7 @@ const Comments = () => {
 
 
                 <div className="btnscommentandcancel">
-                    <button id='nhilikhnabhaicomment' onClick={handleCancel} disabled={!isCommentFilled()} style={{ cursor: !isCommentFilled() ? "not-allowed" : "pointer" }}>Cancel</button>
+                    <button id='nhilikhnabhaicomment' onClick={handleCancel} disabled={!isCommentFilled() || disable} style={{ cursor: !isCommentFilled() || disable ? "not-allowed" : "pointer" }}>Cancel</button>
 
                     <button id='commentkardebhai' onClick={handleComment} disabled={!isCommentFilled() || disable} style={{ cursor: !isCommentFilled() || disable ? "not-allowed" : "pointer", opacity: !isCommentFilled() || disable ? 0.5 : 1 }}>{submit ? "Submitting...":"Comment"}</button>
                 </div>
