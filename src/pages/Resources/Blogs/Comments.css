@@ -29,6 +29,7 @@
     margin-top: 1.5vw;
     padding: 1vw;
     font-size: 1.6vw;
+    outline: none;
 }
 
 .comment-main textarea:focus{
@@ -87,6 +88,7 @@
     height: 100%;
     border-radius: 50%;
     object-fit: cover;
+    pointer-events: none;
 }
 
 .name-of-author-created-comnt{
@@ -114,6 +116,7 @@
     height: 100%;
     border-radius: 50%;
     object-fit: cover !important;
+    pointer-events: none;
 }
 
 .inctructionhbhaipadhlo{
