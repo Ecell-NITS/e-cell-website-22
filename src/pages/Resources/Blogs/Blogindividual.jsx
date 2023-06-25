@@ -9,6 +9,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import { IoIosArrowBack } from 'react-icons/io'
 import { BsTwitter, BsFacebook, BsLinkedin } from 'react-icons/bs'
 import { AiFillRedditCircle } from 'react-icons/ai'
+import Comments from './Comments';
 const Blogindividual = () => {
     const { _id } = useParams();
     const [content, setContent] = useState('');
@@ -118,6 +119,7 @@ const Blogindividual = () => {
                         <button onClick={handleShareToLinkedin}><BsLinkedin /></button>
                     </div>
                 </div>
+                <Comments />
             </div>
             <Footer />
         </>

@@ -1,0 +1,216 @@
+.comment-main {
+  min-height: 20vw;
+  border-radius: 20px;
+  border: 1px solid rgba(102, 108, 116, 0.4);
+  background: #f5f5f5;
+  margin-bottom: 2.5vw;
+  padding: 1.5vw;
+  padding-bottom: 2.5vw !important;
+}
+
+.photoandnamediv{
+    display: flex;
+    align-items: center !important;
+}
+
+.name-holder-loggedin{
+    margin-left: 1vw;
+}
+
+.classofnameloggedin{
+    font-size: 1.5vw;
+    color: #505050;
+}
+
+.comment-main textarea{
+    width: 100% !important;
+    border: none;
+    background: #F5F5F5;
+    margin-top: 1.5vw;
+    padding: 1vw;
+    font-size: 1.6vw;
+    outline: none;
+}
+
+.comment-main textarea:focus{
+    border: none !important;
+}
+
+.place-ka-holder-commnt:active{
+    border: 2px solid #f5f5f5 !important;
+}
+
+.btnscommentandcancel{
+    display: flex;
+    justify-content: flex-end;
+    margin: 1.5vw 0;
+}
+
+#commentkardebhai{
+    border-radius: 20px;
+    background-color:  #3E618E;
+    color: #FFF;
+    padding: .25vw 1.5vw;
+    font-size: 1.5vw;
+    border: none;
+    outline: none;
+}
+
+#nhilikhnabhaicomment{
+    color:  #505050;
+    background: #f5f5f5;
+    font-size: 1.5vw;
+    border: none;
+    outline: none;
+    font-weight: 600;
+    margin-right: 3.5vw;
+}
+
+.total-comments-innutshell{
+    color: #595959;
+    font-size: 2vw;
+    font-weight: 600;
+}
+
+.firsthoridivforcmt{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5vw;
+}
+
+#img-of-comt-author{
+    width: 3vw;
+    height: 3vw;
+}
+
+#img-of-comt-author img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+.name-of-author-created-comnt{
+    margin-left: 2vw;
+    color: #505050;
+    font-size: 2vw;
+}
+
+.message-by-author-in-comnt p{
+    font-size: 1.5vw;
+    color: #606060;
+}
+
+#indi-comnt-putin{
+    margin: 3vw 0;
+}
+
+.imgactivehlder-mop{
+    width: 5vw;
+    height: 5vw;
+}
+
+.imgactivehlder-mop img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover !important;
+    pointer-events: none;
+}
+
+.inctructionhbhaipadhlo{
+    text-align: center !important;
+    margin-bottom: 5vw;
+}
+
+#strict-instruction{
+    font-size: 1.6vw;
+    color: red;
+}
+
+@media (max-width:660px){
+    .comment-main {
+        min-height: 20vw;
+        margin-bottom: 10vw;
+        padding:3vw;
+      }
+
+    .imgactivehlder-mop{
+        width: 10vw;
+        height: 10vw;
+    }
+
+    .imgactivehlder-mop img{
+        width: 100% !important;
+        height: 100% !important;
+        border-radius: 50%;
+
+    }
+
+    .classofnameloggedin{
+        font-size: 3vw;
+        color: #505050;
+    }
+
+    .name-holder-loggedin{
+        margin-left: 4vw;
+    }
+
+    .classofnameloggedin{
+        font-size: 3.5vw;
+    }
+
+    .comment-main textarea{
+        margin-top: 3vw;
+        padding: 2vw;
+        font-size: 3.25vw;
+    }
+
+    #commentkardebhai{
+        padding: 1.5vw 5vw;
+        font-size: 3.2vw;
+    }
+
+    #nhilikhnabhaicomment{
+        font-size: 3.2vw;
+        margin-right: 7vw;
+    }
+
+    .total-comments-innutshell{
+        font-size: 4vw;
+    }
+
+    .firsthoridivforcmt{
+        margin-bottom: 3vw;
+    }
+
+    #img-of-comt-author{
+        width: 7vw;
+        height: 7vw;
+    }
+    
+    #img-of-comt-author img{
+        width: 100% !important;
+        height: 100% !important;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .name-of-author-created-comnt{
+        margin-left: 4vw; 
+        font-size: 4vw;
+    }
+
+    .message-by-author-in-comnt p{
+        font-size: 3vw;
+    }
+
+    #indi-comnt-putin{
+        margin: 8vw 0;
+    }
+
+    #strict-instruction{
+        font-size: 3.2vw;
+    }
+}
