@@ -15,7 +15,7 @@ const Comments = () => {
     const [instruction, setInstruction] = useState(true)
     const [commentslist, setCommentslist] = useState([]);
     const [disable, setDisable] = useState(false)
-    const [submit,setSubmit] = useState(false)
+    const [submit, setSubmit] = useState(false)
     const currentURL = decodeURIComponent(location.pathname);
     const postId = currentURL.split('/blog/')[1];
     // console.log(postId);
@@ -65,6 +65,25 @@ const Comments = () => {
         setDisable(true)
         setSubmit(true)
         try {
+            const response = await axios.get(process.env.REACT_APP_ACCEPTEDBLOGS_RENDER);
+            const publishedBlogIds = response.data.map(blog => blog._id);
+            // console.log(publishedBlogIds)
+            if (!publishedBlogIds.includes(postId)) {
+                alert("Blog needs to be published to add comment.");
+                return
+            }
+            setComment('');
+        } catch (error) {
+            console.log('Error fetching blogs:', error);
+        } finally {
+            setDisable(false)
+            setSubmit(false)
+            setComment('');
+        }
+
+        setDisable(true)
+        setSubmit(true)
+        try {
             const response = await axios.post(
                 // `http://localhost:2226/api/comment/${postId}`,
                 `${process.env.REACT_APP_APIMAIN}/api/comment/${postId}`,
@@ -82,7 +101,7 @@ const Comments = () => {
             console.error('Error adding comment:', error);
             alert('Something went wrong');
             setComment('');
-        }finally{
+        } finally {
             setDisable(false)
             setSubmit(false)
         }
@@ -132,6 +151,7 @@ const Comments = () => {
         }
     }, [token]);
 
+
     return (
         <>
             <div className="comment-main">
@@ -165,7 +185,7 @@ const Comments = () => {
                 <div className="btnscommentandcancel">
                     <button id='nhilikhnabhaicomment' onClick={handleCancel} disabled={!isCommentFilled() || disable} style={{ cursor: !isCommentFilled() || disable ? "not-allowed" : "pointer" }}>Cancel</button>
 
-                    <button id='commentkardebhai' onClick={handleComment} disabled={!isCommentFilled() || disable} style={{ cursor: !isCommentFilled() || disable ? "not-allowed" : "pointer", opacity: !isCommentFilled() || disable ? 0.5 : 1 }}>{submit ? "Submitting...":"Comment"}</button>
+                    <button id='commentkardebhai' onClick={handleComment} disabled={!isCommentFilled() || disable} style={{ cursor: !isCommentFilled() || disable ? "not-allowed" : "pointer", opacity: !isCommentFilled() || disable ? 0.5 : 1 }}>{submit ? "Submitting..." : "Comment"}</button>
                 </div>
 
 

@@ -82,7 +82,7 @@ const Blogindividual = () => {
         <>
             <NavbarTeam />
             <Helmet>
-                <title>{title}</title>
+                <title>{title} | The E-Cell NITS Blog</title>
             </Helmet>
             <div className='indiviualblog'>
                 <h1>{title}</h1>
