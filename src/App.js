@@ -70,12 +70,12 @@ function App() {
               element={<Eventsred />}
               key="route-allevents-screen"
             />
-            <Route
+            {/* <Route
               exact
               path="/recruiting"
               element={<Recruiting />}
               key="route-recruitment-screen"
-            />
+            /> */}
             <Route
               exact
               path="/recruitusers"
