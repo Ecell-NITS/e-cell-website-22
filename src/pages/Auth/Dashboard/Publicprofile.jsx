@@ -80,7 +80,8 @@ const Publicprofile = () => {
     useEffect(() => {
         const fetchPublicProfile = async () => {
             try {
-                const response = await axios.get(`http://localhost:2226/publicprofile/${writeremaill}`);
+                // const response = await axios.get(`http://localhost:2226/publicprofile/${writeremaill}`);
+                const response = await axios.get(`${process.env.REACT_APP_APIMAIN}/publicprofile/${writeremaill}`);
                 // console.log(response.data)
                 setName(response.data.name)
                 setBio(response.data.bio)
