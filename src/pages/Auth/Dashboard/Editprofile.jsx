@@ -10,6 +10,10 @@ const EditProfile = () => {
   const [name, setName] = useState('');
   const [bio, setBio] = useState("")
   const [userimg, setUserimg] = useState("")
+  const [facebook, setFacebook] = useState("")
+  const [instagram, setInstagram] = useState("")
+  const [github, setGithub] = useState("")
+  const [linkedin, setLinkedin] = useState("")
   const [error, setError] = useState('');
   const [message, setMessage] = useState("")
   const [saving, setSaving] = useState(false)
@@ -36,10 +40,26 @@ const EditProfile = () => {
     setUserimg(base64);
   };
 
+  const handleFacebookChange = (event) => {
+    setFacebook(event.target.value)
+  }
+
+  const handleInstagramchange = (event) => {
+    setInstagram(event.target.value)
+  }
+
+  const handleGithubchange = (event) => {
+    setGithub(event.target.value)
+  }
+
+  const handleLinkedinchange = (event) => {
+    setLinkedin(event.target.value)
+  }
+
 
   const isEditProfFilled = () => {
     return (
-      name !== "" || bio !== "" || userimg !== ""
+      name !== "" || bio !== "" || userimg !== "" || facebook !== "" || github !== "" || instagram !== "" || linkedin !== ""
     );
   };
 
@@ -59,8 +79,8 @@ const EditProfile = () => {
     setSaving(true)
     setDisableedit(true)
     axios
-      // .put('http://localhost:2226/editprofile', { name, bio, userimg }, {
-      .put(process.env.REACT_APP_EDITPROFILE, { name, bio, userimg }, {
+      // .put('http://localhost:2226/editprofile', { name, bio, userimg, facebook, github, instagram, linkedin }, {
+      .put(process.env.REACT_APP_EDITPROFILE, { name, bio, userimg, facebook, github, instagram, linkedin }, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -73,6 +93,10 @@ const EditProfile = () => {
         setName('');
         setBio("")
         setUserimg("")
+        setFacebook("")
+        setGithub("")
+        setInstagram("")
+        setLinkedin("")
         setSaving(false)
         setDisableedit(false)
       })
@@ -124,7 +148,7 @@ const EditProfile = () => {
               <FileBase64
                 multiple={false}
                 onDone={({ base64, file }) => {
-                  if ((file.type === 'image/png' || file.type === 'image/jpeg' || file.type === 'image/jpg' || file.type === 'image/webp' || file.type === 'image/avif' ) &&
+                  if ((file.type === 'image/png' || file.type === 'image/jpeg' || file.type === 'image/jpg' || file.type === 'image/webp' || file.type === 'image/avif') &&
                     file.size <= 300 * 1024) {
                     handleImgChange(base64);
                   } else {
@@ -135,6 +159,46 @@ const EditProfile = () => {
                 }}
               />
 
+            </div>
+
+            <div className="inputdicdignup">
+              <h3>Facebook</h3>
+              <input
+                type="text"
+                placeholder="Your Facebook profile link"
+                value={facebook}
+                onChange={handleFacebookChange}
+              />
+            </div>
+
+            <div className="inputdicdignup">
+              <h3>Instagram</h3>
+              <input
+                type="text"
+                placeholder="Your Instagram profile link"
+                value={instagram}
+                onChange={handleInstagramchange}
+              />
+            </div>
+
+            <div className="inputdicdignup">
+              <h3>Github</h3>
+              <input
+                type="text"
+                placeholder="Your Github profile link"
+                value={github}
+                onChange={handleGithubchange}
+              />
+            </div>
+
+            <div className="inputdicdignup">
+              <h3>Linkedin</h3>
+              <input
+                type="text"
+                placeholder="Your Linkedin profile link"
+                value={linkedin}
+                onChange={handleLinkedinchange}
+              />
             </div>
 
             <button type="submit" className='btnsubmittodb' disabled={disableedit} style={{ opacity: disableedit ? 0.5 : 1, cursor: disableedit ? "not-allowed" : "pointer" }}>
