@@ -27,6 +27,7 @@ import Alllikedblogs from "./pages/Auth/Dashboard/Alllikedblogs";
 import Techsubmission from "./pages/Projectsubmission/Techsubmission";
 import Techresults from "./pages/Projectsubmission/Techresults";
 import Editblogform from "./pages/Auth/Dashboard/EditBlog/Editblogform";
+import Publicprofile from "./pages/Auth/Dashboard/Publicprofile";
 function App() {
   return (
     <>
@@ -181,6 +182,13 @@ function App() {
               path="/editblog/:blogId"
               element={<Editblogform />}
               key="route-EditBlog-screen"
+            />
+
+            <Route
+              exact
+              path="/user/:writeremaill"
+              element={<Publicprofile />}
+              key="route-PublicProfile-screen"
             />
 
             <Route path="*" element={<NotFound />} />

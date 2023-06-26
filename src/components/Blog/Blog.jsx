@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { BiLike } from 'react-icons/bi'
 // import { AiTwotoneLike } from 'react-icons/ai'
+// import {writeremaill} from '../../pages/Resources/Blogs/Blogindividual'
 import './Blog.css'
 const Blog = () => {
   const [blogscreated, setBlogscreated] = useState([]);
@@ -12,6 +13,8 @@ const Blog = () => {
   const [activeTagFilter, setActiveTagFilter] = useState('');
   const [isFetching, setIsFetching] = useState(true);
   // const [likedBlogs, setLikedBlogs] = useState([]);
+  // const [writeremaill, setWriteremaill] = useState("")
+
   const navigate = useNavigate()
 
   const handleLikeKarp = async (blogId) => {
@@ -65,7 +68,9 @@ const Blog = () => {
             return new Date(a.timestamp) - new Date(b.timestamp);
           }
         });
-
+        // setWriteremaill(response.data.writeremail)
+        // console.log(`writeremaill: ${writeremaill}`)
+        // console.log(response.data)
         setSortingMessage('');
         setBlogscreated(sortedBlogs);
       } catch (error) {
@@ -93,6 +98,11 @@ const Blog = () => {
   const filteredBlogs = activeTagFilter
     ? blogscreated.filter((blog) => blog.tag.toLowerCase().includes(activeTagFilter.toLowerCase()))
     : blogscreated;
+
+  //   console.log(`writeremaill:${writeremaill}`)
+  // const handleGoToPublicProfile = () => {
+  //   navigate(`/user/${writeremaill}`)
+  // }
 
   return (
     <>
@@ -142,6 +152,7 @@ const Blog = () => {
                         </div>
                         <h1 className='titlehainlogindi'>{blog.title}</h1>
                         <div className="whowrittenblog">
+                          {/* <h2 onClick={handleGoToPublicProfile}>{blog.writernmae}</h2> */}
                           <h2>{blog.writernmae}</h2>
                         </div>
 

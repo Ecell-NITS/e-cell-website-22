@@ -151,6 +151,9 @@ const Comments = () => {
         }
     }, [token]);
 
+    const handleGoToDashbaord = () => {
+        navigate("/dashboard")
+    }
 
     return (
         <>
@@ -170,9 +173,9 @@ const Comments = () => {
 
                     <div className="name-holder-loggedin">
                         {isLoggedIn ? (
-                            <h2 className='classofnameloggedin'>{name}</h2>
+                            <h2 onClick={handleGoToDashbaord} className='classofnameloggedin'>{name}</h2>
                         ) : (
-                            <h2 className='classofnameloggedin'>Author</h2>
+                            <h2 onClick={handleGoToDashbaord} className='classofnameloggedin'>Author</h2>
                         )}
                     </div>
                 </div>
