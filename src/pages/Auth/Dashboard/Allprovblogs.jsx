@@ -3,11 +3,11 @@ import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import '../../../components/Blog/Blog.css'
-// import NavbarTeam from '../../../components/shared/Navbar/NavbarTeam';
-// import Footer from '../../../components/shared/Footer/Footer';
+
 const Allprovblogs = () => {
     const navigate = useNavigate()
     const [blogs, setBlogs] = useState([]);
+    const [selectedBlogId, setSelectedBlogId] = useState(null);
     useEffect(() => {
         // document.title = "My all blogs | Dashboard"
         const token = localStorage.getItem('token');
@@ -33,11 +33,13 @@ const Allprovblogs = () => {
             });
     }, [navigate])
 
-    const handleEditBlog = () => {
-            navigate("")
-    }
 
 
+    const handleEditBlog = (blogId) => {
+        setSelectedBlogId(blogId);
+        navigate(`/editblog/${blogId}`);
+      };
+    
     return (
         <div>
             {/* <NavbarTeam /> */}
@@ -85,7 +87,9 @@ const Allprovblogs = () => {
                                     Read more
                                 </button></Link>
 
-                                <button className='kretrhereading' onClick={handleEditBlog}>Edit blog</button>
+                                <button className='kretrhereading' 
+                                onClick={() => handleEditBlog(blog._id)}
+                                >Edit blog</button>
                             </div>
                         </div>
                     ))}

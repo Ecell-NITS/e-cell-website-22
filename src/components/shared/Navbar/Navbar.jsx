@@ -38,7 +38,7 @@ const Navbar = () => {
           },
         });
         setProfilePicture(response.data.userimg);
-        console.log(response.data.userimg)
+        // console.log(response.data.userimg)
         setIsLoggedIn(true);
       } catch (error) {
         console.error('Error fetching user profile:', error);

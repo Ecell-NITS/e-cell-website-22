@@ -7,10 +7,12 @@ import JoditEditor from "jodit-react";
 import FileBase64 from 'react-file-base64';
 import NavbarTeam from '../../../../components/shared/Navbar/NavbarTeam';
 import Footer from '../../../../components/shared/Footer/Footer';
+import { useLocation } from 'react-router-dom';
 const Editblogform = () => {
     const editor = useRef(null);
     const editor0 = useRef(null);
     const navigate = useNavigate()
+    const location = useLocation()
     const [title, setTitle] = useState("")
     const [intro, setIntro] = useState("")
     const [tag, setTag] = useState("")
@@ -23,6 +25,10 @@ const Editblogform = () => {
     const [writeremail, setWriteremail] = useState("")
     const [submitting, setSubmitting] = useState(false);
     const [disablecreate, setDisablecreate] = useState(false)
+    const token = localStorage.getItem('token');
+    const currentURL = decodeURIComponent(location.pathname);
+    const blogId = currentURL.split('/editblog/')[1];
+    // console.log(blogId);
 
     const handleImgChange = (base64) => {
         setTopicpic(base64);
@@ -35,7 +41,6 @@ const Editblogform = () => {
         if (!token) {
             navigate('/login');
         } else {
-            // Fetch user data and populate the form fields
             axios
                 .get(process.env.REACT_APP_FETCHPROFILE, {
                     // .get('http://localhost:2226/fetchprofile', {
@@ -52,19 +57,21 @@ const Editblogform = () => {
                 })
                 .catch((error) => {
                     console.error('Failed to fetch user data', error);
-                    // Handle error
+                    alert('Failed to fetch user data', error)
                 });
         }
     }, [navigate]);
-    const iscreateblogempty = () => {
-        return title !== "" && intro !== "" && tag !== "" && writeremail !== "" && content !== "" && writernmae !== "" && writerintro !== "" && writerpic !== "" && topicpic !== "";
+
+    const isEditblogempty = () => {
+        return title !== "" || intro !== "" || tag !== "" || content !== "" || topicpic !== "";
     };
+
 
     /* button onclick function */
     const submitform = async (event) => {
         event.preventDefault();
-        if (!iscreateblogempty()) {
-            alert("Please fill all the required blog details");
+        if (!isEditblogempty()) {
+            alert("Please edit atleast anyone field.");
             return;
         }
 
@@ -74,15 +81,44 @@ const Editblogform = () => {
         }
 
         const timestamp = moment().tz("Asia/Kolkata").format();
+
+        setSubmitting(true);
+        setDisablecreate(true)
+        try {
+            const response = await axios.get(process.env.REACT_APP_ACCEPTEDBLOGS_RENDER);
+            const publishedBlogIds = response.data.map(blog => blog._id);
+            // console.log(publishedBlogIds)
+            if (publishedBlogIds.includes(blogId)) {
+                alert("Published blogs can't be edited.");
+                return
+            }
+        } catch (error) {
+            console.log('Error fetching blogs:', error);
+        } finally {
+            setSubmitting(false);
+            setDisablecreate(false)
+            setTitle("");
+            setIntro("");
+            setTag("");
+            setContent("");
+            setTopicpic("")
+        }
+
+
         setSubmitting(true);
         setDisablecreate(true)
         axios
-            // .post('http://localhost:2226/createblog', {
-            .post(process.env.REACT_APP_CREATEBLOG_RENDER, {
+            .put(`${process.env.REACT_APP_APIMAIN}/editblog/${blogId}`, {
+            // .put(`http://localhost:2226/editblog/${blogId}`, {
+                // .put(process.env.REACT_APP_CREATEBLOG_RENDER, {
                 title,
                 tag,
                 intro,
                 content, writernmae, writerintro, writerpic, timestamp, topicpic, writeremail
+            }, {
+                headers: {
+                    Authorization: `Bearer ${token}`,
+                },
             })
             .then((response) => {
                 setTitle("");
@@ -96,11 +132,9 @@ const Editblogform = () => {
                 setWriteremail("")
                 setSubmitting(false);
                 setDisablecreate(false)
-                alert("Blog created but publish subject to verification");
+                alert("Blog edited successfully.");
             });
     }
-
-
 
     return (
         <div>
@@ -126,14 +160,14 @@ const Editblogform = () => {
                 <div className="firstboxvreateblog">
                     <h2 className='ttleinptcrteblog'>Brief Introduction</h2>
                     <h4 className='specificttle'>Write a brief introduction to your blog in about 40-50 words</h4>
-                  
+
                     <JoditEditor
                         ref={editor0}
                         value={intro}
                         onChange={(newIntro) => setIntro(newIntro)}
                         onBlur={(newIntro) => setIntro(newIntro)}
                         required
-                      
+
                     />
 
                 </div>
@@ -141,14 +175,14 @@ const Editblogform = () => {
                 <div className="firstboxvreateblog">
                     <h2 className='ttleinptcrteblog'>Content</h2>
                     <h4 className='specificttle'>Write about your topic</h4>
-                 
+
                     <JoditEditor
                         ref={editor}
                         value={content}
                         onBlur={(newContent) => setContent(newContent)}
                         onChange={(newContent) => setContent(newContent)}
                         required
-                      
+
                     />
 
                 </div>
@@ -173,7 +207,7 @@ const Editblogform = () => {
                 <div className="firstboxvreateblog">
                     <h2 className='ttleinptcrteblog'>Topic picture</h2>
                     <h4 className='specificttle'>Add a picture to your blog</h4>
-                
+
                     <h4 className='specificttle'>Only jpg, jpeg, png, webp, or avif file types of size less than 300KB are accepted</h4>
                     <FileBase64
                         multiple={false}
@@ -254,11 +288,11 @@ const Editblogform = () => {
                 </div>
 
                 <button onClick={submitform} className='kretrhereading' id='crteblogbtn0' disabled={disablecreate} style={{ opacity: disablecreate ? 0.5 : 1, cursor: disablecreate ? "not-allowed" : "pointer" }}>
-                    {submitting ? "Posting Blog" : "Post Blog"}{" "}
+                    {submitting ? "Editing Blog..." : "Edit Blog"}{" "}
                 </button>
             </div>
 
-          <Footer />
+            <Footer />
         </div>
     )
 }

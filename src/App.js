@@ -178,7 +178,7 @@ function App() {
 
             <Route
               exact
-              path="/editblog"
+              path="/editblog/:blogId"
               element={<Editblogform />}
               key="route-EditBlog-screen"
             />
