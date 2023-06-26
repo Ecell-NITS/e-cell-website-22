@@ -95,6 +95,7 @@ height: 100%;
     text-align: left;
     padding: 0 !important;
     padding-left: 3vw !important;
+    cursor: pointer;
 }
 
 .dateandtimeofpost{

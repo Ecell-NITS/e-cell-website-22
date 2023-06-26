@@ -10,6 +10,7 @@ import { IoIosArrowBack } from 'react-icons/io'
 import { BsTwitter, BsFacebook, BsLinkedin } from 'react-icons/bs'
 import { AiFillRedditCircle } from 'react-icons/ai'
 import Comments from './Comments';
+// import Blog from '../../../components/Blog/Blog';
 const Blogindividual = () => {
     const { _id } = useParams();
     const [content, setContent] = useState('');
@@ -22,7 +23,8 @@ const Blogindividual = () => {
     const location = useLocation();
 
     const [writername, setWritername] = useState("")
-    const [timestamp,setTimestamp] = useState("")
+    const [writeremaill, setWriteremaill] = useState("")
+    const [timestamp, setTimestamp] = useState("")
     useEffect(() => {
         const fetchBlog = async () => {
             try {
@@ -37,6 +39,7 @@ const Blogindividual = () => {
                 setIntro(response.data.intro);
                 setWritername(response.data.writernmae)
                 setTimestamp(response.data.timestamp)
+                setWriteremaill(response.data.writeremail)
             } catch (error) {
                 console.log('Error fetching blog:', error);
             }
@@ -45,7 +48,7 @@ const Blogindividual = () => {
         fetchBlog();
     }, [_id]);
 
- 
+
 
     if (!content) {
         return <div>Loading Blog content from the server...</div>;
@@ -78,6 +81,11 @@ const Blogindividual = () => {
         window.open(linkedinShareURL, '_blank');
     };
 
+
+    const handlePublicProfile = () => {
+        navigate(`/user/${writeremaill}`)
+    }
+
     return (
         <>
             <NavbarTeam />
@@ -102,7 +110,7 @@ const Blogindividual = () => {
                     </div>
 
                     <div className="writerintro">
-                        <h1 id='nameinwriterindiblog'>{writername}</h1>
+                        <h1 id='nameinwriterindiblog' onClick={handlePublicProfile}>{writername}</h1>
                         {writerintro.split('\n').map((writerintro, index) => (
                             <p key={index} style={{ whiteSpace: "pre-line" }}>{writerintro}</p>
                         ))}

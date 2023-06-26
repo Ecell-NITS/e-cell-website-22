@@ -18,6 +18,8 @@ const EditProfile = () => {
   const [message, setMessage] = useState("")
   const [saving, setSaving] = useState(false)
   const [disableedit, setDisableedit] = useState(false)
+  const [newpwd, setNewpwd] = useState("")
+  const [confirmnewpwd, setConfirmnewpwd] = useState("")
 
 
   useEffect(() => {
@@ -56,10 +58,17 @@ const EditProfile = () => {
     setLinkedin(event.target.value)
   }
 
+  const handleNewPassword = (event) => {
+    setNewpwd(event.target.value)
+  }
+
+  const handleConfirmNewPwd = (event) => {
+    setConfirmnewpwd(event.target.value)
+  }
 
   const isEditProfFilled = () => {
     return (
-      name !== "" || bio !== "" || userimg !== "" || facebook !== "" || github !== "" || instagram !== "" || linkedin !== ""
+      name !== "" || bio !== "" || userimg !== "" || facebook !== "" || github !== "" || instagram !== "" || linkedin !== "" || newpwd !== "" || confirmnewpwd !== ""
     );
   };
 
@@ -79,8 +88,8 @@ const EditProfile = () => {
     setSaving(true)
     setDisableedit(true)
     axios
-      // .put('http://localhost:2226/editprofile', { name, bio, userimg, facebook, github, instagram, linkedin }, {
-      .put(process.env.REACT_APP_EDITPROFILE, { name, bio, userimg, facebook, github, instagram, linkedin }, {
+      // .put('http://localhost:2226/editprofile', { name, bio, userimg, facebook, github, instagram, linkedin, newpwd, confirmnewpwd }, {
+      .put(process.env.REACT_APP_EDITPROFILE, { name, bio, userimg, facebook, github, instagram, linkedin, newpwd, confirmnewpwd }, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -97,14 +106,32 @@ const EditProfile = () => {
         setGithub("")
         setInstagram("")
         setLinkedin("")
+        setNewpwd("")
+        setConfirmnewpwd("")
         setSaving(false)
         setDisableedit(false)
       })
       .catch((error) => {
-        console.error('Failed to update name', error);
-        setError('Failed to update name. Please try again.');
+        if (error.response && error.response.data.error === "New Password should not be less than 8 characters") {
+          alert("New Password should not be less than 8 characters")
+        } else if (error.response && error.response.data.error === "Passwords must match") {
+          alert("Passwords must match")
+        }
+        else {
+          console.error('Failed to update Profile', error);
+          setError('Failed to update Profile. Please try again.');
+        }
         setSaving(false)
         setDisableedit(false)
+        setName('');
+        setBio("")
+        setUserimg("")
+        setFacebook("")
+        setGithub("")
+        setInstagram("")
+        setLinkedin("")
+        setNewpwd("")
+        setConfirmnewpwd("")
       });
 
   };
@@ -128,6 +155,28 @@ const EditProfile = () => {
                 onChange={handleNameChange}
               />
             </div>
+
+            <div className="inputdicdignup">
+              <h3>New password</h3>
+              <input
+                type="password"
+                placeholder="New password"
+                value={newpwd}
+                onChange={handleNewPassword}
+              />
+            </div>
+
+            <div className="inputdicdignup">
+              <h3>Confirm New password</h3>
+              <input
+                type="password"
+                placeholder="Confirm New password"
+                value={confirmnewpwd}
+                onChange={handleConfirmNewPwd}
+              />
+            </div>
+
+
             <div className="inputdicdignup">
               <h3>About</h3>
               {/* <input
