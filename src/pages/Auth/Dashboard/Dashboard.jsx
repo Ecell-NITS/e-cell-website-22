@@ -7,10 +7,24 @@ import './Dashboard.css'
 import Allblogspublished from './Allblogswritten';
 import Allprovblogs from './Allprovblogs';
 import Alllikedblogs from './Alllikedblogs';
+import { FaFacebookF } from 'react-icons/fa'
+import { AiFillInstagram, AiFillGithub, AiFillLinkedin } from 'react-icons/ai'
 const Dashboard = () => {
   const navigate = useNavigate();
   const [user, setUser] = useState({});
   const [editedbio, setEditedbio] = useState("")
+  const [editedfb, setEditedfb] = useState("")
+  const [editedig, setEditedig] = useState("")
+  const [editedGithub, setEditedGithub] = useState("")
+  const [editedLinkedin, setEditedLinkedin] = useState("")
+
+  const [hideLinkedin, setHideLinkedin] = useState(false)
+  const [hidefb, setHidefb] = useState(false)
+  const [hideig, setHideig] = useState(false)
+  const [hidegithub, setHidegithub] = useState(false)
+
+
+
   useEffect(() => {
     const token = localStorage.getItem('token');
     const config = {
@@ -19,13 +33,17 @@ const Dashboard = () => {
       },
     };
 
-    // axios.get('http://localhost:2226/dashboard', 
-    axios.get(process.env.REACT_APP_DASHBOARD,
+    // axios.get('http://localhost:2226/dashboard',
+      axios.get(process.env.REACT_APP_DASHBOARD,
       config)
       .then(response => {
-        const { name, email,  userimg } = response.data;
-        setUser({ name, email,  userimg });
+        const { name, email, userimg, facebook, github, linkedin, instagram } = response.data;
+        setUser({ name, email, userimg, facebook, github, linkedin, instagram });
         setEditedbio(response.data.bio)
+        setEditedfb(response.data.facebook)
+        setEditedig(response.data.instagram)
+        setEditedGithub(response.data.github)
+        setEditedLinkedin(response.data.linkedin)
       })
       .catch(error => {
         if (error.response.status === 401) {
@@ -65,7 +83,58 @@ const Dashboard = () => {
     navigate("/likedblogs")
   }
 
+  console.log(`${editedfb}`)
+
+  const handleGoFacebook = () => {
+    window.open(`${editedfb}`, '_blank');
+  }
+
+  const handleGoIg = () => {
+    window.open(`${editedig}`, '_blank')
+  }
+
+  const handleGoGithub = () => {
+    window.open(`${editedGithub}`, '_blank')
+  }
+
+  const handleGoLinkedin = () => {
+    window.open(`${editedLinkedin}`, '_blank')
+  }
+
   const [lebel12, setlebel12] = useState("publishedblogs");
+
+
+  useEffect(() => {
+    if (editedLinkedin === undefined) {
+      setHideLinkedin(true);
+    } else {
+      setHideLinkedin(false);
+    }
+  }, [editedLinkedin]);
+
+  useEffect(() => {
+    if (editedfb === undefined) {
+      setHidefb(true)
+    } else {
+      setHidefb(false)
+    }
+  }, [editedfb])
+
+  useEffect(() => {
+    if (editedig === undefined) {
+      setHideig(true)
+    } else {
+      setHideig(false)
+    }
+  }, [editedig])
+
+  useEffect(() => {
+    if (editedGithub === undefined) {
+      setHidegithub(true)
+    } else {
+      setHidegithub(false)
+    }
+  }, [editedGithub])
 
   return (
     <>
@@ -74,8 +143,34 @@ const Dashboard = () => {
 
         <div className="flexingphotocontent">
           <div className="phhotodash">
-            <img src={user.userimg} alt={user.name} />
+
+            <div className="photodashimg">
+              <img src={user.userimg} alt={user.name} />
+            </div>
+
+            <div className="smediaconnectlinks">
+              <div className="smedia1div" id='fbfaa' style={{ display: hidefb ? "none" : "initial" }}>
+                <button onClick={handleGoFacebook}><FaFacebookF /></button>
+              </div>
+
+              <div className="smedia1div" id='igfaa' style={{ display: hideig ? "none" : "initial" }}>
+                <button onClick={handleGoIg}><AiFillInstagram /></button>
+              </div>
+
+              <div className="smedia1div" id='githubfaa' style={{ display: hidegithub ? "none" : "initial" }}>
+                <button onClick={handleGoGithub}><AiFillGithub /></button>
+              </div>
+
+              <div className="smedia1div" id='linkkedinfaa' style={{ display: hideLinkedin ? "none" : "initial" }}>
+                <button onClick={handleGoLinkedin}>
+                  <AiFillLinkedin />
+                </button>
+              </div>
+            </div>
           </div>
+
+
+
           <div className="biodashboardd">
             <div className="firstseconndchild">
 
@@ -98,9 +193,9 @@ const Dashboard = () => {
 
             <div className="biohbhauidhar">
               {editedbio.split('\n').map((bio, index) => (
-                    <h3 key={index} style={{ whiteSpace: "pre-line" }}>{bio}</h3>
-                ))}
-                
+                <h3 key={index} style={{ whiteSpace: "pre-line" }}>{bio}</h3>
+              ))}
+
             </div>
 
 
