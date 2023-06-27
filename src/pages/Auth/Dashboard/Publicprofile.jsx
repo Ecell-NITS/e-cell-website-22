@@ -6,6 +6,7 @@ import NavbarTeam from '../../../components/shared/Navbar/NavbarTeam'
 import Footer from '../../../components/shared/Footer/Footer'
 import { FaFacebookF } from 'react-icons/fa'
 import { AiFillInstagram, AiFillGithub, AiFillLinkedin } from 'react-icons/ai'
+import { Link } from 'react-router-dom'
 const Publicprofile = () => {
     useEffect(() => {
         document.title = "Profile | E-Cell NITS"
@@ -26,6 +27,9 @@ const Publicprofile = () => {
     const [hideig, setHideig] = useState(false)
     const [hidegithub, setHidegithub] = useState(false)
 
+    /* states for fetching blogs*/
+    const [blogs, setBlogs] = useState([]);
+    const [noblog,setNoblog] = useState(false)
 
     const handleGoFacebook = () => {
         window.open(`${fb}`, '_blank');
@@ -97,6 +101,23 @@ const Publicprofile = () => {
         fetchPublicProfile()
     }, [writeremaill])
 
+
+    useEffect(() => {
+        const fetchPublicBlogs = async () => {
+            try {
+                const response = await axios.get(`${process.env.REACT_APP_APIMAIN}/publicwrittenblogs/${writeremaill}`)
+                // const response = await axios.get(`http://localhost:2226/publicwrittenblogs/${writeremaill}`)
+                setBlogs(response.data);
+                console.log(response.data)
+            } catch (error) {
+                if (error.response && error.response.data.error === "No blogs found for the user") {
+                    setNoblog(true)
+                } console.log('Error fetching Public Profile:', error);
+            }
+        }
+        fetchPublicBlogs()
+    }, [writeremaill])
+
     return (
         <>
             <NavbarTeam />
@@ -128,8 +149,8 @@ const Publicprofile = () => {
                     </div>
 
                     <div className="biodashboardd">
-                        <div className="firstseconndchild">
-                            <h1 className='accountusername'>{name}</h1>
+                        <div className="firstseconndchild" id='makeitcenterdamn'>
+                            <h1  className='accountusername'>{name}</h1>
                         </div>
 
                         <div className="biohbhauidhar">
@@ -139,6 +160,58 @@ const Publicprofile = () => {
                         </div>
 
                     </div>
+                </div>
+
+
+                {/* Published blog section */}
+                <div id='paddinginpublishlist'>
+                    <h1 id='publishedblogforusertitle'>All Published Blogs</h1>
+                    {noblog && <p id='noblogsmsgstyling'>No blogs found for the user</p>}
+                    <div id='blogs_under_profile_protected'>
+
+                        {blogs.map((blog) => (
+                            <div key={blog._id} id='indicardblog_protct' >
+
+                                <div className="imgholdercontblog">
+                                    <img src={blog.topicpic} alt="" />
+                                </div>
+                                <h1 className='titlehainlogindi'>{blog.title}</h1>
+                                <div className="whowrittenblog">
+                                    <h2>{blog.writernmae}</h2>
+                                </div>
+
+                                <div className="whoholdsthetag">
+                                    <button>{blog.tag}</button>
+                                    {/* <button className='secondtaghlder'>{blog.tag2}</button> */}
+                                </div>
+
+                                <div className="briefintrohldman">
+                                    {/* <p>{blog.intro}</p> */}
+                                    {blog.intro
+                                        .split('\n')
+                                        .map((paragraph, index) => (
+                                            <p
+                                                key={index}
+                                                style={{ whiteSpace: 'pre-line' }}
+                                                dangerouslySetInnerHTML={{
+                                                    __html:
+                                                        paragraph
+                                                            .split(' ')
+                                                            .slice(0, 20)
+                                                            .join(' ') +
+                                                        (paragraph.split(' ').length > 20 ? '...' : ''),
+                                                }}
+                                            ></p>
+                                        ))}
+                                </div>
+
+                                <Link to={`/blog/${blog._id}`}> <button className='kretrhereading'>
+                                    Read more
+                                </button></Link>
+                            </div>
+                        ))}
+                    </div>
+
                 </div>
             </div>
             <Footer />
