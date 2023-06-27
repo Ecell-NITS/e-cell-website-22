@@ -13,14 +13,21 @@ const Provisionalbloglist = () => {
     const [isFetching, setIsFetching] = useState(true);
     const [publishedBlogIds, setPublishedBlogIds] = useState([]);
     const [isLoggedIn, setLoggedIn] = useState(false);
+    const [publishing, setPublishing] = useState(false)
+    const [disablepublish, setDisablepublish] = useState(false)
 
     const handlePublish = async (blogId) => {
+        setDisablepublish(true)
+        setPublishing(true)
         try {
             await axios.post(process.env.REACT_APP_ACCEPTEDBLOGS_RENDER, { blogId });
             // await axios.post('http://localhost:2226/acceptedblogs', { blogId });
             alert('Blog published successfully');
         } catch (error) {
             console.log('Error publishing blog:', error);
+        } finally {
+            setPublishing(false)
+            setDisablepublish(false)
         }
     };
 
@@ -177,7 +184,9 @@ const Provisionalbloglist = () => {
                                                         {publishedBlogIds.includes(blog._id) ? (
                                                             <button disabled className='kretrhereading' id='pblshbtn'>Published</button>
                                                         ) : (
-                                                            <button onClick={() => handlePublish(blog._id)} className='kretrhereading' id='pblshbtn'>Publish</button>
+                                                            <button disabled={disablepublish} style={{ opacity: disablepublish ? 0.5 : 1, cursor: disablepublish ? "not-allowed" : "pointer" }} onClick={() => handlePublish(blog._id)} className='kretrhereading' id='pblshbtn'>
+                                                                {publishing ? "Publishing..." : "Publish"}
+                                                            </button>
                                                         )}
                                                     </div>
 
