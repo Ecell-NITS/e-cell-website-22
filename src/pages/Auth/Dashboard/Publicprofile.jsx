@@ -14,7 +14,7 @@ const Publicprofile = () => {
 
     const location = useLocation()
     const currentURL = decodeURIComponent(location.pathname);
-    const writeremaill = currentURL.split('/user/')[1];
+    const authoruniqueid = currentURL.split('/user/')[1];
     const [name, setName] = useState("")
     const [bio, setBio] = useState("")
     const [pic, setPic] = useState("")
@@ -84,8 +84,8 @@ const Publicprofile = () => {
     useEffect(() => {
         const fetchPublicProfile = async () => {
             try {
-                // const response = await axios.get(`http://localhost:2226/publicprofile/${writeremaill}`);
-                const response = await axios.get(`${process.env.REACT_APP_APIMAIN}/publicprofile/${writeremaill}`);
+                // const response = await axios.get(`http://localhost:2226/publicprofile/${authoruniqueid}`);
+                const response = await axios.get(`${process.env.REACT_APP_APIMAIN}/publicprofile/${authoruniqueid}`);
                 // console.log(response.data)
                 setName(response.data.name)
                 setBio(response.data.bio)
@@ -99,14 +99,14 @@ const Publicprofile = () => {
             }
         }
         fetchPublicProfile()
-    }, [writeremaill])
+    }, [authoruniqueid])
 
 
     useEffect(() => {
         const fetchPublicBlogs = async () => {
             try {
-                const response = await axios.get(`${process.env.REACT_APP_APIMAIN}/publicwrittenblogs/${writeremaill}`)
-                // const response = await axios.get(`http://localhost:2226/publicwrittenblogs/${writeremaill}`)
+                const response = await axios.get(`${process.env.REACT_APP_APIMAIN}/publicwrittenblogs/${authoruniqueid}`)
+                // const response = await axios.get(`http://localhost:2226/publicwrittenblogs/${authoruniqueid}`)
                 setBlogs(response.data);
                 console.log(response.data)
             } catch (error) {
@@ -116,7 +116,7 @@ const Publicprofile = () => {
             }
         }
         fetchPublicBlogs()
-    }, [writeremaill])
+    }, [authoruniqueid])
 
     return (
         <>

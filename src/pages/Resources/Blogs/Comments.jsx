@@ -200,7 +200,7 @@ const Comments = () => {
             </div>
 
             {/*  displaying comments*/}
-            <p className='total-comments-innutshell'>{commentslist[0]?.comments.length} comments</p>
+            <p className='total-comments-innutshell'>{commentslist[0]?.comments.length} Comments</p>
 
             <div className="single-bodycomt-starts">
                 {commentslist[0]?.comments.map((comment) => {

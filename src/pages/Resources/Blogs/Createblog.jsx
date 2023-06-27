@@ -23,6 +23,7 @@ const Createblog = () => {
     const [writeremail, setWriteremail] = useState("")
     const [submitting, setSubmitting] = useState(false);
     const [disablecreate, setDisablecreate] = useState(false)
+    const [authorid, setAuthorid] = useState("")
 
     const handleImgChange = (base64) => {
         setTopicpic(base64);
@@ -49,6 +50,7 @@ const Createblog = () => {
                     setWriterintro(user.bio);
                     setWriterpic(user.userimg);
                     setWriteremail(user.email);
+                    setAuthorid(user._id)
                 })
                 .catch((error) => {
                     console.error('Failed to fetch user data', error);
@@ -57,9 +59,9 @@ const Createblog = () => {
         }
     }, [navigate]);
     const iscreateblogempty = () => {
-        return title !== "" && intro !== "" && tag !== "" && writeremail !== "" && content !== "" && writernmae !== "" && writerintro !== "" && writerpic !== "" && topicpic !== "";
+        return title !== "" && intro !== "" && authorid!=="" && tag !== "" && writeremail !== "" && content !== "" && writernmae !== "" && writerintro !== "" && writerpic !== "" && topicpic !== "";
     };
-
+    // console.log(`authorid:${authorid}`)
     /* button onclick function */
     const submitform = async (event) => {
         event.preventDefault();
@@ -82,7 +84,7 @@ const Createblog = () => {
                 title,
                 tag,
                 intro,
-                content, writernmae, writerintro, writerpic, timestamp, topicpic, writeremail
+                content, writernmae, writerintro, writerpic, timestamp, topicpic, writeremail, authorid
             })
             .then((response) => {
                 setTitle("");
@@ -146,14 +148,14 @@ const Createblog = () => {
                         }}
                         placeholder="Enter your intro"
                         className='input-common-recruit' style={{ whiteSpace: "pre-wrap" }}></textarea> */}
-                        
+
                     <JoditEditor
                         ref={editor0}
                         value={intro}
                         onChange={(newIntro) => setIntro(newIntro)}
                         onBlur={(newIntro) => setIntro(newIntro)}
                         required
-                      
+
                     />
 
                 </div>
@@ -177,7 +179,7 @@ const Createblog = () => {
                         onBlur={(newContent) => setContent(newContent)}
                         onChange={(newContent) => setContent(newContent)}
                         required
-                      
+
                     />
 
                 </div>
