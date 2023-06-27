@@ -61,7 +61,7 @@ const Dashboard = () => {
   }, [])
 
   const ButtonSignout = () => {
-    console.log('Signout button clicked');
+    // console.log('Signout button clicked');
     localStorage.removeItem('token');
     alert('You have been signed out');
     navigate("/login")
@@ -83,7 +83,7 @@ const Dashboard = () => {
     navigate("/likedblogs")
   }
 
-  console.log(`${editedfb}`)
+  // console.log(`${editedfb}`)
 
   const handleGoFacebook = () => {
     window.open(`${editedfb}`, '_blank');

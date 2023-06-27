@@ -59,7 +59,7 @@ const Blogindividual = () => {
     }
 
     const currentURL = decodeURIComponent(window.location.origin + location.pathname);
-    console.log(currentURL)
+    // console.log(currentURL)
     const handleShareToFb = () => {
         const facebookShareURL = `https://www.facebook.com/sharer/sharer.php?u=${currentURL}`;
         window.open(facebookShareURL, '_blank');
