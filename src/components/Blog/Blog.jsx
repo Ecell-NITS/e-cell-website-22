@@ -12,6 +12,7 @@ const Blog = () => {
   const [sortingMessage, setSortingMessage] = useState('');
   const [activeTagFilter, setActiveTagFilter] = useState('');
   const [isFetching, setIsFetching] = useState(true);
+  const [authorid,setAuthorid] = useState("")
   // const [likedBlogs, setLikedBlogs] = useState([]);
   // const [writeremaill, setWriteremaill] = useState("")
 
@@ -68,6 +69,8 @@ const Blog = () => {
             return new Date(a.timestamp) - new Date(b.timestamp);
           }
         });
+        setAuthorid(response.data.authorid)
+
         // setWriteremaill(response.data.writeremail)
         // console.log(`writeremaill: ${writeremaill}`)
         // console.log(response.data)
@@ -99,10 +102,6 @@ const Blog = () => {
     ? blogscreated.filter((blog) => blog.tag.toLowerCase().includes(activeTagFilter.toLowerCase()))
     : blogscreated;
 
-  //   console.log(`writeremaill:${writeremaill}`)
-  // const handleGoToPublicProfile = () => {
-  //   navigate(`/user/${writeremaill}`)
-  // }
 
   return (
     <>
@@ -152,8 +151,7 @@ const Blog = () => {
                         </div>
                         <h1 className='titlehainlogindi'>{blog.title}</h1>
                         <div className="whowrittenblog">
-                          {/* <h2 onClick={handleGoToPublicProfile}>{blog.writernmae}</h2> */}
-                          <h2>{blog.writernmae}</h2>
+                        <Link to={`/user/${blog.authorid}`}><h2 >{blog.writernmae}</h2></Link>
                         </div>
 
                         <div className="whoholdsthetag">

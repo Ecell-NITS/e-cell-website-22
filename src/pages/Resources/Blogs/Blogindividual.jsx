@@ -24,6 +24,7 @@ const Blogindividual = () => {
 
     const [writername, setWritername] = useState("")
     const [writeremaill, setWriteremaill] = useState("")
+    const [authoruniqueid,setAuthoruniqueid] = useState("")
     const [timestamp, setTimestamp] = useState("")
     useEffect(() => {
         const fetchBlog = async () => {
@@ -40,6 +41,7 @@ const Blogindividual = () => {
                 setWritername(response.data.writernmae)
                 setTimestamp(response.data.timestamp)
                 setWriteremaill(response.data.writeremail)
+                setAuthoruniqueid(response.data.authorid)
             } catch (error) {
                 console.log('Error fetching blog:', error);
             }
@@ -83,7 +85,7 @@ const Blogindividual = () => {
 
 
     const handlePublicProfile = () => {
-        navigate(`/user/${writeremaill}`)
+        navigate(`/user/${authoruniqueid}`)
     }
 
     return (

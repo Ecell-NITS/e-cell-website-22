@@ -186,7 +186,7 @@ function App() {
 
             <Route
               exact
-              path="/user/:writeremaill"
+              path="/user/:authoruniqueid"
               element={<Publicprofile />}
               key="route-PublicProfile-screen"
             />
