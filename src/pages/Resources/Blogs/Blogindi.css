@@ -30,14 +30,16 @@
 }
 
 .imgholderwriter{
-    width: 17%;
-    height: 17%;
+    width: 12.5vw;
+    height: 12.5vw;
 }
 
 .imgholderwriter img{
-width: 100%;
-height: 100%;
+width: 100% !important;
+height: 100% !important;
  border-radius: 50%;
+ object-fit: cover;
+ box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .writerintro{
