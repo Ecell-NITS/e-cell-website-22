@@ -8,6 +8,8 @@ const Allprovblogs = () => {
     const navigate = useNavigate()
     const [blogs, setBlogs] = useState([]);
     const [selectedBlogId, setSelectedBlogId] = useState(null);
+    const [fetching, setFetching] = useState(false)
+    const [noblog, setNoblog] = useState(false);
     useEffect(() => {
         // document.title = "My all blogs | Dashboard"
         const token = localStorage.getItem('token');
@@ -21,15 +23,17 @@ const Allprovblogs = () => {
                 Authorization: `Bearer ${token}`,
             },
         };
-
+        setFetching(true)
         axios
             .get(process.env.REACT_APP_ALLPROVBLOGS, config)
             // .get('http://localhost:2226/myprovisionalblogs', config)
             .then((response) => {
                 setBlogs(response.data.blogs);
+                setFetching(false)
             })
             .catch((error) => {
                 console.error('Failed to fetch blogs', error);
+                setFetching(false)
             });
     }, [navigate])
 
@@ -38,15 +42,26 @@ const Allprovblogs = () => {
     const handleEditBlog = (blogId) => {
         setSelectedBlogId(blogId);
         navigate(`/editblog/${blogId}`);
-      };
-    
+    };
+
+    useEffect(() => {
+        if (!fetching) {
+            if (blogs.length === 0) {
+                setNoblog(true);
+            } else {
+                setNoblog(false);
+            }
+        }
+    }, [blogs, fetching]);
+
     return (
         <div>
             {/* <NavbarTeam /> */}
             <div id='paddinginpublishlist'>
                 {/* <h1 style={{textAlign:"center"}}>My all Blogs</h1> */}
                 <div id='blogs_under_profile_protected'>
-
+                {fetching && <p id='loadingkrrhebhaiblogs'>Loading Blogs...</p>}
+                {noblog && !fetching && <p id='loadingkrrhebhaiblogs'>No Blog found.</p>}
                     {blogs.map((blog) => (
                         <div key={blog._id} id='indicardblog_protct' >
                             {/* <h1>id: {blog._id}</h1> */}
@@ -87,8 +102,8 @@ const Allprovblogs = () => {
                                     Read more
                                 </button></Link>
 
-                                <button className='kretrhereading' 
-                                onClick={() => handleEditBlog(blog._id)}
+                                <button className='kretrhereading'
+                                    onClick={() => handleEditBlog(blog._id)}
                                 >Edit blog</button>
                             </div>
                         </div>
