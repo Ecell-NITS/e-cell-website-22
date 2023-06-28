@@ -6,6 +6,8 @@ import axios from 'axios'
 const Alllikedblogs = () => {
     const navigate = useNavigate()
     const [likedBlogs, setLikedBlogs] = useState([]);
+    const [fetching, setFetching] = useState(false)
+    const [noblog, setNoblog] = useState(false)
     useEffect(() => {
         // document.title = "Liked blogs | Dashboard"
         const token = localStorage.getItem('token')
@@ -20,6 +22,7 @@ const Alllikedblogs = () => {
     useEffect(() => {
         const fetchLikedBlogs = async () => {
             try {
+                setFetching(true)
                 // const response = await axios.get('http://localhost:2226/api/likedblogs', {
                 const response = await axios.get(`${process.env.REACT_APP_APIMAIN}/api/likedblogs`, {
                     headers: {
@@ -29,18 +32,33 @@ const Alllikedblogs = () => {
                 setLikedBlogs(response.data);
             } catch (error) {
                 console.error('Error fetching liked blogs:', error);
+            } finally {
+                setFetching(false)
             }
         };
 
         fetchLikedBlogs();
     }, []);
+
+    useEffect(() => {
+        if (!fetching) {
+            if (likedBlogs.length === 0) {
+                setNoblog(true)
+            } else {
+                setNoblog(false)
+            }
+        }
+    }, [fetching, likedBlogs])
+
+
     return (
         <div>
             {/* <NavbarTeam /> */}
             <div id='paddinginpublishlist'>
                 {/* <h1 style={{ textAlign: "center" }}>Liked Blogs</h1> */}
                 <div id='blogs_under_profile_protected'>
-
+                    {fetching && <p id='loadingkrrhebhaiblogs'>Loading Blogs...</p>}
+                    {noblog && !fetching && <p id='loadingkrrhebhaiblogs'>No Blog found.</p>}
                     {likedBlogs.map((blog) => (
                         <div key={blog._id} id='indicardblog_protct'>
                             {/* <h1>id: {blog._id}</h1> */}

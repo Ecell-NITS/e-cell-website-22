@@ -231,6 +231,10 @@
     justify-content: space-between;
 }
 
+#loadingkrrhebhaiblogs{
+    font-size: 2vw;
+}
+
 @media (max-width:660px){
     .mainblogstarts{
         width: 100%;
@@ -330,5 +334,9 @@
     .likekarobhaiblog{
       align-items: baseline;
         font-size: 5vw;
+    }
+
+    #loadingkrrhebhaiblogs{
+        font-size: 4vw;
     }
 }
