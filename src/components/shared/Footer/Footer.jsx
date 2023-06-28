@@ -11,6 +11,7 @@ import Ip from "../User/Ip";
 import axios from 'axios';
 const Footer = () => {
   const [email, setEmail] = useState("");
+  const [disablesend,setDisablesend] = useState(false)
   const isFormValid = () => {
     return email !== "";
   };
@@ -35,6 +36,7 @@ const Footer = () => {
       return;
     }
 
+    setDisablesend(true)
     setCheckingemail(true)
     try {
       const response = await axios.post(
@@ -47,6 +49,7 @@ const Footer = () => {
 
       if (!response.data.unique) {
         setCheckingemail(false)
+        setDisablesend(false)
         alert("You have already subscribed to our newsletter");
         return;
       }
@@ -54,10 +57,11 @@ const Footer = () => {
       console.log("Error checking email uniqueness:", error);
       alert("An error occurred while checking email uniqueness");
       setCheckingemail(false)
+      setDisablesend(false)
       return;
     }
 
-
+    setDisablesend(true)
     axios
       .post(process.env.REACT_APP_AXIOSPOST_POSTMAIN_RENDER, {
         // .post('http://localhost:3001/createUser', {
@@ -66,8 +70,16 @@ const Footer = () => {
       .then((response) => {
         setEmail("");
         setCheckingemail(false)
+        setDisablesend(false)
         alert("Subscribed to Our Newsletter.🥳");
-      });
+      })
+      .catch((error)=>{
+        setEmail("");
+        setCheckingemail(false)
+        setDisablesend(false)
+        alert("Something went wrong. Please try again later.")
+        console.log('Failed to subscribe to newsletter',error)
+      })
   };
 
   return (
@@ -173,7 +185,7 @@ const Footer = () => {
                   setEmail(event.target.value);
                 }}
               />
-              <button onClick={createUser} className="btnnewsformletter">
+              <button disabled={disablesend} style={{cursor:disablesend?"not-allowed":"pointer"}} onClick={createUser} className="btnnewsformletter">
                 <MdSend className="send" />
               </button>
             </div>

@@ -26,6 +26,7 @@ const Publicprofile = () => {
     const [hidefb, setHidefb] = useState(false)
     const [hideig, setHideig] = useState(false)
     const [hidegithub, setHidegithub] = useState(false)
+    const[fetching,setFetching] = useState(false)
 
     /* states for fetching blogs*/
     const [blogs, setBlogs] = useState([]);
@@ -105,6 +106,7 @@ const Publicprofile = () => {
     useEffect(() => {
         const fetchPublicBlogs = async () => {
             try {
+                setFetching(true)
                 const response = await axios.get(`${process.env.REACT_APP_APIMAIN}/publicwrittenblogs/${authoruniqueid}`)
                 // const response = await axios.get(`http://localhost:2226/publicwrittenblogs/${authoruniqueid}`)
                 setBlogs(response.data);
@@ -113,6 +115,8 @@ const Publicprofile = () => {
                 if (error.response && error.response.data.error === "No blogs found for the user") {
                     setNoblog(true)
                 } console.log('Error fetching Public Profile:', error);
+            }finally{
+                setFetching(false)
             }
         }
         fetchPublicBlogs()
@@ -166,6 +170,7 @@ const Publicprofile = () => {
                 {/* Published blog section */}
                 <div id='paddinginpublishlist'>
                     <h1 id='publishedblogforusertitle'>All Published Blogs</h1>
+                    {fetching && <p id='loadingkrrhebhaiblogs'>Loading Blogs...</p>}
                     {noblog && <p id='noblogsmsgstyling'>No blogs found for the user</p>}
                     <div id='blogs_under_profile_protected'>
 
