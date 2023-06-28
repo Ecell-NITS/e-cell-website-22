@@ -9,7 +9,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import { IoIosArrowBack } from 'react-icons/io'
 import { BsTwitter, BsFacebook, BsLinkedin } from 'react-icons/bs'
 import { AiFillRedditCircle } from 'react-icons/ai'
-import {FaClock} from 'react-icons/fa'
+import { FaClock } from 'react-icons/fa'
 import Comments from './Comments';
 import ProgressiveBar from './ProgressiveBar';
 // import Blog from '../../../components/Blog/Blog';
@@ -58,7 +58,21 @@ const Blogindividual = () => {
         fetchBlog();
     }, [_id]);
 
-
+    useEffect(() => {
+        const handleScroll = () => {
+          if (window.innerWidth >= 991) {
+            const scrolled = window.pageYOffset;
+            const parallaxContainer = document.querySelector('.parallax-container');
+            parallaxContainer.style.transform = `translate3d(0, ${scrolled * 0.6}px, 0)`;
+          }
+        };
+    
+        window.addEventListener('scroll', handleScroll);
+    
+        return () => {
+          window.removeEventListener('scroll', handleScroll);
+        };
+      }, []);
 
     if (!content) {
         return <div>Loading Blog content from the server...</div>;
@@ -104,7 +118,9 @@ const Blogindividual = () => {
                 <title>{title} | The E-Cell NITS Blog</title>
             </Helmet>
             <div className='topicpicimgstyled'>
-                <img src={topicpic} alt="" />
+                <div className='parallax-container'>
+                    <img src={topicpic} alt="" />
+                </div>
             </div>
             <div className='indiviualblog'>
                 <h1>{title}</h1>
