@@ -5,11 +5,13 @@
 }
 
 .indiviualblog h1{
-    padding-top: 3vw;
+    /* padding-top: 3vw; */
     padding-bottom: 2vw;
     color: rgba(28, 55, 75, 1);
     font-size: 3.5vw;
     text-align: center;
+    /* margin-top: -15vw; */
+    font-weight: 900;
 }
 
 .indiviualblog p{
@@ -110,6 +112,37 @@ height: 100% !important;
     text-decoration: underline;
 }
 
+#reading-author-name{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#reading-author-name h6 {
+    color: #224259;
+    font-size: 1.5vw;
+}
+
+.topicpicimgstyled {
+    width: 100%;
+    height: 20vw;
+    position: relative;
+    overflow: hidden;
+    /* z-index: -1; */
+}
+
+.topicpicimgstyled img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: filter 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.topicpicimgstyled:hover img {
+    transform: scale(1.05);
+}
+
+
 @media (max-width:999px){
     .indiviualblog img {
         width: 90% !important;
@@ -186,5 +219,14 @@ height: 100% !important;
     .dateandtimeofpost{
         font-size:2.9vw;
         margin: 4vw 0;
+    }
+
+    #reading-author-name h6 {
+        font-size:3.6vw;
+    }
+
+    .topicpicimgstyled {
+        width: 100%;
+        height: 30vw;
     }
 }

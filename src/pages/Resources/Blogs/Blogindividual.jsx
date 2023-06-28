@@ -9,7 +9,9 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import { IoIosArrowBack } from 'react-icons/io'
 import { BsTwitter, BsFacebook, BsLinkedin } from 'react-icons/bs'
 import { AiFillRedditCircle } from 'react-icons/ai'
+import {FaClock} from 'react-icons/fa'
 import Comments from './Comments';
+import ProgressiveBar from './ProgressiveBar';
 // import Blog from '../../../components/Blog/Blog';
 const Blogindividual = () => {
     const { _id } = useParams();
@@ -24,8 +26,9 @@ const Blogindividual = () => {
 
     const [writername, setWritername] = useState("")
     const [writeremaill, setWriteremaill] = useState("")
-    const [authoruniqueid,setAuthoruniqueid] = useState("")
+    const [authoruniqueid, setAuthoruniqueid] = useState("")
     const [timestamp, setTimestamp] = useState("")
+    const [readingtime, setReadingtime] = useState("")
     useEffect(() => {
         const fetchBlog = async () => {
             try {
@@ -42,6 +45,11 @@ const Blogindividual = () => {
                 setTimestamp(response.data.timestamp)
                 setWriteremaill(response.data.writeremail)
                 setAuthoruniqueid(response.data.authorid)
+
+                const wordsPerMinute = 183;
+                const wordCount = response.data.content.split(' ').length;
+                const time = Math.ceil(wordCount / wordsPerMinute);
+                setReadingtime(time);
             } catch (error) {
                 console.log('Error fetching blog:', error);
             }
@@ -91,13 +99,20 @@ const Blogindividual = () => {
     return (
         <>
             <NavbarTeam />
+            <ProgressiveBar />
             <Helmet>
                 <title>{title} | The E-Cell NITS Blog</title>
             </Helmet>
+            <div className='topicpicimgstyled'>
+                <img src={topicpic} alt="" />
+            </div>
             <div className='indiviualblog'>
                 <h1>{title}</h1>
                 {/* <p>{intro}</p> */}
-                <h6 className='dateandtimeofpost'>Posted by <span id='writerimpspan'>{writername} </span></h6>
+                <div id='reading-author-name'>
+                    <h6 className='dateandtimeofpost'>Posted by <span id='writerimpspan'>{writername} </span></h6>
+                    <h6> <FaClock /> {readingtime} minutes read</h6>
+                </div>
                 {intro.split('\n').map((paragraph, index) => (
                     <p key={index} style={{ whiteSpace: "pre-line" }} dangerouslySetInnerHTML={{ __html: paragraph }}></p>
                 ))}
