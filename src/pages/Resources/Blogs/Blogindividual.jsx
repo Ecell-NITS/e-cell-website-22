@@ -110,7 +110,7 @@ const Blogindividual = () => {
                 <h1>{title}</h1>
                 {/* <p>{intro}</p> */}
                 <div id='reading-author-name'>
-                    <h6 className='dateandtimeofpost'>Posted by <span id='writerimpspan'>{writername} </span></h6>
+                    <h6 className='dateandtimeofpost'>Posted by <span onClick={handlePublicProfile} id='writerimpspan'>{writername} </span></h6>
                     <h6> <FaClock /> {readingtime} minutes read</h6>
                 </div>
                 {intro.split('\n').map((paragraph, index) => (
