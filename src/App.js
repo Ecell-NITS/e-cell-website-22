@@ -163,12 +163,12 @@ function App() {
               key="route-Alllikedblogs-screen"
             />
 
-            <Route
+            {/* <Route
               exact
               path="/techsubmission"
               element={<Techsubmission />}
               key="route-Allblogswritten-screen"
-            />
+            /> */}
 
             <Route
               exact
