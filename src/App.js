@@ -28,6 +28,7 @@ import Techsubmission from "./pages/Projectsubmission/Techsubmission";
 import Techresults from "./pages/Projectsubmission/Techresults";
 import Editblogform from "./pages/Auth/Dashboard/EditBlog/Editblogform";
 import Publicprofile from "./pages/Auth/Dashboard/Publicprofile";
+import Forgotpwd from "./pages/Auth/Login/Forgotpwd";
 function App() {
   return (
     <>
@@ -189,6 +190,13 @@ function App() {
               path="/user/:authoruniqueid"
               element={<Publicprofile />}
               key="route-PublicProfile-screen"
+            />
+
+            <Route
+              exact
+              path="/forgot password"
+              element={<Forgotpwd />}
+              key="route-Forgot-password-screen"
             />
 
             <Route path="*" element={<NotFound />} />

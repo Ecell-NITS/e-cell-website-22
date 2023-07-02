@@ -11,7 +11,7 @@ import Footerconstant from '../../components/shared/FooterConstant/Footerconstan
 import Contactus from '../../components/Home/Contact/Contactus'
 const Home = () => {
   useEffect(() => {
-    document.title = "ECELL | NITS";
+    document.title = "ECELL | NIT Silchar";
   }, []);
   return (
     <>

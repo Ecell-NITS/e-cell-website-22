@@ -112,6 +112,13 @@ font-size: 1.5vw;
     margin-top: 0;
 }
 
+#fogtpwd{
+   margin-left: 23vw;
+   font-size: 1.3vw;
+   color: #3E618E;
+   margin-top: -1vw !important;
+   font-weight: 900;
+}
 
 @media (max-width:660px){
     .imgbgholdersignup{
@@ -169,6 +176,14 @@ font-size: 1.5vw;
     .msgaftersignuplogin{
         font-size: 3vw;
         color: red;
+     }
+
+     #fogtpwd{
+        margin-left: 65vw;
+        font-size: 3vw;
+        color: #3E618E;
+        margin-top: -1vw !important;
+        font-weight: 900;
      }
 }
 
