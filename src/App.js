@@ -29,6 +29,7 @@ import Techresults from "./pages/Projectsubmission/Techresults";
 import Editblogform from "./pages/Auth/Dashboard/EditBlog/Editblogform";
 import Publicprofile from "./pages/Auth/Dashboard/Publicprofile";
 import Forgotpwd from "./pages/Auth/Login/Forgotpwd";
+import Tagspecificblog from "./components/Blog/Tagspecificblog";
 function App() {
   return (
     <>
@@ -197,6 +198,13 @@ function App() {
               path="/forgot password"
               element={<Forgotpwd />}
               key="route-Forgot-password-screen"
+            />
+
+            <Route
+              exact
+              path="/tag/:word"
+              element={<Tagspecificblog />}
+              key="route-Tagspecificblog-screen"
             />
 
             <Route path="*" element={<NotFound />} />

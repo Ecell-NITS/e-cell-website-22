@@ -158,10 +158,11 @@ const Blog = () => {
                           {blog.tag.trim().split(' ').map((word, index) => (
                             word.length > 0 && (
                               <button
+                      
                                 key={index}
                                 className={index !== 0 ? 'buttonmarginlft' : ''}
                               >
-                                {word}
+                             <Link to={`/tag/${word.replace('#', '')}`} id='tagbuttonidlink'>{word}</Link>
                               </button>
                             )
                           ))}

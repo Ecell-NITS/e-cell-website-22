@@ -153,6 +153,11 @@
     margin: .5vw 0;
 }
 
+.whoholdsthetag button a{
+    color: rgba(80, 80, 80, 1) !important;
+}
+
+
 .buttonmarginlft{
     margin-left: .55vw !important;
 }
