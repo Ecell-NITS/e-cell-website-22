@@ -64,7 +64,7 @@ const Allblogspublished = () => {
                 {/* <h1 style={{textAlign:"center"}}>My Published Blogs</h1> */}
                 <div id='blogs_under_profile_protected'>
                     {fetching && <p id='loadingkrrhebhaiblogs'>Loading Blogs...</p>}
-                    {noblog && !fetching && <p id='loadingkrrhebhaiblogs'>No Blog found.</p> }
+                    {noblog && !fetching && <p id='loadingkrrhebhaiblogs'>No Blog found.</p>}
                     {blogs.map((blog) => (
                         <div key={blog._id} id='indicardblog_protct' >
 
@@ -77,8 +77,16 @@ const Allblogspublished = () => {
                             </div>
 
                             <div className="whoholdsthetag">
-                                <button>{blog.tag}</button>
-                                {/* <button className='secondtaghlder'>{blog.tag2}</button> */}
+                                {blog.tag.trim().split(' ').map((word, index) => (
+                                    word.length > 0 && (
+                                        <button
+                                            key={index}
+                                            className={index !== 0 ? 'buttonmarginlft' : ''}
+                                        >
+                                            {word}
+                                        </button>
+                                    )
+                                ))}
                             </div>
 
                             <div className="briefintrohldman">

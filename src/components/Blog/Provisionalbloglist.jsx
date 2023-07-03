@@ -151,8 +151,16 @@ const Provisionalbloglist = () => {
                                                 </div>
 
                                                 <div className="whoholdsthetag">
-                                                    <button>{blog.tag}</button>
-                                                    {/* <button className='secondtaghlder'>{blog.tag2}</button> */}
+                                                    {blog.tag.trim().split(' ').map((word, index) => (
+                                                        word.length > 0 && (
+                                                            <button
+                                                                key={index}
+                                                                className={index !== 0 ? 'buttonmarginlft' : ''}
+                                                            >
+                                                                {word}
+                                                            </button>
+                                                        )
+                                                    ))}
                                                 </div>
 
                                                 {/* <div className="briefintrohldman">

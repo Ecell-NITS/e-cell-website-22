@@ -98,7 +98,7 @@ const Login = () => {
                         </div>
                      
                         <div className="inputdicdignup" id='fogtpwd'>
-                            <span style={{cursor:"pointer"}} onClick={handleForgetPwd}>Forgot Password</span>
+                            <span style={{cursor:"pointer"}} onClick={handleForgetPwd}>Forgot Password?</span>
                         </div>
 
                         <button className='btnsubmittodb' type="submit" disabled={disablelogin} style={{ opacity: disablelogin ? 0.5 : 1, cursor: disablelogin ? "not-allowed" : "pointer" }}>

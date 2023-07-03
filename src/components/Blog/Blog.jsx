@@ -12,7 +12,7 @@ const Blog = () => {
   const [sortingMessage, setSortingMessage] = useState('');
   const [activeTagFilter, setActiveTagFilter] = useState('');
   const [isFetching, setIsFetching] = useState(true);
-  const [authorid,setAuthorid] = useState("")
+  const [authorid, setAuthorid] = useState("")
   // const [likedBlogs, setLikedBlogs] = useState([]);
   // const [writeremaill, setWriteremaill] = useState("")
 
@@ -151,12 +151,20 @@ const Blog = () => {
                         </div>
                         <h1 className='titlehainlogindi'>{blog.title}</h1>
                         <div className="whowrittenblog">
-                        <Link to={`/user/${blog.authorid}`}><h2 >{blog.writernmae}</h2></Link>
+                          <Link to={`/user/${blog.authorid}`}><h2 >{blog.writernmae}</h2></Link>
                         </div>
 
                         <div className="whoholdsthetag">
-                          <button>{blog.tag}</button>
-                          {/* <button className='secondtaghlder'>{blog.tag2}</button> */}
+                          {blog.tag.trim().split(' ').map((word, index) => (
+                            word.length > 0 && (
+                              <button
+                                key={index}
+                                className={index !== 0 ? 'buttonmarginlft' : ''}
+                              >
+                                {word}
+                              </button>
+                            )
+                          ))}
                         </div>
 
                         <div className="briefintrohldman">

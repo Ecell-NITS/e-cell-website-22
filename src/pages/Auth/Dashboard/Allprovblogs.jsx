@@ -60,8 +60,8 @@ const Allprovblogs = () => {
             <div id='paddinginpublishlist'>
                 {/* <h1 style={{textAlign:"center"}}>My all Blogs</h1> */}
                 <div id='blogs_under_profile_protected'>
-                {fetching && <p id='loadingkrrhebhaiblogs'>Loading Blogs...</p>}
-                {noblog && !fetching && <p id='loadingkrrhebhaiblogs'>No Blog found.</p>}
+                    {fetching && <p id='loadingkrrhebhaiblogs'>Loading Blogs...</p>}
+                    {noblog && !fetching && <p id='loadingkrrhebhaiblogs'>No Blog found.</p>}
                     {blogs.map((blog) => (
                         <div key={blog._id} id='indicardblog_protct' >
                             {/* <h1>id: {blog._id}</h1> */}
@@ -74,8 +74,16 @@ const Allprovblogs = () => {
                             </div>
 
                             <div className="whoholdsthetag">
-                                <button>{blog.tag}</button>
-                                {/* <button className='secondtaghlder'>{blog.tag2}</button> */}
+                                {blog.tag.trim().split(' ').map((word, index) => (
+                                    word.length > 0 && (
+                                        <button
+                                            key={index}
+                                            className={index !== 0 ? 'buttonmarginlft' : ''}
+                                        >
+                                            {word}
+                                        </button>
+                                    )
+                                ))}
                             </div>
 
                             <div className="briefintrohldman">

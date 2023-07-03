@@ -148,9 +148,13 @@
     color: rgba(80, 80, 80, 1);
     border: 1.9px solid grey;
     border-radius: 6.13px;
-    font-size: 1.1vw;
-    padding: .25vw;
+    font-size: 1vw;
+    padding: .15vw;
     margin: .5vw 0;
+}
+
+.buttonmarginlft{
+    margin-left: .55vw !important;
 }
 
 .secondtaghlder{
@@ -290,9 +294,13 @@
     }
 
     .whoholdsthetag button{
-        font-size: 4vw;
+        font-size: 2.9vw;
         padding: .75vw;
         margin: 2.3vw 0;
+    }
+
+    .buttonmarginlft{
+        margin-left: 2vw !important;
     }
 
     .kretrhereading{

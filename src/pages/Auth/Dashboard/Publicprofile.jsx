@@ -26,11 +26,11 @@ const Publicprofile = () => {
     const [hidefb, setHidefb] = useState(false)
     const [hideig, setHideig] = useState(false)
     const [hidegithub, setHidegithub] = useState(false)
-    const[fetching,setFetching] = useState(false)
+    const [fetching, setFetching] = useState(false)
 
     /* states for fetching blogs*/
     const [blogs, setBlogs] = useState([]);
-    const [noblog,setNoblog] = useState(false)
+    const [noblog, setNoblog] = useState(false)
 
     const handleGoFacebook = () => {
         window.open(`${fb}`, '_blank');
@@ -115,7 +115,7 @@ const Publicprofile = () => {
                 if (error.response && error.response.data.error === "No blogs found for the user") {
                     setNoblog(true)
                 } console.log('Error fetching Public Profile:', error);
-            }finally{
+            } finally {
                 setFetching(false)
             }
         }
@@ -154,7 +154,7 @@ const Publicprofile = () => {
 
                     <div className="biodashboardd">
                         <div className="firstseconndchild" id='makeitcenterdamn'>
-                            <h1  className='accountusername'>{name}</h1>
+                            <h1 className='accountusername'>{name}</h1>
                         </div>
 
                         <div className="biohbhauidhar">
@@ -186,8 +186,16 @@ const Publicprofile = () => {
                                 </div>
 
                                 <div className="whoholdsthetag">
-                                    <button>{blog.tag}</button>
-                                    {/* <button className='secondtaghlder'>{blog.tag2}</button> */}
+                                    {blog.tag.trim().split(' ').map((word, index) => (
+                                        word.length > 0 && (
+                                            <button
+                                                key={index}
+                                                className={index !== 0 ? 'buttonmarginlft' : ''}
+                                            >
+                                                {word}
+                                            </button>
+                                        )
+                                    ))}
                                 </div>
 
                                 <div className="briefintrohldman">
