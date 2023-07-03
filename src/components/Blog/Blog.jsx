@@ -157,13 +157,14 @@ const Blog = () => {
                         <div className="whoholdsthetag">
                           {blog.tag.trim().split(' ').map((word, index) => (
                             word.length > 0 && (
-                              <button
-                      
-                                key={index}
-                                className={index !== 0 ? 'buttonmarginlft' : ''}
-                              >
-                             <Link to={`/tag/${word.replace('#', '')}`} id='tagbuttonidlink'>{word}</Link>
-                              </button>
+
+                              <Link to={`/tag/${word.replace('#', '')}`} id='tagbuttonidlink'>
+                                <button
+                                  key={index}
+                                  className={index !== 0 ? 'buttonmarginlft' : ''}
+                                > {word}</button>
+                              </Link>
+
                             )
                           ))}
                         </div>
