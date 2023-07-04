@@ -130,6 +130,10 @@
     color: red;
 }
 
+.nocomtnsyet{
+    font-size: 1.3vw;
+}
+
 @media (max-width:660px){
     .comment-main {
         min-height: 20vw;
@@ -213,5 +217,9 @@
 
     #strict-instruction{
         font-size: 3.2vw;
+    }
+
+    .nocomtnsyet{
+        font-size: 2.9vw;
     }
 }

@@ -16,6 +16,7 @@ const Comments = () => {
     const [commentslist, setCommentslist] = useState([]);
     const [disable, setDisable] = useState(false)
     const [submit, setSubmit] = useState(false)
+    const [isComment,setIsComment] = useState(false)
     const currentURL = decodeURIComponent(location.pathname);
     const postId = currentURL.split('/blog/')[1];
     // console.log(postId);
@@ -155,6 +156,14 @@ const Comments = () => {
         navigate("/dashboard")
     }
 
+    useEffect(()=>{
+        if(commentslist.length!==0){
+            setIsComment(false)
+        }else{
+            setIsComment(true)
+        }
+    },[commentslist])
+
     return (
         <>
             <div className="comment-main">
@@ -203,6 +212,7 @@ const Comments = () => {
             <p className='total-comments-innutshell'>{commentslist[0]?.comments.length} Comments</p>
 
             <div className="single-bodycomt-starts">
+                {isComment && <p className='nocomtnsyet'>no comments yet.</p>}
                 {commentslist[0]?.comments.map((comment) => {
                     return (
                         <div key={comment._id} id='indi-comnt-putin'>

@@ -16,7 +16,6 @@ const Editblogform = () => {
     const [title, setTitle] = useState("")
     const [intro, setIntro] = useState("")
     const [tag, setTag] = useState("")
-    const [tag2, setTag2] = useState("")
     const [topicpic, setTopicpic] = useState("")
     const [content, setContent] = useState("")
     const [writernmae, setWritername] = useState("")
@@ -28,7 +27,8 @@ const Editblogform = () => {
     const token = localStorage.getItem('token');
     const currentURL = decodeURIComponent(location.pathname);
     const blogId = currentURL.split('/editblog/')[1];
-    // console.log(blogId);
+   
+  
 
     const handleImgChange = (base64) => {
         setTopicpic(base64);
@@ -61,6 +61,26 @@ const Editblogform = () => {
                 });
         }
     }, [navigate]);
+
+    useEffect(() => {
+        const fetchBlog = async () => {
+            try {
+                const response = await axios.get(`${process.env.REACT_APP_FETCHBLOG_RENDER}/${blogId}`);
+                setContent(response.data.content);
+                setTitle(response.data.title);
+                setWriterpic(response.data.writerpic);
+                setWriterintro(response.data.writerintro);
+                setTopicpic(response.data.topicpic);
+                setIntro(response.data.intro);
+                setWritername(response.data.writernmae)
+                setTag(response.data.tag)
+            } catch (error) {
+                console.log('Error fetching blog:', error);
+            }
+        };
+
+        fetchBlog();
+    }, [blogId]);
 
     const isEditblogempty = () => {
         return title !== "" || intro !== "" || tag !== "" || content !== "" || topicpic !== "";
@@ -133,6 +153,7 @@ const Editblogform = () => {
                 setSubmitting(false);
                 setDisablecreate(false)
                 alert("Blog edited successfully.");
+                navigate("/dashboard")
             });
     }
 
