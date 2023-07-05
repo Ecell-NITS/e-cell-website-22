@@ -24,11 +24,14 @@ const Editblogform = () => {
     const [writeremail, setWriteremail] = useState("")
     const [submitting, setSubmitting] = useState(false);
     const [disablecreate, setDisablecreate] = useState(false)
+    const [authorverf, setAuthorverf] = useState("")
+    const [loggedinuserid, setLoggedinuserid] = useState("")
+    const [isLoading, setIsLoading] = useState(true);
     const token = localStorage.getItem('token');
     const currentURL = decodeURIComponent(location.pathname);
     const blogId = currentURL.split('/editblog/')[1];
-   
-  
+
+
 
     const handleImgChange = (base64) => {
         setTopicpic(base64);
@@ -50,10 +53,12 @@ const Editblogform = () => {
                 })
                 .then((response) => {
                     const user = response.data;
+                    setLoggedinuserid(user._id)
                     setWritername(user.name);
                     setWriterintro(user.bio);
                     setWriterpic(user.userimg);
                     setWriteremail(user.email);
+                    setIsLoading(false);
                 })
                 .catch((error) => {
                     console.error('Failed to fetch user data', error);
@@ -64,8 +69,10 @@ const Editblogform = () => {
 
     useEffect(() => {
         const fetchBlog = async () => {
+            setIsLoading(true);
             try {
                 const response = await axios.get(`${process.env.REACT_APP_FETCHBLOG_RENDER}/${blogId}`);
+                setAuthorverf(response.data.authorid)
                 setContent(response.data.content);
                 setTitle(response.data.title);
                 setWriterpic(response.data.writerpic);
@@ -74,6 +81,7 @@ const Editblogform = () => {
                 setIntro(response.data.intro);
                 setWritername(response.data.writernmae)
                 setTag(response.data.tag)
+                setIsLoading(false);
             } catch (error) {
                 console.log('Error fetching blog:', error);
             }
@@ -81,6 +89,15 @@ const Editblogform = () => {
 
         fetchBlog();
     }, [blogId]);
+
+    console.log(`loggedinuserid: ${loggedinuserid}`)
+    console.log(`authorverf: ${authorverf}`)
+    useEffect(() => {
+        if (authorverf !== "" && loggedinuserid !== "" && !isLoading && loggedinuserid !== authorverf) {
+            alert("Only the original author of the blog can edit this blog.");
+            navigate("/login");
+        }
+    }, [authorverf, loggedinuserid, isLoading, navigate]);
 
     const isEditblogempty = () => {
         return title !== "" || intro !== "" || tag !== "" || content !== "" || topicpic !== "";
@@ -129,7 +146,7 @@ const Editblogform = () => {
         setDisablecreate(true)
         axios
             .put(`${process.env.REACT_APP_APIMAIN}/editblog/${blogId}`, {
-            // .put(`http://localhost:2226/editblog/${blogId}`, {
+                // .put(`http://localhost:2226/editblog/${blogId}`, {
                 // .put(process.env.REACT_APP_CREATEBLOG_RENDER, {
                 title,
                 tag,
@@ -155,6 +172,10 @@ const Editblogform = () => {
                 alert("Blog edited successfully.");
                 navigate("/dashboard")
             });
+    }
+
+    if (isLoading) {
+        return <div>Loading...</div>;
     }
 
     return (
