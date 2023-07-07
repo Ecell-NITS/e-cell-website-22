@@ -54,6 +54,9 @@ const Allprovblogs = () => {
         }
     }, [blogs, fetching]);
 
+    const screenWidth = window.innerWidth || document.documentElement.clientWidth
+    const tabletPc = screenWidth > 660
+    
     return (
         <div>
             {/* <NavbarTeam /> */}
@@ -68,7 +71,38 @@ const Allprovblogs = () => {
                             <div className="imgholdercontblog">
                                 <img src={blog.topicpic} alt="" />
                             </div>
-                            <h1 className='titlehainlogindi'>{blog.title}</h1>
+                            {tabletPc ? (
+                                blog.title
+                                    .split('\n')
+                                    .map((paragraph, index) => (
+                                        <h1
+                                            key={index}
+                                            className='titlehainlogindi'
+                                            style={{ whiteSpace: 'pre-line' }}
+                                            dangerouslySetInnerHTML={{
+                                                __html:
+                                                    paragraph.length > 58
+                                                        ? paragraph.slice(0, 58) + '...'
+                                                        : paragraph,
+                                            }}
+                                        ></h1>
+                                    ))
+                            ) : (
+                                blog.title
+                                    .split('\n')
+                                    .map((paragraph, index) => (
+                                        <h1
+                                            key={index}
+                                            className='titlehainlogindi'
+                                            style={{ whiteSpace: 'pre-line' }}
+                                            dangerouslySetInnerHTML={{
+                                                __html
+                                                    : paragraph,
+                                            }}
+                                        ></h1>
+                                    ))
+                            )
+                            }
                             <div className="whowrittenblog">
                                 <h2>{blog.writernmae}</h2>
                             </div>

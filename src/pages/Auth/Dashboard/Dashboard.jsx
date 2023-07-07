@@ -9,6 +9,7 @@ import Allprovblogs from './Allprovblogs';
 import Alllikedblogs from './Alllikedblogs';
 import { FaFacebookF } from 'react-icons/fa'
 import { AiFillInstagram, AiFillGithub, AiFillLinkedin } from 'react-icons/ai'
+import { Helmet } from "react-helmet";
 const Dashboard = () => {
   const navigate = useNavigate();
   const [user, setUser] = useState({});
@@ -54,11 +55,6 @@ const Dashboard = () => {
 
       });
   }, [navigate]);
-
-
-  useEffect(() => {
-    document.title = "Dashboard | ECELL NITS"
-  }, [])
 
   const ButtonSignout = () => {
     // console.log('Signout button clicked');
@@ -139,6 +135,10 @@ const Dashboard = () => {
   return (
     <>
       <NavbarTeam />
+      <Helmet>
+                <title>{`${user.name}'s Dashboard | ECELL NITS`}</title>
+                <meta name="description" content="E-CELL NIT SILCHAR" />
+      </Helmet>
       <div className='dashboardmain'>
 
         <div className="flexingphotocontent">
