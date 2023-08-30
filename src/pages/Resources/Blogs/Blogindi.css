@@ -175,6 +175,11 @@ height: 100% !important;
 }
 
 @media (max-width:660px){
+    .indiviualblog p img {
+        margin-top: 7vw;
+        margin-bottom: 7vw;
+    } 
+    
     .indiviualblog{
         width: 90%;
         padding-top: 10vw;
@@ -232,11 +237,11 @@ height: 100% !important;
     }
 
     #nameinwriterindiblog{
+        display: block;
         font-size:5.5vw;
-        text-align: center;
+        text-align: center !important;
         padding: 0 !important;
-        margin-top: 2vw;
-        margin-bottom: 5vw;
+        margin:2vw auto 5vw auto !important;
     }
 
     .dateandtimeofpost{

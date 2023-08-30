@@ -6,7 +6,7 @@ import Footer from '../../components/shared/Footer/Footer';
 
 const Team = () => {
   useEffect(() => {
-    document.title = "Team ECELL | NITS";
+    document.title = "Team | E-Cell NIT Silchar";
   }, []);
   return (
     <>

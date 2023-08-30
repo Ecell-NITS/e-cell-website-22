@@ -136,7 +136,7 @@ const Dashboard = () => {
     <>
       <NavbarTeam />
       <Helmet>
-                <title>{`${user.name}'s Dashboard | ECELL NITS`}</title>
+                <title>{`${user.name}'s Dashboard | E-CELL NIT Silchar`}</title>
                 <meta name="description" content="E-CELL NIT SILCHAR" />
       </Helmet>
       <div className='dashboardmain'>

@@ -7,7 +7,7 @@ import NavbarTeam from '../../components/shared/Navbar/NavbarTeam';
 
 const Gallery = () => {
   useEffect(() => {
-    document.title = "Gallery ECELL | NITS";
+    document.title = "Gallery | E-Cell NIT Silchar";
   }, []);
   return (
     <div>

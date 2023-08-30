@@ -11,7 +11,7 @@ const Login = () => {
     const [loggingin, setLoggingin] = useState(false)
     const [disablelogin, setDisablelogin] = useState(false)
     useEffect(() => {
-        document.title = 'Login | ECELL NITS';
+        document.title = 'Login | E-Cell NIT Silchar';
         const token = localStorage.getItem('token');
         if (token) {
             navigate('/dashboard');

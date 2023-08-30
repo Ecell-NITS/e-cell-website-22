@@ -39,7 +39,7 @@ const Editblogform = () => {
 
 
     useEffect(() => {
-        document.title = 'Edit blog | ECELL NITS';
+        document.title = 'Edit Blog | E-Cell NIT Silchar';
         const token = localStorage.getItem('token');
         if (!token) {
             navigate('/login');

@@ -8,7 +8,7 @@ import Blog from "../../components/Blog/Blog";
 
 const Resources = () => {
   useEffect(() => {
-    document.title = "Resources ECELL | NITS";
+    document.title = "Resources | E-Cell NIT Silchar";
   }, []);
   return (
     <>

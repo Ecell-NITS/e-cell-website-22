@@ -75,7 +75,7 @@ const Blogindividual = () => {
       }, []);
 
     if (!content) {
-        return <div>Loading Blog content from the server...</div>;
+        return <div>Loading...</div>;
     }
 
     const handleBackToResorces = () => {

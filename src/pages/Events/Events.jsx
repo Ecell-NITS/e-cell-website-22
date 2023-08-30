@@ -8,7 +8,7 @@ import { Carousel } from 'react-responsive-carousel';
 import PastEvents from '../../components/EventsPage/PastEvents';
 const Events = () => {
   useEffect(() => {
-    document.title = "Events ECELL | NITS";
+    document.title = "Events | E-Cell NIT Silchar";
   }, []);
   return (
     <>

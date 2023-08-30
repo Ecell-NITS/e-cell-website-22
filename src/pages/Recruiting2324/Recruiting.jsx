@@ -34,7 +34,7 @@ const Recruiting = () => {
     }, []);
 
     useEffect(() => {
-        document.title = "Recruitment ECELL | NITS";
+        document.title = "Recruitment | E-Cell NIT Silchar";
     }, []);
 
     const generateCaptchaNumbers = () => {

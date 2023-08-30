@@ -22,7 +22,7 @@ const Signup = () => {
     const [bio, setBio] = useState("Author")
 
     useEffect(() => {
-        document.title = "Signup | ECELL NITS"
+        document.title = "Signup | E-Cell NIT Silchar"
         const token = localStorage.getItem('token');
         if (token) {
             navigate('/dashboard');
