@@ -1,0 +1,187 @@
+.events-main-hero{
+    position: relative;
+    background: url(https://res.cloudinary.com/dp92qug2f/image/upload/v1685019690/Ecell%20website/collaboration%20backgrounds/Srijan-1_h0kpas.webp);
+    background-position: center;
+    background-size: cover;
+    /* object-fit: contain; */
+    background-repeat: no-repeat;
+    height: 52vw;
+    box-shadow: inset 0 0 0 1000px #1f18349c;
+    background-attachment: scroll;
+    background-position-x: center;
+}
+
+.eicimpextra{
+    position: relative;
+    background: url(https://res.cloudinary.com/dp92qug2f/image/upload/v1685019690/Ecell%20website/collaboration%20backgrounds/EIC_qqeeua.webp);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 52vw;
+    background-attachment: scroll;
+    background-position-x: center;
+}
+
+.entremodulebg{
+    position: relative;
+    background: url(https://res.cloudinary.com/dp92qug2f/image/upload/v1685019690/Ecell%20website/collaboration%20backgrounds/Empressario-1_ewb2al.webp);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 52vw;
+    background-attachment: scroll;
+    background-position-x: center;
+}
+.spkr-cont-event{
+    background-color: white;
+    display: inline-block;
+    position: absolute;
+    top: 23%;
+    left: 50%;
+    transform: translate(-50%, -23%);
+    justify-content: center;
+    align-items: center;
+    border-radius: 20vw;
+}
+
+.spkr-cont-event h1{
+    font-size: 1.5vw;
+    font-family: "Barlow Condensed", sans-serif;
+    color: #224259;
+    margin-bottom: 0 !important;
+    padding: .3vw 1vw;
+}
+
+.srjn-top-evnt{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.srjn-top-evnt h1{
+    color: white;
+    font-size: 7.5vw;
+    font-weight: 900;
+    font-family: "Barlow Condensed", sans-serif;
+}
+
+.dte-lcn-evnt-hro{
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+}
+
+.dte-evnt-hme{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+
+.dte-evnt-hme h2{
+    color: white;
+    font-size: 1.3vw;
+    font-family: "Barlow Condensed", sans-serif;
+    margin-left: 1vw;
+    margin-bottom:  0 !important;
+}
+
+.vw-dtls-evnt-hro{
+    position: absolute;
+    left: 50%;
+    top: 88%;
+    transform: translate(-50%, -88%);
+}
+
+.vw-dtls-evnt-hro button{
+    background-color: #224259;
+    color: white;
+    font-size: 1.8vw;
+    padding: .3vw 1.5vw;
+    font-weight: 600;
+    border: none;
+    border-radius: 1vw;
+}
+
+@media only screen and (max-width:991px){
+    .events-main-hero{
+        height: 60vw;
+    }
+
+    .dte-lcn-evnt-hro{
+        width: 48%;
+    }
+
+    .dte-evnt-hme h2{
+        font-size: 2vw;
+        margin-left: 2vw;
+    }
+}
+
+@media only screen and (max-width:660px){
+    .events-main-hero{
+        height: 130vw;
+        /* aspect-ratio: auto; */
+        background-position-y: center;
+        background-position-x: center;
+    }
+
+    .spkr-cont-event{
+        position: absolute;
+        top: 17%;
+        left: 50%;
+        transform: translate(-50%, -17%);
+        border-radius: 40vw;
+    }
+
+    .spkr-cont-event h1{
+        font-size: 4vw;
+        padding: 1.4vw 4vw;
+    }
+
+    .srjn-top-evnt{
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -45%);
+    }
+    
+    .srjn-top-evnt h1{
+        font-size: 13vw;
+    }
+
+    .dte-lcn-evnt-hro{
+        width: 80%;
+        position: absolute;
+        top: 67%;
+        left: 50%;
+        transform: translate(-50%, -67%);
+    }
+
+    .dte-evnt-hme h2{
+        color: white;
+        font-size: 3.7vw;
+        font-family: "Barlow Condensed", sans-serif;
+        margin-left: 3vw;
+        margin-bottom:  0 !important;
+    }
+
+    .vw-dtls-evnt-hro{
+        position: absolute;
+        left: 50%;
+        top: 85%;
+        transform: translate(-50%, -85%);
+    }
+    
+    .vw-dtls-evnt-hro button{
+        font-size: 3.8vw;
+        padding: 2vw 7vw;
+        font-weight: 500;
+        border-radius: 3vw;
+    }
+}

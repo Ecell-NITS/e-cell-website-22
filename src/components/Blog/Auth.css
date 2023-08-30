@@ -1,0 +1,54 @@
+.formauthenticateprovblog{
+    width: 75%;
+    margin: 0 auto;
+    min-height: 45vw;
+    padding-top: 8vw;
+}
+
+.formauthenticateprovblog h2{
+    text-align: center;
+    color: rgba(62, 97, 142, 1);
+    font-weight: 600;
+    font-size: 5vw;
+}
+
+.formlogin{
+    margin: 2vw 0;
+}
+
+.formlogin input{
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    transition: all 0.3s;
+}
+
+.formlogin input:focus{
+        outline: none;
+        border-color: #80bdff;
+        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.formlogin label{
+    color: rgba(80, 80, 80, 1);
+    font-size: 2vw;
+}
+
+@media (max-width:660px){
+    .formauthenticateprovblog{
+        min-height: 100vh;
+        padding-top: 20vw;
+    }
+
+    .formauthenticateprovblog h2{
+        font-size: 8vw;
+    }
+
+    .formlogin label{
+        font-size: 4vw;
+        margin-bottom: 2vw;
+    }
+
+    .formlogin{
+        margin: 4vw 0;
+    }
+}

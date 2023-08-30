@@ -1,0 +1,17 @@
+.Gallery_card {
+  max-width: 25vw;
+  /* max-height: 22vw; */
+  box-shadow: 4px 4px 12px rgba(79, 79, 79, 0.2), -4px -4px 12px rgba(242, 242, 242, 0.25);
+  border-radius: 8px;
+  margin: 2.5vw;
+}
+.card_title {
+  font-size: 1.5rem;
+  margin: 1rem;
+}
+
+@media screen and (max-width: 900px){
+  .Gallery_card{
+    max-width: 40vw;
+  }
+}

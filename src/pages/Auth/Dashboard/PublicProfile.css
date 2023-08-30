@@ -1,0 +1,27 @@
+#noblogsmsgstyling{
+    text-align: center;
+    font-size: 2vw;
+    margin-top: 2vw;
+}
+
+#makeitcenterdamn{
+   display: flex;
+   justify-content: center;
+}
+
+#publishedblogforusertitle{
+    font-size: 3.2vw;
+    text-align: center;
+    text-decoration: underline;
+    color: #224259;
+}
+
+@media (max-width:660px){
+    #noblogsmsgstyling{
+        font-size: 4vw;
+    }
+
+    #publishedblogforusertitle{
+        font-size: 5.2vw;
+    }
+}

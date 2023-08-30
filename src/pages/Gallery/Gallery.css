@@ -1,0 +1,49 @@
+.Gallery-top {
+  /* padding-top: 4rem; */
+  height:36vw;
+  background: url(https://res.cloudinary.com/dp92qug2f/image/upload/v1685002602/gallery-ecell-website/WhatsApp_Image_2023-05-25_at_13.43.47_st4qdy.webp);
+  background-position: left, right;
+  background-repeat: no-repeat;
+  background-size: 60% 100%;
+  background-attachment: scroll;
+  background-color: white;
+}
+
+.Gallery-top h1 {
+  display: absolute;
+  color: #224259;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 8vw;
+  line-height: 1.6;
+  font-weight: 900;
+padding-top:13vw;
+}
+
+.Gall-part {
+  margin-left: 49.5% !important;
+  color: white !important;
+  margin-right: 0 !important;
+}
+
+@media only screen and (max-width:660px){
+  .Gallery-top{
+    background-size: 61.5% 100%;
+    background-position-x: center;
+    height: 72vw;
+    background-size: cover;
+  }
+
+  .Gallery-top h1{
+    font-size: 16vw;
+    line-height: 1.3;
+    padding-top: 26vw;
+  }
+
+  .Gall-part{
+    margin-left: 30.5% !important;
+  }
+
+  .ery-part{
+    color: white;
+  }
+}

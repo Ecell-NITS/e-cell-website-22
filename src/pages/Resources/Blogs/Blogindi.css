@@ -1,0 +1,255 @@
+.indiviualblog{
+    padding-top: 4rem;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.indiviualblog h1{
+    /* padding-top: 3vw; */
+    padding-bottom: 2vw;
+    color: rgba(28, 55, 75, 1);
+    font-size: 3.5vw;
+    text-align: center;
+    /* margin-top: -15vw; */
+    font-weight: 900;
+}
+
+.indiviualblog p{
+    color: rgba(96, 96, 96, 1);
+  
+}
+
+.writerdetails{
+    display: flex;
+    background-color: rgba(232, 246, 250, 1);
+    border: 1px solid rgba(102, 108, 116, 0.4);
+    margin-top: 5vw;
+    margin-bottom: 2.5vw;
+    padding-left: 3.5vw;
+    padding-top: 1.5vw;
+    padding-bottom: 1.5vw;
+    border-radius: 15px;
+}
+
+.imgholderwriter{
+    width: 12.5vw;
+    height: 12.5vw;
+}
+
+.imgholderwriter img{
+width: 100% !important;
+height: 100% !important;
+ border-radius: 50%;
+ object-fit: cover;
+ box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.writerintro{
+    width: 83%;
+}
+
+.writerintro p{
+    color: rgba(34, 66, 89, 1);
+    font-size: 1.5vw;
+    padding: 0vw 1.2vw 0 3vw;
+}
+
+.imgoldermainblogindi{
+    width: 70%;
+    /* height: 10%; */
+    margin: 2vw auto;
+}
+
+.imgoldermainblogindi img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 6.456px;
+    pointer-events: none;
+    user-select: none;
+}
+
+#btnbacktoresoucres{
+    background-color: white;
+    font-size: 1.5vw;
+    border: none;
+    outline: none;
+    color: rgba(28, 55, 75, 1);
+}
+
+.bottomindiblogftr{
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 5vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.smedisharetoicons button{
+    background-color: white;
+    border: none;
+    outline:none;
+    margin: 0 .5vw;
+    font-size: 2vw;
+    color: rgba(28, 55, 75, 1);
+}
+
+#nameinwriterindiblog{
+    font-size: 2.25vw;
+    text-align: left;
+    padding: 0 !important;
+    padding-left: 3vw !important;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.dateandtimeofpost{
+    font-size: 1.35vw;
+    margin: 2vw 0;
+}
+
+#writerimpspan{
+    color: #224259;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#reading-author-name{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#reading-author-name h6 {
+    color: #224259;
+    font-size: 1.5vw;
+}
+
+.topicpicimgstyled {
+    width: 100%;
+    height: 25vw;
+    position: relative;
+    overflow: hidden;
+    /* z-index: -1; */
+}
+
+.topicpicimgstyled img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: filter 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.parallax-container {
+    transform-style: preserve-3d;
+}
+
+.parallax-container img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: filter 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.topicpicimgstyled:hover img {
+    transform: scale(1.05);
+}
+
+.indiviualblog p img{
+    border-radius: 10px;
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.484);
+ pointer-events: none;
+
+}
+
+
+@media (max-width:999px){
+    .indiviualblog img {
+        width: 90% !important;
+      height: 50% !important;
+        object-fit: cover !important;
+    } 
+}
+
+@media (max-width:660px){
+    .indiviualblog{
+        width: 90%;
+        padding-top: 10vw;
+    }
+
+    .indiviualblog h1{
+        font-size: 7vw;
+        padding-top: 0;
+        /* margin-bottom: 5vw; */
+    }
+
+    #btnbacktoresoucres{
+        font-size: 4vw;
+    }
+
+    .bottomindiblogftr{
+        width: 90%;
+        margin-bottom: 15vw;
+    }
+
+    .smedisharetoicons button{
+        margin: 0 1vw;
+        font-size: 5vw;
+    }
+
+    .writerdetails{
+        flex-direction: column;
+        margin-bottom: 12.5vw;
+    }
+
+    .imgholderwriter{
+    margin: 2.5vw auto;
+    width: 25vw !important;
+    height: 25vw !important;
+    }
+
+    .imgholderwriter img{
+        width: 100% !important;
+        height: 100% !important;
+         border-radius: 50%;
+        }
+
+    .writerintro{
+        width: 95%;
+    }
+
+    .writerintro{
+        padding: 3vw;
+    }
+
+    .writerintro p{
+        margin: 0;
+        padding: 0;
+        font-size: 4vw;
+    }
+
+    #nameinwriterindiblog{
+        font-size:5.5vw;
+        text-align: center;
+        padding: 0 !important;
+        margin-top: 2vw;
+        margin-bottom: 5vw;
+    }
+
+    .dateandtimeofpost{
+        font-size:2.9vw;
+        margin: 4vw 0;
+    }
+
+    #reading-author-name h6 {
+        font-size:3.6vw;
+    }
+
+    .topicpicimgstyled {
+        width: 100%;
+        height: 30vw;
+    }
+}

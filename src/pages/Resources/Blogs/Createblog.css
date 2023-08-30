@@ -1,0 +1,94 @@
+.mainblogmake{
+    padding-top: 10vw;
+    padding-bottom: 10vw;
+    width: 93%;
+    margin: 0 auto;
+}
+
+.titletopcbl{
+    margin-bottom: 4vw;
+    color: rgba(34, 66, 89, 1);
+    font-size: 4vw;
+}
+
+.firstboxvreateblog{
+    width: 75%;
+    border-radius: 5px;
+    margin-bottom: 4vw;
+    padding:  1.5vw;
+    border: 2px solid grey;
+}
+
+#writerdivid{
+    display: none;
+}
+
+.specificttle{
+    color: rgba(154, 148, 148, 1);
+    font-size: 1.2vw;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    margin-top: 1vw;
+}
+
+.ttleinptcrteblog{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: rgba(34, 66, 89, 1);
+    font-size: 2vw;
+}
+
+#cretaeblogsinpt{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 1.3vw;
+    margin: 1.5vw 0;
+    /* border-color: rgba(80, 80, 80, 1); */
+}
+
+#crteblogbtn0{
+    font-size: 2vw;
+    padding: .5vw 2vw;
+    transition: 0.3s;
+}
+
+#crteblogbtn0:active{
+    box-shadow: 0 0 0 5px #224259;
+}
+
+
+
+@media (max-width:660px){
+    .mainblogmake, .firstboxvreateblog{
+        width: 95%;
+    }
+
+    .firstboxvreateblog{
+        margin-bottom: 8vw;
+        padding:  3vw;
+    }
+
+    .titletopcbl{
+        margin-bottom: 8vw;
+        font-size: 8vw;
+    }
+
+    .ttleinptcrteblog{
+        font-size: 4vw;
+    }
+    
+    .specificttle{
+        font-size: 3.2vw;
+        margin-top: 1vw;
+    }
+
+    #cretaeblogsinpt{
+        font-size: 3.6vw;
+        margin: 3vw 0;
+    }
+
+    #crteblogbtn0{
+        font-size: 5vw;
+        padding: 1vw 4vw;
+    }
+}

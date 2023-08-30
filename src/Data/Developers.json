@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "name": "Manash Pratim Pathak",
+        "rank": "Senior Developer",
+        "image": "https://res.cloudinary.com/dk4b8plah/image/upload/v1679414942/Senior%20developers/manash_oy80eh.webp",
+        "fb": " https://www.facebook.com/manashpratim.pathak.73 ",
+        "linkdln": "https://www.linkedin.com/in/manash-pratim-pathak-6039b81b6/",
+        "git": "https://github.com/ManashPratimPathak"
+    },
+    {
+       "id": 2,
+       "name": "Sankit Kundu",
+       "rank": "Senior Developer",
+       "image": "https://res.cloudinary.com/dk4b8plah/image/upload/v1679414943/Senior%20developers/sankit1_kj02jf.webp",
+       "fb": "https://www.facebook.com/sankit.kundu.370",
+       "linkdln": "https://www.linkedin.com/in/sankit-kundu-7677131b9/",
+       "git": "https://github.com/san234751"
+ 
+    },
+    {
+       "id": 3,
+       "name": "Biju Borah",
+       "rank": "Senior Developer",
+       "image": "https://res.cloudinary.com/dk4b8plah/image/upload/v1679414935/Senior%20developers/biju_1_jsgvw9.webp",
+       "fb": "https://www.facebook.com/biju.borah.77582",
+       "linkdln": "https://www.linkedin.com/in/biju-borah-1bb78620a/?originalSubdomain=in",
+       "git": "https://github.com/biju-borah"
+    },
+ 
+    {
+       "id": 4,
+        "name": "Doneela Das",
+        "rank": "Senior Developer",
+        "image": "https://res.cloudinary.com/dk4b8plah/image/upload/v1679414939/Senior%20developers/doneela1_rhz4jw.webp",
+        "fb": "https://www.facebook.com/doneela.das.71",
+        "linkdln": "https://www.linkedin.com/in/ddas7",
+        "git": "https://github.com/doneela"   
+    },
+    {
+       "id": 5,
+       "name": "Bhaskar Wary",
+       "rank": "Senior UI&UX Designer",
+       "image": "https://res.cloudinary.com/dk4b8plah/image/upload/v1679414874/Senior%20developers/bhaskar_i9yeqh.webp",
+       "fb": "https://www.linkedin.com/in/bhaskar-wary/",
+       "linkdln": "https://www.linkedin.com/in/bhaskar-wary/",
+       "git": "https://www.behance.net/bhaskarwary "
+    }
+    
+ ]
