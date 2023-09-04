@@ -1,3 +1,13 @@
+.briefintrohldman p{
+    font-size: 1.5vw;
+}
+
+@media (max-width:660px){
+    .briefintrohldman p{
+        font-size: 5.5vw;
+    }
+}
+
 .mainblogstarts{
     width: 90%;
     margin: 0 auto;

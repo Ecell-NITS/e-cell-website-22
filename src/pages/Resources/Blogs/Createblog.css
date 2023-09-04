@@ -1,3 +1,13 @@
+.indiviualblog p{
+    font-size: 1.5vw;
+}
+
+@media (max-width:660px){
+    .indiviualblog p{
+        font-size: 6vw;
+    }
+}
+
 .mainblogmake{
     padding-top: 10vw;
     padding-bottom: 10vw;
@@ -57,6 +67,9 @@
 }
 
 
+.jodit-wysiwyg p{
+    font-size: 30px;
+}
 
 @media (max-width:660px){
     .mainblogmake, .firstboxvreateblog{
