@@ -1,220 +1,246 @@
-.dashboardmain{
-    padding-top: 7vw;
+.dashboardmain {
+  padding-top: 7vw;
 }
 
-.flexingphotocontent{
-    display: flex;
+.flexingphotocontent {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 5vw;
+}
+
+.phhotodash {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+
+.photodashimg {
+  width: 100%;
+  height: 30vw;
+}
+
+.photodashimg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10.67px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+}
+
+.biodashboardd {
+  padding-left: 3%;
+  width: 67%;
+}
+
+.accountusername {
+  font-weight: 600;
+  font-size: 3vw;
+}
+
+.firstseconndchild {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.editkryieprof {
+  color: rgba(193, 0, 0, 1);
+  border: 2px solid rgba(193, 0, 0, 1);
+  background-color: white;
+  padding: 0.25vw 1.5vw !important;
+  border-radius: 7.59px;
+  font-size: 1.7vw;
+}
+
+.biohbhauidhar {
+  margin: 4vw 0 2.9vw 0;
+  padding: 1.3vw;
+  border: 2px solid rgba(160, 160, 160, 0.55);
+  border-radius: 16.7px;
+}
+
+.biohbhauidhar h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: rgba(80, 80, 80, 1);
+  font-size: 1.3vw;
+  line-height: 1.6;
+}
+
+#tabchangerdashboard {
+  padding-top: 0;
+}
+
+.profeftcontparnt {
+  text-align: right;
+}
+
+#sirfcolorchng {
+  color: rgba(34, 66, 89, 1);
+  border: 2px solid rgba(34, 66, 89, 1);
+  /* margin-left: 17vw; */
+  padding: 0.25vw 3vw !important;
+}
+
+.namenadbtnsinsame {
+  display: flex;
+}
+
+.usernamehlderdash {
+  width: 80% !important;
+}
+
+.btnholrgdashbo {
+  width: 40%;
+  display: flex !important;
+  justify-content: flex-end !important;
+}
+
+#blogs_under_profile_protected {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#indicardblog_protct {
+  user-select: none;
+  flex: none;
+  order: 1;
+  width: 31%;
+  border: 1.5px solid rgba(80, 80, 80, 1);
+  border-radius: 6.13px;
+  padding: 1vw;
+  margin-top: 2vw;
+  margin-bottom: 2vw;
+}
+
+.smediaconnectlinks {
+  display: flex;
+  margin: 1vw 0;
+  justify-content: center;
+}
+
+#igfaa,
+#githubfaa,
+#linkkedinfaa {
+  margin-left: 1vw;
+}
+
+.smedia1div {
+  font-size: 2.25vw;
+}
+
+.smedia1div button {
+  background-color: white;
+  border: none;
+  outline: none;
+  color: #224259;
+}
+
+@media (max-width: 660px) {
+  #indicardblog_protct {
+    width: 90%;
+    margin: 5vw auto;
+    padding: 2vw;
+  }
+
+  .flexingphotocontent {
+    flex-direction: column;
     width: 90%;
     margin: 0 auto;
-    padding-bottom: 5vw;
-}
+    padding-bottom: 10vw;
+  }
 
-.phhotodash{
-    width: 30%;
-    display: flex;
-    flex-direction: column;
-}
+  .phhotodash {
+    width: 60vw;
+    margin: 5vw auto;
+  }
 
-.photodashimg{
-    width: 100%;
-    height: 30vw;
-}
+  .photodashimg {
+    width: 60vw;
+    height: 60vw;
+  }
 
-.photodashimg img{
+  .photodashimg img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 10.67px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    pointer-events: none;
-}
+  }
 
-.biodashboardd{
-    padding-left: 3%;
-    width: 67%;
-}
+  .biodashboardd {
+    width: 100% !important;
+    padding-left: 0;
+  }
 
-.accountusername{
-    font-weight: 600;
-    font-size: 3vw;
-}
-
-.firstseconndchild{
+  .profeftcontparnt {
+    width: 100%;
     display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-}
+    gap: 0.5rem;
+  }
 
-.editkryieprof{
-    color: rgba(193, 0, 0, 1);
-    border: 2px solid rgba(193, 0, 0, 1);
-    background-color: white;
-    padding: .25vw 1.5vw !important;
+  .profeftcontparnt > button {
+    flex-grow: 1;
+  }
+
+  .usernamehlderdash {
+    width: 100% !important;
+  }
+
+  .btnholrgdashbo {
+    width: 100%;
+  }
+
+  .namenadbtnsinsame {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+  }
+
+  .accountusername {
+    font-size: 6vw;
+  }
+
+  .editkryieprof {
+    padding: 0.75vw 3vw !important;
     border-radius: 7.59px;
-    font-size: 1.7vw;
-}
+    font-size: 3.4vw;
+  }
 
-.biohbhauidhar{
-    margin: 4vw 0 2.9vw 0;
-    padding: 1.3vw;
-    border: 2px solid rgba(160, 160, 160, 0.55);
-    border-radius: 16.7px;
-}
+  #sirfcolorchng {
+    padding: 0.75vw 5vw !important;
+  }
 
-.biohbhauidhar h3{
+  .biohbhauidhar {
+    width: 100% !important;
+    margin: 8vw 0 2.9vw 0;
+    padding: 3vw;
+  }
+
+  .biohbhauidhar h3 {
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     color: rgba(80, 80, 80, 1);
-    font-size: 1.3vw;
+    font-size: 3vw;
     line-height: 1.6;
-}
+  }
 
-#tabchangerdashboard{
-    padding-top: 0;
-}
-
-.profeftcontparnt{
-    text-align: right;
-}
-
-#sirfcolorchng{
-    color: rgba(34, 66, 89, 1);
-    border: 2px solid rgba(34, 66, 89, 1);
-    /* margin-left: 17vw; */
-    padding: .25vw 3vw !important;
-}
-
-.namenadbtnsinsame{
+  .smediaconnectlinks {
     display: flex;
-    
-}
+    margin: 3vw 0;
+  }
 
-.usernamehlderdash{
-    width: 80% !important;
-}
+  #igfaa,
+  #githubfaa,
+  #linkkedinfaa {
+    margin-left: 2vw;
+  }
 
-.btnholrgdashbo{
-    width: 40%;
-    display: flex !important;
-    justify-content: flex-end !important;
-}
-
-#blogs_under_profile_protected{
-    width: 90%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-#indicardblog_protct{
-    user-select: none;
-    flex: none;
-    order: 1;
-    width: 31%;
-    border: 1.5px solid rgba(80, 80, 80, 1);
-    border-radius: 6.13px;
-    padding: 1vw;
-    margin-top: 2vw;
-    margin-bottom: 2vw;
-}
-
-.smediaconnectlinks{
-    display: flex;
-    margin: 1vw 0;
-    justify-content: center;
-}
-
-#igfaa, #githubfaa,#linkkedinfaa{
-    margin-left: 1vw;
-}
-
-.smedia1div{
-    font-size: 2.25vw;
-}
-
-.smedia1div button{
-    background-color: white;
-    border: none;
-    outline: none;
-    color: #224259;
-}
-
-@media (max-width:660px){
-    #indicardblog_protct{
-        width: 90%;
-        margin: 5vw auto;
-        padding: 2vw;
-    }
-
-    .flexingphotocontent{
-        flex-direction: column;
-        width: 90%;
-        margin: 0 auto;
-        padding-bottom: 10vw;
-    }
-
-    .phhotodash{
-        width: 60vw;
-        margin: 5vw auto;
-    }
-    
-    .photodashimg{
-        width: 60vw;
-        height: 60vw;
-    }
-    
-    .photodashimg img{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 10.67px;
-    }
-
-    .biodashboardd{
-        width: 100% !important;
-        padding-left: 0;
-    }
-
-    .accountusername{
-        font-size: 6vw;
-    }
-
-    .editkryieprof{
-        padding: .75vw 3vw !important;
-        border-radius: 7.59px;
-        font-size:3.4vw;
-    }
-
-    #sirfcolorchng{
-        padding: .75vw 5vw !important;
-    }
-
-    .biohbhauidhar{
-        width: 100% !important;
-        margin: 8vw 0 2.9vw 0;
-        padding:3vw;
-      
-    }
-    
-    .biohbhauidhar h3{
-        font-family: "Poppins", sans-serif;
-        font-weight: 400;
-        color: rgba(80, 80, 80, 1);
-        font-size: 3vw;
-        line-height: 1.6;
-    }
-
-    .smediaconnectlinks{
-        display: flex;
-        margin: 3vw 0;
-    }
-
-    #igfaa, #githubfaa,#linkkedinfaa{
-        margin-left: 2vw;
-    }
-    
-    .smedia1div{
-        font-size: 5vw;
-    }
+  .smedia1div {
+    font-size: 5vw;
+  }
 }
