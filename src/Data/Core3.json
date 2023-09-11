@@ -64,9 +64,18 @@
         "git": "https://github.com/31adityakumar"
      },
      {
+        "id": 27,
+         "name": "Maharnav Deka",
+        "rank": "Technical Co-Head",
+         "image": "https://res.cloudinary.com/duejpnj1y/image/upload/v1679413749/Juniordev/Maharnav_Deka_x5edso.webp",
+         "fb": "https://www.facebook.com/profile.php?id=100076295825121",
+         "linkdln": "https://www.linkedin.com/in/maharnav-deka-06742815a/",
+         "git": "https://github.com/mdekaa"
+      },
+     {
         "id": 11,
          "name": "Vidhi Shrimali ",
-         "rank": "Content Co-Heads",
+         "rank": "Content Co-Head",
          "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1685375287/23-24%20core/IMG_20220629_190742_-_CE050_Vidhi_Shrimali_1_lnovlx.webp",
          "fb": "https://www.facebook.com/profile.php?id=100076114603753&mibextid=ZbWKwL",
          "linkdln": "https://www.linkedin.com/in/vidhi-shrimali-87164422b",
@@ -75,7 +84,7 @@
      {
         "id": 12,
          "name": "Uttirna Talukdar ",
-         "rank": "Content Co-Heads ",
+         "rank": "Content Co-Head ",
          "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1685376231/23-24%20core/IMG_20230410_212104_480_-_ECE_144_Uttirna_Talukdar_1_magstj.webp",
          "fb": "https://www.facebook.com/uttirna.talukdar?mibextid=ZbWKwL",
          "linkdln": "https://www.linkedin.com/in/uttirna-talukdar/",
@@ -162,7 +171,7 @@
    {
       "id": 17,
        "name": "Abhishek Kumar Prasad ",
-       "rank": "Publicity Co-heads",
+       "rank": "Publicity Co-head",
        "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1685375275/23-24%20core/IMG20230323170310_3_-_CE027_Abhishek_uznhst.webp",
        "fb": "https://www.facebook.com/profile.php?id=100010634221532",
        "linkdln": "https://www.linkedin.com/in/abhishek-kumar-prasad-b2220424b",
@@ -171,7 +180,7 @@
    {
     "id": 18,
      "name": "Amlan Mohapatra",
-     "rank": "Publicity Co-heads",
+     "rank": "Publicity Co-head",
      "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1685375263/23-24%20core/profile_pic_-_32_Amlan__Mohapatra_jtqkow.webp",
      "fb": "https://www.facebook.com/amlan.mohapatra2003",
      "linkdln": "https://www.linkedin.com/in/amlan-mohapatra/",
@@ -205,15 +214,7 @@
              "git": "https://github.com/BIPS8812"
             },
             
-         {
-            "id": 27,
-             "name": "Maharnav Deka",
-            "rank": "Senior Technical Associate",
-             "image": "https://res.cloudinary.com/duejpnj1y/image/upload/v1679413749/Juniordev/Maharnav_Deka_x5edso.webp",
-             "fb": "https://www.facebook.com/profile.php?id=100076295825121",
-             "linkdln": "https://www.linkedin.com/in/maharnav-deka-06742815a/",
-             "git": "https://github.com/mdekaa"
-          },
+       
             {
                 "id": 22,
                  "name": "Devanshu Singh",

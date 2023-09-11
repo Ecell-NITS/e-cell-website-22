@@ -123,11 +123,11 @@ const Footer = () => {
                 <span className="i-text">ecell@nits.ac.in</span>
               </li>
             </a>
-            <a href="tel:+91 6263 943 064">
+            <a href="tel:+91 9795888891">
               {" "}
               <li>
                 <BsFillTelephoneFill className="f_icon" />
-                <span className="i-text">+91 70803 21990</span>
+                <span className="i-text">+91 9795888891</span>
               </li>
             </a>
           </ul>
