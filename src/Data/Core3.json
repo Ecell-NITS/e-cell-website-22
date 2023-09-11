@@ -9,7 +9,7 @@
         "git": "https://github.com/shriyal22"
     },
     {
-        "id": 13,
+        "id": 2,
          "name": "Mrinal kalita ",
          "rank": "General Secretary ",
          "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1685375264/23-24%20core/IMG_Mon_May_08_14_10_52_GMT05_30_2023_-_ECE-A027_MRINAL_KALITA_izmoqr.webp",
@@ -18,7 +18,7 @@
          "git": "https://github.com/mrinalpy20"
      },
     {
-       "id": 2,
+       "id": 3,
        "name": "Arpit Dhankani",
        "rank": "Vice President",
        "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1685375265/23-24%20core/IMG_20230209_000433_-_EEB_143_Arpit_1_yk76xm.webp",
@@ -28,7 +28,7 @@
  
     },
     {
-        "id": 3,
+        "id": 4,
          "name": "Chayan Gulgulia",
          "rank": "Executive Co-Head",
          "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1685375273/23-24%20core/IMG_5310-min_-_CE_131_Chayan_Gulgulia_1_lcfy8e.webp",
@@ -37,7 +37,7 @@
          "git": "https://github.com/chayanjn24"
      },
      {
-        "id": 4,
+        "id": 5,
          "name": "Aditi Archita Khataniar ",
          "rank": "Executive Co-Head",
          "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1685375265/23-24%20core/IMG_20230227_011043_369_-_CSE_185_Aditi_Archita_Khataniar_1_sjuylx.webp",
@@ -46,7 +46,7 @@
          "git": "https://github.com/adzzzzzzzz"
      },
     {
-       "id": 5,
+       "id": 6,
        "name": "Aditya Ranjan",
        "rank": "Technical Co-Head",
        "image": "https://res.cloudinary.com/dp92qug2f/image/upload/v1681359339/perosnal/edited_aditya_ranjan_lyx5ns.webp",
@@ -55,7 +55,7 @@
        "git": "https://github.com/hereisadi"
     },
     {
-        "id": 6,
+        "id": 7,
         "name": "Aditya Kumar",
         "rank": "Technical Co-Head",
         "image": "https://res.cloudinary.com/dnvhl9pru/image/upload/v1681064509/proflie-picpng_2-removebg-preview_qeckz9.webp",
@@ -64,7 +64,16 @@
         "git": "https://github.com/31adityakumar"
      },
      {
-        "id": 11,
+        "id": 23,
+         "name": "Maharnav Deka",
+        "rank": "Technical Co-Head",
+         "image": "https://res.cloudinary.com/duejpnj1y/image/upload/v1679413749/Juniordev/Maharnav_Deka_x5edso.webp",
+         "fb": "https://www.facebook.com/profile.php?id=100076295825121",
+         "linkdln": "https://www.linkedin.com/in/maharnav-deka-06742815a/",
+         "git": "https://github.com/mdekaa"
+      },
+     {
+        "id": 8,
          "name": "Vidhi Shrimali ",
          "rank": "Content Co-Heads",
          "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1685375287/23-24%20core/IMG_20220629_190742_-_CE050_Vidhi_Shrimali_1_lnovlx.webp",
@@ -73,7 +82,7 @@
          "git": "#"
      },
      {
-        "id": 12,
+        "id": 9,
          "name": "Uttirna Talukdar ",
          "rank": "Content Co-Heads ",
          "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1685376231/23-24%20core/IMG_20230410_212104_480_-_ECE_144_Uttirna_Talukdar_1_magstj.webp",
@@ -83,7 +92,7 @@
      },
  
     {
-       "id": 7,
+       "id": 10,
         "name": "Amrita Kashyap",
         "rank": "Design Co-Head",
         "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1685376231/23-24%20core/20220711_023231_204_-_ECE_016_Amrita_Kashyap_1_1_vf3gxe.webp",
@@ -92,7 +101,7 @@
         "git": "https://github.com/amrita7734"   
    },
     {
-       "id": 8,
+       "id": 11,
        "name": "Ashutosh Ojha",
        "rank": "Design Co-Head",
        "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1685375277/23-24%20core/Ashutosh_-_EEB_121_Ashutosh_ebhxkb.webp",
@@ -103,7 +112,7 @@
 
     
     {
-       "id": 9,
+       "id": 12,
         "name": "Rituraj Gautam",
         "rank": "Collaboration & Outreach Co-Head",
         "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1685375264/23-24%20core/IMG_20230524_000513_-_Rituraj_xap1sh.webp",
@@ -112,7 +121,7 @@
         "git": "https://github.com/yourgitcoder"
     },
     {
-       "id": 10,
+       "id": 13,
         "name": "Priyajit Paul",
         "rank": "Collaboration & Outreach Co-Head",
         "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1685375280/23-24%20core/WhatsApp-Image-2023-05-24-at-10.44.39-PM-14_Priyajit-_Paul_tp7p1u.webp",
@@ -121,7 +130,7 @@
         "git": "https://github.com/Priyajit27"
     },
     {
-        "id": 27,
+        "id": 14,
          "name": "Protoy Debroy",
          "rank": "Marketing Head",
          "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1685605007/WhatsApp-Image-2023-05-30-at-19.42.42-ECE_064-Protoy-Debroy_heer3b.webp",
@@ -132,7 +141,7 @@
     
    
    {
-      "id": 14,
+      "id": 15,
        "name": "Vedant Agarwal ",
        "rank": "Event Management Co-Head",
        "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1685375263/23-24%20core/Screenshot_20230524_230007_-_CSE_128_Vedant_sxtc05.webp",
@@ -141,7 +150,7 @@
        "git": "https://github.com/VAO2"
    },
    {
-    "id": 15,
+    "id": 16,
      "name": "Somya Kasaudhan ",
      "rank": "Event Management Co-Head ",
      "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1685375281/23-24%20core/WhatsApp-Image-2023-05-27-at-09.05.18-173_-Somya_Kasaudhan_bfmlfn.webp",
@@ -150,7 +159,7 @@
      "git": "https://github.com/somyakasaudhan02"
  },
    {
-      "id": 16,
+      "id": 17,
        "name": "Ankit Upadhaya ",
        "rank": "Curation Head",
        "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1685375264/23-24%20core/IMG_20230526_101749_-_EI087_Ankit_Upadhaya_aourw8.webp",
@@ -160,7 +169,7 @@
    },
    
    {
-      "id": 17,
+      "id": 18,
        "name": "Abhishek Kumar Prasad ",
        "rank": "Publicity Co-heads",
        "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1685375275/23-24%20core/IMG20230323170310_3_-_CE027_Abhishek_uznhst.webp",
@@ -169,7 +178,7 @@
        "git": "#"
    },
    {
-    "id": 18,
+    "id": 19,
      "name": "Amlan Mohapatra",
      "rank": "Publicity Co-heads",
      "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1685375263/23-24%20core/profile_pic_-_32_Amlan__Mohapatra_jtqkow.webp",
@@ -178,7 +187,7 @@
      "git": "https://github.com/Amlan-Mohapatra-247"
     },
     {
-        "id": 19,
+        "id": 20,
          "name": "Jacinth Mahanta",
          "rank": "General Associate",
          "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1685375281/23-24%20core/Pic-ECE_182_Jacinth-Mahanta_nypvrq.webp",
@@ -187,7 +196,7 @@
          "git": "https://github.com/Jacinth-Mahanta"
     },
     {
-        "id": 20,
+        "id": 21,
          "name": "Dipali Garg",
          "rank": "General Associate",
          "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1685375264/23-24%20core/IMG_20230526_185122_-_CE078_Dipali_Garg_tviwig.webp",
@@ -196,7 +205,7 @@
          "git": "#"
     },
         {
-            "id": 21,
+            "id": 22,
              "name": "Bipangshu Saha",
              "rank": "General Associate",
              "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1685375276/23-24%20core/Bipangshu_Saha_-_67_Bipangshu_Saha_la3j0c.webp",
@@ -205,17 +214,9 @@
              "git": "https://github.com/BIPS8812"
             },
             
-         {
-            "id": 27,
-             "name": "Maharnav Deka",
-            "rank": "Senior Technical Associate",
-             "image": "https://res.cloudinary.com/duejpnj1y/image/upload/v1679413749/Juniordev/Maharnav_Deka_x5edso.webp",
-             "fb": "https://www.facebook.com/profile.php?id=100076295825121",
-             "linkdln": "https://www.linkedin.com/in/maharnav-deka-06742815a/",
-             "git": "https://github.com/mdekaa"
-          },
+         
             {
-                "id": 22,
+                "id": 24,
                  "name": "Devanshu Singh",
                  "rank": "Senior Associate",
                  "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1685375268/23-24%20core/Devanshu_Singh_-_EE_126_Devanshu_t0ht30.webp",
@@ -224,7 +225,7 @@
                  "git": "https://github.com/devanshusingh76"
                 },
                 {
-                    "id": 23,
+                    "id": 25,
                      "name": "Adarsh Kumar",
                      "rank": "Senior Associate",
                      "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1685375276/23-24%20core/IMG_20220617_232515_0817_-_CSE_187_Adarsh_rhmust.webp",
@@ -233,7 +234,7 @@
                      "git": "https://github.com/yousant"
                     },
                     {
-                        "id": 24,
+                        "id": 26,
                          "name": "Vivek kumar",
                          "rank": "Senior Associate",
                          "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1685375263/23-24%20core/WhatsApp_Image_2023-05-06_at_7.27.29_PM_1_-_EEB_096_Vivek_1_ax7zkr.webp",
@@ -242,7 +243,7 @@
                          "git": "https://github.com/vivekumar096"
                         },
                         {
-                            "id": 25,
+                            "id": 27,
                              "name": "Tanishq Keshari",
                              "rank": "Senior Associate",
                              "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1685375274/23-24%20core/IMG_20230526_114624_-_EI069_Tanishq_Keshari_rxqte1.webp",
@@ -251,7 +252,7 @@
                              "git": "#"
                             },
                             {
-                                "id": 26,
+                                "id": 28,
                                  "name": "Vansh Kumar Poddar",
                                  "rank": "Senior Associate",
                                  "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1685375264/23-24%20core/IMG-20220911-WA0021_-_ECE_156_Vansh_Kumar_Poddar_jymldz.webp",
@@ -260,7 +261,7 @@
                                  "git": "https://github.com/Vansh156"
                             },
                             {
-                                "id": 28,
+                                "id": 29,
                                  "name": "Bikash Baruah",
                                  "rank": "Senior Associate",
                                  "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1685605007/picture-ECE_093_Bikash_ytxjmx.webp",
