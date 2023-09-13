@@ -1,189 +1,200 @@
-.signuptopcont{
-    display: flex;
-    min-height: 100vh;
-    /* padding-top: 4rem; */
+.signuptopcont {
+  display: flex;
+  min-height: 100vh;
+  /* padding-top: 4rem; */
 }
 
-.formcontsignup,.imgbgholdersignup{
-    width: 50%;
+.formcontsignup,
+.imgbgholdersignup {
+  width: 50%;
 }
 
-.imgbgholdersignup{
-background-color: rgba(62, 97, 142, 1);
-display: flex;
-justify-content: center;
-align-items: center;
+.imgbgholdersignup {
+  background-color: rgba(62, 97, 142, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.imgbgholdersignup img{
-    width: 70%;
-    object-fit: contain;
+.imgbgholdersignup img {
+  width: 70%;
+  object-fit: contain;
 }
-.formcontsignup{
-    /* padding-top: 10vw; */
-    padding-left: 4vw;
+.formcontsignup {
+  /* padding-top: 10vw; */
+  padding-left: 4vw;
 }
 
-.okwelcometoecell{
-    color: rgba(34, 66, 89, 1);
+.okwelcometoecell {
+  color: rgba(34, 66, 89, 1);
+  font-size: 4vw;
+  padding-top: 10vw;
+}
+
+.enterdtlssignup {
+  font-size: 1.5vw;
+  color: rgba(154, 148, 148, 1);
+}
+
+.formsignaccoutn h3 {
+  color: rgba(34, 66, 89, 1);
+  font-size: 1.8vw;
+}
+
+.formsignaccoutn textarea {
+  font-family: "Barlow Condensed", sans-serif !important;
+  font-size: 1.5vw !important;
+  font-weight: 400 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.formsignaccoutn input,
+.formsignaccoutn textarea {
+  width: 70%;
+  border: 2px solid rgba(154, 148, 148, 1);
+  padding: 0.215vw 0.75vw;
+  border-radius: 6.5px;
+  transition: all 0.3s ease-in-out;
+  font-size: 1.5vw;
+}
+
+.formsignaccoutn #input:focus,
+.formsignaccoutn textarea:focus {
+  outline: none;
+  border-color: #80bdff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.inputdicdignup {
+  margin: 2vw 0;
+}
+
+.labelshowpass {
+  display: flex;
+  align-items: center;
+  margin-top: 1vw;
+}
+.inputshowpass {
+  margin-right: 5px;
+  max-width: fit-content;
+}
+
+.btnsubmittodb {
+  background-color: rgba(62, 97, 142, 1);
+  color: white;
+  width: 70%;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  padding: 0.5vw 1.5vw;
+  font-size: 2vw;
+  margin-bottom: 1vw;
+}
+
+.logexistingaccount {
+  color: rgba(124, 124, 124, 1);
+  font-size: 1.5vw;
+  text-align: center;
+}
+.bottomredirectlogin {
+  display: flex;
+  align-items: first baseline;
+  margin-bottom: 5vw;
+  margin-left: 5vw;
+}
+
+.bottomredirectlogin button {
+  background-color: white;
+  border: none;
+  outline: none;
+  color: rgba(62, 97, 142, 1);
+  font-size: 1.5vw;
+  font-weight: 600;
+  margin-left: 0.5vw;
+}
+
+.msgaftersignuplogin {
+  font-size: 1.2vw;
+  color: red;
+}
+
+#newotpsending {
+  margin-top: 0;
+}
+
+#fogtpwd {
+  margin-left: 23vw;
+  font-size: 1.3vw;
+  color: #3e618e;
+  margin-top: -1vw !important;
+  font-weight: 900;
+}
+
+@media (max-width: 660px) {
+  .imgbgholdersignup {
+    display: none;
+  }
+
+  .formcontsignup {
+    width: 100%;
+  }
+
+  .okwelcometoecell {
+    font-size: 10vw;
+  }
+
+  .enterdtlssignup {
+    font-size: 3vw;
+  }
+
+  .formsignaccoutn h3 {
+    font-size: 4.3vw;
+  }
+
+  .inputdicdignup {
+    margin: 5vw 0;
+  }
+
+  .formsignaccoutn #input,
+  .formsignaccoutn textarea {
+    width: 90%;
+    padding: 0.5vw 1.45vw;
     font-size: 4vw;
-    padding-top: 10vw;
-}
+  }
 
-.enterdtlssignup{
-    font-size: 1.5vw;
-    color: rgba(154, 148, 148, 1);
-}
+  .btnsubmittodb {
+    width: 90%;
+    padding: 1vw 3vw;
+    font-size: 5vw;
+    margin-bottom: 2vw;
+  }
 
-
-.formsignaccoutn h3{
-    color: rgba(34, 66, 89, 1);
-    font-size: 1.8vw;
-}
-
-.formsignaccoutn textarea{
-    font-family: 'Barlow Condensed', sans-serif !important;
-    font-size: 1.5vw !important;
-    font-weight: 400 !important;
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
-}
-
-.formsignaccoutn input, .formsignaccoutn textarea{
-    width: 70%;
-    border: 2px solid rgba(154, 148, 148, 1);
-padding: .215vw .75vw;
-border-radius: 6.5px;
-transition: all 0.3s ease-in-out;
-font-size: 1.5vw;
-}
-
-.formsignaccoutn input:focus,.formsignaccoutn textarea:focus{
-    outline: none;
-    border-color: #80bdff;
-    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-}
-
-
-.inputdicdignup{
-    margin: 2vw 0;
-}
-
-.btnsubmittodb{
-    background-color: rgba(62, 97, 142, 1);
-    color: white;
-    width: 70%;
-    border: none;
-    outline: none;
-    border-radius: 8px;
-    padding: .5vw 1.5vw;
-    font-size: 2vw;
-    margin-bottom: 1vw;
-}
-
-.logexistingaccount{
-    color: rgba(124, 124, 124, 1);
-    font-size: 1.5vw;
-    text-align: center;
-}
-.bottomredirectlogin{
-    display: flex;
-    align-items: first baseline;
+  .bottomredirectlogin {
     margin-bottom: 5vw;
-   margin-left: 5vw;
-}
+    margin-left: 22.5vw;
+  }
 
-.bottomredirectlogin button{
-    background-color: white;
-    border: none;
-    outline: none;
-    color: rgba(62, 97, 142, 1);
-    font-size: 1.5vw;
+  .logexistingaccount {
+    font-size: 3.5vw;
+  }
+
+  .bottomredirectlogin button {
+    font-size: 3.5vw;
     font-weight: 600;
-    margin-left: .5vw;
+    margin-left: 1vw;
+  }
+
+  .msgaftersignuplogin {
+    font-size: 3vw;
+    color: red;
+  }
+
+  #fogtpwd {
+    margin-left: 65vw;
+    font-size: 3vw;
+    color: #3e618e;
+    margin-top: -1vw !important;
+    font-weight: 900;
+  }
 }
-
-.msgaftersignuplogin{
-   font-size: 1.2vw;
-   color: red;
-}
-
-#newotpsending{
-    margin-top: 0;
-}
-
-#fogtpwd{
-   margin-left: 23vw;
-   font-size: 1.3vw;
-   color: #3E618E;
-   margin-top: -1vw !important;
-   font-weight: 900;
-}
-
-@media (max-width:660px){
-    .imgbgholdersignup{
-        display: none;
-    }
-
-    .formcontsignup{
-        width: 100%;
-    }
-
-    .okwelcometoecell{
-        font-size: 10vw;
-    }
-
-    .enterdtlssignup{
-        font-size:3vw;
-    }
-
-    .formsignaccoutn h3{
-        font-size: 4.3vw;
-    }
-
-    .inputdicdignup{
-        margin: 5vw 0;
-    }
-
-    .formsignaccoutn input,.formsignaccoutn textarea{
-        width: 90%;
-    padding: .5vw 1.45vw;
-    font-size: 4vw;
-    }
-
-    .btnsubmittodb{
-        width: 90%;
-        padding: 1vw 3vw;
-        font-size: 5vw;
-        margin-bottom: 2vw;
-    }
-
-    .bottomredirectlogin{
-        margin-bottom: 5vw;
-       margin-left: 22.5vw;
-    }
-
-    .logexistingaccount{
-        font-size: 3.5vw;
-    }
-
-    .bottomredirectlogin button{
-        font-size: 3.5vw;
-        font-weight: 600;
-        margin-left: 1vw;
-    }
-
-    .msgaftersignuplogin{
-        font-size: 3vw;
-        color: red;
-     }
-
-     #fogtpwd{
-        margin-left: 65vw;
-        font-size: 3vw;
-        color: #3E618E;
-        margin-top: -1vw !important;
-        font-weight: 900;
-     }
-}
-
