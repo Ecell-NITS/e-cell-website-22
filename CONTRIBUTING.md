@@ -44,4 +44,4 @@ Thank you for considering contributing to E-Cell NITS Website repo! We welcome c
 
 ## License
 
-By contributing to this project, you agree that your contributions will be licensed under the project's [LICENSE](link-to-license).
+By contributing to this project, you agree that your contributions will be licensed under the project's [LICENSE](https://github.com/Ecell-NITS/e-cell-website-22/blob/newdev/LICENSE).
