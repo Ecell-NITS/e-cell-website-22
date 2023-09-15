@@ -69,6 +69,16 @@ font-size: 1.5vw;
     margin: 2vw 0;
 }
 
+.labelshowpass {
+    display: flex;
+    align-items: center;
+    margin-top: 1vw;
+  }
+  .inputshowpass {
+    margin-right: 5px;
+    max-width: fit-content;
+  }
+
 .btnsubmittodb{
     background-color: rgba(62, 97, 142, 1);
     color: white;
