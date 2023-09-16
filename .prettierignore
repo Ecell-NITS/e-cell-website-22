@@ -1,0 +1,4 @@
+node_modules
+dist
+*.md
+pnpm-lock.yaml
