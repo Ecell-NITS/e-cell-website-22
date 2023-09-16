@@ -1,35 +1,36 @@
-[{
-    "id":1,
-    "head":"Joy",
-    "img":"https://res.cloudinary.com/dp92qug2f/image/upload/v1685381429/Ecell%20website/resources/Joyfilmposter_zushtq.webp",
-    "content":"Story of Joy Mangano who invented the self-wringing magical mop. The movie shows the obstacles she faces in her personal and professional life while struggling to get the patent of her invention."
-},
-{
-    "id":2,
-    "head":"Big Night",
-    "author":"Speaker - Podcast2",
-    "img":"https://res.cloudinary.com/dp92qug2f/image/upload/v1685381429/Ecell%20website/resources/Big_night_wxzeh5.webp",
-    "content":"A tale of two Italian brothers trying to make it in the Restaurant business while trying to keep their family together. P.S. Don’t watch it if you’re hungry!"
-},
-{
-    "id":3,
-    "head":"The Pursuit of Happyness",
-    "author":"Speaker - Podcast3",
-    "img":"https://res.cloudinary.com/dp92qug2f/image/upload/v1685381429/Ecell%20website/resources/Poster-pursuithappyness_zp7la0.webp",
-    "content":"'There’s always light at the end of the tunnel'. The movie follows the life of a man who goes from being broke to opening his own brokerage firm. Have your tissues handy as this will be an emotional ride."
-},
-{
-    "id":4,
-    "head":"Steve Jobs",
-    "author":"Speaker - Podcast4",
-    "img":"https://res.cloudinary.com/dp92qug2f/image/upload/v1685381429/Ecell%20website/resources/SteveJobsposter_vdvbbw.webp",
-    "content":"The film is based on the book by the same name written by Walter Issacson. The movie shows the BTS of three product launches over the span of 14 years and paints an intimate picture of the man at the center."
-},
-{
-    "id":5,
-    "head":"Chef",
-    "author":"Speaker - Podcast5",
-    "img":"https://res.cloudinary.com/dp92qug2f/image/upload/v1685381430/Ecell%20website/resources/Chef_2014_bwz5dv.webp",
-    "content":"A mouthwatering and endearing story of a chef rediscovering his love of cooking, starting a food truck, and going on a road trip with his son. Also the movie will make you love the Cuban Cuisine."
-}
+[
+  {
+    "id": 1,
+    "head": "Joy",
+    "img": "https://res.cloudinary.com/dp92qug2f/image/upload/v1685381429/Ecell%20website/resources/Joyfilmposter_zushtq.webp",
+    "content": "Story of Joy Mangano who invented the self-wringing magical mop. The movie shows the obstacles she faces in her personal and professional life while struggling to get the patent of her invention."
+  },
+  {
+    "id": 2,
+    "head": "Big Night",
+    "author": "Speaker - Podcast2",
+    "img": "https://res.cloudinary.com/dp92qug2f/image/upload/v1685381429/Ecell%20website/resources/Big_night_wxzeh5.webp",
+    "content": "A tale of two Italian brothers trying to make it in the Restaurant business while trying to keep their family together. P.S. Don’t watch it if you’re hungry!"
+  },
+  {
+    "id": 3,
+    "head": "The Pursuit of Happyness",
+    "author": "Speaker - Podcast3",
+    "img": "https://res.cloudinary.com/dp92qug2f/image/upload/v1685381429/Ecell%20website/resources/Poster-pursuithappyness_zp7la0.webp",
+    "content": "'There’s always light at the end of the tunnel'. The movie follows the life of a man who goes from being broke to opening his own brokerage firm. Have your tissues handy as this will be an emotional ride."
+  },
+  {
+    "id": 4,
+    "head": "Steve Jobs",
+    "author": "Speaker - Podcast4",
+    "img": "https://res.cloudinary.com/dp92qug2f/image/upload/v1685381429/Ecell%20website/resources/SteveJobsposter_vdvbbw.webp",
+    "content": "The film is based on the book by the same name written by Walter Issacson. The movie shows the BTS of three product launches over the span of 14 years and paints an intimate picture of the man at the center."
+  },
+  {
+    "id": 5,
+    "head": "Chef",
+    "author": "Speaker - Podcast5",
+    "img": "https://res.cloudinary.com/dp92qug2f/image/upload/v1685381430/Ecell%20website/resources/Chef_2014_bwz5dv.webp",
+    "content": "A mouthwatering and endearing story of a chef rediscovering his love of cooking, starting a food truck, and going on a road trip with his son. Also the movie will make you love the Cuban Cuisine."
+  }
 ]

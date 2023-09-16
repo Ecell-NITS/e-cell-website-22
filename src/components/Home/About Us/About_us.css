@@ -1,101 +1,99 @@
-.aboutSection{
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 4rem;
+.aboutSection {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4rem;
 }
 
 .underline {
-    background-color: #224259;
-    width: 80vw;
-    height: 2px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 0px;
+  background-color: #224259;
+  width: 80vw;
+  height: 2px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0px;
 }
 
 .about_heading {
-    margin-top: 2rem;
-    font-family: "Barlow Condensed";
-    font-style: normal;
-    font-weight: 600;
-    font-size: 64px;
-    text-align: center;
-    color: #224259;
-    margin-bottom: auto;
+  margin-top: 2rem;
+  font-family: "Barlow Condensed";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 64px;
+  text-align: center;
+  color: #224259;
+  margin-bottom: auto;
 }
 
-.contentAbout{
-    /* padding-top: 3rem; */
-    width: 80vw;
-    margin: auto;
-    font-size: 1.7vw;
-    text-align: center !important;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
+.contentAbout {
+  /* padding-top: 3rem; */
+  width: 80vw;
+  margin: auto;
+  font-size: 1.7vw;
+  text-align: center !important;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
 }
 
 .cards-set-1 {
-display: flex;
-flex-wrap: wrap;
-gap: 2rem;
-justify-content: center;
-align-items: center;
-flex-basis: 20%;
-flex-shrink: 1;
-padding: 2% 7.7%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 20%;
+  flex-shrink: 1;
+  padding: 2% 7.7%;
 }
 
 .cards-set-2 {
-display: flex;
-flex-basis: auto;
-flex-direction: row;
-/* justify-content: space-between; */
-padding: 2% 22.22%;
-/* justify-content: center; */
+  display: flex;
+  flex-basis: auto;
+  flex-direction: row;
+  /* justify-content: space-between; */
+  padding: 2% 22.22%;
+  /* justify-content: center; */
 }
 
 .motto {
-font-family: "Barlow Condensed";
-font-style: normal;
-font-weight: 600;
-font-size: 64px;
-line-height: 67.2px;
-text-align: center;
-color: #224259;
+  font-family: "Barlow Condensed";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 67.2px;
+  text-align: center;
+  color: #224259;
 }
 
-
-
-@media only screen and (max-width:1200px) {
-.contentAbout{
+@media only screen and (max-width: 1200px) {
+  .contentAbout {
     font-size: 2.5vw;
-}
-}
-
-@media(max-width:991px){
-    .contentAbout{
-        font-size: 4vw;
-    }
+  }
 }
 
-@media (max-width:660px){
-    .motto {
-       display: none;
-    }
-
-    .contentAbout{
-        font-size: 5.5vw;
-    }
+@media (max-width: 991px) {
+  .contentAbout {
+    font-size: 4vw;
+  }
 }
 
-@media only screen and (max-width:610px){
-    .motto{
-        display: none;
-    }
+@media (max-width: 660px) {
+  .motto {
+    display: none;
+  }
 
-    .contentAbout{
-        padding-top: 0;
-    }
+  .contentAbout {
+    font-size: 5.5vw;
+  }
+}
+
+@media only screen and (max-width: 610px) {
+  .motto {
+    display: none;
+  }
+
+  .contentAbout {
+    padding-top: 0;
+  }
 }

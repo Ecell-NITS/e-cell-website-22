@@ -10,8 +10,8 @@
   margin: 1rem;
 }
 
-@media screen and (max-width: 900px){
-  .Gallery_card{
+@media screen and (max-width: 900px) {
+  .Gallery_card {
     max-width: 40vw;
   }
 }

@@ -1,57 +1,58 @@
-[{
-    "id":1,
-    "head":"Zero To One",
-    "author":"Author - Peter Thiel",
-    "img":"https://res.cloudinary.com/dp92qug2f/image/upload/v1685372303/Ecell%20website/resources/zero_to_one_viyfms.webp",
-    "content":"The book explains why the next big entrepreneur will not have to build an operating system or a search engine. Instead, tomorrow’s champions are going to be those who look at a unique road that have not been taken."
-},
-{
-    "id":2,
-    "head":"Start-up Sutra",
-    "author":"Author - Rohit Prasad",
-    "img":"https://res.cloudinary.com/dp92qug2f/image/upload/v1685372303/Ecell%20website/resources/startup_sutra_ntrif1.webp",
-    "content":"It is the true story of two founders of the IT organization. Bringing to life the daily dramas, and the battles with inner demons, this inspiring and multi-layered story is ready to change your life"
-},
-{
-    "id":3,
-    "head":"The $100 start-up",
-    "author":"Author - Chris Guillebeau",
-    "img":"https://res.cloudinary.com/dp92qug2f/image/upload/v1685372304/Ecell%20website/resources/100_startup_bo8qvo.webp",
-    "content":"Do you want to read an author who has travelled across the world, and met with almost every known entrepreneur? He tells how investing even 100 $ in the right place can make you rich."
-},
-{
-    "id":4,
-    "head":"The hard thing about hard things",
-    "author":"Author - Ben Horowitz",
-    "img":"https://res.cloudinary.com/dp92qug2f/image/upload/v1685372304/Ecell%20website/resources/hard_things_about_hard_things_qmsexr.webp",
-    "content":"The book discusses practical wisdom for managing the toughest problems that business school doesn’t cover. Filled with humour and straight talk, it proves invaluable for every entrepreneur."
-},
-{
-    "id":5,
-    "head":"Doglapan",
-    "author":"Author - Ashneer Grover",
-    "img":"https://res.cloudinary.com/dp92qug2f/image/upload/v1685375108/Ecell%20website/resources/doglapan_i3aykv.webp",
-    "content":"'Doglapan: The Hard Truth about Life and Start-Ups' is a brutally honest and perceptive examination of the difficulties and realities faced by business owners. It provides incisive guidance and a shot of motivation for anyone navigating the unpredictably volatile start-up environment. Ashneer's open storytelling will give you a fresh understanding of the tenacity and tenacity needed to prevail in the challenging business environment."
-},
-{
-    "id":6,
-    "head":"Founders At Work",
-    "author":"Author - Jessica Livingston",
-    "img":"https://res.cloudinary.com/dp92qug2f/image/upload/v1685375108/Ecell%20website/resources/founders_at_work_kit4hh.webp",
-    "content":"A fascinating compilation of interviews with successful entrepreneurs, 'Founders at Work' by Jessica Livingston takes a deep look into their adventures, successes, and disappointments. This book is an invaluable resource for prospective entrepreneurs, providing a wealth of inspiration, knowledge, and useful guidance to help them through the difficulties of creating a firm."
-},
-{
-    "id":7,
-    "head":"Connect The Dots7",
-    "author":"Author - Rashmi Bansal",
-    "img":"https://res.cloudinary.com/dp92qug2f/image/upload/v1685375544/Ecell%20website/resources/i-have-a-dream-rashmi-bansal_blpefv.webp",
-    "content":"Rashmi Bansal's 'I Have a Dream' is an engrossing collection of true accounts of common people who dared to dream big and make a difference. This book is a celebration of the human spirit and a motivational resource for anybody hoping to make their dreams come true."
-},
-{
-    "id":8,
-    "head":"Built to Sell",
-    "author":"Author - John Warrillow",
-    "img":"https://res.cloudinary.com/dp92qug2f/image/upload/v1685375108/Ecell%20website/resources/built_to_sell_iwztab.webp",
-    "content":"The book 'Built to Sell' by John Warrillow is a must-have resource for business owners trying to build a profitable, useful, and ultimately marketable enterprise. This book is a requirement-read for aspiring and seasoned entrepreneurs alike since it offers priceless ideas on how to maximise the value of your business and position it for a successful exit."
-}
+[
+  {
+    "id": 1,
+    "head": "Zero To One",
+    "author": "Author - Peter Thiel",
+    "img": "https://res.cloudinary.com/dp92qug2f/image/upload/v1685372303/Ecell%20website/resources/zero_to_one_viyfms.webp",
+    "content": "The book explains why the next big entrepreneur will not have to build an operating system or a search engine. Instead, tomorrow’s champions are going to be those who look at a unique road that have not been taken."
+  },
+  {
+    "id": 2,
+    "head": "Start-up Sutra",
+    "author": "Author - Rohit Prasad",
+    "img": "https://res.cloudinary.com/dp92qug2f/image/upload/v1685372303/Ecell%20website/resources/startup_sutra_ntrif1.webp",
+    "content": "It is the true story of two founders of the IT organization. Bringing to life the daily dramas, and the battles with inner demons, this inspiring and multi-layered story is ready to change your life"
+  },
+  {
+    "id": 3,
+    "head": "The $100 start-up",
+    "author": "Author - Chris Guillebeau",
+    "img": "https://res.cloudinary.com/dp92qug2f/image/upload/v1685372304/Ecell%20website/resources/100_startup_bo8qvo.webp",
+    "content": "Do you want to read an author who has travelled across the world, and met with almost every known entrepreneur? He tells how investing even 100 $ in the right place can make you rich."
+  },
+  {
+    "id": 4,
+    "head": "The hard thing about hard things",
+    "author": "Author - Ben Horowitz",
+    "img": "https://res.cloudinary.com/dp92qug2f/image/upload/v1685372304/Ecell%20website/resources/hard_things_about_hard_things_qmsexr.webp",
+    "content": "The book discusses practical wisdom for managing the toughest problems that business school doesn’t cover. Filled with humour and straight talk, it proves invaluable for every entrepreneur."
+  },
+  {
+    "id": 5,
+    "head": "Doglapan",
+    "author": "Author - Ashneer Grover",
+    "img": "https://res.cloudinary.com/dp92qug2f/image/upload/v1685375108/Ecell%20website/resources/doglapan_i3aykv.webp",
+    "content": "'Doglapan: The Hard Truth about Life and Start-Ups' is a brutally honest and perceptive examination of the difficulties and realities faced by business owners. It provides incisive guidance and a shot of motivation for anyone navigating the unpredictably volatile start-up environment. Ashneer's open storytelling will give you a fresh understanding of the tenacity and tenacity needed to prevail in the challenging business environment."
+  },
+  {
+    "id": 6,
+    "head": "Founders At Work",
+    "author": "Author - Jessica Livingston",
+    "img": "https://res.cloudinary.com/dp92qug2f/image/upload/v1685375108/Ecell%20website/resources/founders_at_work_kit4hh.webp",
+    "content": "A fascinating compilation of interviews with successful entrepreneurs, 'Founders at Work' by Jessica Livingston takes a deep look into their adventures, successes, and disappointments. This book is an invaluable resource for prospective entrepreneurs, providing a wealth of inspiration, knowledge, and useful guidance to help them through the difficulties of creating a firm."
+  },
+  {
+    "id": 7,
+    "head": "Connect The Dots7",
+    "author": "Author - Rashmi Bansal",
+    "img": "https://res.cloudinary.com/dp92qug2f/image/upload/v1685375544/Ecell%20website/resources/i-have-a-dream-rashmi-bansal_blpefv.webp",
+    "content": "Rashmi Bansal's 'I Have a Dream' is an engrossing collection of true accounts of common people who dared to dream big and make a difference. This book is a celebration of the human spirit and a motivational resource for anybody hoping to make their dreams come true."
+  },
+  {
+    "id": 8,
+    "head": "Built to Sell",
+    "author": "Author - John Warrillow",
+    "img": "https://res.cloudinary.com/dp92qug2f/image/upload/v1685375108/Ecell%20website/resources/built_to_sell_iwztab.webp",
+    "content": "The book 'Built to Sell' by John Warrillow is a must-have resource for business owners trying to build a profitable, useful, and ultimately marketable enterprise. This book is a requirement-read for aspiring and seasoned entrepreneurs alike since it offers priceless ideas on how to maximise the value of your business and position it for a successful exit."
+  }
 ]

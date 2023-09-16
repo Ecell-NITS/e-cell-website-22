@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import "./Contactus.css";
 import axios from "axios";
 import { FaTelegramPlane } from "react-icons/fa";
-import '../../../pages/Recruiting2324/Recruiting.css'
+import "../../../pages/Recruiting2324/Recruiting.css";
 const Contactus = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [submitting, setSubmitting] = useState(false);
-  const [disable,setDisable] = useState(false)
+  const [disable, setDisable] = useState(false);
   const isFormValid = () => {
     return email !== "" && name !== "" && message !== "";
   };
@@ -36,29 +36,29 @@ const Contactus = () => {
       return;
     }
     setSubmitting(true);
-    setDisable(true)
+    setDisable(true);
     axios
       .post(import.meta.env.VITE_REACT_APP_AXIOSPOST_POST_SENDEMAIL, {
-      // .post('http://localhost:3001/sendquery', {
+        // .post('http://localhost:3001/sendquery', {
         email,
         name,
-        message
+        message,
       })
       .then((response) => {
         setEmail("");
         setName("");
         setMessage("");
         setSubmitting(false);
-        setDisable(false)
+        setDisable(false);
         alert("Contact Us form submitted.");
       })
       .catch((error) => {
-        alert("Something went wrong. Please try again.")
+        alert("Something went wrong. Please try again.");
         console.error(error);
         setSubmitting(false);
-        setDisable(false)
-    });
-  }
+        setDisable(false);
+      });
+  };
 
   return (
     <>
@@ -71,7 +71,9 @@ const Contactus = () => {
       <div className="formcontact">
         <form className="forminclass">
           <div className="childform">
-          <h3 className='common-form-recuit ewrtyh'>Name<span className='reqdinput'>*</span></h3>
+            <h3 className="common-form-recuit ewrtyh">
+              Name<span className="reqdinput">*</span>
+            </h3>
             <input
               type="text"
               id="name"
@@ -82,12 +84,14 @@ const Contactus = () => {
               }}
               placeholder="John Doe"
               // className="textwriting"
-              className='input-common-recruit'
+              className="input-common-recruit"
             />
           </div>
 
           <div className="childform">
-          <h3 className='common-form-recuit ewrtyh'>Email<span className='reqdinput'>*</span></h3>
+            <h3 className="common-form-recuit ewrtyh">
+              Email<span className="reqdinput">*</span>
+            </h3>
             <input
               type="email"
               value={email}
@@ -95,12 +99,14 @@ const Contactus = () => {
                 setEmail(event.target.value);
               }}
               required
-              className='input-common-recruit'
+              className="input-common-recruit"
               placeholder="john@doe.com"
             />
           </div>
           <div className="childform">
-          <h3 className='common-form-recuit ewrtyh'>Message<span className='reqdinput'>*</span></h3>
+            <h3 className="common-form-recuit ewrtyh">
+              Message<span className="reqdinput">*</span>
+            </h3>
             <textarea
               value={message}
               onChange={(event) => {
@@ -108,12 +114,18 @@ const Contactus = () => {
               }}
               required
               placeholder="Lorem Ipsum...."
-              className='input-common-recruit'
+              className="input-common-recruit"
             ></textarea>
           </div>
 
-
-          <button disabled={disable} style={{opacity:disable?0.5:1, cursor:disable?"not-allowed":"pointer"}} onClick={submitform}>
+          <button
+            disabled={disable}
+            style={{
+              opacity: disable ? 0.5 : 1,
+              cursor: disable ? "not-allowed" : "pointer",
+            }}
+            onClick={submitform}
+          >
             {submitting ? "Submitting..." : "Submit"}{" "}
           </button>
         </form>

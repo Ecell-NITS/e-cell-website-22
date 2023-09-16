@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import Footer from "../../components/shared/Footer/Footer";
 import NavbarTeam from "../../components/shared/Navbar/NavbarTeam";
 import "./Resources.css";

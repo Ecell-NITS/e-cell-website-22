@@ -1,72 +1,62 @@
-.cardhead{
-    font-family: 'Barlow Condensed';
-font-style: normal;
-font-weight: 600;
-font-size: 3vw;
-line-height: 2.4vw;
+.cardhead {
+  font-family: "Barlow Condensed";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 3vw;
+  line-height: 2.4vw;
 
-/* Dark Blue */
+  /* Dark Blue */
 
-color: #224259;
+  color: #224259;
 }
-.carddate
-{
-    font-family: 'Barlow Condensed';
-font-style: normal;
-font-weight: 600;
-font-size: 1.8vw;
-line-height: 2vw;
-/* identical to box height */
+.carddate {
+  font-family: "Barlow Condensed";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.8vw;
+  line-height: 2vw;
+  /* identical to box height */
 
+  /* Text Color */
 
-/* Text Color */
-
-color: #505050;
-
+  color: #505050;
 }
-.cardimage{
-    border-radius: 9px 9px 0px 0px;
-
+.cardimage {
+  border-radius: 9px 9px 0px 0px;
 }
-.cardlocation
-{
-    font-family: 'Barlow Condensed';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 1.2vw;
-    line-height: 1.5vw;
-    
-    /* Text Color */
-    
-    color: #505050; 
+.cardlocation {
+  font-family: "Barlow Condensed";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.2vw;
+  line-height: 1.5vw;
+
+  /* Text Color */
+
+  color: #505050;
 }
-.eventstitle
-{
-    font-family: 'Barlow Condensed';
-font-style: normal;
-font-weight: 600;
-font-size: 70px;
-line-height: 84px;
-text-align: center;
+.eventstitle {
+  font-family: "Barlow Condensed";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 70px;
+  line-height: 84px;
+  text-align: center;
 
-/* Dark Blue */
+  /* Dark Blue */
 
-color: #224259;
+  color: #224259;
 
-text-shadow: 2px 2px 4px rgba(245, 92, 5, 0.5);
-
-
+  text-shadow: 2px 2px 4px rgba(245, 92, 5, 0.5);
 }
-.eventcard{
-    margin: 0 auto;
+.eventcard {
+  margin: 0 auto;
 }
-.card-body
-{
-    
-    border: 1px solid #232323;
-    border-radius: 0px 0px 9px 9px
+.card-body {
+  border: 1px solid #232323;
+  border-radius: 0px 0px 9px 9px;
 }
-.eventscardscontent{
+.eventscardscontent {
   width: 30%;
 }
 /* .eventscardscontent{
@@ -76,35 +66,32 @@ text-shadow: 2px 2px 4px rgba(245, 92, 5, 0.5);
   grid-gap: 10px 10px;
 } */
 
-@media only screen and (max-width:1350px) {
-
-  
+@media only screen and (max-width: 1350px) {
 }
-@media only screen and (max-width:600px) {
-  .eventscardscontent{
+@media only screen and (max-width: 600px) {
+  .eventscardscontent {
     width: 45%;
   }
-  .cardhead{
+  .cardhead {
     font-size: 5vw;
     line-height: 4.4vw;
   }
-  .carddate{
-    font-size:4vw;
+  .carddate {
+    font-size: 4vw;
     line-height: 3vw;
   }
-  .cardlocation
-  {
+  .cardlocation {
     font-size: 3vw;
     line-height: 1vw;
   }
 }
-@media only screen and (max-width:480px) {
-  .eventscardscontent{
+@media only screen and (max-width: 480px) {
+  .eventscardscontent {
     width: 45%;
   }
 }
-@media only screen and (max-width:280px) {
-  .eventscardscontent{
+@media only screen and (max-width: 280px) {
+  .eventscardscontent {
     width: 80%;
   }
 }
