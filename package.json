@@ -59,12 +59,10 @@
     "pre-commit": "pnpm precommit"
   },
   "lint-staged": {
-    "*.(jsx|js)": [
+    "*.(jsx|js|scss|css)": [
       "pnpm lint",
       "pnpm pretty"
-    ],
-    "*.(scss|css)": [
-      "pnpm pretty"
     ]
+   
   }  
 }
