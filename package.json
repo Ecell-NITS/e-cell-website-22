@@ -63,8 +63,8 @@
       "pnpm lint",
       "pnpm pretty"
     ],
-    "*.scss": [
+    "*.(scss|css)": [
       "pnpm pretty"
     ]
-  }
+  }  
 }
