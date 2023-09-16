@@ -1,36 +1,36 @@
-.topdetailsre{
-  padding-top:10vw;
+.topdetailsre {
+  padding-top: 10vw;
   min-height: 50vw;
- text-align: center;
+  text-align: center;
 }
 
-.halfinptdtls{
+.halfinptdtls {
   width: 50% !important;
   margin: 0 auto !important;
 }
 
-.deialsorgio{
+.deialsorgio {
   padding-top: 5vw;
 }
 
-.rsmlink{
+.rsmlink {
   color: red;
   text-decoration: underline;
   font-size: 2.5vw;
 }
 
-@media (max-width:660px){
-  .topdetailsre{
-    padding-top:20vw;
-    padding-bottom:20vw;
+@media (max-width: 660px) {
+  .topdetailsre {
+    padding-top: 20vw;
+    padding-bottom: 20vw;
   }
 
-  .halfinptdtls{
+  .halfinptdtls {
     width: 70% !important;
     margin: 0 auto !important;
   }
 
-  .rsmlink{
+  .rsmlink {
     color: red;
     text-decoration: underline;
     font-size: 6vw;

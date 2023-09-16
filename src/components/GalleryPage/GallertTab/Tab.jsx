@@ -58,47 +58,29 @@ const Tab = () => {
         <div className="leftTab">
           <div className="sort">Sort By Year</div>
           <div className="years">
-            <DropdownButton
-              title={year}
-              id="dropdown-custom-2"
-              onSelect={handleClick}
-            >
-              {["All", ...new Set(filterYear.map((item) => item.year))].map(
-                (year) => (
-                  // eslint-disable-next-line react/jsx-key
-                  <Dropdown.Item eventKey={year}>{year}</Dropdown.Item>
-                )
-              )}
+            <DropdownButton title={year} id="dropdown-custom-2" onSelect={handleClick}>
+              {["All", ...new Set(filterYear.map((item) => item.year))].map((year) => (
+                // eslint-disable-next-line react/jsx-key
+                <Dropdown.Item eventKey={year}>{year}</Dropdown.Item>
+              ))}
             </DropdownButton>
           </div>
         </div>
         <div className="rightTab">
           <div className="sort">Sort By Events</div>
           <div className="events">
-            <DropdownButton
-              title={event}
-              id="dropdown-custom-2"
-              onSelect={handleClick2}
-            >
-              {["All", ...new Set(filterEvent.map((item) => item.event))].map(
-                (event) => (
-                  // eslint-disable-next-line react/jsx-key
-                  <Dropdown.Item eventKey={event}>{event}</Dropdown.Item>
-                )
-              )}
+            <DropdownButton title={event} id="dropdown-custom-2" onSelect={handleClick2}>
+              {["All", ...new Set(filterEvent.map((item) => item.event))].map((event) => (
+                // eslint-disable-next-line react/jsx-key
+                <Dropdown.Item eventKey={event}>{event}</Dropdown.Item>
+              ))}
             </DropdownButton>
           </div>
         </div>
       </div>
       <div className="GalleryCards">
         {filterData.map((item) => {
-          return (
-            <GalleryCard
-              key={item.id}
-              id={item.id}
-              imgsrc={item.imgsrc}
-            />
-          );
+          return <GalleryCard key={item.id} id={item.id} imgsrc={item.imgsrc} />;
         })}
       </div>
     </div>

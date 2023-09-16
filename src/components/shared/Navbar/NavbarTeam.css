@@ -50,8 +50,8 @@
   font-family: "Poppins", sans-serif;
 }
 
-.links-nav a{
-  transition: all .15s ease-in-out;
+.links-nav a {
+  transition: all 0.15s ease-in-out;
   color: rgba(255, 255, 255, 0.58) !important;
 }
 
@@ -59,7 +59,7 @@
   color: #1da1f2 !important;
 }
 
-.links-nav  a.active{
+.links-nav a.active {
   color: rgba(255, 255, 255, 1) !important;
 }
 
@@ -129,8 +129,8 @@
   }
 }
 
-@media only screen and (max-width:991px) and (min-width:768px){
-  .navbar0 .links-nav li{
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+  .navbar0 .links-nav li {
     font-size: 1.8vw;
   }
 }
@@ -156,12 +156,12 @@ ul.links-nav {
   padding-left: 0;
 }
 
-@media (max-height:350px){
-  .links-nav{
+@media (max-height: 350px) {
+  .links-nav {
     margin-top: -5vh !important;
   }
 
-  .navbar0 .links-nav li{
+  .navbar0 .links-nav li {
     font-size: 6vh !important;
   }
 }

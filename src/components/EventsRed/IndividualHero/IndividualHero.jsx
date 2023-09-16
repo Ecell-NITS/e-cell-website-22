@@ -1,13 +1,13 @@
-import React from 'react'
+import React from "react";
 // import srijanImage from "../../../assets/events_red/srijanImage.png"
-import "./IndividualHero.css"
+import "./IndividualHero.css";
 
 const IndividualHero = () => {
   return (
-    <div className='IndividualHeroTop'>
+    <div className="IndividualHeroTop">
       {/* <img src={srijanImage} alt="Srijan" /> */}
     </div>
-  )
-}
+  );
+};
 
-export default IndividualHero
+export default IndividualHero;

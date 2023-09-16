@@ -1,27 +1,23 @@
- /* img{
+/* img{
     max-width: 100%;
     
 }  */
-.IndividualHeroTop
-{   
-    background: url('../../../assets/events_red/srijanImage.png');
-    max-width: 100%;
-    height: auto;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: white;
-    padding-bottom: 0;
-    height: 100vh; 
-    opacity: 1;
-    background-position-y: 10%;
-     
+.IndividualHeroTop {
+  background: url("../../../assets/events_red/srijanImage.png");
+  max-width: 100%;
+  height: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  padding-bottom: 0;
+  height: 100vh;
+  opacity: 1;
+  background-position-y: 10%;
 }
 
-@media only screen and (max-width:2110px){
-    .IndividualHeroTop{
-        height: 45vw;
-    }
-
-    
+@media only screen and (max-width: 2110px) {
+  .IndividualHeroTop {
+    height: 45vw;
+  }
 }

@@ -6,7 +6,6 @@
   z-index: 9;
 }
 
-
 .container {
   text-align: center;
 }
@@ -71,7 +70,7 @@
   margin: 3% 5% 5%;
 }
 
-.btns0{
+.btns0 {
   display: none;
 }
 
@@ -137,7 +136,6 @@
 }
 
 @media only screen and (max-width: 1200px) {
-  
   .header {
     font-size: 60px;
   }
@@ -156,18 +154,18 @@
   }
 }
 
-@media only screen and (max-width : 780px) {
+@media only screen and (max-width: 780px) {
   .header {
     font-size: 55px;
   }
 }
 
-@media (max-width:660px){
-  .header{
+@media (max-width: 660px) {
+  .header {
     font-size: 8vw;
   }
 
-  .horizontal-line{
+  .horizontal-line {
     margin-top: -2vw;
   }
 }

@@ -35,4 +35,4 @@ function PodcastModal({ dataid }) {
     </>
   );
 }
-export default PodcastModal
+export default PodcastModal;

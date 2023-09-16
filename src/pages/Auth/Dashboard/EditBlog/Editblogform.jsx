@@ -1,342 +1,373 @@
-import React, { useEffect, useState, useRef } from 'react'
-import '../../../Resources/./Blogs/Createblog.css'
-import axios from 'axios'
+import React, { useEffect, useState, useRef } from "react";
+import "../../../Resources/./Blogs/Createblog.css";
+import axios from "axios";
 import moment from "moment-timezone";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 import JoditEditor from "jodit-react";
-import FileBase64 from 'react-file-base64';
-import NavbarTeam from '../../../../components/shared/Navbar/NavbarTeam';
-import Footer from '../../../../components/shared/Footer/Footer';
-import { useLocation } from 'react-router-dom';
+import FileBase64 from "react-file-base64";
+import NavbarTeam from "../../../../components/shared/Navbar/NavbarTeam";
+import Footer from "../../../../components/shared/Footer/Footer";
+import { useLocation } from "react-router-dom";
 const Editblogform = () => {
-    const editor = useRef(null);
-    const editor0 = useRef(null);
-    const navigate = useNavigate()
-    const location = useLocation()
-    const [title, setTitle] = useState("")
-    const [intro, setIntro] = useState("")
-    const [tag, setTag] = useState("")
-    const [topicpic, setTopicpic] = useState("")
-    const [content, setContent] = useState("")
-    const [writernmae, setWritername] = useState("")
-    const [writerintro, setWriterintro] = useState("")
-    const [writerpic, setWriterpic] = useState("")
-    const [writeremail, setWriteremail] = useState("")
-    const [submitting, setSubmitting] = useState(false);
-    const [disablecreate, setDisablecreate] = useState(false)
-    const [authorverf, setAuthorverf] = useState("")
-    const [loggedinuserid, setLoggedinuserid] = useState("")
-    const [isLoading, setIsLoading] = useState(true);
-    const token = localStorage.getItem('token');
-    const currentURL = decodeURIComponent(location.pathname);
-    const blogId = currentURL.split('/editblog/')[1];
+  const editor = useRef(null);
+  const editor0 = useRef(null);
+  const navigate = useNavigate();
+  const location = useLocation();
+  const [title, setTitle] = useState("");
+  const [intro, setIntro] = useState("");
+  const [tag, setTag] = useState("");
+  const [topicpic, setTopicpic] = useState("");
+  const [content, setContent] = useState("");
+  const [writernmae, setWritername] = useState("");
+  const [writerintro, setWriterintro] = useState("");
+  const [writerpic, setWriterpic] = useState("");
+  const [writeremail, setWriteremail] = useState("");
+  const [submitting, setSubmitting] = useState(false);
+  const [disablecreate, setDisablecreate] = useState(false);
+  const [authorverf, setAuthorverf] = useState("");
+  const [loggedinuserid, setLoggedinuserid] = useState("");
+  const [isLoading, setIsLoading] = useState(true);
+  const token = localStorage.getItem("token");
+  const currentURL = decodeURIComponent(location.pathname);
+  const blogId = currentURL.split("/editblog/")[1];
 
+  const handleImgChange = (base64) => {
+    setTopicpic(base64);
+  };
 
+  useEffect(() => {
+    document.title = "Edit Blog | E-Cell NIT Silchar";
+    const token = localStorage.getItem("token");
+    if (!token) {
+      navigate("/login");
+    } else {
+      axios
+        .get(import.meta.env.VITE_REACT_APP_FETCHPROFILE, {
+          // .get('http://localhost:2226/fetchprofile', {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        })
+        .then((response) => {
+          const user = response.data;
+          setLoggedinuserid(user._id);
+          setWritername(user.name);
+          setWriterintro(user.bio);
+          setWriterpic(user.userimg);
+          setWriteremail(user.email);
+          setIsLoading(false);
+        })
+        .catch((error) => {
+          console.error("Failed to fetch user data", error);
+          alert("Failed to fetch user data", error);
+        });
+    }
+  }, [navigate]);
 
-    const handleImgChange = (base64) => {
-        setTopicpic(base64);
+  useEffect(() => {
+    const fetchBlog = async () => {
+      setIsLoading(true);
+      try {
+        const response = await axios.get(
+          `${import.meta.env.VITE_REACT_APP_FETCHBLOG_RENDER}/${blogId}`
+        );
+        setAuthorverf(response.data.authorid);
+        setContent(response.data.content);
+        setTitle(response.data.title);
+        setWriterpic(response.data.writerpic);
+        setWriterintro(response.data.writerintro);
+        setTopicpic(response.data.topicpic);
+        setIntro(response.data.intro);
+        setWritername(response.data.writernmae);
+        setTag(response.data.tag);
+        setIsLoading(false);
+      } catch (error) {
+        console.log("Error fetching blog:", error);
+      }
     };
 
+    fetchBlog();
+  }, [blogId]);
 
-    useEffect(() => {
-        document.title = 'Edit Blog | E-Cell NIT Silchar';
-        const token = localStorage.getItem('token');
-        if (!token) {
-            navigate('/login');
-        } else {
-            axios
-                .get(import.meta.env.VITE_REACT_APP_FETCHPROFILE, {
-                    // .get('http://localhost:2226/fetchprofile', {
-                    headers: {
-                        Authorization: `Bearer ${token}`,
-                    },
-                })
-                .then((response) => {
-                    const user = response.data;
-                    setLoggedinuserid(user._id)
-                    setWritername(user.name);
-                    setWriterintro(user.bio);
-                    setWriterpic(user.userimg);
-                    setWriteremail(user.email);
-                    setIsLoading(false);
-                })
-                .catch((error) => {
-                    console.error('Failed to fetch user data', error);
-                    alert('Failed to fetch user data', error)
-                });
-        }
-    }, [navigate]);
-
-    useEffect(() => {
-        const fetchBlog = async () => {
-            setIsLoading(true);
-            try {
-                const response = await axios.get(`${import.meta.env.VITE_REACT_APP_FETCHBLOG_RENDER}/${blogId}`);
-                setAuthorverf(response.data.authorid)
-                setContent(response.data.content);
-                setTitle(response.data.title);
-                setWriterpic(response.data.writerpic);
-                setWriterintro(response.data.writerintro);
-                setTopicpic(response.data.topicpic);
-                setIntro(response.data.intro);
-                setWritername(response.data.writernmae)
-                setTag(response.data.tag)
-                setIsLoading(false);
-            } catch (error) {
-                console.log('Error fetching blog:', error);
-            }
-        };
-
-        fetchBlog();
-    }, [blogId]);
-
-    console.log(`loggedinuserid: ${loggedinuserid}`)
-    console.log(`authorverf: ${authorverf}`)
-    useEffect(() => {
-        if (authorverf !== "" && loggedinuserid !== "" && !isLoading && loggedinuserid !== authorverf) {
-            alert("Only the original author of the blog can edit this blog.");
-            navigate("/login");
-        }
-    }, [authorverf, loggedinuserid, isLoading, navigate]);
-
-    const isEditblogempty = () => {
-        return title !== "" || intro !== "" || tag !== "" || content !== "" || topicpic !== "";
-    };
-
-
-    /* button onclick function */
-    const submitform = async (event) => {
-        event.preventDefault();
-        if (!isEditblogempty()) {
-            alert("Please edit atleast anyone field.");
-            return;
-        }
-
-        if (!writeremail.includes("@") || !writeremail.includes(".")) {
-            alert("Invalid email");
-            return
-        }
-
-        const timestamp = moment().tz("Asia/Kolkata").format();
-
-        setSubmitting(true);
-        setDisablecreate(true)
-        try {
-            const response = await axios.get(import.meta.env.VITE_REACT_APP_ACCEPTEDBLOGS_RENDER);
-            const publishedBlogIds = response.data.map(blog => blog._id);
-            // console.log(publishedBlogIds)
-            if (publishedBlogIds.includes(blogId)) {
-                alert("Published blogs can't be edited.");
-                return
-            }
-        } catch (error) {
-            console.log('Error fetching blogs:', error);
-        } finally {
-            setSubmitting(false);
-            setDisablecreate(false)
-            setTitle("");
-            setIntro("");
-            setTag("");
-            setContent("");
-            setTopicpic("")
-        }
-
-
-        setSubmitting(true);
-        setDisablecreate(true)
-        axios
-            .put(`${import.meta.env.VITE_REACT_APP_APIMAIN}/editblog/${blogId}`, {
-                // .put(`http://localhost:2226/editblog/${blogId}`, {
-                // .put(import.meta.env.VITE_REACT_APP_CREATEBLOG_RENDER, {
-                title,
-                tag,
-                intro,
-                content, writernmae, writerintro, writerpic, timestamp, topicpic, writeremail
-            }, {
-                headers: {
-                    Authorization: `Bearer ${token}`,
-                },
-            })
-            .then((response) => {
-                setTitle("");
-                setIntro("");
-                setTag("");
-                setContent("");
-                setWritername("")
-                setWriterintro("")
-                setWriterpic("")
-                setTopicpic("")
-                setWriteremail("")
-                setSubmitting(false);
-                setDisablecreate(false)
-                alert("Blog edited successfully.");
-                navigate("/dashboard")
-            });
+  console.log(`loggedinuserid: ${loggedinuserid}`);
+  console.log(`authorverf: ${authorverf}`);
+  useEffect(() => {
+    if (
+      authorverf !== "" &&
+      loggedinuserid !== "" &&
+      !isLoading &&
+      loggedinuserid !== authorverf
+    ) {
+      alert("Only the original author of the blog can edit this blog.");
+      navigate("/login");
     }
+  }, [authorverf, loggedinuserid, isLoading, navigate]);
 
-    if (isLoading) {
-        return <div>Loading...</div>;
-    }
-
+  const isEditblogempty = () => {
     return (
-        <div>
-            <NavbarTeam />
-            <div className="mainblogmake">
-                <h2 className='titletopcbl'>Edit Blog </h2>
-                <div className="firstboxvreateblog">
-                    <h2 className='ttleinptcrteblog'>Title</h2>
-                    <h4 className='specificttle'>Be specific with your title</h4>
-                    <input
-                        type="text"
-                        id="cretaeblogsinpt"
-                        required
-                        value={title}
-                        onChange={(event) => {
-                            setTitle(event.target.value);
-                        }}
-                        placeholder="Enter your title"
-                        className='input-common-recruit'
-                    />
-                </div>
+      title !== "" || intro !== "" || tag !== "" || content !== "" || topicpic !== ""
+    );
+  };
 
-                <div className="firstboxvreateblog">
-                    <h2 className='ttleinptcrteblog'>Brief Introduction</h2>
-                    <h4 className='specificttle'>Write a brief introduction to your blog in about 40-50 words</h4>
+  /* button onclick function */
+  const submitform = async (event) => {
+    event.preventDefault();
+    if (!isEditblogempty()) {
+      alert("Please edit atleast anyone field.");
+      return;
+    }
 
-                    <JoditEditor
-                        ref={editor0}
-                        value={intro}
-                        onChange={(newIntro) => setIntro(newIntro)}
-                        onBlur={(newIntro) => setIntro(newIntro)}
-                        required
+    if (!writeremail.includes("@") || !writeremail.includes(".")) {
+      alert("Invalid email");
+      return;
+    }
 
-                    />
+    const timestamp = moment().tz("Asia/Kolkata").format();
 
-                </div>
+    setSubmitting(true);
+    setDisablecreate(true);
+    try {
+      const response = await axios.get(
+        import.meta.env.VITE_REACT_APP_ACCEPTEDBLOGS_RENDER
+      );
+      const publishedBlogIds = response.data.map((blog) => blog._id);
+      // console.log(publishedBlogIds)
+      if (publishedBlogIds.includes(blogId)) {
+        alert("Published blogs can't be edited.");
+        return;
+      }
+    } catch (error) {
+      console.log("Error fetching blogs:", error);
+    } finally {
+      setSubmitting(false);
+      setDisablecreate(false);
+      setTitle("");
+      setIntro("");
+      setTag("");
+      setContent("");
+      setTopicpic("");
+    }
 
-                <div className="firstboxvreateblog">
-                    <h2 className='ttleinptcrteblog'>Content</h2>
-                    <h4 className='specificttle'>Write about your topic</h4>
+    setSubmitting(true);
+    setDisablecreate(true);
+    axios
+      .put(
+        `${import.meta.env.VITE_REACT_APP_APIMAIN}/editblog/${blogId}`,
+        {
+          // .put(`http://localhost:2226/editblog/${blogId}`, {
+          // .put(import.meta.env.VITE_REACT_APP_CREATEBLOG_RENDER, {
+          title,
+          tag,
+          intro,
+          content,
+          writernmae,
+          writerintro,
+          writerpic,
+          timestamp,
+          topicpic,
+          writeremail,
+        },
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      )
+      .then((response) => {
+        setTitle("");
+        setIntro("");
+        setTag("");
+        setContent("");
+        setWritername("");
+        setWriterintro("");
+        setWriterpic("");
+        setTopicpic("");
+        setWriteremail("");
+        setSubmitting(false);
+        setDisablecreate(false);
+        alert("Blog edited successfully.");
+        navigate("/dashboard");
+      });
+  };
 
-                    <JoditEditor
-                        ref={editor}
-                        value={content}
-                        onBlur={(newContent) => setContent(newContent)}
-                        onChange={(newContent) => setContent(newContent)}
-                        required
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
 
-                    />
-
-                </div>
-
-                <div className="firstboxvreateblog">
-                    <h2 className='ttleinptcrteblog'>Tags</h2>
-                    <h4 className='specificttle'>Add tags to describe your blog</h4>
-                    <h4 className='specificttle'>(Separate tags by space like #tag1 #tag2)</h4>
-                    <input
-                        type="text"
-                        required
-                        value={tag}
-                        id="cretaeblogsinpt"
-                        onChange={(event) => {
-                            setTag(event.target.value);
-                        }}
-                        placeholder="Enter tags"
-                        className='input-common-recruit'
-                    />
-                </div>
-
-                <div className="firstboxvreateblog">
-                    <h2 className='ttleinptcrteblog'>Topic picture</h2>
-                    <h4 className='specificttle'>Add a picture to your blog</h4>
-
-                    <h4 className='specificttle'>Only jpg, jpeg, png, webp, or avif file types of size less than 300KB are accepted</h4>
-                    <FileBase64
-                        multiple={false}
-                        onDone={({ base64, file }) => {
-                            if (
-                                (file.type === 'image/png' || file.type === 'image/jpeg' || file.type === 'image/jpg' || file.type === 'image/webp' || file.type === 'image/avif') &&
-                                file.size <= 300 * 1024
-                            ) {
-                                handleImgChange(base64);
-                            } else {
-                                alert('Invalid file type or size. Image should be less than 300 KB.');
-                                setTopicpic("");
-                            }
-                        }}
-                    >
-                        {({ file }) => (
-                            <div>
-                                {file && file.size <= 300 * 1024 && (
-                                    <p>Selected file: {file.name}</p>
-                                )}
-                            </div>
-                        )}
-                    </FileBase64>
-                </div>
-
-                <div className="firstboxvreateblog" id='writerdivid'>
-                    <h2 className='ttleinptcrteblog'>Writer Details</h2>
-                    <h4 className='specificttle'>Name</h4>
-                    <input
-                        type="text"
-                        id="cretaeblogsinpt"
-                        required
-                        value={writernmae}
-                        onChange={(event) => {
-                            setWritername(event.target.value);
-                        }}
-                        placeholder="Enter name"
-                        className='input-common-recruit'
-                    />
-
-                    <h4 className='specificttle'>Email</h4>
-                    <input
-                        type="email"
-                        required
-                        value={writeremail}
-                        id="cretaeblogsinpt"
-                        onChange={(event) => {
-                            setWriteremail(event.target.value);
-                        }}
-                        placeholder="Enter your email"
-                        className='input-common-recruit'
-                    />
-
-                    <h4 className='specificttle'>Brief Introduction</h4>
-
-                    <textarea rows="3" type="text"
-                        required
-                        id="cretaeblogsinpt"
-                        value={writerintro}
-                        onChange={(event) => {
-                            setWriterintro(event.target.value);
-                        }}
-                        placeholder="Enter intro to be displayed"
-                        className='input-common-recruit'></textarea>
-
-                    <h4 className='specificttle'>Photograph</h4>
-                    <input
-                        type="text"
-                        required
-                        id="cretaeblogsinpt"
-                        value={writerpic}
-                        onChange={(event) => {
-                            setWriterpic(event.target.value);
-                        }}
-                        placeholder="Your photograph link"
-                        className='input-common-recruit'
-                    />
-                </div>
-
-                <button onClick={submitform} className='kretrhereading' id='crteblogbtn0' disabled={disablecreate} style={{ opacity: disablecreate ? 0.5 : 1, cursor: disablecreate ? "not-allowed" : "pointer" }}>
-                    {submitting ? "Editing Blog..." : "Edit Blog"}{" "}
-                </button>
-            </div>
-
-            <Footer />
+  return (
+    <div>
+      <NavbarTeam />
+      <div className="mainblogmake">
+        <h2 className="titletopcbl">Edit Blog </h2>
+        <div className="firstboxvreateblog">
+          <h2 className="ttleinptcrteblog">Title</h2>
+          <h4 className="specificttle">Be specific with your title</h4>
+          <input
+            type="text"
+            id="cretaeblogsinpt"
+            required
+            value={title}
+            onChange={(event) => {
+              setTitle(event.target.value);
+            }}
+            placeholder="Enter your title"
+            className="input-common-recruit"
+          />
         </div>
-    )
-}
 
-export default Editblogform
+        <div className="firstboxvreateblog">
+          <h2 className="ttleinptcrteblog">Brief Introduction</h2>
+          <h4 className="specificttle">
+            Write a brief introduction to your blog in about 40-50 words
+          </h4>
+
+          <JoditEditor
+            ref={editor0}
+            value={intro}
+            onChange={(newIntro) => setIntro(newIntro)}
+            onBlur={(newIntro) => setIntro(newIntro)}
+            required
+          />
+        </div>
+
+        <div className="firstboxvreateblog">
+          <h2 className="ttleinptcrteblog">Content</h2>
+          <h4 className="specificttle">Write about your topic</h4>
+
+          <JoditEditor
+            ref={editor}
+            value={content}
+            onBlur={(newContent) => setContent(newContent)}
+            onChange={(newContent) => setContent(newContent)}
+            required
+          />
+        </div>
+
+        <div className="firstboxvreateblog">
+          <h2 className="ttleinptcrteblog">Tags</h2>
+          <h4 className="specificttle">Add tags to describe your blog</h4>
+          <h4 className="specificttle">(Separate tags by space like #tag1 #tag2)</h4>
+          <input
+            type="text"
+            required
+            value={tag}
+            id="cretaeblogsinpt"
+            onChange={(event) => {
+              setTag(event.target.value);
+            }}
+            placeholder="Enter tags"
+            className="input-common-recruit"
+          />
+        </div>
+
+        <div className="firstboxvreateblog">
+          <h2 className="ttleinptcrteblog">Topic picture</h2>
+          <h4 className="specificttle">Add a picture to your blog</h4>
+
+          <h4 className="specificttle">
+            Only jpg, jpeg, png, webp, or avif file types of size less than 300KB are
+            accepted
+          </h4>
+          <FileBase64
+            multiple={false}
+            onDone={({ base64, file }) => {
+              if (
+                (file.type === "image/png" ||
+                  file.type === "image/jpeg" ||
+                  file.type === "image/jpg" ||
+                  file.type === "image/webp" ||
+                  file.type === "image/avif") &&
+                file.size <= 300 * 1024
+              ) {
+                handleImgChange(base64);
+              } else {
+                alert("Invalid file type or size. Image should be less than 300 KB.");
+                setTopicpic("");
+              }
+            }}
+          >
+            {({ file }) => (
+              <div>
+                {file && file.size <= 300 * 1024 && <p>Selected file: {file.name}</p>}
+              </div>
+            )}
+          </FileBase64>
+        </div>
+
+        <div className="firstboxvreateblog" id="writerdivid">
+          <h2 className="ttleinptcrteblog">Writer Details</h2>
+          <h4 className="specificttle">Name</h4>
+          <input
+            type="text"
+            id="cretaeblogsinpt"
+            required
+            value={writernmae}
+            onChange={(event) => {
+              setWritername(event.target.value);
+            }}
+            placeholder="Enter name"
+            className="input-common-recruit"
+          />
+
+          <h4 className="specificttle">Email</h4>
+          <input
+            type="email"
+            required
+            value={writeremail}
+            id="cretaeblogsinpt"
+            onChange={(event) => {
+              setWriteremail(event.target.value);
+            }}
+            placeholder="Enter your email"
+            className="input-common-recruit"
+          />
+
+          <h4 className="specificttle">Brief Introduction</h4>
+
+          <textarea
+            rows="3"
+            type="text"
+            required
+            id="cretaeblogsinpt"
+            value={writerintro}
+            onChange={(event) => {
+              setWriterintro(event.target.value);
+            }}
+            placeholder="Enter intro to be displayed"
+            className="input-common-recruit"
+          ></textarea>
+
+          <h4 className="specificttle">Photograph</h4>
+          <input
+            type="text"
+            required
+            id="cretaeblogsinpt"
+            value={writerpic}
+            onChange={(event) => {
+              setWriterpic(event.target.value);
+            }}
+            placeholder="Your photograph link"
+            className="input-common-recruit"
+          />
+        </div>
+
+        <button
+          onClick={submitform}
+          className="kretrhereading"
+          id="crteblogbtn0"
+          disabled={disablecreate}
+          style={{
+            opacity: disablecreate ? 0.5 : 1,
+            cursor: disablecreate ? "not-allowed" : "pointer",
+          }}
+        >
+          {submitting ? "Editing Blog..." : "Edit Blog"}{" "}
+        </button>
+      </div>
+
+      <Footer />
+    </div>
+  );
+};
+
+export default Editblogform;

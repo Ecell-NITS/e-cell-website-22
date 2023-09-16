@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react'
-import './GalleryCard.css'
+import React, { useState, useEffect } from "react";
+import "./GalleryCard.css";
 const config = {
   rootMargin: "0px 0px 0px 0px",
   threshold: 0.2,
@@ -36,13 +36,17 @@ function GalleryCard(props) {
         {/* <div className="card_body">
                 <h5 className="card_title">{props.id}</h5>
              </div> */}
-        <img src={""} key={props.id} data-src={props.imgsrc} alt="img"
+        <img
+          src={""}
+          key={props.id}
+          data-src={props.imgsrc}
+          alt="img"
           className={`${loaded ? "loaded" : "loading"} card-img-top`}
           onLoad={() => setIsLoaded(true)}
         />
       </div>
     </div>
-  )
+  );
 }
 
-export default GalleryCard
+export default GalleryCard;

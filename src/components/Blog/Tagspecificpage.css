@@ -1,20 +1,20 @@
-.tagblogpagemain{
-    padding-top: 6vw;
-    min-height: 100vh;
+.tagblogpagemain {
+  padding-top: 6vw;
+  min-height: 100vh;
 }
 
-.headingtagsspecific{
-    font-size: 3.5vw;
-    color: #224259;
-    text-decoration: underline;
+.headingtagsspecific {
+  font-size: 3.5vw;
+  color: #224259;
+  text-decoration: underline;
 }
 
-@media (max-width:660px){
-    .tagblogpagemain{
-        padding-top: 10vw;
-    }
+@media (max-width: 660px) {
+  .tagblogpagemain {
+    padding-top: 10vw;
+  }
 
-    .headingtagsspecific{
-        font-size: 7vw;
-    }
+  .headingtagsspecific {
+    font-size: 7vw;
+  }
 }

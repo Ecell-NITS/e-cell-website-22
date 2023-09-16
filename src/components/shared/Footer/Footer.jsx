@@ -8,10 +8,10 @@ import { BsFillTelephoneFill } from "react-icons/bs";
 import { FiMail } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import Ip from "../User/Ip";
-import axios from 'axios';
+import axios from "axios";
 const Footer = () => {
   const [email, setEmail] = useState("");
-  const [disablesend,setDisablesend] = useState(false)
+  const [disablesend, setDisablesend] = useState(false);
   const isFormValid = () => {
     return email !== "";
   };
@@ -21,7 +21,7 @@ const Footer = () => {
     return emailRegex.test(email);
   };
 
-  const [checkingemail, setCheckingemail] = useState(false)
+  const [checkingemail, setCheckingemail] = useState(false);
 
   const createUser = async (event) => {
     event.preventDefault();
@@ -36,8 +36,8 @@ const Footer = () => {
       return;
     }
 
-    setDisablesend(true)
-    setCheckingemail(true)
+    setDisablesend(true);
+    setCheckingemail(true);
     try {
       const response = await axios.post(
         import.meta.env.VITE_REACT_APP_AXIOSPOST_CHECKEMAIL_RENDER,
@@ -48,38 +48,38 @@ const Footer = () => {
       );
 
       if (!response.data.unique) {
-        setCheckingemail(false)
-        setDisablesend(false)
+        setCheckingemail(false);
+        setDisablesend(false);
         alert("You have already subscribed to our newsletter");
         return;
       }
     } catch (error) {
       console.log("Error checking email uniqueness:", error);
       alert("An error occurred while checking email uniqueness");
-      setCheckingemail(false)
-      setDisablesend(false)
+      setCheckingemail(false);
+      setDisablesend(false);
       return;
     }
 
-    setDisablesend(true)
+    setDisablesend(true);
     axios
       .post(import.meta.env.VITE_REACT_APP_AXIOSPOST_POSTMAIN_RENDER, {
         // .post('http://localhost:3001/createUser', {
-        email
+        email,
       })
       .then((response) => {
         setEmail("");
-        setCheckingemail(false)
-        setDisablesend(false)
+        setCheckingemail(false);
+        setDisablesend(false);
         alert("Subscribed to Our Newsletter.🥳");
       })
-      .catch((error)=>{
+      .catch((error) => {
         setEmail("");
-        setCheckingemail(false)
-        setDisablesend(false)
-        alert("Something went wrong. Please try again later.")
-        console.log('Failed to subscribe to newsletter',error)
-      })
+        setCheckingemail(false);
+        setDisablesend(false);
+        alert("Something went wrong. Please try again later.");
+        console.log("Failed to subscribe to newsletter", error);
+      });
   };
 
   return (
@@ -185,7 +185,12 @@ const Footer = () => {
                   setEmail(event.target.value);
                 }}
               />
-              <button disabled={disablesend} style={{cursor:disablesend?"not-allowed":"pointer"}} onClick={createUser} className="btnnewsformletter">
+              <button
+                disabled={disablesend}
+                style={{ cursor: disablesend ? "not-allowed" : "pointer" }}
+                onClick={createUser}
+                className="btnnewsformletter"
+              >
                 <MdSend className="send" />
               </button>
             </div>

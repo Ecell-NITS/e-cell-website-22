@@ -1,25 +1,25 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
   -webkit-tap-highlight-color: transparent;
 }
-a{
+a {
   text-decoration: none !important;
   color: white !important;
 }
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   width: 7px;
 }
-::-webkit-scrollbar-track{
+::-webkit-scrollbar-track {
   background: #224259;
 }
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
   background: #161c2f;
   border-radius: 15px;
 }
-::-webkit-scrollbar-thumb:hover{
+::-webkit-scrollbar-thumb:hover {
   background: #0072b1;
 }
 
