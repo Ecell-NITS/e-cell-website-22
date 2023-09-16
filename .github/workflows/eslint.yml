@@ -2,7 +2,7 @@ on:
   push:
     branches:
       - vite_newdev
-      
+
   pull_request:
     types: [opened, reopened]
 
@@ -18,11 +18,15 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: 18.12.1 
+          node-version: 18.12.1
+
+      - name: Install pnpm
+        run: npm install -g pnpm
 
       - name: Install dependencies
         run: pnpm install
 
       - name: Run ESLint
-        run: npx eslint . --ext .js,.jsx
+        run: pnpm run lint
+
 
