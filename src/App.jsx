@@ -42,18 +42,8 @@ function App() {
               element={<Gallery />}
               key="route-gallery-screen"
             />
-            <Route
-              exact
-              path="/team"
-              element={<Team />}
-              key="route-team-screen"
-            />
-            <Route
-              exact
-              path="/events"
-              element={<Events />}
-              key="route-events-screen"
-            />
+            <Route exact path="/team" element={<Team />} key="route-team-screen" />
+            <Route exact path="/events" element={<Events />} key="route-events-screen" />
             <Route
               exact
               path="/resources"
@@ -61,7 +51,6 @@ function App() {
               key="route-events-screen"
             />
 
-        
             <Route
               exact
               path="/allevents"
@@ -108,18 +97,8 @@ function App() {
               key="route-provisionalblog-screen"
             />
 
-            <Route
-              exact
-              path="/signup"
-              element={<Signup />}
-              key="route-signup-screen"
-            />
-            <Route
-              exact
-              path="/login"
-              element={<Login />}
-              key="route-login-screen"
-            />
+            <Route exact path="/signup" element={<Signup />} key="route-signup-screen" />
+            <Route exact path="/login" element={<Login />} key="route-login-screen" />
             <Route
               exact
               path="/dashboard"
@@ -160,8 +139,6 @@ function App() {
               element={<Alllikedblogs />}
               key="route-Alllikedblogs-screen"
             />
-
-
 
             <Route
               exact

@@ -18,14 +18,13 @@ const Signup = () => {
   const [disablebtn, setDisablebtn] = useState(false);
   const [disablesendotp, setDisablesendotp] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
-
   const [userimg, setUserimg] = useState(
     "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
   );
   const [bio, setBio] = useState("Author");
 
   const handleShowPassword = () => setShowPassword(!showPassword);
-
+  
   useEffect(() => {
     document.title = "Signup | E-Cell NIT Silchar";
     const token = localStorage.getItem("token");
@@ -123,15 +122,12 @@ const Signup = () => {
         setPassword("");
         setConfirmpwd("");
         setOtp("");
-        if (
-          error.response &&
-          error.response.data.error === "Email already exists"
-        ) {
+
+        if (error.response && error.response.data.error === "Email already exists") {
           setMessage("Email already exists");
         } else if (
           error.response &&
-          error.response.data.error ===
-            "Password should not be less than 8 characters"
+          error.response.data.error === "Password should not be less than 8 characters"
         ) {
           setMessage("Password cannot be less than 8 characters");
         } else {
@@ -167,9 +163,7 @@ const Signup = () => {
         }
       );
       if (response.status === 200) {
-        alert(
-          "OTP sent successfully! Please check your inbox as well as SPAM folder."
-        );
+        alert("OTP sent successfully! Please check your inbox as well as SPAM folder.");
       }
     } catch (error) {
       console.log("Error sending OTP:", error);
@@ -235,8 +229,7 @@ const Signup = () => {
                 disabled={disablesendotp || disablebtn}
                 style={{
                   opacity: disablesendotp || disablebtn ? 0.5 : 1,
-                  cursor:
-                    disablesendotp || disablebtn ? "not-allowed" : "pointer",
+                  cursor: disablesendotp || disablebtn ? "not-allowed" : "pointer",
                 }}
                 className="btnotpsend"
                 id="newotpsending"
@@ -281,6 +274,7 @@ const Signup = () => {
                 Show password
               </label>
             </div>
+
             <div className="inputdicdignup">
               <h3>Confirm Password</h3>
               <input
@@ -298,8 +292,7 @@ const Signup = () => {
               disabled={disablebtn || disablesendotp}
               style={{
                 opacity: disablebtn || disablesendotp ? 0.5 : 1,
-                cursor:
-                  disablebtn || disablesendotp ? "not-allowed" : "pointer",
+                cursor: disablebtn || disablesendotp ? "not-allowed" : "pointer",
               }}
             >
               {signingup ? "Creating account" : "Sign up"}
@@ -315,8 +308,7 @@ const Signup = () => {
                 onClick={hangleGoToLogin}
                 disabled={disablebtn || disablesendotp}
                 style={{
-                  cursor:
-                    disablebtn || disablesendotp ? "not-allowed" : "pointer",
+                  cursor: disablebtn || disablesendotp ? "not-allowed" : "pointer",
                 }}
               >
                 Sign In

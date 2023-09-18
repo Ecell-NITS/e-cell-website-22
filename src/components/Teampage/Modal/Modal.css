@@ -1,106 +1,104 @@
 .modal-dialog.modal-lg {
-    top: 7%;
+  top: 7%;
 }
 
 .profileCard {
-    display: flex;
-    border-radius: 10px;
-    cursor: pointer;
-    width: 100%;
+  display: flex;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100%;
 }
 
 .profile2 {
-    margin: 0.35rem;
+  margin: 0.35rem;
 }
 .img2 {
-    width: 24vw;
-    height: 24vw;
+  width: 24vw;
+  height: 24vw;
 }
 .img2 img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .content {
-    margin: 0.4rem;
-    padding: 1.5rem;
-    font-size: 1.5rem;
-    text-overflow: clip;
-    overflow: hidden;
+  margin: 0.4rem;
+  padding: 1.5rem;
+  font-size: 1.5rem;
+  text-overflow: clip;
+  overflow: hidden;
 }
 
 .name_modal {
-    text-align: center;
-    font-size: 1.9rem;
-    color: #224259;
+  text-align: center;
+  font-size: 1.9rem;
+  color: #224259;
 }
 
 .desg_modal {
-    text-align: center;
-    margin-bottom: 1.5rem;
-    font-size: 1.2rem;
-    font-weight: 400;
-    color: #3e618e;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #3e618e;
 }
 
 @media only screen and (max-width: 992px) {
-    .content {
-        font-size: 1.3rem;
-    }
+  .content {
+    font-size: 1.3rem;
+  }
 
-    .img2 {
-        width: 24vw;
-        height: 24vw;
-    }
+  .img2 {
+    width: 24vw;
+    height: 24vw;
+  }
 
-    .one {
-        font-size: 1.5rem;
-    }
+  .one {
+    font-size: 1.5rem;
+  }
 
-    .two {
-        font-size: 0.6rem;
-    }
+  .two {
+    font-size: 0.6rem;
+  }
 }
 
 @media only screen and (max-width: 991px) {
-    .content {
-        font-size: 1.1rem;
-    }
+  .content {
+    font-size: 1.1rem;
+  }
 
-    .img2 {
-        height: 12rem;
-        width: 9rem;
-    }
-
+  .img2 {
+    height: 12rem;
+    width: 9rem;
+  }
 }
 
 @media only screen and (max-width: 481px) {
-    .modal-dialog.modal-lg {
-        top: 4%;
-    }
-    .content {
-        font-size: 0.9rem;
-        padding: 0.5rem;
-    }
+  .modal-dialog.modal-lg {
+    top: 4%;
+  }
+  .content {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
 
-    .profileCard {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
+  .profileCard {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
-    .desg_modal {
-        margin-bottom: 0;
+  .desg_modal {
+    margin-bottom: 0;
+  }
 
-    }
+  .img2 {
+    height: 10rem;
+    width: 7rem;
+  }
 
-    .img2 {
-        height: 10rem;
-        width: 7rem;
-    }
-
-    .one {
-        font-size: 1.2rem;
-    }
+  .one {
+    font-size: 1.2rem;
+  }
 }

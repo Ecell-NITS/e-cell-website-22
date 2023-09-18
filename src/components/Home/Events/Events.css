@@ -1,161 +1,156 @@
 * {
-    font-family: 'Barlow Condensed', sans-serif;
+  font-family: "Barlow Condensed", sans-serif;
 }
 
 .event_main {
-    position: relative;
-    z-index: 9;
+  position: relative;
+  z-index: 9;
 }
 
 .item-head {
-    margin: 0rem 1rem;
-    text-align: center;
-    transform: translateY(2.5vh);
-    position: relative;
-    top: 20vh;
-    transition: all .5s ease;
+  margin: 0rem 1rem;
+  text-align: center;
+  transform: translateY(2.5vh);
+  position: relative;
+  top: 20vh;
+  transition: all 0.5s ease;
 }
 
 .event_items {
-    display: flex;
-    justify-content: space-between;
-    overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
 }
 
 .ev {
-    width: 25%;
-    min-height: 65vh;
-    overflow: hidden;
-    padding-bottom: 2rem;
-    color: white;
+  width: 25%;
+  min-height: 65vh;
+  overflow: hidden;
+  padding-bottom: 2rem;
+  color: white;
 }
 
 .item1,
 .item2,
 .item3,
 .item4 {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    box-shadow: inset 0 0 0 1000px rgba(1, 51, 91, 0.7);
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    transition: all 0.5s ease-out;
-
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  box-shadow: inset 0 0 0 1000px rgba(1, 51, 91, 0.7);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: all 0.5s ease-out;
 }
 
 .item1 {
-    background: url(https://res.cloudinary.com/dp92qug2f/image/upload/v1680769436/Ecell%20website/events/backgrounds%20homepage%20events%20section/orientation_rmnosd.webp);
-    background-size: cover;
-    background-repeat: no-repeat;
+  background: url(https://res.cloudinary.com/dp92qug2f/image/upload/v1680769436/Ecell%20website/events/backgrounds%20homepage%20events%20section/orientation_rmnosd.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .item2 {
-    background: url(https://res.cloudinary.com/dp92qug2f/image/upload/v1680769435/Ecell%20website/events/backgrounds%20homepage%20events%20section/empreserrio_mzokcx.webp);
-    background-size: cover;
-    background-repeat: no-repeat;
+  background: url(https://res.cloudinary.com/dp92qug2f/image/upload/v1680769435/Ecell%20website/events/backgrounds%20homepage%20events%20section/empreserrio_mzokcx.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .item3 {
-    background: url(https://res.cloudinary.com/dp92qug2f/image/upload/v1680769436/Ecell%20website/events/backgrounds%20homepage%20events%20section/srijan_t8leer.webp);
-    background-size: cover;
-    background-repeat: no-repeat;
-
+  background: url(https://res.cloudinary.com/dp92qug2f/image/upload/v1680769436/Ecell%20website/events/backgrounds%20homepage%20events%20section/srijan_t8leer.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .item4 {
-    background: url(https://res.cloudinary.com/dp92qug2f/image/upload/v1680769435/Ecell%20website/events/backgrounds%20homepage%20events%20section/incubation_pyv0lv.webp);
-    background-size: cover;
-    background-repeat: no-repeat;
-
+  background: url(https://res.cloudinary.com/dp92qug2f/image/upload/v1680769435/Ecell%20website/events/backgrounds%20homepage%20events%20section/incubation_pyv0lv.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .event_child {
-    visibility: hidden;
-    opacity: 0;
-    transition: all 0.6s ease-out;
-    transform: translateY(5vh);
-    font-size: 1rem;
-    font-weight: 550;
-    letter-spacing: 0.5px;
-    margin-bottom: 2rem;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.6s ease-out;
+  transform: translateY(5vh);
+  font-size: 1rem;
+  font-weight: 550;
+  letter-spacing: 0.5px;
+  margin-bottom: 2rem;
 }
 
 .item1:hover,
 .item2:hover,
 .item3:hover,
 .item4:hover {
-    cursor: pointer;
-    width: 50%;
-    padding: 0rem 3.5rem;
-
+  cursor: pointer;
+  width: 50%;
+  padding: 0rem 3.5rem;
 }
 
 .ev:hover .item-head {
-    top: 5%;
-    transform: scale(1.5);
-    transform: translateY(-3.5vh);
-    transition: all 0.5s ease-out;
-    font-size: 1.5rem;
+  top: 5%;
+  transform: scale(1.5);
+  transform: translateY(-3.5vh);
+  transition: all 0.5s ease-out;
+  font-size: 1.5rem;
 }
 
 .ev:hover .event_child,
 .ev:hover .event_child,
 .ev:hover .event_child,
 .ev:hover .event_child {
+  visibility: visible;
+  opacity: 1;
+  line-height: 1.5rem;
+  letter-spacing: 0.5px;
+}
+
+@media only screen and (max-width: 1130px) {
+  .event_items {
+    flex-direction: column;
     visibility: visible;
-    opacity: 1;
-    line-height: 1.5rem;
+  }
+
+  .ev {
+    width: 100%;
+    min-height: 50vh;
+    overflow: hidden;
+  }
+
+  .item-head {
+    top: 10vh;
+  }
+
+  .ev:hover .item-head {
+    transform: scale(1);
+    transform: translateY(-3vh);
+  }
+
+  .item1:hover,
+  .item2:hover,
+  .item3:hover,
+  .item4:hover {
+    width: 100%;
+    padding: 1rem 1rem;
+  }
+
+  .item1,
+  .item2,
+  .item3,
+  .item4 {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .event_child {
+    transform: translateY(3vh);
     letter-spacing: 0.5px;
-}
-
-
-@media only screen and (max-width: 1130px) {
-    .event_items {
-        flex-direction: column;
-        visibility: visible;
-    }
-
-    .ev {
-        width: 100%;
-        min-height: 50vh;
-        overflow: hidden;
-    }
-
-    .item-head {
-        top: 10vh;
-    }
-
-    .ev:hover .item-head {
-        transform: scale(1);
-        transform: translateY(-3vh);
-    }
-
-    .item1:hover,
-    .item2:hover,
-    .item3:hover,
-    .item4:hover {
-        width: 100%;
-        padding: 1rem 1rem;
-    }
-
-    .item1,
-    .item2,
-    .item3,
-    .item4 {
-        width: 100%;
-        box-sizing: border-box;
-    }
-
-    .event_child {
-        transform: translateY(3vh);
-        letter-spacing: 0.5px;
-    }
+  }
 }
 
 @media only screen and (max-width: 1130px) {
-    .item-head {
-        top: 8vh;
-    }
+  .item-head {
+    top: 8vh;
+  }
 }

@@ -1,304 +1,305 @@
 [
-    {   "id":1,
-        "year": "2022-2023",
-        "event": "Srijan",
-        "imgsrc": "https://res.cloudinary.com/dfriijrmr/image/upload/v1677396003/samples/GalleryPage/srijan2022-2023/start3_tqu8nr.jpg"
-    },
-    {
-      "id":2,
-      "year":"2022-2023",
-      "event":"Srijan",
-      "imgsrc": "https://res.cloudinary.com/dfriijrmr/image/upload/v1677395999/samples/GalleryPage/srijan2022-2023/idk_knmujl.jpg"
-    },
-    {
-      "id":3,
-      "year":"2022-2023",
-      "event":"Srijan",
-      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1677474955/GalleryPage/Srijan%202022-23/teams_uu7dec.jpg"
-    },
-    {
-      "id":4,
-      "year":"2022-2023",
-      "event":"Srijan",
-      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1677395996/samples/GalleryPage/srijan2022-2023/277772067_532544878220799_7467461624549756321_n_vfylc8.jpg"
-    },
-  
-    {
-      "id":5,
-      "year":"2022-2023",
-      "event":"Srijan",
-      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1677474945/GalleryPage/Srijan%202022-23/imaugural_ceremony_xihtp2.jpg"
-    },
-    {
-      "id":6,
-      "year":"2022-2023",
-      "event":"Srijan",
-      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1677474942/GalleryPage/Srijan%202022-23/group_pic_wqdelr.jpg"
-    },
-    {
-      "id":7,
-      "year":"2022-2023",
-      "event":"Srijan",
-      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1677474940/GalleryPage/Srijan%202022-23/crying_vgczef.jpg"
-    },
-    {
-      "id":8,
-      "year":"2022-2023",
-      "event":"Srijan",
-      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1677474888/GalleryPage/Srijan%202022-23/278647849_532986591509961_3049151441003914535_n_nv4dg4.jpg"
-    },
-    {
-      "id":9,
-      "year":"2022-2023",
-      "event":"Srijan",
-      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1677474885/GalleryPage/Srijan%202022-23/278422694_532980904843863_3162676106950133638_n_by17db.jpg"
-    },
-    {
-      "id":10,
-      "year":"2022-2023",
-      "event":"Srijan",
-      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1677474885/GalleryPage/Srijan%202022-23/278332086_532980968177190_3407856614422230693_n_unaf2s.jpg"
-    },
-    {
-      "id":11,
-      "year":"2022-2023",
-      "event":"Srijan",
-      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1677474882/GalleryPage/Srijan%202022-23/278126023_532544801554140_7365133572541381614_n_ggswsn.jpg"
-    },
-    {
-      "id":12,
-      "year":"2022-2023",
-      "event":"Srijan",
-      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1677474882/GalleryPage/Srijan%202022-23/277806645_532985668176720_3858823300515326543_n_s5rtty.jpg"
-    },
-    {
-      "id":13,
-      "year":"2022-2023",
-      "event":"Srijan",
-      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1677474884/GalleryPage/Srijan%202022-23/278247721_532984378176849_8300906852035734564_n_aydgse.jpg"
-    },
-    {
-      "id":14,
-      "year":"2022-2023",
-      "event":"Srijan",
-      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1677474887/GalleryPage/Srijan%202022-23/278596414_532986014843352_4474012601936729890_n_x6b6xs.jpg"
-    },
+  {
+    "id": 1,
+    "year": "2022-2023",
+    "event": "Srijan",
+    "imgsrc": "https://res.cloudinary.com/dfriijrmr/image/upload/v1677396003/samples/GalleryPage/srijan2022-2023/start3_tqu8nr.jpg"
+  },
+  {
+    "id": 2,
+    "year": "2022-2023",
+    "event": "Srijan",
+    "imgsrc": "https://res.cloudinary.com/dfriijrmr/image/upload/v1677395999/samples/GalleryPage/srijan2022-2023/idk_knmujl.jpg"
+  },
+  {
+    "id": 3,
+    "year": "2022-2023",
+    "event": "Srijan",
+    "imgsrc": "https://res.cloudinary.com/dfriijrmr/image/upload/v1677474955/GalleryPage/Srijan%202022-23/teams_uu7dec.jpg"
+  },
+  {
+    "id": 4,
+    "year": "2022-2023",
+    "event": "Srijan",
+    "imgsrc": "https://res.cloudinary.com/dfriijrmr/image/upload/v1677395996/samples/GalleryPage/srijan2022-2023/277772067_532544878220799_7467461624549756321_n_vfylc8.jpg"
+  },
 
-    {
-      "id":15,
-      "year":"2022-2023",
-      "event":"Orientation",
-      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1677473927/GalleryPage/Orientation%202022-2023/IMG_1473_wvo4vr.jpg"
-    },
-    {
-      "id":16,
-      "year":"2022-2023",
-      "event":"Orientation",
-      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1677472654/GalleryPage/Orientation%202022-2023/IMG_1582_fjqenz.jpg"
-    },
-    {
-      "id":17,
-      "year":"2022-2023",
-      "event":"Orientation",
-      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1677472654/GalleryPage/Orientation%202022-2023/IMG_1579_i7tuyk.jpg"
-    },
+  {
+    "id": 5,
+    "year": "2022-2023",
+    "event": "Srijan",
+    "imgsrc": "https://res.cloudinary.com/dfriijrmr/image/upload/v1677474945/GalleryPage/Srijan%202022-23/imaugural_ceremony_xihtp2.jpg"
+  },
+  {
+    "id": 6,
+    "year": "2022-2023",
+    "event": "Srijan",
+    "imgsrc": "https://res.cloudinary.com/dfriijrmr/image/upload/v1677474942/GalleryPage/Srijan%202022-23/group_pic_wqdelr.jpg"
+  },
+  {
+    "id": 7,
+    "year": "2022-2023",
+    "event": "Srijan",
+    "imgsrc": "https://res.cloudinary.com/dfriijrmr/image/upload/v1677474940/GalleryPage/Srijan%202022-23/crying_vgczef.jpg"
+  },
+  {
+    "id": 8,
+    "year": "2022-2023",
+    "event": "Srijan",
+    "imgsrc": "https://res.cloudinary.com/dfriijrmr/image/upload/v1677474888/GalleryPage/Srijan%202022-23/278647849_532986591509961_3049151441003914535_n_nv4dg4.jpg"
+  },
+  {
+    "id": 9,
+    "year": "2022-2023",
+    "event": "Srijan",
+    "imgsrc": "https://res.cloudinary.com/dfriijrmr/image/upload/v1677474885/GalleryPage/Srijan%202022-23/278422694_532980904843863_3162676106950133638_n_by17db.jpg"
+  },
+  {
+    "id": 10,
+    "year": "2022-2023",
+    "event": "Srijan",
+    "imgsrc": "https://res.cloudinary.com/dfriijrmr/image/upload/v1677474885/GalleryPage/Srijan%202022-23/278332086_532980968177190_3407856614422230693_n_unaf2s.jpg"
+  },
+  {
+    "id": 11,
+    "year": "2022-2023",
+    "event": "Srijan",
+    "imgsrc": "https://res.cloudinary.com/dfriijrmr/image/upload/v1677474882/GalleryPage/Srijan%202022-23/278126023_532544801554140_7365133572541381614_n_ggswsn.jpg"
+  },
+  {
+    "id": 12,
+    "year": "2022-2023",
+    "event": "Srijan",
+    "imgsrc": "https://res.cloudinary.com/dfriijrmr/image/upload/v1677474882/GalleryPage/Srijan%202022-23/277806645_532985668176720_3858823300515326543_n_s5rtty.jpg"
+  },
+  {
+    "id": 13,
+    "year": "2022-2023",
+    "event": "Srijan",
+    "imgsrc": "https://res.cloudinary.com/dfriijrmr/image/upload/v1677474884/GalleryPage/Srijan%202022-23/278247721_532984378176849_8300906852035734564_n_aydgse.jpg"
+  },
+  {
+    "id": 14,
+    "year": "2022-2023",
+    "event": "Srijan",
+    "imgsrc": "https://res.cloudinary.com/dfriijrmr/image/upload/v1677474887/GalleryPage/Srijan%202022-23/278596414_532986014843352_4474012601936729890_n_x6b6xs.jpg"
+  },
 
-    {
-      "id":18,
-      "year":"2022-2023",
-      "event":"Orientation",
-      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1677474386/GalleryPage/Orientation%202022-2023/IMG_1558_vjql6g.jpg"
-    },
-    {
-      "id":19,
-      "year":"2022-2023",
-      "event":"Orientation",
-      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1677472653/GalleryPage/Orientation%202022-2023/IMG_1479_oiyz1p.jpg"
-    },
-    {
-      "id":20,
-      "year":"2022-2023",
-      "event":"Orientation",
-      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1677473928/GalleryPage/Orientation%202022-2023/IMG_1482_uyf84a.jpg"
-   },
-   {
-      "id":21,
-      "year":"2020-2021",
-      "event":"Srijan",
-      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1677528539/GalleryPage/Srijan%201.0/73504844_2690552797675835_6353087079890550784_n_hr8ekg.jpg"
-    },
-   {
-     "id":22,
-     "year":"2020-2021",
-     "event":"Srijan",
-      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1677528540/GalleryPage/Srijan%201.0/74794788_2695786133819168_8113573893685379072_n_lobip1.jpg"
-   },
-   {
-      "id":23,
-      "year":"2020-2021",
-      "event":"Srijan",
-      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1677528541/GalleryPage/Srijan%201.0/74802724_2693318890732559_7952600327612530688_n_wlqg3z.jpg"
-   },
-   {
-      "id":24,
-      "year":"2020-2021",
-      "event":"Srijan",
-      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1677528540/GalleryPage/Srijan%201.0/73284285_2690551787675936_116357986967879680_n_p5hwap.jpg"
-   },
-   {
-     "id":25,
-     "year":"2020-2021",
-     "event":"Srijan",
-     "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1677528539/GalleryPage/Srijan%201.0/73187906_2695788557152259_1331224357480955904_n_unf8sj.jpg"
-   },
-   {
-     "id":26,
-      "year":"2020-2021",
-      "event":"Srijan",
-      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1677528542/GalleryPage/Srijan%201.0/75293856_2690551991009249_1320737430323593216_n_jbnbck.jpg"
-    },
-    {
-      "id":27,
-      "year":"2020-2021",
-      "event":"Srijan",
-      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1677528542/GalleryPage/Srijan%201.0/74165655_2690552234342558_521364714261839872_n_qib32i.jpg"
-   },
-   {
-      "id":28,
-      "year":"2020-2021",
-      "event":"Srijan",
-      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1677528544/GalleryPage/Srijan%201.0/75418900_2695788787152236_6160675869334437888_n_be6t9k.jpg"
-    },
-   {
-      "id":29,
-      "year":"2020-2021",
-      "event":"Srijan",
-      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1677528539/GalleryPage/Srijan%201.0/74158682_2693318850732563_1879555148464783360_n_up4plx.jpg"
-    },
-    {
-      "id":30,
-      "year":"2020-2021",
-      "event":"Srijan",
-      "imgsrc": "https://res.cloudinary.com/dfriijrmr/image/upload/v1677528546/GalleryPage/Srijan%201.0/76605202_2690552351009213_9048639225221611520_n_owwhgs.jpg"
-    },
-   {
-      "id":31,
-      "year":"2020-2021",
-      "event":"Srijan",
-      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1677528549/GalleryPage/Srijan%201.0/76705240_2695791563818625_4162529024490340352_n_hoggcp.jpg"
-    },
-    {
-      "id":32,
-      "year":"2022-2023",
-      "event":"Empressario",
-      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1678297818/GalleryPage/Emprassario%202022-23/WhatsApp_Image_2022-11-16_at_7.52.20_AM_asucfg.jpg"
-    },
-    {
-      "id":33,
-      "year":"2022-2023",
-      "event":"Empressario",
-      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1678297818/GalleryPage/Emprassario%202022-23/WhatsApp_Image_2022-11-20_at_11.43.03_AM_grnx2j.jpg"
-    },
-    {
-      "id":34,
-      "year":"2022-2023",
-      "event":"Empressario",
-      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1678297818/GalleryPage/Emprassario%202022-23/WhatsApp_Image_2022-11-20_at_11.43.06_AM_bkovkg.jpg"
-    },
-    {
-      "id":35,
-      "year":"2022-2023",
-      "event":"Empressario",
-      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1678297818/GalleryPage/Emprassario%202022-23/WhatsApp_Image_2022-11-20_at_11.43.05_AM_kfcxb3.jpg"
-    },
-    {
-      "id": 36,
-      "year":"2022-2023",
-      "event":"EIC",
-      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1680503445/GalleryPage/EIC/EIC_2022_3_aoi9gr.jpg"
-    },
-    {
-      "id": 37,
-      "year":"2022-2023",
-      "event":"EIC",
-      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1680503445/GalleryPage/EIC/EIC_2022_2_oy4m4o.jpg"
-    },
-    {
-      "id": 38,
-      "year":"2022-2023",
-      "event":"EIC",
-      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1680503444/GalleryPage/EIC/EIC_2022_l7c1cl.jpg"
-    },
-    {
-      "id": 39,
-      "year":"2022-2023",
-      "event":"EIC",
-      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1680503444/GalleryPage/EIC/EIC_2022_4_oqmmno.jpg"
-    },
-    {
-      "id":40,
-      "year":"2022-2023",
-      "event":"EIC",
-      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1680503444/GalleryPage/EIC/EIC_2022_6_a71r2s.jpg"
-    },
-    {
-      "id":41,
-      "year":"2022-2023",
-      "event":"EIC",
-      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1680503444/GalleryPage/EIC/EIC_2022_1_pxpx1h.jpg"
-    },
-    {
-      "id":42,
-      "year":"2022-2023",
-      "event":"EIC",
-      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1680503444/GalleryPage/EIC/EIC_2022_7_oelrai.jpg"
-    },
-    {
-      "id":43,
-      "year":"2022-2023",
-      "event":"EIC",
-      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1680503442/GalleryPage/EIC/EIC_2022_8_i2fvof.jpg"
-    },
-    {
-      "id":44,
-      "year":"2022-2023",
-      "event":"EIC",
-      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1680503443/GalleryPage/EIC/EIC_2022_5_n29tm0.jpg"
-    },
-    {
-      "id":45,
-      "year":"2022-2023",
-      "event":"EIC",
-      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1680503443/GalleryPage/EIC/EIC_2022_9_dtp9en.jpg"
-    },
-    {
-      "id":46,
-      "year":"2022-2023",
-      "event":"EIC",
-      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1680503442/GalleryPage/EIC/EIC_2022_11_pszgha.jpg"
-    },
-    {
-      "id":47,
-      "year":"2022-2023",
-      "event":"EIC",
-      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1680503442/GalleryPage/EIC/EIC_2022_12_dkujie.jpg"
-    },
-    {
-      "id":48,
-      "year":"2022-2023",
-      "event":"EIC",
-      "imgsrc":"https://res.cloudinary.com/dfriijrmr/image/upload/v1680503441/GalleryPage/EIC/EIC_2022_10_olgxqh.jpg"
-    },
-    {
-      "id":49,
-      "year":"2022-2023",
-      "event":"Orientation",
-      "imgsrc":"https://res.cloudinary.com/dp92qug2f/image/upload/v1685353486/Ecell%20website/IMG_1708_jjc1aj.webp"
-     },
-     {
-      "id":50,
-      "year":"2022-2023",
-      "event":"Orientation",
-      "imgsrc":"https://res.cloudinary.com/dp92qug2f/image/upload/v1685353487/Ecell%20website/IMG_1707_kxtmnu.webp"
-     }
- ]
+  {
+    "id": 15,
+    "year": "2022-2023",
+    "event": "Orientation",
+    "imgsrc": "https://res.cloudinary.com/dfriijrmr/image/upload/v1677473927/GalleryPage/Orientation%202022-2023/IMG_1473_wvo4vr.jpg"
+  },
+  {
+    "id": 16,
+    "year": "2022-2023",
+    "event": "Orientation",
+    "imgsrc": "https://res.cloudinary.com/dfriijrmr/image/upload/v1677472654/GalleryPage/Orientation%202022-2023/IMG_1582_fjqenz.jpg"
+  },
+  {
+    "id": 17,
+    "year": "2022-2023",
+    "event": "Orientation",
+    "imgsrc": "https://res.cloudinary.com/dfriijrmr/image/upload/v1677472654/GalleryPage/Orientation%202022-2023/IMG_1579_i7tuyk.jpg"
+  },
+
+  {
+    "id": 18,
+    "year": "2022-2023",
+    "event": "Orientation",
+    "imgsrc": "https://res.cloudinary.com/dfriijrmr/image/upload/v1677474386/GalleryPage/Orientation%202022-2023/IMG_1558_vjql6g.jpg"
+  },
+  {
+    "id": 19,
+    "year": "2022-2023",
+    "event": "Orientation",
+    "imgsrc": "https://res.cloudinary.com/dfriijrmr/image/upload/v1677472653/GalleryPage/Orientation%202022-2023/IMG_1479_oiyz1p.jpg"
+  },
+  {
+    "id": 20,
+    "year": "2022-2023",
+    "event": "Orientation",
+    "imgsrc": "https://res.cloudinary.com/dfriijrmr/image/upload/v1677473928/GalleryPage/Orientation%202022-2023/IMG_1482_uyf84a.jpg"
+  },
+  {
+    "id": 21,
+    "year": "2020-2021",
+    "event": "Srijan",
+    "imgsrc": "https://res.cloudinary.com/dfriijrmr/image/upload/v1677528539/GalleryPage/Srijan%201.0/73504844_2690552797675835_6353087079890550784_n_hr8ekg.jpg"
+  },
+  {
+    "id": 22,
+    "year": "2020-2021",
+    "event": "Srijan",
+    "imgsrc": "https://res.cloudinary.com/dfriijrmr/image/upload/v1677528540/GalleryPage/Srijan%201.0/74794788_2695786133819168_8113573893685379072_n_lobip1.jpg"
+  },
+  {
+    "id": 23,
+    "year": "2020-2021",
+    "event": "Srijan",
+    "imgsrc": "https://res.cloudinary.com/dfriijrmr/image/upload/v1677528541/GalleryPage/Srijan%201.0/74802724_2693318890732559_7952600327612530688_n_wlqg3z.jpg"
+  },
+  {
+    "id": 24,
+    "year": "2020-2021",
+    "event": "Srijan",
+    "imgsrc": "https://res.cloudinary.com/dfriijrmr/image/upload/v1677528540/GalleryPage/Srijan%201.0/73284285_2690551787675936_116357986967879680_n_p5hwap.jpg"
+  },
+  {
+    "id": 25,
+    "year": "2020-2021",
+    "event": "Srijan",
+    "imgsrc": "https://res.cloudinary.com/dfriijrmr/image/upload/v1677528539/GalleryPage/Srijan%201.0/73187906_2695788557152259_1331224357480955904_n_unf8sj.jpg"
+  },
+  {
+    "id": 26,
+    "year": "2020-2021",
+    "event": "Srijan",
+    "imgsrc": "https://res.cloudinary.com/dfriijrmr/image/upload/v1677528542/GalleryPage/Srijan%201.0/75293856_2690551991009249_1320737430323593216_n_jbnbck.jpg"
+  },
+  {
+    "id": 27,
+    "year": "2020-2021",
+    "event": "Srijan",
+    "imgsrc": "https://res.cloudinary.com/dfriijrmr/image/upload/v1677528542/GalleryPage/Srijan%201.0/74165655_2690552234342558_521364714261839872_n_qib32i.jpg"
+  },
+  {
+    "id": 28,
+    "year": "2020-2021",
+    "event": "Srijan",
+    "imgsrc": "https://res.cloudinary.com/dfriijrmr/image/upload/v1677528544/GalleryPage/Srijan%201.0/75418900_2695788787152236_6160675869334437888_n_be6t9k.jpg"
+  },
+  {
+    "id": 29,
+    "year": "2020-2021",
+    "event": "Srijan",
+    "imgsrc": "https://res.cloudinary.com/dfriijrmr/image/upload/v1677528539/GalleryPage/Srijan%201.0/74158682_2693318850732563_1879555148464783360_n_up4plx.jpg"
+  },
+  {
+    "id": 30,
+    "year": "2020-2021",
+    "event": "Srijan",
+    "imgsrc": "https://res.cloudinary.com/dfriijrmr/image/upload/v1677528546/GalleryPage/Srijan%201.0/76605202_2690552351009213_9048639225221611520_n_owwhgs.jpg"
+  },
+  {
+    "id": 31,
+    "year": "2020-2021",
+    "event": "Srijan",
+    "imgsrc": "https://res.cloudinary.com/dfriijrmr/image/upload/v1677528549/GalleryPage/Srijan%201.0/76705240_2695791563818625_4162529024490340352_n_hoggcp.jpg"
+  },
+  {
+    "id": 32,
+    "year": "2022-2023",
+    "event": "Empressario",
+    "imgsrc": "https://res.cloudinary.com/dfriijrmr/image/upload/v1678297818/GalleryPage/Emprassario%202022-23/WhatsApp_Image_2022-11-16_at_7.52.20_AM_asucfg.jpg"
+  },
+  {
+    "id": 33,
+    "year": "2022-2023",
+    "event": "Empressario",
+    "imgsrc": "https://res.cloudinary.com/dfriijrmr/image/upload/v1678297818/GalleryPage/Emprassario%202022-23/WhatsApp_Image_2022-11-20_at_11.43.03_AM_grnx2j.jpg"
+  },
+  {
+    "id": 34,
+    "year": "2022-2023",
+    "event": "Empressario",
+    "imgsrc": "https://res.cloudinary.com/dfriijrmr/image/upload/v1678297818/GalleryPage/Emprassario%202022-23/WhatsApp_Image_2022-11-20_at_11.43.06_AM_bkovkg.jpg"
+  },
+  {
+    "id": 35,
+    "year": "2022-2023",
+    "event": "Empressario",
+    "imgsrc": "https://res.cloudinary.com/dfriijrmr/image/upload/v1678297818/GalleryPage/Emprassario%202022-23/WhatsApp_Image_2022-11-20_at_11.43.05_AM_kfcxb3.jpg"
+  },
+  {
+    "id": 36,
+    "year": "2022-2023",
+    "event": "EIC",
+    "imgsrc": "https://res.cloudinary.com/dfriijrmr/image/upload/v1680503445/GalleryPage/EIC/EIC_2022_3_aoi9gr.jpg"
+  },
+  {
+    "id": 37,
+    "year": "2022-2023",
+    "event": "EIC",
+    "imgsrc": "https://res.cloudinary.com/dfriijrmr/image/upload/v1680503445/GalleryPage/EIC/EIC_2022_2_oy4m4o.jpg"
+  },
+  {
+    "id": 38,
+    "year": "2022-2023",
+    "event": "EIC",
+    "imgsrc": "https://res.cloudinary.com/dfriijrmr/image/upload/v1680503444/GalleryPage/EIC/EIC_2022_l7c1cl.jpg"
+  },
+  {
+    "id": 39,
+    "year": "2022-2023",
+    "event": "EIC",
+    "imgsrc": "https://res.cloudinary.com/dfriijrmr/image/upload/v1680503444/GalleryPage/EIC/EIC_2022_4_oqmmno.jpg"
+  },
+  {
+    "id": 40,
+    "year": "2022-2023",
+    "event": "EIC",
+    "imgsrc": "https://res.cloudinary.com/dfriijrmr/image/upload/v1680503444/GalleryPage/EIC/EIC_2022_6_a71r2s.jpg"
+  },
+  {
+    "id": 41,
+    "year": "2022-2023",
+    "event": "EIC",
+    "imgsrc": "https://res.cloudinary.com/dfriijrmr/image/upload/v1680503444/GalleryPage/EIC/EIC_2022_1_pxpx1h.jpg"
+  },
+  {
+    "id": 42,
+    "year": "2022-2023",
+    "event": "EIC",
+    "imgsrc": "https://res.cloudinary.com/dfriijrmr/image/upload/v1680503444/GalleryPage/EIC/EIC_2022_7_oelrai.jpg"
+  },
+  {
+    "id": 43,
+    "year": "2022-2023",
+    "event": "EIC",
+    "imgsrc": "https://res.cloudinary.com/dfriijrmr/image/upload/v1680503442/GalleryPage/EIC/EIC_2022_8_i2fvof.jpg"
+  },
+  {
+    "id": 44,
+    "year": "2022-2023",
+    "event": "EIC",
+    "imgsrc": "https://res.cloudinary.com/dfriijrmr/image/upload/v1680503443/GalleryPage/EIC/EIC_2022_5_n29tm0.jpg"
+  },
+  {
+    "id": 45,
+    "year": "2022-2023",
+    "event": "EIC",
+    "imgsrc": "https://res.cloudinary.com/dfriijrmr/image/upload/v1680503443/GalleryPage/EIC/EIC_2022_9_dtp9en.jpg"
+  },
+  {
+    "id": 46,
+    "year": "2022-2023",
+    "event": "EIC",
+    "imgsrc": "https://res.cloudinary.com/dfriijrmr/image/upload/v1680503442/GalleryPage/EIC/EIC_2022_11_pszgha.jpg"
+  },
+  {
+    "id": 47,
+    "year": "2022-2023",
+    "event": "EIC",
+    "imgsrc": "https://res.cloudinary.com/dfriijrmr/image/upload/v1680503442/GalleryPage/EIC/EIC_2022_12_dkujie.jpg"
+  },
+  {
+    "id": 48,
+    "year": "2022-2023",
+    "event": "EIC",
+    "imgsrc": "https://res.cloudinary.com/dfriijrmr/image/upload/v1680503441/GalleryPage/EIC/EIC_2022_10_olgxqh.jpg"
+  },
+  {
+    "id": 49,
+    "year": "2022-2023",
+    "event": "Orientation",
+    "imgsrc": "https://res.cloudinary.com/dp92qug2f/image/upload/v1685353486/Ecell%20website/IMG_1708_jjc1aj.webp"
+  },
+  {
+    "id": 50,
+    "year": "2022-2023",
+    "event": "Orientation",
+    "imgsrc": "https://res.cloudinary.com/dp92qug2f/image/upload/v1685353487/Ecell%20website/IMG_1707_kxtmnu.webp"
+  }
+]

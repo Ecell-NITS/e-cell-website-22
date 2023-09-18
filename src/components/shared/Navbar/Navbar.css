@@ -1,4 +1,4 @@
-.wrapper{
+.wrapper {
   width: 100%;
   max-width: 90rem;
   overflow-x: hidden;
@@ -6,11 +6,11 @@
   margin: 0 auto;
 }
 
-.brand-logo{
+.brand-logo {
   width: 3rem;
 }
 
-.navbar1{
+.navbar1 {
   width: 100%;
   height: 4rem;
   padding: 1.875rem;
@@ -19,82 +19,81 @@
   justify-content: space-between;
   align-items: center;
   z-index: 20;
-  transition: all .3s ease-out;
+  transition: all 0.3s ease-out;
   position: fixed;
 }
 
-.expanded{
+.expanded {
   background-color: #224259;
   box-shadow: 0px 4px 12px 0px #22425966;
 }
 
-.navbar1 .logo{
-  color: #D9D2C3;
+.navbar1 .logo {
+  color: #d9d2c3;
   font-size: 1.75rem;
   font-weight: 600;
 }
 
-.navbar1 .links-nav{
+.navbar1 .links-nav {
   list-style: none;
   display: flex;
-  color: #D9D2C3;
+  color: #d9d2c3;
   cursor: pointer;
 }
 
-.navbar1 .links-nav li{
-  margin: 0 .9375rem;
+.navbar1 .links-nav li {
+  margin: 0 0.9375rem;
   color: rgba(255, 255, 255, 0.58);
   font-size: 1.3rem;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
   font-weight: 600;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
-.links-nav a{
-  transition: all .15s ease-in-out;
+.links-nav a {
+  transition: all 0.15s ease-in-out;
   color: rgba(255, 255, 255, 0.58) !important;
 }
 
-.links-nav a:hover{
+.links-nav a:hover {
   color: #1da1f2 !important;
-} 
+}
 
-.links-nav  a.active{
+.links-nav a.active {
   color: rgba(255, 255, 255, 1) !important;
 }
 
-.navbar1 .toggle-icon{
-  display: none
+.navbar1 .toggle-icon {
+  display: none;
 }
 
-.links-nav{
+.links-nav {
   margin-bottom: 0 !important;
 }
 
-.imgactivehlder{
+.imgactivehlder {
   width: 2vw;
   height: 2vw;
 }
 
-.profileactivesignin{
+.profileactivesignin {
   border-radius: 50%;
   width: 100%;
   height: 100%;
 }
 
-@media(max-width: 768px){
-  .navbar1{
+@media (max-width: 768px) {
+  .navbar1 {
     position: relative;
     transition: 0.5s all ease-in-out;
   }
 
- 
-  .navbar1.expanded{
+  .navbar1.expanded {
     height: 100vh;
     background-color: #224259;
   }
 
-  .navbar1.expanded .links-nav{
+  .navbar1.expanded .links-nav {
     position: absolute;
     top: 7.5rem;
     left: 0;
@@ -107,26 +106,26 @@
     padding-left: 0 !important;
   }
 
-  .navbar1.expanded .links-nav li{
-    margin: .9375rem 0;
+  .navbar1.expanded .links-nav li {
+    margin: 0.9375rem 0;
     font-size: 1.5rem;
   }
 
-  .navbar1 .logo{
+  .navbar1 .logo {
     position: absolute;
-    top: .75rem;
-    left: .9375rem;
+    top: 0.75rem;
+    left: 0.9375rem;
   }
 
-  .navbar1 .toggle-icon{
+  .navbar1 .toggle-icon {
     display: block;
-    color: #D9D2C3;
+    color: #d9d2c3;
     position: absolute;
     top: 1.4rem;
     right: 1.25rem;
   }
 
-  .navbar1 .links-nav{
+  .navbar1 .links-nav {
     position: absolute;
     top: -40.75rem;
     left: 0;
@@ -139,48 +138,48 @@
     transition: all 0.5s ease-in-out;
   }
 
-  .navbar1 .links-nav li{
-    margin: .9375rem 0;
+  .navbar1 .links-nav li {
+    margin: 0.9375rem 0;
     font-size: 1.5rem;
   }
 }
 
-@media only screen and (max-width:991px) and (min-width:768px){
-  .navbar1 .links-nav li{
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+  .navbar1 .links-nav li {
     font-size: 1.3vw;
   }
 }
 
-@media (max-width:660px){
-  .imgactivehlder{
+@media (max-width: 660px) {
+  .imgactivehlder {
     width: 15vw;
     height: 15vw;
   }
 }
 
-@media only screen and (max-height:500px){
-  .navbar1.expanded .links-nav{
+@media only screen and (max-height: 500px) {
+  .navbar1.expanded .links-nav {
     top: 4.5rem;
   }
 }
 
-@media only screen and (max-height:400px){
-  .navbar1.expanded .links-nav{
+@media only screen and (max-height: 400px) {
+  .navbar1.expanded .links-nav {
     top: 3.8rem;
   }
 
-  .navbar1.expanded .links-nav li{
+  .navbar1.expanded .links-nav li {
     margin-top: 0.2rem;
     margin-bottom: 0.2rem;
   }
 }
 
-@media (max-height:350px){
-  .links-nav{
+@media (max-height: 350px) {
+  .links-nav {
     margin-top: -5vh !important;
   }
 
-  .navbar1 .links-nav li{
+  .navbar1 .links-nav li {
     font-size: 6vh !important;
   }
 }
