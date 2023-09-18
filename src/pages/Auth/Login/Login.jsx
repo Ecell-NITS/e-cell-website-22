@@ -10,6 +10,10 @@ const Login = () => {
   const [message, setMessage] = useState("");
   const [loggingin, setLoggingin] = useState(false);
   const [disablelogin, setDisablelogin] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
+  
+  const handleShowPassword = () => setShowPassword(!showPassword);
+
   useEffect(() => {
     document.title = "Login | E-Cell NIT Silchar";
     const token = localStorage.getItem("token");
@@ -35,7 +39,6 @@ const Login = () => {
         localStorage.setItem("token", token);
         // setMessage(response.data.message);
         // setMessage(`Welcome, ${email}`);
-
         navigate("/dashboard");
         // setTimeout(() => {
         //     navigate('/dashboard')
@@ -87,11 +90,23 @@ const Login = () => {
             <div className="inputdicdignup">
               <h3>Password</h3>
               <input
-                type="password"
+                type={showPassword ? "text" : "password"}
                 placeholder="Password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
               />
+
+              <label className="labelshowpass">
+                <input
+                  className="inputshowpass"
+                  type="checkbox"
+                  name="showPassword"
+                  id="showPassword"
+                  checked={showPassword}
+                  onChange={handleShowPassword}
+                />
+                Show password
+              </label>
             </div>
 
             <div className="inputdicdignup" id="fogtpwd">

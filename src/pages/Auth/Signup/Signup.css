@@ -70,16 +70,26 @@
   margin: 2vw 0;
 }
 
-.btnsubmittodb {
-  background-color: rgba(62, 97, 142, 1);
-  color: white;
-  width: 70%;
-  border: none;
-  outline: none;
-  border-radius: 8px;
-  padding: 0.5vw 1.5vw;
-  font-size: 2vw;
-  margin-bottom: 1vw;
+.labelshowpass {
+    display: flex;
+    align-items: center;
+    margin-top: 1vw;
+  }
+  .inputshowpass {
+    margin-right: 5px;
+    max-width: fit-content;
+  }
+
+.btnsubmittodb{
+    background-color: rgba(62, 97, 142, 1);
+    color: white;
+    width: 70%;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    padding: .5vw 1.5vw;
+    font-size: 2vw;
+    margin-bottom: 1vw;
 }
 
 .logexistingaccount {

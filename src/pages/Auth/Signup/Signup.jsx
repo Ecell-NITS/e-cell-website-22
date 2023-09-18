@@ -17,12 +17,14 @@ const Signup = () => {
   const [otpgoing, setOtpgoing] = useState(false);
   const [disablebtn, setDisablebtn] = useState(false);
   const [disablesendotp, setDisablesendotp] = useState(false);
-
+  const [showPassword, setShowPassword] = useState(false);
   const [userimg, setUserimg] = useState(
     "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
   );
   const [bio, setBio] = useState("Author");
 
+  const handleShowPassword = () => setShowPassword(!showPassword);
+  
   useEffect(() => {
     document.title = "Signup | E-Cell NIT Silchar";
     const token = localStorage.getItem("token");
@@ -120,6 +122,7 @@ const Signup = () => {
         setPassword("");
         setConfirmpwd("");
         setOtp("");
+
         if (error.response && error.response.data.error === "Email already exists") {
           setMessage("Email already exists");
         } else if (
@@ -254,12 +257,24 @@ const Signup = () => {
             <div className="inputdicdignup">
               <h3>Password</h3>
               <input
-                type="password"
+                type={showPassword ? "text" : "password"}
                 placeholder="Enter Password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
               />
+              <label className="labelshowpass">
+                <input
+                  className="inputshowpass"
+                  type="checkbox"
+                  name="showPassword"
+                  id="showPassword"
+                  checked={showPassword}
+                  onChange={handleShowPassword}
+                />
+                Show password
+              </label>
             </div>
+
             <div className="inputdicdignup">
               <h3>Confirm Password</h3>
               <input
