@@ -10,6 +10,7 @@ import Alllikedblogs from "./Alllikedblogs";
 import { FaFacebookF } from "react-icons/fa";
 import { AiFillInstagram, AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import { Helmet } from "react-helmet";
+import { toast } from "react-toastify";
 const Dashboard = () => {
   const navigate = useNavigate();
   const [user, setUser] = useState({});
@@ -57,7 +58,16 @@ const Dashboard = () => {
   const ButtonSignout = () => {
     // console.log('Signout button clicked');
     localStorage.removeItem("token");
-    alert("You have been signed out");
+    toast.info("You have been signed out", {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
     navigate("/login");
   };
 

@@ -8,6 +8,7 @@ import FileBase64 from "react-file-base64";
 import NavbarTeam from "../../../../components/shared/Navbar/NavbarTeam";
 import Footer from "../../../../components/shared/Footer/Footer";
 import { useLocation } from "react-router-dom";
+import { toast } from "react-toastify";
 const Editblogform = () => {
   const editor = useRef(null);
   const editor0 = useRef(null);
@@ -59,7 +60,16 @@ const Editblogform = () => {
         })
         .catch((error) => {
           console.error("Failed to fetch user data", error);
-          alert("Failed to fetch user data", error);
+          toast.error(`Failed to fetch user data ${error}`, {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+          });
         });
     }
   }, [navigate]);
@@ -98,7 +108,16 @@ const Editblogform = () => {
       !isLoading &&
       loggedinuserid !== authorverf
     ) {
-      alert("Only the original author of the blog can edit this blog.");
+      toast.error("Only the original author of the blog can edit this blog.", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
       navigate("/login");
     }
   }, [authorverf, loggedinuserid, isLoading, navigate]);
@@ -113,12 +132,30 @@ const Editblogform = () => {
   const submitform = async (event) => {
     event.preventDefault();
     if (!isEditblogempty()) {
-      alert("Please edit atleast anyone field.");
+      toast.error("Please edit atleast anyone field.", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
       return;
     }
 
     if (!writeremail.includes("@") || !writeremail.includes(".")) {
-      alert("Invalid email");
+      toast.error("Invalid email", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
       return;
     }
 
@@ -133,7 +170,16 @@ const Editblogform = () => {
       const publishedBlogIds = response.data.map((blog) => blog._id);
       // console.log(publishedBlogIds)
       if (publishedBlogIds.includes(blogId)) {
-        alert("Published blogs can't be edited.");
+        toast.error("Published blogs can't be edited.", {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
         return;
       }
     } catch (error) {
@@ -185,7 +231,16 @@ const Editblogform = () => {
         setWriteremail("");
         setSubmitting(false);
         setDisablecreate(false);
-        alert("Blog edited successfully.");
+        toast.success("Blog edited successfully.", {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
         navigate("/dashboard");
       });
   };
@@ -281,7 +336,19 @@ const Editblogform = () => {
               ) {
                 handleImgChange(base64);
               } else {
-                alert("Invalid file type or size. Image should be less than 300 KB.");
+                toast.error(
+                  "Invalid file type or size. Image should be less than 300 KB.",
+                  {
+                    position: "top-center",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light",
+                  }
+                );
                 setTopicpic("");
               }
             }}

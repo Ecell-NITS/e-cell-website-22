@@ -4,6 +4,7 @@ import moment from "moment-timezone";
 import "./Recruiting.css";
 import NavbarTeam from "../../components/shared/Navbar/NavbarTeam";
 import Footer from "../../components/shared/Footer/Footer";
+import { toast } from "react-toastify";
 
 const Recruiting = () => {
   const [name, setName] = useState("");
@@ -85,37 +86,91 @@ const Recruiting = () => {
   const createUser = async () => {
     // Check if all inputs are filled
     if (!isFormValid()) {
-      alert("Please fill all the required fields");
+      toast.error("Please fill all the required fields", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
       return;
     }
 
     if (!/^\d+$/.test(mobileno)) {
-      alert("Mobile number should only contain numeric characters");
+      toast.error("Mobile number should only contain numeric characters", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
       return;
     }
 
     // Check if the math captcha is filled
     if (captchaAnswer === "") {
-      alert("Please fill the captcha");
+      toast.error("Please fill the captcha", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
       return;
     }
 
     // Check if the math captcha answer is correct
     const actualAnswer = firstNumber + secondNumber;
     if (parseInt(captchaAnswer) !== actualAnswer) {
-      alert("Captcha verification failed. Please try again.");
+      toast.error("Captcha verification failed. Please try again.", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
       return;
     }
 
     // Check if the OTP is filled
     if (otp === "") {
-      alert("Please enter the OTP");
+      toast.error("Please enter the OTP", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
       return;
     }
 
     // Check if the name contains numeric or symbols
     if (/[\d!@#$%^&*(),.?":{}|<>]/.test(name)) {
-      alert("Name should only contain alphabetic characters");
+      toast.error("Name should only contain alphabetic characters", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
       return;
     }
 
@@ -129,26 +184,62 @@ const Recruiting = () => {
       (scholarId[3] === "5" && parseInt(scholarId.slice(-3)) > 84) ||
       (scholarId[3] === "6" && parseInt(scholarId.slice(-3)) > 160)
     ) {
-      alert("Invalid scholar id");
+      toast.error("Invalid scholar id", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
       return;
     }
 
     // Check if the email contains uppercase letters
     if (/[A-Z]/.test(email)) {
-      alert("Email should be in lowercase");
+      toast.error("Email should be in lowercase", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
       return;
     }
 
     // Check if the email contains symbols
     if (/[!#$%^&*(),?":{}|<>]/.test(email)) {
-      alert("Email should not contain symbols");
+      toast.error("Email should not contain symbols", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
       return;
     }
 
     // Check if the email contains symbols before the @ symbol
     const atIndex = email.indexOf("@");
     if (/[!@#$%^&*(),.?":{}|<>]/.test(email.slice(0, atIndex))) {
-      alert("Email should not contain symbols before @ symbol");
+      toast.error("Email should not contain symbols before @ symbol", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
       return;
     }
 
@@ -165,12 +256,30 @@ const Recruiting = () => {
       );
 
       if (!response.data.unique) {
-        alert("Email already exist");
+        toast.error("Email already exist", {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
         return;
       }
     } catch (error) {
       console.log("Error checking email uniqueness:", error);
-      alert("An error occurred while checking email uniqueness");
+      toast.error("An error occurred while checking email uniqueness", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
       return;
     } finally {
       setEmailVerification(false);
@@ -190,12 +299,30 @@ const Recruiting = () => {
       );
 
       if (!response.data.unique) {
-        alert("Scholar Id already exist");
+        toast.error("Scholar Id already exist", {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
         return;
       }
     } catch (error) {
       console.log("Error checking scholar id uniqueness:", error);
-      alert("An error occurred while checking scholar id uniqueness");
+      toast.error("An error occurred while checking scholar id uniqueness", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
       return;
     } finally {
       setScholarIdVerification(false);
@@ -221,12 +348,30 @@ const Recruiting = () => {
         console.log("OTP verified");
       } else {
         // Wrong OTP entered
-        alert("Wrong OTP. Please try again");
+        toast.error("Wrong OTP. Please try again", {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
         return;
       }
     } catch (error) {
       console.log("Error verifying OTP:", error);
-      alert("Wrong OTP. Please try again");
+      toast.error("Wrong OTP. Please try again", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
       return;
     } finally {
       setVerifyotp(false);
@@ -237,7 +382,16 @@ const Recruiting = () => {
     const emailRegex = /^.+22@(cse|civil|mech|ece|ee|ei)\.nits\.ac\.in$/;
 
     if (!emailRegex.test(email)) {
-      alert("Only first year's INSTITUTE email id are accepted.");
+      toast.error("Only first year's INSTITUTE email id are accepted.", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
       return;
     }
 
@@ -274,14 +428,32 @@ const Recruiting = () => {
         setTeam([]);
         setSubmitting(false);
         setDisablesubmitreg(false);
-        alert("Form successfully submitted😍");
+        toast.success("Form successfully submitted😍", {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
       });
   };
 
   const sendOTP = async () => {
     // Check if the email is empty i.e email mandatory
     if (email === "") {
-      alert("Please enter your institute email id");
+      toast.error("Please enter your institute email id", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
       return;
     }
 
@@ -289,7 +461,16 @@ const Recruiting = () => {
     const emailRegex = /^.+22@(cse|civil|mech|ece|ee|ei)\.nits\.ac\.in$/;
 
     if (!emailRegex.test(email)) {
-      alert("Only first year's INSTITUTE email id are accepted.");
+      toast.error("Only first year's INSTITUTE email id are accepted.", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
       return;
     }
 
@@ -304,12 +485,33 @@ const Recruiting = () => {
         }
       );
       if (response.status === 200) {
-        alert("OTP sent successfully! Please check your inbox as well as SPAM folder.");
+        toast.success(
+          "OTP sent successfully! Please check your inbox as well as SPAM folder.",
+          {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+          }
+        );
         setOtpSent(true);
       }
     } catch (error) {
       console.log("Error sending OTP:", error);
-      alert("An error occurred while sending the OTP");
+      toast.error("An error occurred while sending the OTP", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
     } finally {
       setOtpgoing(false);
       setDisableotpsend(false);

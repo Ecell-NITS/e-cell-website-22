@@ -7,6 +7,7 @@ import Footer from "../../../components/shared/Footer/Footer";
 import { useNavigate } from "react-router-dom";
 import JoditEditor from "jodit-react";
 import FileBase64 from "react-file-base64";
+import { toast } from "react-toastify";
 const Createblog = () => {
   const editor = useRef(null);
   const editor0 = useRef(null);
@@ -76,12 +77,30 @@ const Createblog = () => {
   const submitform = async (event) => {
     event.preventDefault();
     if (!iscreateblogempty()) {
-      alert("Please fill all the required blog details");
+      toast.error("Please fill all the required blog details", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
       return;
     }
 
     if (!writeremail.includes("@") || !writeremail.includes(".")) {
-      alert("Invalid email");
+      toast.error("Invalid email", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
       return;
     }
 
@@ -115,7 +134,16 @@ const Createblog = () => {
         setWriteremail("");
         setSubmitting(false);
         setDisablecreate(false);
-        alert("Blog created but publish subject to verification");
+        toast.success("Blog created but publish subject to verification", {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
       });
   };
 
@@ -260,7 +288,19 @@ const Createblog = () => {
               ) {
                 handleImgChange(base64);
               } else {
-                alert("Invalid file type or size. Image should be less than 300 KB.");
+                toast.error(
+                  "Invalid file type or size. Image should be less than 300 KB.",
+                  {
+                    position: "top-center",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light",
+                  }
+                );
                 setTopicpic("");
               }
             }}

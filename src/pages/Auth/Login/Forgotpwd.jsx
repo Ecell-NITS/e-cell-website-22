@@ -3,6 +3,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import NavbarTeam from "../../../components/shared/Navbar/NavbarTeam";
 import Footer from "../../../components/shared/Footer/Footer";
+import { toast } from "react-toastify";
 const Forgotpwd = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
@@ -129,13 +130,31 @@ const Forgotpwd = () => {
         .then(() => {
           setConfirmnewpwd0("");
           setNewpwd0("");
-          alert(`Password for the ${email} successfully changed.`);
+          toast.success(`Password for the ${email} successfully changed.`, {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+          });
           setDisablepwdchanging(false);
           navigate("/login");
         });
     } catch (error) {
       if (error.response && error.response.data.error === "Password can't be empty.") {
-        alert("Password can't be empty.");
+        toast.error("Password can't be empty.", {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
         setDisablepwdchanging(false);
       } else if (error.response && error.response.data.error === "User not found") {
         setMessage("User not found");
@@ -144,10 +163,28 @@ const Forgotpwd = () => {
         error.response &&
         error.response.data.error === "New Password should not be less than 8 characters"
       ) {
-        alert("New Password should not be less than 8 characters");
+        toast.error("New Password should not be less than 8 characters", {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
         setDisablepwdchanging(false);
       } else if (error.response && error.response.data.error === "Passwords must match") {
-        alert("Passwords must match");
+        toast.error("Passwords must match", {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
         setDisablepwdchanging(false);
       } else {
         setMessage(error);

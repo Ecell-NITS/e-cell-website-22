@@ -6,6 +6,7 @@ import { BiLike } from "react-icons/bi";
 // import { AiTwotoneLike } from 'react-icons/ai'
 // import {writeremaill} from '../../pages/Resources/Blogs/Blogindividual'
 import "./Blog.css";
+import { toast } from "react-toastify";
 const Blog = () => {
   const [blogscreated, setBlogscreated] = useState([]);
   const [sortingOrder, setSortingOrder] = useState("latest");
@@ -44,14 +45,32 @@ const Blog = () => {
           return blog;
         });
       });
-      alert("You have liked the blog");
+      toast("You have liked the blog", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
     } catch (error) {
       if (
         error.response &&
         error.response.status === 400 &&
         error.response.data.error === "You have already liked this blog"
       ) {
-        alert("You have already liked this blog");
+        toast("You have already liked this blog", {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
       } else {
         console.error("Error liking the blog:", error);
       }

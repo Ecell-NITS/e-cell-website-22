@@ -9,6 +9,7 @@ import { FiMail } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import Ip from "../User/Ip";
 import axios from "axios";
+import { toast } from "react-toastify";
 const Footer = () => {
   const [email, setEmail] = useState("");
   const [disablesend, setDisablesend] = useState(false);
@@ -27,12 +28,30 @@ const Footer = () => {
     event.preventDefault();
 
     if (!isFormValid()) {
-      alert("Please fill all the required fields");
+      toast.error("Please fill all the required fields", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
       return;
     }
 
     if (!isValidEmail(email)) {
-      alert("Please enter a correct email");
+      toast.error("Please enter a correct email", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
       return;
     }
 
@@ -50,12 +69,30 @@ const Footer = () => {
       if (!response.data.unique) {
         setCheckingemail(false);
         setDisablesend(false);
-        alert("You have already subscribed to our newsletter");
+        toast.warn("You have already subscribed to our newsletter", {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
         return;
       }
     } catch (error) {
       console.log("Error checking email uniqueness:", error);
-      alert("An error occurred while checking email uniqueness");
+      toast.error("An error occurred while checking email uniqueness", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
       setCheckingemail(false);
       setDisablesend(false);
       return;
@@ -71,13 +108,31 @@ const Footer = () => {
         setEmail("");
         setCheckingemail(false);
         setDisablesend(false);
-        alert("Subscribed to Our Newsletter.🥳");
+        toast.success("Subscribed to Our Newsletter.🥳", {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
       })
       .catch((error) => {
         setEmail("");
         setCheckingemail(false);
         setDisablesend(false);
-        alert("Something went wrong. Please try again later.");
+        toast.error("Something went wrong. Please try again later.", {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
         console.log("Failed to subscribe to newsletter", error);
       });
   };

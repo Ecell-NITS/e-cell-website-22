@@ -3,6 +3,7 @@ import "./Contactus.css";
 import axios from "axios";
 import { FaTelegramPlane } from "react-icons/fa";
 import "../../../pages/Recruiting2324/Recruiting.css";
+import { toast } from "react-toastify";
 const Contactus = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -22,17 +23,44 @@ const Contactus = () => {
   const submitform = async (event) => {
     event.preventDefault();
     if (!isFormValid()) {
-      alert("Please fill all the required fields");
+      toast.error("Please fill all the required fields", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
       return;
     }
 
     if (!isValidEmail(email)) {
-      alert("Please enter a correct email.");
+      toast.error("Please enter a correct email.", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
       return;
     }
 
     if (/[\d!@#$%^&*(),.?":{}|<>]/.test(name)) {
-      alert("Name should only contain alphabetic characters");
+      toast.error("Name should only contain alphabetic characters", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
       return;
     }
     setSubmitting(true);
@@ -50,10 +78,28 @@ const Contactus = () => {
         setMessage("");
         setSubmitting(false);
         setDisable(false);
-        alert("Contact Us form submitted.");
+        toast.success("Contact Us form submitted.", {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
       })
       .catch((error) => {
-        alert("Something went wrong. Please try again.");
+        toast.error("Something went wrong. Please try again.", {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
         console.error(error);
         setSubmitting(false);
         setDisable(false);

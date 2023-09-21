@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import NavbarTeam from "../../components/shared/Navbar/NavbarTeam";
 import axios from "axios";
 import Footer from "../../components/shared/Footer/Footer";
+import { toast } from "react-toastify";
 const Techsubmission = () => {
   useEffect(() => {
     document.title = "Phase 1 Project Submission | Techincal Team Recuitment 2023-24";
@@ -38,13 +39,31 @@ const Techsubmission = () => {
   /* sending otp function */
   const sendOTP = async () => {
     if (email === "") {
-      alert("Please enter your institute email id");
+      toast.error("Please enter your institute email id", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
       return;
     }
 
     const emailRegex = /^.+22@(cse|civil|mech|ece|ee|ei)\.nits\.ac\.in$/;
     if (!emailRegex.test(email)) {
-      alert("Only first year's INSTITUTE email id are accepted.");
+      toast.error("Only first year's INSTITUTE email id are accepted.", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
       return;
     }
 
@@ -60,11 +79,32 @@ const Techsubmission = () => {
         }
       );
       if (response.status === 200) {
-        alert("OTP sent successfully! Please check your inbox as well as SPAM folder.");
+        toast.success(
+          "OTP sent successfully! Please check your inbox as well as SPAM folder.",
+          {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+          }
+        );
       }
     } catch (error) {
       console.log("Error sending OTP:", error);
-      alert("An error occurred while sending the OTP");
+      toast.error("An error occurred while sending the OTP", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
     } finally {
       setOtpgoing(false);
       setStopotp(false);
@@ -74,7 +114,16 @@ const Techsubmission = () => {
   /* Submit btn onClick function*/
   const submitbtn = async () => {
     if (!isFormValid()) {
-      alert("Please fill all the required fields.");
+      toast.error("Please fill all the required fields.", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
       return;
     }
 
@@ -88,7 +137,16 @@ const Techsubmission = () => {
       (scholarId[3] === "5" && parseInt(scholarId.slice(-3)) > 84) ||
       (scholarId[3] === "6" && parseInt(scholarId.slice(-3)) > 160)
     ) {
-      alert("Invalid scholar id");
+      toast.error("Invalid scholar id", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
       return;
     }
 
@@ -96,7 +154,16 @@ const Techsubmission = () => {
     const emailRegex = /^.+22@(cse|civil|mech|ece|ee|ei)\.nits\.ac\.in$/;
 
     if (!emailRegex.test(email)) {
-      alert("Only first year's INSTITUTE email id are accepted.");
+      toast.error("Only first year's INSTITUTE email id are accepted.", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
       return;
     }
 
@@ -114,12 +181,30 @@ const Techsubmission = () => {
       );
 
       if (!response.data.unique) {
-        alert("Email already exist");
+        toast.error("Email already exist", {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
         return;
       }
     } catch (error) {
       console.log("Error checking email uniqueness:", error);
-      alert("An error occurred while checking email uniqueness");
+      toast.error("An error occurred while checking email uniqueness", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
       return;
     } finally {
       setEmailVerification(false);
@@ -140,12 +225,30 @@ const Techsubmission = () => {
       );
 
       if (!response.data.unique) {
-        alert("Scholar Id already exist");
+        toast.error("Scholar Id already exist", {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
         return;
       }
     } catch (error) {
       console.log("Error checking scholar id uniqueness:", error);
-      alert("An error occurred while checking scholar id uniqueness");
+      toast.error("An error occurred while checking scholar id uniqueness", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
       return;
     } finally {
       setScholarIdVerification(false);
@@ -168,12 +271,30 @@ const Techsubmission = () => {
       if (response.data.message === "OTP verified successfully") {
         console.log("OTP verified");
       } else {
-        alert("Wrong OTP. Please try again");
+        toast.error("Wrong OTP. Please try again", {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
         return;
       }
     } catch (error) {
       console.log("Error verifying OTP:", error);
-      alert("Wrong OTP. Please try again");
+      toast.error("Wrong OTP. Please try again", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
       return;
     } finally {
       setVerifyotp(false);
@@ -203,7 +324,16 @@ const Techsubmission = () => {
         setProject("");
         setSubmitting(false);
         setStopsubmit(false);
-        alert("Form successfully submitted.");
+        toast.success("Form successfully submitted.", {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
       });
   };
 

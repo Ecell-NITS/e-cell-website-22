@@ -5,6 +5,7 @@ import Footer from "../../../components/shared/Footer/Footer";
 import NavbarTeam from "../../../components/shared/Navbar/NavbarTeam";
 import FileBase64 from "react-file-base64";
 import "./Editprofile.css";
+import { toast } from "react-toastify";
 const EditProfile = () => {
   const navigate = useNavigate();
   const [name, setName] = useState("");
@@ -88,7 +89,16 @@ const EditProfile = () => {
     }
 
     if (!isEditProfFilled()) {
-      alert("Please edit atleast any one field");
+      toast.error("Please edit atleast any one field", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
       return;
     }
 
@@ -138,12 +148,30 @@ const EditProfile = () => {
           error.response.data.error ===
             "New Password should not be less than 8 characters"
         ) {
-          alert("New Password should not be less than 8 characters");
+          toast.error("New Password should not be less than 8 characters", {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+          });
         } else if (
           error.response &&
           error.response.data.error === "Passwords must match"
         ) {
-          alert("Passwords must match");
+          toast.error("Passwords must match", {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+          });
         } else {
           console.error("Failed to update Profile", error);
           setError("Failed to update Profile. Please try again.");
@@ -239,7 +267,16 @@ const EditProfile = () => {
                     handleImgChange(base64);
                   } else {
                     // Show an error message or alert or decline the editing operartion
-                    alert("Invalid file type or image is greater than 300KB");
+                    toast.error("Invalid file type or image is greater than 300KB", {
+                      position: "top-center",
+                      autoClose: 5000,
+                      hideProgressBar: false,
+                      closeOnClick: true,
+                      pauseOnHover: true,
+                      draggable: true,
+                      progress: undefined,
+                      theme: "light",
+                    });
                     setUserimg("");
                   }
                 }}
