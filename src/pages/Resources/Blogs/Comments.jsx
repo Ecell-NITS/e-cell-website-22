@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./Comments.css";
 import axios from "axios";
 import { useNavigate, useLocation } from "react-router-dom";
+import { toast } from "react-toastify";
 const Comments = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [profilePicture, setProfilePicture] = useState("");
@@ -70,7 +71,16 @@ const Comments = () => {
       const publishedBlogIds = response.data.map((blog) => blog._id);
       // console.log(publishedBlogIds)
       if (!publishedBlogIds.includes(postId)) {
-        alert("Blog needs to be published to add comment.");
+        toast.error("Blog needs to be published to add comment.", {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+        });
         return;
       }
       setComment("");
@@ -97,10 +107,28 @@ const Comments = () => {
         }
       );
       setComment("");
-      alert("Comment added!");
+      toast.success("Comment added!", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      });
     } catch (error) {
       console.error("Error adding comment:", error);
-      alert("Something went wrong");
+      toast.error("Something went wrong", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      });
       setComment("");
     } finally {
       setDisable(false);

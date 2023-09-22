@@ -28,6 +28,8 @@ import Editblogform from "./pages/Auth/Dashboard/EditBlog/Editblogform";
 import Publicprofile from "./pages/Auth/Dashboard/Publicprofile";
 import Forgotpwd from "./pages/Auth/Login/Forgotpwd";
 import Tagspecificblog from "./components/Blog/Tagspecificblog";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (
@@ -180,6 +182,7 @@ function App() {
         </Scrolling>
         <ScrollToTop />
       </Router>
+      <ToastContainer />
     </>
   );
 }

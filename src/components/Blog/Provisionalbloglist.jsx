@@ -5,6 +5,7 @@ import "./Blog.css";
 import Footer from "../shared/Footer/Footer";
 import NavbarTeam from "../shared/Navbar/NavbarTeam";
 import Authprovblog from "./Authprovblog";
+import { toast } from "react-toastify";
 const Provisionalbloglist = () => {
   const [blogscreated, setBlogscreated] = useState([]);
   const [sortingOrder, setSortingOrder] = useState("latest");
@@ -22,7 +23,16 @@ const Provisionalbloglist = () => {
     try {
       await axios.post(import.meta.env.VITE_REACT_APP_ACCEPTEDBLOGS_RENDER, { blogId });
       // await axios.post('http://localhost:2226/acceptedblogs', { blogId });
-      alert("Blog published successfully");
+      toast.success("Blog published successfully", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      });
     } catch (error) {
       console.log("Error publishing blog:", error);
     } finally {

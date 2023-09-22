@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "./Auth.css";
 import NavbarTeam from "../shared/Navbar/NavbarTeam";
 import Footer from "../shared/Footer/Footer";
+import { toast } from "react-toastify";
 const Authprovblog = ({ onAuthentication }) => {
   const navigate = useNavigate();
   const [username, setUsername] = useState("");
@@ -25,7 +26,16 @@ const Authprovblog = ({ onAuthentication }) => {
       onAuthentication(true);
       navigate("/provisionalblog");
     } else {
-      alert("Invalid username or password");
+      toast.error("Invalid username or password", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      });
     }
   };
 

@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import "./Signup.css";
 import NavbarTeam from "../../../components/shared/Navbar/NavbarTeam";
 import Footer from "../../../components/shared/Footer/Footer";
+import { toast } from "react-toastify";
 const Signup = () => {
   const navigate = useNavigate();
   const [name, setName] = useState("");
@@ -24,7 +25,7 @@ const Signup = () => {
   const [bio, setBio] = useState("Author");
 
   const handleShowPassword = () => setShowPassword(!showPassword);
-  
+
   useEffect(() => {
     document.title = "Signup | E-Cell NIT Silchar";
     const token = localStorage.getItem("token");
@@ -50,7 +51,16 @@ const Signup = () => {
 
     console.log("isSignUpFormFilled:", isSignUpFormFilled());
     if (!isSignUpFormFilled()) {
-      alert("Please fill all the required signup form fields");
+      toast.error("Please fill all the required signup form fields", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      });
       return;
     }
 
@@ -77,12 +87,30 @@ const Signup = () => {
       if (response.data.message === "OTP verified successfully") {
         console.log("OTP verified");
       } else {
-        alert("Wrong OTP. Please try again");
+        toast.error("Wrong OTP. Please try again", {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+        });
         return;
       }
     } catch (error) {
       console.log("Error verifying OTP:", error);
-      alert("Wrong OTP. Please try again");
+      toast.error("Wrong OTP. Please try again", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      });
       return;
     } finally {
       setVerifyotp(false);
@@ -148,7 +176,16 @@ const Signup = () => {
   const sendOTP = async (e) => {
     e.preventDefault();
     if (email === "") {
-      alert("Please enter your email id");
+      toast.error("Please enter your email id", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      });
       return;
     }
 
@@ -163,11 +200,32 @@ const Signup = () => {
         }
       );
       if (response.status === 200) {
-        alert("OTP sent successfully! Please check your inbox as well as SPAM folder.");
+        toast.success(
+          "OTP sent successfully! Please check your inbox as well as SPAM folder.",
+          {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+          }
+        );
       }
     } catch (error) {
       console.log("Error sending OTP:", error);
-      alert("An error occurred while sending the OTP");
+      toast.error("An error occurred while sending the OTP", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      });
     } finally {
       setOtpgoing(false);
       setDisablesendotp(false);
