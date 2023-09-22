@@ -78,28 +78,28 @@ const Createblog = () => {
     event.preventDefault();
     if (!iscreateblogempty()) {
       toast.error("Please fill all the required blog details", {
-        position: "top-center",
+        position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: "light",
+        theme: "dark",
       });
       return;
     }
 
     if (!writeremail.includes("@") || !writeremail.includes(".")) {
       toast.error("Invalid email", {
-        position: "top-center",
+        position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: "light",
+        theme: "dark",
       });
       return;
     }
@@ -135,14 +135,14 @@ const Createblog = () => {
         setSubmitting(false);
         setDisablecreate(false);
         toast.success("Blog created but publish subject to verification", {
-          position: "top-center",
+          position: "top-right",
           autoClose: 5000,
           hideProgressBar: false,
           closeOnClick: true,
           pauseOnHover: true,
           draggable: true,
           progress: undefined,
-          theme: "light",
+          theme: "dark",
         });
       });
   };
@@ -291,14 +291,14 @@ const Createblog = () => {
                 toast.error(
                   "Invalid file type or size. Image should be less than 300 KB.",
                   {
-                    position: "top-center",
+                    position: "top-right",
                     autoClose: 5000,
                     hideProgressBar: false,
                     closeOnClick: true,
                     pauseOnHover: true,
                     draggable: true,
                     progress: undefined,
-                    theme: "light",
+                    theme: "dark",
                   }
                 );
                 setTopicpic("");

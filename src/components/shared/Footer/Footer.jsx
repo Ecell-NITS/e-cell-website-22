@@ -29,28 +29,28 @@ const Footer = () => {
 
     if (!isFormValid()) {
       toast.error("Please fill all the required fields", {
-        position: "top-center",
+        position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: "light",
+        theme: "dark",
       });
       return;
     }
 
     if (!isValidEmail(email)) {
       toast.error("Please enter a correct email", {
-        position: "top-center",
+        position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: "light",
+        theme: "dark",
       });
       return;
     }
@@ -70,28 +70,28 @@ const Footer = () => {
         setCheckingemail(false);
         setDisablesend(false);
         toast.warn("You have already subscribed to our newsletter", {
-          position: "top-center",
+          position: "top-right",
           autoClose: 5000,
           hideProgressBar: false,
           closeOnClick: true,
           pauseOnHover: true,
           draggable: true,
           progress: undefined,
-          theme: "light",
+          theme: "dark",
         });
         return;
       }
     } catch (error) {
       console.log("Error checking email uniqueness:", error);
       toast.error("An error occurred while checking email uniqueness", {
-        position: "top-center",
+        position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: "light",
+        theme: "dark",
       });
       setCheckingemail(false);
       setDisablesend(false);
@@ -109,14 +109,14 @@ const Footer = () => {
         setCheckingemail(false);
         setDisablesend(false);
         toast.success("Subscribed to Our Newsletter.🥳", {
-          position: "top-center",
+          position: "top-right",
           autoClose: 5000,
           hideProgressBar: false,
           closeOnClick: true,
           pauseOnHover: true,
           draggable: true,
           progress: undefined,
-          theme: "light",
+          theme: "dark",
         });
       })
       .catch((error) => {
@@ -124,14 +124,14 @@ const Footer = () => {
         setCheckingemail(false);
         setDisablesend(false);
         toast.error("Something went wrong. Please try again later.", {
-          position: "top-center",
+          position: "top-right",
           autoClose: 5000,
           hideProgressBar: false,
           closeOnClick: true,
           pauseOnHover: true,
           draggable: true,
           progress: undefined,
-          theme: "light",
+          theme: "dark",
         });
         console.log("Failed to subscribe to newsletter", error);
       });

@@ -24,14 +24,14 @@ const Provisionalbloglist = () => {
       await axios.post(import.meta.env.VITE_REACT_APP_ACCEPTEDBLOGS_RENDER, { blogId });
       // await axios.post('http://localhost:2226/acceptedblogs', { blogId });
       toast.success("Blog published successfully", {
-        position: "top-center",
+        position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: "light",
+        theme: "dark",
       });
     } catch (error) {
       console.log("Error publishing blog:", error);

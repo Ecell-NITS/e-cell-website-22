@@ -61,14 +61,14 @@ const Editblogform = () => {
         .catch((error) => {
           console.error("Failed to fetch user data", error);
           toast.error(`Failed to fetch user data ${error}`, {
-            position: "top-center",
+            position: "top-right",
             autoClose: 5000,
             hideProgressBar: false,
             closeOnClick: true,
             pauseOnHover: true,
             draggable: true,
             progress: undefined,
-            theme: "light",
+            theme: "dark",
           });
         });
     }
@@ -109,14 +109,14 @@ const Editblogform = () => {
       loggedinuserid !== authorverf
     ) {
       toast.error("Only the original author of the blog can edit this blog.", {
-        position: "top-center",
+        position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: "light",
+        theme: "dark",
       });
       navigate("/login");
     }
@@ -133,28 +133,28 @@ const Editblogform = () => {
     event.preventDefault();
     if (!isEditblogempty()) {
       toast.error("Please edit atleast anyone field.", {
-        position: "top-center",
+        position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: "light",
+        theme: "dark",
       });
       return;
     }
 
     if (!writeremail.includes("@") || !writeremail.includes(".")) {
       toast.error("Invalid email", {
-        position: "top-center",
+        position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: "light",
+        theme: "dark",
       });
       return;
     }
@@ -171,14 +171,14 @@ const Editblogform = () => {
       // console.log(publishedBlogIds)
       if (publishedBlogIds.includes(blogId)) {
         toast.error("Published blogs can't be edited.", {
-          position: "top-center",
+          position: "top-right",
           autoClose: 5000,
           hideProgressBar: false,
           closeOnClick: true,
           pauseOnHover: true,
           draggable: true,
           progress: undefined,
-          theme: "light",
+          theme: "dark",
         });
         return;
       }
@@ -232,14 +232,14 @@ const Editblogform = () => {
         setSubmitting(false);
         setDisablecreate(false);
         toast.success("Blog edited successfully.", {
-          position: "top-center",
+          position: "top-right",
           autoClose: 5000,
           hideProgressBar: false,
           closeOnClick: true,
           pauseOnHover: true,
           draggable: true,
           progress: undefined,
-          theme: "light",
+          theme: "dark",
         });
         navigate("/dashboard");
       });
@@ -339,14 +339,14 @@ const Editblogform = () => {
                 toast.error(
                   "Invalid file type or size. Image should be less than 300 KB.",
                   {
-                    position: "top-center",
+                    position: "top-right",
                     autoClose: 5000,
                     hideProgressBar: false,
                     closeOnClick: true,
                     pauseOnHover: true,
                     draggable: true,
                     progress: undefined,
-                    theme: "light",
+                    theme: "dark",
                   }
                 );
                 setTopicpic("");

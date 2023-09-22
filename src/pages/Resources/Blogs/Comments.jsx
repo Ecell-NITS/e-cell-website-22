@@ -72,14 +72,14 @@ const Comments = () => {
       // console.log(publishedBlogIds)
       if (!publishedBlogIds.includes(postId)) {
         toast.error("Blog needs to be published to add comment.", {
-          position: "top-center",
+          position: "top-right",
           autoClose: 5000,
           hideProgressBar: false,
           closeOnClick: true,
           pauseOnHover: true,
           draggable: true,
           progress: undefined,
-          theme: "light",
+          theme: "dark",
         });
         return;
       }
@@ -108,26 +108,26 @@ const Comments = () => {
       );
       setComment("");
       toast.success("Comment added!", {
-        position: "top-center",
+        position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: "light",
+        theme: "dark",
       });
     } catch (error) {
       console.error("Error adding comment:", error);
       toast.error("Something went wrong", {
-        position: "top-center",
+        position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: "light",
+        theme: "dark",
       });
       setComment("");
     } finally {

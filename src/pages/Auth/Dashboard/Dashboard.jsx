@@ -59,14 +59,14 @@ const Dashboard = () => {
     // console.log('Signout button clicked');
     localStorage.removeItem("token");
     toast.info("You have been signed out", {
-      position: "top-center",
+      position: "top-right",
       autoClose: 5000,
       hideProgressBar: false,
       closeOnClick: true,
       pauseOnHover: true,
       draggable: true,
       progress: undefined,
-      theme: "light",
+      theme: "dark",
     });
     navigate("/login");
   };

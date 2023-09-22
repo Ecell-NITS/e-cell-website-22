@@ -45,15 +45,15 @@ const Blog = () => {
           return blog;
         });
       });
-      toast("You have liked the blog", {
-        position: "top-center",
+      toast.success("You have liked the blog", {
+        position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: "light",
+        theme: "dark",
       });
     } catch (error) {
       if (
@@ -61,15 +61,15 @@ const Blog = () => {
         error.response.status === 400 &&
         error.response.data.error === "You have already liked this blog"
       ) {
-        toast("You have already liked this blog", {
-          position: "top-center",
+        toast.info("You have already liked this blog", {
+          position: "top-right",
           autoClose: 5000,
           hideProgressBar: false,
           closeOnClick: true,
           pauseOnHover: true,
           draggable: true,
           progress: undefined,
-          theme: "light",
+          theme: "dark",
         });
       } else {
         console.error("Error liking the blog:", error);

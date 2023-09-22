@@ -87,28 +87,28 @@ const Recruiting = () => {
     // Check if all inputs are filled
     if (!isFormValid()) {
       toast.error("Please fill all the required fields", {
-        position: "top-center",
+        position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: "light",
+        theme: "dark",
       });
       return;
     }
 
     if (!/^\d+$/.test(mobileno)) {
       toast.error("Mobile number should only contain numeric characters", {
-        position: "top-center",
+        position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: "light",
+        theme: "dark",
       });
       return;
     }
@@ -116,14 +116,14 @@ const Recruiting = () => {
     // Check if the math captcha is filled
     if (captchaAnswer === "") {
       toast.error("Please fill the captcha", {
-        position: "top-center",
+        position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: "light",
+        theme: "dark",
       });
       return;
     }
@@ -132,14 +132,14 @@ const Recruiting = () => {
     const actualAnswer = firstNumber + secondNumber;
     if (parseInt(captchaAnswer) !== actualAnswer) {
       toast.error("Captcha verification failed. Please try again.", {
-        position: "top-center",
+        position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: "light",
+        theme: "dark",
       });
       return;
     }
@@ -147,14 +147,14 @@ const Recruiting = () => {
     // Check if the OTP is filled
     if (otp === "") {
       toast.error("Please enter the OTP", {
-        position: "top-center",
+        position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: "light",
+        theme: "dark",
       });
       return;
     }
@@ -162,14 +162,14 @@ const Recruiting = () => {
     // Check if the name contains numeric or symbols
     if (/[\d!@#$%^&*(),.?":{}|<>]/.test(name)) {
       toast.error("Name should only contain alphabetic characters", {
-        position: "top-center",
+        position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: "light",
+        theme: "dark",
       });
       return;
     }
@@ -185,14 +185,14 @@ const Recruiting = () => {
       (scholarId[3] === "6" && parseInt(scholarId.slice(-3)) > 160)
     ) {
       toast.error("Invalid scholar id", {
-        position: "top-center",
+        position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: "light",
+        theme: "dark",
       });
       return;
     }
@@ -200,14 +200,14 @@ const Recruiting = () => {
     // Check if the email contains uppercase letters
     if (/[A-Z]/.test(email)) {
       toast.error("Email should be in lowercase", {
-        position: "top-center",
+        position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: "light",
+        theme: "dark",
       });
       return;
     }
@@ -215,14 +215,14 @@ const Recruiting = () => {
     // Check if the email contains symbols
     if (/[!#$%^&*(),?":{}|<>]/.test(email)) {
       toast.error("Email should not contain symbols", {
-        position: "top-center",
+        position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: "light",
+        theme: "dark",
       });
       return;
     }
@@ -231,14 +231,14 @@ const Recruiting = () => {
     const atIndex = email.indexOf("@");
     if (/[!@#$%^&*(),.?":{}|<>]/.test(email.slice(0, atIndex))) {
       toast.error("Email should not contain symbols before @ symbol", {
-        position: "top-center",
+        position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: "light",
+        theme: "dark",
       });
       return;
     }
@@ -257,28 +257,28 @@ const Recruiting = () => {
 
       if (!response.data.unique) {
         toast.error("Email already exist", {
-          position: "top-center",
+          position: "top-right",
           autoClose: 5000,
           hideProgressBar: false,
           closeOnClick: true,
           pauseOnHover: true,
           draggable: true,
           progress: undefined,
-          theme: "light",
+          theme: "dark",
         });
         return;
       }
     } catch (error) {
       console.log("Error checking email uniqueness:", error);
       toast.error("An error occurred while checking email uniqueness", {
-        position: "top-center",
+        position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: "light",
+        theme: "dark",
       });
       return;
     } finally {
@@ -300,28 +300,28 @@ const Recruiting = () => {
 
       if (!response.data.unique) {
         toast.error("Scholar Id already exist", {
-          position: "top-center",
+          position: "top-right",
           autoClose: 5000,
           hideProgressBar: false,
           closeOnClick: true,
           pauseOnHover: true,
           draggable: true,
           progress: undefined,
-          theme: "light",
+          theme: "dark",
         });
         return;
       }
     } catch (error) {
       console.log("Error checking scholar id uniqueness:", error);
       toast.error("An error occurred while checking scholar id uniqueness", {
-        position: "top-center",
+        position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: "light",
+        theme: "dark",
       });
       return;
     } finally {
@@ -349,28 +349,28 @@ const Recruiting = () => {
       } else {
         // Wrong OTP entered
         toast.error("Wrong OTP. Please try again", {
-          position: "top-center",
+          position: "top-right",
           autoClose: 5000,
           hideProgressBar: false,
           closeOnClick: true,
           pauseOnHover: true,
           draggable: true,
           progress: undefined,
-          theme: "light",
+          theme: "dark",
         });
         return;
       }
     } catch (error) {
       console.log("Error verifying OTP:", error);
       toast.error("Wrong OTP. Please try again", {
-        position: "top-center",
+        position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: "light",
+        theme: "dark",
       });
       return;
     } finally {
@@ -383,14 +383,14 @@ const Recruiting = () => {
 
     if (!emailRegex.test(email)) {
       toast.error("Only first year's INSTITUTE email id are accepted.", {
-        position: "top-center",
+        position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: "light",
+        theme: "dark",
       });
       return;
     }
@@ -429,14 +429,14 @@ const Recruiting = () => {
         setSubmitting(false);
         setDisablesubmitreg(false);
         toast.success("Form successfully submitted😍", {
-          position: "top-center",
+          position: "top-right",
           autoClose: 5000,
           hideProgressBar: false,
           closeOnClick: true,
           pauseOnHover: true,
           draggable: true,
           progress: undefined,
-          theme: "light",
+          theme: "dark",
         });
       });
   };
@@ -445,14 +445,14 @@ const Recruiting = () => {
     // Check if the email is empty i.e email mandatory
     if (email === "") {
       toast.error("Please enter your institute email id", {
-        position: "top-center",
+        position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: "light",
+        theme: "dark",
       });
       return;
     }
@@ -462,14 +462,14 @@ const Recruiting = () => {
 
     if (!emailRegex.test(email)) {
       toast.error("Only first year's INSTITUTE email id are accepted.", {
-        position: "top-center",
+        position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: "light",
+        theme: "dark",
       });
       return;
     }
@@ -488,14 +488,14 @@ const Recruiting = () => {
         toast.success(
           "OTP sent successfully! Please check your inbox as well as SPAM folder.",
           {
-            position: "top-center",
+            position: "top-right",
             autoClose: 5000,
             hideProgressBar: false,
             closeOnClick: true,
             pauseOnHover: true,
             draggable: true,
             progress: undefined,
-            theme: "light",
+            theme: "dark",
           }
         );
         setOtpSent(true);
@@ -503,14 +503,14 @@ const Recruiting = () => {
     } catch (error) {
       console.log("Error sending OTP:", error);
       toast.error("An error occurred while sending the OTP", {
-        position: "top-center",
+        position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: "light",
+        theme: "dark",
       });
     } finally {
       setOtpgoing(false);

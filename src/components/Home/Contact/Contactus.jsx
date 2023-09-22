@@ -24,42 +24,42 @@ const Contactus = () => {
     event.preventDefault();
     if (!isFormValid()) {
       toast.error("Please fill all the required fields", {
-        position: "top-center",
+        position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: "light",
+        theme: "dark",
       });
       return;
     }
 
     if (!isValidEmail(email)) {
       toast.error("Please enter a correct email.", {
-        position: "top-center",
+        position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: "light",
+        theme: "dark",
       });
       return;
     }
 
     if (/[\d!@#$%^&*(),.?":{}|<>]/.test(name)) {
       toast.error("Name should only contain alphabetic characters", {
-        position: "top-center",
+        position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: "light",
+        theme: "dark",
       });
       return;
     }
@@ -79,26 +79,26 @@ const Contactus = () => {
         setSubmitting(false);
         setDisable(false);
         toast.success("Contact Us form submitted.", {
-          position: "top-center",
+          position: "top-right",
           autoClose: 5000,
           hideProgressBar: false,
           closeOnClick: true,
           pauseOnHover: true,
           draggable: true,
           progress: undefined,
-          theme: "light",
+          theme: "dark",
         });
       })
       .catch((error) => {
         toast.error("Something went wrong. Please try again.", {
-          position: "top-center",
+          position: "top-right",
           autoClose: 5000,
           hideProgressBar: false,
           closeOnClick: true,
           pauseOnHover: true,
           draggable: true,
           progress: undefined,
-          theme: "light",
+          theme: "dark",
         });
         console.error(error);
         setSubmitting(false);

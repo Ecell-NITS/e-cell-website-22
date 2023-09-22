@@ -90,14 +90,14 @@ const EditProfile = () => {
 
     if (!isEditProfFilled()) {
       toast.error("Please edit atleast any one field", {
-        position: "top-center",
+        position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: "light",
+        theme: "dark",
       });
       return;
     }
@@ -149,28 +149,28 @@ const EditProfile = () => {
             "New Password should not be less than 8 characters"
         ) {
           toast.error("New Password should not be less than 8 characters", {
-            position: "top-center",
+            position: "top-right",
             autoClose: 5000,
             hideProgressBar: false,
             closeOnClick: true,
             pauseOnHover: true,
             draggable: true,
             progress: undefined,
-            theme: "light",
+            theme: "dark",
           });
         } else if (
           error.response &&
           error.response.data.error === "Passwords must match"
         ) {
           toast.error("Passwords must match", {
-            position: "top-center",
+            position: "top-right",
             autoClose: 5000,
             hideProgressBar: false,
             closeOnClick: true,
             pauseOnHover: true,
             draggable: true,
             progress: undefined,
-            theme: "light",
+            theme: "dark",
           });
         } else {
           console.error("Failed to update Profile", error);
@@ -268,14 +268,14 @@ const EditProfile = () => {
                   } else {
                     // Show an error message or alert or decline the editing operartion
                     toast.error("Invalid file type or image is greater than 300KB", {
-                      position: "top-center",
+                      position: "top-right",
                       autoClose: 5000,
                       hideProgressBar: false,
                       closeOnClick: true,
                       pauseOnHover: true,
                       draggable: true,
                       progress: undefined,
-                      theme: "light",
+                      theme: "dark",
                     });
                     setUserimg("");
                   }

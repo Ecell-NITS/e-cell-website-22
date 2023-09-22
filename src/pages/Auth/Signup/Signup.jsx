@@ -52,14 +52,14 @@ const Signup = () => {
     console.log("isSignUpFormFilled:", isSignUpFormFilled());
     if (!isSignUpFormFilled()) {
       toast.error("Please fill all the required signup form fields", {
-        position: "top-center",
+        position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: "light",
+        theme: "dark",
       });
       return;
     }
@@ -88,28 +88,28 @@ const Signup = () => {
         console.log("OTP verified");
       } else {
         toast.error("Wrong OTP. Please try again", {
-          position: "top-center",
+          position: "top-right",
           autoClose: 5000,
           hideProgressBar: false,
           closeOnClick: true,
           pauseOnHover: true,
           draggable: true,
           progress: undefined,
-          theme: "light",
+          theme: "dark",
         });
         return;
       }
     } catch (error) {
       console.log("Error verifying OTP:", error);
       toast.error("Wrong OTP. Please try again", {
-        position: "top-center",
+        position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: "light",
+        theme: "dark",
       });
       return;
     } finally {
@@ -177,14 +177,14 @@ const Signup = () => {
     e.preventDefault();
     if (email === "") {
       toast.error("Please enter your email id", {
-        position: "top-center",
+        position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: "light",
+        theme: "dark",
       });
       return;
     }
@@ -203,28 +203,28 @@ const Signup = () => {
         toast.success(
           "OTP sent successfully! Please check your inbox as well as SPAM folder.",
           {
-            position: "top-center",
+            position: "top-right",
             autoClose: 5000,
             hideProgressBar: false,
             closeOnClick: true,
             pauseOnHover: true,
             draggable: true,
             progress: undefined,
-            theme: "light",
+            theme: "dark",
           }
         );
       }
     } catch (error) {
       console.log("Error sending OTP:", error);
       toast.error("An error occurred while sending the OTP", {
-        position: "top-center",
+        position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: "light",
+        theme: "dark",
       });
     } finally {
       setOtpgoing(false);

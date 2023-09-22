@@ -40,14 +40,14 @@ const Techsubmission = () => {
   const sendOTP = async () => {
     if (email === "") {
       toast.error("Please enter your institute email id", {
-        position: "top-center",
+        position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: "light",
+        theme: "dark",
       });
       return;
     }
@@ -55,14 +55,14 @@ const Techsubmission = () => {
     const emailRegex = /^.+22@(cse|civil|mech|ece|ee|ei)\.nits\.ac\.in$/;
     if (!emailRegex.test(email)) {
       toast.error("Only first year's INSTITUTE email id are accepted.", {
-        position: "top-center",
+        position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: "light",
+        theme: "dark",
       });
       return;
     }
@@ -82,28 +82,28 @@ const Techsubmission = () => {
         toast.success(
           "OTP sent successfully! Please check your inbox as well as SPAM folder.",
           {
-            position: "top-center",
+            position: "top-right",
             autoClose: 5000,
             hideProgressBar: false,
             closeOnClick: true,
             pauseOnHover: true,
             draggable: true,
             progress: undefined,
-            theme: "light",
+            theme: "dark",
           }
         );
       }
     } catch (error) {
       console.log("Error sending OTP:", error);
       toast.error("An error occurred while sending the OTP", {
-        position: "top-center",
+        position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: "light",
+        theme: "dark",
       });
     } finally {
       setOtpgoing(false);
@@ -115,14 +115,14 @@ const Techsubmission = () => {
   const submitbtn = async () => {
     if (!isFormValid()) {
       toast.error("Please fill all the required fields.", {
-        position: "top-center",
+        position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: "light",
+        theme: "dark",
       });
       return;
     }
@@ -138,14 +138,14 @@ const Techsubmission = () => {
       (scholarId[3] === "6" && parseInt(scholarId.slice(-3)) > 160)
     ) {
       toast.error("Invalid scholar id", {
-        position: "top-center",
+        position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: "light",
+        theme: "dark",
       });
       return;
     }
@@ -155,14 +155,14 @@ const Techsubmission = () => {
 
     if (!emailRegex.test(email)) {
       toast.error("Only first year's INSTITUTE email id are accepted.", {
-        position: "top-center",
+        position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: "light",
+        theme: "dark",
       });
       return;
     }
@@ -182,28 +182,28 @@ const Techsubmission = () => {
 
       if (!response.data.unique) {
         toast.error("Email already exist", {
-          position: "top-center",
+          position: "top-right",
           autoClose: 5000,
           hideProgressBar: false,
           closeOnClick: true,
           pauseOnHover: true,
           draggable: true,
           progress: undefined,
-          theme: "light",
+          theme: "dark",
         });
         return;
       }
     } catch (error) {
       console.log("Error checking email uniqueness:", error);
       toast.error("An error occurred while checking email uniqueness", {
-        position: "top-center",
+        position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: "light",
+        theme: "dark",
       });
       return;
     } finally {
@@ -226,28 +226,28 @@ const Techsubmission = () => {
 
       if (!response.data.unique) {
         toast.error("Scholar Id already exist", {
-          position: "top-center",
+          position: "top-right",
           autoClose: 5000,
           hideProgressBar: false,
           closeOnClick: true,
           pauseOnHover: true,
           draggable: true,
           progress: undefined,
-          theme: "light",
+          theme: "dark",
         });
         return;
       }
     } catch (error) {
       console.log("Error checking scholar id uniqueness:", error);
       toast.error("An error occurred while checking scholar id uniqueness", {
-        position: "top-center",
+        position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: "light",
+        theme: "dark",
       });
       return;
     } finally {
@@ -272,28 +272,28 @@ const Techsubmission = () => {
         console.log("OTP verified");
       } else {
         toast.error("Wrong OTP. Please try again", {
-          position: "top-center",
+          position: "top-right",
           autoClose: 5000,
           hideProgressBar: false,
           closeOnClick: true,
           pauseOnHover: true,
           draggable: true,
           progress: undefined,
-          theme: "light",
+          theme: "dark",
         });
         return;
       }
     } catch (error) {
       console.log("Error verifying OTP:", error);
       toast.error("Wrong OTP. Please try again", {
-        position: "top-center",
+        position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: "light",
+        theme: "dark",
       });
       return;
     } finally {
@@ -325,14 +325,14 @@ const Techsubmission = () => {
         setSubmitting(false);
         setStopsubmit(false);
         toast.success("Form successfully submitted.", {
-          position: "top-center",
+          position: "top-right",
           autoClose: 5000,
           hideProgressBar: false,
           closeOnClick: true,
           pauseOnHover: true,
           draggable: true,
           progress: undefined,
-          theme: "light",
+          theme: "dark",
         });
       });
   };

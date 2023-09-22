@@ -131,14 +131,14 @@ const Forgotpwd = () => {
           setConfirmnewpwd0("");
           setNewpwd0("");
           toast.success(`Password for the ${email} successfully changed.`, {
-            position: "top-center",
+            position: "top-right",
             autoClose: 5000,
             hideProgressBar: false,
             closeOnClick: true,
             pauseOnHover: true,
             draggable: true,
             progress: undefined,
-            theme: "light",
+            theme: "dark",
           });
           setDisablepwdchanging(false);
           navigate("/login");
@@ -146,14 +146,14 @@ const Forgotpwd = () => {
     } catch (error) {
       if (error.response && error.response.data.error === "Password can't be empty.") {
         toast.error("Password can't be empty.", {
-          position: "top-center",
+          position: "top-right",
           autoClose: 5000,
           hideProgressBar: false,
           closeOnClick: true,
           pauseOnHover: true,
           draggable: true,
           progress: undefined,
-          theme: "light",
+          theme: "dark",
         });
         setDisablepwdchanging(false);
       } else if (error.response && error.response.data.error === "User not found") {
@@ -164,26 +164,26 @@ const Forgotpwd = () => {
         error.response.data.error === "New Password should not be less than 8 characters"
       ) {
         toast.error("New Password should not be less than 8 characters", {
-          position: "top-center",
+          position: "top-right",
           autoClose: 5000,
           hideProgressBar: false,
           closeOnClick: true,
           pauseOnHover: true,
           draggable: true,
           progress: undefined,
-          theme: "light",
+          theme: "dark",
         });
         setDisablepwdchanging(false);
       } else if (error.response && error.response.data.error === "Passwords must match") {
         toast.error("Passwords must match", {
-          position: "top-center",
+          position: "top-right",
           autoClose: 5000,
           hideProgressBar: false,
           closeOnClick: true,
           pauseOnHover: true,
           draggable: true,
           progress: undefined,
-          theme: "light",
+          theme: "dark",
         });
         setDisablepwdchanging(false);
       } else {
