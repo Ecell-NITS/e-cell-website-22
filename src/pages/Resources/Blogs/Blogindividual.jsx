@@ -88,7 +88,7 @@ const Blogindividual = () => {
   const handleShareToFb = () => {
     const facebookShareURL = `https://www.facebook.com/sharer/sharer.php?u=${currentURL}`;
     window.open(facebookShareURL, "_blank");
-    console.log(facebookShareURL);
+    // console.log(facebookShareURL);
   };
 
   const handleShareToReddit = () => {

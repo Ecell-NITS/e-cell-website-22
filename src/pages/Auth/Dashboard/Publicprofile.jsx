@@ -110,7 +110,7 @@ const Publicprofile = () => {
         );
         // const response = await axios.get(`http://localhost:2226/publicwrittenblogs/${authoruniqueid}`)
         setBlogs(response.data);
-        console.log(response.data);
+        // console.log(response.data);
       } catch (error) {
         if (
           error.response &&

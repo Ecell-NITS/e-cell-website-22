@@ -123,12 +123,15 @@
   margin-top: 0;
 }
 
-#fogtpwd {
+#fogtpwd button {
   margin-left: 23vw;
   font-size: 1.3vw;
   color: #3e618e;
   margin-top: -1vw !important;
   font-weight: 900;
+  border: none;
+  outline: none;
+  background-color: white;
 }
 
 @media (max-width: 660px) {
@@ -190,7 +193,7 @@
     color: red;
   }
 
-  #fogtpwd {
+  #fogtpwd button {
     margin-left: 65vw;
     font-size: 3vw;
     color: #3e618e;

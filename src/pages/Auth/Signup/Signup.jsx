@@ -49,9 +49,9 @@ const Signup = () => {
   const formhandlesubmit = async (e) => {
     e.preventDefault();
 
-    console.log("isSignUpFormFilled:", isSignUpFormFilled());
+    // console.log("isSignUpFormFilled:", isSignUpFormFilled());
     if (!isSignUpFormFilled()) {
-      toast.error("Please fill all the required signup form fields", {
+      toast.error("Please fill all the required fields", {
         position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
@@ -65,7 +65,17 @@ const Signup = () => {
     }
 
     if (confirmpwd !== password) {
-      setMessage("! Passwords are not same.");
+      // setMessage("! Passwords are not same.");
+      toast.error("Passwords are not same", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      });
       setTimeout(() => {
         setMessage("");
       }, 5000);
@@ -100,7 +110,7 @@ const Signup = () => {
         return;
       }
     } catch (error) {
-      console.log("Error verifying OTP:", error);
+      // console.log("Error verifying OTP:", error);
       toast.error("Wrong OTP. Please try again", {
         position: "top-right",
         autoClose: 5000,
@@ -134,8 +144,21 @@ const Signup = () => {
         setPassword("");
         setConfirmpwd("");
         setOtp("");
-        setMessage(
-          `Signup completed! You will be redirected to login page after 5 seconds.`
+        // setMessage(
+        //   `Signup completed! You will be redirected to login page after 5 seconds.`
+        // );
+        toast.success(
+          `Signup completed! You will be redirected to login page after 5 seconds`,
+          {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+          }
         );
         setTimeout(() => {
           setMessage("");
@@ -152,14 +175,44 @@ const Signup = () => {
         setOtp("");
 
         if (error.response && error.response.data.error === "Email already exists") {
-          setMessage("Email already exists");
+          // setMessage("Email already exists");
+          toast.info(`Email already exists`, {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+          });
         } else if (
           error.response &&
           error.response.data.error === "Password should not be less than 8 characters"
         ) {
-          setMessage("Password cannot be less than 8 characters");
+          // setMessage("Password cannot be less than 8 characters");
+          toast.error(`Password cannot be less than 8 characters`, {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+          });
         } else {
-          setMessage("Signup failed. Please try again.");
+          // setMessage("Signup failed. Please try again.");
+          toast.error(`Signup failed. Please try again`, {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+          });
         }
         setTimeout(() => {
           setMessage("");
@@ -215,8 +268,8 @@ const Signup = () => {
         );
       }
     } catch (error) {
-      console.log("Error sending OTP:", error);
-      toast.error("An error occurred while sending the OTP", {
+      // console.log("Error sending OTP:", error);
+      toast.error("Something went wrong", {
         position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,

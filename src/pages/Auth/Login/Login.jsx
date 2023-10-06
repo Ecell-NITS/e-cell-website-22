@@ -3,6 +3,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import NavbarTeam from "../../../components/shared/Navbar/NavbarTeam";
 import Footer from "../../../components/shared/Footer/Footer";
+import { toast } from "react-toastify";
 const Login = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
@@ -25,7 +26,17 @@ const Login = () => {
   const handlelogin = (e) => {
     e.preventDefault();
     if (!email || !password) {
-      setMessage("Please fill all required fields");
+      // setMessage("Please fill all required fields");
+      toast.error(`Please fill all required fields`, {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      });
       return;
     }
 
@@ -48,14 +59,34 @@ const Login = () => {
       })
       .catch((error) => {
         if (error.response) {
-          setMessage(error.response.data.error);
+          // setMessage(error.response.data.error);
+          toast.error(error.response.data.error, {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+          });
           setTimeout(() => {
             setMessage("");
           }, 5000);
-          setEmail("");
-          setPassword("");
+          // setEmail("");
+          // setPassword("");
         } else {
-          setMessage("Login failed. Please try again.");
+          // setMessage("Login failed. Please try again.");
+          toast.error(`Login failed. Please try again`, {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+          });
         }
         setLoggingin(false);
         setDisablelogin(false);
@@ -110,13 +141,13 @@ const Login = () => {
             </div>
 
             <div className="inputdicdignup" id="fogtpwd">
-              <span
+              <button
                 disabled={disablelogin}
                 style={{ cursor: disablelogin ? "not-allowed" : "pointer" }}
                 onClick={handleForgetPwd}
               >
                 Forgot Password?
-              </span>
+              </button>
             </div>
 
             <button

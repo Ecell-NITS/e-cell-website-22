@@ -54,9 +54,27 @@ const Navbar = () => {
     navigate("/dashboard");
   };
 
+  const [bgChng, setBgChng] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setBgChng(true);
+      } else {
+        setBgChng(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <nav
       className={toggle ? "navbar1 expanded" : "navbar1"}
+      id={bgChng ? "bgchng" : ""}
       style={{ userSelect: "none" }}
     >
       <Link to="/">

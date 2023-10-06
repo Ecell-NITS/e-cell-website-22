@@ -21,11 +21,15 @@
   z-index: 20;
   transition: all 0.3s ease-out;
   position: fixed;
+  padding-top: 3vw;
+  padding-bottom: 3vw;
+  backdrop-filter: blur(4px);
 }
 
 .expanded {
   background-color: #224259;
   box-shadow: 0px 4px 12px 0px #22425966;
+  padding: 2rem !important;
 }
 
 .navbar1 .logo {
@@ -84,8 +88,21 @@
 
 @media (max-width: 768px) {
   .navbar1 {
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     transition: 0.5s all ease-in-out;
+    /* padding-top: 10vw !important;
+    padding-bottom: 10vw !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; */
+    &#bgchng {
+      background-color: #224259;
+    }
   }
 
   .navbar1.expanded {
@@ -113,7 +130,7 @@
 
   .navbar1 .logo {
     position: absolute;
-    top: 0.75rem;
+    top: 0.5rem;
     left: 0.9375rem;
   }
 
