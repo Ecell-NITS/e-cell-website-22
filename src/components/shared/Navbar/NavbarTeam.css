@@ -69,6 +69,11 @@
 
 @media (max-width: 991px) {
   .navbar0 {
+    /* position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; */
     position: relative;
     transition: 0.5s all ease-in-out;
   }

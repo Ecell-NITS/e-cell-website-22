@@ -176,17 +176,20 @@ const Blog = () => {
             <>
               {filteredBlogs.length === 0 ? (
                 <p className="msgonblogcnt">
-                  No blogs found with the tag &quot; {activeTagFilter}
+                  No blogs found with the tag &quot; {activeTagFilter} &quot;
                 </p>
               ) : (
                 <p className="msgonblogcnt">
-                  {filteredBlogs.length} blogs found with the tag &#34; {activeTagFilter}
+                  <strong>{filteredBlogs.length}</strong>{" "}
+                  {filteredBlogs.length > 1 ? "blogs" : "blog"} found with the tag{" "}
+                  <strong>&#34;{activeTagFilter}&#34;</strong>
                 </p>
               )}
             </>
           ) : (
             <p className="msgonblogcnt">
-              {filteredBlogs.length} blogs found on the server.
+              <strong>{filteredBlogs.length}</strong>{" "}
+              {filteredBlogs.length > 1 ? "blogs" : "blog"} found on the server
             </p>
           )}
 
@@ -246,6 +249,7 @@ const Blog = () => {
                                   <Link
                                     to={`/tag/${word.replace("#", "")}`}
                                     id="tagbuttonidlink"
+                                    // key={index}
                                   >
                                     <button
                                       key={index}

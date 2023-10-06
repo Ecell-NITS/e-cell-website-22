@@ -30,7 +30,17 @@ const Forgotpwd = () => {
   const handlelogin = (e) => {
     e.preventDefault();
     if (!email) {
-      setMessage("Please fill your email.");
+      // setMessage("Please fill your email.");
+      toast.error(`Please provide your email`, {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      });
       return;
     }
 
@@ -44,7 +54,17 @@ const Forgotpwd = () => {
         { email }
       )
       .then((response) => {
-        setMessage(`Email with the otp sent to ${email}.`);
+        // setMessage(`Email with the otp sent to ${email}.`);
+        toast.success(`Email with the otp sent to ${email}`, {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+        });
         setEmail("");
         setDisable(false);
         setShowVerify(true);
@@ -57,7 +77,17 @@ const Forgotpwd = () => {
           error.response &&
           error.response.data.error === "No account with this email found."
         ) {
-          setMessage(`No account with ${email} found.`);
+          // setMessage(`No account with ${email} found.`);
+          toast.error(`No account with ${email} found.`, {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+          });
           setTimeout(() => {
             setMessage("");
           }, 5000);
@@ -94,7 +124,17 @@ const Forgotpwd = () => {
         setDisplayotpentered(true);
         setDisableverify(false);
       } else {
-        setMessage("Wrong OTP. Please try again");
+        // setMessage("Wrong OTP. Please try again");
+        toast.error(`Wrong OTP. Please try again`, {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+        });
         setTimeout(() => {
           setMessage("");
         }, 5000);
@@ -104,8 +144,18 @@ const Forgotpwd = () => {
         return;
       }
     } catch (error) {
-      console.log("Error verifying OTP:", error);
-      setMessage("Wrong OTP. Please try again");
+      // console.log("Error verifying OTP:", error);
+      // setMessage("Wrong OTP. Please try again");
+      toast.error(`Wrong OTP. Please try again`, {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      });
       setTimeout(() => {
         setMessage("");
       }, 5000);
