@@ -31,4 +31,4 @@ By participating in this project, you agree to abide by our Code of Conduct.
 This project is licensed under the [GNU GENERAL PUBLIC LICENSE](https://github.com/Ecell-NITS/e-cell-website-22/blob/vite_newdev/LICENSE) - see the [LICENSE.md](https://github.com/Ecell-NITS/e-cell-website-22/blob/vite_newdev/LICENSE) file for details.
 
 ## Contact
-In case of any query, please contact [hereisadi](https://github.com/hereisadi) or [31adityakumar](https://github.com/31adityakumar)
+In case of any query, please contact [mdekaa](https://github.com/mdekaa) or [31adityakumar](https://github.com/31adityakumar)
