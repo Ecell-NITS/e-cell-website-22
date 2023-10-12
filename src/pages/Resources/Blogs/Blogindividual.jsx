@@ -134,7 +134,7 @@ const Blogindividual = () => {
           </h6>
           <h6>
             {" "}
-            <FaClock /> {readingtime} minutes read
+            <FaClock /> {readingtime} {readingtime > 1 ? "minutes" : "minute"} read
           </h6>
         </div>
         {intro.split("\n").map((paragraph, index) => (
