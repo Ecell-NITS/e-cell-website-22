@@ -30,6 +30,36 @@ const EditProfile = () => {
     }
   }, [navigate]);
 
+  {
+    /* populate the editProfile form */
+  }
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    try {
+      axios
+        .get(import.meta.env.VITE_REACT_APP_DASHBOARD, {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        })
+        .then((response) => {
+          // console.log(response.data)
+          setName(response.data.name);
+          setBio(response.data.bio);
+          setFacebook(response.data.facebook);
+          setInstagram(response.data.instagram);
+          setGithub(response.data.github);
+          setLinkedin(response.data.linkedin);
+        });
+    } catch (e) {
+      if (e.response.status === 500) {
+        console.error("something went wrong");
+      } else {
+        console.log(e);
+      }
+    }
+  }, []);
+
   const handleNameChange = (event) => {
     setName(event.target.value);
   };
@@ -141,6 +171,7 @@ const EditProfile = () => {
         setConfirmnewpwd("");
         setSaving(false);
         setDisableedit(false);
+        navigate("/dashboard");
       })
       .catch((error) => {
         if (

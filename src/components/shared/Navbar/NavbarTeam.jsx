@@ -78,10 +78,13 @@ const NavbarTeam = () => {
           <NavLink to="/">HOME</NavLink>
         </li>
 
-        <li>
+        {/* <li>
           <a role="button" tabIndex="0" onClick={movetoaboutsection}>
             ABOUT US
           </a>
+        </li> */}
+        <li>
+          <NavLink to="/#aboutecellnits">ABOUT US</NavLink>
         </li>
         {/* <li>  <NavHashLink to="/#aboutecell">ABOUT US</NavHashLink></li> */}
         {/* <li><a href="/#aboutecellnits">ABOUT</a></li> */}

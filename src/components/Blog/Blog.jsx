@@ -138,7 +138,7 @@ const Blog = () => {
 
   return (
     <>
-      <div className="collab">
+      <div className="collab" id="blog_section">
         <h1 style={{ userSelect: "none" }}>BLOG-SECTION</h1>
       </div>
 

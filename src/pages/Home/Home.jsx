@@ -9,10 +9,13 @@ import Timeline from "../../components/Home/Timeline/Timeline";
 import Footer from "../../components/shared/Footer/Footer";
 import Footerconstant from "../../components/shared/FooterConstant/Footerconstant";
 import Contactus from "../../components/Home/Contact/Contactus";
+import ScrollToSection from "../../components/shared/ScrollToSection/Scroll";
 const Home = () => {
   useEffect(() => {
     document.title = "E-Cell | NIT Silchar";
   }, []);
+
+  ScrollToSection();
   return (
     <>
       <Hero />
