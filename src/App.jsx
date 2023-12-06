@@ -30,7 +30,8 @@ import Forgotpwd from "./pages/Auth/Login/Forgotpwd";
 import Tagspecificblog from "./components/Blog/Tagspecificblog";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
+import BlogRedirect from "./pages/Redirect/BlogRedirect";
+import UserRedirect from "./pages/Redirect/UserRedirect";
 function App() {
   return (
     <>
@@ -176,6 +177,16 @@ function App() {
               element={<Tagspecificblog />}
               key="route-Tagspecificblog-screen"
             />
+
+            <Route path="/blog" element={<BlogRedirect />} />
+
+            <Route path="/blogs" element={<BlogRedirect />} />
+
+            <Route path="/tags" element={<BlogRedirect />} />
+
+            <Route path="/tag" element={<BlogRedirect />} />
+
+            <Route path="/user" element={<UserRedirect />} />
 
             <Route path="*" element={<NotFound />} />
           </Routes>
