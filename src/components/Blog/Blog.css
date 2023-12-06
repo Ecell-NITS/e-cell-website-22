@@ -103,7 +103,7 @@
 .mainparentblogindicard {
   margin-top: 5vw;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   /* align-items: first baseline; */
   flex-wrap: wrap;
 }
