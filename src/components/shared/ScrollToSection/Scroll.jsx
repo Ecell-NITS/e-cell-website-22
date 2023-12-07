@@ -8,7 +8,7 @@ const ScrollToSection = () => {
     if (location.hash) {
       setTimeout(() => {
         const sectionToScrollIn = document.querySelector(location.hash);
-        console.log(sectionToScrollIn);
+        // console.log(sectionToScrollIn);
         if (sectionToScrollIn) {
           sectionToScrollIn.scrollIntoView({ behavior: "smooth" });
         }
