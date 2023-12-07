@@ -61,10 +61,14 @@ const Tagspecificblog = () => {
       <div className="tagblogpagemain">
         <div id="paddinginpublishlist">
           <Helmet>
-            <title>Blog(s) with the tag {tagname} | THE ECELL NITS BLOG</title>
+            <title>
+              {" "}
+              {blogs.length > 1 ? "Blogs" : "Blog"} with the tag {tagname} | THE E-CELL
+              NITS BLOG
+            </title>
           </Helmet>
           <h1 style={{ textAlign: "center" }} className="headingtagsspecific">
-            Blog(s) with the tag {tagname}
+            {blogs.length > 1 ? "Blogs" : "Blog"} with the tag {tagname}
           </h1>
           <div id="blogs_under_profile_protected">
             {fetching && <p id="loadingkrrhebhaiblogs">Loading Blogs...</p>}
