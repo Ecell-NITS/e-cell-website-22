@@ -6,11 +6,13 @@ const ScrollToSection = () => {
 
   useEffect(() => {
     if (location.hash) {
-      const sectionToScrollIn = document.querySelector(location.hash);
-      console.log(sectionToScrollIn);
-      if (sectionToScrollIn) {
-        sectionToScrollIn.scrollIntoView({ behavior: "smooth" });
-      }
+      setTimeout(() => {
+        const sectionToScrollIn = document.querySelector(location.hash);
+        console.log(sectionToScrollIn);
+        if (sectionToScrollIn) {
+          sectionToScrollIn.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 0);
     }
   }, [location]);
 };

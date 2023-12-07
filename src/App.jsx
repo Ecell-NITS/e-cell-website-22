@@ -32,6 +32,8 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import BlogRedirect from "./pages/Redirect/BlogRedirect";
 import UserRedirect from "./pages/Redirect/UserRedirect";
+import Logout from "./pages/Auth/Logout/Logout";
+
 function App() {
   return (
     <>
@@ -177,6 +179,8 @@ function App() {
               element={<Tagspecificblog />}
               key="route-Tagspecificblog-screen"
             />
+
+            <Route exact path="/logout" element={<Logout />} />
 
             <Route path="/blog" element={<BlogRedirect />} />
 
