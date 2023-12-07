@@ -11,10 +11,10 @@ const EditProfile = () => {
   const [name, setName] = useState("");
   const [bio, setBio] = useState("");
   const [userimg, setUserimg] = useState("");
-  const [facebook, setFacebook] = useState("");
-  const [instagram, setInstagram] = useState("");
-  const [github, setGithub] = useState("");
-  const [linkedin, setLinkedin] = useState("");
+  let [facebook, setFacebook] = useState("");
+  let [instagram, setInstagram] = useState("");
+  let [github, setGithub] = useState("");
+  let [linkedin, setLinkedin] = useState("");
   const [error, setError] = useState("");
   const [message, setMessage] = useState("");
   const [saving, setSaving] = useState(false);
@@ -116,6 +116,31 @@ const EditProfile = () => {
     const token = localStorage.getItem("token");
     if (!token) {
       return;
+    }
+
+    // append https:// if not present in social media urls
+    if (github !== "" && github !== undefined) {
+      if (!github.startsWith("http://") && !github.startsWith("https://")) {
+        github = "https://" + github;
+      }
+    }
+
+    if (facebook !== "" && facebook !== undefined) {
+      if (!facebook.startsWith("http://") && !facebook.startsWith("https://")) {
+        facebook = "https://" + facebook;
+      }
+    }
+
+    if (instagram !== "" && instagram !== undefined) {
+      if (!instagram.startsWith("http://") && !instagram.startsWith("https://")) {
+        instagram = "https://" + instagram;
+      }
+    }
+
+    if (linkedin !== "" && linkedin !== undefined) {
+      if (!linkedin.startsWith("http://") && !linkedin.startsWith("https://")) {
+        linkedin = "https://" + linkedin;
+      }
     }
 
     if (!isEditProfFilled()) {

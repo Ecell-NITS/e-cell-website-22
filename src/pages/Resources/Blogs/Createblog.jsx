@@ -26,6 +26,8 @@ const Createblog = () => {
   const [disablecreate, setDisablecreate] = useState(false);
   const [authorid, setAuthorid] = useState("");
 
+  const [socialMedia, setSocialMedia] = useState({});
+
   const handleImgChange = (base64) => {
     setTopicpic(base64);
   };
@@ -58,6 +60,46 @@ const Createblog = () => {
         });
     }
   }, [navigate]);
+
+  // get the social media links from the dashboard; and if atleast one is not present then navigate user to edit profile page
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    const config = {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    };
+
+    try {
+      axios.get(import.meta.env.VITE_REACT_APP_DASHBOARD, config).then((res) => {
+        const { facebook, github, linkedin, instagram } = res.data;
+        setSocialMedia({ facebook, github, linkedin, instagram });
+        if (
+          facebook === undefined &&
+          github === undefined &&
+          linkedin === undefined &&
+          instagram === undefined
+        ) {
+          toast.error("Update your profile to contain atleast 1 social media profile", {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+          });
+          navigate("/editprofile");
+        } else {
+          console.log("everything is fine");
+        }
+      });
+    } catch (err) {
+      console.error(err);
+    }
+  }, [navigate]);
+
   const iscreateblogempty = () => {
     return (
       title !== "" &&
