@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./Blogindi.css";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate, useLocation } from "react-router-dom";
 import NavbarTeam from "../../../components/shared/Navbar/NavbarTeam";
 import Footer from "../../../components/shared/Footer/Footer";
 import { Helmet } from "react-helmet";
-import { useNavigate, useLocation } from "react-router-dom";
 import { IoIosArrowBack } from "react-icons/io";
 import { BsTwitter, BsFacebook, BsLinkedin } from "react-icons/bs";
 import { AiFillRedditCircle } from "react-icons/ai";
 import { FaClock } from "react-icons/fa";
 import Comments from "./Comments";
 import ProgressiveBar from "./ProgressiveBar";
+import { toast } from "react-toastify";
 // import Blog from '../../../components/Blog/Blog';
 const Blogindividual = () => {
   const { _id } = useParams();
@@ -52,12 +52,26 @@ const Blogindividual = () => {
         const time = Math.ceil(wordCount / wordsPerMinute);
         setReadingtime(time);
       } catch (error) {
-        console.log("Error fetching blog:", error);
+        if (error.response && error.response.data.error === "Error fetching blog") {
+          navigate("/resources/#blog_section");
+          toast.error("No such Blog exists", {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+          });
+        } else {
+          console.error("Error fetching blog:", error);
+        }
       }
     };
 
     fetchBlog();
-  }, [_id]);
+  }, [_id, navigate]);
 
   useEffect(() => {
     const handleScroll = () => {
