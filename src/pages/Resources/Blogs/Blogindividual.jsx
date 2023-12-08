@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext, useMemo } from "react";
 import axios from "axios";
 import "./Blogindi.css";
 import { useParams } from "react-router-dom";
@@ -12,7 +12,10 @@ import { AiFillRedditCircle } from "react-icons/ai";
 import { FaClock } from "react-icons/fa";
 import Comments from "./Comments";
 import ProgressiveBar from "./ProgressiveBar";
+import { UserContext } from "../../../Context/Provider";
+import { toast } from "react-toastify";
 // import Blog from '../../../components/Blog/Blog';
+
 const Blogindividual = () => {
   const { _id } = useParams();
   const [content, setContent] = useState("");
@@ -29,6 +32,34 @@ const Blogindividual = () => {
   const [authoruniqueid, setAuthoruniqueid] = useState("");
   const [timestamp, setTimestamp] = useState("");
   const [readingtime, setReadingtime] = useState("");
+
+  // consume the provider context
+  const { publishedBlog } = useContext(UserContext);
+
+  const allPublishedBlogsSoFar = useMemo(() => {
+    let allPublishedBlogsCount = [];
+    for (let i = 0; i < publishedBlog.length; i++) {
+      allPublishedBlogsCount.push(publishedBlog[i]._id);
+    }
+    return allPublishedBlogsCount;
+  }, [publishedBlog]);
+
+  useEffect(() => {
+    if (!allPublishedBlogsSoFar.includes(_id)) {
+      navigate("/resources/#blog_section");
+      toast.error("No such Blog exists", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      });
+    }
+  }, [navigate, _id, allPublishedBlogsSoFar]);
+
   useEffect(() => {
     const fetchBlog = async () => {
       try {

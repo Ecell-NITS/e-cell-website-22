@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./PublicProfile.css";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import NavbarTeam from "../../../components/shared/Navbar/NavbarTeam";
 import Footer from "../../../components/shared/Footer/Footer";
 import { FaFacebookF } from "react-icons/fa";
 import { AiFillInstagram, AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
+import { toast } from "react-toastify";
 const Publicprofile = () => {
+  const navigate = useNavigate();
   const location = useLocation();
   const currentURL = decodeURIComponent(location.pathname);
   const authoruniqueid = currentURL.split("/user/")[1];
@@ -95,11 +97,28 @@ const Publicprofile = () => {
         setGit(response.data.github);
         setLinkedin(response.data.linkedin);
       } catch (error) {
-        console.log("Error fetching Public Profile:", error);
+        if (
+          error.response &&
+          error.response.data.error === "Failed to retrieve user details"
+        ) {
+          navigate("/");
+          toast.error("No such profile exists", {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+          });
+        } else {
+          console.error("Error fetching Public Profile:", error);
+        }
       }
     };
     fetchPublicProfile();
-  }, [authoruniqueid]);
+  }, [authoruniqueid, navigate]);
 
   useEffect(() => {
     const fetchPublicBlogs = async () => {
@@ -129,6 +148,9 @@ const Publicprofile = () => {
   const screenWidth = window.innerWidth || document.documentElement.clientWidth;
   const tabletPc = screenWidth > 660;
 
+  if (!name) {
+    return <p>Loading...</p>;
+  }
   return (
     <>
       <NavbarTeam />
