@@ -1,0 +1,54 @@
+.preloader {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background: #161c2f;
+}
+
+.loader {
+  font-family: Arial, sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.loading-text {
+  margin-right: 0.5rem;
+}
+
+.dot1,
+.dot2,
+.dot3 {
+  height: 0.625rem;
+  margin-top: 0.625rem;
+  width: 0.625rem;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+  animation: dotAnimation 1.5s infinite ease-in-out;
+}
+
+.dot2 {
+  animation-delay: 0.5s;
+}
+
+.dot3 {
+  animation-delay: 1s;
+}
+
+@keyframes dotAnimation {
+  0%,
+  100% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+}

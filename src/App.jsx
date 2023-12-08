@@ -28,176 +28,195 @@ import Editblogform from "./pages/Auth/Dashboard/EditBlog/Editblogform";
 import Publicprofile from "./pages/Auth/Dashboard/Publicprofile";
 import Forgotpwd from "./pages/Auth/Login/Forgotpwd";
 import Tagspecificblog from "./components/Blog/Tagspecificblog";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import BlogRedirect from "./pages/Redirect/BlogRedirect";
-import UserRedirect from "./pages/Redirect/UserRedirect";
-import Logout from "./pages/Auth/Logout/Logout";
-
+import Preloader from "./components/Loader/Loader";
+import { useState, useEffect } from "react";
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const handleLoad = () => {
+      setLoading(false);
+    };
+
+    if (document.readyState === "complete") {
+      handleLoad();
+    } else {
+      document.addEventListener("readystatechange", () => {
+        if (document.readyState === "complete") {
+          handleLoad();
+        }
+      });
+    }
+
+    return () => {
+      document.removeEventListener("readystatechange", handleLoad);
+    };
+  }, []);
+
   return (
     <>
       <Router>
         <Scrolling>
-          <Routes>
-            <Route exact path="/" element={<Home />} key="route-home-screen" />
-            <Route
-              exact
-              path="/gallery"
-              element={<Gallery />}
-              key="route-gallery-screen"
-            />
-            <Route exact path="/team" element={<Team />} key="route-team-screen" />
-            <Route exact path="/events" element={<Events />} key="route-events-screen" />
-            <Route
-              exact
-              path="/resources"
-              element={<Resources />}
-              key="route-events-screen"
-            />
+          {loading ? (
+            <Preloader />
+          ) : (
+            <Routes>
+              <Route exact path="/" element={<Home />} key="route-home-screen" />
+              <Route
+                exact
+                path="/gallery"
+                element={<Gallery />}
+                key="route-gallery-screen"
+              />
+              <Route exact path="/team" element={<Team />} key="route-team-screen" />
+              <Route
+                exact
+                path="/events"
+                element={<Events />}
+                key="route-events-screen"
+              />
+              <Route
+                exact
+                path="/resources"
+                element={<Resources />}
+                key="route-events-screen"
+              />
 
-            <Route
-              exact
-              path="/allevents"
-              element={<AllEvents />}
-              key="route-allevents-screen"
-            />
-            <Route
-              exact
-              path="/events_red"
-              element={<Eventsred />}
-              key="route-allevents-screen"
-            />
+              <Route
+                exact
+                path="/allevents"
+                element={<AllEvents />}
+                key="route-allevents-screen"
+              />
+              <Route
+                exact
+                path="/events_red"
+                element={<Eventsred />}
+                key="route-allevents-screen"
+              />
 
-            <Route
-              exact
-              path="/recruitusers"
-              element={<Recuitmentdetails />}
-              key="route-recruitment-screen"
-            />
+              <Route
+                exact
+                path="/recruitusers"
+                element={<Recuitmentdetails />}
+                key="route-recruitment-screen"
+              />
 
-            <Route
-              exact
-              path="/contactresponses"
-              element={<Contactresponse />}
-              key="route-contactresponse-screen"
-            />
+              <Route
+                exact
+                path="/contactresponses"
+                element={<Contactresponse />}
+                key="route-contactresponse-screen"
+              />
 
-            <Route
-              exact
-              path="/newsletterresponses"
-              element={<Newsletter />}
-              key="route-newsletterresponse-screen"
-            />
-            <Route
-              exact
-              path="/createblog"
-              element={<Createblog />}
-              key="route-createblog-screen"
-            />
-            <Route
-              exact
-              path="/provisionalblog"
-              element={<Provisionalbloglist />}
-              key="route-provisionalblog-screen"
-            />
+              <Route
+                exact
+                path="/newsletterresponses"
+                element={<Newsletter />}
+                key="route-newsletterresponse-screen"
+              />
+              <Route
+                exact
+                path="/createblog"
+                element={<Createblog />}
+                key="route-createblog-screen"
+              />
+              <Route
+                exact
+                path="/provisionalblog"
+                element={<Provisionalbloglist />}
+                key="route-provisionalblog-screen"
+              />
 
-            <Route exact path="/signup" element={<Signup />} key="route-signup-screen" />
-            <Route exact path="/login" element={<Login />} key="route-login-screen" />
-            <Route
-              exact
-              path="/dashboard"
-              element={<Dashboard />}
-              key="route-dashboard-screen"
-            />
-            <Route
-              exact
-              path="/editprofile"
-              element={<Editprofile />}
-              key="route-dashboard-edit-profile-screen"
-            />
+              <Route
+                exact
+                path="/signup"
+                element={<Signup />}
+                key="route-signup-screen"
+              />
+              <Route exact path="/login" element={<Login />} key="route-login-screen" />
+              <Route
+                exact
+                path="/dashboard"
+                element={<Dashboard />}
+                key="route-dashboard-screen"
+              />
+              <Route
+                exact
+                path="/editprofile"
+                element={<Editprofile />}
+                key="route-dashboard-edit-profile-screen"
+              />
 
-            <Route
-              exact
-              path="/blog/:_id"
-              element={<Blogindividual />}
-              key="route-infividualblog-screen"
-            />
+              <Route
+                exact
+                path="/blog/:_id"
+                element={<Blogindividual />}
+                key="route-infividualblog-screen"
+              />
 
-            <Route
-              exact
-              path="/mypublishedblogs"
-              element={<Allblogswritten />}
-              key="route-Allblogswritten-screen"
-            />
+              <Route
+                exact
+                path="/mypublishedblogs"
+                element={<Allblogswritten />}
+                key="route-Allblogswritten-screen"
+              />
 
-            <Route
-              exact
-              path="/myallblogs"
-              element={<Allprovblogs />}
-              key="route-Allblogswritten-screen"
-            />
+              <Route
+                exact
+                path="/myallblogs"
+                element={<Allprovblogs />}
+                key="route-Allblogswritten-screen"
+              />
 
-            <Route
-              exact
-              path="/likedblogs"
-              element={<Alllikedblogs />}
-              key="route-Alllikedblogs-screen"
-            />
+              <Route
+                exact
+                path="/likedblogs"
+                element={<Alllikedblogs />}
+                key="route-Alllikedblogs-screen"
+              />
 
-            <Route
-              exact
-              path="/techresults"
-              element={<Techresults />}
-              key="route-Techresults-screen"
-            />
+              <Route
+                exact
+                path="/techresults"
+                element={<Techresults />}
+                key="route-Techresults-screen"
+              />
 
-            <Route
-              exact
-              path="/editblog/:blogId"
-              element={<Editblogform />}
-              key="route-EditBlog-screen"
-            />
+              <Route
+                exact
+                path="/editblog/:blogId"
+                element={<Editblogform />}
+                key="route-EditBlog-screen"
+              />
 
-            <Route
-              exact
-              path="/user/:authoruniqueid"
-              element={<Publicprofile />}
-              key="route-PublicProfile-screen"
-            />
+              <Route
+                exact
+                path="/user/:authoruniqueid"
+                element={<Publicprofile />}
+                key="route-PublicProfile-screen"
+              />
 
-            <Route
-              exact
-              path="/forgot password"
-              element={<Forgotpwd />}
-              key="route-Forgot-password-screen"
-            />
+              <Route
+                exact
+                path="/forgot password"
+                element={<Forgotpwd />}
+                key="route-Forgot-password-screen"
+              />
 
-            <Route
-              exact
-              path="/tag/:word"
-              element={<Tagspecificblog />}
-              key="route-Tagspecificblog-screen"
-            />
+              <Route
+                exact
+                path="/tag/:word"
+                element={<Tagspecificblog />}
+                key="route-Tagspecificblog-screen"
+              />
 
-            <Route exact path="/logout" element={<Logout />} />
-
-            <Route path="/blog" element={<BlogRedirect />} />
-
-            <Route path="/blogs" element={<BlogRedirect />} />
-
-            <Route path="/tags" element={<BlogRedirect />} />
-
-            <Route path="/tag" element={<BlogRedirect />} />
-
-            <Route path="/user" element={<UserRedirect />} />
-
-            <Route path="*" element={<NotFound />} />
-          </Routes>
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          )}
         </Scrolling>
         <ScrollToTop />
       </Router>
-      <ToastContainer />
     </>
   );
 }
