@@ -1,6 +1,7 @@
 .Gallery_card {
   max-width: 25vw;
-  /* max-height: 22vw; */
+  max-height: 15rem;
+  overflow: hidden;
   box-shadow: 4px 4px 12px rgba(79, 79, 79, 0.2), -4px -4px 12px rgba(242, 242, 242, 0.25);
   border-radius: 8px;
   margin: 2.5vw;
