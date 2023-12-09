@@ -29,3 +29,10 @@
     height: 15rem;
   }
 }
+
+@media screen and (max-width: 400px) {
+  .Gallery_card {
+    width: 90vw;
+    height: 60vw;
+  }
+}
