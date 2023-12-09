@@ -150,42 +150,53 @@ const Createblog = () => {
     setSubmitting(true);
     setDisablecreate(true);
     axios
-      // .post('http://localhost:2226/createblog', {
-      .post(import.meta.env.VITE_REACT_APP_CREATEBLOG_RENDER, {
-        title,
-        tag,
-        intro,
-        content,
-        writernmae,
-        writerintro,
-        writerpic,
-        timestamp,
-        topicpic,
-        writeremail,
-        authorid,
-      })
+      .post(
+        "http://localhost:3000/createblog",
+        {
+          // .post(import.meta.env.VITE_REACT_APP_CREATEBLOG_RENDER, {
+          title,
+          tag,
+          intro,
+          content,
+          writernmae,
+          writerintro,
+          writerpic,
+          timestamp,
+          topicpic,
+          writeremail,
+          authorid,
+        },
+        {
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+        }
+      )
       .then((response) => {
-        setTitle("");
-        setIntro("");
-        setTag("");
-        setContent("");
-        setWritername("");
-        setWriterintro("");
-        setWriterpic("");
-        setTopicpic("");
-        setWriteremail("");
-        setSubmitting(false);
-        setDisablecreate(false);
-        toast.success("Blog created but publish subject to verification", {
-          position: "top-right",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "dark",
-        });
+        if (response.status === 200) {
+          setTitle("");
+          setIntro("");
+          setTag("");
+          setContent("");
+          setWritername("");
+          setWriterintro("");
+          setWriterpic("");
+          setTopicpic("");
+          setWriteremail("");
+          setSubmitting(false);
+          setDisablecreate(false);
+          toast.success("Blog created but publish subject to verification", {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+          });
+        }
       });
   };
 

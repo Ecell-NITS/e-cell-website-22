@@ -3,6 +3,7 @@ import "./Comments.css";
 import axios from "axios";
 import { useNavigate, useLocation } from "react-router-dom";
 import { toast } from "react-toastify";
+import { Link } from "react-router-dom";
 const Comments = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [profilePicture, setProfilePicture] = useState("");
@@ -296,7 +297,8 @@ const Comments = () => {
 
       {/*  displaying comments*/}
       <p className="total-comments-innutshell">
-        {commentslist[0]?.comments.length} Comments
+        {commentslist[0]?.comments.length}{" "}
+        {commentslist[0]?.comments.length > 1 ? "Comments" : "Comment"}
       </p>
 
       <div className="single-bodycomt-starts">
@@ -306,10 +308,17 @@ const Comments = () => {
             <div key={comment._id} id="indi-comnt-putin">
               <div className="firsthoridivforcmt">
                 <div id="img-of-comt-author">
-                  <img src={comment.commentpic} alt="" />
+                  <Link to={`/user/${comment.authorid}`}>
+                    {" "}
+                    <img src={comment.commentpic} alt="" />
+                  </Link>
                 </div>
-
-                <h2 className="name-of-author-created-comnt">{comment.commentauthor}</h2>
+                <Link to={`/user/${comment.authorid}`}>
+                  {" "}
+                  <h2 className="name-of-author-created-comnt">
+                    {comment.commentauthor}
+                  </h2>
+                </Link>
               </div>
 
               <div className="message-by-author-in-comnt">
