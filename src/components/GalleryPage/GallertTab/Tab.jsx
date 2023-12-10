@@ -18,7 +18,11 @@ const Tab = () => {
     setEvent(e);
   };
 
-  const filterData = Data.filter((item) => {
+  const sortedData = Data.sort((a, b) => b.year.localeCompare(a.year));
+
+  // console.log(sortedData);
+
+  const filterData = sortedData.filter((item) => {
     if (year === "All" && event === "All") {
       return item;
     } else if (year === "All" && event !== "All") {
@@ -31,7 +35,7 @@ const Tab = () => {
   });
 
   // Function to filter the years according to the event dropdown.
-  const filterYear = Data.filter((item) => {
+  const filterYear = sortedData.filter((item) => {
     if (event === "All") {
       return item;
     } else if (item.event === event) {
@@ -42,7 +46,7 @@ const Tab = () => {
   });
 
   // Function to filter the events according to the year dropdown.
-  const filterEvent = Data.filter((item) => {
+  const filterEvent = sortedData.filter((item) => {
     if (year === "All") {
       return item;
     } else if (item.year === year) {

@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from "react";
-import ecell from "../../assets/E-Cell-Logo-White.png";
 import "./Preloader.css";
 
 const Preloader = () => {
   return (
     <div className="preloader">
-      <img src={ecell} className="logo"></img>
+      <img
+        rel="preload"
+        src="https://res.cloudinary.com/dt2zy7sny/image/upload/v1702107626/E-Cell-Logo-White_oqi3mh.png"
+        className="logo"
+      ></img>
       <div className="loader">
         <div className="loading-text">Loading</div>
         <div className="dot1"></div>
