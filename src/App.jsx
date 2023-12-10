@@ -28,6 +28,11 @@ import Editblogform from "./pages/Auth/Dashboard/EditBlog/Editblogform";
 import Publicprofile from "./pages/Auth/Dashboard/Publicprofile";
 import Forgotpwd from "./pages/Auth/Login/Forgotpwd";
 import Tagspecificblog from "./components/Blog/Tagspecificblog";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import BlogRedirect from "./pages/Redirect/BlogRedirect";
+import UserRedirect from "./pages/Redirect/UserRedirect";
+import Logout from "./pages/Auth/Logout/Logout";
 import Preloader from "./components/Loader/Loader";
 import { useState, useEffect } from "react";
 function App() {
@@ -211,12 +216,25 @@ function App() {
                 key="route-Tagspecificblog-screen"
               />
 
+              <Route exact path="/logout" element={<Logout />} />
+
+              <Route path="/blog" element={<BlogRedirect />} />
+
+              <Route path="/blogs" element={<BlogRedirect />} />
+
+              <Route path="/tags" element={<BlogRedirect />} />
+
+              <Route path="/tag" element={<BlogRedirect />} />
+
+              <Route path="/user" element={<UserRedirect />} />
+
               <Route path="*" element={<NotFound />} />
             </Routes>
           )}
         </Scrolling>
         <ScrollToTop />
       </Router>
+      <ToastContainer />
     </>
   );
 }
