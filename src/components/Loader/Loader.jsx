@@ -5,6 +5,7 @@ const Preloader = () => {
   return (
     <div className="preloader">
       <img
+        rel="preload"
         src="https://res.cloudinary.com/dt2zy7sny/image/upload/v1702107626/E-Cell-Logo-White_oqi3mh.png"
         className="logo"
       ></img>
