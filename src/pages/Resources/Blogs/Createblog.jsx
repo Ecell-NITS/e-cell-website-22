@@ -151,9 +151,8 @@ const Createblog = () => {
     setDisablecreate(true);
     axios
       .post(
-        "http://localhost:3000/createblog",
+        import.meta.env.VITE_REACT_APP_CREATEBLOG_RENDER,
         {
-          // .post(import.meta.env.VITE_REACT_APP_CREATEBLOG_RENDER, {
           title,
           tag,
           intro,
