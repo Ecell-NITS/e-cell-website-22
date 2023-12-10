@@ -99,7 +99,8 @@ const Publicprofile = () => {
       } catch (error) {
         if (
           error.response &&
-          error.response.data.error === "Failed to retrieve user details"
+          error.response.data.error === "User not found" &&
+          error.response.status === 404
         ) {
           navigate("/");
           toast.error("No such profile exists", {
