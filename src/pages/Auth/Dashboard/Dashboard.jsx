@@ -49,6 +49,10 @@ const Dashboard = () => {
       .catch((error) => {
         if (error.response.status === 401) {
           navigate("/login");
+        } else if (error.response.data.error === "Invalid token") {
+          localStorage.removeItem("token");
+          toast.error("Session Expired! Please Login Again");
+          navigate("/login");
         } else {
           console.error("Failed to retrieve user details", error);
         }
