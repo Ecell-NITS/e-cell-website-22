@@ -19,6 +19,8 @@ import Ivycap from "./Ivycap";
 import Finlatics from "./Finlatics";
 import LearnTravel from "./LearnTravel";
 import Edtimes from "./Edtimes";
+import Payzaql from "./Payzaql";
+
 const Collaboration = () => {
   const config = {
     rootMargin: "0px 0px 0px 0px",
@@ -43,7 +45,7 @@ const Collaboration = () => {
         observer.unobserve(img);
       });
     };
-  });
+  }, []);
 
   const loadImages = (image) => {
     image.src = image.dataset.src;
@@ -84,6 +86,26 @@ const Collaboration = () => {
                 src=""
                 data-src="https://res.cloudinary.com/dp92qug2f/image/upload/v1685354010/Ecell%20website/edtimes_logo_bhl4ec.webp"
                 alt="Rupay"
+              />
+            </button>
+          </div>
+
+          <div
+            id="tbn-indi-collab-po"
+            className={`Payzaql ${accollab === "Payzaql" ? " njkl021" : ""}`}
+          >
+            <button
+              id="btn-collab-indi-po"
+              onClick={() => {
+                setAcccollab("Payzaql");
+              }}
+            >
+              <img
+                className={`${loaded ? "loaded" : "loading"} ru-collab`}
+                onLoad={() => setIsLoaded(true)}
+                src=""
+                data-src="https://res.cloudinary.com/draptrzrc/image/upload/v1707558984/Payzaql.webp"
+                alt="Payzaql"
               />
             </button>
           </div>
@@ -428,6 +450,7 @@ const Collaboration = () => {
           </button>
         </div>
         {accollab === "Edtimes" && <Edtimes />}
+        {accollab === "Payzaql" && <Payzaql />}
         {accollab === "Rupay" && <Rupay />}
         {accollab === "Unacademy" && <Unacademy />}
         {accollab === "Vedantu" && <Vedantu />}
