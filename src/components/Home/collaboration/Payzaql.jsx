@@ -5,10 +5,10 @@ const Payzaql = () => {
     <div className="payzaql-main">
       <div className="collab-content">
         <p>
-          {" "}
-          Cubelelo is one of India’s leading cubestore. From speed cubing puzzles to
-          twisters and cubing accessories and much more, Cubelelo has it all. We are
-          thrilled to have Cubelelo as our reward partner.
+          Pyzaql is here to support one&apos;s learning journey, making sure it&apos;s
+          easy and tailored to everyone. Integration of EdTech solutions will provide
+          students with a modern and interactive learning experience. We proudly present
+          our educational sponsor, Pyzaql.
         </p>
       </div>
     </div>
