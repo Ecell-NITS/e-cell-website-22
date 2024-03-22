@@ -306,60 +306,90 @@
     "id": 51,
     "year": "2023-2024",
     "event": "Orientation",
-    "imgsrc": "https://res.cloudinary.com/dxiwtrjjl/image/upload/f_auto,q_auto/v1/Orientation%202k23/knrlzbk0timzburscawu"
+    "imgsrc": "https://res.cloudinary.com/sahincloudinary/image/upload/f_auto,q_auto/v1/Orientation%202k23/knrlzbk0timzburscawu"
   },
   {
     "id": 52,
     "year": "2023-2024",
     "event": "Orientation",
-    "imgsrc": "https://res.cloudinary.com/dxiwtrjjl/image/upload/f_auto,q_auto/v1/Orientation%202k23/ebvmc5ltjmt7lnwuhcle"
+    "imgsrc": "https://res.cloudinary.com/sahincloudinary/image/upload/f_auto,q_auto/v1/Orientation%202k23/ebvmc5ltjmt7lnwuhcle"
   },
   {
     "id": 53,
     "year": "2023-2024",
     "event": "Orientation",
-    "imgsrc": "https://res.cloudinary.com/dxiwtrjjl/image/upload/f_auto,q_auto/v1/Orientation%202k23/bbnenfpqkk1rzdxqngxk"
+    "imgsrc": "https://res.cloudinary.com/sahincloudinary/image/upload/f_auto,q_auto/v1/Orientation%202k23/bbnenfpqkk1rzdxqngxk"
   },
   {
     "id": 54,
     "year": "2023-2024",
     "event": "Orientation",
-    "imgsrc": "https://res.cloudinary.com/dxiwtrjjl/image/upload/f_auto,q_auto/v1/Orientation%202k23/a9mq4peyxvnjwxjmtkhr"
+    "imgsrc": "https://res.cloudinary.com/sahincloudinary/image/upload/f_auto,q_auto/v1/Orientation%202k23/a9mq4peyxvnjwxjmtkhr"
   },
   {
     "id": 55,
     "year": "2023-2024",
     "event": "Orientation",
-    "imgsrc": "https://res.cloudinary.com/dxiwtrjjl/image/upload/f_auto,q_auto/v1/Orientation%202k23/bsb2ndioqyr9jxvikdwi"
+    "imgsrc": "https://res.cloudinary.com/sahincloudinary/image/upload/f_auto,q_auto/v1/Orientation%202k23/bsb2ndioqyr9jxvikdwi"
   },
   {
     "id": 56,
     "year": "2023-2024",
     "event": "Orientation",
-    "imgsrc": "https://res.cloudinary.com/dxiwtrjjl/image/upload/v1702025411/Orientation%202k23/q7moqohsjidxlydsnkvu.webp"
+    "imgsrc": "https://res.cloudinary.com/sahincloudinary/image/upload/v1702025411/Orientation%202k23/q7moqohsjidxlydsnkvu.webp"
   },
   {
     "id": 58,
     "year": "2023-2024",
     "event": "Orientation",
-    "imgsrc": "https://res.cloudinary.com/dxiwtrjjl/image/upload/f_auto,q_auto/v1/Orientation%202k23/ai2zbxumqj3advihqgzw"
+    "imgsrc": "https://res.cloudinary.com/sahincloudinary/image/upload/f_auto,q_auto/v1/Orientation%202k23/ai2zbxumqj3advihqgzw"
   },
   {
     "id": 59,
     "year": "2023-2024",
     "event": "Orientation",
-    "imgsrc": "https://res.cloudinary.com/dxiwtrjjl/image/upload/f_auto,q_auto/v1/Orientation%202k23/din8ibxojra45xkzkmrb"
+    "imgsrc": "https://res.cloudinary.com/sahincloudinary/image/upload/f_auto,q_auto/v1/Orientation%202k23/din8ibxojra45xkzkmrb"
   },
   {
     "id": 60,
     "year": "2023-2024",
     "event": "Orientation",
-    "imgsrc": "https://res.cloudinary.com/dxiwtrjjl/image/upload/f_auto,q_auto/v1/Orientation%202k23/oyqnihypn8s1pb61rvhf"
+    "imgsrc": "https://res.cloudinary.com/sahincloudinary/image/upload/f_auto,q_auto/v1/Orientation%202k23/oyqnihypn8s1pb61rvhf"
   },
   {
     "id": 61,
     "year": "2023-2024",
-    "event": "Orientation",
-    "imgsrc": "https://res.cloudinary.com/dxiwtrjjl/image/upload/f_auto,q_auto/v1/Orientation%202k23/zcn9w8leain1wfjm57nv"
+    "event": "Empressario",
+    "imgsrc": "https://res.cloudinary.com/sahincloudinary/image/upload/f_auto,q_auto/v1/Ecell/Events/empresario/wbkxymi0kisgsnesqeqz"
+  },
+  {
+    "id": 62,
+    "year": "2023-2024",
+    "event": "Empressario",
+    "imgsrc": "https://res.cloudinary.com/sahincloudinary/image/upload/f_auto,q_auto/v1/Ecell/Events/empresario/Emp1"
+  },
+  {
+    "id": 63,
+    "year": "2023-2024",
+    "event": "Empressario",
+    "imgsrc": "https://res.cloudinary.com/sahincloudinary/image/upload/f_auto,q_auto/v1/Ecell/Events/empresario/Emp2"
+  },
+  {
+    "id": 64,
+    "year": "2023-2024",
+    "event": "Empressario",
+    "imgsrc": "https://res.cloudinary.com/sahincloudinary/image/upload/f_auto,q_auto/v1/Ecell/Events/empresario/Emp13"
+  },
+  {
+    "id": 65,
+    "year": "2023-2024",
+    "event": "Empressario",
+    "imgsrc": "https://res.cloudinary.com/sahincloudinary/image/upload/v1711132568/Ecell/Events/empresario/Emp4.webp"
+  },
+  {
+    "id": 6,
+    "year": "2023-2024",
+    "event": "Empressario",
+    "imgsrc": "https://res.cloudinary.com/sahincloudinary/image/upload/v1711132375/Ecell/Events/empresario/Emp3.webp"
   }
 ]
