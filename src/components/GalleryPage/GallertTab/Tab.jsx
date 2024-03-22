@@ -1,14 +1,28 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./GalleryTab.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import Data from "../../../Data/GalleryTab.json";
 import GalleryCard from "../GalleryCard/GalleryCard";
+import Modal from "../GalleryModal/Modal.jsx";
 
 const Tab = () => {
   const [year, setYear] = useState("All");
   const [event, setEvent] = useState("All");
+  const [isModalVissible, setIsModalVissible] = useState(false);
+  const [target, setTarget] = useState();
+
+  useEffect(() => {
+    if (isModalVissible) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+    return () => {
+      document.body.style.overflow = "auto"; // Reset overflow when component unmounts
+    };
+  }, [isModalVissible]);
 
   const handleClick = (e) => {
     setYear(e);
@@ -82,11 +96,28 @@ const Tab = () => {
           </div>
         </div>
       </div>
-      <div className="GalleryCards">
+      <div
+        className="GalleryCards"
+        style={{ filter: isModalVissible ? "blur(5px)" : "blur(0px)" }}
+      >
         {filterData.map((item) => {
-          return <GalleryCard key={item.id} id={item.id} imgsrc={item.imgsrc} />;
+          return (
+            <GalleryCard
+              key={item.id}
+              id={item.id}
+              imgsrc={item.imgsrc}
+              setTarget={setTarget}
+              setIsModalVissible={setIsModalVissible}
+            />
+          );
         })}
       </div>
+
+      <Modal
+        target={target}
+        isModalVissible={isModalVissible}
+        setIsModalVissible={setIsModalVissible}
+      />
     </div>
   );
 };

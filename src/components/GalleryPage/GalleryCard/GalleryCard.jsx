@@ -6,6 +6,8 @@ const config = {
 };
 function GalleryCard(props) {
   const [loaded, setIsLoaded] = useState(false);
+  const setTarget = props.setTarget;
+  const setIsModalVissible = props.setIsModalVissible;
 
   useEffect(() => {
     let observer = new window.IntersectionObserver(function (entries, self) {
@@ -43,6 +45,10 @@ function GalleryCard(props) {
           alt="img"
           className={`${loaded ? "loaded" : "loading"} card-img-top`}
           onLoad={() => setIsLoaded(true)}
+          onClick={(e) => {
+            setTarget(e.target);
+            setIsModalVissible(true);
+          }}
         />
       </div>
     </div>
