@@ -6,11 +6,19 @@
   width: 25rem;
   min-height: 22vw;
   max-height: fit-content;
-  box-shadow: 4px 4px 12px rgba(79, 79, 79, 0.2), -4px -4px 12px rgba(242, 242, 242, 0.25);
+  /* box-shadow: 4px 4px 12px rgba(79, 79, 79, 0.2), -4px -4px 12px rgba(242, 242, 242, 0.25); */
   border-radius: 8px;
   text-align: center;
   user-select: none;
+
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
+
+.about_card_:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
 .image_style {
   width: 80px;
   display: flex;
