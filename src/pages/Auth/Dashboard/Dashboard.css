@@ -37,8 +37,17 @@
 .accountusername {
   font-weight: 600;
   font-size: 3vw;
+  width: 50%;
 }
-
+.profile-buttons {
+  display: flex;
+  gap: 1vw;
+  flex-wrap: wrap;
+}
+#admin-button {
+  color: #224259;
+  border-color: #224259;
+}
 .firstseconndchild {
   display: flex;
   justify-content: space-between;

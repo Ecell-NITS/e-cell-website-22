@@ -53,6 +53,7 @@
     "lint-staged": "^13.0.3",
     "prettier": "^2.7.1",
     "sass": "^1.56.1",
+    "scss": "^0.2.4",
     "simple-git-hooks": "^2.8.1",
     "vite": "^4.4.5"
   },
