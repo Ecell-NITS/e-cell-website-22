@@ -1,0 +1,24 @@
+.offlinebanner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ff0000;
+    color: #ffffff;
+    padding: 0.625rem;
+    text-align: center;
+    z-index: 999;
+  }
+  
+  .onlinebanner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #34d834;
+    color: #ffffff;
+    padding: 0.625rem;
+    text-align: center;
+    z-index: 999;
+  }
+  
