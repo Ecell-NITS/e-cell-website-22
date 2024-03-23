@@ -178,7 +178,10 @@
   }
 
   .accountusername {
-    font-size: 6vw;
+    font-weight: 600;
+    font-size: 5vw;
+    width: 45vw;
+    text-wrap: wrap;
   }
 
   .editkryieprof {
