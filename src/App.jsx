@@ -35,6 +35,7 @@ import UserRedirect from "./pages/Redirect/UserRedirect";
 import Logout from "./pages/Auth/Logout/Logout";
 import Preloader from "./components/Loader/Loader";
 import { useState, useEffect } from "react";
+import ConnectionDropBanner from "./components/ConnectionDropBanner/ConnectionDropBanner";
 function App() {
   const [loading, setLoading] = useState(true);
 
@@ -234,6 +235,7 @@ function App() {
         </Scrolling>
         <ScrollToTop />
       </Router>
+      <ConnectionDropBanner />
       <ToastContainer />
     </>
   );
