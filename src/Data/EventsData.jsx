@@ -84,6 +84,16 @@ export const upcomingevnt = [
 export const pastents = [
   {
     id: 1,
+    img: "https://res.cloudinary.com/sahincloudinary/image/upload/f_auto,q_auto/v1/Ecell/Events/empresario/Empresario",
+    title: "EMPRESARIO",
+    btn1: "Empresario",
+    btn2: "Entrepreneurship",
+    date: " 02-04 February 2024, Hybrid & NIT Silchar",
+    content: `“EMPRESARIO” the entrepreneurship module under Tecnoesis 24 comes up with events where true aficionados showcase their management finesse. This unparalleled module encompasses a spectrum of engaging events like, “Bech ke Dikhao” , “Pitch Please” , “If I were the CEO” ,
+      “Plantastic” and many more to scale up your entrepreneurial mind.`,
+  },
+  {
+    id: 1,
     img: "https://res.cloudinary.com/dp92qug2f/image/upload/v1680505883/Ecell%20website/events/international_symposium_final_yjhtst.webp",
     title: "International Symposium",
     btn1: "Research",
@@ -226,108 +236,103 @@ export const alleventsrjn = [
       "Porem ipsum dolor sit amet, consectetur adipiscing elit.Porem ipsum dolor sit amet, consectetur adipiscing elit.Porem ipsum dolor sit amet, . Porem ipsum  sit ipsum......",
   },
 ];
+
 export const alleventorientation = [
   {
     id: 1,
-    img: "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1680378324/orientation%20and%20empressario/orientation_zy0eeu.webp",
-    title: "Orientation",
+    img: "https://res.cloudinary.com/sahincloudinary/image/upload/f_auto,q_auto/v1/Ecell/Events/orientation/Engenius",
+    title: "EnGenius",
     btn1: "Orientation",
-    btn2: "Orientation",
+    btn2: "EnGenius",
     date: "4th December 2022, New Gallery, NIT Silchar",
     content:
       "  An interactive and fun event organized exclusively for the 1st year batch to give them a taste of how entrepreneurship works.",
   },
   {
     id: 2,
-    img: "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1680378323/orientation%20and%20empressario/pitchYour_gjufex.webp",
-    title: "Pitch your innovation",
+    img: "https://res.cloudinary.com/sahincloudinary/image/upload/f_auto,q_auto/v1/Ecell/Events/orientation/Pitchboxing",
+    title: "Pitchboxing",
     btn1: "Pitching",
-    date: " 3rd December 2022, Start-Up Center, NIT Silchar",
-    btn2: "Orientation",
-    content:
-      "As part of the orientation program, a fun yet competitive pitching event was organized. It was conducted in two rounds and was organized to test the participants’ creativity and will to innovate and create.",
+    date: " 3rd November 2023, Start-Up Center, NIT Silchar",
+    btn2: "EnGenius",
+    content: `Introducing "𝐏𝐢𝐭𝐜𝐡𝐛𝐨𝐱𝐢𝐧𝐠" - 𝙩𝙝𝙚 𝙪𝙡𝙩𝙞𝙢𝙖𝙩𝙚 𝙧𝙤𝙖𝙨𝙩 𝙗𝙖𝙩𝙩𝙡𝙚 where participants will take friendly digs at each other's brand with some sick burns and leave the crowd awestruck.`,
   },
   {
     id: 3,
-    img: "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1680378533/orientation%20and%20empressario/skeptics_ih9h1p.webp",
-    title: "Skeptics",
-    btn1: "Debate",
-    btn2: "Orientation",
-    date: "4th December 2022, Start-Up Center, NIT Silchar",
-    content:
-      " Skeptics was a debate competition that was conducted under the orientation program. This two-round competition saw a huge number of participants.",
+    img: "https://res.cloudinary.com/sahincloudinary/image/upload/f_auto,q_auto/v1/Ecell/Events/orientation/Bech",
+    title: "Bech ke Dikhao",
+    btn1: "Marketing",
+    btn2: "EnGenius",
+    date: "5th November 2023, New Gallery, NIT Silchar",
+    content: `Now, it's your chance to showcase your creativity and persuasive prowess. In "𝐁𝐞𝐜𝐡 𝐊𝐞 𝐃𝐢𝐤𝐡𝐚𝐨" humour, creativity, and courage are your best allies as you pitch your mystery product. Do you have what it takes to be the ultimate salesperson? Put your skills to the test in this thrilling event at EnGenius 2023!`,
   },
   {
     id: 4,
-    img: "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1680378322/orientation%20and%20empressario/bechke_r5xgov.webp",
-    title: "Bech ke Dikhao",
-    btn1: "Marketing",
+    img: "https://res.cloudinary.com/sahincloudinary/image/upload/f_auto,q_auto/v1/Ecell/Events/orientation/Adovation",
+    title: "Adovation",
+    btn1: "Creativity",
+    btn2: "EnGenius",
+    date: "1st-4th November 2023,Online NIT Silchar",
+    content: `Presenting you Adovation- Bridging Advertising and Innovation. Join us for this groundbreaking event that brings together the worlds of advertising and innovation like never before. Adovation Unleashed is a one-of-a-kind gathering that explores the exciting intersection of creativity, technology, and marketing. Discover the latest trends, strategies, and cutting-edge solutions that are shaping the future of advertising.`,
+  },
+  {
+    id: 5,
+    img: "https://res.cloudinary.com/sahincloudinary/image/upload/f_auto,q_auto/v1/Ecell/Events/orientation/Bech",
+    title: "Shark Tank",
+    btn1: "Simulation",
     btn2: "Orientation",
-    date: "4th December 2022, New Gallery, NIT Silchar",
-    content:
-      "This was the most fun event organized under Engenius. Participants' selling skills were put to test with a pinch of fun to it. This was the final competition of the event.",
+    date: "4th November 2023, Startup Centre, NIT Silchar",
+    content: `In the enchanting realm of Shark Tank, we promise an evening filled with electrifying excitement. Imagine stepping onto a brilliantly lit red carpet, making your grand entrance through an awe-inspiring shark-jaw arch, setting the stage for an event that redefines what's possible.`,
   },
 ];
+
 export const alleventempresario = [
   {
     id: 1,
-    img: "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1680378812/orientation%20and%20empressario/bechkeEmpre_znbep1.webp",
+    img: "https://res.cloudinary.com/sahincloudinary/image/upload/f_auto,q_auto/v1/Ecell/Events/empresario/Bech%20Ke%20Dikhao",
     title: "Bech ke dikhao",
     btn1: "Marketing",
     btn2: "Empressario",
-    date: "21st October 2022, New Gallery, NIT Silchar",
+    date: "4th February 2024, New Gallery, NIT Silchar",
     content:
       " A two-round competition that tested both the selling and bidding talents of the participants. ",
   },
   {
     id: 2,
-    img: "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1680378322/orientation%20and%20empressario/pitchEmpre_cjee1u.webp",
-    title: "Pitch Your Way",
-    btn1: "Pitching",
-    date: " 22nd October 2022, Start-Up Center, NIT Silchar",
+    img: "https://res.cloudinary.com/sahincloudinary/image/upload/f_auto,q_auto/v1/Ecell/Events/empresario/MWM",
+    title: "Marketing with Memes",
+    btn1: "Fun",
+    date: "24th Jan - 1st March 2024, Online ",
     btn2: "Empressario",
-    content:
-      "This was a pitching event for all the Start-up enthusiasts to introduce their products and attract potential investors and audiences.",
+    content: `Welcome to the future of news exchange – where laughter meets learning. Introducing Empresario’s Meme Marketing Extravaganza. Unleash your creativity, crafting hilarious memes on entrepreneurship, cutting-edge marketing skills and brands. `,
   },
   {
     id: 3,
-    img: "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1680378323/orientation%20and%20empressario/stockEmpre_vmbdfc.webp",
-    title: "Stock Market Simulation",
-    btn1: "Trading",
+    img: "https://res.cloudinary.com/sahincloudinary/image/upload/f_auto,q_auto/v1/Ecell/Events/empresario/Case%20Study",
+    title: "Case-Study",
+    btn1: "Research",
     btn2: "Empressario",
-    date: "23rd October 2022, Online, NIT Silchar",
-    content:
-      " This was an online event conducted to check the participants’ instincts and knowledge with shares while giving them firsthand experience of how the market operates.",
+    date: " 2nd February 2024,Startup centre, NIT Silchar",
+    content: `Embark on a journey of innovation and strategic thinking as Tecnoesis, under its Empresario module, proudly presents the Case Study Competition 2024—an unparalleled opportunity to showcase your business acumen and problem-solving prowess.`,
   },
   {
     id: 4,
-    img: "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1680378322/orientation%20and%20empressario/brandothon_edgjtr.webp",
-    title: "Brandothon",
-    btn1: "Marketing",
+    img: "https://res.cloudinary.com/sahincloudinary/image/upload/f_auto,q_auto/v1/Ecell/Events/empresario/CEO%20Dating",
+    title: "CEO Dating",
+    btn1: "Business",
     btn2: "Empressario",
-    date: "18th October 2022, Online, NIT Silchar",
-    content:
-      " This was a branding event conducted for all the creative marketers out there. This two-round competition consisted of submitting a PPT followed by making an advertisement for the product.",
+    date: "3rd Febraury 2024,Startup centre, NIT Silchar",
+    content: `Introducing Empresario's,"CEO-Dating".A speed-dating, but instead of finding love, you're on the hunt for your business partner. No more convincing sharks, instead connect with fellow innovators who get your startup's vibe!`,
   },
   {
     id: 5,
-    img: "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1680378322/orientation%20and%20empressario/ceo_wxmzzj.webp",
-    title: "If I Were The CEO",
-    btn1: "Business",
-    btn2: "Empressario",
-    date: "21st October 2022, Start-Up Center, NIT Silchar",
-    content:
-      "This event was an opportunity to show off your leadership skills. The concept was simple: What would you do if you were the CEO?",
-  },
-  {
-    id: 6,
-    img: "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1680378323/orientation%20and%20empressario/scavenger_jp4vhc.webp",
-    title: "Scavenger Hunt",
+    img: "https://res.cloudinary.com/sahincloudinary/image/upload/f_auto,q_auto/v1/Ecell/Events/empresario/Treasure%20Hunt",
+    title: "Treasure Hunt",
     btn1: "Games",
     btn2: "Empressario",
-    date: "22nd October 2022, New Gallery, NIT Silchar",
-    content:
-      "To make this entrepreneurial module a little fun, a treasure hunt was organized. This two-round event saw a huge number of participation from the students.",
+    date: "2nd & 4th February 2024, NIT Silchar",
+    content: `Are you ready for the quirkiest campus escapade with the Empresario's Treasure Hunt at Tecnoesis! 
+     Embark on an offline adventure where easter eggs, like hidden gems, await discovery in strategic corners of our campus. Armed with clues, your team of intrepid participants will decode the mysteries, egg by egg, until the ultimate treasure is revealed.`,
   },
 ];
 
