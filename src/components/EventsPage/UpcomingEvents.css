@@ -88,12 +88,19 @@
   border: none;
   margin: 0.2vw;
 }
-
+.abt-content-indi-evnt {
+  overflow: auto;
+  height: 15%;
+}
+.abt-content-indi-evnt::-webkit-scrollbar {
+  width: 4px;
+}
 .abt-content-indi-evnt h3 {
   font-size: 1.3vw;
   color: #505050;
   margin-bottom: 0;
   font-weight: 400;
+  overflow: auto;
 }
 
 @media only screen and (min-width: 660px) {
