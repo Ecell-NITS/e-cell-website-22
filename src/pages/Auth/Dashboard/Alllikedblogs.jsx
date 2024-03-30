@@ -22,7 +22,6 @@ const Alllikedblogs = () => {
     const fetchLikedBlogs = async () => {
       try {
         setFetching(true);
-        // const response = await axios.get('http://localhost:2226/api/likedblogs', {
         const response = await axios.get(
           `${import.meta.env.VITE_REACT_APP_APIMAIN}/api/likedblogs`,
           {

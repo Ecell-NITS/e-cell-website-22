@@ -22,10 +22,12 @@ const Logout = () => {
     }
 
     try {
-      axios.get(import.meta.env.VITE_REACT_APP_DASHBOARD, config).then((res) => {
-        const { name, userimg } = res.data;
-        setUser({ name, userimg });
-      });
+      axios
+        .get(`${import.meta.env.VITE_REACT_APP_APIMAIN}/dashboard`, config)
+        .then((res) => {
+          const { name, userimg } = res.data;
+          setUser({ name, userimg });
+        });
     } catch (err) {
       console.error(err);
     }

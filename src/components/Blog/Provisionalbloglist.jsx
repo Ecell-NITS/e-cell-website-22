@@ -21,8 +21,9 @@ const Provisionalbloglist = () => {
     setDisablepublish(true);
     setPublishing(true);
     try {
-      await axios.post(import.meta.env.VITE_REACT_APP_ACCEPTEDBLOGS_RENDER, { blogId });
-      // await axios.post('http://localhost:2226/acceptedblogs', { blogId });
+      await axios.post(`${import.meta.env.VITE_REACT_APP_APIMAIN}/acceptedblogs`, {
+        blogId,
+      });
       toast.success("Blog published successfully", {
         position: "top-right",
         autoClose: 5000,
@@ -46,9 +47,9 @@ const Provisionalbloglist = () => {
       try {
         setSortingMessage(` ${sortingOrder} blogs coming...`);
         setIsFetching(true);
-
-        // const response = await axios.get('http://localhost:2226/getblogs');
-        const response = await axios.get(import.meta.env.VITE_REACT_APP_FETCHBLOG_RENDER);
+        const response = await axios.get(
+          `${import.meta.env.VITE_REACT_APP_APIMAIN}/getblogs`
+        );
         const sortedBlogs = response.data.sort((a, b) => {
           if (sortingOrder === "latest") {
             return new Date(b.timestamp) - new Date(a.timestamp);
@@ -69,7 +70,7 @@ const Provisionalbloglist = () => {
     const fetchPublishedBlogs = async () => {
       try {
         const response = await axios.get(
-          import.meta.env.VITE_REACT_APP_ACCEPTEDBLOGS_RENDER
+          `${import.meta.env.VITE_REACT_APP_APIMAIN}/acceptedblogs`
         );
         const publishedBlogIds = response.data.map((blog) => blog._id);
         setPublishedBlogIds(publishedBlogIds);

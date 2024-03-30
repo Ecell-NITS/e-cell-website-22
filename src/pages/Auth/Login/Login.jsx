@@ -42,9 +42,8 @@ const Login = () => {
 
     setDisablelogin(true);
     setLoggingin(true);
-    // axios.post('http://localhost:2226/login',
     axios
-      .post(import.meta.env.VITE_REACT_APP_LOGIN, { email, password })
+      .post(`${import.meta.env.VITE_REACT_APP_APIMAIN}/login`, { email, password })
       .then((response) => {
         const token = response.data.token;
         localStorage.setItem("token", token);

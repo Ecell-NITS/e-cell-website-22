@@ -33,9 +33,8 @@ const Dashboard = () => {
       },
     };
 
-    // axios.get('http://localhost:2226/dashboard',
     axios
-      .get(import.meta.env.VITE_REACT_APP_DASHBOARD, config)
+      .get(`${import.meta.env.VITE_REACT_APP_APIMAIN}/dashboard`, config)
       .then((response) => {
         const { name, email, userimg, facebook, github, linkedin, instagram } =
           response.data;
