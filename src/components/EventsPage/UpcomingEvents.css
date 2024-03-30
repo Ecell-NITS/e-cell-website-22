@@ -93,7 +93,7 @@
   height: 15%;
 }
 .abt-content-indi-evnt::-webkit-scrollbar {
-  width: 4px;
+  width: 0px;
 }
 .abt-content-indi-evnt h3 {
   font-size: 1.3vw;
