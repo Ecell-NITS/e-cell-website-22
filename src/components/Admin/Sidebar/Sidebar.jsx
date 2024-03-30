@@ -7,14 +7,16 @@ import { useState } from "react";
 
 const SidebarAdmin = () => {
   const navigate = useNavigate();
-  const handleClient = () => {
-    // window.location.href = "/dashboard";
-    navigate("/dashboard");
-  };
   const [menu, setMenu] = useState(false);
+  const [superadmin, setSuperadmin] = useState(true);
+
   const handleMenu = () => {
     setMenu(!menu);
   };
+  const handleClient = () => {
+    navigate("/dashboard");
+  };
+
   return (
     <div className="">
       <div className={`sidebar-admin ${!menu ? "" : "active"}`}>
@@ -30,7 +32,7 @@ const SidebarAdmin = () => {
           <NavLink to="/admin/add-events">Add Events</NavLink>
           <NavLink to="/admin/blogs">Blogs</NavLink>
           <NavLink to="/admin/add-blogs">Add Blogs</NavLink>
-          <NavLink to="/admin/users">Users</NavLink>
+          {superadmin && <NavLink to="/admin/users">Users</NavLink>}
         </div>
         <button onClick={handleClient}>Client Site</button>
         <div className="menu"></div>

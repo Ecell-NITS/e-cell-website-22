@@ -1,0 +1,23 @@
+[
+    {
+        "id":1,
+        "name":"John",
+        "message":"Hello lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestieHello lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestieHello lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestieHello lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestieHello lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, ultricies nunc. Nulla facilisi",
+        "email":"jhon@mail",
+        "read":false
+    },
+    {
+        "id":2,
+        "name":"Sahin",
+        "message":"Testing",
+        "email":"sahin@mail",
+        "read":false
+    },
+    {
+        "id":3,
+        "name":"Fucker 45",
+        "message":"Hello lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestieHello lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestieHello lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestieHello lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestieHello lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, ultricies nunc. Nulla facilisi",
+        "email":"fucker@mail",
+        "read":true
+    }
+]

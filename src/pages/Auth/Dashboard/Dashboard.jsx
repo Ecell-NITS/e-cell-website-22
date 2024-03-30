@@ -14,6 +14,7 @@ import { toast } from "react-toastify";
 const Dashboard = () => {
   const navigate = useNavigate();
   const [user, setUser] = useState({});
+  const [admin, setAdmin] = useState(true);
   const [editedbio, setEditedbio] = useState("");
   const [editedfb, setEditedfb] = useState("");
   const [editedig, setEditedig] = useState("");
@@ -37,7 +38,7 @@ const Dashboard = () => {
     axios
       .get(import.meta.env.VITE_REACT_APP_DASHBOARD, config)
       .then((response) => {
-        const { name, email, userimg, facebook, github, linkedin, instagram } =
+        const { name, email, userimg, facebook, github, linkedin, instagram, role } =
           response.data;
         setUser({ name, email, userimg, facebook, github, linkedin, instagram });
         setEditedbio(response.data.bio);
@@ -45,6 +46,7 @@ const Dashboard = () => {
         setEditedig(response.data.instagram);
         setEditedGithub(response.data.github);
         setEditedLinkedin(response.data.linkedin);
+        // setAdmin(role === "admin" || role === "superadmin");
       })
       .catch((error) => {
         if (error.response.status === 401) {
@@ -214,13 +216,15 @@ const Dashboard = () => {
                 >
                   Edit Profile
                 </button>
-                <button
-                  onClick={handleAdminPanel}
-                  className="editkryieprof "
-                  id="admin-button"
-                >
-                  Admin Panel
-                </button>
+                {admin && (
+                  <button
+                    onClick={handleAdminPanel}
+                    className="editkryieprof "
+                    id="admin-button"
+                  >
+                    Admin Panel
+                  </button>
+                )}
                 <button onClick={ButtonSignout} className="editkryieprof">
                   Sign Out
                 </button>
