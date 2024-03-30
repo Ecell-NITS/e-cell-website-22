@@ -33,7 +33,6 @@ const Newsletter = () => {
     setLoggingin(true);
     axios
       .post(`${import.meta.env.VITE_REACT_APP_APIMAIN}/getnewsletters`, {
-        // axios.post("http://localhost:2226/getnewsletters", {
         password,
       })
       .then((response) => {

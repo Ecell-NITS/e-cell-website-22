@@ -30,11 +30,14 @@ const Comments = () => {
   useEffect(() => {
     const fetchUserProfile = async () => {
       try {
-        const response = await axios.get(import.meta.env.VITE_REACT_APP_FETCHPROFILE, {
-          headers: {
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
-          },
-        });
+        const response = await axios.get(
+          `${import.meta.env.VITE_REACT_APP_APIMAIN}/fetchprofile`,
+          {
+            headers: {
+              Authorization: `Bearer ${localStorage.getItem("token")}`,
+            },
+          }
+        );
         setProfilePicture(response.data.userimg);
         setCommentpic(response.data.userimg);
         setName(response.data.name);
@@ -67,7 +70,7 @@ const Comments = () => {
     setSubmit(true);
     try {
       const response = await axios.get(
-        import.meta.env.VITE_REACT_APP_ACCEPTEDBLOGS_RENDER
+        `${import.meta.env.VITE_REACT_APP_APIMAIN}/acceptedblogs`
       );
       const publishedBlogIds = response.data.map((blog) => blog._id);
       // console.log(publishedBlogIds)
@@ -97,7 +100,6 @@ const Comments = () => {
     setSubmit(true);
     try {
       const response = await axios.post(
-        // `http://localhost:2226/api/comment/${postId}`,
         `${import.meta.env.VITE_REACT_APP_APIMAIN}/api/comment/${postId}`,
         { text: comment, commentauthor: commentauthor, commentpic: commentpic },
         {
@@ -157,7 +159,6 @@ const Comments = () => {
   useEffect(() => {
     const fetchComments = async () => {
       try {
-        // const response = await axios.get(`http://localhost:2226/api/comment/${postId}`, {
         const response = await axios.get(
           `${import.meta.env.VITE_REACT_APP_APIMAIN}/api/comment/${postId}`,
           {

@@ -84,8 +84,6 @@ const Signup = () => {
     setDisablebtn(true);
     try {
       setVerifyotp(true);
-      // const response = await axios.post(import.meta.env.VITE_REACT_APP_RECRUITMENT_VERIFYOTP, {
-      // const response = await axios.post("http://localhost:2226/verify-otp", {
       const response = await axios.post(
         `${import.meta.env.VITE_REACT_APP_APIMAIN}/verify-otp`,
         {
@@ -128,9 +126,8 @@ const Signup = () => {
     }
     setDisablebtn(true);
     setSigningup(true);
-    // axios.post('http://localhost:2226/signup',
     axios
-      .post(import.meta.env.VITE_REACT_APP_SIGNUP, {
+      .post(`${import.meta.env.VITE_REACT_APP_APIMAIN}/signup`, {
         name,
         email,
         password,
@@ -246,7 +243,6 @@ const Signup = () => {
       setDisablesendotp(true);
       setOtpgoing(true);
       const response = await axios.post(
-        // "http://localhost:2226/send-otp",
         `${import.meta.env.VITE_REACT_APP_APIMAIN}/send-otp`,
         {
           email,

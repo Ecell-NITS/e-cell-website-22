@@ -40,8 +40,7 @@ const Createblog = () => {
     } else {
       // Fetch user data and populate the form fields
       axios
-        .get(import.meta.env.VITE_REACT_APP_FETCHPROFILE, {
-          // .get('http://localhost:2226/fetchprofile', {
+        .get(`${import.meta.env.VITE_REACT_APP_APIMAIN}/fetchprofile`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -71,30 +70,32 @@ const Createblog = () => {
     };
 
     try {
-      axios.get(import.meta.env.VITE_REACT_APP_DASHBOARD, config).then((res) => {
-        const { facebook, github, linkedin, instagram } = res.data;
-        setSocialMedia({ facebook, github, linkedin, instagram });
-        if (
-          facebook === undefined &&
-          github === undefined &&
-          linkedin === undefined &&
-          instagram === undefined
-        ) {
-          toast.error("Update your profile to contain atleast 1 social media profile", {
-            position: "top-right",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "dark",
-          });
-          navigate("/editprofile");
-        } else {
-          console.log("everything is fine");
-        }
-      });
+      axios
+        .get(`${import.meta.env.VITE_REACT_APP_APIMAIN}/dashboard`, config)
+        .then((res) => {
+          const { facebook, github, linkedin, instagram } = res.data;
+          setSocialMedia({ facebook, github, linkedin, instagram });
+          if (
+            facebook === undefined &&
+            github === undefined &&
+            linkedin === undefined &&
+            instagram === undefined
+          ) {
+            toast.error("Update your profile to contain atleast 1 social media profile", {
+              position: "top-right",
+              autoClose: 5000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "dark",
+            });
+            navigate("/editprofile");
+          } else {
+            console.log("everything is fine");
+          }
+        });
     } catch (err) {
       console.error(err);
     }
@@ -151,7 +152,7 @@ const Createblog = () => {
     setDisablecreate(true);
     axios
       .post(
-        import.meta.env.VITE_REACT_APP_CREATEBLOG_RENDER,
+        `${import.meta.env.VITE_REACT_APP_APIMAIN}/createblog`,
         {
           title,
           tag,

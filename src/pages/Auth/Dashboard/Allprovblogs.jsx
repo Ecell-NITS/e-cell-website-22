@@ -25,8 +25,7 @@ const Allprovblogs = () => {
     };
     setFetching(true);
     axios
-      .get(import.meta.env.VITE_REACT_APP_ALLPROVBLOGS, config)
-      // .get('http://localhost:2226/myprovisionalblogs', config)
+      .get(`${import.meta.env.VITE_REACT_APP_APIMAIN}/myprovisionalblogs`, config)
       .then((response) => {
         setBlogs(response.data.blogs);
         setFetching(false);

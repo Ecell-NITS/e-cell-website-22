@@ -32,11 +32,14 @@ const Navbar = () => {
   useEffect(() => {
     const fetchUserProfile = async () => {
       try {
-        const response = await axios.get(import.meta.env.VITE_REACT_APP_FETCHPROFILE, {
-          headers: {
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
-          },
-        });
+        const response = await axios.get(
+          `${import.meta.env.VITE_REACT_APP_APIMAIN}/fetchprofile`,
+          {
+            headers: {
+              Authorization: `Bearer ${localStorage.getItem("token")}`,
+            },
+          }
+        );
         setProfilePicture(response.data.userimg);
         // console.log(response.data.userimg)
         setIsLoggedIn(true);
