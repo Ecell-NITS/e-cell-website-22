@@ -39,9 +39,8 @@
         background-color: #2a5368;
       }
     }
-    @media screen and (max-width: 768px){
-      font-size:3vw;
-      
+    @media screen and (max-width: 768px) {
+      font-size: 3vw;
     }
   }
   button {
@@ -59,10 +58,10 @@
   // @media screen and (max-width: 768px) {
   //   display: none;
   //   width: 100vw;
-    
+
   // }
 }
-.menu{
+.menu {
   position: fixed;
   color: white;
   right: 1rem;
@@ -81,5 +80,4 @@
   .active {
     width: 100vw;
   }
-  
 }
