@@ -47,12 +47,7 @@ const Forgotpwd = () => {
     setDisable(true);
     setSendingotp(true);
     axios
-      .post(
-        `${import.meta.env.VITE_REACT_APP_APIMAIN}/forgotpwd`,
-        // axios.post('http://localhost:2226/forgotpwd',
-
-        { email }
-      )
+      .post(`${import.meta.env.VITE_REACT_APP_APIMAIN}/forgotpwd`, { email })
       .then((response) => {
         // setMessage(`Email with the otp sent to ${email}.`);
         toast.success(`Email with the otp sent to ${email}`, {
@@ -110,7 +105,6 @@ const Forgotpwd = () => {
     e.preventDefault();
     setDisableverify(true);
     try {
-      // const response = await axios.post("http://localhost:2226/verifyotpresetpwd", {
       const response = await axios.post(
         `${import.meta.env.VITE_REACT_APP_APIMAIN}/verifyotpresetpwd`,
         {
@@ -170,7 +164,6 @@ const Forgotpwd = () => {
     e.preventDefault();
     setDisablepwdchanging(true);
     try {
-      // await axios.put("http://localhost:2226/changingpwd", { email, newpwd0, confirmnewpwd0 })
       await axios
         .put(`${import.meta.env.VITE_REACT_APP_APIMAIN}/changingpwd`, {
           email,

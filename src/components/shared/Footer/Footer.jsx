@@ -59,8 +59,7 @@ const Footer = () => {
     setCheckingemail(true);
     try {
       const response = await axios.post(
-        import.meta.env.VITE_REACT_APP_AXIOSPOST_CHECKEMAIL_RENDER,
-        // "http://localhost:3001/check-email",
+        `${import.meta.env.VITE_REACT_APP_APIMAIN}/check-email`,
         {
           email: email,
         }
@@ -100,8 +99,7 @@ const Footer = () => {
 
     setDisablesend(true);
     axios
-      .post(import.meta.env.VITE_REACT_APP_AXIOSPOST_POSTMAIN_RENDER, {
-        // .post('http://localhost:3001/createUser', {
+      .post(`${import.meta.env.VITE_REACT_APP_APIMAIN}/createUser`, {
         email,
       })
       .then((response) => {

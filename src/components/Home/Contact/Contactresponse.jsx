@@ -32,7 +32,6 @@ const Contactresponse = () => {
     setLoggingin(true);
     axios
       .post(`${import.meta.env.VITE_REACT_APP_APIMAIN}/getUsers`, {
-        // axios.post("http://localhost:2226/getUsers", {
         password,
       })
       .then((response) => {

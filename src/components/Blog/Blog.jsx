@@ -83,10 +83,8 @@ const Blog = () => {
         setSortingMessage(` ${sortingOrder} blogs coming...`);
         setIsFetching(true);
         const response = await axios.get(
-          import.meta.env.VITE_REACT_APP_ACCEPTEDBLOGS_RENDER
+          `${import.meta.env.VITE_REACT_APP_APIMAIN}/acceptedblogs`
         );
-        // const response = await axios.get('http://localhost:2226/acceptedblogs');
-        // const response = await axios.get(import.meta.env.VITE_REACT_APP_FETCHBLOG_RENDER);
         const sortedBlogs = response.data.sort((a, b) => {
           if (sortingOrder === "latest") {
             return new Date(b.timestamp) - new Date(a.timestamp);

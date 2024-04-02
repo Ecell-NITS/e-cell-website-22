@@ -43,8 +43,7 @@ const Editblogform = () => {
       navigate("/login");
     } else {
       axios
-        .get(import.meta.env.VITE_REACT_APP_FETCHPROFILE, {
-          // .get('http://localhost:2226/fetchprofile', {
+        .get(`${import.meta.env.VITE_REACT_APP_APIMAIN}/fetchprofile`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -79,7 +78,7 @@ const Editblogform = () => {
       setIsLoading(true);
       try {
         const response = await axios.get(
-          `${import.meta.env.VITE_REACT_APP_FETCHBLOG_RENDER}/${blogId}`
+          `${import.meta.env.VITE_REACT_APP_APIMAIN}/getblogs/${blogId}`
         );
         setAuthorverf(response.data.authorid);
         setContent(response.data.content);
@@ -165,7 +164,7 @@ const Editblogform = () => {
     setDisablecreate(true);
     try {
       const response = await axios.get(
-        import.meta.env.VITE_REACT_APP_ACCEPTEDBLOGS_RENDER
+        `${import.meta.env.VITE_REACT_APP_APIMAIN}/acceptedblogs`
       );
       const publishedBlogIds = response.data.map((blog) => blog._id);
       // console.log(publishedBlogIds)

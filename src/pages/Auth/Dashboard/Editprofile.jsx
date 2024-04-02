@@ -37,7 +37,7 @@ const EditProfile = () => {
     const token = localStorage.getItem("token");
     try {
       axios
-        .get(import.meta.env.VITE_REACT_APP_DASHBOARD, {
+        .get(`${import.meta.env.VITE_REACT_APP_APIMAIN}/dashboard`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -162,7 +162,7 @@ const EditProfile = () => {
     axios
       // .put('http://localhost:2226/editprofile', { name, bio, userimg, facebook, github, instagram, linkedin, newpwd, confirmnewpwd }, {
       .put(
-        import.meta.env.VITE_REACT_APP_EDITPROFILE,
+        `${import.meta.env.VITE_REACT_APP_APIMAIN}/editprofile`,
         {
           name,
           bio,

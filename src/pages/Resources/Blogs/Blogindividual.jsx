@@ -33,7 +33,7 @@ const Blogindividual = () => {
     const fetchBlog = async () => {
       try {
         const response = await axios.get(
-          import.meta.env.VITE_REACT_APP_FETCHBLOG_RENDER + "/" + _id
+          `${import.meta.env.VITE_REACT_APP_APIMAIN}/getblogs/${_id}`
         );
         // const response = await axios.get(`http://localhost:2226/getblogs/${_id}`);
         setContent(response.data.content);
