@@ -24,3 +24,14 @@
 .btn h3 {
   color: #fff;
 }
+.card{
+  display: flex;
+  object-fit: contain;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+@media screen and (max-width: 650px) {
+  .container{
+    flex-direction: column;
+  }
+}

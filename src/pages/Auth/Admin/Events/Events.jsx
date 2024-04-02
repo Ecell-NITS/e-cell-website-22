@@ -35,7 +35,13 @@ const EventsAdmin = () => {
           </svg>
         </div>
       </div>
-      <EventCard />
+      <div className={styles.card}>
+        <EventCard />
+        <EventCard />
+        <EventCard />
+        <EventCard />
+        <EventCard />
+      </div>
     </div>
   );
 };
