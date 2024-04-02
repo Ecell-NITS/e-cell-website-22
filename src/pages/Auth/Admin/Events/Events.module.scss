@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 3.5rem;
+}
+
+.btn svg {
+    width: 1.563rem;
+    height: 1.610rem;
+    flex-shrink: 0;
+    
+}
+
+.btn {
+    border-radius: 1.25rem;
+    background: #224259;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    padding: 0.6rem 1.2rem;
+    cursor: pointer;
+}
+
+.btn h3 {
+    color: #fff
+}

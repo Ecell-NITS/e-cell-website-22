@@ -66,6 +66,9 @@ const Dashboard = () => {
   const handleEditProfile = () => {
     navigate("/editprofile");
   };
+  const handleAdminPanel = () => {
+    navigate("/admin");
+  };
 
   const handleallblogsbtn = () => {
     navigate("/mypublishedblogs");
@@ -203,16 +206,25 @@ const Dashboard = () => {
                 </div>
               </div> */}
               <h1 className="accountusername">{user.name}</h1>
-              <button
-                onClick={handleEditProfile}
-                className="editkryieprof "
-                id="sirfcolorchng"
-              >
-                Edit Profile
-              </button>
-              <button onClick={ButtonSignout} className="editkryieprof">
-                Sign Out
-              </button>
+              <div className="profile-buttons">
+                <button
+                  onClick={handleEditProfile}
+                  className="editkryieprof "
+                  id="sirfcolorchng"
+                >
+                  Edit Profile
+                </button>
+                <button
+                  onClick={handleAdminPanel}
+                  className="editkryieprof "
+                  id="admin-button"
+                >
+                  Admin Panel
+                </button>
+                <button onClick={ButtonSignout} className="editkryieprof">
+                  Sign Out
+                </button>
+              </div>
             </div>
 
             <div className="biohbhauidhar">

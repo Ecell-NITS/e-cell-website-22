@@ -1,0 +1,18 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #C3D6E5;
+    border-radius: 1.5rem;
+    width: 16rem;
+    color: #3E618E;
+    height: 20rem;
+    padding: 1rem 2rem;
+    h2{
+        text-align: center;
+        color: #3E618E;
+    }
+    h4{
+        text-align: center;
+    }
+}
