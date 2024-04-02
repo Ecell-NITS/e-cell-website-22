@@ -1,0 +1,68 @@
+.Messages {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+  p {
+    margin: 0;
+
+  }
+  .MessagesBox {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    thead {
+      background-color: #2a5368;
+      th {
+        color: white;
+      }
+    }
+    tr {
+      display: grid;
+      grid-template: "slNo name email message " / 0.5fr 1fr 1fr 2fr;
+      border: solid gray 1px;
+      border-top: none;
+      &:first-child {
+        border-top: solid gray 1px !important;
+      }
+      th {
+        text-align: center;
+        font-size: 1.5vw;
+        
+        @media screen and (max-width: 768px) {
+          font-size: 3.5vw;  
+        }
+      }
+      td {
+        text-align: center;
+        font-size: 1.2vw;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        @media screen and (max-width: 768px) {
+            font-size: 3vw;  
+          }
+      }
+    }
+  }
+  .ButtonContainer {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    padding: 0.5rem 0;
+    button {
+      padding: 0.2rem 0.5rem;
+      background-color: white;
+      color: gray;
+      border: solid gray 1px;
+      border-radius: 1rem;
+      cursor: pointer;
+      font-size: 1vw;
+      @media screen and (max-width: 768px) {
+        font-size: 2.5vw;  
+      }
+    }
+  }
+}

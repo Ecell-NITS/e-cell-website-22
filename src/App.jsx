@@ -35,11 +35,10 @@ import UserRedirect from "./pages/Redirect/UserRedirect";
 import Logout from "./pages/Auth/Logout/Logout";
 import Preloader from "./components/Loader/Loader";
 import { useState, useEffect } from "react";
+import ConnectionDropBanner from "./components/ConnectionDropBanner/ConnectionDropBanner";
 import Admin from "./pages/Auth/Admin";
 import SidebarAdmin from "./components/Admin/Sidebar/Sidebar";
 import Messages from "./pages/Auth/Admin/Messages/Messages";
-import ConnectionDropBanner from "./components/ConnectionDropBanner/ConnectionDropBanner";
-
 function App() {
   const [loading, setLoading] = useState(true);
 
@@ -234,11 +233,13 @@ function App() {
               <Route path="/user" element={<UserRedirect />} />
 
               <Route path="/admin" element={<Admin />}>
-                <Route path="/admin/messages" />
-                <Route path="/admin/events" />
-                <Route path="/admin/add-events" />
+                <Route path="messages" />
+                <Route path="events" />
+                <Route path="add-events" />
                 <Route path="blogs" />
                 <Route path="add-blogs" />
+                <Route path="users" />
+                <Route path="messages/:id" />
                 <Route path="/admin/users" />
               </Route>
 

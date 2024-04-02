@@ -35,8 +35,30 @@
       padding: 0.5rem;
       border-radius: 0.5rem;
       transition: 0.3s;
+      position: relative;
+      &::after {
+        content: "";
+        width: 0;
+        height: 5px;
+        background-color: white;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+        border-radius: 0.5rem;
+        transform-origin: center;
+        transition: 0.3s;
+      }
       &:hover {
-        background-color: #2a5368;
+        &::after {
+          width: 50%;
+        }
+      }
+    }
+    .active {
+      position: relative;
+      &::after {
+        width: 50%;
       }
     }
     @media screen and (max-width: 768px) {
