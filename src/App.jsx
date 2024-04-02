@@ -35,6 +35,7 @@ import UserRedirect from "./pages/Redirect/UserRedirect";
 import Logout from "./pages/Auth/Logout/Logout";
 import Preloader from "./components/Loader/Loader";
 import { useState, useEffect } from "react";
+import ConnectionDropBanner from "./components/ConnectionDropBanner/ConnectionDropBanner";
 import Admin from "./pages/Auth/Admin";
 import SidebarAdmin from "./components/Admin/Sidebar/Sidebar";
 import Messages from "./pages/Auth/Admin/Messages/Messages";
@@ -247,6 +248,7 @@ function App() {
         </Scrolling>
         <ScrollToTop />
       </Router>
+      <ConnectionDropBanner />
       <ToastContainer />
     </>
   );

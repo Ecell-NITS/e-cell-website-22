@@ -31,14 +31,11 @@
   order: 1;
   margin-left: 1.1%;
   margin-right: 1.1%;
+  margin-bottom: 2.1%;
   padding: 1vw;
   border: 1px solid #224259;
   border-radius: 1vw;
-  transition: all 0.5s ease-in-out;
-}
-
-.upcom-evnt-indi:hover {
-  box-shadow: 8px 7px 18px rgb(194, 194, 194);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
 .img-upcom-evnt {
@@ -91,12 +88,19 @@
   border: none;
   margin: 0.2vw;
 }
-
+.abt-content-indi-evnt {
+  overflow: auto;
+  height: 15%;
+}
+.abt-content-indi-evnt::-webkit-scrollbar {
+  width: 0px;
+}
 .abt-content-indi-evnt h3 {
   font-size: 1.3vw;
   color: #505050;
   margin-bottom: 0;
   font-weight: 400;
+  overflow: auto;
 }
 
 @media only screen and (min-width: 660px) {

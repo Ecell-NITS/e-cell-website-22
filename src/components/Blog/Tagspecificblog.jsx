@@ -16,7 +16,6 @@ const Tagspecificblog = () => {
   useEffect(() => {
     setFetching(true);
     axios
-      // .get(`http://localhost:2226/tagspecificbloglist/${tagname}`)
       .get(`${import.meta.env.VITE_REACT_APP_APIMAIN}/tagspecificbloglist/${tagname}`)
       .then((response) => {
         setBlogs(response.data);

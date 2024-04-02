@@ -66,8 +66,7 @@ const Contactus = () => {
     setSubmitting(true);
     setDisable(true);
     axios
-      .post(import.meta.env.VITE_REACT_APP_AXIOSPOST_POST_SENDEMAIL, {
-        // .post('http://localhost:3001/sendquery', {
+      .post(`${import.meta.env.VITE_REACT_APP_APIMAIN}/sendquery`, {
         email,
         name,
         message,

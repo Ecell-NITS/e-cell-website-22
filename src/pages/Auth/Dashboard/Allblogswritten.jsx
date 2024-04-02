@@ -25,8 +25,7 @@ const Allblogspublished = () => {
     };
     setFetching(true);
     axios
-      // .get('http://localhost:2226/mypublishedblogs', config)
-      .get(import.meta.env.VITE_REACT_APP_PUBLISHEDBLOGS, config)
+      .get(`${import.meta.env.VITE_REACT_APP_APIMAIN}/mypublishedblogs`, config)
       .then((response) => {
         setBlogs(response.data.blogs);
         // setIntroedit(response.data.intro)
