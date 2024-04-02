@@ -1,0 +1,48 @@
+.IndiMsg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 90%;
+  height: 100%;
+  padding: 0 1rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+  table {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    tr {
+      display: flex;
+      gap: 2px;
+      .label {
+        width: 20%;
+      }
+      .content {
+        width: 80%;
+      }
+    }
+  }
+
+  td {
+    background-color: #2a5368;
+    padding-left: 1rem;
+    padding-block: 0.5rem;
+    color: white;
+    font-size: 1.5rem;
+  }
+  .buttonContainer{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-evenly;
+    width: 80%;
+    button{
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        color: white;
+        background-color: #2a5368;
+        border-radius: 0.625rem;
+    }
+  }
+}

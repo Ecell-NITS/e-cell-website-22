@@ -1,10 +1,12 @@
 import Title from "../../../../components/Admin/Page-title/title";
 import styles from "./Messages.module.scss";
 import messagesData from "../../../../Data/sample-messages.json";
+import { Link } from "react-router-dom";
 
 const Messages = () => {
   const unreadMessages = messagesData.filter((item) => item.read === false);
   const readMessages = messagesData.filter((item) => item.read === true);
+
   return (
     <div className={styles.Messages}>
       <Title title="Messages" />
@@ -34,7 +36,11 @@ const Messages = () => {
                           : `${item.message.slice(0, 100)}...`
                       }`}</p>
                       <div className={styles.ButtonContainer}>
-                        {item.message.length > 100 && <button>Read more</button>}
+                        {item.message.length > 100 && (
+                          <Link to={`/admin/messages/${item.id}`}>
+                            <button>Read more</button>
+                          </Link>
+                        )}
                         <button>Mark as read</button>
                       </div>
                     </td>
@@ -57,7 +63,11 @@ const Messages = () => {
                           : `${item.message.slice(0, 100)}...`
                       }`}</p>
                       <div className={styles.ButtonContainer}>
-                        {item.message.length > 100 && <button>Read more</button>}
+                        {item.message.length > 100 && (
+                          <Link to={`/admin/messages/${item.id}`}>
+                            <button>Read more</button>
+                          </Link>
+                        )}
                       </div>
                     </td>
                   </tr>

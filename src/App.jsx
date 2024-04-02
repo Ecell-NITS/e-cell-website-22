@@ -232,12 +232,13 @@ function App() {
               <Route path="/user" element={<UserRedirect />} />
 
               <Route path="/admin" element={<Admin />}>
-                <Route path="/admin/messages" />
-                <Route path="/admin/events" />
-                <Route path="/admin/add-events" />
+                <Route path="messages" />
+                <Route path="events" />
+                <Route path="add-events" />
                 <Route path="blogs" />
                 <Route path="add-blogs" />
-                <Route path="/admin/users" />
+                <Route path="users" />
+                <Route path="messages/:id" />
               </Route>
 
               <Route path="*" element={<NotFound />} />
