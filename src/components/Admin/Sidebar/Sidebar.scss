@@ -25,10 +25,15 @@
   .sidebar-admin-links {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 1rem;
     padding: 1rem;
     text-align: center;
     font-size: 1.5vw;
+    @media screen and (max-width: 768px){
+      width: 50%;
+    }
     a {
       color: white;
       text-decoration: none;
@@ -36,6 +41,7 @@
       border-radius: 0.5rem;
       transition: 0.3s;
       position: relative;
+      
       &::after {
         content: "";
         width: 0;
@@ -52,17 +58,18 @@
       &:hover {
         &::after {
           width: 50%;
+          height: 3px;
         }
       }
     }
     .active {
-      position: relative;
+      width: fit-content;
       &::after {
         width: 50%;
       }
     }
     @media screen and (max-width: 768px) {
-      font-size: 3vw;
+      font-size: 2rem;
     }
   }
   button {
@@ -74,7 +81,7 @@
     font-size: 1.7vw;
     width: fit-content;
     @media screen and (max-width: 768px) {
-      font-size: 3.4vw;
+      font-size:2rem;
     }
   }
   // @media screen and (max-width: 768px) {
@@ -97,7 +104,7 @@
   .sidebar-admin {
     // display: none;
     width: 0;
-    transition: 0.5s;
+    transition: 0.3s;
   }
   .active {
     width: 100vw;

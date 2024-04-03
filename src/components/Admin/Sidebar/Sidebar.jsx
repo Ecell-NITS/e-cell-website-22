@@ -4,6 +4,7 @@ import "./Sidebar.scss";
 import { ImCross } from "react-icons/im";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { useState } from "react";
+import { doc } from "prettier";
 
 const SidebarAdmin = () => {
   const navigate = useNavigate();
@@ -16,6 +17,13 @@ const SidebarAdmin = () => {
   const handleClient = () => {
     navigate("/dashboard");
   };
+
+  const links = document.querySelectorAll(".sidebar-admin-links a");
+  links.forEach((link) => {
+    link.addEventListener("click", () => {
+      setMenu(false);
+    });
+  });
 
   return (
     <div className="">
