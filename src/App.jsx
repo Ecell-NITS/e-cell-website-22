@@ -240,6 +240,7 @@ function App() {
                 <Route path="add-blogs" />
                 <Route path="users" />
                 <Route path="messages/:id" />
+                <Route path="/admin/users" />
               </Route>
 
               <Route path="*" element={<NotFound />} />

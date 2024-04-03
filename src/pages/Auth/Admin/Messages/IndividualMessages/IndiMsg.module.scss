@@ -32,17 +32,17 @@
     color: white;
     font-size: 1.5rem;
   }
-  .buttonContainer{
+  .buttonContainer {
     margin-top: 2rem;
     display: flex;
     justify-content: space-evenly;
     width: 80%;
-    button{
-        padding: 0.5rem 1rem;
-        font-size: 1rem;
-        color: white;
-        background-color: #2a5368;
-        border-radius: 0.625rem;
+    button {
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      color: white;
+      background-color: #2a5368;
+      border-radius: 0.625rem;
     }
   }
 }
