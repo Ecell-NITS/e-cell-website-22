@@ -1,7 +1,7 @@
 import Title from "../../../../../components/Admin/Page-title/title";
 import styles from "./BlogReview.module.scss";
 import { useParams } from "react-router";
-import blogs from "../../../../../data/sample-blogs.json";
+import blogs from "../../../../../Data/sample-blogs.json";
 
 const BlogReview = () => {
   const { id } = useParams();
