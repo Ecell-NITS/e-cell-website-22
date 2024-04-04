@@ -255,3 +255,17 @@
     height: 30vw;
   }
 }
+
+.Admin-control {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-block: 5vh;
+}
+.Admin-control button {
+  padding: 1rem 2rem;
+  background-color: #1c374b;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}

@@ -1,9 +1,11 @@
+import { useState } from "react";
 import styles from "./BlogCard.module.scss";
 import { RxCross2 } from "react-icons/rx";
-import { CiSearch } from "react-icons/ci";
+import { TiTick } from "react-icons/ti";
 import { Link } from "react-router-dom";
 
 const BlogCard = ({ blog }) => {
+  const [isPublished, setIsPublished] = useState(blog.isPublished);
   return (
     <div className={styles.blogCard}>
       <div className={styles.blogCardHeader}>
@@ -20,11 +22,18 @@ const BlogCard = ({ blog }) => {
         </p>
       </div>
       <div className={styles.blogCardFooter}>
-        <Link to={`/admin/blogs/review/${blog.id}`}>
-          <button className={styles.editBtn}>
-            Review <CiSearch size="1.5rem" color="white" />
-          </button>
+        <Link to={`/blog/${blog.id}`}>
+          <button className={styles.editBtn}>Read more</button>
         </Link>
+        <button disabled={isPublished}>
+          {!isPublished ? (
+            <>
+              Publish <TiTick size="1.5rem" color="green" />
+            </>
+          ) : (
+            "Published"
+          )}
+        </button>
         <button className={styles.deleteBtn}>
           Delete <RxCross2 size="1.5rem" color="red" />
         </button>

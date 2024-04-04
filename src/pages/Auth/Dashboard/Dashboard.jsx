@@ -14,7 +14,7 @@ import { toast } from "react-toastify";
 const Dashboard = () => {
   const navigate = useNavigate();
   const [user, setUser] = useState({});
-  const [admin, setAdmin] = useState(true);
+  const [admin, setAdmin] = useState(false);
   const [editedbio, setEditedbio] = useState("");
   const [editedfb, setEditedfb] = useState("");
   const [editedig, setEditedig] = useState("");

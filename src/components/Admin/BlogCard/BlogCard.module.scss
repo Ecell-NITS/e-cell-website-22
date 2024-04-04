@@ -29,6 +29,8 @@
     // margin-top: 2rem;
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 1rem;
     // width: 80%;
     button {
       padding: 0.5rem 1rem;

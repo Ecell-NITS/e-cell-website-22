@@ -8,6 +8,8 @@ import { useNavigate, useLocation } from "react-router-dom";
 import JoditEditor from "jodit-react";
 import FileBase64 from "react-file-base64";
 import { toast } from "react-toastify";
+import { Helmet } from "react-helmet";
+
 const Createblog = () => {
   const editor = useRef(null);
   const editor0 = useRef(null);
@@ -36,7 +38,7 @@ const Createblog = () => {
   };
 
   useEffect(() => {
-    document.title = "Create blog | ECELL NITS";
+    // document.title = "Create blog | ECELL NITS";
     const token = localStorage.getItem("token");
     if (!token) {
       navigate("/login");
@@ -205,6 +207,10 @@ const Createblog = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>{`Create Blog | E-CELL NIT Silchar`}</title>
+        <meta name="description" content="E-CELL NIT SILCHAR" />
+      </Helmet>
       {isadminPage || <NavbarTeam />}
       <div className="mainblogmake">
         <h2 className="titletopcbl">Add New Blog </h2>
