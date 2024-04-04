@@ -2,7 +2,7 @@ import BlogCard from "../../../../components/Admin/BlogCard/BlogCard";
 import Title from "../../../../components/Admin/Page-title/title";
 import styles from "./Blogs.module.scss";
 import { FaPlus } from "react-icons/fa";
-import blogs from "../../../../data/sample-blogs.json";
+import data from "../../../../Data/sample-blogs.json";
 import { Link } from "react-router-dom";
 
 const BlogsAdmin = () => {
@@ -17,7 +17,7 @@ const BlogsAdmin = () => {
         </button>
       </div>
       <div className={styles.blogContainer}>
-        {blogs.map((blog) => (
+        {data.map((blog) => (
           <BlogCard key={blog.id} blog={blog} />
         ))}
       </div>
