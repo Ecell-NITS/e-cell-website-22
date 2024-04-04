@@ -12,6 +12,7 @@ import BlogsAdmin from "./Blogs/Blogs";
 import AddBlogsAdmin from "./AddBlogs/AddBlogs";
 import { Helmet } from "react-helmet";
 import IndiMsg from "./Messages/IndividualMessages/IndiMsg";
+import BlogReview from "./Blogs/BlogReview/BlogReview";
 
 const Admin = () => {
   return (
@@ -31,6 +32,7 @@ const Admin = () => {
           <Route path="add-blogs" element={<AddBlogsAdmin />} />
           <Route path="users" element={<Users />} />
           <Route path="messages/:id" element={<IndiMsg />} />
+          <Route path="blogs/review/:id" element={<BlogReview />} />
         </Routes>
       </div>
       {/* <div className="main"></div> */}

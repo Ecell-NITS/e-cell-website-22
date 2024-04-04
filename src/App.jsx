@@ -37,8 +37,7 @@ import Preloader from "./components/Loader/Loader";
 import { useState, useEffect } from "react";
 import ConnectionDropBanner from "./components/ConnectionDropBanner/ConnectionDropBanner";
 import Admin from "./pages/Auth/Admin";
-import SidebarAdmin from "./components/Admin/Sidebar/Sidebar";
-import Messages from "./pages/Auth/Admin/Messages/Messages";
+
 function App() {
   const [loading, setLoading] = useState(true);
 
@@ -240,6 +239,7 @@ function App() {
                 <Route path="add-blogs" />
                 <Route path="users" />
                 <Route path="messages/:id" />
+                <Route path="blogs/review/:id" />
                 <Route path="/admin/users" />
               </Route>
 

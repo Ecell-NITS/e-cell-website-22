@@ -4,7 +4,7 @@ import NavbarTeam from "../../../components/shared/Navbar/NavbarTeam";
 import axios from "axios";
 import moment from "moment-timezone";
 import Footer from "../../../components/shared/Footer/Footer";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import JoditEditor from "jodit-react";
 import FileBase64 from "react-file-base64";
 import { toast } from "react-toastify";
@@ -27,6 +27,9 @@ const Createblog = () => {
   const [authorid, setAuthorid] = useState("");
 
   const [socialMedia, setSocialMedia] = useState({});
+
+  const location = useLocation();
+  const isadminPage = location.pathname.includes("admin");
 
   const handleImgChange = (base64) => {
     setTopicpic(base64);
@@ -202,7 +205,7 @@ const Createblog = () => {
 
   return (
     <div>
-      <NavbarTeam />
+      {isadminPage || <NavbarTeam />}
       <div className="mainblogmake">
         <h2 className="titletopcbl">Add New Blog </h2>
         <div className="firstboxvreateblog">
@@ -447,8 +450,7 @@ const Createblog = () => {
           {submitting ? "Posting Blog" : "Post Blog"}{" "}
         </button>
       </div>
-
-      <Footer />
+      {isadminPage || <Footer />}
     </div>
   );
 };
