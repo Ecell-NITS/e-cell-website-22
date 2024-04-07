@@ -12,7 +12,9 @@ import { FaClock } from "react-icons/fa";
 import Comments from "./Comments";
 import ProgressiveBar from "./ProgressiveBar";
 import { toast } from "react-toastify";
-// import Blog from '../../../components/Blog/Blog';
+import { RxCross2 } from "react-icons/rx";
+import { TiTick } from "react-icons/ti";
+
 const Blogindividual = () => {
   const { _id } = useParams();
   const [content, setContent] = useState("");
@@ -29,6 +31,9 @@ const Blogindividual = () => {
   const [authoruniqueid, setAuthoruniqueid] = useState("");
   const [timestamp, setTimestamp] = useState("");
   const [readingtime, setReadingtime] = useState("");
+  const [isAdmin, setIsAdmin] = useState(true);
+  const [isPublished, setIsPublished] = useState(true);
+
   useEffect(() => {
     const fetchBlog = async () => {
       try {
@@ -46,6 +51,7 @@ const Blogindividual = () => {
         setTimestamp(response.data.timestamp);
         setWriteremaill(response.data.writeremail);
         setAuthoruniqueid(response.data.authorid);
+        // setIsPublished(response.data.isPublished);
 
         const wordsPerMinute = 183;
         const wordCount = response.data.content.split(" ").length;
@@ -123,6 +129,8 @@ const Blogindividual = () => {
   const handlePublicProfile = () => {
     navigate(`/user/${authoruniqueid}`);
   };
+
+  const handlePublish = async () => {};
 
   return (
     <>
@@ -205,6 +213,24 @@ const Blogindividual = () => {
             </button>
           </div>
         </div>
+
+        {isAdmin ? (
+          <div className="Admin-control">
+            <button disabled={isPublished} onClick={handlePublish}>
+              {!isPublished ? (
+                <>
+                  Publish <TiTick size="1.5rem" color="green" />
+                </>
+              ) : (
+                "Published"
+              )}
+            </button>
+            <button>
+              Delete <RxCross2 color="red" />{" "}
+            </button>
+          </div>
+        ) : null}
+
         <Comments />
       </div>
       <Footer />

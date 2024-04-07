@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #c3d6e5;
+  border-radius: 1.5rem;
+  width: 16rem;
+  color: #3e618e;
+  height: 20rem;
+  padding: 1rem 2rem;
+  margin: 2rem;
+}
+
+.container h2 {
+  text-align: center;
+  color: #3e618e;
+  font-weight: 700;
+}
+
+.container h4 {
+  text-align: center;
+  font-weight: 505;
+}

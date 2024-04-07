@@ -1,0 +1,37 @@
+.admin {
+  width: 100vw;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  .main {
+    position: absolute;
+    right: 0;
+    width: 85vw;
+    @media screen and (max-width: 768px) {
+      width: 100vw;
+    }
+  }
+}
+
+.admin-landing {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20%;
+  text-align: center;
+  button {
+    color: rgba(193, 0, 0, 1);
+    border: 2px solid rgba(193, 0, 0, 1);
+    background-color: white;
+    padding: 0.25vw 1.5vw !important;
+    border-radius: 7.59px;
+    font-size: 1.7vw;
+    width: fit-content;
+    @media screen and (max-width: 768px) {
+      padding: 0.75vw 3vw !important;
+      border-radius: 7.59px;
+      font-size: 3.4vw;
+    }
+  }
+}

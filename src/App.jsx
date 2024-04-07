@@ -36,6 +36,8 @@ import Logout from "./pages/Auth/Logout/Logout";
 import Preloader from "./components/Loader/Loader";
 import { useState, useEffect } from "react";
 import ConnectionDropBanner from "./components/ConnectionDropBanner/ConnectionDropBanner";
+import Admin from "./pages/Auth/Admin";
+
 function App() {
   const [loading, setLoading] = useState(true);
 
@@ -228,6 +230,18 @@ function App() {
               <Route path="/tag" element={<BlogRedirect />} />
 
               <Route path="/user" element={<UserRedirect />} />
+
+              <Route path="/admin" element={<Admin />}>
+                <Route path="messages" />
+                <Route path="events" />
+                <Route path="add-events" />
+                <Route path="blogs" />
+                <Route path="add-blogs" />
+                <Route path="users" />
+                <Route path="messages/:id" />
+                <Route path="blogs/review/:id" />
+                <Route path="/admin/users" />
+              </Route>
 
               <Route path="*" element={<NotFound />} />
             </Routes>
