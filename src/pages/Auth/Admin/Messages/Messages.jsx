@@ -1,11 +1,58 @@
 import Title from "../../../../components/Admin/Page-title/title";
 import styles from "./Messages.module.scss";
-import messagesData from "../../../../Data/sample-messages.json";
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import axios from "axios";
+import { toast } from "react-toastify";
 
 const Messages = () => {
-  const unreadMessages = messagesData.filter((item) => item.read === false);
-  const readMessages = messagesData.filter((item) => item.read === true);
+  const [messages, setMessages] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  const markAsRead = (id) => {
+    axios
+      .get(`${import.meta.env.VITE_REACT_APP_APIMAIN}/query-read/${id}`, config)
+      .then((response) => {
+        toast.success("Message read successfully");
+        setMessages(
+          messages.map((item) => (item._id === id ? { ...item, read: true } : item))
+        );
+      })
+      .catch((err) => {
+        console.error("Failed to mark as read", err);
+        toast.error(`Failed to mark as read`);
+      });
+  };
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    const config = {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    };
+    try {
+      axios
+        .get(`${import.meta.env.VITE_REACT_APP_APIMAIN}/getqueries`, config)
+        .then((response) => {
+          setMessages(response.data);
+          setLoading(false);
+        });
+    } catch (error) {
+      console.error("Failed to retrieve messages", error);
+      toast.error("Failed to retrieve messages");
+    }
+  }, []);
+
+  let unreadMessages = messages.filter((item) => item.read === false);
+  let readMessages = messages.filter((item) => item.read === true);
+
+  const token = localStorage.getItem("token");
+  const config = {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  };
 
   return (
     <div className={styles.Messages}>
@@ -20,9 +67,13 @@ const Messages = () => {
               <th className={styles.message}>Message</th>
             </tr>
           </thead>
-          <tbody>
-            <h3>Unread</h3>
-            <div className={styles.Container}>
+        </table>
+        <h3>Unread</h3>
+        {loading ? (
+          <h4>Loading...</h4>
+        ) : (
+          <table>
+            <tbody className={styles.Container}>
               {unreadMessages.map((item, index) => {
                 return (
                   <tr key={index}>
@@ -37,19 +88,26 @@ const Messages = () => {
                       }`}</p>
                       <div className={styles.ButtonContainer}>
                         {item.message.length > 100 && (
-                          <Link to={`/admin/messages/${item.id}`}>
+                          <Link to={`/admin/messages/${item._id}`}>
                             <button>Read more</button>
                           </Link>
                         )}
-                        <button>Mark as read</button>
+                        <button onClick={() => markAsRead(item._id)}>Mark as read</button>
                       </div>
                     </td>
                   </tr>
                 );
               })}
-            </div>
-            <h3>Read</h3>
-            <div className={styles.Container}>
+            </tbody>
+          </table>
+        )}
+        {!loading && unreadMessages.length === 0 && <h4>No unread messages</h4>}
+        <h3>Read</h3>
+        {loading ? (
+          <h4>Loading...</h4>
+        ) : (
+          <table>
+            <tbody className={styles.Container}>
               {readMessages.map((item, index) => {
                 return (
                   <tr key={index}>
@@ -64,7 +122,7 @@ const Messages = () => {
                       }`}</p>
                       <div className={styles.ButtonContainer}>
                         {item.message.length > 100 && (
-                          <Link to={`/admin/messages/${item.id}`}>
+                          <Link to={`/admin/messages/${item._id}`}>
                             <button>Read more</button>
                           </Link>
                         )}
@@ -73,9 +131,10 @@ const Messages = () => {
                   </tr>
                 );
               })}
-            </div>
-          </tbody>
-        </table>
+            </tbody>
+          </table>
+        )}
+        {!loading && readMessages.length === 0 && <h4>No read messages</h4>}
       </div>
     </div>
   );

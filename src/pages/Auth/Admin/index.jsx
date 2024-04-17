@@ -31,15 +31,10 @@ const Admin = () => {
 
     axios
       .get(`${import.meta.env.VITE_REACT_APP_APIMAIN}/dashboard`, config)
-      .then((response) => {
+      .then(async (response) => {
         setLoading(false);
-        const { name, email, role } = response.data;
-        console.log(response.data);
-        // setAdmin(role === "admin" || role === "superadmin");
-
-        if (!admin) {
-          setTimeout(() => navigate("/dashboard"), 2000);
-        }
+        const { role } = await response.data;
+        setAdmin(role === "admin" || role === "superadmin");
       })
       .catch((error) => {
         if (error.response.status === 401) {
@@ -52,7 +47,14 @@ const Admin = () => {
           console.error("Failed to retrieve user details", error);
         }
       });
-  }, [navigate, admin]);
+  }, [navigate]);
+
+  if (!admin) {
+    navigate("/login");
+  }
+  if (loading) {
+    return <h1>We are checking your profile</h1>;
+  }
   return (
     <>
       {" "}
