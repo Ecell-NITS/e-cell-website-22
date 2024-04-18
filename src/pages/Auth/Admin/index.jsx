@@ -18,6 +18,7 @@ import { toast } from "react-toastify";
 
 const Admin = () => {
   const [admin, setAdmin] = useState(false);
+  const [superadmin, setSuperadmin] = useState(false);
   const [loading, setLoading] = useState(true);
 
   const navigate = useNavigate();
@@ -35,6 +36,7 @@ const Admin = () => {
         setLoading(false);
         const { role } = await response.data;
         setAdmin(role === "admin" || role === "superadmin");
+        setSuperadmin(role === "superadmin");
       })
       .catch((error) => {
         if (error.response.status === 401) {
@@ -84,7 +86,7 @@ const Admin = () => {
           </div>
           {/* <div className="main"></div> */}
           <div className="sidebar">
-            <SidebarAdmin />
+            <SidebarAdmin isSuperAdmin={superadmin} />
           </div>
         </div>
       )}

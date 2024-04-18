@@ -31,8 +31,8 @@ const Blogindividual = () => {
   const [authoruniqueid, setAuthoruniqueid] = useState("");
   const [timestamp, setTimestamp] = useState("");
   const [readingtime, setReadingtime] = useState("");
-  const [isAdmin, setIsAdmin] = useState(true);
-  const [isPublished, setIsPublished] = useState(true);
+  const [isAdmin, setIsAdmin] = useState(false);
+  const [isPublished, setIsPublished] = useState(false);
 
   useEffect(() => {
     const fetchBlog = async () => {
@@ -51,7 +51,7 @@ const Blogindividual = () => {
         setTimestamp(response.data.timestamp);
         setWriteremaill(response.data.writeremail);
         setAuthoruniqueid(response.data.authorid);
-        // setIsPublished(response.data.isPublished);
+        setIsPublished(response.data.status === "published");
 
         const wordsPerMinute = 183;
         const wordCount = response.data.content.split(" ").length;
@@ -76,6 +76,18 @@ const Blogindividual = () => {
       }
     };
 
+    const token = localStorage.getItem("token");
+    const config = {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    };
+    axios
+      .get(`${import.meta.env.VITE_REACT_APP_APIMAIN}/dashboard`, config)
+      .then(async (response) => {
+        const { role } = await response.data;
+        setIsAdmin(role === "admin" || role === "superadmin");
+      });
     fetchBlog();
   }, [_id, navigate]);
 
