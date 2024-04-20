@@ -7,17 +7,33 @@
   width: 16rem;
   color: #3e618e;
   height: 20rem;
-  padding: 1rem 2rem;
+  padding: 1.5rem 1rem;
   margin: 2rem;
-}
 
-.container h2 {
-  text-align: center;
-  color: #3e618e;
-  font-weight: 700;
-}
+  ::-webkit-scrollbar {
+    width: 0px;
+  }
+  .box {
+    height: 100%;
+    width: 100%;
+  }
+  h2 {
+    text-align: center;
+    color: #3e618e;
+    font-weight: 700;
+    font-size: 1.7em;
+  }
+  h4 {
+    text-align: center;
+    font-weight: 405;
+    font-size: 0.9em;
+    padding: 0.2rem 0.3rem 0.7rem 0.3rem;
+  }
+  p {
+    text-align: center;
+    height: 70%;
+    overflow: auto;
 
-.container h4 {
-  text-align: center;
-  font-weight: 505;
+   
+  }
 }

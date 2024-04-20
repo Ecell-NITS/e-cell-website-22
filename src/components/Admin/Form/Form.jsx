@@ -1,19 +1,26 @@
-import React from "react";
-import { useState, useMemo } from "react";
-// import toast from 'react-toastify';
+import React, { useState, useMemo, useEffect } from "react";
 import styles from "./Form.module.scss";
-// import { Toaster } from 'react-toastify';
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import { toast } from "react-toastify";
 
 const ContactForm = () => {
+  const navigate = useNavigate();
+
   const [formData, setFormData] = useState({
-    module: "",
+    moduleName: "",
     eventName: "",
     organizers: "",
     venue: "",
     eventDetails: "",
   });
 
-  // const [formError, setFormError] = useState({});
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (!token) {
+      navigate("/login");
+    }
+  }, [navigate]);
 
   const OnChangeHandler = (event) => {
     setFormData((prevFormData) => ({
@@ -23,12 +30,39 @@ const ContactForm = () => {
   };
 
   const handleSubmit = async (e) => {
-    console.log("bro");
+    e.preventDefault();
+
+    const token = localStorage.getItem("token");
+    const config = {
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+    };
+
+    try {
+      axios
+        .post(`${import.meta.env.VITE_REACT_APP_APIMAIN}/events/add`, formData, config)
+        .then((res) => {
+          console.log("Event added successfully:", res.data);
+          toast.success("Event Added Successfully");
+          setFormData({
+            moduleName: "",
+            eventName: "",
+            organizers: "",
+            venue: "",
+            eventDetails: "",
+          });
+        });
+    } catch (error) {
+      console.error("Failed to add event", error);
+      toast.error("Failed to add event!");
+    }
   };
 
   const isButtonEnabled = useMemo(() => {
     return (
-      formData.module.length > 0 &&
+      formData.moduleName.length > 0 &&
       formData.eventName.length > 0 &&
       formData.organizers.length > 0 &&
       formData.venue.length > 0 &&
@@ -40,10 +74,10 @@ const ContactForm = () => {
     <>
       <div className={styles.bro} id="addevents">
         <div className={` ${styles.container} `}>
-          <form>
+          <form onSubmit={handleSubmit}>
             <div className={styles.box}>
-              <label htmlFor="module">Module Name:</label>
-              <input name="module" autoComplete="off" onChange={OnChangeHandler} />
+              <label htmlFor="moduleName">Module Name:</label>
+              <input name="moduleName" autoComplete="off" onChange={OnChangeHandler} />
             </div>
             <div className={styles.box}>
               <label htmlFor="eventName">Event Name:</label>
@@ -72,10 +106,8 @@ const ContactForm = () => {
                   cursor: !isButtonEnabled ? "not-allowed" : "pointer",
                   opacity: !isButtonEnabled ? "0.5" : "1",
                 }}
-                onClick={handleSubmit}
                 type="submit"
               >
-                {" "}
                 Add Event
               </button>
             </div>
