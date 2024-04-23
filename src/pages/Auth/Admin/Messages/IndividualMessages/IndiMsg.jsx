@@ -33,6 +33,7 @@ const IndiMsg = () => {
   }, [id, config]);
 
   const markAsRead = async () => {
+    toast.info("Marking as read...");
     axios
       .get(`${import.meta.env.VITE_REACT_APP_APIMAIN}/query-read/${id}`, config)
       .then((response) => {
@@ -45,6 +46,7 @@ const IndiMsg = () => {
       });
   };
   const deleteMesssage = async () => {
+    toast.info("Deleting message...");
     axios
       .delete(`${import.meta.env.VITE_REACT_APP_APIMAIN}/deletequery/${id}`, config)
       .then((response) => {
