@@ -8,40 +8,64 @@ import { toast } from "react-toastify";
 
 const BlogCard = ({ blog }) => {
   const [isPublished, setIsPublished] = useState(blog.status === "published");
+  const [publishing, setPublishing] = useState(false);
+  const [deleting, setDeleting] = useState(false);
   // console.log(blog.status );
 
-  const handlePublish = (id) => {
-    const token = localStorage.getItem("token");
-    const config = {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    };
-    axios
-      .post(`${import.meta.env.VITE_REACT_APP_APIMAIN}/publishblog/${id}`, config)
-      .then((res) => {
-        toast.success("Blog Published Successfully");
-      })
-      .catch((err) => {
-        toast.error("Failed to Publish Blog");
-      });
+  const handlePublish = async (id) => {
+    setPublishing(true);
+    if (!window.confirm("Are you sure you want to publish this blog?")) {
+      setPublishing(false);
+      return;
+    }
+    try {
+      const token = localStorage.getItem("token");
+      const config = {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      };
+      await axios
+        .post(`${import.meta.env.VITE_REACT_APP_APIMAIN}/publishblog/${id}`, config)
+        .then((res) => {
+          if (res.status === 200) {
+            toast.success("Blog Published Successfully");
+            setIsPublished(true);
+          }
+        });
+    } catch (error) {
+      toast.error(error.message);
+      console.log(error);
+    }
+    setPublishing(false);
   };
 
-  const handleDelete = (id) => {
-    const token = localStorage.getItem("token");
-    const config = {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    };
-    axios
-      .delete(`${import.meta.env.VITE_REACT_APP_APIMAIN}/deleteblog/${id}`, config)
-      .then((res) => {
-        toast.success("Blog Deleted Successfully");
-      })
-      .catch((err) => {
-        toast.error("Failed to Delete Blog");
-      });
+  const handleDelete = async (id) => {
+    setDeleting(true);
+    if (!window.confirm("Are you sure you want to delete this blog?")) {
+      setDeleting(false);
+      return;
+    }
+    try {
+      const token = localStorage.getItem("token");
+      const config = {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      };
+      await axios
+        .delete(`${import.meta.env.VITE_REACT_APP_APIMAIN}/deleteblog/${id}`, config)
+        .then((res) => {
+          if (res.status === 200) {
+            toast.success("Blog Deleted Successfully");
+            window.location.reload();
+          }
+        });
+    } catch (error) {
+      toast.error(error.message);
+      console.log(error);
+    }
+    setDeleting(false);
   };
   return (
     <div className={styles.blogCard}>
@@ -65,17 +89,24 @@ const BlogCard = ({ blog }) => {
         <Link to={`/blog/${blog._id}`}>
           <button className={styles.editBtn}>Read more</button>
         </Link>
-        <button disabled={isPublished} onClick={() => handlePublish(blog._id)}>
-          {!isPublished ? (
-            <>
-              Publish <TiTick size="1.5rem" color="green" />
-            </>
-          ) : (
+        <button
+          disabled={isPublished || publishing}
+          onClick={() => handlePublish(blog._id)}
+        >
+          {isPublished ? (
             "Published"
+          ) : publishing ? (
+            "Publishing..."
+          ) : (
+            <p>
+              {" "}
+              Publish <TiTick size="1.5rem" color="green" />{" "}
+            </p>
           )}
         </button>
         <button className={styles.deleteBtn} onClick={() => handleDelete(blog._id)}>
-          Delete <RxCross2 size="1.5rem" color="red" />
+          {deleting ? "Deleting..." : "Delete"}
+          <RxCross2 size="1.5rem" color="red" />
         </button>
       </div>
     </div>
