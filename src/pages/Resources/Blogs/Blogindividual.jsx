@@ -172,8 +172,9 @@ const Blogindividual = () => {
     } catch (error) {
       toast.error(error.message);
       console.log(error);
+    } finally {
+      setPublishing(false);
     }
-    setPublishing(false);
   };
 
   const handleDelete = async (id) => {
@@ -200,8 +201,9 @@ const Blogindividual = () => {
     } catch (error) {
       toast.error(error.message);
       console.log(error);
+    } finally {
+      setDeleting(false);
     }
-    setDeleting(false);
   };
 
   return (
