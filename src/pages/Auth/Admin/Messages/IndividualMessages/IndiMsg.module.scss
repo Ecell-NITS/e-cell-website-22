@@ -13,7 +13,9 @@
     display: flex;
     flex-direction: column;
     gap: 2px;
+    width: 100%;
     tr {
+      width: 100%;
       display: flex;
       gap: 2px;
       .label {
@@ -31,6 +33,7 @@
     padding-block: 0.5rem;
     color: white;
     font-size: 1.5rem;
+    gap: 2px;
   }
   .buttonContainer {
     margin-top: 2rem;

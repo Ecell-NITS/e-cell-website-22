@@ -31,8 +31,11 @@ const Blogindividual = () => {
   const [authoruniqueid, setAuthoruniqueid] = useState("");
   const [timestamp, setTimestamp] = useState("");
   const [readingtime, setReadingtime] = useState("");
-  const [isAdmin, setIsAdmin] = useState(true);
-  const [isPublished, setIsPublished] = useState(true);
+  const [isAdmin, setIsAdmin] = useState(false);
+  const [isPublished, setIsPublished] = useState(false);
+  const [publishing, setPublishing] = useState(false);
+  const [deleting, setDeleting] = useState(false);
+  const [blogId, setBlogId] = useState("");
 
   useEffect(() => {
     const fetchBlog = async () => {
@@ -51,7 +54,8 @@ const Blogindividual = () => {
         setTimestamp(response.data.timestamp);
         setWriteremaill(response.data.writeremail);
         setAuthoruniqueid(response.data.authorid);
-        // setIsPublished(response.data.isPublished);
+        setIsPublished(response.data.status === "published");
+        setBlogId(response.data._id);
 
         const wordsPerMinute = 183;
         const wordCount = response.data.content.split(" ").length;
@@ -76,6 +80,18 @@ const Blogindividual = () => {
       }
     };
 
+    const token = localStorage.getItem("token");
+    const config = {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    };
+    axios
+      .get(`${import.meta.env.VITE_REACT_APP_APIMAIN}/dashboard`, config)
+      .then(async (response) => {
+        const { role } = await response.data;
+        setIsAdmin(role === "admin" || role === "superadmin");
+      });
     fetchBlog();
   }, [_id, navigate]);
 
@@ -130,7 +146,65 @@ const Blogindividual = () => {
     navigate(`/user/${authoruniqueid}`);
   };
 
-  const handlePublish = async () => {};
+  // console.log(blog.status );
+
+  const handlePublish = async (id) => {
+    setPublishing(true);
+    if (!window.confirm("Are you sure you want to publish this blog?")) {
+      setPublishing(false);
+      return;
+    }
+    try {
+      const token = localStorage.getItem("token");
+      const config = {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      };
+      await axios
+        .post(`${import.meta.env.VITE_REACT_APP_APIMAIN}/publishblog/${id}`, config)
+        .then((res) => {
+          if (res.status === 200) {
+            toast.success("Blog Published Successfully");
+            setIsPublished(true);
+          }
+        });
+    } catch (error) {
+      toast.error(error.message);
+      console.log(error);
+    } finally {
+      setPublishing(false);
+    }
+  };
+
+  const handleDelete = async (id) => {
+    setDeleting(true);
+    if (!window.confirm("Are you sure you want to delete this blog?")) {
+      setDeleting(false);
+      return;
+    }
+    try {
+      const token = localStorage.getItem("token");
+      const config = {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      };
+      await axios
+        .delete(`${import.meta.env.VITE_REACT_APP_APIMAIN}/deleteblog/${id}`, config)
+        .then((res) => {
+          if (res.status === 200) {
+            toast.success("Blog Deleted Successfully");
+            window.location.reload();
+          }
+        });
+    } catch (error) {
+      toast.error(error.message);
+      console.log(error);
+    } finally {
+      setDeleting(false);
+    }
+  };
 
   return (
     <>
@@ -216,17 +290,24 @@ const Blogindividual = () => {
 
         {isAdmin ? (
           <div className="Admin-control">
-            <button disabled={isPublished} onClick={handlePublish}>
-              {!isPublished ? (
-                <>
-                  Publish <TiTick size="1.5rem" color="green" />
-                </>
-              ) : (
+            <button
+              disabled={isPublished || publishing}
+              onClick={() => handlePublish(blogId)}
+            >
+              {isPublished ? (
                 "Published"
+              ) : publishing ? (
+                "Publishing..."
+              ) : (
+                <div>
+                  {" "}
+                  Publish <TiTick size="1.5rem" color="green" />{" "}
+                </div>
               )}
             </button>
-            <button>
-              Delete <RxCross2 color="red" />{" "}
+            <button onClick={() => handleDelete(blogId)}>
+              {deleting ? "Deleting..." : "Delete"}
+              <RxCross2 size="1.5rem" color="red" />
             </button>
           </div>
         ) : null}

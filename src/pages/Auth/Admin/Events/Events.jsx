@@ -1,13 +1,36 @@
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import Title from "../../../../components/Admin/Page-title/title";
 import EventCard from "../../../../components/Admin/EventCard/EventCard";
 import styles from "./Events.module.scss";
+import { Link } from "react-router-dom";
 
 const EventsAdmin = () => {
+  const [events, setEvents] = useState([]);
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    const config = {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    };
+
+    axios
+      .get(`${import.meta.env.VITE_REACT_APP_APIMAIN}/events/fetch`, config)
+      .then((response) => {
+        setEvents(response.data.data);
+      })
+      .catch((error) => {
+        console.error("Failed to retrieve events", error);
+      });
+  }, []);
+
   return (
     <div className="EventsAdmin">
       <div className={styles.container}>
         <Title title="Events" />
-        <div className={styles.btn}>
+        <Link className={styles.btn} to={"/admin/add-events"}>
           <h3>Add Event </h3>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -33,14 +56,12 @@ const EventsAdmin = () => {
               strokeWidth="7"
             />
           </svg>
-        </div>
+        </Link>
       </div>
       <div className={styles.card}>
-        <EventCard />
-        <EventCard />
-        <EventCard />
-        <EventCard />
-        <EventCard />
+        {events.map((item) => (
+          <EventCard key={item._id} event={item} />
+        ))}
       </div>
     </div>
   );

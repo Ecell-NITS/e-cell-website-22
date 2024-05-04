@@ -45,7 +45,8 @@ const Dashboard = () => {
         setEditedig(response.data.instagram);
         setEditedGithub(response.data.github);
         setEditedLinkedin(response.data.linkedin);
-        // setAdmin(role === "admin" || role === "superadmin");
+        setAdmin(role === "admin" || role === "superadmin");
+        console.log(response.data);
       })
       .catch((error) => {
         if (error.response.status === 401) {
