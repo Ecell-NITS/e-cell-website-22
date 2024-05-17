@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 // /* eslint-disable jsx-a11y/anchor-is-valid */
 import { ImCross } from "react-icons/im";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import "./Navbar.css";
 import axios from "axios";
+import UserContext from "../../../context/UserContext";
 const Navbar = () => {
   const navigate = useNavigate();
   const [toggle, setToggle] = useState(false);
@@ -29,29 +30,13 @@ const Navbar = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [profilePicture, setProfilePicture] = useState("");
 
+  const { user } = useContext(UserContext);
   useEffect(() => {
-    const fetchUserProfile = async () => {
-      try {
-        const response = await axios.get(
-          `${import.meta.env.VITE_REACT_APP_APIMAIN}/fetchprofile`,
-          {
-            headers: {
-              Authorization: `Bearer ${localStorage.getItem("token")}`,
-            },
-          }
-        );
-        setProfilePicture(response.data.userimg);
-        // console.log(response.data.userimg)
-        setIsLoggedIn(true);
-      } catch (error) {
-        console.error("Error fetching user profile:", error);
-      }
-    };
-
-    if (localStorage.getItem("token")) {
-      fetchUserProfile();
+    if (user) {
+      setIsLoggedIn(true);
+      setProfilePicture(user.userimg);
     }
-  }, []);
+  }, [user]);
 
   const handleGoToDashboard = () => {
     navigate("/dashboard");

@@ -12,9 +12,10 @@ import AddBlogsAdmin from "./AddBlogs/AddBlogs";
 import { Helmet } from "react-helmet";
 import IndiMsg from "./Messages/IndividualMessages/IndiMsg";
 import BlogReview from "./Blogs/BlogReview/BlogReview";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
+import UserContext from "../../../context/UserContext";
 
 const Admin = () => {
   const [admin, setAdmin] = useState(false);
@@ -22,38 +23,17 @@ const Admin = () => {
   const [loading, setLoading] = useState(true);
 
   const navigate = useNavigate();
+
+  const { user } = useContext(UserContext);
+
   useEffect(() => {
-    const token = localStorage.getItem("token");
-    const config = {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    };
+    if (user) {
+      setAdmin(user?.role === "admin" || user?.role === "superadmin");
+      setSuperadmin(user?.role === "superadmin");
+      setLoading(false);
+    }
+  }, [navigate, user, admin]);
 
-    axios
-      .get(`${import.meta.env.VITE_REACT_APP_APIMAIN}/dashboard`, config)
-      .then(async (response) => {
-        setLoading(false);
-        const { role } = await response.data;
-        setAdmin(role === "admin" || role === "superadmin");
-        setSuperadmin(role === "superadmin");
-      })
-      .catch((error) => {
-        if (error.response.status === 401) {
-          navigate("/login");
-        } else if (error.response.data.error === "Invalid token") {
-          localStorage.removeItem("token");
-          toast.error("Session Expired! Please Login Again");
-          navigate("/login");
-        } else {
-          console.error("Failed to retrieve user details", error);
-        }
-      });
-  }, [navigate]);
-
-  if (!admin) {
-    navigate("/login");
-  }
   if (loading) {
     return <h1>We are checking your profile</h1>;
   }

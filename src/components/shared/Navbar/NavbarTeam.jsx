@@ -6,6 +6,9 @@ import { Link, NavLink } from "react-router-dom";
 import "./NavbarTeam.css";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { useContext } from "react";
+import UserContext from "../../../context/UserContext";
+
 const NavbarTeam = () => {
   const [toggle, setToggle] = useState(false);
 
@@ -32,29 +35,13 @@ const NavbarTeam = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [profilePicture, setProfilePicture] = useState("");
 
+  const { user } = useContext(UserContext);
   useEffect(() => {
-    const fetchUserProfile = async () => {
-      try {
-        const response = await axios.get(
-          `${import.meta.env.VITE_REACT_APP_APIMAIN}/fetchprofile`,
-          {
-            headers: {
-              Authorization: `Bearer ${localStorage.getItem("token")}`,
-            },
-          }
-        );
-        setProfilePicture(response.data.userimg);
-        // console.log(response.data.userimg)
-        setIsLoggedIn(true);
-      } catch (error) {
-        console.error("Error fetching user profile:", error);
-      }
-    };
-
-    if (localStorage.getItem("token")) {
-      fetchUserProfile();
+    if (user) {
+      setIsLoggedIn(true);
+      setProfilePicture(user.userimg);
     }
-  }, []);
+  }, [user]);
 
   const handleGoToDashboard = () => {
     navigate("/dashboard");
