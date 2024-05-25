@@ -1,0 +1,272 @@
+[
+  {
+    "id": 1,
+    "name": "Arpit Dhankani",
+    "rank": "President",
+    "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1685375265/23-24%20core/IMG_20230209_000433_-_EEB_143_Arpit_1_yk76xm.webp",
+    "fb": "https://www.facebook.com/arpit.dhankani?mibextid=ZbWKwL",
+    "linkdln": "https://www.linkedin.com/in/arpit-dhankani-27238b219/",
+    "git": "https://github.com/ArpitDhankani"
+  },
+  {
+    "id": 2,
+    "name": "Aditi Archita Khataniar ",
+    "rank": "General Secretary",
+    "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1685375265/23-24%20core/IMG_20230227_011043_369_-_CSE_185_Aditi_Archita_Khataniar_1_sjuylx.webp",
+    "fb": "https://www.facebook.com/mumpyyyyyyy?mibextid=ZbWKwL",
+    "linkdln": "https://www.linkedin.com/in/aditi-archita-khataniar-2189a3226 ",
+    "git": "https://github.com/adzzzzzzzz"
+  },
+  {
+    "id": 3,
+    "name": "Somya Kasaudhan ",
+    "rank": "General Secretary",
+    "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1685375281/23-24%20core/WhatsApp-Image-2023-05-27-at-09.05.18-173_-Somya_Kasaudhan_bfmlfn.webp",
+    "fb": "https://www.facebook.com/profile.php?id=100076107792266",
+    "linkdln": "https://www.linkedin.com/in/somya-kasaudhan-365133229/",
+    "git": "https://github.com/somyakasaudhan02"
+  },
+  {
+    "id": 4,
+    "name": "Dev Mehrotra ",
+    "rank": "Vice President ",
+    "image": "https://res.cloudinary.com/ecell/image/upload/f_auto,q_auto/v1/Team/AY%2024-25/Dev",
+    "fb": "https://m.facebook.com/profile.php?id=100088178675309&name=xhp_nt__fb__action__open_user",
+    "linkdln": "https://www.linkedin.com/in/dev-mehrotra-3026601b/",
+    "insta": "https://www.instagram.com/_dev_.mehrotra/"
+  },
+  {
+    "id": 5,
+    "name": "Devang Bawri ",
+    "rank": "Executive Head ",
+    "image": "https://res.cloudinary.com/ecell/image/upload/f_auto,q_auto/v1/Team/AY%2024-25/dewang",
+    "fb": "https://www.facebook.com/dewang.bawri?mibextid=ZbWKwL",
+    "linkdln": "https://www.linkedin.com/in/dewang-bawri-37885724a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "insta": "https://www.instagram.com/dewang_bawri?igsh=MTBpdjY3anN0N2JkMw=="
+  },
+  {
+    "id": 6,
+    "name": "Aalya Jain",
+    "rank": "Executive Head",
+    "image": "https://res.cloudinary.com/ecell/image/upload/f_auto,q_auto/v1/Team/AY%2024-25/aalya",
+    "fb": "https://www.facebook.com/profile.php?id=100087870020285&mibextid=ZbWKwL",
+    "linkdln": "https://www.linkedin.com/in/aalya-jain-ab1658262?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "insta": "https://www.instagram.com/itsmeaalya_04?igsh=ZWl3OHkwbmhtdTds"
+  },
+  {
+    "id": 7,
+    "name": "Naman Surana",
+    "rank": "Marketing Head",
+    "image": "https://res.cloudinary.com/ecell/image/upload/f_auto,q_auto/v1/Team/AY%2024-25/naman",
+    "fb": "https://www.facebook.com/naman.surana.35",
+    "linkdln": "https://www.linkedin.com/in/naman-surana-020a86257/",
+    "insta": "https://www.instagram.com/surana_naman2205/"
+  },
+  {
+    "id": 8,
+    "name": "Jahanavi Mour ",
+    "rank": "Marketing Head",
+    "image": "https://res.cloudinary.com/ecell/image/upload/f_auto,q_auto/v1/Team/AY%2024-25/jahanavi",
+    "fb": "",
+    "linkdln": "https://www.linkedin.com/in/jahanavi-mour-9b42b5217?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "insta": "https://www.instagram.com/_jahanavi_08?igsh=MTdncHY2OTJ6c2sxdQ=="
+  },
+  {
+    "id": 9,
+    "name": "Ayush Kumar",
+    "rank": "Design Head",
+    "image": "https://res.cloudinary.com/ecell/image/upload/f_auto,q_auto/v1/Team/AY%2024-25/ayush",
+    "fb": "https://www.facebook.com/profile.php?id=100052931493206",
+    "linkdln": "https://www.linkedin.com/in/ayush-kumar-127859280?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "insta": "https://www.instagram.com/i__am__ayush03?igsh=MXR2ZHp6ZmI3NzBvNA=="
+  },
+  {
+    "id": 10,
+    "name": "Dev Jaiswal",
+    "rank": "Design Head",
+    "image": "https://res.cloudinary.com/ecell/image/upload/f_auto,q_auto/v1/Team/AY%2024-25/devj",
+    "fb": "https://www.facebook.com/profile.php?id=100087684498951",
+    "linkdln": "https://www.linkedin.com/in/dev-jaiswal-144922253/",
+    "insta": "https://www.instagram.com/jaiswal_dev_da20k3/"
+  },
+  {
+    "id": 11,
+    "name": "Sahin Alam",
+    "rank": "Technical Head",
+    "image": "https://res.cloudinary.com/ecell/image/upload/f_auto,q_auto/v1/Team/AY%2024-25/sahin",
+    "fb": "https://www.facebook.com/sahin.alam.9216778?mibextid=ZbWKwL",
+    "linkdln": "https://www.linkedin.com/in/sahin-alam-96250324a/",
+    "insta": "https://www.instagram.com/sahinisboss/"
+  },
+  {
+    "id": 12,
+    "name": "Siddharth Ghosh",
+    "rank": "Technical Head",
+    "image": "https://res.cloudinary.com/ecell/image/upload/f_auto,q_auto/v1/Team/AY%2024-25/sid",
+    "fb": "https://www.facebook.com/profile.php?id=100070117330528",
+    "linkdln": "https://www.linkedin.com/in/siddharth-ghosh-18ba29251/",
+    "insta": "https://www.instagram.com/z_maniac_sidd/"
+  },
+  {
+    "id": 13,
+    "name": "Diptangshu Chakraborty ",
+    "rank": "Technical Head",
+    "image": "https://res.cloudinary.com/ecell/image/upload/f_auto,q_auto/v1/Team/AY%2024-25/diptangshu",
+    "fb": "",
+    "linkdln": "https://www.linkedin.com/in/diptangshu-chakraborty-463b77250/",
+    "git": "https://github.com/Diptanghsu-DC"
+  },
+  {
+    "id": 15,
+    "name": "Rudraveer Singh ",
+    "rank": "Content Head",
+    "image": "https://res.cloudinary.com/ecell/image/upload/f_auto,q_auto/v1/Team/AY%2024-25/rudraveer",
+    "fb": "https://www.facebook.com/profile.php?id=100088728744821&name=xhp_nt__fb__action__open_user",
+    "linkdln": "https://www.linkedin.com/in/rudraveer-singh-779214257?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "insta": "https://www.instagram.com/sarthaksinghrudra/"
+  },
+  {
+    "id": 16,
+    "name": "Akash kaushik Goswami",
+    "rank": "Content Head",
+    "image": "https://res.cloudinary.com/ecell/image/upload/f_auto,q_auto/v1/Team/AY%2024-25/Akash",
+    "fb": "https://www.facebook.com/profile.php?id=100087624175100",
+    "linkdln": "https://www.linkedin.com/in/akash-kaushik-goswami-11237b282/",
+    "insta": ""
+  },
+  {
+    "id": 17,
+    "name": "Jahnabi Priyam Das ",
+    "rank": "Curation Head",
+    "image": "https://res.cloudinary.com/ecell/image/upload/f_auto,q_auto/v1/Team/AY%2024-25/jahnabi",
+    "fb": "https://www.facebook.com/profile.php?id=100087908259469",
+    "linkdln": "https://www.linkedin.com/in/jahnabi-priyam-das-8aa088253",
+    "insta": "https://www.instagram.com/jahnabi_priyam?r=nametag"
+  },
+  {
+    "id": 18,
+    "name": "Vishal Singh Patel ",
+    "rank": "Event Management Head ",
+    "image": "https://res.cloudinary.com/ecell/image/upload/f_auto,q_auto/v1/Team/AY%2024-25/vishal",
+    "fb": "https://www.facebook.com/vishalsingh.patel.52493?mibextid=ZbWKwL",
+    "linkdln": "https://www.linkedin.com/in/vishal-singh-patel-501863257?",
+    "insta": "https://www.instagram.com/vishal91145?igsh=MTJ5ZXFrcGJ2d2M2dA=="
+  },
+  {
+    "id": 19,
+    "name": "Saurabh khutela ",
+    "rank": "Event Management Head ",
+    "image": "https://res.cloudinary.com/ecell/image/upload/f_auto,q_auto/v1/Team/AY%2024-25/saurabh",
+    "fb": "https://www.facebook.com/profile.php?id=100014413447295&mibextid=ZbWKwL",
+    "linkdln": "https://www.linkedin.com/mwlite/in/saurabh-khutela-0866b7213",
+    "insta": "https://www.instagram.com/saurabh20__71/"
+  },
+  {
+    "id": 20,
+    "name": "Piyush Agarwal ",
+    "rank": "Event Management Head ",
+    "image": "https://res.cloudinary.com/ecell/image/upload/f_auto,q_auto/v1/Team/AY%2024-25/Piyush",
+    "fb": "https://www.facebook.com/profile.php?id=100041958069163&mibextid=ZbWKwL",
+    "linkdln": "",
+    "insta": "https://www.instagram.com/___piyush_agarwal__/"
+  },
+  {
+    "id": 21,
+    "name": "Md Arifuzzaman",
+    "rank": "Publicity Head",
+    "image": "https://res.cloudinary.com/ecell/image/upload/f_auto,q_auto/v1/Team/AY%2024-25/arif",
+    "fb": "https://www.facebook.com/arif.escaped",
+    "linkdln": "https://www.linkedin.com/in/arif481",
+    "insta": "https://www.instagram.com/arif.escaped"
+  },
+  {
+    "id": 22,
+    "name": "Himanshu Rajput ",
+    "rank": "Publicity Head",
+    "image": "https://res.cloudinary.com/ecell/image/upload/ar_2:3,c_crop,g_north/Team/AY%2024-25/Himanshu.jpg",
+    "fb": "https://www.facebook.com/profile.php?id=100027108048911&mibextid=ZbWKwL",
+    "linkdln": "https://www.linkedin.com/in/himanshu-rajput-a2317a258",
+    "insta": "https://www.instagram.com/him_x_raj?igsh=MWNiMjZ1bmc4YnQ2"
+  },
+  {
+    "id": 23,
+    "name": "Jassi Laskar ",
+    "rank": "Collaboration and Outreach head",
+    "image": "https://res.cloudinary.com/ecell/image/upload/f_auto,q_auto/v1/Team/AY%2024-25/jassi",
+    "fb": "https://www.facebook.com/profile.php?id=100087954885869",
+    "linkdln": "https://www.linkedin.com/in/jassi-laskar-6aba78221",
+    "insta": "https://www.instagram.com/jassi._l?igsh=MXdpY3Vta2g2OGo2aA=="
+  },
+  {
+    "id": 24,
+    "name": "Partha Das",
+    "rank": "Collaboration and Outreach head",
+    "image": "https://res.cloudinary.com/ecell/image/upload/f_auto,q_auto/v1/Team/AY%2024-25/partha",
+    "fb": "https://www.facebook.com/profile.php?id=100011010306245&mibextid=ZbWKwL",
+    "linkdln": "https://www.linkedin.com/in/partha-das-ba1631249",
+    "insta": "https://instagram.com/last_days3"
+  },
+  {
+    "id": 25,
+    "name": "Bedanta Kataki",
+    "rank": "Senior Associate",
+    "image": "https://res.cloudinary.com/ecell/image/upload/f_auto,q_auto/v1/Team/AY%2024-25/bedanta",
+    "fb": "https://m.facebook.com/profile.php/?id=100029303175539&name=xhp_nt__fb__action__open_user",
+    "linkdln": "https://www.linkedin.com/in/bedanta-kataki-0b5205257/",
+    "git": "https://www.github.com/r4inr3aper/"
+  },
+  {
+    "id": 26,
+    "name": "Dheeraj Das",
+    "rank": "Senior Associate",
+    "image": "https://res.cloudinary.com/ecell/image/upload/f_auto,q_auto/v1/Team/AY%2024-25/dhiraj",
+    "fb": "https://www.facebook.com/dheeraj.das.7165",
+    "git": "https://github.com/dheeraj1922d",
+    "insta": "https://www.instagram.com/dheerajdas19/"
+  },
+  {
+    "id": 27,
+    "name": "Deepti Newar ",
+    "rank": "Senior Associate",
+    "image": "https://res.cloudinary.com/ecell/image/upload/f_auto,q_auto/v1/Team/AY%2024-25/deepti",
+    "fb": "https://www.facebook.com/profile.php?id=100070646074538&mibextid=ZbWKwL",
+    "linkdln": "https://www.linkedin.com/in/deepti-newar-84550428a",
+    "insta": "https://www.instagram.com/invites/contact/?i=674jit09b2eu&utm_content=hlmbth9"
+  },
+  {
+    "id": 28,
+    "name": "Khusbu Kumari",
+    "rank": "Senior Associate",
+    "image": "https://res.cloudinary.com/ecell/image/upload/f_auto,q_auto/v1/Team/AY%2024-25/khusbu",
+    "fb": "https://www.facebook.com/profile.php?id=100087627978569",
+    "linkdln": "https://www.linkedin.com/in/deepti-newar-84550428a",
+    "insta": "https://www.instagram.com/khush.bu.18?igsh=NzJxYmlpemticHJp"
+  },
+  {
+    "id": 29,
+    "name": "Yash Singh ",
+    "rank": "Senior Associate",
+    "image": "https://res.cloudinary.com/ecell/image/upload/f_auto,q_auto/v1/Team/AY%2024-25/yash",
+    "fb": "https://www.facebook.com/profile.php?id=100041109863011&mibextid=LQQJ4d",
+    "linkdln": "http://linkedin.com/in/yash-singh-tomar-76318b267",
+    "insta": "https://www.instagram.com/yashsinghtomar_?igsh=OHdkemI3OXgzazds&utm_source=qr"
+  },
+  {
+    "id": 30,
+    "name": "Vishal Sahu",
+    "rank": "Senior Associate",
+    "image": "https://res.cloudinary.com/ecell/image/upload/f_auto,q_auto/v1/Team/AY%2024-25/vishalsahu",
+    "fb": "https://www.facebook.com/profile.php?id=100009971225762&mibextid=ZbWKwL",
+    "linkdln": "https://www.linkedin.com/in/vishal-sahu-b11345201",
+    "insta": "https://www.instagram.com/_vishal___________?igsh=MXFka3Rqb3hyOHRueg=="
+  },
+  {
+    "id": 31,
+    "name": "Suraj Gupta",
+    "rank": "Senior Associate",
+    "image": "https://res.cloudinary.com/ecell/image/upload/f_auto,q_auto/v1/Team/AY%2024-25/suraj",
+    "fb": "https://www.facebook.com/profile.php?id=100089201604204",
+    "linkdln": "https://www.linkedin.com/in/suraj-gupta-427321250/",
+    "insta": "https://www.instagram.com/suraj_gupta407/"
+  }
+]
