@@ -16,6 +16,7 @@ import { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
 import UserContext from "../../../context/UserContext";
+import AdminContextProvider from "../../../context/AdminContextProvider";
 
 const Admin = () => {
   const [admin, setAdmin] = useState(false);
@@ -38,7 +39,7 @@ const Admin = () => {
     return <h1>We are checking your profile</h1>;
   }
   return (
-    <>
+    <AdminContextProvider>
       {" "}
       {loading ? (
         <h1>We are checking your profile</h1>
@@ -70,7 +71,7 @@ const Admin = () => {
           </div>
         </div>
       )}
-    </>
+    </AdminContextProvider>
   );
 };
 

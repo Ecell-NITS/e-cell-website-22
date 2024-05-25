@@ -4,7 +4,7 @@ import axios from "axios";
 import { useEffect } from "react";
 
 const UserContextProvider = ({ children }) => {
-  const [user, setUser] = useState({});
+  const [user, setUser] = useState(null);
   useEffect(() => {
     const fetchUserProfile = async () => {
       try {
