@@ -83,7 +83,7 @@ const Blog = () => {
         setSortingMessage(` ${sortingOrder} blogs coming...`);
         setIsFetching(true);
         const response = await axios.get(
-          `${import.meta.env.VITE_REACT_APP_APIMAIN}/acceptedblogs`
+          `${import.meta.env.VITE_REACT_APP_APIMAIN}/getblogs`
         );
         const sortedBlogs = response.data.sort((a, b) => {
           if (sortingOrder === "latest") {
@@ -102,7 +102,11 @@ const Blog = () => {
         // console.log(`writeremaill: ${writeremaill}`)
         // console.log(response.data)
         setSortingMessage("");
-        setBlogscreated(sortedBlogs);
+        setBlogscreated(
+          sortedBlogs.filter((item) => {
+            return item.status === "published";
+          })
+        );
       } catch (error) {
         console.log("Error fetching blogs:", error);
       } finally {
@@ -199,7 +203,7 @@ const Blog = () => {
                 <>
                   <div className="mainparentblogindicard">
                     {filteredBlogs.map((blog) => (
-                      <div key={blog._id} className="indicardblog">
+                      <div key={blog.name} className="indicardblog">
                         {/* <h1>id: {blog._id}</h1> */}
                         <div className="imgholdercontblog">
                           <img src={blog.topicpic} alt="" id="hoverscaledown" />

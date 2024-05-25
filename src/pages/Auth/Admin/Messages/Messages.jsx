@@ -10,6 +10,7 @@ const Messages = () => {
   const [loading, setLoading] = useState(true);
 
   const markAsRead = (id) => {
+    toast.info("Marking as read...");
     axios
       .get(`${import.meta.env.VITE_REACT_APP_APIMAIN}/query-read/${id}`, config)
       .then((response) => {

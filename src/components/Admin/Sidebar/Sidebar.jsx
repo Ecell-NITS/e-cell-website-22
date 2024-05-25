@@ -6,10 +6,10 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { useState } from "react";
 import { doc } from "prettier";
 
-const SidebarAdmin = () => {
+const SidebarAdmin = ({ isSuperAdmin }) => {
   const navigate = useNavigate();
   const [menu, setMenu] = useState(false);
-  const [superadmin, setSuperadmin] = useState(true);
+  const [superadmin, setSuperadmin] = useState(isSuperAdmin);
 
   const handleMenu = () => {
     setMenu(!menu);
