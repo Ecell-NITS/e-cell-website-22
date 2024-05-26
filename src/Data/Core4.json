@@ -6,16 +6,16 @@
     "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1685375265/23-24%20core/IMG_20230209_000433_-_EEB_143_Arpit_1_yk76xm.webp",
     "fb": "https://www.facebook.com/arpit.dhankani?mibextid=ZbWKwL",
     "linkdln": "https://www.linkedin.com/in/arpit-dhankani-27238b219/",
-    "git": "https://github.com/ArpitDhankani"
+    "insta": "https://www.instagram.com/evil_soul29/"
   },
   {
     "id": 2,
-    "name": "Aditi Archita Khataniar ",
+    "name": "Aditi Archita Khataniar",
     "rank": "General Secretary",
     "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1685375265/23-24%20core/IMG_20230227_011043_369_-_CSE_185_Aditi_Archita_Khataniar_1_sjuylx.webp",
     "fb": "https://www.facebook.com/mumpyyyyyyy?mibextid=ZbWKwL",
     "linkdln": "https://www.linkedin.com/in/aditi-archita-khataniar-2189a3226 ",
-    "git": "https://github.com/adzzzzzzzz"
+    "insta": "https://www.instagram.com/_.kabhi.kabhi.aditiii._/"
   },
   {
     "id": 3,
@@ -24,7 +24,7 @@
     "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1685375281/23-24%20core/WhatsApp-Image-2023-05-27-at-09.05.18-173_-Somya_Kasaudhan_bfmlfn.webp",
     "fb": "https://www.facebook.com/profile.php?id=100076107792266",
     "linkdln": "https://www.linkedin.com/in/somya-kasaudhan-365133229/",
-    "git": "https://github.com/somyakasaudhan02"
+    "insta": "https://www.instagram.com/_somya02/"
   },
   {
     "id": 4,
@@ -239,7 +239,7 @@
     "rank": "Senior Associate",
     "image": "https://res.cloudinary.com/ecell/image/upload/f_auto,q_auto/v1/Team/AY%2024-25/khusbu",
     "fb": "https://www.facebook.com/profile.php?id=100087627978569",
-    "linkdln": "https://www.linkedin.com/in/deepti-newar-84550428a",
+    "linkdln": "https://www.linkedin.com/in/khusbu-kumari-3a404b24b",
     "insta": "https://www.instagram.com/khush.bu.18?igsh=NzJxYmlpemticHJp"
   },
   {
@@ -268,5 +268,13 @@
     "fb": "https://www.facebook.com/profile.php?id=100089201604204",
     "linkdln": "https://www.linkedin.com/in/suraj-gupta-427321250/",
     "insta": "https://www.instagram.com/suraj_gupta407/"
+  },
+  {
+    "id": 31,
+    "name": "Sahir Ahmed",
+    "rank": "Senior Associate",
+    "image": "https://res.cloudinary.com/ecell/image/upload/f_auto,q_auto/v1/Team/AY%2024-25/sahir",
+    "fb": "https://www.facebook.com/monster.damn.54?mibextid=LQQJ4d",
+    "linkdln": "https://www.linkedin.com/in/sahir-ahmed-5398a2256"
   }
 ]
