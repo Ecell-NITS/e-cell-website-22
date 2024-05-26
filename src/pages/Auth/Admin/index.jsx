@@ -17,6 +17,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import UserContext from "../../../context/UserContext";
 import AdminContextProvider from "../../../context/AdminContextProvider";
+import BlogContextProvider from "../../../context/BlogContextProvider";
 
 const Admin = () => {
   const [admin, setAdmin] = useState(false);
@@ -40,37 +41,39 @@ const Admin = () => {
   }
   return (
     <AdminContextProvider>
-      {" "}
-      {loading ? (
-        <h1>We are checking your profile</h1>
-      ) : !admin ? (
-        <h1>You are not authorized</h1>
-      ) : (
-        <div className="admin">
-          <div className="main">
-            <HeaderAdmin />
-            <Helmet>
-              <title>{`Admin | E-CELL NIT Silchar`}</title>
-              <meta name="description" content="E-CELL NIT SILCHAR" />
-            </Helmet>
-            <Routes>
-              <Route path="/" element={<AdminLanding />} />
-              <Route path="messages" element={<Messages />} />
-              <Route path="events" element={<EventsAdmin />} />
-              <Route path="add-events" element={<AddEventsAdmin />} />
-              <Route path="blogs" element={<BlogsAdmin />} />
-              <Route path="add-blogs" element={<AddBlogsAdmin />} />
-              <Route path="users" element={<Users />} />
-              <Route path="messages/:id" element={<IndiMsg />} />
-              <Route path="blogs/review/:id" element={<BlogReview />} />
-            </Routes>
+      <BlogContextProvider>
+        {" "}
+        {loading ? (
+          <h1>We are checking your profile</h1>
+        ) : !admin ? (
+          <h1>You are not authorized</h1>
+        ) : (
+          <div className="admin">
+            <div className="main">
+              <HeaderAdmin />
+              <Helmet>
+                <title>{`Admin | E-CELL NIT Silchar`}</title>
+                <meta name="description" content="E-CELL NIT SILCHAR" />
+              </Helmet>
+              <Routes>
+                <Route path="/" element={<AdminLanding />} />
+                <Route path="messages" element={<Messages />} />
+                <Route path="events" element={<EventsAdmin />} />
+                <Route path="add-events" element={<AddEventsAdmin />} />
+                <Route path="blogs" element={<BlogsAdmin />} />
+                <Route path="add-blogs" element={<AddBlogsAdmin />} />
+                <Route path="users" element={<Users />} />
+                <Route path="messages/:id" element={<IndiMsg />} />
+                <Route path="blogs/review/:id" element={<BlogReview />} />
+              </Routes>
+            </div>
+            {/* <div className="main"></div> */}
+            <div className="sidebar">
+              <SidebarAdmin isSuperAdmin={superadmin} />
+            </div>
           </div>
-          {/* <div className="main"></div> */}
-          <div className="sidebar">
-            <SidebarAdmin isSuperAdmin={superadmin} />
-          </div>
-        </div>
-      )}
+        )}
+      </BlogContextProvider>
     </AdminContextProvider>
   );
 };

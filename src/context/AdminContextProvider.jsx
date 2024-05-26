@@ -59,7 +59,6 @@ const AdminContextProvider = ({ children }) => {
         .get(`${import.meta.env.VITE_REACT_APP_APIMAIN}/allaccounts`, config)
         .then((response) => {
           setUsers(response.data.users);
-          console.log(response.data.users);
           setUserLoading(false);
         })
         .catch((err) => {

@@ -3,22 +3,25 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { BiLike } from "react-icons/bi";
-// import { AiTwotoneLike } from 'react-icons/ai'
-// import {writeremaill} from '../../pages/Resources/Blogs/Blogindividual'
+import { useContext } from "react";
+import BlogContext from "../../context/BlogContext";
 import "./Blog.css";
 import { toast } from "react-toastify";
+
 const Blog = () => {
-  const [blogscreated, setBlogscreated] = useState([]);
-  const [sortingOrder, setSortingOrder] = useState("latest");
-  const [sortingMessage, setSortingMessage] = useState("");
   const [activeTagFilter, setActiveTagFilter] = useState("");
-  const [isFetching, setIsFetching] = useState(true);
-  const [authorid, setAuthorid] = useState("");
-  // const [likedBlogs, setLikedBlogs] = useState([]);
-  // const [writeremaill, setWriteremaill] = useState("")
 
   const navigate = useNavigate();
-
+  const {
+    blogscreated,
+    setBlogscreated,
+    sortingOrder,
+    setSortingOrder,
+    isFetching,
+    sortingMessage,
+    setSortingMessage,
+    authorid,
+  } = useContext(BlogContext);
   const handleLikeKarp = async (blogId) => {
     if (!localStorage.getItem("token")) {
       navigate("/login");
@@ -76,46 +79,6 @@ const Blog = () => {
       }
     }
   };
-
-  useEffect(() => {
-    const fetchBlogs = async () => {
-      try {
-        setSortingMessage(` ${sortingOrder} blogs coming...`);
-        setIsFetching(true);
-        const response = await axios.get(
-          `${import.meta.env.VITE_REACT_APP_APIMAIN}/getblogs`
-        );
-        const sortedBlogs = response.data.sort((a, b) => {
-          if (sortingOrder === "latest") {
-            return new Date(b.timestamp) - new Date(a.timestamp);
-          } else if (sortingOrder === "likes") {
-            const likesA = a.likes ? a.likes.length : 0;
-            const likesB = b.likes ? b.likes.length : 0;
-            return likesB - likesA;
-          } else {
-            return new Date(a.timestamp) - new Date(b.timestamp);
-          }
-        });
-        setAuthorid(response.data.authorid);
-
-        // setWriteremaill(response.data.writeremail)
-        // console.log(`writeremaill: ${writeremaill}`)
-        // console.log(response.data)
-        setSortingMessage("");
-        setBlogscreated(
-          sortedBlogs.filter((item) => {
-            return item.status === "published";
-          })
-        );
-      } catch (error) {
-        console.log("Error fetching blogs:", error);
-      } finally {
-        setIsFetching(false);
-      }
-    };
-
-    fetchBlogs();
-  }, [sortingOrder]);
 
   const handleSortingOrderChange = (order) => {
     setSortingOrder(order);

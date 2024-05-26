@@ -6,6 +6,7 @@ import BooksSummary from "../../components/ResourceModal/BooksSummary";
 import PodcastSummary from "../../components/ResourceModal/PodcastSummary";
 import Blog from "../../components/Blog/Blog";
 import ScrollToSection from "../../components/shared/ScrollToSection/Scroll";
+import BlogContextProvider from "../../context/BlogContextProvider";
 
 const Resources = () => {
   ScrollToSection();
