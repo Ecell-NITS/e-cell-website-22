@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import NavbarTeam from "../../../components/shared/Navbar/NavbarTeam";
@@ -11,9 +11,11 @@ import { FaFacebookF } from "react-icons/fa";
 import { AiFillInstagram, AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import { Helmet } from "react-helmet";
 import { toast } from "react-toastify";
+import UserContext from "../../../context/UserContext";
 const Dashboard = () => {
   const navigate = useNavigate();
-  const [user, setUser] = useState({});
+  const { user } = useContext(UserContext);
+
   const [admin, setAdmin] = useState(false);
   const [editedbio, setEditedbio] = useState("");
   const [editedfb, setEditedfb] = useState("");
@@ -27,39 +29,15 @@ const Dashboard = () => {
   const [hidegithub, setHidegithub] = useState(false);
 
   useEffect(() => {
-    const token = localStorage.getItem("token");
-    const config = {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    };
-
-    axios
-      .get(`${import.meta.env.VITE_REACT_APP_APIMAIN}/dashboard`, config)
-      .then((response) => {
-        const { name, email, userimg, facebook, github, linkedin, instagram, role } =
-          response.data;
-        setUser({ name, email, userimg, facebook, github, linkedin, instagram });
-        setEditedbio(response.data.bio);
-        setEditedfb(response.data.facebook);
-        setEditedig(response.data.instagram);
-        setEditedGithub(response.data.github);
-        setEditedLinkedin(response.data.linkedin);
-        setAdmin(role === "admin" || role === "superadmin");
-        console.log(response.data);
-      })
-      .catch((error) => {
-        if (error.response.status === 401) {
-          navigate("/login");
-        } else if (error.response.data.error === "Invalid token") {
-          localStorage.removeItem("token");
-          toast.error("Session Expired! Please Login Again");
-          navigate("/login");
-        } else {
-          console.error("Failed to retrieve user details", error);
-        }
-      });
-  }, [navigate]);
+    if (user) {
+      setAdmin(user?.role === "admin" || user?.role === "superadmin");
+      setEditedbio(user?.bio);
+      setEditedfb(user?.facebook);
+      setEditedig(user?.instagram);
+      setEditedGithub(user?.github);
+      setEditedLinkedin(user?.linkedin);
+    }
+  }, [user]);
 
   const ButtonSignout = () => {
     navigate("/logout");
@@ -72,17 +50,17 @@ const Dashboard = () => {
     navigate("/admin");
   };
 
-  const handleallblogsbtn = () => {
-    navigate("/mypublishedblogs");
-  };
+  // const handleallblogsbtn = () => {
+  //   navigate("/mypublishedblogs");
+  // };
 
-  const handleallprovblogs = () => {
-    navigate("/myallblogs");
-  };
+  // const handleallprovblogs = () => {
+  //   navigate("/myallblogs");
+  // };
 
-  const handlelikedblogs = () => {
-    navigate("/likedblogs");
-  };
+  // const handlelikedblogs = () => {
+  //   navigate("/likedblogs");
+  // };
 
   // console.log(`${editedfb}`)
 
@@ -232,7 +210,7 @@ const Dashboard = () => {
             </div>
 
             <div className="biohbhauidhar">
-              {editedbio.split("\n").map((bio, index) => (
+              {editedbio?.split("\n").map((bio, index) => (
                 <h3 key={index} style={{ whiteSpace: "pre-line" }}>
                   {bio}
                 </h3>

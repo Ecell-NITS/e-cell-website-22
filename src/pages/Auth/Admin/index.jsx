@@ -12,9 +12,12 @@ import AddBlogsAdmin from "./AddBlogs/AddBlogs";
 import { Helmet } from "react-helmet";
 import IndiMsg from "./Messages/IndividualMessages/IndiMsg";
 import BlogReview from "./Blogs/BlogReview/BlogReview";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
+import UserContext from "../../../context/UserContext";
+import AdminContextProvider from "../../../context/AdminContextProvider";
+import BlogContextProvider from "../../../context/BlogContextProvider";
 
 const Admin = () => {
   const [admin, setAdmin] = useState(false);
@@ -22,75 +25,56 @@ const Admin = () => {
   const [loading, setLoading] = useState(true);
 
   const navigate = useNavigate();
+
+  const { user } = useContext(UserContext);
+
   useEffect(() => {
-    const token = localStorage.getItem("token");
-    const config = {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    };
+    if (user) {
+      setAdmin(user?.role === "admin" || user?.role === "superadmin");
+      setSuperadmin(user?.role === "superadmin");
+      setLoading(false);
+    }
+  }, [navigate, user, admin]);
 
-    axios
-      .get(`${import.meta.env.VITE_REACT_APP_APIMAIN}/dashboard`, config)
-      .then(async (response) => {
-        setLoading(false);
-        const { role } = await response.data;
-        setAdmin(role === "admin" || role === "superadmin");
-        setSuperadmin(role === "superadmin");
-      })
-      .catch((error) => {
-        if (error.response.status === 401) {
-          navigate("/login");
-        } else if (error.response.data.error === "Invalid token") {
-          localStorage.removeItem("token");
-          toast.error("Session Expired! Please Login Again");
-          navigate("/login");
-        } else {
-          console.error("Failed to retrieve user details", error);
-        }
-      });
-  }, [navigate]);
-
-  if (!admin) {
-    navigate("/login");
-  }
   if (loading) {
     return <h1>We are checking your profile</h1>;
   }
   return (
-    <>
-      {" "}
-      {loading ? (
-        <h1>We are checking your profile</h1>
-      ) : !admin ? (
-        <h1>You are not authorized</h1>
-      ) : (
-        <div className="admin">
-          <div className="main">
-            <HeaderAdmin />
-            <Helmet>
-              <title>{`Admin | E-CELL NIT Silchar`}</title>
-              <meta name="description" content="E-CELL NIT SILCHAR" />
-            </Helmet>
-            <Routes>
-              <Route path="/" element={<AdminLanding />} />
-              <Route path="messages" element={<Messages />} />
-              <Route path="events" element={<EventsAdmin />} />
-              <Route path="add-events" element={<AddEventsAdmin />} />
-              <Route path="blogs" element={<BlogsAdmin />} />
-              <Route path="add-blogs" element={<AddBlogsAdmin />} />
-              <Route path="users" element={<Users />} />
-              <Route path="messages/:id" element={<IndiMsg />} />
-              <Route path="blogs/review/:id" element={<BlogReview />} />
-            </Routes>
+    <AdminContextProvider>
+      <BlogContextProvider>
+        {" "}
+        {loading ? (
+          <h1>We are checking your profile</h1>
+        ) : !admin ? (
+          <h1>You are not authorized</h1>
+        ) : (
+          <div className="admin">
+            <div className="main">
+              <HeaderAdmin />
+              <Helmet>
+                <title>{`Admin | E-CELL NIT Silchar`}</title>
+                <meta name="description" content="E-CELL NIT SILCHAR" />
+              </Helmet>
+              <Routes>
+                <Route path="/" element={<AdminLanding />} />
+                <Route path="messages" element={<Messages />} />
+                <Route path="events" element={<EventsAdmin />} />
+                <Route path="add-events" element={<AddEventsAdmin />} />
+                <Route path="blogs" element={<BlogsAdmin />} />
+                <Route path="add-blogs" element={<AddBlogsAdmin />} />
+                <Route path="users" element={<Users />} />
+                <Route path="messages/:id" element={<IndiMsg />} />
+                <Route path="blogs/review/:id" element={<BlogReview />} />
+              </Routes>
+            </div>
+            {/* <div className="main"></div> */}
+            <div className="sidebar">
+              <SidebarAdmin isSuperAdmin={superadmin} />
+            </div>
           </div>
-          {/* <div className="main"></div> */}
-          <div className="sidebar">
-            <SidebarAdmin isSuperAdmin={superadmin} />
-          </div>
-        </div>
-      )}
-    </>
+        )}
+      </BlogContextProvider>
+    </AdminContextProvider>
   );
 };
 

@@ -4,34 +4,15 @@ import styles from "./Blogs.module.scss";
 import { FaPlus } from "react-icons/fa";
 import data from "../../../../Data/sample-blogs.json";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useEffect } from "react";
 import axios from "axios";
+import BlogContext from "../../../../context/BlogContext";
 
 const BlogsAdmin = () => {
-  const [blogs, setBlogs] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [provisionalBlogs, setProvisionalBlogs] = useState([]);
-  useEffect(() => {
-    const token = localStorage.getItem("token");
-    const config = {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    };
+  const { blogs, provisionalBlogs, loading } = useContext(BlogContext);
 
-    // all blogs are fetched here
-    axios
-      .get(`${import.meta.env.VITE_REACT_APP_APIMAIN}/getblogs`, config)
-      .then((response) => {
-        setProvisionalBlogs(response.data.filter((blog) => blog.status !== "published")); // provisional blogs are filtered here
-        setBlogs(response.data.filter((blog) => blog.status === "published")); // published blogs are filtered here
-        setLoading(false);
-      })
-      .catch((error) => {
-        console.error("Failed to retrieve blogs", error);
-      });
-  }, []);
+  useEffect(() => {}, []);
 
   return (
     <div className={styles.BlogsAdmin}>

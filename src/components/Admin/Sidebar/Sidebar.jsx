@@ -3,13 +3,15 @@ import { NavLink } from "react-router-dom";
 import "./Sidebar.scss";
 import { ImCross } from "react-icons/im";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { doc } from "prettier";
+import AdminContext from "../../../context/AdminContext";
 
 const SidebarAdmin = ({ isSuperAdmin }) => {
   const navigate = useNavigate();
   const [menu, setMenu] = useState(false);
   const [superadmin, setSuperadmin] = useState(isSuperAdmin);
+  const { users } = useContext(AdminContext);
 
   const handleMenu = () => {
     setMenu(!menu);
@@ -40,7 +42,7 @@ const SidebarAdmin = ({ isSuperAdmin }) => {
           <NavLink to="/admin/add-events">Add Events</NavLink>
           <NavLink to="/admin/blogs">Blogs</NavLink>
           <NavLink to="/admin/add-blogs">Add Blogs</NavLink>
-          {superadmin && <NavLink to="/admin/users">Users</NavLink>}
+          {superadmin && users && <NavLink to="/admin/users">Users</NavLink>}
         </div>
         <button onClick={handleClient}>Client Site</button>
         <div className="menu"></div>
