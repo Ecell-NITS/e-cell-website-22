@@ -83,6 +83,10 @@ function App() {
                     element={<Gallery />}
                     key="route-gallery-screen"
                   />
+                  <Route exact path="/recruitment" element={<Recuitmentdetails />} />
+                  <Route exact path="/recruiting" element={<Recruiting />} />
+                  <Route exact path="/techresults" element={<Techresults />} />
+                  <Route exact path="/techsubmission" element={<Techsubmission />} />
                   <Route exact path="/team" element={<Team />} key="route-team-screen" />
                   <Route
                     exact

@@ -1,12 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./Logout.css";
 import { Link } from "react-router-dom";
 import { GoArrowLeft } from "react-icons/go";
+import UserContext from "../../../context/UserContext";
 const Logout = () => {
-  const [user, setUser] = useState({});
+  // const [user, setUser] = useState({});
   const navigate = useNavigate();
+  const { user, setUser } = useContext(UserContext);
 
   useEffect(() => {
     document.title = "Logout?";
@@ -21,20 +23,21 @@ const Logout = () => {
       navigate("/login");
     }
 
-    try {
-      axios
-        .get(`${import.meta.env.VITE_REACT_APP_APIMAIN}/dashboard`, config)
-        .then((res) => {
-          const { name, userimg } = res.data;
-          setUser({ name, userimg });
-        });
-    } catch (err) {
-      console.error(err);
-    }
+    // try {
+    //   axios
+    //     .get(`${import.meta.env.VITE_REACT_APP_APIMAIN}/dashboard`, config)
+    //     .then((res) => {
+    //       const { name, userimg } = res.data;
+    //       setUser({ name, userimg });
+    //     });
+    // } catch (err) {
+    //   console.error(err);
+    // }
   }, [navigate]);
 
   const handleLogout = () => {
     localStorage.removeItem("token");
+    setUser(null);
     navigate("/");
   };
 
