@@ -12,10 +12,12 @@ import { AiFillInstagram, AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import { Helmet } from "react-helmet";
 import { toast } from "react-toastify";
 import UserContext from "../../../context/UserContext";
+import Preloader from "../../../components/Loader/Loader";
 const Dashboard = () => {
   const navigate = useNavigate();
-  const { user } = useContext(UserContext);
+  const { user, fetchUserProfile } = useContext(UserContext);
 
+  const [isLoaded, setIsLoaded] = useState(true);
   const [admin, setAdmin] = useState(false);
   const [editedbio, setEditedbio] = useState("");
   const [editedfb, setEditedfb] = useState("");
@@ -29,6 +31,9 @@ const Dashboard = () => {
   const [hidegithub, setHidegithub] = useState(false);
 
   useEffect(() => {
+    if (!user) {
+      fetchUserProfile();
+    }
     if (user) {
       setAdmin(user?.role === "admin" || user?.role === "superadmin");
       setEditedbio(user?.bio);
@@ -36,8 +41,9 @@ const Dashboard = () => {
       setEditedig(user?.instagram);
       setEditedGithub(user?.github);
       setEditedLinkedin(user?.linkedin);
+      setIsLoaded(false);
     }
-  }, [user]);
+  }, [fetchUserProfile, user]);
 
   const ButtonSignout = () => {
     navigate("/logout");
@@ -113,6 +119,10 @@ const Dashboard = () => {
       setHidegithub(false);
     }
   }, [editedGithub]);
+
+  if (isLoaded) {
+    return <Preloader />;
+  }
 
   return (
     <>

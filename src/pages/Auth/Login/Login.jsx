@@ -24,7 +24,6 @@ const Login = () => {
   }, [navigate]);
 
   const handlelogin = (e) => {
-    e.preventDefault();
     if (!email || !password) {
       // setMessage("Please fill all required fields");
       toast.error(`Please fill all required fields`, {
@@ -107,7 +106,7 @@ const Login = () => {
         <div className="formcontsignup">
           <h1 className="okwelcometoecell">Welcome back</h1>
           <h4 className="enterdtlssignup">Please enter your details.</h4>
-          <form onSubmit={handlelogin} className="formsignaccoutn">
+          <div className="formsignaccoutn">
             <div className="inputdicdignup">
               <h3>Email</h3>
               <input
@@ -124,6 +123,9 @@ const Login = () => {
                 placeholder="Password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
+                onKeyDown={(e) => {
+                  e.key === "Enter" && handlelogin();
+                }}
               />
 
               <label className="labelshowpass">
@@ -153,6 +155,7 @@ const Login = () => {
               className="btnsubmittodb"
               type="submit"
               disabled={disablelogin}
+              onClick={handlelogin}
               style={{
                 opacity: disablelogin ? 0.5 : 1,
                 cursor: disablelogin ? "not-allowed" : "pointer",
@@ -171,7 +174,7 @@ const Login = () => {
                 Sign Up
               </button>
             </div>
-          </form>
+          </div>
         </div>
 
         <div className="imgbgholdersignup">
