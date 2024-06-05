@@ -18,6 +18,7 @@ import { toast } from "react-toastify";
 import UserContext from "../../../context/UserContext";
 import AdminContextProvider from "../../../context/AdminContextProvider";
 import BlogContextProvider from "../../../context/BlogContextProvider";
+import Applications from "./Applications/Applications";
 
 const Admin = () => {
   const [admin, setAdmin] = useState(false);
@@ -63,6 +64,7 @@ const Admin = () => {
                 <Route path="blogs" element={<BlogsAdmin />} />
                 <Route path="add-blogs" element={<AddBlogsAdmin />} />
                 <Route path="users" element={<Users />} />
+                <Route path="applications" element={<Applications />} />
                 <Route path="messages/:id" element={<IndiMsg />} />
                 <Route path="blogs/review/:id" element={<BlogReview />} />
               </Routes>

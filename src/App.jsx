@@ -10,7 +10,7 @@ import Events from "./pages/Events/Events";
 import Resources from "./pages/Resources/Resources";
 import AllEvents from "./components/EventsPage/AllEvents";
 import Eventsred from "./pages/Events_red/Events_red";
-import Recuitmentdetails from "./pages/Recruiting2324/Recuitmentdetails";
+import Recuitmentdetails from "./pages/Recruiting2425/Recuitmentdetails";
 import Contactresponse from "./components/Home/Contact/Contactresponse";
 import Newsletter from "./components/shared/Footer/Newsletter";
 import Createblog from "./pages/Resources/Blogs/Createblog";
@@ -37,10 +37,11 @@ import Preloader from "./components/Loader/Loader";
 import { useState, useEffect } from "react";
 import ConnectionDropBanner from "./components/ConnectionDropBanner/ConnectionDropBanner";
 import Admin from "./pages/Auth/Admin";
-import Recruiting from "./pages/Recruiting2324/Recruiting";
+import Recruiting from "./pages/Recruiting2425/Recruiting";
 import Techsubmission from "./pages/Projectsubmission/Techsubmission";
 import UserContextProvider from "./context/UserContextProvider";
 import BlogContextProvider from "./context/BlogContextProvider";
+import TechRecruit from "./pages/Recruiting2425/Tech/TechRecruit";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -85,6 +86,7 @@ function App() {
                   />
                   <Route exact path="/recruitment" element={<Recuitmentdetails />} />
                   <Route exact path="/recruiting" element={<Recruiting />} />
+                  <Route exact path="/recruiting/tech" element={<TechRecruit />} />
                   <Route exact path="/techresults" element={<Techresults />} />
                   <Route exact path="/techsubmission" element={<Techsubmission />} />
                   <Route exact path="/team" element={<Team />} key="route-team-screen" />
@@ -261,6 +263,7 @@ function App() {
                     <Route path="blogs" />
                     <Route path="add-blogs" />
                     <Route path="users" />
+                    <Route path="applications" />
                     <Route path="messages/:id" />
                     <Route path="blogs/review/:id" />
                     <Route path="/admin/users" />
