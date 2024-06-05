@@ -176,7 +176,7 @@ const Recruiting = () => {
 
     // Check if the scholarId is valid
     if (
-      !/^221[1-6][01]\d{2}$/.test(scholarId) ||
+      !/^231[1-6][01]\d{2}$/.test(scholarId) ||
       (scholarId[3] === "1" && parseInt(scholarId.slice(-3)) > 157) ||
       (scholarId[3] === "2" && parseInt(scholarId.slice(-3)) > 167) ||
       (scholarId[3] === "3" && parseInt(scholarId.slice(-3)) > 167) ||

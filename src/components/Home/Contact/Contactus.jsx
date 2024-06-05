@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Contactus.css";
 import axios from "axios";
 import { FaTelegramPlane } from "react-icons/fa";
-import "../../../pages/Recruiting2324/Recruiting.css";
+import "../../../pages/Recruiting2425/Recruiting.css";
 import { toast } from "react-toastify";
 const Contactus = () => {
   const [name, setName] = useState("");

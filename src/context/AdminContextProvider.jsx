@@ -16,6 +16,7 @@ const AdminContextProvider = ({ children }) => {
   //   context approach for message page start
   const [messages, setMessages] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [recruitmentData, setRecruitmentData] = useState([]);
 
   const markAsRead = (id) => {
     toast.info("Marking as read...");
@@ -84,6 +85,25 @@ const AdminContextProvider = ({ children }) => {
       });
   };
 
+  //   context approach for users page end
+
+  //  context approach for recruitment page start
+
+  useEffect(() => {
+    try {
+      axios
+        .get(`${import.meta.env.VITE_REACT_APP_TECH_RECRUIT_API}/applications`, config)
+        .then((response) => {
+          setRecruitmentData(response.data);
+          console.log(response.data);
+        });
+    } catch (error) {
+      console.error("Failed to retrieve recruitment data", error);
+      toast.error("Failed to retrieve recruitment data");
+    }
+  }, [config]);
+
+  //  context approach for recruitment page end
   return (
     <AdminContext.Provider
       value={{
@@ -96,6 +116,7 @@ const AdminContextProvider = ({ children }) => {
         setUsers,
         userLoading,
         makeClient,
+        recruitmentData,
       }}
     >
       {children}
