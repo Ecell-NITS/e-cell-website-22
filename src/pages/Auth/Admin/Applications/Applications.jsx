@@ -81,6 +81,9 @@ const Applications = () => {
                   Team: <strong>{data.domain}</strong>{" "}
                 </p>
                 <p>
+                  Team: <strong>{data.domain}</strong>{" "}
+                </p>
+                <p>
                   Phone: <strong>{data.number}</strong>{" "}
                 </p>
                 <p>

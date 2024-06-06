@@ -24,9 +24,13 @@ const TechRecruit = () => {
   const [githubUrl, setGithubUrl] = useState("");
   const [otp, setOtp] = useState("");
 
+  const [sendingOtp, setSendingOtp] = useState(false);
+  const [submittingForm, setSubmittingForm] = useState(false);
+
   // Form submit
   const hanleSubmit = (e) => {
     e.preventDefault();
+    setSubmittingForm(true);
 
     if (
       name === "" ||
@@ -96,16 +100,21 @@ const TechRecruit = () => {
           } else {
             toast.error("Failed to submit form");
           }
+        })
+        .finally(() => {
+          setSubmittingForm(false);
         });
     } catch (error) {
       console.error("Failed to submit form", error);
       toast.error("Failed to submit form");
+      setSubmittingForm(false);
     }
   };
 
   // Send OTP
   const sendOtp = (e) => {
     e.preventDefault();
+    setSendingOtp(true);
     if (email === "" || !email.includes("@") || !email.includes("nits.ac.in")) {
       toast.error("Invalid email id");
       return;
@@ -121,7 +130,6 @@ const TechRecruit = () => {
         email,
       })
       .then((response) => {
-        console.log("OTP sent successfully", response);
         toast.success("OTP sent successfully");
       })
       .catch((error) => {
@@ -131,6 +139,9 @@ const TechRecruit = () => {
         } else {
           toast.error("Failed to send OTP");
         }
+      })
+      .finally(() => {
+        setSendingOtp(false);
       });
   };
   return (
@@ -212,7 +223,9 @@ const TechRecruit = () => {
                 onChange={(e) => setEmail(e.target.value)}
                 required
               />
-              <button onClick={sendOtp}>Send Otp</button>
+              <button onClick={sendOtp}>
+                {sendingOtp ? "Sending OTP..." : "Send OTP"}
+              </button>
               <input
                 type="text"
                 placeholder="Your OTP"
@@ -260,7 +273,7 @@ const TechRecruit = () => {
               placeholder="https://github.com/ruler45"
               onChange={(e) => setGithubUrl(e.target.value)}
             />
-            <button type="submit">Submit</button>
+            <button type="submit">{submittingForm ? "Submitting..." : "Submit"}</button>
           </form>
         </div>
       </div>

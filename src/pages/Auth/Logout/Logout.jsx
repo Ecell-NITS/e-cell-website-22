@@ -39,6 +39,7 @@ const Logout = () => {
     localStorage.removeItem("token");
     setUser(null);
     navigate("/");
+    window.location.reload();
   };
 
   const handleGoToDashboard = () => {
