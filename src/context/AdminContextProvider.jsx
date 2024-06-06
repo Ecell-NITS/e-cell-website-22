@@ -74,10 +74,21 @@ const AdminContextProvider = ({ children }) => {
     axios
       .get(`${import.meta.env.VITE_REACT_APP_APIMAIN}/makeclient/${email}`, config)
       .then((response) => {
-        setUsers(
-          users.map((user) => (user.email === email ? { ...user, role: "client" } : user))
-        );
+        console.log(response);
         toast.success("Role changed to client");
+      })
+      .catch((err) => {
+        console.error("Failed to change role", err);
+        toast.error("Failed to change role");
+      });
+  };
+
+  const makeAdmin = (email) => {
+    axios
+      .get(`${import.meta.env.VITE_REACT_APP_APIMAIN}/makeadmin/${email}`, config)
+      .then((response) => {
+        console.log(response);
+        toast.success("Role changed to admin");
       })
       .catch((err) => {
         console.error("Failed to change role", err);
@@ -95,7 +106,6 @@ const AdminContextProvider = ({ children }) => {
         .get(`${import.meta.env.VITE_REACT_APP_TECH_RECRUIT_API}/applications`, config)
         .then((response) => {
           setRecruitmentData(response.data);
-          console.log(response.data);
         });
     } catch (error) {
       console.error("Failed to retrieve recruitment data", error);
@@ -116,6 +126,7 @@ const AdminContextProvider = ({ children }) => {
         setUsers,
         userLoading,
         makeClient,
+        makeAdmin,
         recruitmentData,
       }}
     >

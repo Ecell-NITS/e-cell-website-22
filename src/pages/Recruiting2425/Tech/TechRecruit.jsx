@@ -24,6 +24,7 @@ const TechRecruit = () => {
   const [githubUrl, setGithubUrl] = useState("");
   const [otp, setOtp] = useState("");
 
+  // Form submit
   const hanleSubmit = (e) => {
     e.preventDefault();
 
@@ -101,13 +102,15 @@ const TechRecruit = () => {
       toast.error("Failed to submit form");
     }
   };
+
+  // Send OTP
   const sendOtp = (e) => {
     e.preventDefault();
     if (email === "" || !email.includes("@") || !email.includes("nits.ac.in")) {
       toast.error("Invalid email id");
       return;
     }
-    if (email.includes("_ug_22") === false) {
+    if (email.includes("_ug_23") === false) {
       toast.error(
         "This form is only for 2024-27 batch students. Please check the eligibility criteria."
       );
