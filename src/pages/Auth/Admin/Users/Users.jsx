@@ -3,7 +3,7 @@ import Title from "../../../../components/Admin/Page-title/title";
 import AdminContext from "../../../../context/AdminContext";
 
 const Users = () => {
-  const { users, setUsers, userLoading, makeClient } = useContext(AdminContext);
+  const { users, userLoading, makeClient, makeAdmin } = useContext(AdminContext);
   const [admins, setAdmins] = useState([]);
   const [clients, setClients] = useState([]);
 
@@ -34,7 +34,7 @@ const Users = () => {
                   <td>{user.name}</td>
                   <td>{user.email}</td>
                   <td>
-                    <button onClick={makeClient}>Make client</button>
+                    <button onClick={() => makeClient(user.email)}>Make client</button>
                   </td>
                 </tr>
               );
@@ -56,7 +56,7 @@ const Users = () => {
                   <td>{user.name}</td>
                   <td>{user.email}</td>
                   <td>
-                    <button>Make Admin</button>
+                    <button onClick={() => makeAdmin(user.email)}>Make Admin</button>
                   </td>
                 </tr>
               );

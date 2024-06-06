@@ -17,7 +17,7 @@ const Dashboard = () => {
   const navigate = useNavigate();
   const { user, fetchUserProfile } = useContext(UserContext);
 
-  const [isLoaded, setIsLoaded] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
   const [admin, setAdmin] = useState(false);
   const [editedbio, setEditedbio] = useState("");
   const [editedfb, setEditedfb] = useState("");
@@ -31,19 +31,27 @@ const Dashboard = () => {
   const [hidegithub, setHidegithub] = useState(false);
 
   useEffect(() => {
-    if (!user) {
-      fetchUserProfile();
+    async function fetchData() {
+      if (!user) {
+        setIsLoading(true);
+        await fetchUserProfile();
+        if (!user) {
+          navigate("/login");
+        }
+      }
+
+      if (user) {
+        setAdmin(user?.role === "admin" || user?.role === "superadmin");
+        setEditedbio(user?.bio);
+        setEditedfb(user?.facebook);
+        setEditedig(user?.instagram);
+        setEditedGithub(user?.github);
+        setEditedLinkedin(user?.linkedin);
+        setIsLoading(false);
+      }
     }
-    if (user) {
-      setAdmin(user?.role === "admin" || user?.role === "superadmin");
-      setEditedbio(user?.bio);
-      setEditedfb(user?.facebook);
-      setEditedig(user?.instagram);
-      setEditedGithub(user?.github);
-      setEditedLinkedin(user?.linkedin);
-      setIsLoaded(false);
-    }
-  }, [fetchUserProfile, user]);
+    fetchData();
+  }, [fetchUserProfile, navigate, user]);
 
   const ButtonSignout = () => {
     navigate("/logout");
@@ -120,7 +128,7 @@ const Dashboard = () => {
     }
   }, [editedGithub]);
 
-  if (isLoaded) {
+  if (isLoading) {
     return <Preloader />;
   }
 

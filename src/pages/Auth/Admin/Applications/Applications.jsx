@@ -15,10 +15,6 @@ const Applications = () => {
       id: 1,
     },
     {
-      name: "UI/UX",
-      id: 2,
-    },
-    {
       name: "Web",
       id: 3,
     },
@@ -61,6 +57,9 @@ const Applications = () => {
               {team.name}
             </button>
           ))}
+          <button className={styles.tab_item} onClick={() => handleTeam("UI")}>
+            UI/UX
+          </button>
         </div>
       </div>
       <div className={styles.applications}>
@@ -81,6 +80,9 @@ const Applications = () => {
                   Team: <strong>{data.domain}</strong>{" "}
                 </p>
                 <p>
+                  Team: <strong>{data.domain}</strong>{" "}
+                </p>
+                <p>
                   Phone: <strong>{data.number}</strong>{" "}
                 </p>
                 <p>
@@ -90,15 +92,19 @@ const Applications = () => {
                   Resume:{" "}
                   <strong>
                     {" "}
-                    <a href={data.resume}>Resume</a>{" "}
+                    <a href={data.resumeUrl} target="_blank" rel="noreferrer">
+                      Resume
+                    </a>{" "}
                   </strong>
                 </p>
-                {data.github && (
+                {data.githubUrl && (
                   <p>
                     Github:{" "}
                     <strong>
                       {" "}
-                      <a href={data.github}>Resume</a>{" "}
+                      <a href={data.githubUrl} target="_blank" rel="noreferrer">
+                        Resume
+                      </a>{" "}
                     </strong>
                   </p>
                 )}

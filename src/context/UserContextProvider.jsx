@@ -27,8 +27,11 @@ const UserContextProvider = ({ children }) => {
   useEffect(() => {
     if (localStorage.getItem("token")) {
       fetchUserProfile();
+      if (!user) {
+        localStorage.removeItem("token");
+      }
     }
-  }, []);
+  }, [user]);
 
   return (
     <UserContext.Provider value={{ user, setUser, fetchUserProfile }}>

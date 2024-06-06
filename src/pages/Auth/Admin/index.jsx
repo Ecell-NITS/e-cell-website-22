@@ -30,6 +30,10 @@ const Admin = () => {
   const { user } = useContext(UserContext);
 
   useEffect(() => {
+    if (!user) {
+      toast.error("Please login to view your admin panel");
+      navigate("/login");
+    }
     if (user) {
       setAdmin(user?.role === "admin" || user?.role === "superadmin");
       setSuperadmin(user?.role === "superadmin");
