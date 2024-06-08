@@ -1,7 +1,8 @@
-import { useEffect, useMemo, useState } from "react";
+import { useContext, useEffect, useMemo, useState } from "react";
 import AdminContext from "./AdminContext";
 import { toast } from "react-toastify";
 import axios from "axios";
+import UserContext from "./UserContext";
 
 const AdminContextProvider = ({ children }) => {
   const token = localStorage.getItem("token");
@@ -16,7 +17,10 @@ const AdminContextProvider = ({ children }) => {
   //   context approach for message page start
   const [messages, setMessages] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [recruitDataLoading, setRecruitDataLoading] = useState(true);
   const [recruitmentData, setRecruitmentData] = useState([]);
+
+  const { user } = useContext(UserContext);
 
   const markAsRead = (id) => {
     toast.info("Marking as read...");
@@ -55,8 +59,8 @@ const AdminContextProvider = ({ children }) => {
   const [userLoading, setUserLoading] = useState(true);
 
   useEffect(() => {
-    const fetchUsers = () => {
-      axios
+    const fetchUsers = async () => {
+      await axios
         .get(`${import.meta.env.VITE_REACT_APP_APIMAIN}/allaccounts`, config)
         .then((response) => {
           setUsers(response.data.users);
@@ -67,8 +71,10 @@ const AdminContextProvider = ({ children }) => {
           toast.error("Failed to retrieve users");
         });
     };
-    fetchUsers();
-  }, [config]);
+    if (user.role === "superadmin") {
+      fetchUsers();
+    }
+  }, [config, user]);
 
   const makeClient = (email) => {
     axios
@@ -101,17 +107,36 @@ const AdminContextProvider = ({ children }) => {
   //  context approach for recruitment page start
 
   useEffect(() => {
-    try {
-      axios
-        .get(`${import.meta.env.VITE_REACT_APP_TECH_RECRUIT_API}/applications`, config)
-        .then((response) => {
-          setRecruitmentData(response.data);
-        });
-    } catch (error) {
-      console.error("Failed to retrieve recruitment data", error);
-      toast.error("Failed to retrieve recruitment data");
-    }
-  }, [config]);
+    const fetchTechRecruitData = async () => {
+      try {
+        axios
+          .get(`${import.meta.env.VITE_REACT_APP_TECH_RECRUIT_API}/applications`, config)
+          .then((response) => {
+            setRecruitmentData(response.data);
+            setRecruitDataLoading(false);
+          });
+      } catch (error) {
+        console.error("Failed to retrieve recruitment data", error);
+        toast.error("Failed to retrieve recruitment data");
+      }
+    };
+    const fetchAllRecruitData = async () => {
+      try {
+        axios
+          .get(`${import.meta.env.VITE_REACT_APP_RECRUIT_API}/applications`, config)
+          .then((response) => {
+            setRecruitmentData((prev) => [...prev, ...response.data]);
+            setRecruitDataLoading(false);
+          });
+      } catch (error) {
+        console.error("Failed to retrieve recruitment data", error);
+        toast.error("Failed to retrieve recruitment data");
+      }
+    };
+
+    fetchTechRecruitData();
+    fetchAllRecruitData();
+  }, [config, user]);
 
   //  context approach for recruitment page end
   return (
@@ -128,6 +153,7 @@ const AdminContextProvider = ({ children }) => {
         makeClient,
         makeAdmin,
         recruitmentData,
+        recruitDataLoading,
       }}
     >
       {children}

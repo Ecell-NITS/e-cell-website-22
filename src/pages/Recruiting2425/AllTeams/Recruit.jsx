@@ -5,7 +5,7 @@ import styles from "./TechRecruit.module.scss";
 import { toast } from "react-toastify";
 import axios from "axios";
 
-const TechRecruit = () => {
+const Recruit = () => {
   const instructions = [
     "Only first year students of NITS are eligible to fill this form.",
     "Use ONLY your Institute email id.",
@@ -22,7 +22,7 @@ const TechRecruit = () => {
   const [scholarId, setScholarId] = useState("");
   const [domain, setDomain] = useState("");
   const [resumeUrl, setResumeUrl] = useState("");
-  const [githubUrl, setGithubUrl] = useState("");
+  const [WhyEcell, setWhyEcell] = useState("");
   const [otp, setOtp] = useState("");
 
   const [sendingOtp, setSendingOtp] = useState(false);
@@ -83,13 +83,14 @@ const TechRecruit = () => {
       scholarId,
       domain,
       resumeUrl,
-      githubUrl,
+      WhyEcell,
       otp,
     };
+    console.log(data);
 
     try {
       axios
-        .post(`${import.meta.env.VITE_REACT_APP_TECH_RECRUIT_API}/apply`, data)
+        .post(`${import.meta.env.VITE_REACT_APP_RECRUIT_API}/apply`, data)
         .then((response) => {
           toast.success("Form submitted successfully in team:", response.data.domain);
         })
@@ -126,7 +127,7 @@ const TechRecruit = () => {
       return;
     }
     axios
-      .post(`${import.meta.env.VITE_REACT_APP_TECH_RECRUIT_API}/apply/sendOtp`, {
+      .post(`${import.meta.env.VITE_REACT_APP_RECRUIT_API}/apply/sendOtp`, {
         email,
       })
       .then((response) => {
@@ -149,7 +150,7 @@ const TechRecruit = () => {
       <NavbarTeam />
       <div className="topbgrecuit">
         <h1 className="titlerecuit">Recruitment</h1>
-        <h1 className="titlerecuit-for">for Tech Team</h1>
+        <h1 className="titlerecuit-for">for</h1>
         <h1 className="titlerecuit-tenure">
           2024-25 <span className="tenure-recuit">Tenure</span>
         </h1>
@@ -257,13 +258,17 @@ const TechRecruit = () => {
               required
             />
             <label htmlFor="domain">
-              Domain:<span className={styles.required}>*</span>
+              Team:<span className={styles.required}>*</span>
             </label>
             <select name="domain" id="domain" onChange={(e) => setDomain(e.target.value)}>
-              <option>Choose a domain</option>
-              <option value="UI">UI/UX</option>
-              <option value="Web">Web Development</option>
-              <option value="Flutter">Flutter Development</option>
+              <option>Choose a team</option>
+              <option value="Content">Content</option>
+              <option value="Collaboration">Collaboration & Outreach</option>
+              <option value="Curation">Curation</option>
+              <option value="Design">Design</option>
+              <option value="Event">Event Management</option>
+              <option value="Marketing">Marketing</option>
+              <option value="Design">Design</option>
             </select>
             <label htmlFor="resume">
               Resume Link(Upload your resume on google drive and put the shareable link
@@ -277,13 +282,15 @@ const TechRecruit = () => {
               onChange={(e) => setResumeUrl(e.target.value)}
               required
             />
-            <label htmlFor="github">Github Profile Link:</label>
+            <label htmlFor="github">
+              Why do you want join E-cell?:<span className={styles.required}>*</span>
+            </label>
             <input
               type="text"
               name="github"
               id="github"
-              placeholder="https://github.com/ruler45"
-              onChange={(e) => setGithubUrl(e.target.value)}
+              placeholder="Your reason to join E-cell"
+              onChange={(e) => setWhyEcell(e.target.value)}
             />
             <button type="submit">{submittingForm ? "Submitting..." : "Submit"}</button>
           </form>
@@ -294,4 +301,4 @@ const TechRecruit = () => {
   );
 };
 
-export default TechRecruit;
+export default Recruit;
