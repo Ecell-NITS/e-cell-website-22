@@ -35,9 +35,9 @@ const Dashboard = () => {
       if (!user) {
         setIsLoading(true);
         await fetchUserProfile();
-        if (!user) {
-          navigate("/login");
-        }
+        // if (!user) {
+        //   navigate("/login");
+        // }
       }
 
       if (user) {

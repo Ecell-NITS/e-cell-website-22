@@ -16,12 +16,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 5rem;
+    height: 4rem;
     img {
-      height: 80%;
+      height: 100%;
       object-fit: cover;
     }
+    
   }
+  @media screen and (max-width: 768px) {
+      gap: 0.625rem;
+      .logo {
+        height: 3rem;
+      }
+    }
   .sidebar-admin-links {
     display: flex;
     flex-direction: column;
@@ -33,6 +40,8 @@
     font-size: 1.5vw;
     @media screen and (max-width: 768px) {
       width: 50%;
+      gap: 0.5rem;
+      padding: 0.625rem;
     }
     a {
       color: white;
@@ -41,6 +50,9 @@
       border-radius: 0.5rem;
       transition: 0.3s;
       position: relative;
+      @media screen and (max-width: 768px){
+        padding: 0.25rem 0.5rem;
+      }
 
       &::after {
         content: "";
@@ -69,7 +81,7 @@
       }
     }
     @media screen and (max-width: 768px) {
-      font-size: 2rem;
+      font-size: 1.5rem;
     }
   }
   button {
@@ -81,14 +93,10 @@
     font-size: 1.7vw;
     width: fit-content;
     @media screen and (max-width: 768px) {
-      font-size: 2rem;
+      font-size: 1.5rem;
+      border: 1px solid rgb(255, 255, 255);
     }
   }
-  // @media screen and (max-width: 768px) {
-  //   display: none;
-  //   width: 100vw;
-
-  // }
 }
 .menu {
   position: fixed;
@@ -102,7 +110,6 @@
 }
 @media screen and (max-width: 768px) {
   .sidebar-admin {
-    // display: none;
     width: 0;
     transition: 0.3s;
   }

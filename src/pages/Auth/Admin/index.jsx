@@ -30,16 +30,12 @@ const Admin = () => {
   const { user } = useContext(UserContext);
 
   useEffect(() => {
-    if (!user) {
-      toast.error("Please login to view your admin panel");
-      navigate("/login");
-    }
     if (user) {
       setAdmin(user?.role === "admin" || user?.role === "superadmin");
       setSuperadmin(user?.role === "superadmin");
       setLoading(false);
     }
-  }, [navigate, user, admin]);
+  }, [navigate, user]);
 
   if (loading) {
     return <h1>We are checking your profile</h1>;

@@ -22,24 +22,12 @@ const Logout = () => {
     if (!token) {
       navigate("/login");
     }
-
-    // try {
-    //   axios
-    //     .get(`${import.meta.env.VITE_REACT_APP_APIMAIN}/dashboard`, config)
-    //     .then((res) => {
-    //       const { name, userimg } = res.data;
-    //       setUser({ name, userimg });
-    //     });
-    // } catch (err) {
-    //   console.error(err);
-    // }
   }, [navigate]);
 
   const handleLogout = () => {
     localStorage.removeItem("token");
     setUser(null);
     navigate("/");
-    window.location.reload();
   };
 
   const handleGoToDashboard = () => {

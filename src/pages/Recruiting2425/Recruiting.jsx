@@ -176,7 +176,7 @@ const Recruiting = () => {
 
     // Check if the scholarId is valid
     if (
-      !/^231[1-6][01]\d{2}$/.test(scholarId) ||
+      !/^221[1-6][01]\d{2}$/.test(scholarId) ||
       (scholarId[3] === "1" && parseInt(scholarId.slice(-3)) > 157) ||
       (scholarId[3] === "2" && parseInt(scholarId.slice(-3)) > 167) ||
       (scholarId[3] === "3" && parseInt(scholarId.slice(-3)) > 167) ||
@@ -379,7 +379,7 @@ const Recruiting = () => {
     }
 
     // Check if the email matches the allowed domains i.e only institute emails are accepted
-    const emailRegex = /^.+22@(cse|civil|mech|ece|ee|ei)\.nits\.ac\.in$/;
+    const emailRegex = /^.+23@(cse|civil|mech|ece|ee|ei)\.nits\.ac\.in$/;
 
     if (!emailRegex.test(email)) {
       toast.error("Only first year's INSTITUTE email id are accepted.", {
@@ -524,7 +524,7 @@ const Recruiting = () => {
         <h1 className="titlerecuit">Recruitment</h1>
         <h1 className="titlerecuit-for">for</h1>
         <h1 className="titlerecuit-tenure">
-          2023-24 <span className="tenure-recuit">Tenure</span>
+          2024-25 <span className="tenure-recuit">Tenure</span>
         </h1>
       </div>
 
@@ -533,7 +533,7 @@ const Recruiting = () => {
           Are you passionate about the entrepreneurial world and are looking for a
           platform to learn as well as showcase your knowledge? Look no further. The
           Entrepreneurship Cell (E-Cell) of NIT Silchar is thrilled to announce
-          recruitment of talented individuals for the academic year 2023-2024.
+          recruitment of talented individuals for the academic year 2024-2025.
           <br />
           <br />
           At E-Cell, we believe in empowering aspiring individuals to become exceptional
@@ -566,7 +566,7 @@ const Recruiting = () => {
             In case of any issue while filling the form please contact{" "}
             <a
               style={{ color: "black" }}
-              href="https://api.whatsapp.com/send/?phone=%2B919431875819&text&type=phone_number&app_absent=0"
+              href="https://api.whatsapp.com/send/?phone=%2B916295265705&text&type=phone_number&app_absent=0"
               target="_blank"
               rel="noreferrer"
             >
@@ -577,7 +577,7 @@ const Recruiting = () => {
           <li>Keep checking your inbox for further instructions.</li>
           <li>
             Last date to fill the form is June <span style={{ color: "red" }}>25th</span>{" "}
-            2023 11:59pm.
+            2024 11:59pm.
           </li>
         </ul>
       </div>

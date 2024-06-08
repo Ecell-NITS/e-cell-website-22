@@ -2,6 +2,7 @@ import { useState } from "react";
 import UserContext from "./UserContext";
 import axios from "axios";
 import { useEffect } from "react";
+import { toast } from "react-toastify";
 
 const UserContextProvider = ({ children }) => {
   const [user, setUser] = useState(null);
@@ -18,20 +19,20 @@ const UserContextProvider = ({ children }) => {
         config
       );
       setUser(response.data);
-      // console.log(response.data.userimg)
-      // setIsLoggedIn(true);
     } catch (error) {
+      localStorage.removeItem("token");
+      toast.error("Login expired,please login again");
       console.error("Error fetching user profile:", error);
     }
   };
   useEffect(() => {
     if (localStorage.getItem("token")) {
       fetchUserProfile();
-      if (!user) {
-        localStorage.removeItem("token");
-      }
+      // if (!user) {
+      //   localStorage.removeItem("token");
+      // }
     }
-  }, [user]);
+  }, []);
 
   return (
     <UserContext.Provider value={{ user, setUser, fetchUserProfile }}>

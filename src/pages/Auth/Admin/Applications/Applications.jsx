@@ -6,7 +6,7 @@ import AdminContext from "../../../../context/AdminContext";
 
 const Applications = () => {
   const [team, setTeam] = useState("All");
-  const { recruitmentData } = useContext(AdminContext);
+  const { recruitmentData, recruitDataLoading } = useContext(AdminContext);
   const [applications, setApplications] = useState(recruitmentData);
 
   const teams = [
@@ -21,6 +21,37 @@ const Applications = () => {
     {
       name: "Flutter",
       id: 4,
+    },
+    {
+      name: "UI",
+    },
+    {
+      name: "Curation",
+      id: 5,
+    },
+    {
+      name: "Design",
+      id: 6,
+    },
+    {
+      name: "Event",
+      id: 7,
+    },
+    {
+      name: "Content",
+      id: 8,
+    },
+    {
+      name: "Publicity",
+      id: 9,
+    },
+    {
+      name: "Marketing",
+      id: 10,
+    },
+    {
+      name: "Collaboration",
+      id: 11,
     },
   ];
 
@@ -57,61 +88,62 @@ const Applications = () => {
               {team.name}
             </button>
           ))}
-          <button className={styles.tab_item} onClick={() => handleTeam("UI")}>
-            UI/UX
-          </button>
         </div>
       </div>
       <div className={styles.applications}>
         <div>
           Team: <strong>{team}</strong>
         </div>
-        <div className={styles.applications_container}>
-          {applications.map((data, index) => {
-            return (
-              <div key={data.id} className={styles.application_item}>
-                <p>
-                  No: <strong>{index + 1}</strong>{" "}
-                </p>
-                <p>
-                  Name: <strong>{data.name}</strong>{" "}
-                </p>
-                <p>
-                  Team: <strong>{data.domain}</strong>{" "}
-                </p>
-                <p>
-                  Team: <strong>{data.domain}</strong>{" "}
-                </p>
-                <p>
-                  Phone: <strong>{data.number}</strong>{" "}
-                </p>
-                <p>
-                  Email: <strong>{data.email}</strong>{" "}
-                </p>
-                <p>
-                  Resume:{" "}
-                  <strong>
-                    {" "}
-                    <a href={data.resumeUrl} target="_blank" rel="noreferrer">
-                      Resume
-                    </a>{" "}
-                  </strong>
-                </p>
-                {data.githubUrl && (
+        {recruitDataLoading ? (
+          <div>Loading...</div>
+        ) : (
+          <div className={styles.applications_container}>
+            {applications.map((data, index) => {
+              return (
+                <div key={data.id} className={styles.application_item}>
                   <p>
-                    Github:{" "}
+                    No: <strong>{index + 1}</strong>{" "}
+                  </p>
+                  <p>
+                    Name: <strong>{data.name}</strong>{" "}
+                  </p>
+                  <p>
+                    Team: <strong>{data.domain}</strong>{" "}
+                  </p>
+                  <p>
+                    Scholar ID: <strong>{data.scholarId}</strong>{" "}
+                  </p>
+                  <p>
+                    Phone: <strong>{data.number}</strong>{" "}
+                  </p>
+                  <p>
+                    Email: <strong>{data.email}</strong>{" "}
+                  </p>
+                  <p>
+                    Resume:{" "}
                     <strong>
                       {" "}
-                      <a href={data.githubUrl} target="_blank" rel="noreferrer">
+                      <a href={data.resumeUrl} target="_blank" rel="noreferrer">
                         Resume
                       </a>{" "}
                     </strong>
                   </p>
-                )}
-              </div>
-            );
-          })}
-        </div>
+                  {data.githubUrl && (
+                    <p>
+                      Github:{" "}
+                      <strong>
+                        {" "}
+                        <a href={data.githubUrl} target="_blank" rel="noreferrer">
+                          Resume
+                        </a>{" "}
+                      </strong>
+                    </p>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        )}
       </div>
     </div>
   );

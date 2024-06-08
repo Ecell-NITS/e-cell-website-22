@@ -42,6 +42,7 @@ import Techsubmission from "./pages/Projectsubmission/Techsubmission";
 import UserContextProvider from "./context/UserContextProvider";
 import BlogContextProvider from "./context/BlogContextProvider";
 import TechRecruit from "./pages/Recruiting2425/Tech/TechRecruit";
+import Recruit from "./pages/Recruiting2425/AllTeams/Recruit";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -86,6 +87,7 @@ function App() {
                   />
                   <Route exact path="/recruitment" element={<Recuitmentdetails />} />
                   <Route exact path="/recruiting" element={<Recruiting />} />
+                  <Route exact path="/recruit" element={<Recruit />} />
                   <Route exact path="/recruiting/tech" element={<TechRecruit />} />
                   <Route exact path="/techresults" element={<Techresults />} />
                   <Route exact path="/techsubmission" element={<Techsubmission />} />
