@@ -92,7 +92,12 @@ const Applications = () => {
       </div>
       <div className={styles.applications}>
         <div>
-          Team: <strong>{team}</strong>
+          <p>
+            Team: <strong>{team}</strong>
+          </p>
+          <p>
+            Total Applicants: <strong>{applications.length}</strong>
+          </p>
         </div>
         {recruitDataLoading ? (
           <div>Loading...</div>

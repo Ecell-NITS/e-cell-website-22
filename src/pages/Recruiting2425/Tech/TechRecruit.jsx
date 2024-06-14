@@ -9,11 +9,14 @@ const TechRecruit = () => {
   const instructions = [
     "Only first year students of NITS are eligible to fill this form.",
     "Use ONLY your Institute email id.",
+    "Submit your resume in PDF format only.",
+    "The Domains available are : Web, Flutter, and UI/UX.",
+    "You can apply for only one domain.",
+    "Submitting a github profile is a plus but not mandatory.",
     "Check your Institute email inbox or SPAM folder for the otp.",
     "You can only fill this form once so please be attentive while filling the form.",
     "Keep checking your inbox for further instructions.",
     "Last date to fill the form is June 20th 2024 11:59pm.",
-    `In case of any issue while filling the form please contact us.`,
   ];
 
   const [name, setName] = useState("");
@@ -173,7 +176,7 @@ const TechRecruit = () => {
           <iframe
             title="E-Cell Recruitment flyer"
             id="embedflyerad"
-            src="https://drive.google.com/file/d/19YB9kfH2zjien5bIHzwV4qbkcNXrhtdM/preview"
+            src="https://drive.google.com/file/d/1p1GKN_fGdVnRPSV0t3TSBiBF7yDdt33m/preview"
           ></iframe>
           <div className="importantinstructionsrecuit">
             <h2>
@@ -195,6 +198,17 @@ const TechRecruit = () => {
                 here
               </a>
               .
+            </li>
+            <li>
+              For Sample resume click{" "}
+              <a
+                target="_blank"
+                href="https://drive.google.com/drive/folders/12lzr0QHF7vfdM9nGS3CIJ852boLuDpTr?usp=sharing"
+                rel="noreferrer"
+              >
+                {" "}
+                here
+              </a>
             </li>
           </ul>
         </div>
@@ -285,7 +299,7 @@ const TechRecruit = () => {
               placeholder="https://github.com/ruler45"
               onChange={(e) => setGithubUrl(e.target.value)}
             />
-            <button type="submit">{submittingForm ? "Submitting..." : "Submit"}</button>
+            <button type="submit">{submittingForm ? "Applying..." : "Apply"}</button>
           </form>
         </div>
       </div>

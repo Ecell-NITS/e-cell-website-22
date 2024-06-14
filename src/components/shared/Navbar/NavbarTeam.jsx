@@ -92,6 +92,9 @@ const NavbarTeam = () => {
         <li>
           <NavLink to="/gallery">GALLERY</NavLink>
         </li>
+        <li>
+          <NavLink to="/recruiting/tech">JOIN US</NavLink>
+        </li>
         {/* <li><NavLink to="/recruiting">RECRUITING</NavLink></li> */}
         {isLoggedIn ? (
           <li>
