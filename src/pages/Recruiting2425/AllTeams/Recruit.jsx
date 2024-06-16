@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Footer from "../../../components/shared/Footer/Footer";
 import NavbarTeam from "../../../components/shared/Navbar/NavbarTeam";
 import styles from "./TechRecruit.module.scss";
@@ -10,9 +10,10 @@ const Recruit = () => {
     "Only first year students of NITS are eligible to fill this form.",
     "Use ONLY your Institute email id.",
     "Check your Institute email inbox or SPAM folder for the otp.",
-    "You can only fill this form once so please be attentive while filling the form.",
+    "You can apply for multiple teams but you can only apply for a single team in single submission.",
+    "You can only fill this form once for a team so please be attentive while filling the form.",
     "Keep checking your inbox for further instructions.",
-    "Last date to fill the form is June 20th 2024 11:59pm.",
+    "Last date to fill the form is June 25th 2024 11:59pm.",
   ];
 
   const [name, setName] = useState("");
@@ -27,6 +28,9 @@ const Recruit = () => {
   const [sendingOtp, setSendingOtp] = useState(false);
   const [submittingForm, setSubmittingForm] = useState(false);
 
+  useEffect(() => {
+    document.title = "Join Us | E-Cell NIT Silchar";
+  });
   // Form submit
   const hanleSubmit = (e) => {
     e.preventDefault();
@@ -173,7 +177,7 @@ const Recruit = () => {
           <iframe
             title="E-Cell Recruitment flyer"
             id="embedflyerad"
-            src="https://drive.google.com/file/d/19YB9kfH2zjien5bIHzwV4qbkcNXrhtdM/preview"
+            src="https://drive.google.com/file/d/1F16vpTFBHGWX73xJGYxurRg36eXj0aZt/preview"
           ></iframe>
           <div className="importantinstructionsrecuit">
             <h2>
@@ -246,7 +250,7 @@ const Recruit = () => {
             </div>
 
             <label htmlFor="scholarId">
-              ScholarId:<span className={styles.required}>*</span>
+              Scholar Id:<span className={styles.required}>*</span>
             </label>
             <input
               type="text"
@@ -291,7 +295,9 @@ const Recruit = () => {
               placeholder="Your reason to join E-cell"
               onChange={(e) => setWhyEcell(e.target.value)}
             />
-            <button type="submit">{submittingForm ? "Submitting..." : "Submit"}</button>
+            <button type="submit" disabled>
+              {submittingForm ? "Submitting..." : "Form is closed"}
+            </button>
           </form>
         </div>
       </div>

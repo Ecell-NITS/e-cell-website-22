@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Footer from "../../../components/shared/Footer/Footer";
 import NavbarTeam from "../../../components/shared/Navbar/NavbarTeam";
 import styles from "./TechRecruit.module.scss";
@@ -31,6 +31,9 @@ const TechRecruit = () => {
   const [sendingOtp, setSendingOtp] = useState(false);
   const [submittingForm, setSubmittingForm] = useState(false);
 
+  useEffect(() => {
+    document.title = "Join Us | E-Cell NIT Silchar";
+  });
   // Form submit
   const hanleSubmit = (e) => {
     e.preventDefault();
@@ -260,7 +263,7 @@ const TechRecruit = () => {
             </div>
 
             <label htmlFor="scholarId">
-              ScholarId:<span className={styles.required}>*</span>
+              Scholar Id:<span className={styles.required}>*</span>
             </label>
             <input
               type="text"

@@ -10,13 +10,18 @@
     align-items: center;
     width: 90%;
     position: sticky;
-    top: 1rem;
+    top: 6rem;
+    z-index: 100;
+    backdrop-filter: blur(10px);
     .tab {
       display: flex;
       justify-content: center;
       align-items: center;
       width: 100%;
       gap: 1rem;
+      max-height: 20vh;
+      overflow-y: auto;
+      flex-wrap: wrap;
       .tab_item {
         display: flex;
         justify-content: center;
@@ -33,18 +38,20 @@
         &.active {
           background-color: #f5f5f5;
         }
+        @media screen and (max-width: 768px){
+          width: 60px;
+          padding: 3px 5px;
+        }
       }
     }
   }
   .applications {
     width: 90%;
-    // height: 50%;
     .applications_container {
       display: flex;
       flex-direction: column;
       gap: 1rem;
       padding: 1rem 0.5rem;
-      height: 65vh;
 
       .application_item {
         display: flex;

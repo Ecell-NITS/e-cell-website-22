@@ -139,7 +139,7 @@ const Applications = () => {
                       <strong>
                         {" "}
                         <a href={data.githubUrl} target="_blank" rel="noreferrer">
-                          Resume
+                          Github
                         </a>{" "}
                       </strong>
                     </p>
