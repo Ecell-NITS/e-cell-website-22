@@ -265,6 +265,7 @@ function App() {
                     <Route path="add-blogs" />
                     <Route path="users" />
                     <Route path="applications" />
+                    <Route path="applications-tech" />
                     <Route path="messages/:id" />
                     <Route path="blogs/review/:id" />
                     <Route path="/admin/users" />

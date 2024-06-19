@@ -1,13 +1,14 @@
 import { useContext, useEffect, useState } from "react";
 import Title from "../../../../components/Admin/Page-title/title";
 import styles from "./Applications.module.scss";
+import AdminContextProvider from "../../../../context/AdminContextProvider";
 import AdminContext from "../../../../context/AdminContext";
 import ApplicantsContext from "../../../../context/ApplicantsContext";
 
-const Applications = () => {
+const TechApplications = () => {
   const [team, setTeam] = useState("All");
-  const { recruitmentData, recruitDataLoading } = useContext(ApplicantsContext);
-  const [applications, setApplications] = useState(recruitmentData);
+  const { techData, techDataLoading } = useContext(ApplicantsContext);
+  const [applications, setApplications] = useState(techData);
 
   const teams = [
     {
@@ -15,53 +16,37 @@ const Applications = () => {
       id: 1,
     },
     {
-      name: "Curation",
-      id: 5,
+      name: "UI",
+      id: 2,
     },
     {
-      name: "Design",
-      id: 6,
+      name: "Web",
+      id: 3,
     },
     {
-      name: "Event",
-      id: 7,
-    },
-    {
-      name: "Content",
-      id: 8,
-    },
-    {
-      name: "Publicity",
-      id: 9,
-    },
-    {
-      name: "Marketing",
-      id: 10,
-    },
-    {
-      name: "Collaboration",
-      id: 11,
+      name: "Flutter",
+      id: 4,
     },
   ];
 
   const handleTeam = (team) => {
     setTeam(team);
     if (team === "All") {
-      setApplications(recruitmentData);
+      setApplications(techData);
     } else {
-      const filteredData = recruitmentData.filter((data) => data.teams.includes(team));
+      const filteredData = techData.filter((data) => data.domain === team);
       setApplications(filteredData);
     }
   };
 
   useEffect(() => {
     if (team === "All") {
-      setApplications(recruitmentData);
+      setApplications(techData);
     } else {
-      const filteredData = recruitmentData.filter((data) => data.teams.includes(team));
+      const filteredData = techData.filter((data) => data.domain === team);
       setApplications(filteredData);
     }
-  }, [recruitmentData, team]);
+  }, [techData, team]);
 
   return (
     <div className={styles.Applications}>
@@ -88,7 +73,7 @@ const Applications = () => {
             Total Applicants: <strong>{applications.length}</strong>
           </p>
         </div>
-        {recruitDataLoading ? (
+        {techDataLoading ? (
           <div>Loading...</div>
         ) : (
           <div className={styles.applications_container}>
@@ -102,17 +87,7 @@ const Applications = () => {
                     Name: <strong>{data.name}</strong>{" "}
                   </p>
                   <p>
-                    Team:{" "}
-                    <strong>
-                      {data.teams.map((team, index) => {
-                        return (
-                          <span key={index}>
-                            {team}
-                            {index !== data.teams.length - 1 ? ", " : ""}
-                          </span>
-                        );
-                      })}
-                    </strong>{" "}
+                    Team: <strong>{data.domain}</strong>{" "}
                   </p>
                   <p>
                     Scholar ID: <strong>{data.scholarId}</strong>{" "}
@@ -153,4 +128,4 @@ const Applications = () => {
   );
 };
 
-export default Applications;
+export default TechApplications;
