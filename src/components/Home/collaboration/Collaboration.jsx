@@ -45,7 +45,7 @@ const Collaboration = () => {
         observer.unobserve(img);
       });
     };
-  }, []);
+  }, [config]);
 
   const loadImages = (image) => {
     image.src = image.dataset.src;

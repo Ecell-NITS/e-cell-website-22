@@ -17,7 +17,7 @@
       font-size: 1.5rem;
       font-weight: 400;
     }
-    a{
+    a {
       color: #224259 !important;
       font-weight: 500;
       text-decoration: none;
@@ -59,6 +59,27 @@
       }
       .required {
         color: red;
+      }
+      .teams {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+        margin-bottom: 2rem;
+        width: fit-content;
+        .teams_item {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 5px;
+          input[type="checkbox"] {
+            margin: 0;
+            width: 1.15em;
+            height: 1.15em;
+          }
+          label {
+            margin: 0;
+          }
+        }
       }
       button {
         font-size: 1.5rem;

@@ -20,7 +20,7 @@ const Recruit = () => {
   const [number, setNumber] = useState("");
   const [email, setEmail] = useState("");
   const [scholarId, setScholarId] = useState("");
-  const [domain, setDomain] = useState("");
+  const [teams, setTeams] = useState([]);
   const [resumeUrl, setResumeUrl] = useState("");
   const [WhyEcell, setWhyEcell] = useState("");
   const [otp, setOtp] = useState("");
@@ -28,20 +28,60 @@ const Recruit = () => {
   const [sendingOtp, setSendingOtp] = useState(false);
   const [submittingForm, setSubmittingForm] = useState(false);
 
+  const availableteams = [
+    {
+      name: "Curation",
+      id: 5,
+    },
+    {
+      name: "Design",
+      id: 6,
+    },
+    {
+      name: "Event",
+      id: 7,
+    },
+    {
+      name: "Content",
+      id: 8,
+    },
+    {
+      name: "Publicity",
+      id: 9,
+    },
+    {
+      name: "Marketing",
+      id: 10,
+    },
+    {
+      name: "Collaboration",
+      id: 11,
+    },
+  ];
   useEffect(() => {
     document.title = "Join Us | E-Cell NIT Silchar";
   });
+
+  // Teams logic
+  const handleTeam = (e) => {
+    const { value, checked } = e.target;
+
+    if (checked) {
+      setTeams((prevTeams) => [...prevTeams, value]);
+    } else {
+      setTeams((prevTeams) => prevTeams.filter((team) => team !== value));
+    }
+  };
   // Form submit
   const hanleSubmit = (e) => {
     e.preventDefault();
-    setSubmittingForm(true);
 
     if (
       name === "" ||
       number === "" ||
       email === "" ||
       scholarId === "" ||
-      domain === "" ||
+      teams === null ||
       resumeUrl === "" ||
       otp === ""
     ) {
@@ -64,8 +104,8 @@ const Recruit = () => {
       toast.error("Invalid scholar id");
       return;
     }
-    if (domain === "Choose a domain") {
-      toast.error("Choose a domain");
+    if (teams === null) {
+      toast.error("Select atleast 1 team");
       return;
     }
     if (otp.length !== 6) {
@@ -84,7 +124,7 @@ const Recruit = () => {
       number,
       email,
       scholarId,
-      domain,
+      teams,
       resumeUrl,
       WhyEcell,
       otp,
@@ -92,10 +132,15 @@ const Recruit = () => {
     console.log(data);
 
     try {
+      setSubmittingForm(true);
       axios
         .post(`${import.meta.env.VITE_REACT_APP_RECRUIT_API}/apply`, data)
         .then((response) => {
-          toast.success("Form submitted successfully in team:", response.data.domain);
+          toast.success(
+            "Form submitted successfully in teams:",
+            response.data.teams.map((team) => team.name)
+          );
+          e.target.reset();
         })
         .catch((error) => {
           console.error("Failed to submit form", error);
@@ -260,19 +305,22 @@ const Recruit = () => {
               onChange={(e) => setScholarId(e.target.value)}
               required
             />
-            <label htmlFor="domain">
-              Team:<span className={styles.required}>*</span>
+            <label htmlFor="teams">
+              Teams:<span className={styles.required}>*</span>
             </label>
-            <select name="domain" id="domain" onChange={(e) => setDomain(e.target.value)}>
-              <option>Choose a team</option>
-              <option value="Content">Content</option>
-              <option value="Collaboration">Collaboration & Outreach</option>
-              <option value="Curation">Curation</option>
-              <option value="Design">Design</option>
-              <option value="Event">Event Management</option>
-              <option value="Marketing">Marketing</option>
-              <option value="Design">Design</option>
-            </select>
+            <div className={styles.teams}>
+              {availableteams.map((team) => (
+                <div key={team.name} className={styles.teams_item}>
+                  <input
+                    type="checkbox"
+                    name={team.name}
+                    onChange={handleTeam}
+                    value={team.name}
+                  />{" "}
+                  <label htmlFor="Event">{team.name}</label>
+                </div>
+              ))}
+            </div>
             <label htmlFor="resume">
               Resume Link(Upload your resume on google drive and put the shareable link
               here ):<span className={styles.required}>*</span>
@@ -295,9 +343,7 @@ const Recruit = () => {
               placeholder="Your reason to join E-cell"
               onChange={(e) => setWhyEcell(e.target.value)}
             />
-            <button type="submit" disabled>
-              {submittingForm ? "Submitting..." : "Form is closed"}
-            </button>
+            <button type="submit">{submittingForm ? "Applying..." : "Apply"}</button>
           </form>
         </div>
       </div>

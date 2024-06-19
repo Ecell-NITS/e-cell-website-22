@@ -4,7 +4,6 @@ import "./Sidebar.scss";
 import { ImCross } from "react-icons/im";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { useContext, useState } from "react";
-import { doc } from "prettier";
 import AdminContext from "../../../context/AdminContext";
 
 const SidebarAdmin = ({ isSuperAdmin }) => {
@@ -41,7 +40,7 @@ const SidebarAdmin = ({ isSuperAdmin }) => {
           <NavLink to="/admin/events">Events</NavLink>
           <NavLink to="/admin/add-events">Add Events</NavLink>
           <NavLink to="/admin/blogs">Blogs</NavLink>
-          <NavLink to="/admin/add-blogs">Add Blogs</NavLink>
+          <NavLink to="/admin/applications-tech">Tech Applications</NavLink>
           <NavLink to="/admin/applications">Applications</NavLink>
           {superadmin && users && <NavLink to="/admin/users">Users</NavLink>}
         </div>
