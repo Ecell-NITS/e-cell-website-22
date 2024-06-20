@@ -16,7 +16,7 @@ const TechRecruit = () => {
     "Check your Institute email inbox or SPAM folder for the otp.",
     "You can only fill this form once so please be attentive while filling the form.",
     "Keep checking your inbox for further instructions.",
-    "Last date to fill the form is June 20th 2024 11:59pm.",
+    "Last date to fill the form is June 21st 2024 11:59pm.",
   ];
 
   const [name, setName] = useState("");
@@ -37,7 +37,6 @@ const TechRecruit = () => {
   // Form submit
   const hanleSubmit = (e) => {
     e.preventDefault();
-    setSubmittingForm(true);
 
     if (
       name === "" ||
@@ -77,7 +76,7 @@ const TechRecruit = () => {
     }
     if (scholarId.startsWith("23") === false || email.includes("_ug_23") === false) {
       toast.error(
-        "This form is only for 2024-27 batch students. Please check the eligibility criteria."
+        "This form is only for 2023-27 batch students. Please check the eligibility criteria."
       );
       return;
     }
@@ -94,6 +93,7 @@ const TechRecruit = () => {
     };
 
     try {
+      setSubmittingForm(true);
       axios
         .post(`${import.meta.env.VITE_REACT_APP_TECH_RECRUIT_API}/apply`, data)
         .then((response) => {
@@ -120,7 +120,6 @@ const TechRecruit = () => {
   // Send OTP
   const sendOtp = (e) => {
     e.preventDefault();
-    setSendingOtp(true);
     if (email === "" || !email.includes("@") || !email.includes("nits.ac.in")) {
       toast.error("Invalid email id");
       return;
@@ -131,6 +130,7 @@ const TechRecruit = () => {
       );
       return;
     }
+    setSendingOtp(true);
     axios
       .post(`${import.meta.env.VITE_REACT_APP_TECH_RECRUIT_API}/apply/sendOtp`, {
         email,
