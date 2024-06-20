@@ -22,14 +22,13 @@
       height: 100%;
       object-fit: cover;
     }
-    
   }
   @media screen and (max-width: 768px) {
-      gap: 0.625rem;
-      .logo {
-        height: 3rem;
-      }
+    gap: 0.625rem;
+    .logo {
+      height: 3rem;
     }
+  }
   .sidebar-admin-links {
     display: flex;
     flex-direction: column;
@@ -51,7 +50,7 @@
       border-radius: 0.5rem;
       transition: 0.3s;
       position: relative;
-      @media screen and (max-width: 768px){
+      @media screen and (max-width: 768px) {
         padding: 0.25rem 0.5rem;
       }
 

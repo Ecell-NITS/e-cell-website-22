@@ -13,7 +13,7 @@ const Recruit = () => {
     "You can apply for multiple teams but you can only apply for a single team in single submission.",
     "You can only fill this form once for a team so please be attentive while filling the form.",
     "Keep checking your inbox for further instructions.",
-    "Last date to fill the form is June 25th 2024 11:59pm.",
+    "Last date to fill the form is June 30th 2024 11:59pm.",
   ];
 
   const [name, setName] = useState("");
@@ -163,17 +163,17 @@ const Recruit = () => {
   // Send OTP
   const sendOtp = (e) => {
     e.preventDefault();
-    setSendingOtp(true);
     if (email === "" || !email.includes("@") || !email.includes("nits.ac.in")) {
       toast.error("Invalid email id");
       return;
     }
     if (email.includes("_ug_23") === false) {
       toast.error(
-        "This form is only for 2024-27 batch students. Please check the eligibility criteria."
+        "This form is only for 2023-27 batch students. Please check the eligibility criteria."
       );
       return;
     }
+    setSendingOtp(true);
     axios
       .post(`${import.meta.env.VITE_REACT_APP_RECRUIT_API}/apply/sendOtp`, {
         email,
@@ -284,7 +284,7 @@ const Recruit = () => {
                 onChange={(e) => setEmail(e.target.value)}
                 required
               />
-              <button onClick={sendOtp}>
+              <button onClick={sendOtp} disabled={sendingOtp}>
                 {sendingOtp ? "Sending OTP..." : "Send OTP"}
               </button>
               <input
@@ -343,7 +343,9 @@ const Recruit = () => {
               placeholder="Your reason to join E-cell"
               onChange={(e) => setWhyEcell(e.target.value)}
             />
-            <button type="submit">{submittingForm ? "Applying..." : "Apply"}</button>
+            <button type="submit" disabled={submittingForm}>
+              {submittingForm ? "Applying..." : "Apply"}
+            </button>
           </form>
         </div>
       </div>
