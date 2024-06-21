@@ -98,9 +98,9 @@ const Navbar = () => {
         <li>
           <NavLink to="/gallery">GALLERY</NavLink>
         </li>
-        <li>
+        {/* <li>
           <NavLink to="/recruiting/tech">JOIN US</NavLink>
-        </li>
+        </li> */}
         {isLoggedIn ? (
           <li>
             <div className="imgactivehlder" onClick={handleGoToDashboard}>
