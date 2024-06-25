@@ -123,7 +123,6 @@ function App() {
                     element={<Recuitmentdetails />}
                     key="route-recruitment-screen"
                   />
-                  <Route path="/recruit" element={<Recruiting />} />
 
                   <Route
                     exact

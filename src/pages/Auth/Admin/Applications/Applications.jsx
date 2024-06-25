@@ -124,13 +124,10 @@ const Applications = () => {
                     Email: <strong>{data.email}</strong>{" "}
                   </p>
                   <p>
-                    Resume:{" "}
-                    <strong>
-                      {" "}
-                      <a href={data.resumeUrl} target="_blank" rel="noreferrer">
-                        Resume
-                      </a>{" "}
-                    </strong>
+                    Why do you want to join E-cell: <strong>{data.WhyEcell}</strong>
+                  </p>
+                  <p>
+                    Contribution towards E-cell: <strong>{data.contribution}</strong>
                   </p>
                   {data.githubUrl && (
                     <p>

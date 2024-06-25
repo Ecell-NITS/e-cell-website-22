@@ -10,8 +10,7 @@ const Recruit = () => {
     "Only first year students of NITS are eligible to fill this form.",
     "Use ONLY your Institute email id.",
     "Check your Institute email inbox or SPAM folder for the otp.",
-    "You can apply for multiple teams but you can only apply for a single team in single submission.",
-    "You can only fill this form once for a team so please be attentive while filling the form.",
+    "You can only fill this form once so please be attentive while filling the form.",
     "Keep checking your inbox for further instructions.",
     "Last date to fill the form is June 30th 2024 11:59pm.",
   ];
@@ -21,10 +20,10 @@ const Recruit = () => {
   const [email, setEmail] = useState("");
   const [scholarId, setScholarId] = useState("");
   const [teams, setTeams] = useState([]);
-  const [resumeUrl, setResumeUrl] = useState("");
+  const [contribution, setContribution] = useState("");
   const [WhyEcell, setWhyEcell] = useState("");
   const [otp, setOtp] = useState("");
-
+  const [contriLength, setContriLength] = useState(0);
   const [sendingOtp, setSendingOtp] = useState(false);
   const [submittingForm, setSubmittingForm] = useState(false);
 
@@ -60,8 +59,11 @@ const Recruit = () => {
   ];
   useEffect(() => {
     document.title = "Join Us | E-Cell NIT Silchar";
-  });
+  }, []);
 
+  useEffect(() => {
+    setContriLength(contribution.length);
+  }, [contribution]);
   // Teams logic
   const handleTeam = (e) => {
     const { value, checked } = e.target;
@@ -75,6 +77,10 @@ const Recruit = () => {
   // Form submit
   const hanleSubmit = (e) => {
     e.preventDefault();
+    if (contribution.length > 400) {
+      toast.error("Contribution should be less than 400 characters");
+      return;
+    }
 
     if (
       name === "" ||
@@ -82,10 +88,10 @@ const Recruit = () => {
       email === "" ||
       scholarId === "" ||
       teams === null ||
-      resumeUrl === "" ||
-      otp === ""
+      otp === "" ||
+      WhyEcell === ""
     ) {
-      toast.error("All fields are required");
+      toast.error("All marked fields are required");
       return;
     }
     if (!email.includes("@")) {
@@ -114,8 +120,12 @@ const Recruit = () => {
     }
     if (scholarId.startsWith("23") === false || email.includes("_ug_23") === false) {
       toast.error(
-        "This form is only for 2024-27 batch students. Please check the eligibility criteria."
+        "This form is only for 2023-27 batch students. Please check the eligibility criteria."
       );
+      return;
+    }
+    if (WhyEcell.length > 400) {
+      toast.error("Contribution should be less than 400 characters");
       return;
     }
 
@@ -125,7 +135,7 @@ const Recruit = () => {
       email,
       scholarId,
       teams,
-      resumeUrl,
+      contribution,
       WhyEcell,
       otp,
     };
@@ -321,28 +331,35 @@ const Recruit = () => {
                 </div>
               ))}
             </div>
-            <label htmlFor="resume">
-              Resume Link(Upload your resume on google drive and put the shareable link
-              here ):<span className={styles.required}>*</span>
+            <label htmlFor="contri">
+              Contribution to E-cell:
+              <ul>
+                <li>Events,webiners,competitions etc. that you have participated in.</li>
+                <li>
+                  Even if you don&apos;t have any prior contribution, you can still apply.
+                  Your application will be treated the same.
+                </li>
+                <li>
+                  Contribution should be in the form of a google docs file link or in
+                  words upto 400 characters.
+                </li>
+              </ul>
             </label>
-            <input
-              type="text"
-              name="resume"
-              id="resume"
-              placeholder="https://drive.google.com/something-something-something"
-              onChange={(e) => setResumeUrl(e.target.value)}
-              required
-            />
+            <textarea
+              className={styles.contri}
+              placeholder="Write your contributions here within 400 words or paste a doc link"
+              onChange={(e) => setContribution(e.target.value)}
+            ></textarea>
+            <p>{contriLength}/400 characters. </p>
             <label htmlFor="github">
               Why do you want join E-cell?:<span className={styles.required}>*</span>
             </label>
-            <input
-              type="text"
-              name="github"
-              id="github"
-              placeholder="Your reason to join E-cell"
+            <textarea
+              className={styles.contri}
+              placeholder="Write your answer here within 400 words"
               onChange={(e) => setWhyEcell(e.target.value)}
-            />
+            ></textarea>
+            <p>{WhyEcell.length}/400 characters. </p>
             <button type="submit" disabled={submittingForm}>
               {submittingForm ? "Applying..." : "Apply"}
             </button>
