@@ -347,7 +347,7 @@ const Recruit = () => {
             </label>
             <textarea
               className={styles.contri}
-              placeholder="Write your contributions here within 400 words or paste a doc link"
+              placeholder="Write your contributions here within 400 characters or paste a doc link"
               onChange={(e) => setContribution(e.target.value)}
             ></textarea>
             <p>{contriLength}/400 characters. </p>
@@ -356,7 +356,7 @@ const Recruit = () => {
             </label>
             <textarea
               className={styles.contri}
-              placeholder="Write your answer here within 400 words"
+              placeholder="Write your answer here within 400 characters."
               onChange={(e) => setWhyEcell(e.target.value)}
             ></textarea>
             <p>{WhyEcell.length}/400 characters. </p>
