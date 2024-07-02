@@ -51,6 +51,29 @@
   }
   .applications {
     width: 90%;
+    .flex{
+      margin-top: 1rem;
+      display: flex;
+      justify-content: space-between;
+      .ExcelIcon{
+        &:hover{
+          background-color: #f5f5f5;
+        }
+        border-radius: 0.526rem;
+        height: fit-content;
+        padding: 0.5rem 1rem;
+      }
+    }
+    a{
+      display: flex;
+      width: 90%;
+      overflow: scroll;
+      &::-webkit-scrollbar {
+        // display: none;
+        width: 1px;
+        height: 1px;
+      }
+    }
     .applications_container {
       display: flex;
       flex-direction: column;

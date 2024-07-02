@@ -1,8 +1,9 @@
 import { useContext, useEffect, useState } from "react";
 import Title from "../../../../components/Admin/Page-title/title";
 import styles from "./Applications.module.scss";
-import AdminContext from "../../../../context/AdminContext";
 import ApplicantsContext from "../../../../context/ApplicantsContext";
+import { SiMicrosoftexcel } from "react-icons/si";
+import exportFromJSON from "export-from-json";
 
 const Applications = () => {
   const [team, setTeam] = useState("All");
@@ -54,6 +55,13 @@ const Applications = () => {
     }
   };
 
+  const exportData = () => {
+    const fileName = `${team}-applicants`;
+    const exportType = exportFromJSON.types.csv;
+    const data = applications;
+    exportFromJSON({ data, fileName, exportType });
+  };
+
   useEffect(() => {
     if (team === "All") {
       setApplications(recruitmentData);
@@ -80,13 +88,18 @@ const Applications = () => {
         </div>
       </div>
       <div className={styles.applications}>
-        <div>
-          <p>
-            Team: <strong>{team}</strong>
-          </p>
-          <p>
-            Total Applicants: <strong>{applications.length}</strong>
-          </p>
+        <div className={styles.flex}>
+          <div>
+            <p>
+              Team: <strong>{team}</strong>
+            </p>
+            <p>
+              Total Applicants: <strong>{applications.length}</strong>
+            </p>
+          </div>
+          <button className={styles.ExcelIcon} onClick={exportData}>
+            <SiMicrosoftexcel size="1.5em" /> Export to excel
+          </button>
         </div>
         {recruitDataLoading ? (
           <div>Loading...</div>
@@ -124,10 +137,26 @@ const Applications = () => {
                     Email: <strong>{data.email}</strong>{" "}
                   </p>
                   <p>
-                    Why do you want to join E-cell: <strong>{data.WhyEcell}</strong>
+                    Why do you want to join E-cell:
+                    {data.WhyEcell.includes("https://") ? (
+                      <a target="_blank" rel="noreferrer" href={data.WhyEcell}>
+                        {" "}
+                        <strong>{data.WhyEcell}</strong>
+                      </a>
+                    ) : (
+                      <strong>{data.WhyEcell}</strong>
+                    )}
                   </p>
                   <p>
-                    Contribution towards E-cell: <strong>{data.contribution}</strong>
+                    Contribution towards E-cell:
+                    {data.contribution.includes("https://") ? (
+                      <a target="_blank" rel="noreferrer" href={data.contribution}>
+                        {" "}
+                        <strong>{data.contribution}</strong>
+                      </a>
+                    ) : (
+                      <strong>{data.contribution}</strong>
+                    )}
                   </p>
                   {data.githubUrl && (
                     <p>
