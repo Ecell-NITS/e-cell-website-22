@@ -1,9 +1,9 @@
 import { useContext, useEffect, useState } from "react";
 import Title from "../../../../components/Admin/Page-title/title";
 import styles from "./Applications.module.scss";
-import AdminContextProvider from "../../../../context/AdminContextProvider";
-import AdminContext from "../../../../context/AdminContext";
 import ApplicantsContext from "../../../../context/ApplicantsContext";
+import { SiMicrosoftexcel } from "react-icons/si";
+import exportFromJSON from "export-from-json";
 
 const TechApplications = () => {
   const [team, setTeam] = useState("All");
@@ -47,6 +47,12 @@ const TechApplications = () => {
       setApplications(filteredData);
     }
   }, [techData, team]);
+  const exportData = () => {
+    const fileName = `${team}-submissions`;
+    const exportType = exportFromJSON.types.csv;
+    const data = applications;
+    exportFromJSON({ data, fileName, exportType });
+  };
 
   return (
     <div className={styles.Applications}>
@@ -65,13 +71,18 @@ const TechApplications = () => {
         </div>
       </div>
       <div className={styles.applications}>
-        <div>
-          <p>
-            Team: <strong>{team}</strong>
-          </p>
-          <p>
-            Total Applicants: <strong>{applications.length}</strong>
-          </p>
+        <div className={styles.flex}>
+          <div>
+            <p>
+              Team: <strong>{team}</strong>
+            </p>
+            <p>
+              Total Applicants: <strong>{applications.length}</strong>
+            </p>
+          </div>
+          <button className={styles.ExcelIcon} onClick={exportData}>
+            <SiMicrosoftexcel size="1.5em" /> Export to excel
+          </button>
         </div>
         {techDataLoading ? (
           <div>Loading...</div>
@@ -109,11 +120,33 @@ const TechApplications = () => {
                   </p>
                   {data.githubUrl && (
                     <p>
-                      Github:{" "}
+                      Github Project Url:{" "}
                       <strong>
                         {" "}
                         <a href={data.githubUrl} target="_blank" rel="noreferrer">
                           Github
+                        </a>{" "}
+                      </strong>
+                    </p>
+                  )}
+                  {data.liveUrl && (
+                    <p>
+                      Live website Url:{" "}
+                      <strong>
+                        {" "}
+                        <a href={data.liveUrl} target="_blank" rel="noreferrer">
+                          Link
+                        </a>{" "}
+                      </strong>
+                    </p>
+                  )}
+                  {data.githubUrl && (
+                    <p>
+                      Demo video(App):{" "}
+                      <strong>
+                        {" "}
+                        <a href={data.githubUrl} target="_blank" rel="noreferrer">
+                          Video
                         </a>{" "}
                       </strong>
                     </p>
