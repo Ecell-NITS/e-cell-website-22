@@ -140,12 +140,12 @@ const TechApplications = () => {
                       </strong>
                     </p>
                   )}
-                  {data.githubUrl && (
+                  {data.videoUrl && (
                     <p>
                       Demo video(App):{" "}
                       <strong>
                         {" "}
-                        <a href={data.githubUrl} target="_blank" rel="noreferrer">
+                        <a href={data.videoUrl} target="_blank" rel="noreferrer">
                           Video
                         </a>{" "}
                       </strong>

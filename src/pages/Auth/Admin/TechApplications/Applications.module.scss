@@ -51,12 +51,12 @@
   }
   .applications {
     width: 90%;
-    .flex{
+    .flex {
       margin-top: 1rem;
       display: flex;
       justify-content: space-between;
-      .ExcelIcon{
-        &:hover{
+      .ExcelIcon {
+        &:hover {
           background-color: #f5f5f5;
         }
         border-radius: 0.526rem;
