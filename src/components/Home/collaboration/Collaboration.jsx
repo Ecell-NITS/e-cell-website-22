@@ -22,12 +22,12 @@ import Edtimes from "./Edtimes";
 import Payzaql from "./Payzaql";
 
 const Collaboration = () => {
-  const config = {
-    rootMargin: "0px 0px 0px 0px",
-    threshold: 0.2,
-  };
   const [loaded, setIsLoaded] = useState(false);
   useEffect(() => {
+    const config = {
+      rootMargin: "0px 0px 0px 0px",
+      threshold: 0.2,
+    };
     let observer = new window.IntersectionObserver(function (entries, self) {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -45,7 +45,7 @@ const Collaboration = () => {
         observer.unobserve(img);
       });
     };
-  }, [config]);
+  }, []);
 
   const loadImages = (image) => {
     image.src = image.dataset.src;
