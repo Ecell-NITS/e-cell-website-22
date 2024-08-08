@@ -114,21 +114,21 @@ const Blog = () => {
             <div className="btnlatestoldest">
               <button
                 onClick={() => handleSortingOrderChange("latest")}
-                className={sortingOrder === "latest" ? "active" : ""}
+                className={sortingOrder === "latest" ? "active-button" : ""}
               >
                 Latest
               </button>
               <button
                 onClick={() => handleSortingOrderChange("oldest")}
                 id="moreold"
-                className={sortingOrder === "oldest" ? "active" : ""}
+                className={sortingOrder === "oldest" ? "active-button" : ""}
               >
                 Oldest
               </button>
               <button
                 onClick={() => handleSortingOrderChange("likes")}
                 id="moreold"
-                className={sortingOrder === "likes" ? "active" : ""}
+                className={sortingOrder === "likes" ? "active-button" : ""}
               >
                 Most Liked
               </button>

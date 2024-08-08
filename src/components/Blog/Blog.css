@@ -127,7 +127,7 @@
   overflow: hidden;
 }
 
-.btnlatestoldest button.active {
+.btnlatestoldest button.active-button {
   color: rgba(80, 80, 80, 1);
 }
 
