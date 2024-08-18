@@ -383,3 +383,7 @@
     font-size: 4vw;
   }
 }
+
+.active{
+  width: auto !important;
+}
