@@ -77,7 +77,7 @@
 
 .activetagcolored.active {
   color: rgba(80, 80, 80, 1);
-  border: 2px solid black;
+  border: 2.5px solid black;
 }
 
 #moreold {
