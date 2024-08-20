@@ -138,7 +138,9 @@
   object-fit: cover;
   pointer-events: none;
   user-select: none;
-  transition: filter 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition:
+    filter 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
 }
 
 .imgholdercontblog:hover img {

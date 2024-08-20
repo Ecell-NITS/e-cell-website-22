@@ -35,7 +35,9 @@
   padding: 1vw;
   border: 1px solid #224259;
   border-radius: 1vw;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  box-shadow:
+    0 10px 20px rgba(0, 0, 0, 0.19),
+    0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
 .img-upcom-evnt {
