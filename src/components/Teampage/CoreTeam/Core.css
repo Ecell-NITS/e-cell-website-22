@@ -8,17 +8,17 @@
 }
 
 .core-mem {
-  background-color: white;
+  background-color: var(--bg-color-white);
   height: 25rem;
   width: 20rem;
   left: 1.25rem;
   top: 1.25rem;
   border-radius: 8px;
   gap: 1rem;
-  border: 0.5px solid #9a9494;
+  border: 0.5px solid var(--border-color-grey-light);
   box-sizing: border-box;
-  box-shadow: -4px -4px 12px 0px #f2f2f240;
-  box-shadow: 4px 4px 12px 0px #4f4f4f33;
+  box-shadow: -4px -4px 12px 0px var(--box-shadow-color-grey);
+  box-shadow: 4px 4px 12px 0px var(--box-shadow-color-black-1);
   overflow: hidden;
   transition: all 350ms ease;
   margin-bottom: 20px;
@@ -106,7 +106,7 @@
 }
 
 .SocialLogoCore {
-  color: #232323 !important;
+  color: var(--text-color-black) !important;
   top: 0px;
   border-radius: 0px;
   position: relative;
@@ -114,7 +114,7 @@
   gap: 0.75rem;
 }
 .SocialLogoCore svg {
-  color: #232323 !important;
+  color: var(--text-color-black) !important;
   padding: 0rem;
 }
 @media only screen and (max-width: 1200px) {
@@ -378,14 +378,14 @@
 }
 
 .core-mem {
-background-color: white;
+background-color: var(--bg-color-white);
 height: 27.75rem;
 width: 24rem;
 left: 1.25rem;
 top: 1.25rem;
 border-radius: 8px;
 gap: 0.75rem;
-border: 0.5px solid #9A9494;
+border: 0.5px solid var(--border-color-grey-light);
 box-sizing: border-box;
 box-shadow: -4px -4px 12px 0px #F2F2F240;
 box-shadow: 4px 4px 12px 0px #4F4F4F33;

@@ -25,7 +25,7 @@
 
   /* Dark Blue */
 
-  color: #224259;
+  color: var(--text-color-primary);
 
   /* Inside auto layout */
 
@@ -42,7 +42,7 @@
 
   /* Dark Blue */
 
-  border-top: 2px solid #224259;
+  border-top: 2px solid var(--border-color-primary);
 
   /* Inside auto layout */
 
@@ -78,10 +78,10 @@
 .next {
   /* White */
 
-  background: #ffffff;
+  background: var(--bg-color-white);
   /* Stroke */
 
-  border: 1px solid #9a9494;
+  border: 1px solid var(--border-color-grey-light);
   width: 36px;
   height: 33px;
 
@@ -100,20 +100,20 @@
 
 .prev:hover,
 .next:hover {
-  background-color: #3e618e;
-  color: #fff;
+  background-color: var(--bg-color-primary);
+  color: var(--text-color-white);
 }
 
 .prev:hover .arrow,
 .next:hover .arrow {
-  border: solid #fff;
+  border: solid var(--border-color-white);
   border-width: 0 3px 3px 0;
   display: inline-block;
   padding: 3px;
 }
 
 .arrow {
-  border: solid #505050;
+  border: solid var(--border-color-grey);
   border-width: 0 3px 3px 0;
   display: inline-block;
   padding: 3px;

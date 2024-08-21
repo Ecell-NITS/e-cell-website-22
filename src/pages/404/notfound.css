@@ -9,13 +9,13 @@
 
   justify-content: center;
   align-items: center;
-  background-color: white;
+  background-color: var(--bg-color-white);
   min-height: 100vh;
   flex-direction: column;
 }
 
 .p-by {
-  color: #1c374b;
+  color: var(--text-color-primary);
   font-family: "Barlow Condensed", sans-serif;
   font-weight: 900;
   font-size: 3rem;

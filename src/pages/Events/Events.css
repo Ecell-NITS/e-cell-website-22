@@ -33,7 +33,7 @@
   background-position-x: center;
 }
 .spkr-cont-event {
-  background-color: white;
+  background-color: var(--bg-color-white);
   display: inline-block;
   position: absolute;
   top: 23%;
@@ -47,7 +47,7 @@
 .spkr-cont-event h1 {
   font-size: 1.5vw;
   font-family: "Barlow Condensed", sans-serif;
-  color: #224259;
+  color: var(--text-color-primary);
   margin-bottom: 0 !important;
   padding: 0.3vw 1vw;
 }
@@ -60,7 +60,7 @@
 }
 
 .srjn-top-evnt h1 {
-  color: white;
+  color: var(--text-color-white);
   font-size: 7.5vw;
   font-weight: 900;
   font-family: "Barlow Condensed", sans-serif;
@@ -84,7 +84,7 @@
 }
 
 .dte-evnt-hme h2 {
-  color: white;
+  color: var(--text-color-white);
   font-size: 1.3vw;
   font-family: "Barlow Condensed", sans-serif;
   margin-left: 1vw;
@@ -99,8 +99,8 @@
 }
 
 .vw-dtls-evnt-hro button {
-  background-color: #224259;
-  color: white;
+  background-color: var(--bg-color-primary);
+  color: var(--text-color-white);
   font-size: 1.8vw;
   padding: 0.3vw 1.5vw;
   font-weight: 600;
@@ -164,7 +164,7 @@
   }
 
   .dte-evnt-hme h2 {
-    color: white;
+    color: var(--text-color-white);
     font-size: 3.7vw;
     font-family: "Barlow Condensed", sans-serif;
     margin-left: 3vw;

@@ -36,14 +36,14 @@
 
 .sortkaro {
   font-size: 2.5vw;
-  color: rgba(62, 97, 142, 1);
+  color: var(--text-color-primary);
 }
 
 .btnlatestoldest button {
   background: none;
   outline: none;
   border: none;
-  color: rgba(154, 148, 148, 1);
+  color: var(--text-color-grey-light);
   font-size: 2.5vw;
   font-weight: 500;
 }
@@ -66,8 +66,8 @@
   display: block;
   background: none;
   outline: none;
-  border: 1px solid grey;
-  color: rgba(154, 148, 148, 1);
+  border: 1px solid var(--border-color-grey);
+  color: var(--text-color-grey-light);
   font-size: 1.7vw;
   font-weight: 500;
   margin: 8vw 1vw 0 1vw;
@@ -76,7 +76,7 @@
 }
 
 .activetagcolored.active {
-  color: rgba(80, 80, 80, 1);
+  color: var(--text-color-grey);
 }
 
 #moreold {
@@ -84,11 +84,11 @@
 }
 
 .newblogaddbtn {
-  background-color: rgba(62, 97, 142, 1);
+  background-color: var(--bg-color-primary);
   border: none;
   outline: none;
   border-radius: 10.97px;
-  color: white;
+  color: var(--text-color-white);
   font-size: 2.45vw;
   padding: 0.7vw 3.8vw;
   display: block;
@@ -97,7 +97,7 @@
 }
 
 .newblogaddbtn:focus {
-  box-shadow: 0 0 0 5px #224259;
+  box-shadow: 0 0 0 5px var(--box-shadow-color-primary);
 }
 
 .mainparentblogindicard {
@@ -113,7 +113,7 @@
   flex: none;
   order: 1;
   width: 45%;
-  border: 1.5px solid rgba(80, 80, 80, 1);
+  border: 1.5px solid var(--border-color-grey);
   border-radius: 6.13px;
   padding: 1vw;
   margin-top: 2vw;
@@ -128,7 +128,7 @@
 }
 
 .btnlatestoldest button.active {
-  color: rgba(80, 80, 80, 1);
+  color: var(--text-color-grey);
 }
 
 .imgholdercontblog img {
@@ -145,7 +145,7 @@
 }
 
 .titlehainlogindi {
-  color: rgba(34, 66, 89, 1);
+  color: var(--text-color-primary);
   font-size: 2.25vw;
   font-weight: 600;
   margin-top: 0.35vw;
@@ -153,7 +153,7 @@
 }
 
 .whowrittenblog h2 {
-  color: rgba(80, 80, 80, 1);
+  color: var(--text-color-grey);
   margin-bottom: 0;
   font-size: 1.4vw;
   margin-bottom: 0.35vw;
@@ -165,9 +165,9 @@
 }
 
 .whoholdsthetag button {
-  background-color: rgba(255, 255, 255, 1);
-  color: rgba(80, 80, 80, 1);
-  border: 1.9px solid grey;
+  background-color: var(--bg-color-white);
+  color: var(--text-color-grey);
+  border: 1.9px solid var(--text-color-grey);
   border-radius: 6.13px;
   font-size: 1vw;
   padding: 0.15vw;
@@ -175,7 +175,7 @@
 }
 
 .whoholdsthetag button a {
-  color: rgba(80, 80, 80, 1) !important;
+  color: var(--text-color-grey) !important;
 }
 
 .buttonmarginlft {
@@ -191,12 +191,12 @@
 }
 
 .briefintrohldman p {
-  color: rgba(80, 80, 80, 1);
+  color: var(--text-color-grey);
 }
 
 .kretrhereading {
-  background-color: rgba(62, 97, 142, 1);
-  color: rgba(255, 255, 255, 1);
+  background-color: var(--bg-color-primary);
+  color: var(--text-color-white);
   border: none;
   outline: none;
   border-radius: 5.05px;
@@ -205,7 +205,7 @@
 }
 
 .kretrhereading:active {
-  box-shadow: 0 0 0 5px #224259;
+  box-shadow: 0 0 0 5px var(--box-shadow-color-primary);
 }
 #pblshbtn {
   margin-bottom: 0.35vw;
@@ -245,7 +245,7 @@
 }
 
 .likekarobhaiblog {
-  background-color: white;
+  background-color: var(--bg-color-white);
   border: none;
   outline: none;
   font-size: 1.5vw;

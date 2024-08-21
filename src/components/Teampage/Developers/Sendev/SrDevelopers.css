@@ -17,15 +17,15 @@
 }
 
 .sr-dev {
-  background-color: white;
+  background-color: var(--bg-color-white);
   height: 25rem;
   width: 21rem;
   border-radius: 8px;
   gap: 1rem;
-  border: 0.5px solid #9a9494;
+  border: 0.5px solid var(--border-color-grey-light);
   box-sizing: border-box;
-  box-shadow: -4px -4px 12px 0px #f2f2f240;
-  box-shadow: 4px 4px 12px 0px #4f4f4f33;
+  box-shadow: -4px -4px 12px 0px var(--box-shadow-color-grey);
+  box-shadow: 4px 4px 12px 0px var(--box-shadow-color-black-1);
   transition-duration: 0.3 sec;
   overflow: hidden;
 }
@@ -103,7 +103,7 @@
 }
 
 .MediaLogo {
-  color: #232323 !important;
+  color: var(--text-color-black) !important;
   height: 30px;
   width: 55px;
   top: 0px;

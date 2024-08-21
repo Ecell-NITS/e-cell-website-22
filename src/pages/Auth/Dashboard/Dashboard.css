@@ -45,7 +45,7 @@
   flex-wrap: wrap;
 }
 #admin-button {
-  color: #224259;
+  color: var(--text-color-primary);
   border-color: #224259;
 }
 .firstseconndchild {
@@ -57,7 +57,7 @@
 .editkryieprof {
   color: rgba(193, 0, 0, 1);
   border: 2px solid rgba(193, 0, 0, 1);
-  background-color: white;
+  background-color: var(--bg-color-white);
   padding: 0.25vw 1.5vw !important;
   border-radius: 7.59px;
   font-size: 1.7vw;
@@ -87,7 +87,7 @@
 }
 
 #sirfcolorchng {
-  color: rgba(34, 66, 89, 1);
+  color: var(--text-color-primary);
   border: 2px solid rgba(34, 66, 89, 1);
   /* margin-left: 17vw; */
   padding: 0.25vw 3vw !important;
@@ -144,10 +144,10 @@
 }
 
 .smedia1div button {
-  background-color: white;
+  background-color: var(--bg-color-white);
   border: none;
   outline: none;
-  color: #224259;
+  color: var(--text-color-primary);
 }
 
 @media (max-width: 660px) {

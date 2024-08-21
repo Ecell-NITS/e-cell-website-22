@@ -6,14 +6,14 @@
   justify-content: center;
   height: 100vh;
   margin: 0;
-  background: #161c2f;
+  background: var(--bg-color-primary-dark);
 }
 
 .loader {
   font-family: Arial, sans-serif;
   font-size: 2rem;
   font-weight: bold;
-  color: white;
+  color: var(--text-color-white);
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -29,7 +29,7 @@
   height: 0.625rem;
   margin-top: 0.625rem;
   width: 0.625rem;
-  background-color: white;
+  background-color: var(--bg-color-white);
   border-radius: 50%;
   display: inline-block;
   animation: dotAnimation 1.5s infinite ease-in-out;

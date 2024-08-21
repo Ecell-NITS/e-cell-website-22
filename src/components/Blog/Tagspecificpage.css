@@ -5,7 +5,7 @@
 
 .headingtagsspecific {
   font-size: 3.5vw;
-  color: #224259;
+  color: var(--text-color-primary);
   text-decoration: underline;
 }
 
