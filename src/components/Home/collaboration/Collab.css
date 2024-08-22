@@ -41,7 +41,7 @@
   display: flex;
   align-items: center;
   /* padding: 1rem 0; */
-  color: var(--btn-color-black);
+  color: var(--text-color-black);
   position: relative;
   z-index: 9;
 }
@@ -89,7 +89,7 @@
   border: none;
   cursor: pointer;
   background-color: transparent;
-  color: var(--btn-color-white);
+  color: var(--text-color-white);
   font-weight: 900;
 }
 

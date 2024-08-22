@@ -1,39 +1,87 @@
 :root {
+  /*****BODY COLOR*****/
+  --body-bg-color: white;
+
+  /***** TEXT COLORS *****/
   --text-color-white: white;
   --text-color-black: black;
   --text-color-red: red;
   --text-color-primary: #224259;
   --text-color-primary-light: #3e618e;
-  --text-color-grey: #505050;
+  --text-color-grey: grey;
   --text-color-grey-light: #ccc;
 
+  /***** BORDER COLORS *****/
   --border-color-black: black;
   --border-color-white: white;
   --border-color-primary: #224259;
+  --border-color-primary-light: #25aae1;
   --border-color-primary-dark: rgb(11, 11, 62);
-  --border-color-grey: #505050;
+  --border-color-grey: grey;
+  --border-color-grey-light: #ccc;
   --border-color-green: rgba(0, 128, 0);
   --border-color-orange: rgba(245, 92, 5, 0.5);
-  --border-color-grey-light: #ccc;
-  --border-color-primary-light: #80bdff;
 
-  --btn-color-black: black;
-  --btn-color-white: white;
-
+  /***** BACKGROUND COLORS *****/
   --bg-color-primary: #224259;
   --bg-color-primary-dark: rgb(11, 11, 62);
+  --bg-color-primary-light: #25aae1;
   --bg-color-white: white;
   --bg-color-green: rgba(0, 128, 0);
   --bg-color-red: rgba(255, 0, 0);
-  --bg-color-primary-light: #1da1f2;
   --bg-color-grey-light: #ccc;
 
+  /***** BOX SHADOWS *****/
   --box-shadow-color-black-1: rgba(0, 0, 0, 0.1);
   --box-shadow-color-black-2: rgba(0, 0, 0, 0.24);
   --box-shadow-color-primary: #224259;
   --box-shadow-color-primary-dark: rgba(1, 51, 91, 0.7);
+  --box-shadow-color-grey: grey;
   --box-shadow-color-grey-light: #ccc;
-  --box-shadow-color-grey: #f2f2f240;
+  --box-shadow-color-green: #224529;
+}
+
+/* Adding the class "dark-theme" to body gives dark theme */
+.dark-theme {
+  /*****BODY COLOR*****/
+  --body-bg-color: #060505;
+
+  /***** TEXT COLORS *****/
+  --text-color-white: #f0f0f0;
+  --text-color-black: #060505;
+  --text-color-red: red;
+  --text-color-primary: #173246;
+  --text-color-primary-light: #1e5d78;
+  --text-color-grey: #505050;
+  --text-color-grey-light: grey;
+
+  /***** BORDER COLORS *****/
+  --border-color-black: #060505;
+  --border-color-white: #f0f0f0;
+  --border-color-primary: #173246;
+  --border-color-primary-dark: rgb(11, 11, 62);
+  --border-color-grey: #505050;
+  --border-color-green: rgba(0, 128, 0);
+  --border-color-orange: rgba(245, 92, 5, 0.5);
+  --border-color-grey-light: grey;
+  --border-color-primary-light: #327d9c;
+
+  /***** BACKGROUND COLORS *****/
+  --bg-color-primary: #173246;
+  --bg-color-primary-dark: rgb(11, 11, 62);
+  --bg-color-white: #f0f0f0;
+  --bg-color-green: rgba(0, 128, 0);
+  --bg-color-red: rgba(255, 0, 0);
+  --bg-color-primary-light: #327d9c;
+  --bg-color-grey-light: #ccc;
+
+  /***** BOX SHADOWS *****/
+  --box-shadow-color-black-1: rgba(0, 0, 0, 0.1);
+  --box-shadow-color-black-2: rgba(0, 0, 0, 0.24);
+  --box-shadow-color-primary: #173246;
+  --box-shadow-color-primary-dark: rgba(1, 51, 91, 0.7);
+  --box-shadow-color-grey-light: grey;
+  --box-shadow-color-grey: #505050;
   --box-shadow-color-green: #224529;
 }
 
@@ -55,11 +103,11 @@ a {
   background: var(--bg-color-primary);
 }
 ::-webkit-scrollbar-thumb {
-  background: #161c2f;
+  background: var(--bg-color-primary-dark);
   border-radius: 15px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #0072b1;
+  background: var(--bg-color-primary-light);
 }
 
 .loading {
