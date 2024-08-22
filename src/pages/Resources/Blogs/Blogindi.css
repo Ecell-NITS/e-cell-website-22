@@ -136,7 +136,9 @@
   height: 100%;
   width: 100%;
   object-fit: cover;
-  transition: filter 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition:
+    filter 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
 }
 
 .parallax-container {
@@ -148,7 +150,9 @@
   width: 100%;
   object-fit: cover;
   object-position: center;
-  transition: filter 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition:
+    filter 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
 }
 
 .topicpicimgstyled:hover img {
