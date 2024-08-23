@@ -22,14 +22,14 @@ div.tabGallery > * {
 }
 
 .tabGallery .sort {
-  color: #505050;
+  color: var(--text-color-grey);
 }
 
 .tabGallery .events,
 .tabGallery .years {
   display: flex;
   align-items: center;
-  border: #224259 solid 1px;
+  border: var(--border-color-primary) solid 1px;
 }
 
 .dropdown {
@@ -38,15 +38,15 @@ div.tabGallery > * {
 .dropdown-menu {
   border: none !important;
   padding-top: 0%;
-  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  box-shadow: 0 3px 10px var(--box-shadow-color-black-1);
 }
 
 #dropdown-custom-2 {
   display: block;
   width: 17rem;
-  background-color: white;
-  color: #224259;
-  border: white;
+  background-color: var(--body-bg-color);
+  color: var(--light-text-color);
+  border: var(--light-text-color);
   font-weight: 600;
   font-size: 2.25rem;
   margin-top: 0%;
@@ -57,13 +57,13 @@ div.tabGallery > * {
 }
 
 .dropdown-menu > * {
-  background-color: white !important;
-  color: #9a9494 !important;
+  background-color: var(--body-bg-color) !important;
+  color: var(--text-color-grey) !important;
   font-weight: 600 !important;
   font-size: 2.25rem !important;
 }
 .dropdown-menu > *:hover {
-  color: #224259 !important;
+  color: var(--text-color-primary) !important;
 }
 
 .GalleryCards {

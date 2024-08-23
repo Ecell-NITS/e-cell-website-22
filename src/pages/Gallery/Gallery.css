@@ -6,12 +6,12 @@
   background-repeat: no-repeat;
   background-size: 60% 100%;
   background-attachment: scroll;
-  background-color: white;
+  background-color: var(--bg-color-white);
 }
 
 .Gallery-top h1 {
   display: absolute;
-  color: #224259;
+  color: var(--text-color-primary);
   font-family: "Barlow Condensed", sans-serif;
   font-size: 8vw;
   line-height: 1.6;
@@ -21,7 +21,7 @@
 
 .Gall-part {
   margin-left: 49.5% !important;
-  color: white !important;
+  color: var(--text-color-white) !important;
   margin-right: 0 !important;
 }
 
@@ -44,6 +44,6 @@
   }
 
   .ery-part {
-    color: white;
+    color: var(--text-color-white);
   }
 }

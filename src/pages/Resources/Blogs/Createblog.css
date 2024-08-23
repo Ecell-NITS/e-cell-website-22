@@ -17,7 +17,7 @@
 
 .titletopcbl {
   margin-bottom: 4vw;
-  color: rgba(34, 66, 89, 1);
+  color: var(--text-color-primary);
   font-size: 4vw;
 }
 
@@ -26,7 +26,7 @@
   border-radius: 5px;
   margin-bottom: 4vw;
   padding: 1.5vw;
-  border: 2px solid grey;
+  border: 2px solid var(--border-color-grey);
 }
 
 #writerdivid {
@@ -34,7 +34,7 @@
 }
 
 .specificttle {
-  color: rgba(154, 148, 148, 1);
+  color: var(--text-color-grey-light);
   font-size: 1.2vw;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
@@ -44,7 +44,7 @@
 .ttleinptcrteblog {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
-  color: rgba(34, 66, 89, 1);
+  color: var(--text-color-primary);
   font-size: 2vw;
 }
 
@@ -63,7 +63,7 @@
 }
 
 #crteblogbtn0:active {
-  box-shadow: 0 0 0 5px #224259;
+  box-shadow: 0 0 0 5px var(--box-shadow-color-primary);
 }
 
 /* .jodit-wysiwyg p{

@@ -1,8 +1,8 @@
 .comment-main {
   min-height: 20vw;
   border-radius: 20px;
-  border: 1px solid rgba(102, 108, 116, 0.4);
-  background: #f5f5f5;
+  border: 1px solid var(--border-color-grey);
+  background: var(--bg-color-white);
   margin-bottom: 2.5vw;
   padding: 1.5vw;
   padding-bottom: 2.5vw !important;
@@ -19,14 +19,14 @@
 
 .classofnameloggedin {
   font-size: 1.5vw;
-  color: #505050;
+  color: var(--text-color-grey);
   cursor: pointer;
 }
 
 .comment-main textarea {
   width: 100% !important;
   border: none;
-  background: #f5f5f5;
+  background: var(--bg-color-white);
   margin-top: 1.5vw;
   padding: 1vw;
   font-size: 1.6vw;
@@ -38,7 +38,7 @@
 }
 
 .place-ka-holder-commnt:active {
-  border: 2px solid #f5f5f5 !important;
+  border: 2px solid var(--border-color-grey-light) !important;
 }
 
 .btnscommentandcancel {
@@ -49,8 +49,8 @@
 
 #commentkardebhai {
   border-radius: 20px;
-  background-color: #3e618e;
-  color: #fff;
+  background-color: var(--text-color-primary-light);
+  color: var(--text-color-white);
   padding: 0.25vw 1.5vw;
   font-size: 1.5vw;
   border: none;
@@ -58,8 +58,8 @@
 }
 
 #nhilikhnabhaicomment {
-  color: #505050;
-  background: #f5f5f5;
+  color: var(--text-color-grey);
+  background: var(--bg-color-white);
   font-size: 1.5vw;
   border: none;
   outline: none;
@@ -68,7 +68,7 @@
 }
 
 .total-comments-innutshell {
-  color: #595959;
+  color: var(--text-color-grey);
   font-size: 2vw;
   font-weight: 600;
 }
@@ -94,13 +94,13 @@
 
 .name-of-author-created-comnt {
   margin-left: 2vw;
-  color: #505050;
+  color: var(--text-color-grey);
   font-size: 2vw;
 }
 
 .message-by-author-in-comnt p {
   font-size: 1.5vw;
-  color: #606060;
+  color: var(--text-color-grey);
 }
 
 #indi-comnt-putin {
@@ -127,7 +127,7 @@
 
 #strict-instruction {
   font-size: 1.6vw;
-  color: red;
+  color: var(--text-color-red);
 }
 
 .nocomtnsyet {
@@ -154,7 +154,7 @@
 
   .classofnameloggedin {
     font-size: 3vw;
-    color: #505050;
+    color: var(--text-color-grey);
   }
 
   .name-holder-loggedin {

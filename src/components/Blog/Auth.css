@@ -7,7 +7,7 @@
 
 .formauthenticateprovblog h2 {
   text-align: center;
-  color: rgba(62, 97, 142, 1);
+  color: var(--text-color-primary);
   font-weight: 600;
   font-size: 5vw;
 }
@@ -17,19 +17,19 @@
 }
 
 .formlogin input {
-  border: 1px solid #ccc;
+  border: 1px solid var(--border-color-grey-light);
   border-radius: 6px;
   transition: all 0.3s;
 }
 
 .formlogin input:focus {
   outline: none;
-  border-color: #80bdff;
-  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  border-color: var(--border-color-primary-light);
+  box-shadow: 0 0 0 0.2rem var(--box-shadow-color-primary);
 }
 
 .formlogin label {
-  color: rgba(80, 80, 80, 1);
+  color: var(--text-color-grey);
   font-size: 2vw;
 }
 
