@@ -51,6 +51,7 @@
 
 .formsignaccoutn input,
 .formsignaccoutn textarea {
+  background-color: var(--body-bg-color);
   width: 70%;
   border: 2px solid rgba(154, 148, 148, 1);
   padding: 0.215vw 0.75vw;
@@ -71,6 +72,7 @@
 }
 
 .labelshowpass {
+  color: var(--light-text-color);
   display: flex;
   align-items: center;
   margin-top: 1vw;
@@ -105,7 +107,7 @@
 }
 
 .bottomredirectlogin button {
-  background-color: var(--bg-color-white);
+  background-color: var(--body-bg-color);
   border: none;
   outline: none;
   color: var(--text-color-primary-light);
@@ -131,7 +133,7 @@
   font-weight: 900;
   border: none;
   outline: none;
-  background-color: var(--bg-color-white);
+  background-color: var(--body-bg-color);
 }
 
 @media (max-width: 660px) {

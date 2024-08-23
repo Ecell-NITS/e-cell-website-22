@@ -1,6 +1,7 @@
 :root {
   /*****BODY COLOR*****/
   --body-bg-color: white;
+  --light-text-color: black;
 
   /***** TEXT COLORS *****/
   --text-color-white: white;
@@ -8,7 +9,7 @@
   --text-color-red: red;
   --text-color-primary: #224259;
   --text-color-primary-light: #3e618e;
-  --text-color-grey: grey;
+  --text-color-grey: #505050;
   --text-color-grey-light: #ccc;
 
   /***** BORDER COLORS *****/
@@ -21,6 +22,7 @@
   --border-color-grey-light: #ccc;
   --border-color-green: rgba(0, 128, 0);
   --border-color-orange: rgba(245, 92, 5, 0.5);
+  --border-color-red: rgba(193, 0, 0, 1);
 
   /***** BACKGROUND COLORS *****/
   --bg-color-primary: #224259;
@@ -45,6 +47,7 @@
 .dark-theme {
   /*****BODY COLOR*****/
   --body-bg-color: #060505;
+  --light-text-color: grey;
 
   /***** TEXT COLORS *****/
   --text-color-white: #f0f0f0;
@@ -65,6 +68,7 @@
   --border-color-orange: rgba(245, 92, 5, 0.5);
   --border-color-grey-light: grey;
   --border-color-primary-light: #327d9c;
+  --border-color-red: rgba(193, 0, 0, 1);
 
   /***** BACKGROUND COLORS *****/
   --bg-color-primary: #173246;
@@ -76,8 +80,8 @@
   --bg-color-grey-light: #ccc;
 
   /***** BOX SHADOWS *****/
-  --box-shadow-color-black-1: rgba(0, 0, 0, 0.1);
-  --box-shadow-color-black-2: rgba(0, 0, 0, 0.24);
+  --box-shadow-color-black-1: #ccc;
+  --box-shadow-color-black-2: #f0f0f0;
   --box-shadow-color-primary: #173246;
   --box-shadow-color-primary-dark: rgba(1, 51, 91, 0.7);
   --box-shadow-color-grey-light: grey;

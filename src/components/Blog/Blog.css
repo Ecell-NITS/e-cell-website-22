@@ -77,6 +77,7 @@
 
 .activetagcolored.active {
   color: var(--text-color-grey);
+  border: 2px solid var(--text-color-primary-light);
 }
 
 #moreold {
@@ -165,9 +166,9 @@
 }
 
 .whoholdsthetag button {
-  background-color: var(--bg-color-white);
+  background-color: var(--body-bg-color);
   color: var(--text-color-grey);
-  border: 1.9px solid var(--text-color-grey);
+  border: 1.9px solid var(--border-color-grey);
   border-radius: 6.13px;
   font-size: 1vw;
   padding: 0.15vw;
@@ -245,7 +246,8 @@
 }
 
 .likekarobhaiblog {
-  background-color: var(--bg-color-white);
+  background-color: var(--bg-color-body);
+  color: var(--light-text-color);
   border: none;
   outline: none;
   font-size: 1.5vw;
@@ -375,6 +377,8 @@
   }
 
   .likekarobhaiblog {
+    background-color: var(--bg-color-body);
+    color: var(--light-text-color);
     align-items: baseline;
     font-size: 5vw;
   }

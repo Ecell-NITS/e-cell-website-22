@@ -4,7 +4,7 @@
   justify-content: center;
   font-size: 2.35vw;
   font-weight: 600;
-  color: var(--text-color-grey-light);
+  color: var(--text-color-grey);
   cursor: pointer;
   user-select: none;
 }
@@ -26,8 +26,8 @@ div.tab_main > * {
 }
 
 #dropdown-custom-1 {
-  background-color: var(--bg-color-white);
-  color: var(--text-color-grey-light);
+  background-color: var(--body-bg-color);
+  color: var(--text-color-grey);
   border: var(--border-color-white);
   font-weight: 600;
   font-size: 2.35vw;
@@ -38,7 +38,7 @@ div.tab_main > * {
 }
 
 .dropdown-menu > * {
-  background-color: var(--bg-color-white) !important;
+  background-color: var(--body-bg-color) !important;
   color: var(--text-color-grey-light) !important;
   font-weight: 600 !important;
   font-size: 2.35vw !important;

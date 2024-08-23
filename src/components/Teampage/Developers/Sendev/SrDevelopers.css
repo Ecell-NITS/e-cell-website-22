@@ -17,7 +17,7 @@
 }
 
 .sr-dev {
-  background-color: var(--bg-color-white);
+  background-color: var(--body-bg-color);
   height: 25rem;
   width: 21rem;
   border-radius: 8px;
@@ -78,6 +78,7 @@
 }
 
 .title {
+  color: var(--light-text-color);
   font-family: Barlow Condensed;
   font-size: 34px;
   font-style: italic;
@@ -103,7 +104,7 @@
 }
 
 .MediaLogo {
-  color: var(--text-color-black) !important;
+  color: var(--light-text-color) !important;
   height: 30px;
   width: 55px;
   top: 0px;

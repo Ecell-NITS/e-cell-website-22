@@ -28,6 +28,7 @@
   margin: 12px 0;
 }
 .motto_card_text {
+  color: var(--light-text-color);
   margin: 0 24px 24px 24px;
   font-size: 1.35vw;
 }

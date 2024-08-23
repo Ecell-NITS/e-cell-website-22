@@ -6,7 +6,7 @@
   justify-content: center;
   height: 100vh;
   margin: 0;
-  background: var(--bg-color-primary-dark);
+  background: var(--bg-color-primary);
 }
 
 .loader {

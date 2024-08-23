@@ -9,6 +9,9 @@
   background-repeat: no-repeat;
 }
 
+.footer-section p {
+  color: var(--text-color-white);
+}
 .p2 {
   margin-bottom: 0 !important;
 }
@@ -165,7 +168,7 @@
   justify-content: center;
   margin-top: 1vw;
   font-size: 1.2vw;
-  color: var(--text-color-grey);
+  color: var(--text-color-grey-light);
   user-select: none;
 }
 
