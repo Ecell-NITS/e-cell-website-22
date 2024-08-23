@@ -302,6 +302,7 @@ const Collaboration = () => {
           <div
             id="tbn-indi-collab-po"
             className={`EngineerHub ${accollab === "EngineerHub" ? " njkl021" : ""}`}
+            style={{ filter: "brightness(0.5)" }}
           >
             <button
               id="btn-collab-indi-po"
