@@ -227,8 +227,8 @@ const Signup = () => {
   const sendOTP = async (e) => {
     e.preventDefault();
 
-    if (!emailPattern.test(email)) {
-      toast.error("Please enter your email id", {
+    if (name == "") {
+      toast.error("Please enter your name", {
         position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
@@ -240,8 +240,8 @@ const Signup = () => {
       });
       return;
     }
-    if (name == "") {
-      toast.error("Please enter your name", {
+    if (!emailPattern.test(email)) {
+      toast.error("Please enter a valid email id", {
         position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
