@@ -7,7 +7,7 @@
 .indiviualblog h1 {
   /* padding-top: 3vw; */
   padding-bottom: 2vw;
-  color: rgba(28, 55, 75, 1);
+  color: var(--text-color-primary);
   font-size: 3.5vw;
   text-align: center;
   /* margin-top: -15vw; */
@@ -15,13 +15,13 @@
 }
 
 .indiviualblog p {
-  color: rgba(96, 96, 96, 1);
+  color: var(--text-color-grey);
 }
 
 .writerdetails {
   display: flex;
-  background-color: rgba(232, 246, 250, 1);
-  border: 1px solid rgba(102, 108, 116, 0.4);
+  background-color: var(--bg-color-white);
+  border: 1px solid var(--border-color-grey);
   margin-top: 5vw;
   margin-bottom: 2.5vw;
   padding-left: 3.5vw;
@@ -40,7 +40,7 @@
   height: 100% !important;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 10px var(--box-shadow-color-grey);
 }
 
 .writerintro {
@@ -48,7 +48,7 @@
 }
 
 .writerintro p {
-  color: rgba(34, 66, 89, 1);
+  color: var(--text-color-primary);
   font-size: 1.5vw;
   padding: 0vw 1.2vw 0 3vw;
 }
@@ -69,11 +69,11 @@
 }
 
 #btnbacktoresoucres {
-  background-color: white;
+  background-color: var(--bg-color-white);
   font-size: 1.5vw;
   border: none;
   outline: none;
-  color: rgba(28, 55, 75, 1);
+  color: var(--text-color-primary);
 }
 
 .bottomindiblogftr {
@@ -85,12 +85,12 @@
 }
 
 .smedisharetoicons button {
-  background-color: white;
+  background-color: var(--bg-color-white);
   border: none;
   outline: none;
   margin: 0 0.5vw;
   font-size: 2vw;
-  color: rgba(28, 55, 75, 1);
+  color: var(--text-color-primary);
 }
 
 #nameinwriterindiblog {
@@ -108,7 +108,7 @@
 }
 
 #writerimpspan {
-  color: #224259;
+  color: var(--text-color-primary);
   text-decoration: underline;
   cursor: pointer;
 }
@@ -120,7 +120,7 @@
 }
 
 #reading-author-name h6 {
-  color: #224259;
+  color: var(--text-color-primary);
   font-size: 1.5vw;
 }
 
@@ -136,9 +136,7 @@
   height: 100%;
   width: 100%;
   object-fit: cover;
-  transition:
-    filter 0.3s ease-in-out,
-    transform 0.3s ease-in-out;
+  transition: filter 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .parallax-container {
@@ -150,9 +148,7 @@
   width: 100%;
   object-fit: cover;
   object-position: center;
-  transition:
-    filter 0.3s ease-in-out,
-    transform 0.3s ease-in-out;
+  transition: filter 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .topicpicimgstyled:hover img {
@@ -163,7 +159,7 @@
   border-radius: 10px;
   margin-top: 3vw;
   margin-bottom: 3vw;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.484);
+  box-shadow: 0 0 10px var(--box-shadow-color-black-2);
   pointer-events: none;
 }
 
@@ -268,8 +264,8 @@
 }
 .Admin-control button {
   padding: 1rem 2rem;
-  background-color: #1c374b;
-  color: white;
+  background-color: var(--bg-color-primary);
+  color: var(--text-color-white);
   border: none;
   border-radius: 5px;
 }

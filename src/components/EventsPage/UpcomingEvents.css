@@ -33,11 +33,10 @@
   margin-right: 1.1%;
   margin-bottom: 2.1%;
   padding: 1vw;
-  border: 1px solid #224259;
+  border: 1px solid var(--border-color-primary);
   border-radius: 1vw;
-  box-shadow:
-    0 10px 20px rgba(0, 0, 0, 0.19),
-    0 6px 6px rgba(0, 0, 0, 0.23);
+  box-shadow: 0 10px 20px var(--box-shadow-color-black-1),
+    0 6px 6px var(--box-shadow-color-black-2);
 }
 
 .img-upcom-evnt {
@@ -59,7 +58,7 @@
 .title-announc-upcom-evnt h1 {
   font-size: 1.7vw;
   margin-bottom: 0;
-  color: #224259;
+  color: var(--text-color-primary);
 }
 
 .btns-info-klp {
@@ -75,15 +74,15 @@
 }
 
 .dte-locn-upcomi-event h2 {
-  color: #505050;
+  color: var(--text-color-grey);
   font-weight: 400;
   font-size: 1.2vw;
   margin-bottom: 0;
 }
 
 .btns-1-ent-indi button {
-  background-color: #3e618e;
-  color: #fff;
+  background-color: var(--bg-color-primary);
+  color: var(--text-color-white);
   padding: 0vw 0.5vw;
   border-radius: 0.5vw;
   font-size: 1.2vw;
@@ -99,7 +98,7 @@
 }
 .abt-content-indi-evnt h3 {
   font-size: 1.3vw;
-  color: #505050;
+  color: var(--text-color-grey);
   margin-bottom: 0;
   font-weight: 400;
   overflow: auto;
@@ -122,8 +121,8 @@
   }
 
   .btns-1-ent-indi button {
-    background-color: #3e618e;
-    color: white;
+    background-color: var(--bg-color-primary);
+    color: var(--text-color-white);
     padding: 0vw 0.8vw;
     border-radius: 0.5vw;
     font-size: 1.2vw;
@@ -150,7 +149,7 @@
     margin-left: 12.5%;
     margin-right: 12.5%;
     padding: 2vw;
-    border: 1px solid #224259;
+    border: 1px solid var(--border-color-primary);
     border-radius: 2vw;
   }
 
@@ -183,8 +182,8 @@
   }
 
   .btns-1-ent-indi button {
-    background-color: #3e618e;
-    color: white;
+    background-color: var(--bg-color-primary);
+    color: var(--text-color-white);
     padding: 0.5vw 3vw;
     border-radius: 1vw;
     font-size: 3vw;

@@ -37,14 +37,14 @@
 }
 
 .signedin__details p {
-  color: #fff;
+  color: var(--text-color-white);
   font-size: 1.8vw;
   margin-bottom: 0 !important;
 }
 
 #bold__auth__name {
   font-weight: 700;
-  color: #fff;
+  color: var(--text-color-white);
 }
 
 .user__auth__profile_img {
@@ -77,7 +77,7 @@
 
 .logout__btn button {
   background-color: transparent;
-  color: white;
+  color: var(--text-color-white);
   border: 1.5px solid white;
   outline: none;
   font-size: 1.25vw;

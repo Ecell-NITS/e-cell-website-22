@@ -18,7 +18,7 @@
       font-weight: 400;
     }
     a {
-      color: #224259 !important;
+      color: var(--text-color-primary) !important;
       font-weight: 500;
       text-decoration: none;
       &:hover {
@@ -58,7 +58,7 @@
         margin-bottom: 20px;
       }
       .required {
-        color: red;
+        color: var(--text-color-red);
       }
       button {
         font-size: 1.5rem;
@@ -66,14 +66,14 @@
         padding: 10px 20px;
         border-radius: 5px;
         width: fit-content;
-        background-color: #224259;
-        color: rgb(205, 201, 201);
+        background-color: var(--bg-color-primary);
+        color: var(--text-color-grey-light);
         border: none;
         cursor: pointer;
         transition: all 0.3s ease-in-out;
         &:hover {
-          background-color: #1f3d53;
-          color: rgb(244, 241, 241);
+          background-color: var(--bg-color-primary);
+          color: var(--text-color-white);
           transform: scale(1.1);
         }
       }

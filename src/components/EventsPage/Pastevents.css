@@ -14,14 +14,13 @@
   order: 1;
   width: 31%;
   padding: 1vw;
-  border: 1px solid #224259;
+  border: 1px solid var(--border-color-primary);
   border-radius: 1vw;
   transition: all 0.5s ease-in-out;
   margin: 1.5vw 1.1%;
 
-  box-shadow:
-    0 10px 20px rgba(0, 0, 0, 0.19),
-    0 6px 6px rgba(0, 0, 0, 0.23);
+  box-shadow: 0 10px 20px var(--box-shadow-color-black-1),
+    0 6px 6px var(--box-shadow-color-black-2);
 }
 
 .past-evvnts-parnt::-webkit-scrollbar {
@@ -36,9 +35,9 @@
 .all-evnts-btn-cont button {
   padding: 0.4vw 0.9vw;
   border-radius: 5vw;
-  background-color: white;
-  color: #3e618e;
-  border: 2px solid #3e618e !important;
+  background-color: var(--bg-color-white);
+  color: var(--text-color-primary);
+  border: 2px solid var(--border-color-primary) !important;
   font-size: 1.3vw;
 }
 

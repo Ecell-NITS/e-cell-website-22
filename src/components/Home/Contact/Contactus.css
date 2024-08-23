@@ -5,25 +5,25 @@
 }
 
 .formcontact form button {
-  background-color: #224259;
+  background-color: var(--bg-color-primary);
   transition: all 0.15s ease-out;
-  color: white;
+  color: var(--text-color-white);
   cursor: pointer;
   padding: 0.25vw 2vw;
   margin: 1.5vw 0;
   font-size: 1.8vw;
   border-radius: 5px;
   outline: none;
-  border: 2px solid #1da1f2;
+  border: 2px solid var(--border-color-primary-light);
 }
 
 .formcontact form button:hover {
-  background-color: #1da1f2;
-  border: 2px solid #224259;
+  background-color: var(--bg-color-primary-light);
+  border: 2px solid var(--bg-color-primary);
 }
 
 .formcontact form button:active {
-  box-shadow: 0 0 0 5px #224259;
+  box-shadow: 0 0 0 5px var(--bg-color-primary);
   transition: 0.3s;
 }
 
@@ -39,21 +39,21 @@
 }
 
 .msgclass {
-  background-color: rgba(0, 128, 0);
+  background-color: var(--bg-color-green);
   border-radius: 5px;
   padding: 0.25vw 0;
   user-select: none;
 }
 
 .msgclasserror {
-  background-color: rgba(255, 0, 0);
+  background-color: var(--bg-color-red);
   padding: 0.25vw 0;
   border-radius: 5px;
   user-select: none;
 }
 
 .msgtext {
-  color: white;
+  color: var(--text-color-white);
   width: 100%;
   margin: 1vw 0;
 }
@@ -67,7 +67,7 @@
 
 .textwriting {
   padding: 0.5vw;
-  border: 2px solid grey;
+  border: 2px solid var(--border-color-grey);
   border-radius: 4px;
   font-size: 1.25vw;
   /* font-family: 'Courier New', Courier, monospace; */
@@ -78,7 +78,7 @@
 
 .textwriting:focus {
   outline: none;
-  border: 2px solid green;
+  border: 2px solid var(--border-color-green);
 }
 
 .captchagugl {
@@ -90,7 +90,7 @@
   text-align: center;
   font-size: 2vw;
   /* color: #224259; */
-  color: grey;
+  color: var(--text-color-grey);
   font-style: italic;
   margin-top: -15px;
 }
@@ -129,7 +129,7 @@
 
   .textwriting {
     padding: 1.5vw;
-    border: 2px solid grey;
+    border: 2px solid var(--border-color-grey);
     border-radius: 8px;
     font-size: 3vw;
     /* font-family: 'Courier New', Courier, monospace; */

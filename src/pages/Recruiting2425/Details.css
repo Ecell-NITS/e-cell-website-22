@@ -14,7 +14,7 @@
 }
 
 .rsmlink {
-  color: red;
+  color: var(--text-color-red);
   text-decoration: underline;
   font-size: 2.5vw;
 }
@@ -31,7 +31,7 @@
   }
 
   .rsmlink {
-    color: red;
+    color: var(--text-color-red);
     text-decoration: underline;
     font-size: 6vw;
   }

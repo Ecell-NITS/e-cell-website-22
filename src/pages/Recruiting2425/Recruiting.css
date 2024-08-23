@@ -15,7 +15,7 @@
   top: 32%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
+  color: var(--text-color-white);
   font-size: 7.5vw;
   font-weight: 900;
   font-family: "Barlow Condensed", sans-serif;
@@ -26,7 +26,7 @@
   top: 54%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
+  color: var(--text-color-white);
   font-size: 7.5vw;
   font-weight: 900;
   font-family: "Barlow Condensed", sans-serif;
@@ -37,7 +37,7 @@
   top: 78%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
+  color: var(--text-color-white);
   font-size: 7.5vw;
   font-weight: 900;
   font-family: "Barlow Condensed", sans-serif;
@@ -48,7 +48,7 @@
 }
 
 .toprecuitcontent h2 {
-  color: rgba(34, 66, 89, 1);
+  color: var(--text-color-primary);
   font-weight: 400;
   font-style: italic;
   font-weight: 400;
@@ -60,7 +60,7 @@
 
 .common-form-recuit {
   font-weight: 900;
-  color: rgba(62, 97, 142, 1);
+  color: var(--text-color-primary-light);
   font-size: 2vw;
   margin: 1.5vw 0;
 }
@@ -68,10 +68,10 @@
 .input-common-recruit {
   display: block;
   width: 100%;
-  border: solid 2px #ccc;
+  border: solid 2px var(--border-color-grey-light);
   border-radius: 10px;
   padding: 0.5vw;
-  color: rgba(62, 97, 142, 1);
+  color: var(--text-color-primary-light);
   font-weight: 600;
   font-size: 1.6vw;
   letter-spacing: 0.5px;
@@ -80,8 +80,8 @@
 
 .input-common-recruit:focus {
   outline: none;
-  border-color: #80bdff;
-  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  border-color: var(--border-color-primary-light);
+  box-shadow: 0 0 0 0.2rem var(--box-shadow-color-primary-dark);
 }
 
 .radioinpt {
@@ -89,7 +89,7 @@
   font-size: 1.6vw;
   cursor: pointer;
   font-weight: 600;
-  color: rgba(34, 66, 89, 1);
+  color: var(--text-color-primary);
 }
 
 .radioinpt input {
@@ -101,8 +101,8 @@
 }
 
 .btnotpsend {
-  background-color: rgba(62, 97, 142, 1);
-  color: white;
+  background-color: var(--bg-color-primary);
+  color: var(--text-color-white);
   cursor: pointer;
   border-radius: 5px;
   outline: none;
@@ -114,21 +114,21 @@
 }
 
 .btnotpsend:active {
-  box-shadow: 0 0 0 0.2rem #224529;
+  box-shadow: 0 0 0 0.2rem var(--box-shadow-color-green);
 }
 
 .robottxt {
-  color: rgba(62, 97, 142, 1);
+  color: var(--text-color-primary-light);
   font-size: 1.6vw;
   font-weight: 900;
 }
 
 .robotinptt {
   display: inline !important;
-  border: solid 2px #ccc;
+  border: solid 2px var(--border-color-grey-light);
   border-radius: 10px;
   padding: 0.5vw;
-  color: rgba(62, 97, 142, 1);
+  color: var(--text-color-primary-light);
   font-weight: 600;
   font-size: 1.6vw;
   letter-spacing: 0.5px;
@@ -137,14 +137,14 @@
 
 .robotinptt:focus {
   outline: none;
-  border-color: #80bdff;
-  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  border-color: var(--border-color-primary-light);
+  box-shadow: 0 0 0 0.2rem var(--box-shadow-color-primary);
 }
 
 .submtformrecuit {
   display: block;
-  background-color: rgba(62, 97, 142, 1);
-  color: white;
+  background-color: var(--bg-color-primary);
+  color: var(--text-color-white);
   cursor: pointer;
   border-radius: 5px;
   outline: none;
@@ -156,17 +156,17 @@
 }
 
 .submtformrecuit:active {
-  box-shadow: 0 0 0 0.2rem #224529;
+  box-shadow: 0 0 0 0.2rem var(--box-shadow-color-green);
 }
 
 .statusmsgssubmt {
   text-align: center;
   font-size: 1.5vw;
-  color: rgba(34, 66, 89, 1);
+  color: var(--text-color-primary);
 }
 
 .reqdinput {
-  color: red;
+  color: var(--text-color-red);
 }
 
 .importantinstructionsrecuit {
@@ -175,12 +175,12 @@
 }
 
 .importantinstructionsrecuit ul li a {
-  color: black !important;
+  color: var(--text-color-black) !important;
   text-decoration: underline !important;
 }
 
 .importantinstructionsrecuit h2 {
-  color: red;
+  color: var(--text-color-red);
   font-size: 2vw;
   text-align: center;
   margin-bottom: 2vw;
@@ -196,7 +196,7 @@
   margin: 2vw auto;
   height: 100vh;
   border-radius: 6.65px;
-  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 10px 5px var(--box-shadow-color-black-2);
 }
 
 @media (max-width: 660px) {
@@ -277,7 +277,7 @@
   }
 
   .importantinstructionsrecuit h2 {
-    color: red;
+    color: var(--text-color-red);
     font-size: 4vw;
     text-align: center;
     margin-bottom: 2vw;

@@ -2,7 +2,7 @@
   text-align: center;
   width: 90%;
   margin: 0 auto;
-  border-bottom: 3px solid #224259;
+  border-bottom: 3px solid var(--border-color-primary);
   padding: 3rem 0 0 0;
   margin-bottom: 3.5rem;
 }
@@ -10,7 +10,7 @@
 .collab h1 {
   font-size: 4.45vw;
   font-family: "Barlow Condensed", sans-serif;
-  color: #224259;
+  color: var(--text-color-primary);
   font-weight: 900;
 }
 
@@ -24,7 +24,7 @@
 
 .btn:focus .ru-collab {
   filter: grayscale(0);
-  border-bottom: 3.5px solid #224259;
+  border-bottom: 3.5px solid var(--border-color-primary);
   transform: translateY(-2vh);
 }
 
@@ -41,7 +41,7 @@
   display: flex;
   align-items: center;
   /* padding: 1rem 0; */
-  color: black;
+  color: var(--text-color-black);
   position: relative;
   z-index: 9;
 }
@@ -89,7 +89,7 @@
   border: none;
   cursor: pointer;
   background-color: transparent;
-  color: white;
+  color: var(--text-color-white);
   font-weight: 900;
 }
 
@@ -230,7 +230,7 @@
   height: 90vh;
   opacity: 1;
   padding-top: 3rem;
-  background-color: rgb(11, 11, 62);
+  background-color: var(--bg-color-primary-dark);
 }
 
 .pnb-main {
@@ -317,7 +317,7 @@
 }
 
 .collab-content {
-  background-color: white;
+  background-color: var(--bg-color-white);
   padding: 1rem;
   max-width: 40%;
   border-radius: 5px;
@@ -326,7 +326,7 @@
 }
 
 .collab-content p {
-  color: #505050;
+  color: var(--text-color-grey);
   font-family: "Barlow Condensed", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -335,7 +335,7 @@
 }
 
 .njkl021 {
-  border-bottom: 3px solid #224259;
+  border-bottom: 3px solid var(--border-color-primary);
   transform: translateY(-2vh);
   transition: all 0.2s ease-out;
 }
@@ -395,51 +395,51 @@
     max-width: 90%;
     border-image-source: linear-gradient(
         114.55deg,
-        rgba(255, 255, 255, 0.4) 2.13%,
-        rgba(255, 255, 255, 0) 98.14%
+        var(--border-color-grey) 2.13%,
+        var(--border-color-black) 98.14%
       ),
       radial-gradient(
         97.09% 224.61% at 1.38% 96.94%,
-        rgba(13, 14, 64, 0) 0%,
-        #0d0e40 100%
+        var(--border-color-black) 0%,
+        var(--border-color-primary-dark) 100%
       );
     background: radial-gradient(
       98.11% 288.82% at 98.11% 2.14%,
-      rgba(255, 255, 255, 0.276) 0%,
-      rgba(255, 255, 255, 0) 100%
+      var(--border-color-grey) 0%,
+      var(--border-color-black) 100%
     );
     background: radial-gradient(
         97.09% 224.61% at 1.38% 96.94%,
-        rgba(13, 14, 64, 0) 0%,
-        #0d0e407d 100%
+        var(--border-color-black) 0%,
+        var(--border-color-primary-dark) 100%
       ),
       radial-gradient(97.57% 210.75% at 0.9% 2.98%, rgba(13, 14, 64, 0) 0%, #0d0e40 100%),
       linear-gradient(
         114.55deg,
-        rgba(255, 255, 255, 0.4) 2.13%,
-        rgba(255, 255, 255, 0) 98.14%
+        var(--border-color-grey-light) 2.13%,
+        var(--border-color-black) 98.14%
       ),
       radial-gradient(
         98.11% 288.82% at 98.11% 2.14%,
-        rgba(255, 255, 255, 0.276) 0%,
-        rgba(255, 255, 255, 0) 100%
+        var(--border-color-grey) 0%,
+        var(--border-color-black) 100%
       );
     backdrop-filter: blur(2px);
     border-radius: 8px;
-    border: 1px solid #aca5a5;
+    border: 1px solid var(--border-color-grey-light);
   }
 
   .collab-content p {
     font-size: 1.125rem;
     padding-right: 0.3rem;
     text-align: justify;
-    color: white;
+    color: var(--text-color-white);
     font-weight: 400;
   }
 
   .btn:focus .ru-collab {
     filter: grayscale(0);
-    border-bottom: 3px solid #224259;
+    border-bottom: 3px solid var(--text-color-primary);
     /* transform: translateY(-1vh); */
   }
 
@@ -456,7 +456,7 @@
   }
 
   .njkl021 {
-    border-bottom: 1.5px solid #224259;
+    border-bottom: 1.5px solid var(--border-color-primary);
     transform: translateY(-2vh);
   }
 }

@@ -32,16 +32,16 @@
   left: 0px;
   top: 0px;
 
-  background: #ffffff;
+  background: var(--bg-color-white);
   border-radius: 12px;
-  border: 0.7px solid #b2adad;
+  border: 0.7px solid var(--border-color-grey-light);
   padding: 0 20px 20px;
 
   transition: all 0.5s ease-in-out;
 }
 
 .rectangle:hover {
-  box-shadow: 8px 7px 18px rgb(194, 194, 194);
+  box-shadow: 8px 7px 18px var(--box-shadow-color-grey-light);
 }
 
 .triangle {
@@ -53,7 +53,7 @@
   height: 0;
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
-  border-top: 20px solid #b2adad;
+  border-top: 20px solid var(--box-shadow-color-grey-light);
 }
 
 .triangle::after {
@@ -62,7 +62,7 @@
   height: 0;
   border-left: 19px solid transparent;
   border-right: 19px solid transparent;
-  border-top: 19px solid #fff;
+  border-top: 19px solid var(--bg-color-white);
   position: absolute;
   transform: translateX(-50%) translateY(-106%);
 }
@@ -79,7 +79,7 @@
 
   /* Text Color */
 
-  color: #505050;
+  color: var(--text-color-grey);
 
   /* Inside auto layout */
 
@@ -104,7 +104,7 @@
 
   /* Dark Blue */
 
-  color: #224259;
+  color: var(--text-color-primary);
 
   /* Inside auto layout */
 
@@ -126,7 +126,7 @@
 
   /* Medium Blue */
 
-  color: #3e618e;
+  color: var(--text-color-primary-light);
 
   /* Inside auto layout */
 
@@ -138,7 +138,7 @@
 .ellipse img {
   width: 176px;
   height: 176px;
-  border: 0.5px solid #b2adad;
+  border: 0.5px solid var(--border-color-grey-light);
   border-radius: 100%;
 }
 

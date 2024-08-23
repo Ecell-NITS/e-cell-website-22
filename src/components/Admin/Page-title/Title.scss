@@ -6,7 +6,7 @@
   h2 {
     font-size: 3.5vw;
     font-weight: 600;
-    color: #333;
+    color: var(--text-color-black);
     width: 80%;
     text-align: center;
     @media screen and (max-width: 768px) {

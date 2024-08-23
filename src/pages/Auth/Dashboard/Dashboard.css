@@ -25,7 +25,7 @@
   height: 100%;
   object-fit: cover;
   border-radius: 10.67px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 10px var(--box-shadow-color-black-2);
   pointer-events: none;
 }
 
@@ -45,8 +45,8 @@
   flex-wrap: wrap;
 }
 #admin-button {
-  color: #224259;
-  border-color: #224259;
+  color: var(--text-color-primary);
+  border-color: var(--border-color-primary);
 }
 .firstseconndchild {
   display: flex;
@@ -55,9 +55,9 @@
 }
 
 .editkryieprof {
-  color: rgba(193, 0, 0, 1);
-  border: 2px solid rgba(193, 0, 0, 1);
-  background-color: white;
+  color: var(----text-color-red);
+  border: 2px solid var(--border-color-red);
+  background-color: var(--bg-color-white);
   padding: 0.25vw 1.5vw !important;
   border-radius: 7.59px;
   font-size: 1.7vw;
@@ -66,14 +66,14 @@
 .biohbhauidhar {
   margin: 4vw 0 2.9vw 0;
   padding: 1.3vw;
-  border: 2px solid rgba(160, 160, 160, 0.55);
+  border: 2px solid var(--border-color-grey);
   border-radius: 16.7px;
 }
 
 .biohbhauidhar h3 {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
-  color: rgba(80, 80, 80, 1);
+  color: var(--text-color-grey);
   font-size: 1.3vw;
   line-height: 1.6;
 }
@@ -87,8 +87,8 @@
 }
 
 #sirfcolorchng {
-  color: rgba(34, 66, 89, 1);
-  border: 2px solid rgba(34, 66, 89, 1);
+  color: var(--text-color-primary);
+  border: 2px solid var(--border-color-primary);
   /* margin-left: 17vw; */
   padding: 0.25vw 3vw !important;
 }
@@ -120,7 +120,7 @@
   flex: none;
   order: 1;
   width: 31%;
-  border: 1.5px solid rgba(80, 80, 80, 1);
+  border: 1.5px solid var(--border-color-grey);
   border-radius: 6.13px;
   padding: 1vw;
   margin-top: 2vw;
@@ -144,10 +144,10 @@
 }
 
 .smedia1div button {
-  background-color: white;
+  background-color: var(--bg-color-white);
   border: none;
   outline: none;
-  color: #224259;
+  color: var(--text-color-primary);
 }
 
 @media (max-width: 660px) {
@@ -212,7 +212,7 @@
   .biohbhauidhar h3 {
     font-family: "Poppins", sans-serif;
     font-weight: 400;
-    color: rgba(80, 80, 80, 1);
+    color: var(--text-color-grey);
     font-size: 3vw;
     line-height: 1.6;
   }

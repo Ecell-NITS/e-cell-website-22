@@ -5,7 +5,7 @@
 }
 
 .underline {
-  background-color: #224259;
+  background-color: var(--bg-color-primary);
   width: 80vw;
   height: 2px;
   margin-left: auto;
@@ -20,7 +20,7 @@
   font-weight: 600;
   font-size: 64px;
   text-align: center;
-  color: #224259;
+  color: var(--text-color-primary);
   margin-bottom: auto;
 }
 
@@ -63,7 +63,7 @@
   font-size: 64px;
   line-height: 67.2px;
   text-align: center;
-  color: #224259;
+  color: var(--text-color-primary);
 }
 
 @media only screen and (max-width: 1200px) {
