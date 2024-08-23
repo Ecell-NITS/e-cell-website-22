@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../GalleryModal/Modal.module.css";
+import styles from "./Modal.module.css";
 
 const Modal = (props) => {
   const isModalVissible = props.isModalVissible;
