@@ -19,7 +19,8 @@
   transition: all 0.5s ease-in-out;
   margin: 1.5vw 1.1%;
 
-  box-shadow: 0 10px 20px var(--box-shadow-color-black-1),
+  box-shadow:
+    0 10px 20px var(--box-shadow-color-black-1),
     0 6px 6px var(--box-shadow-color-black-2);
 }
 

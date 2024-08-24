@@ -11,7 +11,8 @@
   text-align: center;
   user-select: none;
 
-  box-shadow: 0 1px 3px var(--box-shadow-color-black-1),
+  box-shadow:
+    0 1px 3px var(--box-shadow-color-black-1),
     0 1px 2px var(--box-shadow-color-black-2);
   transition: all 0.5s ease-in-out;
 }
