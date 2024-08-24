@@ -6,9 +6,14 @@ import { Link, NavLink, useNavigate } from "react-router-dom";
 import "./Navbar.css";
 import axios from "axios";
 import UserContext from "../../../context/UserContext";
+import { ThemeContext } from "../../../context/ThemeContext";
+import { IoMdSunny } from "react-icons/io";
+import { FaMoon } from "react-icons/fa";
+
 const Navbar = () => {
   const navigate = useNavigate();
   const [toggle, setToggle] = useState(false);
+  const { isDarkMode, toggleTheme } = useContext(ThemeContext);
 
   const handleToggle = () => {
     setToggle(!toggle);
@@ -61,7 +66,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={toggle ? "navbar1 expanded" : "navbar1"}
+      className={`navbar1 ${toggle ? "expanded" : ""} ${isDarkMode ? "dark-theme" : ""}`}
       id={bgChng ? "bgchng" : ""}
       style={{ userSelect: "none" }}
     >
@@ -116,6 +121,11 @@ const Navbar = () => {
             <NavLink to="/signup">SIGN UP</NavLink>
           </li>
         )}
+        <li>
+          <button onClick={toggleTheme}>
+            {isDarkMode ? <IoMdSunny size={20} /> : <FaMoon size={20} />}
+          </button>
+        </li>
       </ul>
     </nav>
   );
