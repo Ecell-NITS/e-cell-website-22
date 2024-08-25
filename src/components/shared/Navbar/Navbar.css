@@ -27,13 +27,13 @@
 }
 
 .expanded {
-  background-color: #224259;
-  box-shadow: 0px 4px 12px 0px #22425966;
+  background-color: var(--bg-color-primary);
+  box-shadow: 0px 4px 12px 0px var(--box-shadow-color-primary);
   padding: 2rem !important;
 }
 
 .navbar1 .logo {
-  color: #d9d2c3;
+  color: var(--text-color-grey-light);
   font-size: 1.75rem;
   font-weight: 600;
 }
@@ -41,13 +41,13 @@
 .navbar1 .links-nav {
   list-style: none;
   display: flex;
-  color: #d9d2c3;
+  color: var(--text-color-grey-light);
   cursor: pointer;
 }
 
 .navbar1 .links-nav li {
   margin: 0 0.9375rem;
-  color: rgba(255, 255, 255, 0.58);
+  color: var(--text-color-grey-light);
   font-size: 1.3rem;
   letter-spacing: 0.5px;
   font-weight: 600;
@@ -56,15 +56,15 @@
 
 .links-nav a {
   transition: all 0.15s ease-in-out;
-  color: rgba(255, 255, 255, 0.58) !important;
+  color: var(--text-color-grey) !important;
 }
 
 .links-nav a:hover {
-  color: #1da1f2 !important;
+  color: var(--bg-color-primary-light) !important;
 }
 
 .links-nav a.active {
-  color: rgba(255, 255, 255, 1) !important;
+  color: var(--text-color-white) !important;
 }
 
 .navbar1 .toggle-icon {
@@ -101,13 +101,13 @@
     align-items: center;
     width: 100%; */
     &#bgchng {
-      background-color: #224259;
+      background-color: var(--bg-color-primary);
     }
   }
 
   .navbar1.expanded {
     height: 100vh;
-    background-color: #224259;
+    background-color: var(--bg-color-primary);
   }
 
   .navbar1.expanded .links-nav {
@@ -136,7 +136,7 @@
 
   .navbar1 .toggle-icon {
     display: block;
-    color: #d9d2c3;
+    color: var(--text-color-white);
     position: absolute;
     top: 1.4rem;
     right: 1.25rem;

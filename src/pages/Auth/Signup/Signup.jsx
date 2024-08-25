@@ -223,10 +223,12 @@ const Signup = () => {
     navigate("/login");
   };
 
+  const emailPattern = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
   const sendOTP = async (e) => {
     e.preventDefault();
-    if (email === "") {
-      toast.error("Please enter your email id", {
+
+    if (name == "") {
+      toast.error("Please enter your name", {
         position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
@@ -238,7 +240,19 @@ const Signup = () => {
       });
       return;
     }
-
+    if (!emailPattern.test(email)) {
+      toast.error("Please enter a valid email id", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      });
+      return;
+    }
     try {
       setDisablesendotp(true);
       setOtpgoing(true);

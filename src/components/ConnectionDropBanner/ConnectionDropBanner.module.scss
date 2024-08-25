@@ -3,8 +3,8 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: #ff0000;
-  color: #ffffff;
+  background-color: var(--bg-color-red);
+  color: var(--text-color-white);
   padding: 0.625rem;
   text-align: center;
   z-index: 999;
@@ -15,8 +15,8 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: #34d834;
-  color: #ffffff;
+  background-color: var(--bg-color-green);
+  color: var(--text-color-white);
   padding: 0.625rem;
   text-align: center;
   z-index: 999;

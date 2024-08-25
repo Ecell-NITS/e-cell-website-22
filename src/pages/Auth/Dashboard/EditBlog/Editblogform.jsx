@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-import "../../../Resources/./Blogs/Createblog.css";
+import "../../../Resources/Blogs/Createblog.css";
 import axios from "axios";
 import moment from "moment-timezone";
 import { useNavigate } from "react-router-dom";

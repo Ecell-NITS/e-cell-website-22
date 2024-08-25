@@ -17,7 +17,7 @@
   font-size: 7.5vw;
   line-height: 1.2;
   font-weight: 700;
-  color: white;
+  color: var(--text-color-white);
 }
 
 .resources-indi {
@@ -41,12 +41,12 @@
   order: 1;
   margin-left: 1.2%;
   margin-right: 1.2%;
-  border: 1px solid #224259;
+  border: 1px solid var(--border-color-primary);
   transition: all 0.5s ease-in-out;
 }
 
 .resource-indi:hover {
-  box-shadow: 8px 7px 18px rgb(194 194 194);
+  box-shadow: 8px 7px 18px var(--border-color-grey-light);
 }
 
 .hjloq {

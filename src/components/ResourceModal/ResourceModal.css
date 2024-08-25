@@ -23,7 +23,7 @@
   text-align: center;
   font-size: 1.7rem;
   font-weight: 900;
-  color: #224259;
+  color: var(--text-color-primary);
 }
 
 .authHead {

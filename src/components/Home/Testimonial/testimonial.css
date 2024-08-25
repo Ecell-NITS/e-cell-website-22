@@ -12,7 +12,7 @@
 }
 
 .white-monial {
-  color: white !important;
+  color: var(--text-color-white) !important;
 }
 
 .testi-child {
@@ -42,9 +42,9 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  background-color: red;
+  background-color: var(--bg-color-red);
   margin-top: 5vh;
-  background-color: white;
+  background-color: var(--bg-color-white);
   border-radius: 0.625rem;
   padding: 2vw;
 }
@@ -95,7 +95,7 @@
 .testi-al-cont {
   font-size: 1.5vw;
   line-height: 1.6;
-  color: #505050;
+  color: var(--text-color-grey);
   font-weight: 400;
   font-family: "Barlow Condensed", sans-serif;
 }
@@ -106,12 +106,12 @@
 }
 
 .speaker-details-testi h1 {
-  color: #224259;
+  color: var(--text-color-primary);
   font-size: 1.9vw;
 }
 
 .speaker-details-testi h2 {
-  color: #3e618e;
+  color: var(--text-color-primary-light);
   font-size: 1.2vw;
 }
 
