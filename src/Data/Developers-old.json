@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "name": "Aditya Ranjan",
+    "rank": "Senior developer",
+    "image": "https://res.cloudinary.com/dp92qug2f/image/upload/v1681359339/perosnal/edited_aditya_ranjan_lyx5ns.webp",
+    "fb": "https://www.facebook.com/profile.php?id=100076402945936",
+    "linkedln": "https://www.linkedin.com/in/aditya-ranjan-77a6a522b/",
+    "git": "https://github.com/hereisadi"
+  },
+  {
+    "id": 2,
+    "name": "Aditya Kumar",
+    "rank": "Senior developer",
+    "image": "https://res.cloudinary.com/dnvhl9pru/image/upload/v1681064509/proflie-picpng_2-removebg-preview_qeckz9.webp",
+    "fb": "https://www.facebook.com/profile.php?id=100071791456601&mibextid=ZbWKwL",
+    "linkedln": "https://www.linkedin.com/in/adityakr31",
+    "git": "https://github.com/31adityakumar"
+  },
+  {
+    "id": 3,
+    "name": "Maharnav Deka",
+    "rank": "Senior developer",
+    "image": "https://res.cloudinary.com/duejpnj1y/image/upload/v1679413749/Juniordev/Maharnav_Deka_x5edso.webp",
+    "fb": "https://www.facebook.com/profile.php?id=100076295825121",
+    "linkedln": "https://www.linkedin.com/in/maharnav-deka-06742815a/",
+    "git": "https://github.com/mdekaa"
+  },
+  {
+    "id": 4,
+    "name": "Bipangshu Saha",
+    "rank": "Senior developer",
+    "image": "https://res.cloudinary.com/duejpnj1y/image/upload/v1679413454/Juniordev/Bipangshu_Saha_dt37it.webp",
+    "fb": "https://www.facebook.com/ronny.kumar.7186896",
+    "linkedln": "https://www.linkedin.com/in/bipangshu-saha-2aab9b228/",
+    "git": "https://github.com/BIPS8812"
+  },
+  {
+    "id": 5,
+    "name": "Jacinth Mahanta",
+    "rank": "Senior UI/UX Designer",
+    "image": "https://res.cloudinary.com/dz7qkvqyj/image/upload/v1685375281/23-24%20core/Pic-ECE_182_Jacinth-Mahanta_nypvrq.webp",
+    "fb": "https://www.facebook.com/jacinth.mahanta/",
+    "linkedln": "https://www.linkedin.com/in/jacinth-mahanta-63b279229/",
+    "git": "https://github.com/Jacinth-Mahanta"
+  }
+]
