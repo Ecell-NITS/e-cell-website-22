@@ -106,7 +106,7 @@
 }
 
 .skel{
-  background-color: var(--border-color-grey);
+  background-color: var(--border-color-grey) !important;
   animation: pulse 1.5s infinite;
   border-radius: 0.5rem;
   min-height: 1rem;
