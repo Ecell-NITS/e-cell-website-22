@@ -97,8 +97,19 @@
   transition: all 0.3s;
 }
 
+.categ{
+  border : none !important;
+}
+
 .newblogaddbtn:focus {
   box-shadow: 0 0 0 5px var(--box-shadow-color-primary);
+}
+
+.skel{
+  background-color: var(--border-color-grey) !important;
+  animation: pulse 1.5s infinite;
+  border-radius: 0.5rem;
+  min-height: 1rem;
 }
 
 .mainparentblogindicard {
@@ -161,6 +172,14 @@
   display: inline-block;
 }
 
+.whowrittenblogsk{
+  min-height: 1.8rem;
+  margin-top: 0.5rem;
+  width: 60%;
+  margin-bottom: 0.35vw;
+  max-width: 100%;
+}
+
 .whoholdsthetag {
   display: flex;
 }
@@ -172,7 +191,8 @@
   border-radius: 6.13px;
   font-size: 1vw;
   padding: 0.15vw;
-  margin: 0.5vw 0;
+  min-width: 4rem;
+  margin: 0.5vw 0 0.5vw 0.5vw;
 }
 
 .whoholdsthetag button a {
@@ -189,6 +209,7 @@
 
 .briefintrohldman {
   margin: 0vw 0 1vw 0;
+  min-height: 8rem;
 }
 
 .briefintrohldman p {
@@ -385,5 +406,17 @@
 
   #loadingkrrhebhaiblogs {
     font-size: 4vw;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 30%;
+  }
+  50% {
+    opacity: 70%;
+  }
+  100% {
+    opacity: 30%;
   }
 }
