@@ -1,24 +1,6 @@
 [
   {
     "id": 1,
-    "name": "Mainak Das",
-    "rank": "Junior Web developer",
-    "image": "https://res.cloudinary.com/dddcd0hco/image/upload/v1724544516/WhatsApp_Image_2024-08-25_at_05.32.42_c8492cbe_dy1dnw.webp",
-    "fb": "https://www.facebook.com/mainak.nitS",
-    "linkedln": "https://www.linkedin.com/in/mainakdasnits/",
-    "git": "https://github.com/tech-hunter-mainak/"
-  },
-  {
-    "id": 2,
-    "name": "Bishal Das",
-    "rank": "Junior Web Developer",
-    "image": "https://res.cloudinary.com/dddcd0hco/image/upload/v1724540788/1703525292449_-_ME_054_Bishal_Das_qgth4a.webp",
-    "fb": "https://www.facebook.com/profile.php?id=100051391303848&mibextid=ZbWKwLr",
-    "linkedln": "https://www.linkedin.com/in/bishal-das-babbb02a3",
-    "git": "https://github.com/Bishal-NITS-2003"
-  },
-  {
-    "id": 3,
     "name": "Anirban Bora",
     "rank": "Junior Web Developer",
     "image": "https://res.cloudinary.com/dddcd0hco/image/upload/v1724541071/IMG_20240819_231107_-_Anir_Bora_zfqseu.webp",
@@ -27,43 +9,16 @@
     "git": "https://github.com/A-nirvana"
   },
   {
-    "id": 4,
-    "name": "Vaishali Kesharwani",
-    "rank": "Junior Web Developer",
-    "image": "https://res.cloudinary.com/dddcd0hco/image/upload/v1724541950/IMG-20240824-WA0025_-_ME_065_VAISHALI_KESHARWANI_lrnxyv.webp",
-    "fb": "https://www.facebook.com/profile.php?id=100093708511768&mibextid=ZbWKwL",
-    "linkedln": "https://www.linkedin.com/in/vaishali-kesharwani9080",
-    "git": "https://github.com/vaishali9080"
+    "id": 2,
+    "name": "Ayush Singh",
+    "rank": "Junior UI/UX Developer",
+    "image": "https://res.cloudinary.com/dddcd0hco/image/upload/v1724540538/IMG_20240819_011533_620_-_AYUSH_SINGH_huhfin.webp",
+    "fb": "https://www.facebook.com/profile.php?id=61550890263865&mibextid=ZbWKwL",
+    "linkedln": "https://www.linkedin.com/in/ayush-singh-1b0a8827b",
+    "git": ""
   },
   {
-    "id": 5,
-    "name": "Gulista Khatun",
-    "rank": "Junior Web Developer",
-    "image": "https://res.cloudinary.com/dddcd0hco/image/upload/v1724541624/IMG_20240817_191401_-_Gulista_Khatun_saqpic.webp",
-    "fb": "https://www.facebook.com/profile.php?id=61555806877486&mibextid=ZbWKwL",
-    "linkedln": "https://www.linkedin.com/in/gulista-khatun-9414b6314/",
-    "git": "https://github.com/GulistaKhatun06"
-  },
-  {
-    "id": 6,
-    "name": "Rahul Nath",
-    "rank": "Junior Web Developer",
-    "image": "https://res.cloudinary.com/dddcd0hco/image/upload/v1724540757/Profile_-_RAHUL_NATH_pdfiri.webp",
-    "fb": "https://www.facebook.com/share/yycfyq2Hk6d6nWtj/?mibextid=qi2Omg",
-    "linkedln": "https://www.linkedin.com/in/rahulnath76",
-    "git": "https://github.com/Rahulnath76"
-  },
-  {
-    "id": 7,
-    "name": "Kaberi Acharya",
-    "rank": "Junior Web Developer",
-    "image": "https://res.cloudinary.com/dddcd0hco/image/upload/v1724543085/kabs_-_KABERI_ACHARYA_k5z7bh.webp",
-    "fb": "https://www.facebook.com/profile.php?id=61550699125763",
-    "linkedln": "https://www.linkedin.com/in/contactkaberi",
-    "git": "https://github.com/k-acharya"
-  },
-  {
-    "id": 8,
+    "id": 3,
     "name": "Binit Agarwalla",
     "rank": "Junior Web Developer",
     "image": "https://res.cloudinary.com/dddcd0hco/image/upload/v1724540487/WhatsApp_Image_2024-08-22_at_19.13.33_369c796c_yoi7pc.webp",
@@ -72,79 +27,16 @@
     "git": "https://github.com/Binit08"
   },
   {
-    "id": 9,
-    "name": "Sristi Dey",
+    "id": 4,
+    "name": "Bishal Das",
     "rank": "Junior Web Developer",
-    "image": "https://res.cloudinary.com/dddcd0hco/image/upload/v1724540979/IMG20240817202007_-_Sristi_Dey_dgygjq.webp",
-    "fb": "https://www.facebook.com/profile.php?id=61550978720752",
-    "linkedln": "https://www.linkedin.com/in/sristi-dey-45152328a",
-    "git": "https://github.com/Sristi2004-developer"
+    "image": "https://res.cloudinary.com/dddcd0hco/image/upload/v1724540788/1703525292449_-_ME_054_Bishal_Das_qgth4a.webp",
+    "fb": "https://www.facebook.com/profile.php?id=100051391303848&mibextid=ZbWKwLr",
+    "linkedln": "https://www.linkedin.com/in/bishal-das-babbb02a3",
+    "git": "https://github.com/Bishal-NITS-2003"
   },
   {
-    "id": 10,
-    "name": "Muskan Bharati",
-    "rank": "Junior Web Developer",
-    "image": "https://res.cloudinary.com/dddcd0hco/image/upload/v1724541726/20240815_145722_-_MUSKAN_BHARTI_wro0mk.webp",
-    "fb": "https://www.facebook.com/muskan.bharti.18062?mibextid=ZbWKwL",
-    "linkedln": "https://www.linkedin.com/in/muskan-bharti-a7440b28b/",
-    "git": "https://github.com/muskan170604"
-  },
-  {
-    "id": 11,
-    "name": "Bornali Devi",
-    "rank": "Junior Web Developer",
-    "image": "https://res.cloudinary.com/dddcd0hco/image/upload/v1724540624/IMG_20231214_160508_700_-_Jungkookie_04_ox2kcm.webp",
-    "fb": "https://www.facebook.com/profile.php?id=61553271392991&mibextid=ZbWKwL",
-    "linkedln": "https://www.linkedin.com/in/bornali-devi-248a592a8",
-    "git": "https://github.com/Bornali04"
-  },
-  {
-    "id": 12,
-    "name": "Krishna Mewara",
-    "rank": "Junior Flutter Developer",
-    "image": "https://res.cloudinary.com/dddcd0hco/image/upload/v1724541250/20240819_182605_-_KRISHNA_MEWARA_dv9vqu.webp",
-    "fb": "https://www.facebook.com/profile.php?id=61550569446719&mibextid=ZbWKwL",
-    "linkedln": "https://www.linkedin.com/in/krishna-mewara-127699280",
-    "git": "https://github.com/DeathGun44"
-  },
-  {
-    "id": 13,
-    "name": "Premansh Chakraborty",
-    "rank": "Junior Flutter Developer",
-    "image": "https://res.cloudinary.com/dddcd0hco/image/upload/v1724541172/Screenshot_2024_0814_002329_-_Preeti_Chakraborty_axjy7c.webp",
-    "fb": "https://www.facebook.com/profile.php?id=61550513922111&mibextid=ZbWKwL",
-    "linkedln": "https://www.linkedin.com/in/premansh-chakraborty-825812314",
-    "git": "https://github.com/PremanshChakraborty"
-  },
-  {
-    "id": 14,
-    "name": "Rishav Kumar Sinha",
-    "rank": "Junior UI/UX Developer",
-    "image": "https://res.cloudinary.com/dddcd0hco/image/upload/v1724540831/20240819_224316_-_Rishav_Kumar_Sinha_ioacvq.webp",
-    "fb": "",
-    "linkedln": "https://www.linkedin.com/in/rishav-kumar-sinha-292471319",
-    "git": "https://github.com/RishavKumarSinha"
-  },
-  {
-    "id": 15,
-    "name": "Mannate Jain",
-    "rank": "Junior UI/UX Developer",
-    "image": "https://res.cloudinary.com/dddcd0hco/image/upload/v1724540715/PFP-PHOTO_-_Mannate_Jain_ne2v0w.webp",
-    "fb": "https://www.facebook.com/share/ervMgupfXfAWryAj/?mibextid=qi2Omg",
-    "linkedln": "https://www.linkedin.com/in/mannate-jain-7787a528a",
-    "git": "https://github.com/mannate14"
-  },
-  {
-    "id": 16,
-    "name": "Mahashweta Borgohain",
-    "rank": "Junior UI/UX Developer",
-    "image": "https://res.cloudinary.com/dddcd0hco/image/upload/v1724430661/WhatsApp_Image_2024-08-21_at_02.47.52_4fbeb05a_ueiccy.webp",
-    "fb": "https://www.facebook.com/profile.php?id=100080742540717",
-    "linkedln": "https://www.linkedin.com/in/mahashweta-borgohain-872378276",
-    "git": "https://github.com/Vinciduh"
-  },
-  {
-    "id": 17,
+    "id": 5,
     "name": "Bishal Sarma",
     "rank": "Junior UI/UX Developer",
     "image": "https://res.cloudinary.com/dddcd0hco/image/upload/v1724543318/IMG-20240605-WA0552_skf5tw.webp",
@@ -153,7 +45,106 @@
     "git": "https://github.com/svsBishal"
   },
   {
-    "id": 18,
+    "id": 6,
+    "name": "Bornali Devi",
+    "rank": "Junior Web Developer",
+    "image": "https://res.cloudinary.com/dddcd0hco/image/upload/v1724540624/IMG_20231214_160508_700_-_Jungkookie_04_ox2kcm.webp",
+    "fb": "https://www.facebook.com/profile.php?id=61553271392991&mibextid=ZbWKwL",
+    "linkedln": "https://www.linkedin.com/in/bornali-devi-248a592a8",
+    "git": "https://github.com/Bornali04"
+  },
+  {
+    "id": 7,
+    "name": "Gulista Khatun",
+    "rank": "Junior Web Developer",
+    "image": "https://res.cloudinary.com/dddcd0hco/image/upload/v1724541624/IMG_20240817_191401_-_Gulista_Khatun_saqpic.webp",
+    "fb": "https://www.facebook.com/profile.php?id=61555806877486&mibextid=ZbWKwL",
+    "linkedln": "https://www.linkedin.com/in/gulista-khatun-9414b6314/",
+    "git": "https://github.com/GulistaKhatun06"
+  },
+  {
+    "id": 8,
+    "name": "Kaberi Acharya",
+    "rank": "Junior Web Developer",
+    "image": "https://res.cloudinary.com/dddcd0hco/image/upload/v1724543085/kabs_-_KABERI_ACHARYA_k5z7bh.webp",
+    "fb": "https://www.facebook.com/profile.php?id=61550699125763",
+    "linkedln": "https://www.linkedin.com/in/contactkaberi",
+    "git": "https://github.com/k-acharya"
+  },
+  {
+    "id": 9,
+    "name": "Krishna Mewara",
+    "rank": "Junior Flutter Developer",
+    "image": "https://res.cloudinary.com/dddcd0hco/image/upload/v1724541250/20240819_182605_-_KRISHNA_MEWARA_dv9vqu.webp",
+    "fb": "https://www.facebook.com/profile.php?id=61550569446719&mibextid=ZbWKwL",
+    "linkedln": "https://www.linkedin.com/in/krishna-mewara-127699280",
+    "git": "https://github.com/DeathGun44"
+  },
+  {
+    "id": 10,
+    "name": "Mahashweta Borgohain",
+    "rank": "Junior UI/UX Developer",
+    "image": "https://res.cloudinary.com/dddcd0hco/image/upload/v1724430661/WhatsApp_Image_2024-08-21_at_02.47.52_4fbeb05a_ueiccy.webp",
+    "fb": "https://www.facebook.com/profile.php?id=100080742540717",
+    "linkedln": "https://www.linkedin.com/in/mahashweta-borgohain-872378276",
+    "git": "https://github.com/Vinciduh"
+  },
+  {
+    "id": 11,
+    "name": "Mainak Das",
+    "rank": "Junior Web developer",
+    "image": "https://res.cloudinary.com/dddcd0hco/image/upload/v1724544516/WhatsApp_Image_2024-08-25_at_05.32.42_c8492cbe_dy1dnw.webp",
+    "fb": "https://www.facebook.com/mainak.nitS",
+    "linkedln": "https://www.linkedin.com/in/mainakdasnits/",
+    "git": "https://github.com/tech-hunter-mainak/"
+  },
+  {
+    "id": 12,
+    "name": "Mannate Jain",
+    "rank": "Junior UI/UX Developer",
+    "image": "https://res.cloudinary.com/dddcd0hco/image/upload/v1724540715/PFP-PHOTO_-_Mannate_Jain_ne2v0w.webp",
+    "fb": "https://www.facebook.com/share/ervMgupfXfAWryAj/?mibextid=qi2Omg",
+    "linkedln": "https://www.linkedin.com/in/mannate-jain-7787a528a",
+    "git": "https://github.com/mannate14"
+  },
+  {
+    "id": 13,
+    "name": "Muskan Bharati",
+    "rank": "Junior Web Developer",
+    "image": "https://res.cloudinary.com/dddcd0hco/image/upload/v1724541726/20240815_145722_-_MUSKAN_BHARTI_wro0mk.webp",
+    "fb": "https://www.facebook.com/muskan.bharti.18062?mibextid=ZbWKwL",
+    "linkedln": "https://www.linkedin.com/in/muskan-bharti-a7440b28b/",
+    "git": "https://github.com/muskan170604"
+  },
+  {
+    "id": 14,
+    "name": "Premansh Chakraborty",
+    "rank": "Junior Flutter Developer",
+    "image": "https://res.cloudinary.com/dddcd0hco/image/upload/v1724541172/Screenshot_2024_0814_002329_-_Preeti_Chakraborty_axjy7c.webp",
+    "fb": "https://www.facebook.com/profile.php?id=61550513922111&mibextid=ZbWKwL",
+    "linkedln": "https://www.linkedin.com/in/premansh-chakraborty-825812314",
+    "git": "https://github.com/PremanshChakraborty"
+  },
+  {
+    "id": 15,
+    "name": "Rahul Nath",
+    "rank": "Junior Web Developer",
+    "image": "https://res.cloudinary.com/dddcd0hco/image/upload/v1724540757/Profile_-_RAHUL_NATH_pdfiri.webp",
+    "fb": "https://www.facebook.com/share/yycfyq2Hk6d6nWtj/?mibextid=qi2Omg",
+    "linkedln": "https://www.linkedin.com/in/rahulnath76",
+    "git": "https://github.com/Rahulnath76"
+  },
+  {
+    "id": 16,
+    "name": "Rishav Kumar Sinha",
+    "rank": "Junior UI/UX Developer",
+    "image": "https://res.cloudinary.com/dddcd0hco/image/upload/v1724540831/20240819_224316_-_Rishav_Kumar_Sinha_ioacvq.webp",
+    "fb": "",
+    "linkedln": "https://www.linkedin.com/in/rishav-kumar-sinha-292471319",
+    "git": "https://github.com/RishavKumarSinha"
+  },
+  {
+    "id": 17,
     "name": "Somadrita Dey",
     "rank": "Junior UI/UX Developer",
     "image": "https://res.cloudinary.com/dddcd0hco/image/upload/v1724541460/Screenshot_20240817-1900362_-_SOMADRITA_DEY_o08ssy.webp",
@@ -162,12 +153,21 @@
     "git": "https://github.com/somadritadey"
   },
   {
+    "id": 18,
+    "name": "Sristi Dey",
+    "rank": "Junior Web Developer",
+    "image": "https://res.cloudinary.com/dddcd0hco/image/upload/v1724540979/IMG20240817202007_-_Sristi_Dey_dgygjq.webp",
+    "fb": "https://www.facebook.com/profile.php?id=61550978720752",
+    "linkedln": "https://www.linkedin.com/in/sristi-dey-45152328a",
+    "git": "https://github.com/Sristi2004-developer"
+  },
+  {
     "id": 19,
-    "name": "Ayush Singh",
-    "rank": "Junior UI/UX Developer",
-    "image": "https://res.cloudinary.com/dddcd0hco/image/upload/v1724540538/IMG_20240819_011533_620_-_AYUSH_SINGH_huhfin.webp",
-    "fb": "https://www.facebook.com/profile.php?id=61550890263865&mibextid=ZbWKwL",
-    "linkedln": "https://www.linkedin.com/in/ayush-singh-1b0a8827b",
-    "git": ""
+    "name": "Vaishali Kesharwani",
+    "rank": "Junior Web Developer",
+    "image": "https://res.cloudinary.com/dddcd0hco/image/upload/v1724541950/IMG-20240824-WA0025_-_ME_065_VAISHALI_KESHARWANI_lrnxyv.webp",
+    "fb": "https://www.facebook.com/profile.php?id=100093708511768&mibextid=ZbWKwL",
+    "linkedln": "https://www.linkedin.com/in/vaishali-kesharwani9080",
+    "git": "https://github.com/vaishali9080"
   }
 ]
