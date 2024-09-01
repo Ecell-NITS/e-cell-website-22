@@ -188,6 +188,7 @@
 }
 
 .whoholdsthetag button {
+  background: transparent;
   color: var(--light-text-color);
   border: 1.9px solid var(--light-text-color);
   border-radius: 6.13px;
@@ -269,6 +270,7 @@
 }
 
 .likekarobhaiblog {
+  background: transparent;
   color: var(--light-text-color);
   border: none;
   outline: none;

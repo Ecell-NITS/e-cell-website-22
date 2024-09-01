@@ -151,7 +151,7 @@
   padding: 5px;
   border: 1px solid var(--light-text-color);
   outline: none;
-  color: var(--text-color-primary);
+  color: var(--light-text-color);
 }
 
 @media (max-width: 660px) {

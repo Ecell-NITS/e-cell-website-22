@@ -69,6 +69,7 @@
 }
 
 #btnbacktoresoucres {
+  background: transparent;
   font-size: 1.5vw;
   border: none;
   outline: none;
