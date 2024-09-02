@@ -45,10 +45,10 @@ import BlogContextProvider from "./context/BlogContextProvider";
 // import Recruit from "./pages/Recruiting2425/AllTeams/Recruit";
 // import Submission from "./pages/ProjectsSubmit/Submission";
 import { ThemeContextProvider } from "./context/ThemeContext";
+import { useContext } from "react";
 
 function App() {
   const [loading, setLoading] = useState(true);
-
   useEffect(() => {
     const handleLoad = () => {
       setLoading(false);

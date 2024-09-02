@@ -6,29 +6,36 @@ const ThemeContext = createContext({
 });
 
 function ThemeContextProvider({ children }) {
-  const [isDarkMode, setIsDarkMode] = useState(false);
-
+  let currentMode = localStorage.getItem("isDarkMode");
+  console.log(typeof currentMode);
+  if (currentMode == null) {
+    currentMode = "false";
+    localStorage.setItem("isDarkMode", "false");
+  } else {
+    if (currentMode == "false") {
+      document.body.classList.remove("dark-theme");
+      localStorage.setItem("isDarkMode", "false");
+    } else {
+      document.body.classList.add("dark-theme");
+      localStorage.setItem("isDarkMode", "true");
+    }
+  }
+  const [isDarkMode, setIsDarkMode] = useState(currentMode != "false");
+  if (isDarkMode) {
+    localStorage.setItem("isDarkMode", "true");
+  } else {
+    localStorage.setItem("isDarkMode", "false");
+  }
   const toggleTheme = () => {
     setIsDarkMode(!isDarkMode);
-
-    localStorage.setItem("isDarkMode", !isDarkMode);
-
-    if (isDarkMode) {
+    if (currentMode == "false") {
       document.body.classList.remove("dark-theme");
     } else {
       document.body.classList.add("dark-theme");
     }
   };
-
-  useEffect(() => {
-    const storedTheme = localStorage.getItem("isDarkMode");
-    if (storedTheme !== null) {
-      setIsDarkMode(JSON.parse(storedTheme));
-    }
-  }, []);
-
   return (
-    <ThemeContext.Provider value={{ isDarkMode, toggleTheme }}>
+    <ThemeContext.Provider value={{ isDarkMode, toggleTheme, setIsDarkMode }}>
       {children}
     </ThemeContext.Provider>
   );

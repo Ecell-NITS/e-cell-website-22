@@ -13,7 +13,9 @@ import { IoSunny } from "react-icons/io5";
 const Navbar = () => {
   const navigate = useNavigate();
   const [toggle, setToggle] = useState(false);
-  const { isDarkMode, toggleTheme } = useContext(ThemeContext);
+  const { isDarkMode, toggleTheme, setIsDarkMode, setCurrentMode } =
+    useContext(ThemeContext);
+  // const storedTheme = localStorage.getItem("isDarkMode");
 
   const handleToggle = () => {
     setToggle(!toggle);
