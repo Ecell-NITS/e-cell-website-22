@@ -1,4 +1,5 @@
 .about_card_ {
+  background-color: var(--box-bg-color);
   display: flex;
   flex-direction: column;
   justify-content: center;

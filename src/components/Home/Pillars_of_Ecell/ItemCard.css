@@ -29,10 +29,9 @@
 .rectangle {
   /* Rectangle 691 */
   position: relative;
+  background-color: var(--box-bg-color);
   left: 0px;
   top: 0px;
-
-  background: var(--bg-color-white);
   border-radius: 12px;
   border: 0.7px solid var(--border-color-grey-light);
   padding: 0 20px 20px;
@@ -62,7 +61,7 @@
   height: 0;
   border-left: 19px solid transparent;
   border-right: 19px solid transparent;
-  border-top: 19px solid var(--bg-color-white);
+  border-top: 19px solid var(--box-bg-color);
   position: absolute;
   transform: translateX(-50%) translateY(-106%);
 }
@@ -79,7 +78,7 @@
 
   /* Text Color */
 
-  color: var(--text-color-grey);
+  color: var(--light-text-color);
 
   /* Inside auto layout */
 

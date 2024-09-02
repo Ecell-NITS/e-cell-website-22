@@ -11,10 +11,11 @@
 
 .past-evnt-indi {
   flex: none;
+  background-color: var(--bg-color-white);
   order: 1;
   width: 31%;
   padding: 1vw;
-  border: 1px solid var(--border-color-primary);
+  border: 1px solid var(--light-text-color);
   border-radius: 1vw;
   transition: all 0.5s ease-in-out;
   margin: 1.5vw 1.1%;
@@ -36,7 +37,7 @@
 .all-evnts-btn-cont button {
   padding: 0.4vw 0.9vw;
   border-radius: 5vw;
-  background-color: var(--bg-color-white);
+  background-color: var(--border-color-white);
   color: var(--text-color-primary);
   border: 2px solid var(--border-color-primary) !important;
   font-size: 1.3vw;
