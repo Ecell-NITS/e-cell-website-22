@@ -56,7 +56,7 @@
 
 .links-nav a {
   transition: all 0.15s ease-in-out;
-  color: var(--text-color-grey) !important;
+  color: var(--text-color-grey-light) !important;
 }
 
 .links-nav a:hover {
