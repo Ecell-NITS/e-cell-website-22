@@ -7,8 +7,10 @@ import "./Navbar.css";
 import axios from "axios";
 import UserContext from "../../../context/UserContext";
 import { ThemeContext } from "../../../context/ThemeContext";
-import { FaMoon } from "react-icons/fa";
-import { IoSunny } from "react-icons/io5";
+import ThemeToggleButton from "../ThemeToggleButton/ThemeToggleButton";
+
+// import { FaMoon } from "react-icons/fa";
+// import { IoSunny } from "react-icons/io5";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -123,32 +125,8 @@ const Navbar = () => {
             <NavLink to="/signup">SIGN UP</NavLink>
           </li>
         )}
-        <li>
-          <button
-            onClick={toggleTheme}
-            style={{
-              border: "none",
-              backgroundColor: "transparent",
-              marginBottom: "15px",
-            }}
-          >
-            <div
-              style={{
-                width: "30px",
-                height: "30px",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
-              {isDarkMode ? (
-                <IoSunny size={isDarkMode ? 20 : 18} style={{ color: "white" }} />
-              ) : (
-                <FaMoon size={isDarkMode ? 18 : 20} style={{ color: "black" }} />
-              )}
-            </div>
-          </button>
-        </li>
+
+        <ThemeToggleButton />
       </ul>
     </nav>
   );
