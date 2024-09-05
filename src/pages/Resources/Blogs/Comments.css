@@ -2,7 +2,7 @@
   min-height: 20vw;
   border-radius: 20px;
   border: 1px solid var(--border-color-grey);
-  background: var(--bg-color-white);
+  background: var(--box-bg-color);
   margin-bottom: 2.5vw;
   padding: 1.5vw;
   padding-bottom: 2.5vw !important;
@@ -19,14 +19,15 @@
 
 .classofnameloggedin {
   font-size: 1.5vw;
-  color: var(--text-color-grey);
+  color: var(--text-color-primary);
   cursor: pointer;
 }
 
 .comment-main textarea {
   width: 100% !important;
   border: none;
-  background: var(--bg-color-white);
+  background: var(--box-bg-color);
+  color: var(--text-color-white);
   margin-top: 1.5vw;
   padding: 1vw;
   font-size: 1.6vw;
@@ -49,7 +50,7 @@
 
 #commentkardebhai {
   border-radius: 20px;
-  background-color: var(--text-color-primary-light);
+  background-color: var(--text-color-primary);
   color: var(--text-color-white);
   padding: 0.25vw 1.5vw;
   font-size: 1.5vw;
@@ -59,7 +60,7 @@
 
 #nhilikhnabhaicomment {
   color: var(--text-color-grey);
-  background: var(--bg-color-white);
+  background: var(--box-bg-color);
   font-size: 1.5vw;
   border: none;
   outline: none;
@@ -94,13 +95,13 @@
 
 .name-of-author-created-comnt {
   margin-left: 2vw;
-  color: var(--text-color-grey);
+  color: var(--light-text-color);
   font-size: 2vw;
 }
 
 .message-by-author-in-comnt p {
   font-size: 1.5vw;
-  color: var(--text-color-grey);
+  color: var(--light-text-color);
 }
 
 #indi-comnt-putin {

@@ -9,7 +9,7 @@
 
   justify-content: center;
   align-items: center;
-  background-color: var(--bg-color-white);
+  background-color: var(--body-bg-color);
   min-height: 100vh;
   flex-direction: column;
 }
