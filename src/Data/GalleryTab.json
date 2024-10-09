@@ -391,5 +391,73 @@
     "year": "2023-2024",
     "event": "Empressario",
     "imgsrc": "https://res.cloudinary.com/sahincloudinary/image/upload/v1711132375/Ecell/Events/empresario/Emp3.webp"
-  }
+  },
+  {
+    "id": 67,
+    "year": "2024-2025",
+    "event": "orientation",
+    "imgsrc": "https://res.cloudinary.com/dbtifxo6g/image/upload/v1728469717/ecell%20cloudinary/k8zcrcdn3rlo3c2grmze.webp"
+  },
+  {
+    "id": 68,
+    "year": "2024-2025",
+    "event": "orientation",
+    "imgsrc": "https://res.cloudinary.com/dbtifxo6g/image/upload/v1728469709/ecell%20cloudinary/srnwxbwwdhtcy7c4a9om.webp"
+  } ,
+  {
+    "id": 69,
+    "year": "2024-2025",
+    "event": "orientation",
+    "imgsrc": "https://res.cloudinary.com/dbtifxo6g/image/upload/v1728469706/ecell%20cloudinary/vs0vvtrwgmw4mdzajnoc.webp"
+  },
+  {
+    "id": 70,
+    "year": "2024-2025",
+    "event": "orientation",
+    "imgsrc": "https://res.cloudinary.com/dbtifxo6g/image/upload/v1728469706/ecell%20cloudinary/vs0vvtrwgmw4mdzajnoc.webp"
+  },
+  {
+    "id": 71,
+    "year": "2024-2025",
+    "event": "orientation",
+    "imgsrc": "https://res.cloudinary.com/dbtifxo6g/image/upload/v1728469698/ecell%20cloudinary/guc9v8xj2kxkfzqcnqyx.webp"
+  },
+  {
+    "id": 72,
+    "year": "2024-2025",
+    "event": "orientation",
+    "imgsrc": "https://res.cloudinary.com/dbtifxo6g/image/upload/v1728469686/ecell%20cloudinary/immz31tamhz0wscdbzbf.webp"
+  },
+  {
+    "id": 73,
+    "year": "2024-2025",
+    "event": "orientation",
+    "imgsrc": "https://res.cloudinary.com/dbtifxo6g/image/upload/v1728469672/ecell%20cloudinary/awfkwphkjbvwborg2otd.webp"
+  },
+  {
+    "id": 74,
+    "year": "2024-2025",
+    "event": "orientation",
+    "imgsrc": "https://res.cloudinary.com/dbtifxo6g/image/upload/v1728469668/ecell%20cloudinary/cvvozxsokgzxqipv1kv1.webp"
+  }, 
+  {
+    "id": 75,
+    "year": "2024-2025",
+    "event": "orientation",
+    "imgsrc": "https://res.cloudinary.com/dbtifxo6g/image/upload/v1728469665/ecell%20cloudinary/u5cppzoyaewxv18zsgon.webp"
+  }, 
+  {
+    "id": 76,
+    "year": "2024-2025",
+    "event": "orientation",
+    "imgsrc": "https://res.cloudinary.com/dbtifxo6g/image/upload/v1728469659/ecell%20cloudinary/k6efix62jc6yok9fu22h.webp"
+  },  
+  {
+    "id": 77,
+    "year": "2024-2025",
+    "event": "orientation",
+    "imgsrc": "https://res.cloudinary.com/dbtifxo6g/image/upload/v1728469655/ecell%20cloudinary/qbzzc5eisos4bkrwce1l.webp"
+  } 
+ 
 ]
+
