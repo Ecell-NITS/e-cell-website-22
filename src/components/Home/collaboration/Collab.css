@@ -317,7 +317,7 @@
 }
 
 .collab-content {
-  background-color: var(--bg-color-white);
+  background-color: var(--box-bg-color);
   padding: 1rem;
   max-width: 40%;
   border-radius: 5px;
