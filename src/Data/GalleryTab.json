@@ -387,7 +387,7 @@
     "imgsrc": "https://res.cloudinary.com/sahincloudinary/image/upload/v1711132568/Ecell/Events/empresario/Emp4.webp"
   },
   {
-    "id": 6,
+    "id":66,
     "year": "2023-2024",
     "event": "Empressario",
     "imgsrc": "https://res.cloudinary.com/sahincloudinary/image/upload/v1711132375/Ecell/Events/empresario/Emp3.webp"
@@ -403,7 +403,7 @@
     "year": "2024-2025",
     "event": "orientation",
     "imgsrc": "https://res.cloudinary.com/dbtifxo6g/image/upload/v1728469709/ecell%20cloudinary/srnwxbwwdhtcy7c4a9om.webp"
-  } ,
+  },
   {
     "id": 69,
     "year": "2024-2025",
@@ -457,7 +457,7 @@
     "year": "2024-2025",
     "event": "orientation",
     "imgsrc": "https://res.cloudinary.com/dbtifxo6g/image/upload/v1728469655/ecell%20cloudinary/qbzzc5eisos4bkrwce1l.webp"
-  } 
+  } ;
  
 ]
 
