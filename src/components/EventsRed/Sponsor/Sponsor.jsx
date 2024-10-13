@@ -12,7 +12,7 @@ export default function Sponsor() {
             <span
               style={{
                 fontFamily: "Barlow Condensed",
-                color: "var(--text-color-primary)",
+                color: "#224259",
                 fontWeight: "900",
               }}
             >

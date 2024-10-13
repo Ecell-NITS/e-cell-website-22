@@ -6,7 +6,6 @@
 }
 
 .profile {
-  background-color: var(--box-bg-color);
   border: 1px solid var(--border-color-grey);
   border-radius: 10px;
   margin: 1rem;
@@ -22,7 +21,7 @@
 .name_alumni {
   text-align: center;
   font-size: 1.9rem;
-  color: var(--light-text-color);
+  color: var(--text-color-primary);
 }
 
 .desg_alumni {
@@ -30,7 +29,7 @@
   margin-bottom: 1.5rem;
   font-size: 1.2rem;
   font-weight: 400;
-  color: var(--light-text-color);
+  color: var(--text-color-primary-light);
 }
 
 .img_alumni {

@@ -11,7 +11,7 @@
   background-repeat: no-repeat;
   background-size: 61.5% 100%;
   background-attachment: scroll;
-  background-color: var(--body-bg-color);
+  background-color: var(--bg-color-white);
 }
 
 .team-top h1,

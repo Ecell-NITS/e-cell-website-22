@@ -29,7 +29,7 @@
   height: 0.625rem;
   margin-top: 0.625rem;
   width: 0.625rem;
-  background-color: var(--text-color-white);
+  background-color: var(--bg-color-white);
   border-radius: 50%;
   display: inline-block;
   animation: dotAnimation 1.5s infinite ease-in-out;

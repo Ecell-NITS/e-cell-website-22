@@ -45,7 +45,7 @@ div.tabGallery > * {
   display: block;
   width: 17rem;
   background-color: var(--body-bg-color);
-  color: var(--text-color-primary);
+  color: var(--light-text-color);
   border: var(--light-text-color);
   font-weight: 600;
   font-size: 2.25rem;

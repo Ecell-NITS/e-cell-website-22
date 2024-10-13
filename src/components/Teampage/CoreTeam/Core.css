@@ -8,7 +8,7 @@
 }
 
 .core-mem {
-  background-color: var(--box-bg-color);
+  background-color: var(--body-bg-color);
   height: 25rem;
   width: 20rem;
   left: 1.25rem;
