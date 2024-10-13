@@ -4,6 +4,7 @@
 }
 
 .upcom-evnts-top h1 {
+  color: var(--light-text-color);
   font-size: 3vw;
   font-weight: 400;
   font-family: "Barlow Condensed", sans-serif;
@@ -33,9 +34,10 @@
   margin-right: 1.1%;
   margin-bottom: 2.1%;
   padding: 1vw;
-  border: 1px solid var(--border-color-primary);
+  border: 1px solid var(--light-text-color);
   border-radius: 1vw;
-  box-shadow: 0 10px 20px var(--box-shadow-color-black-1),
+  box-shadow:
+    0 10px 20px var(--box-shadow-color-black-1),
     0 6px 6px var(--box-shadow-color-black-2);
 }
 
@@ -81,7 +83,7 @@
 }
 
 .btns-1-ent-indi button {
-  background-color: var(--bg-color-primary);
+  background-color: var(--bg-color-primary-light);
   color: var(--text-color-white);
   padding: 0vw 0.5vw;
   border-radius: 0.5vw;
