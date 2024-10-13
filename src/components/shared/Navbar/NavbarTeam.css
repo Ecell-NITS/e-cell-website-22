@@ -29,7 +29,7 @@
 }
 
 .navbar0 .logo {
-  color: var(--text-color-grey);
+  color: var(--text-color-grey-light);
   font-size: 1.75rem;
   font-weight: 600;
 }
@@ -37,13 +37,13 @@
 .navbar0 .links-nav {
   list-style: none;
   display: flex;
-  color: var(--text-color-grey);
+  color: var(--text-color-grey-light);
   cursor: pointer;
 }
 
 .navbar0 .links-nav li {
   margin: 0 0.9375rem;
-  color: var(--text-color-grey) !important;
+  color: var(--text-color-grey-light) !important;
   font-size: 1.3rem;
   letter-spacing: 0.5px;
   font-weight: 600;
@@ -109,7 +109,7 @@
 
   .navbar0 .toggle-icon {
     display: block;
-    color: var(--text-color-grey);
+    color: var(--text-color-grey-light);
     position: absolute;
     top: 1.3rem;
     right: 1.25rem;

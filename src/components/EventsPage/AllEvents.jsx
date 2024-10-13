@@ -111,7 +111,7 @@ const AllEvents = () => {
           <span
             style={{
               fontFamily: "Barlow Condensed",
-              color: "var(--text-color-primary)",
+              color: "#224259",
               fontWeight: "900",
             }}
           >
@@ -172,7 +172,7 @@ const AllEvents = () => {
           <span
             style={{
               fontFamily: "Barlow Condensed",
-              color: "var(--text-color-primary)",
+              color: "#224259",
               fontWeight: "900",
             }}
           >
@@ -235,7 +235,7 @@ const AllEvents = () => {
           <span
             style={{
               fontFamily: "Barlow Condensed",
-              color: "var(--text-color-primary)",
+              color: "#224259",
               fontWeight: "900",
             }}
           >
@@ -298,7 +298,7 @@ const AllEvents = () => {
           <span
             style={{
               fontFamily: "Barlow Condensed",
-              color: "var(--text-color-primary)",
+              color: "#224259",
               fontWeight: "900",
             }}
           >

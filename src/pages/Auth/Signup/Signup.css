@@ -33,7 +33,7 @@
 
 .enterdtlssignup {
   font-size: 1.5vw;
-  color: var(--text-color-white);
+  color: rgba(154, 148, 148, 1);
 }
 
 .formsignaccoutn h3 {
@@ -51,7 +51,6 @@
 
 .formsignaccoutn input,
 .formsignaccoutn textarea {
-  color: var(--light-text-color);
   background-color: var(--body-bg-color);
   width: 70%;
   border: 2px solid rgba(154, 148, 148, 1);
@@ -84,7 +83,7 @@
 }
 
 .btnsubmittodb {
-  background-color: var(--text-color-primary);
+  background-color: var(--bg-color-primary);
   color: var(--text-color-white);
   width: 70%;
   border: none;
@@ -111,7 +110,7 @@
   background-color: var(--body-bg-color);
   border: none;
   outline: none;
-  color: var(--text-color-primary);
+  color: var(--text-color-primary-light);
   font-size: 1.5vw;
   font-weight: 600;
   margin-left: 0.5vw;
@@ -129,7 +128,7 @@
 #fogtpwd button {
   margin-left: 23vw;
   font-size: 1.3vw;
-  color: var(--text-color-primary);
+  color: var(--text-color-primary-light);
   margin-top: -1vw !important;
   font-weight: 900;
   border: none;
@@ -199,7 +198,7 @@
   #fogtpwd button {
     margin-left: 65vw;
     font-size: 3vw;
-    color: var(--text-color-primary);
+    color: var(--text-color-primary-light);
     margin-top: -1vw !important;
     font-weight: 900;
   }

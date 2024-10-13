@@ -34,7 +34,7 @@
 }
 
 .specificttle {
-  color: var(--text-color-grey);
+  color: var(--text-color-grey-light);
   font-size: 1.2vw;
   font-family: "Poppins", sans-serif;
   font-weight: 500;

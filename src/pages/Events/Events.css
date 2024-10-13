@@ -6,7 +6,7 @@
   /* object-fit: contain; */
   background-repeat: no-repeat;
   height: 52vw;
-  box-shadow: inset 0 0 0 1000px var(--box-shadow-hero-color);
+  box-shadow: inset 0 0 0 1000px #1f18349c;
   background-attachment: scroll;
   background-position-x: center;
 }
@@ -33,7 +33,7 @@
   background-position-x: center;
 }
 .spkr-cont-event {
-  background-color: var(--border-color-white);
+  background-color: var(--bg-color-white);
   display: inline-block;
   position: absolute;
   top: 23%;
