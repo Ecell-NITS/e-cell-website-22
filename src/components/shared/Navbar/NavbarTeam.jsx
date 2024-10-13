@@ -8,7 +8,6 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useContext } from "react";
 import UserContext from "../../../context/UserContext";
-import ThemeToggleButton from "../ThemeToggleButton/ThemeToggleButton";
 
 const NavbarTeam = () => {
   const [toggle, setToggle] = useState(false);
@@ -112,7 +111,6 @@ const NavbarTeam = () => {
             <NavLink to="/signup">SIGN UP</NavLink>
           </li>
         )}
-        <ThemeToggleButton />
       </ul>
     </nav>
   );

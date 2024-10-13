@@ -6,18 +6,9 @@ import { Link, NavLink, useNavigate } from "react-router-dom";
 import "./Navbar.css";
 import axios from "axios";
 import UserContext from "../../../context/UserContext";
-import { ThemeContext } from "../../../context/ThemeContext";
-import ThemeToggleButton from "../ThemeToggleButton/ThemeToggleButton";
-
-// import { FaMoon } from "react-icons/fa";
-// import { IoSunny } from "react-icons/io5";
-
 const Navbar = () => {
   const navigate = useNavigate();
   const [toggle, setToggle] = useState(false);
-  const { isDarkMode, toggleTheme, setIsDarkMode, setCurrentMode } =
-    useContext(ThemeContext);
-  // const storedTheme = localStorage.getItem("isDarkMode");
 
   const handleToggle = () => {
     setToggle(!toggle);
@@ -70,7 +61,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`navbar1 ${toggle ? "expanded" : ""} ${isDarkMode ? "dark-theme" : ""}`}
+      className={toggle ? "navbar1 expanded" : "navbar1"}
       id={bgChng ? "bgchng" : ""}
       style={{ userSelect: "none" }}
     >
@@ -125,8 +116,6 @@ const Navbar = () => {
             <NavLink to="/signup">SIGN UP</NavLink>
           </li>
         )}
-
-        <ThemeToggleButton />
       </ul>
     </nav>
   );
