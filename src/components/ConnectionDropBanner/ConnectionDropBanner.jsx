@@ -31,8 +31,8 @@ const ConnectionDropBanner = () => {
         !isConnected
           ? styles.offlinebanner
           : showOnlineBanner
-            ? styles.onlinebanner
-            : styles.hide
+          ? styles.onlinebanner
+          : styles.hide
       }
     >
       {!isConnected && <p>You are offline. Please check your internet connection.</p>}

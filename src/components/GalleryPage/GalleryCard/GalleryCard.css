@@ -2,8 +2,7 @@
   width: 25vw;
   height: 16rem;
   overflow: hidden;
-  box-shadow:
-    4px 4px 12px var(--box-shadow-color-black-1),
+  box-shadow: 4px 4px 12px var(--box-shadow-color-black-1),
     -4px -4px 12px var(--box-shadow-color-black-2);
   border-radius: 8px;
   margin: 2.5vw;
