@@ -97,15 +97,15 @@
   transition: all 0.3s;
 }
 
-.categ{
-  border : none !important;
+.categ {
+  border: none !important;
 }
 
 .newblogaddbtn:focus {
   box-shadow: 0 0 0 5px var(--box-shadow-color-primary);
 }
 
-.skel{
+.skel {
   background-color: var(--border-color-grey) !important;
   animation: pulse 1.5s infinite;
   border-radius: 0.5rem;
@@ -149,7 +149,9 @@
   object-fit: cover;
   pointer-events: none;
   user-select: none;
-  transition: filter 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition:
+    filter 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
 }
 
 .imgholdercontblog:hover img {
@@ -172,7 +174,7 @@
   display: inline-block;
 }
 
-.whowrittenblogsk{
+.whowrittenblogsk {
   min-height: 1.8rem;
   margin-top: 0.5rem;
   width: 60%;
