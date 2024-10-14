@@ -6,7 +6,10 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 // import UpcomingEvents from '../../components/EventsPage/UpcomingEvents';
 import PastEvents from "../../components/EventsPage/PastEvents";
+import { ThemeContext } from "../../context/ThemeContext";
+import { useContext } from "react";
 const Events = () => {
+  const { isDarkMode, setIsDarkMode } = useContext(ThemeContext);
   useEffect(() => {
     document.title = "Events | E-Cell NIT Silchar";
   }, []);
