@@ -35,6 +35,7 @@
 }
 
 .accountusername {
+  color: var(--light-text-color);
   font-weight: 600;
   font-size: 3vw;
   width: 50%;
@@ -64,6 +65,7 @@
 }
 
 .biohbhauidhar {
+  background-color: var(--box-bg-color);
   margin: 4vw 0 2.9vw 0;
   padding: 1.3vw;
   border: 2px solid var(--border-color-grey);
@@ -73,7 +75,7 @@
 .biohbhauidhar h3 {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
-  color: var(--text-color-grey);
+  color: var(--light-text-color);
   font-size: 1.3vw;
   line-height: 1.6;
 }
@@ -144,10 +146,12 @@
 }
 
 .smedia1div button {
-  background-color: var(--bg-color-white);
-  border: none;
+  background-color: var(--body-bg-color);
+  border-radius: 5px;
+  padding: 5px;
+  border: 1px solid var(--light-text-color);
   outline: none;
-  color: var(--text-color-primary);
+  color: var(--light-text-color);
 }
 
 @media (max-width: 660px) {

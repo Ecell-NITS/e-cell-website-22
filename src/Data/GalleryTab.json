@@ -387,9 +387,71 @@
     "imgsrc": "https://res.cloudinary.com/sahincloudinary/image/upload/v1711132568/Ecell/Events/empresario/Emp4.webp"
   },
   {
-    "id": 6,
+    "id":66,
     "year": "2023-2024",
     "event": "Empressario",
     "imgsrc": "https://res.cloudinary.com/sahincloudinary/image/upload/v1711132375/Ecell/Events/empresario/Emp3.webp"
+  },
+  {
+    "id": 67,
+    "year": "2024-2025",
+    "event": "Orientation",
+    "imgsrc": "https://res.cloudinary.com/dbtifxo6g/image/upload/v1728816666/_DSC0030_cuqhmk.webp"
+  },
+  {
+    "id": 68,
+    "year": "2024-2025",
+    "event": "Orientation",
+    "imgsrc": "https://res.cloudinary.com/dbtifxo6g/image/upload/v1728816238/DSC_0071_knpcn4.webp"
+  },
+  {
+    "id": 69,
+    "year": "2024-2025",
+    "event": "Orientation",
+    "imgsrc": "https://res.cloudinary.com/dbtifxo6g/image/upload/v1728816050/IMG_5208_ehvq22.webp"
+  },
+  {
+    "id": 70,
+    "year": "2024-2025",
+    "event": "Orientation",
+    "imgsrc": "https://res.cloudinary.com/dbtifxo6g/image/upload/v1728816030/DSC_0009_qfbrku.webp"
+  },
+  {
+    "id": 71,
+    "year": "2024-2025",
+    "event": "Orientation",
+    "imgsrc": "https://res.cloudinary.com/dbtifxo6g/image/upload/v1728816003/DSC_0034_bvw8xq.webp"
+  },
+  {
+    "id": 72,
+    "year": "2024-2025",
+    "event": "Orientation",
+    "imgsrc": "https://res.cloudinary.com/dbtifxo6g/image/upload/v1728815991/IMG_5400_dql7kq.webp"
+  },
+  {
+    "id": 73,
+    "year": "2024-2025",
+    "event": "Orientation",
+    "imgsrc": "https://res.cloudinary.com/dbtifxo6g/image/upload/v1728469717/ecell%20cloudinary/k8zcrcdn3rlo3c2grmze.webp"
+  },
+  {
+    "id": 74,
+    "year": "2024-2025",
+    "event": "Orientation",
+    "imgsrc": "https://res.cloudinary.com/dbtifxo6g/image/upload/v1728469709/ecell%20cloudinary/srnwxbwwdhtcy7c4a9om.webp"
+  }, 
+  {
+    "id": 75,
+    "year": "2024-2025",
+    "event": "Orientation",
+    "imgsrc": "https://res.cloudinary.com/dbtifxo6g/image/upload/v1728469698/ecell%20cloudinary/guc9v8xj2kxkfzqcnqyx.webp"
+  }, 
+  {
+    "id": 76,
+    "year": "2024-2025",
+    "event": "Orientation",
+    "imgsrc": "https://res.cloudinary.com/dbtifxo6g/image/upload/v1728469686/ecell%20cloudinary/immz31tamhz0wscdbzbf.webp"
   }
 ]
+ 
+

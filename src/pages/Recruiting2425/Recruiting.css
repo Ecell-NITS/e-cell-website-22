@@ -66,6 +66,7 @@
 }
 
 .input-common-recruit {
+  background-color: var(--body-bg-color);
   display: block;
   width: 100%;
   border: solid 2px var(--border-color-grey-light);
@@ -101,7 +102,7 @@
 }
 
 .btnotpsend {
-  background-color: var(--bg-color-primary);
+  background-color: var(--text-color-primary);
   color: var(--text-color-white);
   cursor: pointer;
   border-radius: 5px;
