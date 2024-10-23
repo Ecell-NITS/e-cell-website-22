@@ -17,7 +17,9 @@ const ThemeToggleButton = () => {
     //   </div>
     // </button>
     <button
-      onClick={toggleTheme}
+      onClick={() => {
+        toggleTheme();
+      }}
       style={{
         border: "none",
         backgroundColor: "transparent",

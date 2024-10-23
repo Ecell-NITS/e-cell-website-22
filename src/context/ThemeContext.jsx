@@ -1,10 +1,7 @@
 import { useRef } from "react";
 import { createContext, useState, useEffect } from "react";
 
-const ThemeContext = createContext({
-  isDarkMode: false,
-  toggleTheme: () => {},
-});
+const ThemeContext = createContext([]);
 
 function ThemeContextProvider({ children }) {
   let currentMode = localStorage.getItem("isDarkMode");
