@@ -6,7 +6,7 @@
 }
 
 .top-hro-all-evnts-pol h1 {
-  color: white;
+  color: var(--text-color-white);
   font-weight: 900;
   font-size: 7.5vw;
   font-family: "Barlow Condensed", sans-serif;

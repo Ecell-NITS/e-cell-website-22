@@ -13,7 +13,7 @@
 
 .btn {
   border-radius: 1.25rem;
-  background: #224259;
+  background: var(--bg-color-primary);
   display: flex;
   align-items: center;
   gap: 0.7rem;
@@ -22,7 +22,7 @@
 }
 
 .btn h3 {
-  color: #fff;
+  color: var(--text-color-white);
 }
 .card {
   display: flex;

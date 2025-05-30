@@ -154,13 +154,13 @@ const Blogindividual = () => {
       setPublishing(false);
       return;
     }
+    const token = localStorage.getItem("token");
+    const config = {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    };
     try {
-      const token = localStorage.getItem("token");
-      const config = {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      };
       await axios
         .post(`${import.meta.env.VITE_REACT_APP_APIMAIN}/publishblog/${id}`, config)
         .then((res) => {

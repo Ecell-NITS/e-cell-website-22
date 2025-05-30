@@ -1,13 +1,13 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./Collab.css";
-import Rupay from "../collaboration/Rupay";
-import Unacademy from "../collaboration/Unacademy";
+import Rupay from "./Rupay";
+import Unacademy from "./Unacademy";
 import { AiOutlineArrowRight, AiOutlineArrowLeft } from "react-icons/ai";
-import Vedantu from "../collaboration/Vedantu";
-import CocaCola from "../collaboration/CocaCola";
-import Ieee from "../collaboration/Ieee";
-import Jantagrp from "../collaboration/Jantagrp";
-import Pnb from "../collaboration/Pnb";
+import Vedantu from "./Vedantu";
+import CocaCola from "./CocaCola";
+import Ieee from "./Ieee";
+import Jantagrp from "./Jantagrp";
+import Pnb from "./Pnb";
 import Kwikpic from "./Kwikpic";
 import Ssstart from "./Ssstart";
 // import Allay from './Allay';
@@ -302,6 +302,7 @@ const Collaboration = () => {
           <div
             id="tbn-indi-collab-po"
             className={`EngineerHub ${accollab === "EngineerHub" ? " njkl021" : ""}`}
+            style={{ filter: "brightness(0.5)" }}
           >
             <button
               id="btn-collab-indi-po"

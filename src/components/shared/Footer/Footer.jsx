@@ -180,7 +180,7 @@ const Footer = () => {
               {" "}
               <li>
                 <BsFillTelephoneFill className="f_icon" />
-                <span className="i-text">+91 9795888891</span>
+                <span className="i-text">+91 6388689290</span>
               </li>
             </a>
           </ul>

@@ -27,7 +27,7 @@ const Footerconstant = () => {
           </button>
         </a>
         <a
-          href="https://www.linkedin.com/in/e-cell-nit-silchar-848602154"
+          href="https://www.linkedin.com/company/ecell-nit-silchar/"
           rel="noreferrer"
           target="_blank"
         >

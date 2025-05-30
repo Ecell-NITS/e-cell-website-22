@@ -54,7 +54,7 @@ const PastEvents = () => {
           <span
             style={{
               fontFamily: "Barlow Condensed",
-              color: "#224259",
+              color: "var(--text-color-primary)",
               fontWeight: "900",
             }}
           >

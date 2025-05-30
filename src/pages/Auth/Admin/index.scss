@@ -21,9 +21,9 @@
   margin-top: 20%;
   text-align: center;
   button {
-    color: rgba(193, 0, 0, 1);
-    border: 2px solid rgba(193, 0, 0, 1);
-    background-color: white;
+    color: var(--text-color-red);
+    border: 2px solid var(--text-color-red);
+    background-color: var(--bg-color-white);
     padding: 0.25vw 1.5vw !important;
     border-radius: 7.59px;
     font-size: 1.7vw;

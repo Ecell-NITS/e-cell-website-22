@@ -7,7 +7,7 @@
 
   /* Dark Blue */
 
-  color: #224259;
+  color: var(--text-color-primary);
 }
 .carddate {
   font-family: "Barlow Condensed";
@@ -19,7 +19,7 @@
 
   /* Text Color */
 
-  color: #505050;
+  color: var(--text-color-grey);
 }
 .cardimage {
   border-radius: 9px 9px 0px 0px;
@@ -33,7 +33,7 @@
 
   /* Text Color */
 
-  color: #505050;
+  color: var(--text-color-grey);
 }
 .eventstitle {
   font-family: "Barlow Condensed";
@@ -45,15 +45,15 @@
 
   /* Dark Blue */
 
-  color: #224259;
+  color: var(--text-color-primary);
 
-  text-shadow: 2px 2px 4px rgba(245, 92, 5, 0.5);
+  text-shadow: 2px 2px 4px var(--border-color-orange);
 }
 .eventcard {
   margin: 0 auto;
 }
 .card-body {
-  border: 1px solid #232323;
+  border: 1px solid var(--border-color-black);
   border-radius: 0px 0px 9px 9px;
 }
 .eventscardscontent {

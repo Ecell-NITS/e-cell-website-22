@@ -6,10 +6,10 @@
 
 .filteredteamdata button {
   width: 20%;
-  background-color: white;
+  background-color: var(--bg-color-white);
   border: none;
   outline: none;
-  color: black;
+  color: var(--text-color-black);
   font-size: 2vw;
   margin: 1vw 0;
 }
@@ -30,10 +30,10 @@
 
   .filteredteamdata button {
     width: 20%;
-    background-color: white;
+    background-color: var(--bg-color-white);
     border: none;
     outline: none;
-    color: black;
+    color: var(--text-color-black);
     font-size: 4vw;
     margin: 1vw 0;
   }
