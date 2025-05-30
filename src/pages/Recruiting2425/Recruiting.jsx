@@ -524,7 +524,7 @@ const Recruiting = () => {
         <h1 className="titlerecuit">Recruitment</h1>
         <h1 className="titlerecuit-for">for</h1>
         <h1 className="titlerecuit-tenure">
-          2024-25 <span className="tenure-recuit">Tenure</span>
+          2025-26 <span className="tenure-recuit">Tenure</span>
         </h1>
       </div>
 
@@ -533,7 +533,7 @@ const Recruiting = () => {
           Are you passionate about the entrepreneurial world and are looking for a
           platform to learn as well as showcase your knowledge? Look no further. The
           Entrepreneurship Cell (E-Cell) of NIT Silchar is thrilled to announce
-          recruitment of talented individuals for the academic year 2024-2025.
+          recruitment of talented individuals for the academic year 2025-2026.
           <br />
           <br />
           At E-Cell, we believe in empowering aspiring individuals to become exceptional
