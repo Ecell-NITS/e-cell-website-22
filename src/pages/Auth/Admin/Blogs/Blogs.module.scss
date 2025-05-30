@@ -13,8 +13,8 @@
     button {
       padding: 0.5rem 1rem;
       font-size: 1.5rem;
-      color: white;
-      background-color: #2a5368;
+      color: var(--text-color-white);
+      background-color: var(--bg-color-primary);
       border-radius: 0.625rem;
       @media screen and (max-width: 768px) {
         font-size: 1rem;

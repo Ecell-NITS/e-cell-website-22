@@ -12,8 +12,8 @@
   margin-top: 0%;
   margin-bottom: 80px;
   margin-right: 2px;
-  color: #224259;
-  text-shadow: 2px 2px 4px rgba(245, 92, 5, 0.5);
+  color: var(--text-color-primary);
+  text-shadow: 2px 2px 4px var(--border-color-orange);
 }
 
 .img-parnt {
@@ -31,7 +31,7 @@
 .row {
   display: flex;
   /* padding: 2px 0px;  */
-  background-color: white;
+  background-color: var(--bg-color-white);
   height: 125px;
   width: 400px;
   left: 20px;

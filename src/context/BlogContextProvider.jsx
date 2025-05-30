@@ -47,6 +47,7 @@ const BlogContextProvider = ({ children }) => {
         setBlogs(response.data.filter((blog) => blog.status === "published")); // published blogs are filtered here
         setLoading(false);
       } catch (error) {
+        setSortingMessage("");
         console.log("Error fetching blogs:", error);
       } finally {
         setIsFetching(false);

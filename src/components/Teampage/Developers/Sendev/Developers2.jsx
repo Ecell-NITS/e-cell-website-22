@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./SrDevelopers.css";
 import { FaFacebook, FaLinkedin } from "react-icons/fa";
 import { BsGithub } from "react-icons/bs";
-import Data from "../../../../../src/Data/Developers.json";
+import Data from "../../../../Data/Developers.json";
 const config = {
   rootMargin: "0px 0px 0px 0px",
   threshold: 0.2,

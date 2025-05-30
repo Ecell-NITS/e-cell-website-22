@@ -1,3 +1,5 @@
+
+
 .blogCard {
   * {
     overflow: auto;
@@ -12,9 +14,9 @@
   width: 20rem;
   height: 25rem;
   padding: 1rem;
-  border: 1px solid #ccc;
+  border: 1px solid var(--border-color-grey-light);
   border-radius: 5px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px var(--box-shadow-color-black-1);
   transition: all 0.3s;
   .blogCardHeader {
     height: 25%;
@@ -35,8 +37,8 @@
     button {
       padding: 0.5rem 1rem;
       font-size: 1rem;
-      color: white;
-      background-color: #2a5368;
+      color: var(--text-color-white);
+      background-color: var(--bg-color-primary);
       border-radius: 0.625rem;
     }
   }

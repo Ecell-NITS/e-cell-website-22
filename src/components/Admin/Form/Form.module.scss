@@ -1,6 +1,6 @@
 .sub button {
-  background-color: #224259;
-  color: white;
+  background-color: var(--bg-color-primary);
+  color: var(--text-color-white);
 }
 
 .bro {
@@ -12,7 +12,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #c3d6e5;
+    background-color: var(--bg-color-grey-light);
     height: 80%;
     width: 80%;
     border-radius: 1rem;
@@ -35,7 +35,7 @@
 }
 
 .box span {
-  color: #fff;
+  color: var(--text-color-white);
   font-family: "Expletus Sans";
   font-size: 1.125rem;
   font-style: normal;
@@ -50,8 +50,8 @@
   border: none;
   border-radius: 1rem;
   width: 49vw;
-  color: black;
-  background: white;
+  color: var(--text-color-black);
+  background: var(--bg-color-white);
 }
 
 textarea {
@@ -60,8 +60,8 @@ textarea {
   border: none;
   border-radius: 1rem;
   width: 49vw;
-  color: black;
-  background: white;
+  color: var(--text-color-black);
+  background: var(--bg-color-white);
 }
 
 .sub {
@@ -75,8 +75,8 @@ textarea {
     height: 3.702rem;
     flex-shrink: 0;
     border-radius: 0.625rem;
-    background: var(--Dark-Blue, #224259);
-    color: #fff;
+    background: var(--Dark-Blue, var(--bg-color-primary));
+    color: var(--text-color-white);
     font-family: "Barlow Condensed";
     font-size: 1.75rem;
     font-style: normal;

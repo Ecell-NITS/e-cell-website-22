@@ -33,7 +33,7 @@
 .name_modal {
   text-align: center;
   font-size: 1.9rem;
-  color: #224259;
+  color: var(--text-color-primary);
 }
 
 .desg_modal {
@@ -41,7 +41,7 @@
   margin-bottom: 1.5rem;
   font-size: 1.2rem;
   font-weight: 400;
-  color: #3e618e;
+  color: var(--text-color-primary-light);
 }
 
 @media only screen and (max-width: 992px) {

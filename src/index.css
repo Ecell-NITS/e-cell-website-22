@@ -1,6 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap");
 
+@import url("./App.css");
+
 body {
+  background-color: var(--body-bg-color);
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
     "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
@@ -9,6 +12,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
   overflow-x: hidden;
+}
+
+p {
+  color: var(--light-text-color);
 }
 
 code {

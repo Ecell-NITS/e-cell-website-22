@@ -94,8 +94,8 @@ const Blog = () => {
 
   const filteredBlogs = activeTagFilter
     ? blogscreated.filter((blog) =>
-        blog.tag.toLowerCase().includes(activeTagFilter.toLowerCase())
-      )
+      blog.tag.toLowerCase().includes(activeTagFilter.toLowerCase())
+    )
     : blogscreated;
 
   const screenWidth = window.innerWidth || document.documentElement.clientWidth;
@@ -157,23 +157,54 @@ const Blog = () => {
               {filteredBlogs.length > 1 ? "blogs" : "blog"} found on the server
             </p>
           )}
+          {isFetching || sortingMessage?
+            <div className="mainparentblogindicard">
+              {Array.from({ length: 4 }).map((_, index) => (
+                <div key={index} className="indicardblog">
+                  <div className="imgholdercontblog skel">
+                  </div>
+                  <h1 className="titlehainlogindi skel"
+                    style={{ whiteSpace: "pre-line", height:"2.1rem", width : "90%"}}></h1>
+                  <div className="whowrittenblogsk skel">
+                  </div>
 
-          {sortingMessage ? null : (
-            <>
-              {filteredBlogs.length === 0 ? (
-                <p></p>
-              ) : (
-                <>
-                  <div className="mainparentblogindicard">
-                    {filteredBlogs.map((blog) => (
-                      <div key={blog.name} className="indicardblog">
-                        {/* <h1>id: {blog._id}</h1> */}
-                        <div className="imgholdercontblog">
-                          <img src={blog.topicpic} alt="" id="hoverscaledown" />
-                        </div>
+                  <div className="whoholdsthetag">
+                    {Array.from({ length: 3 }).map((_, index) => (
+                      <button key={index} className="categ skel">
+                        {"    "}&nbsp;</button>))}
+                  </div>
 
-                        {tabletPc
-                          ? blog.title.split("\n").map((paragraph, index) => (
+                  <div className="briefintrohldman skel">
+                  </div>
+
+                  <div id="btnholderslikeread">
+                    <button className="likekarobhaiblog">
+                      <BiLike />
+                    </button>
+
+                    <Link>
+                      {" "}
+                      <button className="kretrhereading">Read more</button>
+                    </Link>
+                  </div>
+                </div>
+              ))}
+            </div> : (
+              <>
+                {filteredBlogs.length === 0 ? (
+                  <p>No blogs found</p>
+                ) : (
+                  <>
+                    <div className="mainparentblogindicard">
+                      {filteredBlogs.map((blog) => (
+                        <div key={blog.name} className="indicardblog">
+                          {/* <h1>id: {blog._id}</h1> */}
+                          <div className="imgholdercontblog">
+                            <img src={blog.topicpic} alt="" id="hoverscaledown" loading="lazy" />
+                          </div>
+
+                          {tabletPc
+                            ? blog.title.split("\n").map((paragraph, index) => (
                               <h1
                                 key={index}
                                 className="titlehainlogindi"
@@ -186,7 +217,7 @@ const Blog = () => {
                                 }}
                               ></h1>
                             ))
-                          : blog.title.split("\n").map((paragraph, index) => (
+                            : blog.title.split("\n").map((paragraph, index) => (
                               <h1
                                 key={index}
                                 className="titlehainlogindi"
@@ -197,71 +228,71 @@ const Blog = () => {
                               ></h1>
                             ))}
 
-                        <div className="whowrittenblog">
-                          <Link to={`/user/${blog.authorid}`}>
-                            <h2>{blog.writernmae}</h2>
-                          </Link>
-                        </div>
+                          <div className="whowrittenblog">
+                            <Link to={`/user/${blog.authorid}`}>
+                              <h2>{blog.writername}</h2>
+                            </Link>
+                          </div>
 
-                        <div className="whoholdsthetag">
-                          {blog.tag
-                            .trim()
-                            .split(" ")
-                            .map(
-                              (word, index) =>
-                                word.length > 0 && (
-                                  // eslint-disable-next-line react/jsx-key
-                                  <Link
-                                    to={`/tag/${word.replace("#", "")}`}
-                                    id="tagbuttonidlink"
+                          <div className="whoholdsthetag">
+                            {blog.tag
+                              .trim()
+                              .split(" ")
+                              .map(
+                                (word, index) =>
+                                  word.length > 0 && (
+                                    // eslint-disable-next-line react/jsx-key
+                                    <Link
+                                      to={`/tag/${word.replace("#", "")}`}
+                                      id="tagbuttonidlink"
                                     // key={index}
-                                  >
-                                    <button
-                                      key={index}
-                                      className={index !== 0 ? "buttonmarginlft" : ""}
                                     >
-                                      {" "}
-                                      {word}
-                                    </button>
-                                  </Link>
-                                )
-                            )}
-                        </div>
+                                      <button
+                                        key={index}
+                                        className={index !== 0 ? "buttonmarginlft" : ""}
+                                      >
+                                        {" "}
+                                        {word}
+                                      </button>
+                                    </Link>
+                                  )
+                              )}
+                          </div>
 
-                        <div className="briefintrohldman">
-                          {blog.intro.split("\n").map((paragraph, index) => (
-                            <p
-                              key={index}
-                              style={{ whiteSpace: "pre-line" }}
-                              dangerouslySetInnerHTML={{
-                                __html:
-                                  paragraph.split(" ").slice(0, 20).join(" ") +
-                                  (paragraph.split(" ").length > 20 ? "..." : ""),
-                              }}
-                            ></p>
-                          ))}
-                        </div>
+                          <div className="briefintrohldman">
+                            {blog.intro.split("\n").map((paragraph, index) => (
+                              <p
+                                key={index}
+                                style={{ whiteSpace: "pre-line" }}
+                                dangerouslySetInnerHTML={{
+                                  __html:
+                                    paragraph.split(" ").slice(0, 20).join(" ") +
+                                    (paragraph.split(" ").length > 20 ? "..." : ""),
+                                }}
+                              ></p>
+                            ))}
+                          </div>
 
-                        <div id="btnholderslikeread">
-                          <button
-                            className="likekarobhaiblog"
-                            onClick={() => handleLikeKarp(blog._id)}
-                          >
-                            <BiLike /> {blog.likes ? blog.likes.length : 0}
-                          </button>
+                          <div id="btnholderslikeread">
+                            <button
+                              className="likekarobhaiblog"
+                              onClick={() => handleLikeKarp(blog._id)}
+                            >
+                              <BiLike /> {blog.likes ? blog.likes.length : 0}
+                            </button>
 
-                          <Link to={`/blog/${blog._id}`}>
-                            {" "}
-                            <button className="kretrhereading">Read more</button>
-                          </Link>
+                            <Link to={`/blog/${blog._id}`}>
+                              {" "}
+                              <button className="kretrhereading">Read more</button>
+                            </Link>
+                          </div>
                         </div>
-                      </div>
-                    ))}
-                  </div>
-                </>
-              )}
-            </>
-          )}
+                      ))}
+                    </div>
+                  </>
+                )}
+              </>
+            )}
         </div>
 
         <div className="rightblogcontent">
@@ -272,25 +303,22 @@ const Blog = () => {
           <div className="btnfiltertag">
             <button
               onClick={() => handleTagFilter("startup")}
-              className={`activetagcolored ${
-                activeTagFilter === "startup" ? "active" : ""
-              }`}
+              className={`activetagcolored ${activeTagFilter === "startup" ? "active" : ""
+                }`}
             >
               Startup
             </button>
             <button
               onClick={() => handleTagFilter("technology")}
-              className={`activetagcolored ${
-                activeTagFilter === "technology" ? "active" : ""
-              }`}
+              className={`activetagcolored ${activeTagFilter === "technology" ? "active" : ""
+                }`}
             >
               Technology
             </button>
             <button
               onClick={() => handleTagFilter("entrepreneur")}
-              className={`activetagcolored ${
-                activeTagFilter === "entrepreneur" ? "active" : ""
-              }`}
+              className={`activetagcolored ${activeTagFilter === "entrepreneur" ? "active" : ""
+                }`}
               id="btnthirdtag"
             >
               Entrepreneur

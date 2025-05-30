@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import Data from "../../../Data/GalleryTab.json";
-import GalleryCard from "../GalleryCard/GalleryCard";
+import GalleryCard from "../GalleryCard/GalleryCard.jsx";
 import Modal from "../GalleryModal/Modal.jsx";
 
 const Tab = () => {

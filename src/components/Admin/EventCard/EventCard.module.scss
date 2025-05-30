@@ -2,10 +2,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #c3d6e5;
+  background: var(--bg-color-grey-light);
   border-radius: 1.5rem;
   width: 16rem;
-  color: #3e618e;
+  color: var(--text-color-primary-light);
   height: 20rem;
   padding: 1.5rem 1rem;
   margin: 2rem;
@@ -19,7 +19,7 @@
   }
   h2 {
     text-align: center;
-    color: #3e618e;
+    color: var(--text-color-primary-light);
     font-weight: 700;
     font-size: 1.7em;
   }

@@ -3,8 +3,8 @@
   overflow: hidden;
   top: 0;
   left: 0;
-  background-color: #224259;
-  color: white;
+  background-color: var(--bg-color-primary);
+  color: var(--text-color-white);
   width: 15vw;
   height: 100vh;
   gap: 2rem;
@@ -44,7 +44,7 @@
       padding: 0.625rem;
     }
     a {
-      color: white;
+      color: var(--text-color-white);
       text-decoration: none;
       padding: 0.5rem;
       border-radius: 0.5rem;
@@ -58,7 +58,7 @@
         content: "";
         width: 0;
         height: 5px;
-        background-color: white;
+        background-color: var(--bg-color-white);
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
@@ -85,8 +85,8 @@
     }
   }
   button {
-    color: rgb(251, 251, 251);
-    border: 2px solid rgb(255, 255, 255);
+    color: var(--text-color-white);
+    border: 2px solid var(--border-color-grey-light);
     background-color: transparent;
     padding: 0.25vw 1.5vw !important;
     border-radius: 7.59px;
@@ -94,13 +94,13 @@
     width: fit-content;
     @media screen and (max-width: 768px) {
       font-size: 1.5rem;
-      border: 1px solid rgb(255, 255, 255);
+      border: 1px solid var(--border-color-grey-light);
     }
   }
 }
 .menu {
   position: fixed;
-  color: white;
+  color: var(--text-color-white);
   right: 1rem;
   top: 1rem;
   z-index: 100;

@@ -9,6 +9,9 @@
   background-repeat: no-repeat;
 }
 
+.footer-section p {
+  color: var(--text-color-white);
+}
 .p2 {
   margin-bottom: 0 !important;
 }
@@ -28,7 +31,7 @@
   justify-content: center;
   align-items: center;
   flex-grow: 3;
-  color: #ffffff;
+  color: var(--text-color-white);
   margin: 5rem;
   padding: auto;
   margin-top: 40px;
@@ -42,7 +45,7 @@
 .container2 {
   flex-grow: 6;
   margin: 3rem;
-  color: #ffffff;
+  color: var(--text-color-white);
   padding: auto;
 }
 
@@ -55,19 +58,19 @@
 
 .container3 {
   flex-grow: 1;
-  color: #ffffff;
+  color: var(--text-color-white);
   margin: 3rem;
 }
 
 .container4 {
   flex-grow: 5;
-  color: #ffffff;
+  color: var(--text-color-white);
   margin: 3rem;
 }
 
 .container5 {
   flex-grow: 2;
-  color: #ffffff;
+  color: var(--text-color-white);
   width: 100%;
   place-items: center;
   text-align: center;
@@ -79,7 +82,7 @@
 }
 
 .footer_social_Logo {
-  color: #ffffff;
+  color: var(--text-color-white);
   margin: 2rem;
   display: flex;
   margin-left: 0rem;
@@ -132,7 +135,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 1.2rem 0.3rem;
-  background-color: #ffffff;
+  background-color: var(--text-color-white);
   border-radius: 5rem;
   margin-top: 2rem;
   height: 0.1px;
@@ -148,11 +151,11 @@
   position: relative;
   left: -15px;
   top: 1px;
-  color: black;
+  color: var(--text-color-black);
 }
 
 .container4 input::placeholder {
-  color: black;
+  color: var(--text-color-black);
 }
 
 .f_icon {
@@ -165,7 +168,7 @@
   justify-content: center;
   margin-top: 1vw;
   font-size: 1.2vw;
-  color: grey;
+  color: var(--text-color-grey-light);
   user-select: none;
 }
 
@@ -177,13 +180,13 @@
 .nameformik {
   margin: 1vw 0;
   padding: 1vw;
-  border: 1.5px solid grey;
+  border: 1.5px solid var(--border-color-grey);
   border-radius: 7px;
   font-weight: 900;
 }
 
 .nameformik:active {
-  box-shadow: 0 0 0 5px #224259 !important;
+  box-shadow: 0 0 0 5px var(--box-shadow-color-primary) !important;
   transition: 0.3s !important;
 }
 
@@ -191,30 +194,30 @@
   width: 50%;
   margin-left: auto !important ;
   margin-right: auto !important;
-  background-color: #224259;
+  background-color: var(--bg-color-primary);
   transition: all 0.15s ease-out;
-  color: white;
+  color: var(--text-color-white);
   cursor: pointer;
   padding: 0.25vw 1vw;
   margin: 1.5vw 0;
   font-size: 1.3vw;
   border-radius: 5px;
   outline: none;
-  border: 2px solid #1da1f2;
+  border: 2px solid var(--bg-color-primary-light);
   margin-right: 8.5vw !important;
 }
 
 .btnregistrnews:hover {
-  background-color: #1da1f2;
-  border: 2px solid #224259;
+  background-color: var(--bg-color-primary-light);
+  border: 2px solid var(--border-color-primary);
 }
 
 .btnregistrnews:disabled {
-  background-color: #2242597d;
+  background-color: var(--bg-color-primary);
 }
 
 .btnregistrnews:active {
-  box-shadow: 0 0 0 5px #224259;
+  box-shadow: 0 0 0 5px var(--box-shadow-color-primary);
   transition: 0.3s;
 }
 
@@ -234,7 +237,7 @@
 }
 
 .errormsgs {
-  color: red !important;
+  color: var(--text-color-red) !important;
   font-weight: 900;
   margin-bottom: 1vw;
 }

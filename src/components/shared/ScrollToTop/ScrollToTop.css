@@ -5,16 +5,16 @@
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 100%;
-  background-color: #224259;
-  border: 0.2vh solid white;
-  color: #fff;
+  background-color: var(--bg-color-primary);
+  border: 0.2vh solid var(--border-color-white);
+  color: var(--text-color-white);
   z-index: 10;
   cursor: pointer;
   transition: all 0.15s ease-out;
 }
 
 .scroll-to-top:hover {
-  background-color: #1da1f2;
+  background-color: var(--bg-color-primary-light);
 }
 
 .scroll-to-top .icon {
