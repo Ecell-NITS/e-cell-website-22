@@ -194,7 +194,7 @@ const TechRecruit = () => {
               In case of any issue while filling the form please contact{" "}
               <a
                 style={{ color: "black" }}
-                href="https://api.whatsapp.com/send/?phone=%2B916295265705&text&type=phone_number&app_absent=0"
+                href="https://api.whatsapp.com/send/?phone=%2B917896291109&text&type=phone_number&app_absent=0"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -248,7 +248,7 @@ const TechRecruit = () => {
                 type="text"
                 name="email"
                 id="email"
-                placeholder="johnd_ug_23@mech.nits.ac.in"
+                placeholder="johnd_ug_24@mech.nits.ac.in"
                 onChange={(e) => setEmail(e.target.value)}
                 required
               />
@@ -269,7 +269,7 @@ const TechRecruit = () => {
               type="text"
               name="scholarId"
               id="scholarId"
-              placeholder="2311001"
+              placeholder="2411001"
               onChange={(e) => setScholarId(e.target.value)}
               required
             />
