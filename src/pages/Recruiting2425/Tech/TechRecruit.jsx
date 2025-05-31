@@ -74,9 +74,9 @@ const TechRecruit = () => {
       toast.error("Invalid OTP");
       return;
     }
-    if (scholarId.startsWith("23") === false || email.includes("_ug_23") === false) {
+    if (scholarId.startsWith("24") === false || email.includes("_ug_24") === false) {
       toast.error(
-        "This form is only for 2023-27 batch students. Please check the eligibility criteria."
+        "This form is only for 2024-28 batch students. Please check the eligibility criteria."
       );
       return;
     }
@@ -124,9 +124,9 @@ const TechRecruit = () => {
       toast.error("Invalid email id");
       return;
     }
-    if (email.includes("_ug_23") === false) {
+    if (email.includes("_ug_24") === false) {
       toast.error(
-        "This form is only for 2024-27 batch students. Please check the eligibility criteria."
+        "This form is only for 2024-28 batch students. Please check the eligibility criteria."
       );
       return;
     }
@@ -157,7 +157,7 @@ const TechRecruit = () => {
         <h1 className="titlerecuit">Recruitment</h1>
         <h1 className="titlerecuit-for">for Tech Team</h1>
         <h1 className="titlerecuit-tenure">
-          2024-25 <span className="tenure-recuit">Tenure</span>
+          2025-26 <span className="tenure-recuit">Tenure</span>
         </h1>
       </div>
 
@@ -167,7 +167,7 @@ const TechRecruit = () => {
             Are you passionate about the entrepreneurial world and are looking for a
             platform to learn as well as showcase your knowledge? Look no further. The
             Entrepreneurship Cell (E-Cell) of NIT Silchar is thrilled to announce
-            recruitment of talented individuals for the academic year 2024-2025.
+            recruitment of talented individuals for the academic year 2025-2026.
           </p>
           <p>
             At E-Cell, we believe in empowering aspiring individuals to become exceptional
