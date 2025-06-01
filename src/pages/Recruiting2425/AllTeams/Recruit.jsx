@@ -56,6 +56,10 @@ const Recruit = () => {
       name: "Collaboration",
       id: 11,
     },
+    {
+      name: "Videography",
+      id: 12,
+    },
   ];
   useEffect(() => {
     document.title = "Join Us | E-Cell NIT Silchar";
@@ -175,6 +179,10 @@ const Recruit = () => {
     e.preventDefault();
     if (email === "" || !email.includes("@") || !email.includes("nits.ac.in")) {
       toast.error("Invalid email id");
+      return;
+    }
+    if (number === "" || number.length !== 10) {
+      toast.error("Invalid phone number");
       return;
     }
     if (email.includes("_ug_23") === false) {

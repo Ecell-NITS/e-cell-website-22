@@ -124,6 +124,10 @@ const TechRecruit = () => {
       toast.error("Invalid email id");
       return;
     }
+    if (number === "" || number.length !== 10) {
+      toast.error("Invalid phone number");
+      return;
+    }
     if (email.includes("_ug_23") === false) {
       toast.error(
         "This form is only for 2024-27 batch students. Please check the eligibility criteria."
