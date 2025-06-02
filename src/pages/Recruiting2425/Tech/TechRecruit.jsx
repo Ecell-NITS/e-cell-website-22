@@ -97,7 +97,9 @@ const TechRecruit = () => {
       axios
         .post(`${import.meta.env.VITE_REACT_APP_TECH_RECRUIT_API}/apply`, data)
         .then((response) => {
-          toast.success("Form submitted successfully in team:", response.data.domain);
+          toast.success(
+            `Form submitted successfully for ${domain} team. Please check your email.`
+          );
         })
         .catch((error) => {
           console.error("Failed to submit form", error);
@@ -140,7 +142,7 @@ const TechRecruit = () => {
         email,
       })
       .then((response) => {
-        toast.success("OTP sent successfully");
+        toast.success(`OTP sent successfully to ${email}.`);
       })
       .catch((error) => {
         console.error("Failed to send OTP", error);
