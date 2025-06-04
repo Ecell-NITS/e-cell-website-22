@@ -1,0 +1,299 @@
+[
+  {
+    "id": 1,
+    "name": "Dev Mehrotra ",
+    "rank": "President ",
+    "image": "https://res.cloudinary.com/ecell/image/upload/f_auto,q_auto/v1/Team/AY%2024-25/Dev",
+    "fb": "https://m.facebook.com/profile.php?id=100088178675309&name=xhp_nt__fb__action__open_user",
+    "linkdln": "https://www.linkedin.com/in/dev-mehrotra-3026601b/",
+    "insta": "https://www.instagram.com/_dev_.mehrotra/"
+  },
+  {
+    "id": 2,
+    "name": "Dev Jaiswal",
+    "rank": "General Secretary",
+    "image": "https://res.cloudinary.com/dtt4ftdrw/image/upload/v1748942799/IMG_20250213_230428_-_Dev_da_oyc3nk.jpg",
+    "fb": "https://www.facebook.com/share/16he2U5dgz/?mibextid=qi2Omg",
+    "linkdln": "https://www.linkedin.com/in/dev-jaiswal-144922253?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "insta": "https://www.instagram.com/jaiswal_dev_da20k3?igsh=MWY2cXVoNjZvbHl1dA=="
+  },
+  {
+    "id": 3,
+    "name": "Piyush Agarwal ",
+    "rank": "General Secretary",
+    "image": "https://res.cloudinary.com/dtt4ftdrw/image/upload/v1748942809/DSC_0138_1_-_PIYUSH_AGARWAL_bc7dpk.jpg",
+    "fb": "https://www.facebook.com/share/18pHVEJtcp/",
+    "linkdln": "https://www.linkedin.com/in/agpiyush84?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "insta": "https://www.instagram.com/___piyush_agarwal__?igsh=OXF6MmdwYzVoMHk4"
+  },
+  {
+    "id": 4,
+    "name": "Shreya Agarwal ",
+    "rank": "Vice President ",
+    "image": "https://res.cloudinary.com/dtt4ftdrw/image/upload/v1748863305/IMG_5565_-_Shreya_Agarwala_fgqdip.jpg",
+    "fb": "https://www.facebook.com/share/1CKwvcJA9C/?mibextid=wwXIfr",
+    "linkdln": "https://www.linkedin.com/in/shreya-agl?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+    "insta": "https://www.instagram.com/shreya_agl05?igsh=M3QyZDhmZzhoN2w3&utm_source=qr"
+  },
+  {
+    "id": 5,
+    "name": "Mimansa Jain",
+    "rank": "Executive Head",
+    "image": "https://res.cloudinary.com/dtt4ftdrw/image/upload/v1748865274/IMG_3013_1_ufpizp.jpg",
+    "fb": "https://www.facebook.com/share/1AW552Udy8/?mibextid=wwXIfr",
+    "linkdln": "https://www.linkedin.com/in/mimansa-jain-56349728a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+    "insta": "https://www.instagram.com/_mimansa.13?igsh=MWEzdmpsdnJvNjE1aA%3D%3D&utm_source=qr"
+  },
+  {
+    "id": 6,
+    "name": "Ujjwal Saxena",
+    "rank": "Executive Head",
+    "image": "https://res.cloudinary.com/dtt4ftdrw/image/upload/v1748861605/WhatsApp_Image_2025-06-01_at_12.07.48_AM_-_Ujjwal_Saxena_jy7uju.jpg",
+    "fb": "https://www.facebook.com/profile.php?id=61551080062709",
+    "linkdln": "https://www.linkedin.com/in/ujjwal-saxena-2a19922b4/",
+    "insta": "https://www.instagram.com/ujjwal20043/"
+  },
+  {
+    "id": 7,
+    "name": "Krishna Harlalka",
+    "rank": "Marketing Head",
+    "image": "https://res.cloudinary.com/dtt4ftdrw/image/upload/v1748863432/IMG_20250419_191205_-_krishna_qn2re6.jpg",
+    "fb": "https://www.facebook.com/share/1XtsXVjWZt/",
+    "linkdln": "https://www.linkedin.com/in/krishna-harlalka-532297230?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "insta": "https://www.instagram.com/k.harlalka?utm_source=qr&igsh=cXVjcTBkbXE5Zzlw"
+  },
+  {
+    "id": 8,
+    "name": "Ronak Choudhary ",
+    "rank": "Marketing Head",
+    "image": "https://res.cloudinary.com/dtt4ftdrw/image/upload/v1748863492/682da0b618c37fcbf9417541_-_Ronak_Choudhary_wiyw4g.jpg",
+    "fb": "https://www.facebook.com/share/19kZkZHchy/",
+    "linkdln": "https://www.linkedin.com/in/ronak-choudhary-9a8009285?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "insta": "https://www.instagram.com/ronak_choudhary07?igsh=Nm1hc25xM3YyaHgx"
+  },
+  {
+    "id": 9,
+    "name": "Dhruv Mantri",
+    "rank": "Design Head",
+    "image": "https://res.cloudinary.com/dtt4ftdrw/image/upload/v1748863478/DhruvMantri_-_Dhruv_Mantri_xokkss.jpg",
+    "fb": "https://www.facebook.com/profile.php?id=61550045764555",
+    "linkdln": "https://www.linkedin.com/in/dhruv-mantri-952965266/",
+    "insta": "https://www.instagram.com/_dhruv.mantri_/"
+  },
+  {
+    "id": 11,
+    "name": "Muskan Bharti",
+    "rank": "Technical Head",
+    "image": "https://res.cloudinary.com/dtt4ftdrw/image/upload/v1739606439/MuskanPhoto_gg4jwc.jpg",
+    "fb": "https://www.facebook.com/share/1DjR7TgPxb/",
+    "linkdln": "https://www.linkedin.com/in/muskan-bharti-a7440b28b",
+    "insta": "https://www.instagram.com/mus__kan_17/"
+  },
+  {
+    "id": 12,
+    "name": "Bishal Das",
+    "rank": "Technical Head",
+    "image": "https://res.cloudinary.com/dtt4ftdrw/image/upload/v1739606459/bishalPhoto_dy5vgq.jpg",
+    "fb": "https://www.facebook.com/share/1Ai4aUYGHQ/",
+    "linkdln": "https://www.linkedin.com/in/bishalnits27",
+    "insta": "https://www.instagram.com/bishalmusic_ac"
+  },
+  {
+    "id": 13,
+    "name": "Ayush Singh",
+    "rank": "Technical Head",
+    "image": "https://res.cloudinary.com/dtt4ftdrw/image/upload/v1748862713/IMG_20250514_003132_819_-_AYUSH_SINGH_pcjz7y.webp",
+    "fb": "https://www.facebook.com/share/16Y8vaYaGr/",
+    "linkdln": "https://www.linkedin.com/in/ayush-singh-1b0a8827b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "insta": "https://www.instagram.com/theayushsingh7?igsh=dGtocDJ1dHJ2MzR0"
+  },
+  {
+    "id": 13,
+    "name": "Premansh Chakraborty ",
+    "rank": "Technical Head",
+    "image": "https://res.cloudinary.com/dtt4ftdrw/image/upload/v1748862873/Picsart_25-05-15_15-16-20-407_-_Premansh_Chakraborty_dofgsx.jpg",
+    "fb": "https://www.facebook.com/share/1F97R1Mcwr/",
+    "linkdln": "https://www.linkedin.com/in/premansh-chakraborty-99b100281",
+    "insta": "https://www.instagram.com/_premansh?igsh=bm5raHlycjBhdjhn"
+  },
+  {
+    "id": 14,
+    "name": "Samridhi Srivastava ",
+    "rank": "Content Head",
+    "image": "https://res.cloudinary.com/dtt4ftdrw/image/upload/v1748862832/IMG_20250601_231628_-_SAMRIDHI_SRIVASTAVA_126_wvpli1.jpg",
+    "fb": "https://www.facebook.com/share/1Eubyo9oQp/",
+    "linkdln": "https://www.linkedin.com/in/samridhi-srivastava11?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "insta": "https://www.instagram.com/samm_s01?igsh=MWJrNGEwYjdiYTB0ag=="
+  },
+  {
+    "id": 15,
+    "name": "Khushi Prasad",
+    "rank": "Content Head",
+    "image": "https://res.cloudinary.com/dtt4ftdrw/image/upload/v1748862896/WhatsApp_Image_2025-06-01_at_22.32.40_ea92c95e_-_Khushi_Prasad_motzpt.jpg",
+    "fb": "https://www.facebook.com/share/16LWboi7ka/",
+    "linkdln": "https://www.linkedin.com/in/khushi-prasad-7a7816280?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "insta": "https://www.instagram.com/khu_shii0305?igsh=c2Z0Z3hlM3Y3ZGN3"
+  },
+  {
+    "id": 16,
+    "name": "Himanjana Saikia",
+    "rank": "Curation Head",
+    "image": "https://res.cloudinary.com/dtt4ftdrw/image/upload/v1748862919/InShot_20250601_200613400_-_HIMANJANA_SAIKIA_1_vznlvh.jpg",
+    "fb": "https://www.facebook.com/share/1CbPBNsd6m/",
+    "linkdln": "https://www.linkedin.com/in/himanjana-saikia-600462231?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "insta": "https://www.instagram.com/kinda_himmy?igsh=aWsyNnV5b2VoZzJ2"
+  },
+  {
+    "id": 16,
+    "name": "Jayant Prasad",
+    "rank": "Curation Head",
+    "image": "https://res.cloudinary.com/dtt4ftdrw/image/upload/v1748862698/IMG_20250602_004906_-_JAYANT_PRASAD_omvt35.jpg",
+    "fb": "https://www.facebook.com/share/1EhwB2BjHc/",
+    "linkdln": "https://www.linkedin.com/in/jayant-prasad-a4179b218/",
+    "insta": "https://www.instagram.com/jayantprasadd?igsh=MTlxNmEyZzRteWNwcQ=="
+  },
+  {
+    "id": 17,
+    "name": "Pallavi Prithani ",
+    "rank": "Event Management Head ",
+    "image": "https://res.cloudinary.com/dtt4ftdrw/image/upload/v1748862741/IMG-20250514-WA0019_2_-_Pallavi_Prithani_ydk6iz.jpg",
+    "fb": "https://www.facebook.com/share/18SqJSVyP5/",
+    "linkdln": "https://www.linkedin.com/in/pallavi-prithani-29784028a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "insta": "https://www.instagram.com/pallaviprithani?igsh=enYwMHd4Nzdqb2Rp"
+  },
+  {
+    "id": 18,
+    "name": "Arhan Rahman",
+    "rank": "Event Management Head ",
+    "image": "https://res.cloudinary.com/dtt4ftdrw/image/upload/v1748942846/7d1062be-697c-4aa8-a950-100218bd2d34_-_Arhan_Rahman_wxtzlx.jpg",
+    "fb": "https://www.facebook.com/profile.php?id=61555952810214",
+    "linkdln": "https://www.linkedin.com/in/arhan-rahman-125125288/",
+    "insta": "https://www.instagram.com/arrrrhan/"
+  },
+  {
+    "id": 20,
+    "name": "Vishara Sangule",
+    "rank": "Publicity Head",
+    "image": "https://res.cloudinary.com/dtt4ftdrw/image/upload/v1748862679/IMG_1042_-_Vishara_Sangule_jgfieo.jpg",
+    "fb": "https://www.facebook.com/share/16JwBWQgwN/?mibextid=wwXIfr",
+    "linkdln": "https://www.linkedin.com/in/vishara-sangule?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+    "insta": "https://www.instagram.com/_vishara__?igsh=ZHNwcmxoY3cwZ21x&utm_source=qr"
+  },
+  {
+    "id": 21,
+    "name": "Kartika Jauhari ",
+    "rank": "Publicity Head",
+    "image": "https://res.cloudinary.com/dtt4ftdrw/image/upload/v1748942772/IMG-20250603-WA0007_-_Kartika_Jauhari_mfh1yy.jpg",
+    "fb": "https://www.facebook.com/share/1AiNgS4ctS/",
+    "linkdln": "https://www.linkedin.com/in/kartika-jauhari?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "insta": "https://www.instagram.com/kartika_jauhari?igsh=eDNieHU3azRjMmti"
+  },
+  {
+    "id": 21,
+    "name": " Hrishikesh Talukdar",
+    "rank": "Videography Head",
+    "image": "https://res.cloudinary.com/dtt4ftdrw/image/upload/v1748863331/Picsart_25-06-01_20-36-18-794_-_EIE_090_Hrishikesh_Talukdar_1_hhtfdw.jpg",
+    "fb": "https://www.facebook.com/share/1JAgHrUREi/",
+    "linkdln": "https://www.linkedin.com/in/hrishikesh-talukdar-482a02289",
+    "insta": "https://www.instagram.com/hrishikesh_talukdar_1?igsh=bTFsMDcyb3kxcWV0"
+  },
+  {
+    "id": 21,
+    "name": "Gaurav",
+    "rank": "Videography Head",
+    "image": "https://res.cloudinary.com/dtt4ftdrw/image/upload/v1748942779/IMG_4796_-_Gaurav_kzducj.jpg",
+    "fb": "",
+    "linkdln": "https://www.linkedin.com/in/gaurav-kumar-85330428b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+    "insta": ""
+  },
+  {
+    "id": 22,
+    "name": " Aditya Sharma",
+    "rank": "Collaboration and Outreach head",
+    "image": "https://res.cloudinary.com/dtt4ftdrw/image/upload/v1748862843/e_cell_-_ADITYA_SHARMA_kfkdtk.jpg",
+    "linkdln": "https://www.linkedin.com/in/aditya-sharma-1a96912a6?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "facebook": "https://www.facebook.com/share/1AXictZncZ/",
+    "insta": "https://www.instagram.com/itsadi_2006?igsh=eG9zdHMyY2Z2dTM1"
+  },
+  {
+    "id": 23,
+    "name": "Anish Kumar",
+    "rank": "Collaboration and Outreach head",
+    "image": "https://res.cloudinary.com/dtt4ftdrw/image/upload/v1748863358/InShot_20250601_194917108_-_Anish_Kumar_y196vv.jpg",
+    "fb": "https://www.facebook.com/share/1KzYtKhtUm/",
+    "linkdln": "https://www.linkedin.com/in/anish-shrivastava-819866315?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "insta": "https://www.instagram.com/anish_shrxivastav?igsh=NzcxMnU2c3FkeXhm"
+  },
+  {
+    "id": 24,
+    "name": "Bijoyeeta Roy",
+    "rank": "Senior Associate",
+    "image": "https://res.cloudinary.com/dtt4ftdrw/image/upload/v1748864761/20250531_233013_-_EIE_030_Bijoyeeta_Roy_olpnke.jpg",
+    "fb": "https://www.facebook.com/share/19NNWUM9fG/?mibextid=qi2Omg",
+    "linkdln": "https://www.linkedin.com/in/bijoyeetaroy",
+    "insta": "https://www.instagram.com/brishty.x/"
+  },
+  {
+    "id": 25,
+    "name": "Gulista khatun",
+    "rank": "Senior Technical Associate",
+    "image": "https://res.cloudinary.com/dtt4ftdrw/image/upload/v1748943466/WhatsApp_Image_2025-06-03_at_15.06.36_23cc0a1d_zlhdtr.jpg",
+    "fb": "https://www.facebook.com/profile.php?id=61555806877486&mibextid=ZbWKwL",
+    "linkdln": "https://www.linkedin.com/in/gulista-khatun-9414b6314/",
+    "insta": "https://www.instagram.com/gulistakhatun_?igsh=MXZwNXBkYmx6Nms5cQ=="
+  },
+  {
+    "id": 26,
+    "name": "Soumya Ranjan Dash",
+    "rank": "Senior Marketing Associate",
+    "image": "https://res.cloudinary.com/dtt4ftdrw/image/upload/v1748862667/IMG-20250510-WA0179_-_SOUMYA_RANJAN_DASH_billqs.jpg",
+    "fb": "https://www.facebook.com/profile.php?id=100070926063622",
+    "linkdln": "https://www.linkedin.com/in/soumya-ranjan-dash-12445320b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "insta": "https://www.instagram.com/_.soumyad_._?igsh=MTk2Y2lqOHN1cmxtcg=="
+  },
+  {
+    "id": 27,
+    "name": "Divyanshi Singh ",
+    "rank": "Senior Design Associate",
+    "image": "https://res.cloudinary.com/dtt4ftdrw/image/upload/v1748863318/IMG-20250601-WA0010_-_Divyanshi_Singh_tcrbok.jpg",
+    "fb": "https://www.facebook.com/share/1ASyr2R4GR/",
+    "linkdln": "https://www.linkedin.com/in/divyanshi-singh-682128290?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "insta": "https://www.instagram.com/diivyanshiiii?igsh=MWxpa2l6eDBnMGVsdw=="
+  },
+  {
+    "id": 28,
+    "name": "Koustubh Mishra ",
+    "rank": "Senior Publicity Associate",
+    "image": "https://res.cloudinary.com/dtt4ftdrw/image/upload/v1748945619/Photo_from_KoustubhMishra_2314094_-_KOUSTUBH_MISHRA_1_fau1g2.jpg",
+    "fb": "https://www.facebook.com/profile.php?id=61550954022733&mibextid=ZbWKwL",
+    "linkdln": "https://www.linkedin.com/in/koustubh-mishra-37147728a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "insta": "https://www.instagram.com/mishra.koustubh?igsh=czAwZnloYXdwejdj"
+  },
+  {
+    "id": 29,
+    "name": "AMAN KUMAR JHA",
+    "rank": "General Associate",
+    "image": "https://res.cloudinary.com/dtt4ftdrw/image/upload/v1748862858/IMG_20240216_160821_-_AMAN_y6jmsj.jpg",
+    "fb": "https://www.facebook.com/share/15NDobh7zX/",
+    "linkdln": "https://www.linkedin.com/in/amanxsays?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "insta": "https://www.instagram.com/amanxsays/"
+  },
+  {
+    "id": 30,
+    "name": "Paarisha Agarwal ",
+    "rank": "General Associate",
+    "image": "https://res.cloudinary.com/dtt4ftdrw/image/upload/v1748862660/IMG-20240826-WA0093_-_Paarisha_Agarwal_gccecc.jpg",
+    "fb": "https://www.facebook.com/share/1AxYQfLcCk/",
+    "linkdln": "https://www.linkedin.com/in/paarisha-agarwal-956845279?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "insta": "https://www.instagram.com/paarishaaaa?igsh=MXZ2MzdheHRlcWRpeA=="
+  },
+  {
+    "id": 31,
+    "name": "Ruchi Singh",
+    "rank": "General Associate",
+    "image": "https://res.cloudinary.com/dtt4ftdrw/image/upload/v1748942785/1720797562953_-_RUCHI_SINGH_1_kl7dbt.jpg",
+    "fb": "https://www.facebook.com/ruchi.singh.864201?mibextid=kFxxJD",
+    "linkdln": "https://www.linkedin.com/in/ruchi-singh-956106291/",
+    "insta": "https://www.instagram.com/ruchi12007?igsh=ZHFkdHhkMGE5M3Js"
+  }
+]

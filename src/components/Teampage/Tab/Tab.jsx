@@ -10,11 +10,12 @@ import CoreTeam1 from "../CoreTeam/Coreteam1";
 import CoreTeam2 from "../CoreTeam/Coreteam2";
 import CoreTeam3 from "../CoreTeam/Coreteam3";
 import CoreTeam4 from "../CoreTeam/Coreteam4";
+import CoreTeam5 from "../CoreTeam/Coreteam5";
 import Developers from "../Developers/Developers";
 
 const Tab = () => {
   const [lebel, setlebel] = useState("faculties");
-  const [active, setActive] = useState("2024-2025");
+  const [active, setActive] = useState("2025-2026");
 
   const handleClick = (e) => {
     // console.log(e);
@@ -44,6 +45,7 @@ const Tab = () => {
         >
           CORE TEAM
           <DropdownButton id="dropdown-custom-1" title={active} onSelect={handleClick}>
+            <Dropdown.Item eventKey="2025-2026">2025-2026</Dropdown.Item>
             <Dropdown.Item eventKey="2024-2025">2024-2025</Dropdown.Item>
             <Dropdown.Item eventKey="2023-2024">2023-2024</Dropdown.Item>
             <Dropdown.Item eventKey="2022-2023">2022-2023</Dropdown.Item>
@@ -62,6 +64,7 @@ const Tab = () => {
       <div className="tab_content">
         {lebel === "faculties" && <Faculties />}
         {lebel === "alumni" && <Alumni />}
+        {lebel === "core" && active === "2025-2026" && <CoreTeam5 />}
         {lebel === "core" && active === "2024-2025" && <CoreTeam4 />}
         {lebel === "core" && active === "2023-2024" && <CoreTeam3 />}
         {lebel === "core" && active === "2022-2023" && <CoreTeam1 />}

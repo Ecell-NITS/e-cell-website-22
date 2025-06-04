@@ -56,6 +56,10 @@ const Recruit = () => {
       name: "Collaboration",
       id: 11,
     },
+    {
+      name: "Videography",
+      id: 12,
+    },
   ];
   useEffect(() => {
     document.title = "Join Us | E-Cell NIT Silchar";
