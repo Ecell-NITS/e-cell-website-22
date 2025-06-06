@@ -499,8 +499,134 @@
     "year": "2024-2025",
     "event": "Empressario",
     "imgsrc": "https://res.cloudinary.com/diu8ohkcn/image/upload/WhatsApp_Image_2025-06-05_at_23.38.54_1_l9ki4k"
+  },
+  {
+    "id": 85,
+    "year": "2024-2025",
+    "event": "Eminence",
+    "imgsrc": "https://res.cloudinary.com/dtt4ftdrw/image/upload/v1749193841/Copy_of__DSC0113-1_aubufm.jpg"
+  },
+  {
+    "id": 86,
+    "year": "2024-2025",
+    "event": "Eminence",
+    "imgsrc": "https://res.cloudinary.com/dtt4ftdrw/image/upload/v1749193881/Copy_of__DSC0068-1_s0pwm9.jpg"
+  },
+  {
+    "id": 87,
+    "year": "2024-2025",
+    "event": "Eminence",
+    "imgsrc": "https://res.cloudinary.com/dtt4ftdrw/image/upload/v1749193825/Copy_of__DSC0061_qbxoza.jpg"
+  },
+  {
+    "id": 88,
+    "year": "2024-2025",
+    "event": "Eminence",
+    "imgsrc": "https://res.cloudinary.com/dtt4ftdrw/image/upload/v1749193715/Copy_of__DSC0262_hx2ohi.jpg"
+  },
+  {
+    "id": 89,
+    "year": "2024-2025",
+    "event": "Eminence",
+    "imgsrc": "https://res.cloudinary.com/dtt4ftdrw/image/upload/v1749193706/Copy_of__DSC0301_wb9wtl.jpg"
+  },
+  {
+    "id": 90,
+    "year": "2024-2025",
+    "event": "Eminence",
+    "imgsrc": "https://res.cloudinary.com/dtt4ftdrw/image/upload/v1749193940/Copy_of__DSC0078_ovmtcl.jpg"
+  },
+  {
+    "id": 91,
+    "year": "2024-2025",
+    "event": "Eminence",
+    "imgsrc": "https://res.cloudinary.com/dtt4ftdrw/image/upload/v1749194282/Copy_of__DSC0058-1_oheraa.jpg"
+  },
+  {
+    "id": 92,
+    "year": "2024-2025",
+    "event": "Eminence",
+    "imgsrc": "https://res.cloudinary.com/dtt4ftdrw/image/upload/v1749194141/Copy_of__DSC0070_dym8xw.jpg"
+  },
+  {
+    "id": 93,
+    "year": "2024-2025",
+    "event": "Eminence",
+    "imgsrc": "https://res.cloudinary.com/dtt4ftdrw/image/upload/v1749195205/Copy_of__DSC0289_mz6uug.jpg"
+  },
+  {
+    "id": 94,
+    "year": "2024-2025",
+    "event": "Speaker Sessions",
+    "imgsrc": "https://res.cloudinary.com/dtt4ftdrw/image/upload/v1749196305/WhatsApp_Image_2025-06-03_at_7.19.14_PM_2_1_gssigj.jpg"
+  },
+  {
+    "id": 95,
+    "year": "2024-2025",
+    "event": "Speaker Sessions",
+    "imgsrc": "https://res.cloudinary.com/dtt4ftdrw/image/upload/v1749196321/WhatsApp_Image_2025-06-03_at_7.19.14_PM_xu6unz.jpg"
+  },
+  {
+    "id": 96,
+    "year": "2024-2025",
+    "event": "Speaker Sessions",
+    "imgsrc": "https://res.cloudinary.com/dtt4ftdrw/image/upload/v1749196329/WhatsApp_Image_2025-06-03_at_7.19.14_PM_1_dixj4f.jpg"
+  },
+  {
+    "id": 97,
+    "year": "2024-2025",
+    "event": "Speaker Sessions",
+    "imgsrc": "https://res.cloudinary.com/dtt4ftdrw/image/upload/v1749196340/WhatsApp_Image_2025-06-03_at_7.19.13_PM_dzlwib.jpg"
+  },
+  {
+    "id": 98,
+    "year": "2024-2025",
+    "event": "Speaker Sessions",
+    "imgsrc": "https://res.cloudinary.com/dtt4ftdrw/image/upload/v1749196366/WhatsApp_Image_2025-06-03_at_7.18.46_PM_te1x7x.jpg"
+  },
+  {
+    "id": 99,
+    "year": "2024-2025",
+    "event": "Speaker Sessions",
+    "imgsrc": "https://res.cloudinary.com/dtt4ftdrw/image/upload/v1749196354/WhatsApp_Image_2025-06-03_at_7.19.12_PM_1_e9qque.jpg"
+  },
+  {
+    "id": 100,
+    "year": "2024-2025",
+    "event": "Diwali",
+    "imgsrc": "https://res.cloudinary.com/dtt4ftdrw/image/upload/v1749196713/WhatsApp_Image_2025-06-03_at_7.23.29_PM_au49le.jpg"
+  },
+  {
+    "id": 101,
+    "year": "2024-2025",
+    "event": "Diwali",
+    "imgsrc": "https://res.cloudinary.com/dtt4ftdrw/image/upload/v1749196702/WhatsApp_Image_2025-06-03_at_7.23.30_PM_1_xusjqa.jpg"
+  },
+  {
+    "id": 102,
+    "year": "2024-2025",
+    "event": "Diwali",
+    "imgsrc": "https://res.cloudinary.com/dtt4ftdrw/image/upload/v1749196690/WhatsApp_Image_2025-06-03_at_7.23.30_PM_qpvwee.jpg"
+  },
+  {
+    "id": 103,
+    "year": "2024-2025",
+    "event": "Diwali",
+    "imgsrc": "https://res.cloudinary.com/dtt4ftdrw/image/upload/c_crop,ar_4:3/v1749196678/WhatsApp_Image_2025-06-03_at_7.23.31_PM_1_rdrfkc.jpg"
+  },
+  {
+    "id": 104,
+    "year": "2024-2025",
+    "event": "Diwali",
+    "imgsrc": "https://res.cloudinary.com/dtt4ftdrw/image/upload/v1749196668/WhatsApp_Image_2025-06-03_at_7.23.31_PM_fdkwut.jpg"
+  },
+  {
+    "id": 105,
+    "year": "2024-2025",
+    "event": "Diwali",
+    "imgsrc": "https://res.cloudinary.com/dtt4ftdrw/image/upload/c_crop,ar_1:1/v1749196660/WhatsApp_Image_2025-06-03_at_7.25.24_PM_o0dpse.jpg"
   }
-    
+
 ]
   
 
