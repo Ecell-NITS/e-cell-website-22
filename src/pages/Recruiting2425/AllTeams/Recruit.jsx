@@ -122,9 +122,9 @@ const Recruit = () => {
       toast.error("Invalid OTP");
       return;
     }
-    if (scholarId.startsWith("23") === false || email.includes("_ug_23") === false) {
+    if (scholarId.startsWith("24") === false || email.includes("_ug_24") === false) {
       toast.error(
-        "This form is only for 2023-27 batch students. Please check the eligibility criteria."
+        "This form is only for 2024-28 batch students. Please check the eligibility criteria."
       );
       return;
     }
@@ -181,9 +181,9 @@ const Recruit = () => {
       toast.error("Invalid email id");
       return;
     }
-    if (email.includes("_ug_23") === false) {
+    if (email.includes("_ug_24") === false) {
       toast.error(
-        "This form is only for 2023-27 batch students. Please check the eligibility criteria."
+        "This form is only for 2024-28 batch students. Please check the eligibility criteria."
       );
       return;
     }
@@ -214,7 +214,7 @@ const Recruit = () => {
         <h1 className="titlerecuit">Recruitment</h1>
         <h1 className="titlerecuit-for">for</h1>
         <h1 className="titlerecuit-tenure">
-          2024-25 <span className="tenure-recuit">Tenure</span>
+          2025-26 <span className="tenure-recuit">Tenure</span>
         </h1>
       </div>
 
@@ -224,7 +224,7 @@ const Recruit = () => {
             Are you passionate about the entrepreneurial world and are looking for a
             platform to learn as well as showcase your knowledge? Look no further. The
             Entrepreneurship Cell (E-Cell) of NIT Silchar is thrilled to announce
-            recruitment of talented individuals for the academic year 2024-2025.
+            recruitment of talented individuals for the academic year 2025-2026.
           </p>
           <p>
             At E-Cell, we believe in empowering aspiring individuals to become exceptional
@@ -251,7 +251,7 @@ const Recruit = () => {
               In case of any issue while filling the form please contact{" "}
               <a
                 style={{ color: "black" }}
-                href="https://api.whatsapp.com/send/?phone=%2B916295265705&text&type=phone_number&app_absent=0"
+                href="https://api.whatsapp.com/send/?phone=%2B917896291109&text&type=phone_number&app_absent=0"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -294,7 +294,7 @@ const Recruit = () => {
                 type="text"
                 name="email"
                 id="email"
-                placeholder="johnd_ug_23@mech.nits.ac.in"
+                placeholder="johnd_ug_24@mech.nits.ac.in"
                 onChange={(e) => setEmail(e.target.value)}
                 required
               />
@@ -315,7 +315,7 @@ const Recruit = () => {
               type="text"
               name="scholarId"
               id="scholarId"
-              placeholder="2311001"
+              placeholder="2411001"
               onChange={(e) => setScholarId(e.target.value)}
               required
             />
