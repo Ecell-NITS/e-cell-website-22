@@ -14,6 +14,7 @@
   }
   ul {
     li {
+      color: var(--light-text-color);
       font-size: 1.5rem;
       font-weight: 400;
     }
@@ -36,7 +37,11 @@
       margin-inline: auto;
       justify-content: center;
       align-items: center;
+      textarea{
+        color: var(--light-text-color);
+      }
       label {
+        color: var(--light-text-color);
         font-size: 1.5rem;
         font-weight: 500;
         margin-bottom: 10px;
