@@ -43,6 +43,10 @@ const Applications = () => {
       name: "Collaboration",
       id: 11,
     },
+    {
+      name: "Videography",
+      id: 12,
+    },
   ];
 
   const handleTeam = (team) => {

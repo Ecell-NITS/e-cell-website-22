@@ -150,10 +150,7 @@ const Recruit = () => {
       axios
         .post(`${import.meta.env.VITE_REACT_APP_RECRUIT_API}/apply`, data)
         .then((response) => {
-          toast.success(
-            "Form submitted successfully in teams:",
-            response.data.teams.map((team) => team.name)
-          );
+          toast.success("Form submitted successfully. Please check your email.");
           e.target.reset();
         })
         .catch((error) => {
@@ -181,7 +178,11 @@ const Recruit = () => {
       toast.error("Invalid email id");
       return;
     }
-    if (email.includes("_ug_24") === false) {
+    if (number === "" || number.length !== 10) {
+      toast.error("Invalid phone number");
+      return;
+    }
+    if (email.includes("_ug_23") === false) {
       toast.error(
         "This form is only for 2024-28 batch students. Please check the eligibility criteria."
       );
@@ -193,7 +194,7 @@ const Recruit = () => {
         email,
       })
       .then((response) => {
-        toast.success("OTP sent successfully");
+        toast.success(`OTP sent successfully to ${email}`);
       })
       .catch((error) => {
         console.error("Failed to send OTP", error);

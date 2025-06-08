@@ -22,7 +22,7 @@ const ApplicantsContextProvider = ({ children }) => {
     const fetchTechRecruitData = async () => {
       try {
         axios
-          .get(`${import.meta.env.VITE_REACT_APP_RECRUIT_API}/submit`, config)
+          .get(`${import.meta.env.VITE_REACT_APP_TECH_RECRUIT_API}/applications`, config)
           .then((response) => {
             setTechData(response.data);
             setTechDataLoading(false);
