@@ -12,7 +12,7 @@ const Recruit = () => {
     "Check your Institute email inbox or SPAM folder for the otp.",
     "You can only fill this form once so please be attentive while filling the form.",
     "Keep checking your inbox for further instructions.",
-    "Last date to fill the form is June 30th 2024 11:59pm.",
+    "Last date to fill the form is June 23rd 2025 11:59pm.",
   ];
 
   const [name, setName] = useState("");
@@ -122,7 +122,7 @@ const Recruit = () => {
       toast.error("Invalid OTP");
       return;
     }
-    if (scholarId.startsWith("24") === false || email.includes("_ug_24") === false) {
+    if (scholarId.startsWith("23") === false || email.includes("_ug_23") === false) {
       toast.error(
         "This form is only for 2024-28 batch students. Please check the eligibility criteria."
       );
@@ -178,7 +178,7 @@ const Recruit = () => {
       toast.error("Invalid email id");
       return;
     }
-    if (number === "" || number.length !== 10) {
+    if (number === "" || number.length !== 10 || isNaN(number)) {
       toast.error("Invalid phone number");
       return;
     }
