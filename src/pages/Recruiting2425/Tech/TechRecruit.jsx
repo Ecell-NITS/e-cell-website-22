@@ -185,7 +185,7 @@ const TechRecruit = () => {
           <iframe
             title="E-Cell Recruitment flyer"
             id="embedflyerad"
-            src="https://drive.google.com/file/d/1p1GKN_fGdVnRPSV0t3TSBiBF7yDdt33m/preview"
+            src="https://drive.google.com/file/d/1MjXQOuHA-8aT5KFxvsMnMVROrgevzhk8/preview"
           ></iframe>
           <div className="importantinstructionsrecuit">
             <h2>
