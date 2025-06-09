@@ -16,7 +16,7 @@ const TechRecruit = () => {
     "Check your Institute email inbox or SPAM folder for the otp.",
     "You can only fill this form once so please be attentive while filling the form.",
     "Keep checking your inbox for further instructions.",
-    "Last date to fill the form is June 21st 2024 11:59pm.",
+    "Last date to fill the form is June 20th 2025 11:59pm.",
   ];
 
   const [name, setName] = useState("");
@@ -76,7 +76,7 @@ const TechRecruit = () => {
     }
     if (scholarId.startsWith("23") === false || email.includes("_ug_23") === false) {
       toast.error(
-        "This form is only for 2023-27 batch students. Please check the eligibility criteria."
+        "This form is only for 2024-28 batch students. Please check the eligibility criteria."
       );
       return;
     }
@@ -97,7 +97,9 @@ const TechRecruit = () => {
       axios
         .post(`${import.meta.env.VITE_REACT_APP_TECH_RECRUIT_API}/apply`, data)
         .then((response) => {
-          toast.success("Form submitted successfully in team:", response.data.domain);
+          toast.success(
+            `Form submitted successfully for ${domain} team. Please check your email.`
+          );
         })
         .catch((error) => {
           console.error("Failed to submit form", error);
@@ -124,9 +126,13 @@ const TechRecruit = () => {
       toast.error("Invalid email id");
       return;
     }
+    if (number === "" || number.length !== 10 || isNaN(number)) {
+      toast.error("Invalid phone number");
+      return;
+    }
     if (email.includes("_ug_23") === false) {
       toast.error(
-        "This form is only for 2024-27 batch students. Please check the eligibility criteria."
+        "This form is only for 2024-28 batch students. Please check the eligibility criteria."
       );
       return;
     }
@@ -136,7 +142,7 @@ const TechRecruit = () => {
         email,
       })
       .then((response) => {
-        toast.success("OTP sent successfully");
+        toast.success(`OTP sent successfully to ${email}.`);
       })
       .catch((error) => {
         console.error("Failed to send OTP", error);
@@ -157,7 +163,7 @@ const TechRecruit = () => {
         <h1 className="titlerecuit">Recruitment</h1>
         <h1 className="titlerecuit-for">for Tech Team</h1>
         <h1 className="titlerecuit-tenure">
-          2024-25 <span className="tenure-recuit">Tenure</span>
+          2025-26 <span className="tenure-recuit">Tenure</span>
         </h1>
       </div>
 
@@ -167,7 +173,7 @@ const TechRecruit = () => {
             Are you passionate about the entrepreneurial world and are looking for a
             platform to learn as well as showcase your knowledge? Look no further. The
             Entrepreneurship Cell (E-Cell) of NIT Silchar is thrilled to announce
-            recruitment of talented individuals for the academic year 2024-2025.
+            recruitment of talented individuals for the academic year 2025-2026.
           </p>
           <p>
             At E-Cell, we believe in empowering aspiring individuals to become exceptional
@@ -179,7 +185,7 @@ const TechRecruit = () => {
           <iframe
             title="E-Cell Recruitment flyer"
             id="embedflyerad"
-            src="https://drive.google.com/file/d/1p1GKN_fGdVnRPSV0t3TSBiBF7yDdt33m/preview"
+            src="https://drive.google.com/file/d/1MjXQOuHA-8aT5KFxvsMnMVROrgevzhk8/preview"
           ></iframe>
           <div className="importantinstructionsrecuit">
             <h2>
@@ -194,7 +200,7 @@ const TechRecruit = () => {
               In case of any issue while filling the form please contact{" "}
               <a
                 style={{ color: "black" }}
-                href="https://api.whatsapp.com/send/?phone=%2B916295265705&text&type=phone_number&app_absent=0"
+                href="https://api.whatsapp.com/send/?phone=%2B917896291109&text&type=phone_number&app_absent=0"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -248,7 +254,7 @@ const TechRecruit = () => {
                 type="text"
                 name="email"
                 id="email"
-                placeholder="johnd_ug_23@mech.nits.ac.in"
+                placeholder="johnd_ug_24@mech.nits.ac.in"
                 onChange={(e) => setEmail(e.target.value)}
                 required
               />
@@ -269,7 +275,7 @@ const TechRecruit = () => {
               type="text"
               name="scholarId"
               id="scholarId"
-              placeholder="2311001"
+              placeholder="2411001"
               onChange={(e) => setScholarId(e.target.value)}
               required
             />

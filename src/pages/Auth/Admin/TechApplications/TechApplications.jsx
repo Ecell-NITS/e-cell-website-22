@@ -129,6 +129,7 @@ const TechApplications = () => {
                       </strong>
                     </p>
                   )}
+                  {/* If the application has a live URL or video URL, display them */}
                   {data.liveUrl && (
                     <p>
                       Live website Url:{" "}

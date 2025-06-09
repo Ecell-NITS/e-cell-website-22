@@ -109,7 +109,7 @@
 
   .navbar0 .toggle-icon {
     display: block;
-    color: var(--text-color-grey);
+    color: var(--text-color-white);
     position: absolute;
     top: 1.3rem;
     right: 1.25rem;
