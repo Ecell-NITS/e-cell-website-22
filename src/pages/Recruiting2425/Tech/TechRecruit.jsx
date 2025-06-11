@@ -74,7 +74,7 @@ const TechRecruit = () => {
       toast.error("Invalid OTP");
       return;
     }
-    if (scholarId.startsWith("23") === false || email.includes("_ug_23") === false) {
+    if (scholarId.startsWith("24") === false || email.includes("_ug_24") === false) {
       toast.error(
         "This form is only for 2024-28 batch students. Please check the eligibility criteria."
       );
@@ -130,7 +130,7 @@ const TechRecruit = () => {
       toast.error("Invalid phone number");
       return;
     }
-    if (email.includes("_ug_23") === false) {
+    if (email.includes("_ug_24") === false) {
       toast.error(
         "This form is only for 2024-28 batch students. Please check the eligibility criteria."
       );
@@ -185,7 +185,7 @@ const TechRecruit = () => {
           <iframe
             title="E-Cell Recruitment flyer"
             id="embedflyerad"
-            src="https://drive.google.com/file/d/1MjXQOuHA-8aT5KFxvsMnMVROrgevzhk8/preview"
+            src="https://drive.google.com/file/d/1ERciifCCN9llG9ESL2pMTRCwiDbVg2Cm/preview"
           ></iframe>
           <div className="importantinstructionsrecuit">
             <h2>
@@ -212,7 +212,7 @@ const TechRecruit = () => {
               For Sample resume click{" "}
               <a
                 target="_blank"
-                href="https://drive.google.com/drive/folders/12lzr0QHF7vfdM9nGS3CIJ852boLuDpTr?usp=sharing"
+                href="https://drive.google.com/drive/folders/1PVnBfLccoLBHVsD6VO2DVeelpWGrtuXK?usp=sharing"
                 rel="noreferrer"
               >
                 {" "}

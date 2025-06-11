@@ -11,6 +11,7 @@ const Recruit = () => {
     "Use ONLY your Institute email id.",
     "Check your Institute email inbox or SPAM folder for the otp.",
     "You can only fill this form once so please be attentive while filling the form.",
+    "You can register for multiple teams.",
     "Keep checking your inbox for further instructions.",
     "Last date to fill the form is June 23rd 2025 11:59pm.",
   ];
@@ -122,7 +123,7 @@ const Recruit = () => {
       toast.error("Invalid OTP");
       return;
     }
-    if (scholarId.startsWith("23") === false || email.includes("_ug_23") === false) {
+    if (scholarId.startsWith("24") === false || email.includes("_ug_24") === false) {
       toast.error(
         "This form is only for 2024-28 batch students. Please check the eligibility criteria."
       );
@@ -182,7 +183,7 @@ const Recruit = () => {
       toast.error("Invalid phone number");
       return;
     }
-    if (email.includes("_ug_23") === false) {
+    if (email.includes("_ug_24") === false) {
       toast.error(
         "This form is only for 2024-28 batch students. Please check the eligibility criteria."
       );
@@ -237,7 +238,7 @@ const Recruit = () => {
           <iframe
             title="E-Cell Recruitment flyer"
             id="embedflyerad"
-            src="https://drive.google.com/file/d/14fnCNIcBEgriu1fqzs0jgp8YiMKHa0Ro/preview"
+            src="https://drive.google.com/file/d/1vs84DOt1GxXBzhwQmabd7cP-bTtX57S5/preview"
           ></iframe>
           <div className="importantinstructionsrecuit">
             <h2>
