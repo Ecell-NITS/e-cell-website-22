@@ -10,7 +10,7 @@ import Events from "./pages/Events/Events";
 import Resources from "./pages/Resources/Resources";
 import AllEvents from "./components/EventsPage/AllEvents";
 import Eventsred from "./pages/Events_red/Events_red";
-import Recuitmentdetails from "./pages/Recruiting2425/Recuitmentdetails";
+// import Recuitmentdetails from "./pages/Recruiting2425/Recuitmentdetails";
 import Contactresponse from "./components/Home/Contact/Contactresponse";
 import Newsletter from "./components/shared/Footer/Newsletter";
 import Createblog from "./pages/Resources/Blogs/Createblog";
@@ -23,7 +23,7 @@ import Editprofile from "./pages/Auth/Dashboard/Editprofile";
 import Allblogswritten from "./pages/Auth/Dashboard/Allblogswritten";
 import Allprovblogs from "./pages/Auth/Dashboard/Allprovblogs";
 import Alllikedblogs from "./pages/Auth/Dashboard/Alllikedblogs";
-import Techresults from "./pages/Projectsubmission/Techresults";
+// import Techresults from "./pages/Projectsubmission/Techresults";
 import Editblogform from "./pages/Auth/Dashboard/EditBlog/Editblogform";
 import Publicprofile from "./pages/Auth/Dashboard/Publicprofile";
 import Forgotpwd from "./pages/Auth/Login/Forgotpwd";
@@ -38,11 +38,11 @@ import { useState, useEffect } from "react";
 import ConnectionDropBanner from "./components/ConnectionDropBanner/ConnectionDropBanner";
 import Admin from "./pages/Auth/Admin";
 // import Recruiting from "./pages/Recruiting2425/Recruiting";
-import Techsubmission from "./pages/Projectsubmission/Techsubmission";
+// import Techsubmission from "./pages/Projectsubmission/Techsubmission";
 import UserContextProvider from "./context/UserContextProvider";
 import BlogContextProvider from "./context/BlogContextProvider";
 import TechRecruit from "./pages/Recruiting2425/Tech/TechRecruit";
-import Recruit from "./pages/Recruiting2425/AllTeams/Recruit";
+// import Recruit from "./pages/Recruiting2425/AllTeams/Recruit";
 // import Submission from "./pages/ProjectsSubmit/Submission";
 
 function App() {
@@ -87,7 +87,7 @@ function App() {
                     key="route-gallery-screen"
                   />
                   {/* { <Route exact path="/recruitment" element={<Recuitmentdetails />} /> */}
-                  <Route exact path="/recruiting" element={<Recruit />} />
+                  {/* <Route exact path="/recruiting" element={<Recruit />} /> */}
                   <Route exact path="/recruiting/tech" element={<TechRecruit />} />
                   {/* <Route exact path="/techresults" element={<Techresults />} /> } */}
                   {/* <Route exact path="/techsubmission" element={<Submission />} /> */}
@@ -118,12 +118,12 @@ function App() {
                     key="route-allevents-screen"
                   />
 
-                  <Route
+                  {/* <Route
                     exact
                     path="/recruitusers"
                     element={<Recuitmentdetails />}
                     key="route-recruitment-screen"
-                  />
+                  /> */}
 
                   <Route
                     exact
@@ -204,18 +204,18 @@ function App() {
                     key="route-Alllikedblogs-screen"
                   />
 
-                  <Route
+                  {/* <Route
                     exact
                     path="/techresults"
                     element={<Techresults />}
                     key="route-Techresults-screen"
-                  />
-                  <Route
+                  /> */}
+                  {/* <Route
                     exact
                     path="/tech-submission"
                     element={<Techsubmission />}
                     key="route-Techresults-screen"
-                  />
+                  /> */}
 
                   <Route
                     exact
