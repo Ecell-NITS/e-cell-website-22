@@ -627,7 +627,7 @@
     "imgsrc": "https://res.cloudinary.com/dtt4ftdrw/image/upload/c_crop,ar_1:1/v1749196660/WhatsApp_Image_2025-06-03_at_7.25.24_PM_o0dpse.jpg"
   },
   {
-  "id": 106,
+    "id": 106,
     "year": "2024-2025",
     "event": "EIC",
     "imgsrc": "https://res.cloudinary.com/diu8ohkcn/image/upload/WhatsApp_Image_2025-06-06_at_11.11.28_g93fqn"
@@ -674,8 +674,4 @@
     "event": "EIC",
     "imgsrc": "https://res.cloudinary.com/diu8ohkcn/image/upload/WhatsApp_Image_2025-06-06_at_11.11.24_aclf6e"
   }
-
 ]
-  
-
-
