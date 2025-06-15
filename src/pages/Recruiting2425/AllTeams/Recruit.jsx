@@ -284,7 +284,7 @@ const Recruit = () => {
               type="text"
               name="phone"
               id="phone"
-              placeholder="999999999"
+              placeholder="9999999999"
               onChange={(e) => setNumber(e.target.value)}
               required
             />
