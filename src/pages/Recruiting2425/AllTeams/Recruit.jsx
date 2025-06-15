@@ -13,7 +13,7 @@ const Recruit = () => {
     "You can only fill this form once so please be attentive while filling the form.",
     "You can register for multiple teams.",
     "Keep checking your inbox for further instructions.",
-    "Last date to fill the form is June 23rd 2025 11:59pm.",
+    "Last date to fill the form is June 21st 2025 11:59pm.",
   ];
 
   const [name, setName] = useState("");
