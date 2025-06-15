@@ -284,7 +284,7 @@ const Recruit = () => {
               type="text"
               name="phone"
               id="phone"
-              placeholder="999999999"
+              placeholder="9999999999"
               onChange={(e) => setNumber(e.target.value)}
               required
             />
@@ -340,7 +340,7 @@ const Recruit = () => {
             <label htmlFor="contri">
               Contribution to E-cell:
               <ul>
-                <li>Events,webiners,competitions etc. that you have participated in.</li>
+                <li>Events,webinars,competitions etc. that you have participated in.</li>
                 <li>
                   Even if you don&apos;t have any prior contribution, you can still apply.
                   Your application will be treated the same.
