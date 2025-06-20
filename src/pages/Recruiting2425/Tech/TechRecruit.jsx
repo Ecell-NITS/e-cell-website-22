@@ -16,7 +16,7 @@ const TechRecruit = () => {
     "Check your Institute email inbox or SPAM folder for the otp.",
     "You can only fill this form once so please be attentive while filling the form.",
     "Keep checking your inbox for further instructions.",
-    "Last date to fill the form is June 20th 2025 11:59pm.",
+    "Last date to fill the form is June 23rd 2025 11:59pm.",
   ];
 
   const [name, setName] = useState("");
