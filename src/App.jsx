@@ -41,8 +41,8 @@ import Admin from "./pages/Auth/Admin";
 // import Techsubmission from "./pages/Projectsubmission/Techsubmission";
 import UserContextProvider from "./context/UserContextProvider";
 import BlogContextProvider from "./context/BlogContextProvider";
-import TechRecruit from "./pages/Recruiting2425/Tech/TechRecruit";
-import Recruit from "./pages/Recruiting2425/AllTeams/Recruit";
+// import TechRecruit from "./pages/Recruiting2425/Tech/TechRecruit";
+// import Recruit from "./pages/Recruiting2425/AllTeams/Recruit";
 // import Submission from "./pages/ProjectsSubmit/Submission";
 
 function App() {
@@ -87,8 +87,8 @@ function App() {
                     key="route-gallery-screen"
                   />
                   {/* { <Route exact path="/recruitment" element={<Recuitmentdetails />} /> */}
-                  {<Route exact path="/recruiting" element={<Recruit />} />}
-                  <Route exact path="/recruiting/tech" element={<TechRecruit />} />
+                  {/* {<Route exact path="/recruiting" element={<Recruit />} />} */}
+                  {/* <Route exact path="/recruiting/tech" element={<TechRecruit />} /> */}
                   {/* <Route exact path="/techresults" element={<Techresults />} /> } */}
                   {/* <Route exact path="/techsubmission" element={<Submission />} /> */}
                   <Route exact path="/team" element={<Team />} key="route-team-screen" />
