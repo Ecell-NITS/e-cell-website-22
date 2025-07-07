@@ -74,7 +74,7 @@
         border-radius: 5px;
         width: fit-content;
         background-color: var(--bg-color-primary);
-        color: var(--text-color-grey);
+        color: var(--text-color-white);
         border: none;
         cursor: pointer;
         transition: all 0.3s ease-in-out;
@@ -83,6 +83,12 @@
           color: var(--text-color-white);
           transform: scale(1.1);
         }
+      }
+
+      button:disabled {
+        background-color: var(--bg-color-primary);
+        color: var(--text-color-grey);
+        cursor: not-allowed;
       }
       .email {
         width: 100%;

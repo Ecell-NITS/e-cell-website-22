@@ -125,7 +125,11 @@ const TechRecruit = () => {
         email,
       })
       .then((response) => {
-        toast.success("OTP sent successfully");
+        toast.success(`OTP sent successfully. Click on Check Application to proceed.`);
+        document.getElementById("send-otp-button").disabled = true;
+        setTimeout(() => {
+          document.getElementById("send-otp-button").disabled = false;
+        }, 60000); // Disable button for 60 seconds
       })
       .catch((error) => {
         console.error("Failed to send OTP", error);
@@ -169,6 +173,10 @@ const TechRecruit = () => {
           setScholarId(res.data.scholarId);
           setDomain(res.data.domain);
           setResumeUrl(res.data.resumeUrl);
+          document.getElementById("check-button").disabled = true;
+          setTimeout(() => {
+            document.getElementById("check-button").disabled = false;
+          }, 60000); // Disable button for 60 seconds
         })
         .catch((error) => {
           console.error("Failed to check application", error);
@@ -244,10 +252,10 @@ const TechRecruit = () => {
                 onChange={(e) => setOtp(e.target.value)}
               />
               <div className={styles.btn_container}>
-                <button onClick={sendOtp}>
+                <button id="send-otp-button" onClick={sendOtp}>
                   {sendingOtp ? "Sending OTP..." : "Send OTP"}
                 </button>
-                <button onClick={checkApplication}>
+                <button id="check-button" onClick={checkApplication}>
                   {checking ? "Searching..." : "Check Application"}
                 </button>
               </div>
