@@ -12,7 +12,7 @@ const TechRecruit = () => {
     "Enter the OTP then click on Check Application to fetch your details.",
     "You can only fill this form once so please be attentive while filling the form.",
     "Keep checking your inbox for further instructions.",
-    "Last date to submit the project is July 13th 2024 11:59pm.",
+    "Last date to submit the project is July 13th 2025 11:59pm.",
     "No late submissions will be entertained.",
   ];
 
@@ -45,7 +45,7 @@ const TechRecruit = () => {
       toast.error("Use only your Institute email id");
       return;
     }
-    if (email.includes("_ug_23") === false) {
+    if (email.includes("_ug_24") === false) {
       toast.error(
         "This form is only for 2024-28 batch students. Please check the eligibility criteria."
       );
@@ -114,7 +114,7 @@ const TechRecruit = () => {
       toast.error("Use only your Institute email id");
       return;
     }
-    if (email.includes("_ug_23") === false) {
+    if (email.includes("_ug_24") === false) {
       toast.error(
         "This form is only for 2024-28 batch students. Please check the eligibility criteria."
       );
