@@ -1,7 +1,6 @@
 .techContainer {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   margin-top: 50px;
   margin-bottom: 50px;
@@ -29,6 +28,7 @@
 
   .techForm {
     width: 100%;
+    margin-top: 10px;
     form {
       display: flex;
       flex-direction: column;
@@ -41,7 +41,7 @@
         justify-content: center;
         gap: 20px;
         width: fit-content;
-        margin-top: 20px;
+        margin-bottom: 10px;
       }
       label {
         font-size: 1.5rem;
@@ -90,6 +90,14 @@
         color: var(--text-color-grey);
         cursor: not-allowed;
       }
+
+      .field_description {
+        font-size: 1.2rem;
+        font-style: italic;
+        font-weight: 400;
+        margin-bottom: 20px;
+      }
+
       .email {
         width: 100%;
         display: flex;

@@ -9,6 +9,7 @@ const TechRecruit = () => {
   const instructions = [
     "Use the email id you used during application.",
     "Check your Institute email inbox or SPAM folder for the otp.",
+    "Enter the OTP then click on Check Application to fetch your details.",
     "You can only fill this form once so please be attentive while filling the form.",
     "Keep checking your inbox for further instructions.",
     "Last date to submit the project is July 13th 2024 11:59pm.",
@@ -51,7 +52,7 @@ const TechRecruit = () => {
       return;
     }
     if (githubUrl === "") {
-      toast.error("Github project link is required");
+      toast.error("Github project link or Figma File Link is required");
       return;
     }
     if (liveUrl === "" && domain === "Web") {
@@ -167,7 +168,7 @@ const TechRecruit = () => {
         )
         .then((res) => {
           console.log(res);
-          toast.success("Application found");
+          toast.success("Application found. Submit your project details below.");
           setName(res.data.name);
           setNumber(res.data.number);
           setScholarId(res.data.scholarId);
@@ -219,7 +220,7 @@ const TechRecruit = () => {
               In case of any issue while filling the form please contact{" "}
               <a
                 style={{ color: "black" }}
-                href="https://api.whatsapp.com/send/?phone=%2B916295265705&text&type=phone_number&app_absent=0"
+                href="https://api.whatsapp.com/send/?phone=%2B917896291109&text&type=phone_number&app_absent=0"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -318,7 +319,8 @@ const TechRecruit = () => {
             />
 
             <label htmlFor="github">
-              Github Project Link:<span className={styles.required}>*</span>
+              Link to GitHub repository / Figma file:
+              <span className={styles.required}>*</span>
             </label>
             <input
               autoComplete="off"
@@ -337,10 +339,13 @@ const TechRecruit = () => {
               placeholder="https://demolink.com"
               onChange={(e) => setWebDemoUrl(e.target.value)}
             />
-            <label htmlFor="demo_flutter">
+            <label htmlFor="demo_flutter" style={{ marginBottom: "0" }}>
               Demo video Link for Flutter domain (Optional):
             </label>
-            <small>
+            <small
+              className={styles.field_description}
+              style={{ alignSelf: "flex-start" }}
+            >
               Upload the video on gdrive and paste the publicaly accessible link here
             </small>
             <input
@@ -351,7 +356,7 @@ const TechRecruit = () => {
               placeholder="https://demolink.com"
               onChange={(e) => setFlutterDemoUrl(e.target.value)}
             />
-            <small>
+            <small className={styles.field_description}>
               Note: Make sure your project is public and you have added a README.md file
               with instructions to run the project.
             </small>
