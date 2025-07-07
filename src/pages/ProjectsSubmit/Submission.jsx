@@ -11,7 +11,7 @@ const TechRecruit = () => {
     "Check your Institute email inbox or SPAM folder for the otp.",
     "You can only fill this form once so please be attentive while filling the form.",
     "Keep checking your inbox for further instructions.",
-    "Last date to submit the project is July 12th 2024 11:59pm.",
+    "Last date to submit the project is July 13th 2024 11:59pm.",
     "No late submissions will be entertained.",
   ];
 
@@ -46,7 +46,7 @@ const TechRecruit = () => {
     }
     if (email.includes("_ug_23") === false) {
       toast.error(
-        "This form is only for 2023-27 batch students. Please check the eligibility criteria."
+        "This form is only for 2024-28 batch students. Please check the eligibility criteria."
       );
       return;
     }
@@ -115,7 +115,7 @@ const TechRecruit = () => {
     }
     if (email.includes("_ug_23") === false) {
       toast.error(
-        "This form is only for 2023-27 batch students. Please check the eligibility criteria."
+        "This form is only for 2024-28 batch students. Please check the eligibility criteria."
       );
       return;
     }
@@ -241,7 +241,7 @@ const TechRecruit = () => {
                 type="text"
                 name="email"
                 id="email"
-                placeholder="johnd_ug_23@mech.nits.ac.in"
+                placeholder="johnd_ug_24@mech.nits.ac.in"
                 onChange={(e) => setEmail(e.target.value)}
                 required
               />
@@ -297,7 +297,7 @@ const TechRecruit = () => {
               type="text"
               name="scholarId"
               id="scholarId"
-              placeholder="2311001"
+              placeholder="2411001"
               value={scholarId}
               onChange={(e) => setScholarId(e.target.value)}
               required
