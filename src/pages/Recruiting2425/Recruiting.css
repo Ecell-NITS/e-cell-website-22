@@ -25,6 +25,8 @@
   position: absolute;
   top: 54%;
   left: 50%;
+  width: 100%;
+  text-align: center;
   transform: translate(-50%, -50%);
   color: var(--text-color-white);
   font-size: 7.5vw;
@@ -36,6 +38,8 @@
   position: absolute;
   top: 78%;
   left: 50%;
+  width: 100%;
+  text-align: center;
   transform: translate(-50%, -50%);
   color: var(--text-color-white);
   font-size: 7.5vw;
@@ -182,9 +186,8 @@
 
 .importantinstructionsrecuit h2 {
   color: var(--text-color-red);
-  font-size: 2vw;
+  font-size: 2rem;
   text-align: center;
-  margin-bottom: 2vw;
 }
 
 .importantinstructionsrecuit ul li {
@@ -217,10 +220,6 @@
   .titlerecuit-for,
   .titlerecuit-tenure {
     font-size: 15vw;
-  }
-
-  .tenure-recuit {
-    display: none;
   }
 
   .toprecuitcontent {
@@ -279,9 +278,8 @@
 
   .importantinstructionsrecuit h2 {
     color: var(--text-color-red);
-    font-size: 4vw;
+    font-size: 1.5rem;
     text-align: center;
-    margin-bottom: 2vw;
   }
 
   .importantinstructionsrecuit ul li {

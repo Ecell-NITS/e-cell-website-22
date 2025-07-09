@@ -9,9 +9,10 @@ const TechRecruit = () => {
   const instructions = [
     "Use the email id you used during application.",
     "Check your Institute email inbox or SPAM folder for the otp.",
+    "Enter the OTP then click on Check Application to fetch your details.",
     "You can only fill this form once so please be attentive while filling the form.",
     "Keep checking your inbox for further instructions.",
-    "Last date to submit the project is July 12th 2024 11:59pm.",
+    "Last date to submit the project is July 13th 2025 11:59pm.",
     "No late submissions will be entertained.",
   ];
 
@@ -44,14 +45,14 @@ const TechRecruit = () => {
       toast.error("Use only your Institute email id");
       return;
     }
-    if (email.includes("_ug_23") === false) {
+    if (email.includes("_ug_24") === false) {
       toast.error(
-        "This form is only for 2023-27 batch students. Please check the eligibility criteria."
+        "This form is only for 2024-28 batch students. Please check the eligibility criteria."
       );
       return;
     }
     if (githubUrl === "") {
-      toast.error("Github project link is required");
+      toast.error("Github project link or Figma File Link is required");
       return;
     }
     if (liveUrl === "" && domain === "Web") {
@@ -113,9 +114,9 @@ const TechRecruit = () => {
       toast.error("Use only your Institute email id");
       return;
     }
-    if (email.includes("_ug_23") === false) {
+    if (email.includes("_ug_24") === false) {
       toast.error(
-        "This form is only for 2023-27 batch students. Please check the eligibility criteria."
+        "This form is only for 2024-28 batch students. Please check the eligibility criteria."
       );
       return;
     }
@@ -125,7 +126,11 @@ const TechRecruit = () => {
         email,
       })
       .then((response) => {
-        toast.success("OTP sent successfully");
+        toast.success(`OTP sent successfully. Click on Check Application to proceed.`);
+        document.getElementById("send-otp-button").disabled = true;
+        setTimeout(() => {
+          document.getElementById("send-otp-button").disabled = false;
+        }, 60000); // Disable button for 60 seconds
       })
       .catch((error) => {
         console.error("Failed to send OTP", error);
@@ -163,12 +168,16 @@ const TechRecruit = () => {
         )
         .then((res) => {
           console.log(res);
-          toast.success("Application found");
+          toast.success("Application found. Submit your project details below.");
           setName(res.data.name);
           setNumber(res.data.number);
           setScholarId(res.data.scholarId);
           setDomain(res.data.domain);
           setResumeUrl(res.data.resumeUrl);
+          document.getElementById("check-button").disabled = true;
+          setTimeout(() => {
+            document.getElementById("check-button").disabled = false;
+          }, 60000); // Disable button for 60 seconds
         })
         .catch((error) => {
           console.error("Failed to check application", error);
@@ -211,7 +220,7 @@ const TechRecruit = () => {
               In case of any issue while filling the form please contact{" "}
               <a
                 style={{ color: "black" }}
-                href="https://api.whatsapp.com/send/?phone=%2B916295265705&text&type=phone_number&app_absent=0"
+                href="https://api.whatsapp.com/send/?phone=%2B917896291109&text&type=phone_number&app_absent=0"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -233,7 +242,7 @@ const TechRecruit = () => {
                 type="text"
                 name="email"
                 id="email"
-                placeholder="johnd_ug_23@mech.nits.ac.in"
+                placeholder="johnd_ug_24@mech.nits.ac.in"
                 onChange={(e) => setEmail(e.target.value)}
                 required
               />
@@ -244,10 +253,10 @@ const TechRecruit = () => {
                 onChange={(e) => setOtp(e.target.value)}
               />
               <div className={styles.btn_container}>
-                <button onClick={sendOtp}>
+                <button id="send-otp-button" onClick={sendOtp}>
                   {sendingOtp ? "Sending OTP..." : "Send OTP"}
                 </button>
-                <button onClick={checkApplication}>
+                <button id="check-button" onClick={checkApplication}>
                   {checking ? "Searching..." : "Check Application"}
                 </button>
               </div>
@@ -289,7 +298,7 @@ const TechRecruit = () => {
               type="text"
               name="scholarId"
               id="scholarId"
-              placeholder="2311001"
+              placeholder="2411001"
               value={scholarId}
               onChange={(e) => setScholarId(e.target.value)}
               required
@@ -310,7 +319,8 @@ const TechRecruit = () => {
             />
 
             <label htmlFor="github">
-              Github Project Link:<span className={styles.required}>*</span>
+              Link to GitHub repository / Figma file:
+              <span className={styles.required}>*</span>
             </label>
             <input
               autoComplete="off"
@@ -329,10 +339,13 @@ const TechRecruit = () => {
               placeholder="https://demolink.com"
               onChange={(e) => setWebDemoUrl(e.target.value)}
             />
-            <label htmlFor="demo_flutter">
+            <label htmlFor="demo_flutter" style={{ marginBottom: "0" }}>
               Demo video Link for Flutter domain (Optional):
             </label>
-            <small>
+            <small
+              className={styles.field_description}
+              style={{ alignSelf: "flex-start" }}
+            >
               Upload the video on gdrive and paste the publicaly accessible link here
             </small>
             <input
@@ -343,7 +356,7 @@ const TechRecruit = () => {
               placeholder="https://demolink.com"
               onChange={(e) => setFlutterDemoUrl(e.target.value)}
             />
-            <small>
+            <small className={styles.field_description}>
               Note: Make sure your project is public and you have added a README.md file
               with instructions to run the project.
             </small>

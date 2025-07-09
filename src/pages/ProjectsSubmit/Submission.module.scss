@@ -1,7 +1,6 @@
 .techContainer {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   margin-top: 50px;
   margin-bottom: 50px;
@@ -29,6 +28,7 @@
 
   .techForm {
     width: 100%;
+    margin-top: 10px;
     form {
       display: flex;
       flex-direction: column;
@@ -41,7 +41,7 @@
         justify-content: center;
         gap: 20px;
         width: fit-content;
-        margin-top: 20px;
+        margin-bottom: 10px;
       }
       label {
         font-size: 1.5rem;
@@ -74,7 +74,7 @@
         border-radius: 5px;
         width: fit-content;
         background-color: var(--bg-color-primary);
-        color: var(--text-color-grey);
+        color: var(--text-color-white);
         border: none;
         cursor: pointer;
         transition: all 0.3s ease-in-out;
@@ -84,6 +84,20 @@
           transform: scale(1.1);
         }
       }
+
+      button:disabled {
+        background-color: var(--bg-color-primary);
+        color: var(--text-color-grey);
+        cursor: not-allowed;
+      }
+
+      .field_description {
+        font-size: 1.2rem;
+        font-style: italic;
+        font-weight: 400;
+        margin-bottom: 20px;
+      }
+
       .email {
         width: 100%;
         display: flex;
