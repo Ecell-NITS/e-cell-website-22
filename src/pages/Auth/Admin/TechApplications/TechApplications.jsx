@@ -120,11 +120,11 @@ const TechApplications = () => {
                   </p>
                   {data.githubUrl && (
                     <p>
-                      Github Project Url:{" "}
+                      Project Link:{" "}
                       <strong>
                         {" "}
                         <a href={data.githubUrl} target="_blank" rel="noreferrer">
-                          Github
+                          Github Project or Figma File Link
                         </a>{" "}
                       </strong>
                     </p>
