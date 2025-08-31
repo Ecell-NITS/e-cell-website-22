@@ -47,6 +47,9 @@ importers:
       react-icons:
         specifier: ^4.6.0
         version: 4.10.1(react@18.2.0)
+      react-loading-skeleton:
+        specifier: ^3.5.0
+        version: 3.5.0(react@18.2.0)
       react-responsive-carousel:
         specifier: ^3.2.23
         version: 3.2.23
@@ -5036,6 +5039,11 @@ packages:
 
   react-lifecycles-compat@3.0.4:
     resolution: {integrity: sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==}
+
+  react-loading-skeleton@3.5.0:
+    resolution: {integrity: sha512-gxxSyLbrEAdXTKgfbpBEFZCO/P153DnqSCQau2+o6lNy1jgMRr2MmRmOzMmyrwSaSYLRB8g7b0waYPmUjz7IhQ==}
+    peerDependencies:
+      react: '>=16.8.0'
 
   react-popper@2.3.0:
     resolution: {integrity: sha512-e1hj8lL3uM+sgSR4Lxzn5h1GxBlpa4CQz0XLF8kx4MDrDRWY0Ena4c97PUeSX9i5W3UAfDP0z0FXCTQkoXUl3Q==}
@@ -12065,6 +12073,10 @@ snapshots:
   react-is@18.2.0: {}
 
   react-lifecycles-compat@3.0.4: {}
+
+  react-loading-skeleton@3.5.0(react@18.2.0):
+    dependencies:
+      react: 18.2.0
 
   react-popper@2.3.0(@popperjs/core@2.11.8)(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
     dependencies:
