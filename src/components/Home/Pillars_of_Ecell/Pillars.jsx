@@ -2,7 +2,6 @@ import React, { useRef } from "react";
 import ItemCard from "./ItemCard";
 import "./Pillars.css";
 import WasimArifSir from "../../../assets/WasimArifSir.jpg";
-import RajatGuptaSir from "../../../assets/RajatGuptaSir.jpg";
 // import ABDeoghareSir from "../../../assets/ABDeoghareSir.jpg"
 
 const Pillars = () => {
@@ -19,10 +18,10 @@ const Pillars = () => {
   let info = [
     {
       id: "1",
-      desc: "Prof. Rajat Gupta is a professor in the mechanical engineering department and the president of IIC, NIT Silchar. He is the backbone of IIC and has been an excellent mentor to the students and a great support to the organization.",
-      name: "Prof. Rajat Gupta",
+      desc: "Prof. Rahul Dev Misra is a professor in the mechanical engineering department and the president of IIC, NIT Silchar. He is the backbone of IIC and has been an excellent mentor to the students and a great support to the organization.",
+      name: "Prof. Rahul Dev Misra",
       designation: "IIC President, NIT Silchar",
-      img: RajatGuptaSir,
+      img: "https://res.cloudinary.com/ecell/image/upload/v1756627441/IMG_174134284467cac87c778b1_kzqtmj.jpg",
     },
     {
       id: "2",
