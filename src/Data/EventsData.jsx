@@ -81,76 +81,177 @@ export const upcomingevnt = [
   },
 ];
 
+// export const pastents = [
+//   {
+//     id: 1,
+//     img: "https://res.cloudinary.com/sahincloudinary/image/upload/f_auto,q_auto/v1/Ecell/Events/empresario/Empresario",
+//     title: "EMPRESARIO",
+//     btn1: "Empresario",
+//     btn2: "Entrepreneurship",
+//     date: " 02-04 February 2024, Hybrid & NIT Silchar",
+//     content: `“EMPRESARIO” the entrepreneurship module under Tecnoesis 24 comes up with events where true aficionados showcase their management finesse. This unparalleled module encompasses a spectrum of engaging events like, “Bech ke Dikhao” , “Pitch Please” , “If I were the CEO” ,
+//       “Plantastic” and many more to scale up your entrepreneurial mind.`,
+//   },
+//   {
+//     id: 1,
+//     img: "https://res.cloudinary.com/dp92qug2f/image/upload/v1680505883/Ecell%20website/events/international_symposium_final_yjhtst.webp",
+//     title: "International Symposium",
+//     btn1: "Research",
+//     btn2: "Symposium",
+//     date: " 25-26 March 2023, Hybrid & NIT Silchar",
+//     content:
+//       "With the aim of being a flagship event in the field of Innovation and Entrepreneurship collaborating with various institutes, funding agencies, policymakers and startups, the International Symposium on Innovation and Entrepreneurship was indeed one of its kind event that was organised under the banner of NIT, Silchar",
+//   },
+//   {
+//     id: 2,
+//     img: "https://res.cloudinary.com/dp92qug2f/image/upload/v1680370173/Ecell%20website/events/women_empowerment_r46kjd.webp",
+//     title: "Women Empowerment:",
+//     btn1: "Empowerment",
+//     btn2: "Seminar",
+//     date: "6 February 2023, Bhupen Hazarika auditorium, NIT Silchar",
+//     content:
+//       "Under the aegis of the Institute Innovation cell of NIT Silchar, a seminar on Women Empowerment was conducted by Mrs Beena Gokhale, visiting faculty in the HSS department. A huge number of students attended the seminar and found it fruitful.",
+//   },
+//   {
+//     id: 3,
+//     img: "https://res.cloudinary.com/dp92qug2f/image/upload/v1680370761/Ecell%20website/events/etalk2.0_efhr9p.webp",
+//     title: "Entre-pro-neurshup Talk 2.0",
+//     btn1: "Talk",
+//     btn2: "Entrepreneurship",
+//     date: "21 January 2023, Online",
+//     content:
+//       "A speaker session on Entrepreneurship Skill, Attitude and Behaviour Development was conducted by Mayank Yadav, which saw more than 60 participants. This session was extremely fruitful for all the participants.",
+//   },
+//   {
+//     id: 4,
+//     img: "https://res.cloudinary.com/dp92qug2f/image/upload/v1680370643/Ecell%20website/events/etalk1.0_uxlocm.webp",
+//     title: "Entre-pro-neurship talk 1.0:",
+//     btn1: "Talk",
+//     btn2: "Entrepreneurship",
+//     date: "11 September 2022, Online",
+//     content:
+//       "A speaker session was conducted by Mr Pinak Chakraborty who is an alumnus of NIT Silchar. In the session, he guided the students in designing a scalable personalised system. The session was extremely beneficial for all the attendees.",
+//   },
+//   {
+//     id: 5,
+//     img: "https://res.cloudinary.com/dp92qug2f/image/upload/v1680505889/Ecell%20website/events/smart_india_hackathon_fmz63j.webp",
+//     title: "Smart India Hackathon",
+//     btn1: "Technical",
+//     btn2: "Hackathon",
+//     date: " 24th August 2022, Start-Up Center, NIT Silchar",
+//     content:
+//       "The 36-hour-long hackathon, under the Smart India Hackathon initiative by the Ministry of HRD, India was hosted in NIT, Silchar. In this event, E-Cell was among one of the organising clubs that made sure that all the participants, who come in from different parts of the country got the best hospitality treatment.",
+//   },
+//   {
+//     id: 6,
+//     img: "https://res.cloudinary.com/dp92qug2f/image/upload/v1680370427/Ecell%20website/events/ipr_tbytlp.webp",
+//     title: "The IPR Awareness program:",
+//     btn1: "Awareness",
+//     btn2: "IPR",
+//     date: "25 July 2022, Online",
+//     content:
+//       "Under the flagship of KAPILA, AICTE-MIC, the Institute Innovation Cell of NIT Silchar conducted an IPR awareness session hosted by Mr Manish Soyal, to bring insight into various aspects of IPR.",
+//   },
+// ];
+
 export const pastents = [
   {
-    id: 1,
-    img: "https://res.cloudinary.com/sahincloudinary/image/upload/f_auto,q_auto/v1/Ecell/Events/empresario/Empresario",
-    title: "EMPRESARIO",
-    btn1: "Empresario",
-    btn2: "Entrepreneurship",
-    date: " 02-04 February 2024, Hybrid & NIT Silchar",
-    content: `“EMPRESARIO” the entrepreneurship module under Tecnoesis 24 comes up with events where true aficionados showcase their management finesse. This unparalleled module encompasses a spectrum of engaging events like, “Bech ke Dikhao” , “Pitch Please” , “If I were the CEO” ,
-      “Plantastic” and many more to scale up your entrepreneurial mind.`,
+    eventID: "1",
+    moduleName: "Entrepreneurship",
+    eventName: "EMPRESARIO",
+    eventDate: "2024-02-02 to 2024-02-04",
+    eventPoster:
+      "https://res.cloudinary.com/sahincloudinary/image/upload/f_auto,q_auto/v1/Ecell/Events/empresario/Empresario",
+    organizers: "E-Cell NIT Silchar",
+    venue: "Hybrid & NIT Silchar",
+    eventDetails:
+      "EMPRESARIO, the entrepreneurship module under Tecnoesis 24, featured events like Bech ke Dikhao, Pitch Please, If I were the CEO, Plantastic, and more.",
+    acceptingResponse: "true",
+    questions: ["Participant name?", "Team/Individual?"],
   },
   {
-    id: 1,
-    img: "https://res.cloudinary.com/dp92qug2f/image/upload/v1680505883/Ecell%20website/events/international_symposium_final_yjhtst.webp",
-    title: "International Symposium",
-    btn1: "Research",
-    btn2: "Symposium",
-    date: " 25-26 March 2023, Hybrid & NIT Silchar",
-    content:
+    eventID: "2",
+    moduleName: "Research",
+    eventName: "International Symposium",
+    eventDate: "2023-03-25 to 2023-03-26",
+    eventPoster:
+      "https://res.cloudinary.com/dp92qug2f/image/upload/v1680505883/Ecell%20website/events/international_symposium_final_yjhtst.webp",
+    organizers: "E-Cell NIT Silchar",
+    venue: "Hybrid & NIT Silchar",
+    eventDetails:
       "With the aim of being a flagship event in the field of Innovation and Entrepreneurship collaborating with various institutes, funding agencies, policymakers and startups, the International Symposium on Innovation and Entrepreneurship was indeed one of its kind event that was organised under the banner of NIT, Silchar",
+    acceptingResponse: "true",
+    questions: ["Participant name?", "Institute/Organization?"],
   },
   {
-    id: 2,
-    img: "https://res.cloudinary.com/dp92qug2f/image/upload/v1680370173/Ecell%20website/events/women_empowerment_r46kjd.webp",
-    title: "Women Empowerment:",
-    btn1: "Empowerment",
-    btn2: "Seminar",
-    date: "6 February 2023, Bhupen Hazarika auditorium, NIT Silchar",
-    content:
-      "Under the aegis of the Institute Innovation cell of NIT Silchar, a seminar on Women Empowerment was conducted by Mrs Beena Gokhale, visiting faculty in the HSS department. A huge number of students attended the seminar and found it fruitful.",
+    eventID: "3",
+    moduleName: "Empowerment",
+    eventName: "Women Empowerment",
+    eventDate: "2023-02-06",
+    eventPoster:
+      "https://res.cloudinary.com/dp92qug2f/image/upload/v1680370173/Ecell%20website/events/women_empowerment_r46kjd.webp",
+    organizers: "E-Cell NIT Silchar",
+    venue: "Bhupen Hazarika auditorium, NIT Silchar",
+    eventDetails:
+      "A seminar on Women Empowerment was conducted by Mrs Beena Gokhale, visiting faculty in HSS Department.",
+    acceptingResponse: "true",
+    questions: ["Participant name?", "Department?"],
   },
   {
-    id: 3,
-    img: "https://res.cloudinary.com/dp92qug2f/image/upload/v1680370761/Ecell%20website/events/etalk2.0_efhr9p.webp",
-    title: "Entre-pro-neurshup Talk 2.0",
-    btn1: "Talk",
-    btn2: "Entrepreneurship",
-    date: "21 January 2023, Online",
-    content:
-      "A speaker session on Entrepreneurship Skill, Attitude and Behaviour Development was conducted by Mayank Yadav, which saw more than 60 participants. This session was extremely fruitful for all the participants.",
+    eventID: "4",
+    moduleName: "Entrepreneurship",
+    eventName: "Entre-pro-neurship Talk 2.0",
+    eventDate: "2023-01-21",
+    eventPoster:
+      "https://res.cloudinary.com/dp92qug2f/image/upload/v1680370761/Ecell%20website/events/etalk2.0_efhr9p.webp",
+    organizers: "E-Cell NIT Silchar",
+    venue: "Online",
+    eventDetails:
+      "A speaker session on Entrepreneurship Skill, Attitude and Behaviour Development conducted by Mayank Yadav with 60+ participants.",
+    acceptingResponse: "true",
+    questions: ["Participant name?", "Email?"],
   },
   {
-    id: 4,
-    img: "https://res.cloudinary.com/dp92qug2f/image/upload/v1680370643/Ecell%20website/events/etalk1.0_uxlocm.webp",
-    title: "Entre-pro-neurship talk 1.0:",
-    btn1: "Talk",
-    btn2: "Entrepreneurship",
-    date: "11 September 2022, Online",
-    content:
-      "A speaker session was conducted by Mr Pinak Chakraborty who is an alumnus of NIT Silchar. In the session, he guided the students in designing a scalable personalised system. The session was extremely beneficial for all the attendees.",
+    eventID: "5",
+    moduleName: "Entrepreneurship",
+    eventName: "Entre-pro-neurship Talk 1.0",
+    eventDate: "2022-09-11",
+    eventPoster:
+      "https://res.cloudinary.com/dp92qug2f/image/upload/v1680370643/Ecell%20website/events/etalk1.0_uxlocm.webp",
+    organizers: "E-Cell NIT Silchar",
+    venue: "Online",
+    eventDetails:
+      "Speaker session by Mr Pinak Chakraborty (NIT Silchar alumnus) on designing scalable personalized systems.",
+    acceptingResponse: "true",
+    questions: ["Participant name?", "Institute?"],
   },
   {
-    id: 5,
-    img: "https://res.cloudinary.com/dp92qug2f/image/upload/v1680505889/Ecell%20website/events/smart_india_hackathon_fmz63j.webp",
-    title: "Smart India Hackathon",
-    btn1: "Technical",
-    btn2: "Hackathon",
-    date: " 24th August 2022, Start-Up Center, NIT Silchar",
-    content:
-      "The 36-hour-long hackathon, under the Smart India Hackathon initiative by the Ministry of HRD, India was hosted in NIT, Silchar. In this event, E-Cell was among one of the organising clubs that made sure that all the participants, who come in from different parts of the country got the best hospitality treatment.",
+    eventID: "6",
+    moduleName: "Technical",
+    eventName: "Smart India Hackathon",
+    eventDate: "2022-08-24",
+    eventPoster:
+      "https://res.cloudinary.com/dp92qug2f/image/upload/v1680505889/Ecell%20website/events/smart_india_hackathon_fmz63j.webp",
+    organizers: "E-Cell NIT Silchar",
+    venue: "Start-Up Center, NIT Silchar",
+    eventDetails:
+      "36-hour hackathon under the Smart India Hackathon initiative by MHRD, hosted at NIT Silchar.",
+    acceptingResponse: "true",
+    questions: ["Team name?", "Number of members?"],
   },
   {
-    id: 6,
-    img: "https://res.cloudinary.com/dp92qug2f/image/upload/v1680370427/Ecell%20website/events/ipr_tbytlp.webp",
-    title: "The IPR Awareness program:",
-    btn1: "Awareness",
-    btn2: "IPR",
-    date: "25 July 2022, Online",
-    content:
-      "Under the flagship of KAPILA, AICTE-MIC, the Institute Innovation Cell of NIT Silchar conducted an IPR awareness session hosted by Mr Manish Soyal, to bring insight into various aspects of IPR.",
+    eventID: "7",
+    moduleName: "IPR",
+    eventName: "The IPR Awareness Program",
+    eventDate: "2022-07-25",
+    eventPoster:
+      "https://res.cloudinary.com/dp92qug2f/image/upload/v1680370427/Ecell%20website/events/ipr_tbytlp.webp",
+    organizers: "E-Cell NIT Silchar",
+    venue: "Online",
+    eventDetails:
+      "An IPR awareness session conducted under KAPILA, AICTE-MIC, hosted by Mr Manish Soyal.",
+    acceptingResponse: "true",
+    questions: ["Participant name?", "Department?"],
   },
 ];
 

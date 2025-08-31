@@ -1,149 +1,196 @@
-.upcom-evnts-top {
-  text-align: center;
-  margin: 4vw 0 3vw 0;
-}
-
-.upcom-evnts-top h1 {
-  color: var(--light-text-color);
-  font-size: 3vw;
-  font-weight: 400;
-  font-family: "Barlow Condensed", sans-serif;
-}
-
-.upcomi-evvnts-parnt {
+/* Wrapper to center upcoming events */
+.upcom-evnts-wrapper {
   display: flex;
-  align-items: center;
-  flex-wrap: nowrap;
-  scroll-behavior: smooth;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  width: 88%;
-  margin: 0 auto;
-  margin-bottom: 5vw;
+  flex-direction: column; /* stack title + events */
+  justify-content: center; /* vertical centering */
+  align-items: center; /* horizontal centering */
+  min-height: 100vh; /* full viewport height */
+  width: 100%;
+  box-sizing: border-box;
+  padding: 2vw 0;
 }
 
+/* Title section */
+.upcom-evnts-top {
+  margin-bottom: 2vw;
+  text-align: center;
+}
+
+/* Parent container for event cards */
+.upcomi-evvnts-parnt {
+  width: 85%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2vw;
+  justify-content: flex-start;
+  /* overflow-x: auto;
+  scroll-behavior: smooth; */
+}
+
+/* Hide scrollbar */
 .upcomi-evvnts-parnt::-webkit-scrollbar {
   display: none;
 }
 
+/* Each event card */
 .upcom-evnt-indi {
-  width: 31%;
   flex: none;
-  order: 1;
-  margin-left: 1.1%;
-  margin-right: 1.1%;
-  margin-bottom: 2.1%;
+  background-color: var(--bg-color-white);
+  width: 31%;
   padding: 1vw;
   border: 1px solid var(--light-text-color);
   border-radius: 1vw;
   box-shadow:
     0 10px 20px var(--box-shadow-color-black-1),
     0 6px 6px var(--box-shadow-color-black-2);
-}
-
-.img-upcom-evnt {
-  width: 100%;
-  height: 25vw;
-  margin: 0 auto;
-}
-
-.img-upcom-evnt img {
-  width: 100%;
-  height: 100%;
-  /* object-fit: cover; */
-}
-
-.title-announc-upcom-evnt {
-  margin: 0.7vw 0 0 0 !important;
-}
-
-.title-announc-upcom-evnt h1 {
-  font-size: 1.7vw;
-  margin-bottom: 0;
-  color: var(--text-color-primary);
-}
-
-.btns-info-klp {
-  width: 37%;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  transition: all 0.5s ease-in-out;
+}
+
+/* Event poster container */
+.img-upcom-evnt {
+  width: 100%; /* full width of card */
+  height: 300px; /* height adjusts automatically */
+  display: flex; /* center the image inside */
+  justify-content: center;
   align-items: center;
-  margin: 0.7vw 0;
+  overflow: hidden; /* hide any overflow just in case */
 }
 
-.dte-locn-upcomi-event {
-  margin: 0.5vw 0;
-}
-
-.dte-locn-upcomi-event h2 {
-  color: var(--text-color-grey);
-  font-weight: 400;
-  font-size: 1.2vw;
-  margin-bottom: 0;
-}
-
-.btns-1-ent-indi button {
-  background-color: var(--bg-color-primary-light);
-  color: var(--text-color-white);
-  padding: 0vw 0.5vw;
+/* Event poster image */
+.img-upcom-evnt img {
+  width: 100%; /* fill container width */
+  height: 100%; /* maintain aspect ratio */
   border-radius: 0.5vw;
+  object-fit: cover; /* ensure entire image fits inside container */
+  display: block;
+}
+
+/* Event title/module */
+.title-announc-upcom-evnt h1 {
+  font-size: 1.6vw;
+  margin: 0.5vw 0;
+  text-align: start;
+}
+
+.title-announc-upcom-evnt h2 {
   font-size: 1.2vw;
-  border: none;
-  margin: 0.2vw;
+  color: var(--text-color-secondary);
+  margin: 0.2vw 0;
+  text-align: center;
+  display: none;
 }
+
+/* Date & Venue */
+.dte-locn-upcomi-evnt {
+  display: flex;
+  align-items: center;
+  gap: 0.3vw;
+}
+
+.dte-locn-upcomi-evnt h2 {
+  margin: 0.3vw 0;
+  font-size: 1vw;
+  color: var(--text-color-secondary);
+  text-align: start;
+}
+
+/* Add a comma after date */
+.dte-locn-upcomi-evnt #date::after {
+  content: ",";
+  margin-right: 0.1vw;
+}
+
+/* Buttons container */
+.btns-info-klp {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0.3vw;
+  margin-top: 0.2vw;
+  justify-content: flex-start;
+  padding-bottom: 0.5vw;
+}
+
+.btns-info-klp button {
+  white-space: nowrap;
+  flex-shrink: 0;
+  padding: 0.4vw 0.4vw;
+  border-radius: 5vw;
+  background-color: var(--border-color-primary);
+  color: var(--text-color-white);
+  border: 2px solid var(--border-color-primary) !important;
+  font-size: 1vw;
+  cursor: pointer;
+}
+
+/* Event details */
 .abt-content-indi-evnt {
-  overflow: auto;
-  height: 15%;
+  margin-top: 0.1vw;
+  font-size: 0.9vw;
+  max-height: 8vw;
+  overflow-y: auto;
+  padding-right: 0.5vw;
+  color: var(--text-color-secondary);
 }
-.abt-content-indi-evnt::-webkit-scrollbar {
-  width: 0px;
-}
-.abt-content-indi-evnt h3 {
+
+.abt-content-indi-evnt p {
   font-size: 1.3vw;
-  color: var(--text-color-grey);
-  margin-bottom: 0;
-  font-weight: 400;
-  overflow: auto;
+  color: var(--text-color-secondary);
 }
 
-@media only screen and (min-width: 660px) {
-  .nmjkop {
-    display: none;
-  }
-
-  .upcom-evnt-indi {
-    height: 42vw !important;
-  }
+.abt-content-indi-evnt::-webkit-scrollbar {
+  width: 0.4vw;
+  display: none;
 }
 
-@media only screen and (max-width: 991px) {
-  .btns-info-klp {
-    width: 42%;
-    margin: 0 0 0.7vw 0;
-  }
-
-  .btns-1-ent-indi button {
-    background-color: var(--bg-color-primary);
-    color: var(--text-color-white);
-    padding: 0vw 0.8vw;
-    border-radius: 0.5vw;
-    font-size: 1.2vw;
-    border: none;
-  }
+.abt-content-indi-evnt::-webkit-scrollbar-thumb {
+  background-color: var(--border-color-primary);
+  border-radius: 0.2vw;
 }
 
+/* All events button */
+.all-evnts-btn-cont {
+  margin: 1.5vw 0;
+  text-align: center;
+}
+
+.all-evnts-btn-cont button {
+  padding: 0.4vw 0.9vw;
+  border-radius: 5vw;
+  background-color: var(--border-color-white);
+  color: var(--text-color-primary);
+  border: 2px solid var(--border-color-primary) !important;
+  font-size: 1.3vw;
+  cursor: pointer;
+}
+
+/* Navigation arrows */
+.btns.nmjkop {
+  display: flex;
+  justify-content: center;
+  gap: 1vw;
+  margin-top: 1.5vw;
+}
+
+.btn-testimonial {
+  background: var(--bg-color-white);
+  border: 1px solid var(--border-color-primary);
+  border-radius: 50%;
+  padding: 0.5vw;
+  cursor: pointer;
+}
+
+.btn-indi-testimonial {
+  font-size: 1.2vw;
+}
+
+/* Responsive for small screens */
 @media only screen and (max-width: 660px) {
-  .upcom-evnts-top {
-    margin: 6vw 0;
-  }
-
-  .upcom-evnts-top h1 {
-    font-size: 8vw;
-  }
-
   .upcomi-evvnts-parnt {
-    width: 100%;
-    margin-bottom: 10vw;
+    flex-wrap: nowrap !important;
+    overflow-x: scroll !important;
+    width: 90%;
   }
 
   .upcom-evnt-indi {
@@ -151,51 +198,48 @@
     margin-left: 12.5%;
     margin-right: 12.5%;
     padding: 2vw;
-    border: 1px solid var(--border-color-primary);
     border-radius: 2vw;
   }
 
-  .img-upcom-evnt {
-    width: 100%;
-    height: 70vw;
-    margin: 0 auto;
-  }
-
-  .title-announc-upcom-evnt {
-    margin: 2.5vw 0 1.7vw 0 !important;
-  }
-
   .title-announc-upcom-evnt h1 {
-    font-size: 6vw;
-    margin-bottom: 0;
+    font-size: 4vw;
   }
 
-  .dte-locn-upcomi-event {
-    margin-bottom: 2vw;
+  .title-announc-upcom-evnt h2 {
+    font-size: 3vw;
   }
 
-  .dte-locn-upcomi-event h2 {
-    font-size: 3.5vw;
-    margin-bottom: 0;
+  .dte-locn-upcomi-evnt h2,
+  .dte-locn-upcomi-event h3 {
+    font-size: 2.5vw;
   }
 
-  .btns-info-klp {
-    width: 50%;
-  }
-
-  .btns-1-ent-indi button {
-    background-color: var(--bg-color-primary);
-    color: var(--text-color-white);
-    padding: 0.5vw 3vw;
-    border-radius: 1vw;
+  .btns-info-klp button {
+    padding: 0.8vw 3vw;
+    border-radius: 10vw;
     font-size: 3vw;
   }
 
   .abt-content-indi-evnt {
-    margin-top: 3vw;
+    max-height: 20vw;
+    overflow-y: auto;
+    padding-right: 0.5vw;
+    color: var(--text-color-secondary);
+    margin-top: 0.1vw;
   }
 
-  .abt-content-indi-evnt h3 {
+  .abt-content-indi-evnt p {
+    font-size: 2.5vw;
+    color: var(--text-color-secondary);
+  }
+
+  .all-evnts-btn-cont button {
+    padding: 1.5vw 4vw;
+    font-size: 3vw;
+    border-radius: 10vw;
+  }
+
+  .btn-indi-testimonial {
     font-size: 4vw;
   }
 }

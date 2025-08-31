@@ -1,4 +1,4 @@
-.past-evvnts-parnt {
+/* .past-evvnts-parnt {
   width: 88% !important;
   margin: 0 auto;
   display: flex;
@@ -70,5 +70,253 @@
     padding: 0.8vw 3vw;
     border-radius: 10vw;
     font-size: 3vw;
+  }
+} */
+
+/* Wrapper to center past events */
+.past-evnts-wrapper {
+  display: flex;
+  flex-direction: column; /* stack title + events */
+  justify-content: center; /* vertical centering */
+  align-items: center; /* horizontal centering */
+  min-height: 100vh; /* full viewport height */
+  width: 100%;
+  box-sizing: border-box;
+  padding: 2vw 0;
+}
+
+/* Title section */
+.upcom-evnts-top.pst-evnts-__tyad {
+  margin-bottom: 2vw;
+  text-align: center;
+}
+
+/* Parent container for past events cards */
+.past-evvnts-parnt {
+  width: 85%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2vw;
+  justify-content: flex-start;
+}
+
+/* Each event card */
+.past-evnt-indi {
+  flex: none;
+  background-color: var(--bg-color-white);
+  width: 31%;
+  padding: 1vw;
+  border: 1px solid var(--light-text-color);
+  border-radius: 1vw;
+  box-shadow:
+    0 10px 20px var(--box-shadow-color-black-1),
+    0 6px 6px var(--box-shadow-color-black-2);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.5s ease-in-out;
+}
+
+/* Scrollbar hidden for parent */
+.past-evvnts-parnt::-webkit-scrollbar {
+  display: none;
+}
+
+/* Event poster container */
+.img-upcom-evnt {
+  width: 100%; /* full width of card */
+  height: 300px; /* height adjusts automatically */
+  display: flex; /* center the image inside */
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* hide any overflow just in case */
+}
+
+/* Event poster image */
+.img-upcom-evnt img {
+  width: 100%; /* fill container width */
+  height: 100%; /* maintain aspect ratio */
+  border-radius: 0.5vw;
+  object-fit: cover; /* ensure entire image fits inside container */
+  display: block; /* remove default inline spacing */
+}
+
+/* Event title/module */
+.title-announc-upcom-evnt h1 {
+  font-size: 1.6vw;
+  margin: 0.5vw 0;
+  text-align: start;
+}
+
+.title-announc-upcom-evnt h2 {
+  font-size: 1.2vw;
+  color: var(--text-color-secondary);
+  margin: 0.2vw 0;
+  text-align: center;
+  display: none;
+}
+
+.dte-locn-upcomi-event {
+  display: flex;
+  align-items: center;
+  gap: 0.3vw; /* small spacing */
+}
+/* Date & Venue */
+.dte-locn-upcomi-event h2 {
+  margin: 0.3vw 0;
+  font-size: 1vw;
+  color: var(--text-color-secondary);
+  text-align: start;
+}
+
+/* Add a comma after h2 */
+.dte-locn-upcomi-event #date::after {
+  content: ","; /* comma */
+  margin-right: 0.1vw; /* small space after comma */
+}
+
+/* Buttons container - single line */
+.btns-info-klp {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0.3vw;
+  margin-top: 0.2vw;
+  /* overflow-x: auto; */
+  justify-content: flex-start; /* center buttons inside card */
+  padding-bottom: 0.5vw;
+}
+
+/* .btns-info-klp::-webkit-scrollbar {
+  height: 0.3vw;
+} */
+
+.btns-1-ent-indi button {
+  white-space: nowrap;
+  flex-shrink: 0;
+  padding: 0.4vw 0.2vw;
+  border-radius: 0.7vw !important;
+  background-color: var(--bg-color-primary);
+  color: var(--text-color-primary);
+  border: 2px solid var(--border-color-primary) !important;
+  font-size: 1vw;
+  cursor: pointer;
+}
+
+/* Event details */
+.abt-content-indi-evnt {
+  margin-top: 0.1vw;
+  font-size: 0.9vw;
+  max-height: 8vw;
+  overflow-y: auto;
+  padding-right: 0.5vw;
+  color: var(--text-color-secondary); /* lighter shade */
+}
+
+.abt-content-indi-evnt p {
+  font-size: 1.3vw;
+  color: var(--text-color-seconday);
+}
+
+.abt-content-indi-evnt::-webkit-scrollbar {
+  width: 0.4vw;
+  display: none;
+}
+
+.abt-content-indi-evnt::-webkit-scrollbar-thumb {
+  background-color: var(--border-color-primary);
+  border-radius: 0.2vw;
+}
+
+/* All events button */
+.all-evnts-btn-cont {
+  margin: 1.5vw 0;
+  text-align: center;
+}
+
+.all-evnts-btn-cont button {
+  padding: 0.4vw 0.9vw;
+  border-radius: 5vw;
+  background-color: var(--border-color-white);
+  color: var(--text-color-primary);
+  border: 2px solid var(--border-color-primary) !important;
+  font-size: 1.3vw;
+  cursor: pointer;
+}
+
+/* Navigation arrows */
+.btns.nmjkop {
+  display: flex;
+  justify-content: center;
+  gap: 1vw;
+  margin-top: 1.5vw;
+}
+
+.btn-testimonial {
+  background: var(--bg-color-white);
+  border: 1px solid var(--border-color-primary);
+  border-radius: 50%;
+  padding: 0.5vw;
+  cursor: pointer;
+}
+
+.btn-indi-testimonial {
+  font-size: 1.2vw;
+}
+
+/* Responsive for small screens */
+@media only screen and (max-width: 660px) {
+  .past-evvnts-parnt {
+    flex-wrap: nowrap !important;
+    overflow-x: scroll !important;
+    width: 90%;
+  }
+
+  .past-evnt-indi {
+    width: 75%;
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+    padding: 2vw;
+    border-radius: 2vw;
+  }
+
+  .title-announc-upcom-evnt h1 {
+    font-size: 4vw;
+  }
+
+  .title-announc-upcom-evnt h2 {
+    font-size: 3vw;
+  }
+
+  .dte-locn-upcomi-event h2,
+  .dte-locn-upcomi-event h3 {
+    font-size: 2.5vw;
+  }
+
+  .btns-1-ent-indi button {
+    padding: 0.8vw 3vw;
+    border-radius: 10vw;
+    font-size: 3vw;
+  }
+
+  .abt-content-indi-evnt {
+    max-height: 20vw;
+    overflow-y: auto;
+    padding-right: 0.5vw;
+    color: var(--text-color-secondary);
+    margin-top: 0.1vw;
+  }
+
+  .abt-content-indi-evnt p {
+    font-size: 2.5vw;
+    color: var(--text-color-seconday);
+  }
+
+  .all-evnts-btn-cont button {
+    padding: 1.5vw 4vw;
+    font-size: 3vw;
+    border-radius: 10vw;
+  }
+
+  .btn-indi-testimonial {
+    font-size: 4vw;
   }
 }

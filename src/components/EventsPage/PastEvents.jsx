@@ -1,12 +1,13 @@
 import React, { useRef, useState, useEffect } from "react";
 import { pastents } from "../../Data/EventsData";
 import "./Pastevents.css";
-import "./UpcomingEvents.css";
+
 import { Link } from "react-router-dom";
 import { AiOutlineArrowRight, AiOutlineArrowLeft } from "react-icons/ai";
+
 const PastEvents = () => {
   let pastevntHolder = useRef();
-
+  const [loaded, setIsLoaded] = useState(false);
   function fwdNext0go() {
     pastevntHolder.current.scrollLeft += pastevntHolder.current.offsetWidth;
   }
@@ -21,7 +22,6 @@ const PastEvents = () => {
     threshold: 0.2,
   };
 
-  const [loaded, setIsLoaded] = useState(false);
   useEffect(() => {
     let observer = new window.IntersectionObserver(function (entries, self) {
       entries.forEach((entry) => {
@@ -48,76 +48,265 @@ const PastEvents = () => {
 
   return (
     <>
-      <div className="upcom-evnts-top pst-evnts-__tyad">
-        <h1>
-          Past{" "}
-          <span
-            style={{
-              fontFamily: "Barlow Condensed",
-              color: "var(--text-color-primary)",
-              fontWeight: "900",
-            }}
-          >
-            Events
-          </span>
-        </h1>
-      </div>
+      <div className="past-evnts-wrapper">
+        <div className="upcom-evnts-top pst-evnts-__tyad">
+          <h1>
+            Past{" "}
+            <span
+              style={{
+                fontFamily: "Barlow Condensed",
+                color: "var(--text-color-primary)",
+                fontWeight: "900",
+              }}
+            >
+              Events
+            </span>
+          </h1>
+        </div>
 
-      <div className="past-evvnts-parnt " ref={pastevntHolder}>
-        {pastents.map((item) => {
-          return (
-            <div className="past-evnt-indi" key={item.id}>
-              <div className="img-upcom-evnt">
-                <img
-                  src=""
-                  data-src={item.img}
-                  className={loaded ? "loaded" : "loading"}
-                  onLoad={() => setIsLoaded(true)}
-                  alt=""
-                />
-              </div>
+        <div className="past-evvnts-parnt" ref={pastevntHolder}>
+          {pastents.map((item) => {
+            // Create array of buttons dynamically
+            const buttons = [item.moduleName, item.organizers]; // or any other fields you want
 
-              <div className="title-announc-upcom-evnt">
-                <h1>{item.title}</h1>
-              </div>
-
-              <div className="dte-locn-upcomi-event">
-                <h2>{item.date}</h2>
-              </div>
-
-              <div className="btns-info-klp">
-                <div className="btns-1-ent-indi">
-                  <button>{item.btn1}</button>
+            return (
+              <div className="past-evnt-indi" key={item.eventID}>
+                {/* Event Poster */}
+                <div className="img-upcom-evnt">
+                  <img
+                    src=""
+                    data-src={item.eventPoster}
+                    className={loaded ? "loaded" : "loading"}
+                    onLoad={() => setIsLoaded(true)}
+                    alt={item.eventName}
+                  />
                 </div>
-                <div className="btns-1-ent-indi">
-                  <button>{item.btn2}</button>
+
+                {/* Event Title / Module */}
+                <div className="title-announc-upcom-evnt">
+                  <h1>{item.eventName}</h1>
+                  <h2>{item.moduleName}</h2>
+                </div>
+
+                {/* Date & Venue */}
+                <div className="dte-locn-upcomi-event">
+                  <h2 id="date">{item.eventDate}</h2>
+                  <h2>{item.venue}</h2>
+                </div>
+
+                {/* Buttons */}
+                <div className="btns-info-klp">
+                  {buttons.map((btnLabel, idx) => (
+                    <div className="btns-1-ent-indi" key={idx}>
+                      <button>{btnLabel}</button>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Event Details */}
+                <div className="abt-content-indi-evnt">
+                  <p>{item.eventDetails}</p>
                 </div>
               </div>
+            );
+          })}
+        </div>
 
-              <div className="abt-content-indi-evnt">
-                <h3>{item.content}</h3>
-              </div>
-            </div>
-          );
-        })}
-      </div>
+        <div className="btns nmjkop">
+          <button className="prev btn-testimonial" onClick={backPrev0bk}>
+            <AiOutlineArrowLeft className="btn-indi-testimonial" />
+          </button>
+          <button className="next btn-testimonial" onClick={fwdNext0go}>
+            <AiOutlineArrowRight className="btn-indi-testimonial" />
+          </button>
+        </div>
 
-      <div className="btns nmjkop">
-        <button className="prev btn-testimonial" onClick={backPrev0bk}>
-          <AiOutlineArrowLeft className="btn-indi-testimonial" />
-        </button>
-        <button className="next btn-testimonial" onClick={fwdNext0go}>
-          <AiOutlineArrowRight className="btn-indi-testimonial" />
-        </button>
-      </div>
-
-      <div className="all-evnts-btn-cont">
-        <Link to="/allevents">
-          <button>All Events</button>
-        </Link>
+        <div className="all-evnts-btn-cont">
+          <Link to="/allevents">
+            <button>All Events</button>
+          </Link>
+        </div>
       </div>
     </>
   );
 };
 
 export default PastEvents;
+
+// import React, { useRef, useState, useEffect } from "react";
+// import { pastents } from "../../Data/EventsData";
+// import "./Pastevents.css";
+// import "./UpcomingEvents.css";
+// import { Link } from "react-router-dom";
+// import { AiOutlineArrowRight, AiOutlineArrowLeft } from "react-icons/ai";
+// const PastEvents = () => {
+//   let pastevntHolder = useRef();
+
+//   function fwdNext0go() {
+//     pastevntHolder.current.scrollLeft += pastevntHolder.current.offsetWidth;
+//   }
+
+//   function backPrev0bk() {
+//     pastevntHolder.current.scrollLeft -= pastevntHolder.current.offsetWidth;
+//   }
+
+//   /* implementing ioa */
+//   const config = {
+//     rootMargin: "0px 0px 0px 0px",
+//     threshold: 0.2,
+//   };
+
+//   const [loaded, setIsLoaded] = useState(false);
+//   useEffect(() => {
+//     let observer = new window.IntersectionObserver(function (entries, self) {
+//       entries.forEach((entry) => {
+//         if (entry.isIntersecting) {
+//           loadImages(entry.target);
+//           self.unobserve(entry.target);
+//         }
+//       });
+//     }, config);
+//     const imgs = document.querySelectorAll("[data-src]");
+//     imgs.forEach((img) => {
+//       observer.observe(img);
+//     });
+//     return () => {
+//       imgs.forEach((img) => {
+//         observer.unobserve(img);
+//       });
+//     };
+//   });
+
+//   const loadImages = (image) => {
+//     image.src = image.dataset.src;
+//   };
+
+//   return (
+//     <>
+//       <div className="upcom-evnts-top pst-evnts-__tyad">
+//         <h1>
+//           Past{" "}
+//           <span
+//             style={{
+//               fontFamily: "Barlow Condensed",
+//               color: "var(--text-color-primary)",
+//               fontWeight: "900",
+//             }}
+//           >
+//             Events
+//           </span>
+//         </h1>
+//       </div>
+
+//       {/* <div className="past-evvnts-parnt " ref={pastevntHolder}>
+//         {pastents.map((item) => {
+//           return (
+//             <div className="past-evnt-indi" key={item.id}>
+//               <div className="img-upcom-evnt">
+//                 <img
+//                   src=""
+//                   data-src={item.img}
+//                   className={loaded ? "loaded" : "loading"}
+//                   onLoad={() => setIsLoaded(true)}
+//                   alt=""
+//                 />
+//               </div>
+
+//               <div className="title-announc-upcom-evnt">
+//                 <h1>{item.title}</h1>
+//               </div>
+
+//               <div className="dte-locn-upcomi-event">
+//                 <h2>{item.date}</h2>
+//               </div>
+
+//               <div className="btns-info-klp">
+//                 <div className="btns-1-ent-indi">
+//                   <button>{item.btn1}</button>
+//                 </div>
+//                 <div className="btns-1-ent-indi">
+//                   <button>{item.btn2}</button>
+//                 </div>
+//               </div>
+
+//               <div className="abt-content-indi-evnt">
+//                 <h3>{item.content}</h3>
+//               </div>
+//             </div>
+//           );
+//         })}
+//       </div> */}
+
+//       <div className="past-evvnts-parnt " ref={pastevntHolder}>
+//   {pastents.map((event) => {
+//     return (
+//       <div className="past-evnt-indi" key={event.eventID}>
+//         {/* Event Poster */}
+//         <div className="img-upcom-evnt">
+//           <img
+//             src=""
+//             data-src={event.eventPoster}
+//             className={loaded ? "loaded" : "loading"}
+//             onLoad={() => setIsLoaded(true)}
+//             alt={event.eventName}
+//           />
+//         </div>
+
+//         {/* Event Name */}
+//         <div className="title-announc-upcom-evnt">
+//           <h1>{event.eventName}</h1>
+//         </div>
+
+//         {/* Date & Venue */}
+//         <div className="dte-locn-upcomi-event">
+//           <h2>{event.eventDate}</h2>
+//           <p>{event.venue}</p>
+//         </div>
+
+//         {/* Module & Organizer
+//         <div className="btns-info-klp">
+//           <div className="btns-1-ent-indi">
+//             <button>{event.moduleName}</button>
+//           </div>
+//           <div className="btns-1-ent-indi">
+//             <button>{event.organizers}</button>
+//           </div>
+//         </div> */}
+
+//         {/* Module & Organizer */}
+//         <div className="btns-info-klp">
+//           {[event.moduleName, event.organizers].map((label, idx) => (
+//             <div className="btns-1-ent-indi" key={idx}>
+//               <button>{label}</button>
+//             </div>
+//           ))}
+//         </div>
+
+//         {/* Event Details */}
+//         <div className="abt-content-indi-evnt">
+//           <h3>{event.eventDetails}</h3>
+//         </div>
+//       </div>
+//     );
+//   })}
+// </div>
+
+//       <div className="btns nmjkop">
+//         <button className="prev btn-testimonial" onClick={backPrev0bk}>
+//           <AiOutlineArrowLeft className="btn-indi-testimonial" />
+//         </button>
+//         <button className="next btn-testimonial" onClick={fwdNext0go}>
+//           <AiOutlineArrowRight className="btn-indi-testimonial" />
+//         </button>
+//       </div>
+
+//       <div className="all-evnts-btn-cont">
+//         <Link to="/allevents">
+//           <button>All Events</button>
+//         </Link>
+//       </div>
+//     </>
+//   );
+// };
+
+// export default PastEvents;
