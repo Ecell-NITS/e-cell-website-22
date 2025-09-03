@@ -64,6 +64,7 @@
   border-radius: 0.5vw;
   object-fit: cover;
   display: block;
+  transition: transform 0.5s ease;
 }
 
 /* Event title/module */
@@ -109,18 +110,26 @@
   margin-top: 0.2vw;
   justify-content: flex-start;
   padding-bottom: 0.5vw;
+  overflow-x: auto; /* allow horizontal scroll if buttons overflow */
+  -webkit-overflow-scrolling: touch;
+}
+
+/* hide the track scrollbar (keeps scrolling) */
+.btns-info-klp::-webkit-scrollbar {
+  display: none;
 }
 
 .btns-info-klp button {
   white-space: nowrap;
   flex-shrink: 0;
   padding: 0.4vw 0.4vw;
-  border-radius: 5vw;
+  border-radius: 9999px; /* <- full-pill radius to match desktop look on mobile */
   background-color: var(--border-color-primary);
   color: var(--text-color-white);
   border: 2px solid var(--border-color-primary) !important;
   font-size: 1vw;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
 /* Event details */
@@ -156,7 +165,7 @@
 
 .all-evnts-btn-cont button {
   padding: 0.4vw 0.9vw;
-  border-radius: 5vw;
+  border-radius: 9999px; /* <- same pill radius */
   background-color: var(--border-color-white);
   color: var(--text-color-primary);
   border: 2px solid var(--border-color-primary) !important;
@@ -196,18 +205,8 @@
     0 10px 10px rgba(0, 0, 0, 0.15);
 }
 
-/* Image zoom on hover */
-.img-upcom-evnt img {
-  transition: transform 0.5s ease;
-}
-
 .upcom-evnt-indi:hover .img-upcom-evnt img {
   transform: scale(1.1);
-}
-
-/* Show hidden subtitle on hover */
-.title-announc-upcom-evnt h2 {
-  display: none;
 }
 
 .upcom-evnt-indi:hover .title-announc-upcom-evnt h2 {
@@ -227,10 +226,6 @@
 }
 
 /* Button highlight on hover */
-.btns-info-klp button {
-  transition: all 0.3s ease-in-out;
-}
-
 .btns-info-klp button:hover {
   background-color: var(--text-color-white);
   color: var(--border-color-primary);
@@ -252,14 +247,14 @@
   }
 
   .btns-info-klp {
-    flex-wrap: wrap; /* ✅ allow wrapping */
-    justify-content: center; /* ✅ center buttons */
+    justify-content: center;
     gap: 1vw;
   }
 
   .btns-info-klp button {
     font-size: 1.6vw;
     padding: 1vw 2.5vw;
+    border-radius: 9999px; /* keep same pill */
   }
 
   .title-announc-upcom-evnt h1 {
@@ -281,6 +276,7 @@
   .all-evnts-btn-cont button {
     font-size: 2vw;
     padding: 1vw 3vw;
+    border-radius: 9999px; /* keep same pill */
   }
 }
 
@@ -290,15 +286,34 @@
     flex-direction: column;
     flex-wrap: nowrap;
     overflow-x: hidden;
-    width: 95%;
+    width: 90%;
     margin: 0 auto;
   }
 
   .upcom-evnt-indi {
-    width: 100%;
-    margin: 1rem 0;
-    padding: 4vw;
-    border-radius: 3vw;
+    width: 95%;
+    margin: 1rem auto;
+    padding: 3.5vw;
+    border-radius: 2.5vw;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transform: none !important;
+  }
+
+  .upcom-evnt-indi:hover {
+    transform: none !important;
+    box-shadow: none !important;
+  }
+
+  .upcom-evnt-indi:hover .img-upcom-evnt img {
+    transform: none !important;
+  }
+
+  .upcom-evnt-indi:hover .title-announc-upcom-evnt h2 {
+    display: none !important;
+  }
+
+  .img-upcom-evnt {
+    height: 180px;
   }
 
   .title-announc-upcom-evnt h1 {
@@ -316,22 +331,22 @@
   }
 
   .btns-info-klp {
-    flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start; /* left aligned */
     gap: 2vw;
   }
 
   .btns-info-klp button {
     padding: 2vw 5vw;
-    border-radius: 10vw;
+    border-radius: 9999px; /* <- match desktop pill shape exactly on mobile */
     font-size: 3.5vw;
   }
 
   .abt-content-indi-evnt {
-    max-height: none;
-    overflow-y: visible;
+    max-height: 20vw;
+    overflow-y: auto !important;
     font-size: 3.2vw;
     margin-top: 1vw;
+    -webkit-overflow-scrolling: touch;
   }
 
   .abt-content-indi-evnt p {
@@ -341,7 +356,7 @@
   .all-evnts-btn-cont button {
     padding: 2vw 6vw;
     font-size: 4vw;
-    border-radius: 10vw;
+    border-radius: 9999px; /* match desktop pill */
   }
 
   .btn-indi-testimonial {

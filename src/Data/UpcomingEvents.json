@@ -1,6 +1,6 @@
 [
   {
-    "eventID":"1",
+    "eventID": "1",
     "moduleName": "Tech Fest 2025",
     "eventName": "AI & Robotics Workshop",
     "eventDate": "15th September 2025",
@@ -16,7 +16,7 @@
     ]
   },
   {
-    "eventID":"2",
+    "eventID": "2",
     "moduleName": "Cultural Fest 2025",
     "eventName": "Battle of Bands",
     "eventDate": "1st October 2025",
@@ -27,7 +27,7 @@
     "acceptingResponse": "true"
   },
   {
-    "eventID":"3",
+    "eventID": "3",
     "moduleName": "Sports Week",
     "eventName": "Cricket Tournament",
     "eventDate": "20th September 2025",
@@ -42,7 +42,7 @@
     ]
   },
   {
-    "eventID":"4",
+    "eventID": "4",
     "moduleName": "Entrepreneurship Cell",
     "eventName": "Startup Pitch Competition",
     "eventDate": "25th September 2025",
@@ -51,13 +51,10 @@
     "venue": "Srijan, Innovation Hub",
     "eventDetails": "Pitch your startup ideas to investors and mentors.",
     "acceptingResponse": "true",
-    "questions": [
-      "What is your startup idea?",
-      "Do you need mentorship or funding?"
-    ]
+    "questions": ["What is your startup idea?", "Do you need mentorship or funding?"]
   },
   {
-    "eventID":"5",
+    "eventID": "5",
     "moduleName": "Literary Club",
     "eventName": "Poetry Slam",
     "eventDate": "30th September 2025",
@@ -68,7 +65,7 @@
     "acceptingResponse": "true"
   },
   {
-    "eventID":"6",
+    "eventID": "6",
     "moduleName": "Cultural Fest 2025",
     "eventName": "Drama Competition",
     "eventDate": "2nd October 2025",
@@ -77,13 +74,10 @@
     "venue": "GymKhana Park",
     "eventDetails": "Teams perform short plays on given themes.",
     "acceptingResponse": "true",
-    "questions": [
-      "How many members are in your group?",
-      "Do you need stage props?"
-    ]
+    "questions": ["How many members are in your group?", "Do you need stage props?"]
   },
   {
-    "eventID":"7",
+    "eventID": "7",
     "moduleName": "Coding Club",
     "eventName": "Hackathon 24Hrs",
     "eventDate": "28th September 2025",
@@ -92,13 +86,10 @@
     "venue": "CC Lab",
     "eventDetails": "A 24-hour hackathon to build innovative solutions.",
     "acceptingResponse": "true",
-    "questions": [
-      "Preferred programming language?",
-      "Do you have a team or need one?"
-    ]
+    "questions": ["Preferred programming language?", "Do you have a team or need one?"]
   },
   {
-    "eventID":"9",
+    "eventID": "9",
     "moduleName": "Photography Club",
     "eventName": "Photo Exhibition",
     "eventDate": "18th September 2025",
@@ -109,7 +100,7 @@
     "acceptingResponse": "false"
   },
   {
-    "eventID":"10",
+    "eventID": "10",
     "moduleName": "Robotics Club",
     "eventName": "Line Follower Robot Race",
     "eventDate": "22th September 2025",
@@ -124,7 +115,7 @@
     ]
   },
   {
-    "eventID":"11",
+    "eventID": "11",
     "moduleName": "Film Club",
     "eventName": "Short Film Festival",
     "eventDate": "27th September 2025",
@@ -133,9 +124,6 @@
     "venue": "Mini Auditorium",
     "eventDetails": "Screening of student-made short films followed by an award ceremony.",
     "acceptingResponse": "true",
-    "questions": [
-      "Film title?",
-      "Duration of the short film?"
-    ]
+    "questions": ["Film title?", "Duration of the short film?"]
   }
 ]

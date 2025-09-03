@@ -8,6 +8,8 @@
   justify-content: center;
   align-items: center;
   z-index: 2000;
+  padding: 1rem; /* prevent cutoff on mobile edges */
+  overflow-y: auto; /* scroll if modal content is taller */
 }
 
 /* Modal box */
@@ -70,4 +72,26 @@
   color: white;
   border-radius: 6px;
   cursor: pointer;
+}
+
+/* ===================== RESPONSIVE ===================== */
+@media only screen and (max-width: 600px) {
+  .modal-content {
+    width: 95%;
+    max-width: 95%;
+    padding: 1.2rem;
+    border-radius: 10px;
+  }
+
+  .questions-form input {
+    padding: 10px;
+    font-size: 4vw; /* scale text */
+  }
+
+  .questions-form button,
+  .close-btn {
+    font-size: 4vw;
+    padding: 12px;
+    border-radius: 9999px; /* pill-like buttons for better touch */
+  }
 }
