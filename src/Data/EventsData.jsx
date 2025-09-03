@@ -164,8 +164,9 @@ export const pastents = [
       "https://res.cloudinary.com/sahincloudinary/image/upload/f_auto,q_auto/v1/Ecell/Events/empresario/Empresario",
     organizers: "E-Cell NIT Silchar",
     venue: "Hybrid & NIT Silchar",
-    eventDetails:
-      "EMPRESARIO” the entrepreneurship module under Tecnoesis 24 comes up with events where true aficionados showcase their management finesse. This unparalleled module encompasses a spectrum of engaging events like, “Bech ke Dikhao” , “Pitch Please” , “If I were the CEO” ,      “Plantastic” and many more to scale up your entrepreneurial mind.",
+    eventDetails: `“EMPRESARIO” the entrepreneurship module under Tecnoesis 24 comes up with events where true aficionados showcase their management finesse. This unparalleled module encompasses a spectrum of engaging events like, “Bech ke Dikhao” , “Pitch Please” , “If I were the CEO” ,
+      “Plantastic” and many more to scale up your entrepreneurial mind.`,
+
     acceptingResponse: "true",
     questions: ["Participant name?", "Team/Individual?"],
   },
@@ -179,7 +180,7 @@ export const pastents = [
     organizers: "E-Cell NIT Silchar",
     venue: "Hybrid & NIT Silchar",
     eventDetails:
-      "With the aim of being a flagship event in the field of Innovation and Entrepreneurship collaborating with various institutes, funding agencies, policymakers and startups, the International Symposium on Innovation and Entrepreneurship was indeed one of its kind event that was organised under the banner of NIT, Silchar",
+      "With the aim of being a flagship event in the field of Innovation and Entrepreneurship collaborating with various institutes, funding agencies, policymakers and startups, the International Symposium on Innovation and Entrepreneurship was indeed one of its kind event that was organised under the banner of NIT, Silchar.",
     acceptingResponse: "true",
     questions: ["Participant name?", "Institute/Organization?"],
   },
