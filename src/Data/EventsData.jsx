@@ -159,7 +159,7 @@ export const pastents = [
     eventID: "1",
     moduleName: "Entrepreneurship",
     eventName: "EMPRESARIO",
-    eventDate: "2024-02-02 to 2024-02-04",
+    eventDate: "2nd Feb 2024 to 4th Feb 2024",
     eventPoster:
       "https://res.cloudinary.com/sahincloudinary/image/upload/f_auto,q_auto/v1/Ecell/Events/empresario/Empresario",
     organizers: "E-Cell NIT Silchar",
@@ -173,7 +173,7 @@ export const pastents = [
     eventID: "2",
     moduleName: "Research",
     eventName: "International Symposium",
-    eventDate: "2023-03-25 to 2023-03-26",
+    eventDate: "25th March 2023 to 26th March 2023",
     eventPoster:
       "https://res.cloudinary.com/dp92qug2f/image/upload/v1680505883/Ecell%20website/events/international_symposium_final_yjhtst.webp",
     organizers: "E-Cell NIT Silchar",
@@ -187,7 +187,7 @@ export const pastents = [
     eventID: "3",
     moduleName: "Empowerment",
     eventName: "Women Empowerment",
-    eventDate: "2023-02-06",
+    eventDate: "6th Feb 2023",
     eventPoster:
       "https://res.cloudinary.com/dp92qug2f/image/upload/v1680370173/Ecell%20website/events/women_empowerment_r46kjd.webp",
     organizers: "E-Cell NIT Silchar",
@@ -201,7 +201,7 @@ export const pastents = [
     eventID: "4",
     moduleName: "Entrepreneurship",
     eventName: "Entre-pro-neurship Talk 2.0",
-    eventDate: "2023-01-21",
+    eventDate: "21st Jan 2023",
     eventPoster:
       "https://res.cloudinary.com/dp92qug2f/image/upload/v1680370761/Ecell%20website/events/etalk2.0_efhr9p.webp",
     organizers: "E-Cell NIT Silchar",
@@ -215,7 +215,7 @@ export const pastents = [
     eventID: "5",
     moduleName: "Entrepreneurship",
     eventName: "Entre-pro-neurship Talk 1.0",
-    eventDate: "2022-09-11",
+    eventDate: "11th September 2022",
     eventPoster:
       "https://res.cloudinary.com/dp92qug2f/image/upload/v1680370643/Ecell%20website/events/etalk1.0_uxlocm.webp",
     organizers: "E-Cell NIT Silchar",
@@ -229,7 +229,7 @@ export const pastents = [
     eventID: "6",
     moduleName: "Technical",
     eventName: "Smart India Hackathon",
-    eventDate: "2022-08-24",
+    eventDate: "24th August 2022",
     eventPoster:
       "https://res.cloudinary.com/dp92qug2f/image/upload/v1680505889/Ecell%20website/events/smart_india_hackathon_fmz63j.webp",
     organizers: "E-Cell NIT Silchar",
@@ -243,7 +243,7 @@ export const pastents = [
     eventID: "7",
     moduleName: "IPR",
     eventName: "The IPR Awareness Program",
-    eventDate: "2022-07-25",
+    eventDate: "25th July 2022",
     eventPoster:
       "https://res.cloudinary.com/dp92qug2f/image/upload/v1680370427/Ecell%20website/events/ipr_tbytlp.webp",
     organizers: "E-Cell NIT Silchar",
