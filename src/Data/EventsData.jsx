@@ -159,13 +159,13 @@ export const pastents = [
     eventID: "1",
     moduleName: "Entrepreneurship",
     eventName: "EMPRESARIO",
-    eventDate: "2nd Feb 2024 to 4th Feb 2024",
+    eventDate: "02-04 February 2024",
     eventPoster:
       "https://res.cloudinary.com/sahincloudinary/image/upload/f_auto,q_auto/v1/Ecell/Events/empresario/Empresario",
     organizers: "E-Cell NIT Silchar",
     venue: "Hybrid & NIT Silchar",
     eventDetails:
-      "EMPRESARIO, the entrepreneurship module under Tecnoesis 24, featured events like Bech ke Dikhao, Pitch Please, If I were the CEO, Plantastic, and more.",
+      "EMPRESARIO” the entrepreneurship module under Tecnoesis 24 comes up with events where true aficionados showcase their management finesse. This unparalleled module encompasses a spectrum of engaging events like, “Bech ke Dikhao” , “Pitch Please” , “If I were the CEO” ,      “Plantastic” and many more to scale up your entrepreneurial mind.",
     acceptingResponse: "true",
     questions: ["Participant name?", "Team/Individual?"],
   },
@@ -173,7 +173,7 @@ export const pastents = [
     eventID: "1",
     moduleName: "Research",
     eventName: "International Symposium",
-    eventDate: "25-26th March 2023",
+    eventDate: "25-26 March 2023",
     eventPoster:
       "https://res.cloudinary.com/dp92qug2f/image/upload/v1680505883/Ecell%20website/events/international_symposium_final_yjhtst.webp",
     organizers: "E-Cell NIT Silchar",
@@ -187,13 +187,13 @@ export const pastents = [
     eventID: "2",
     moduleName: "Empowerment",
     eventName: "Women Empowerment",
-    eventDate: "6th February 2023",
+    eventDate: "6 February 2023",
     eventPoster:
       "https://res.cloudinary.com/dp92qug2f/image/upload/v1680370173/Ecell%20website/events/women_empowerment_r46kjd.webp",
     organizers: "E-Cell NIT Silchar",
     venue: "Bhupen Hazarika auditorium, NIT Silchar",
     eventDetails:
-      "A seminar on Women Empowerment was conducted by Mrs Beena Gokhale, visiting faculty in HSS Department.",
+      "Under the aegis of the Institute Innovation cell of NIT Silchar, a seminar on Women Empowerment was conducted by Mrs Beena Gokhale, visiting faculty in the HSS department. A huge number of students attended the seminar and found it fruitful.",
     acceptingResponse: "true",
     questions: ["Participant name?", "Department?"],
   },
@@ -201,13 +201,13 @@ export const pastents = [
     eventID: "3",
     moduleName: "Entrepreneurship",
     eventName: "Entre-pro-neurship Talk 2.0",
-    eventDate: "21st January 2023",
+    eventDate: "21 January 2023",
     eventPoster:
       "https://res.cloudinary.com/dp92qug2f/image/upload/v1680370761/Ecell%20website/events/etalk2.0_efhr9p.webp",
     organizers: "E-Cell NIT Silchar",
     venue: "Online",
     eventDetails:
-      "A speaker session on Entrepreneurship Skill, Attitude and Behaviour Development conducted by Mayank Yadav with 60+ participants.",
+      "A speaker session on Entrepreneurship Skill, Attitude and Behaviour Development was conducted by Mayank Yadav, which saw more than 60 participants. This session was extremely fruitful for all the participants.",
     acceptingResponse: "true",
     questions: ["Participant name?", "Email?"],
   },
@@ -215,13 +215,13 @@ export const pastents = [
     eventID: "4",
     moduleName: "Entrepreneurship",
     eventName: "Entre-pro-neurship Talk 1.0",
-    eventDate: "11th September 2022",
+    eventDate: "11 September 2022",
     eventPoster:
       "https://res.cloudinary.com/dp92qug2f/image/upload/v1680370643/Ecell%20website/events/etalk1.0_uxlocm.webp",
     organizers: "E-Cell NIT Silchar",
     venue: "Online",
     eventDetails:
-      "Speaker session by Mr Pinak Chakraborty (NIT Silchar alumnus) on designing scalable personalized systems.",
+      "A speaker session was conducted by Mr Pinak Chakraborty who is an alumnus of NIT Silchar. In the session, he guided the students in designing a scalable personalised system. The session was extremely beneficial for all the attendees.",
     acceptingResponse: "true",
     questions: ["Participant name?", "Institute?"],
   },
@@ -235,7 +235,7 @@ export const pastents = [
     organizers: "E-Cell NIT Silchar",
     venue: "Start-Up Center, NIT Silchar",
     eventDetails:
-      "36-hour hackathon under the Smart India Hackathon initiative by MHRD, hosted at NIT Silchar.",
+      "The 36-hour-long hackathon, under the Smart India Hackathon initiative by the Ministry of HRD, India was hosted in NIT, Silchar. In this event, E-Cell was among one of the organising clubs that made sure that all the participants, who come in from different parts of the country got the best hospitality treatment.",
     acceptingResponse: "true",
     questions: ["Team name?", "Number of members?"],
   },
@@ -243,13 +243,13 @@ export const pastents = [
     eventID: "6",
     moduleName: "IPR",
     eventName: "The IPR Awareness Program",
-    eventDate: "25th July 2022",
+    eventDate: "25 July 2022",
     eventPoster:
       "https://res.cloudinary.com/dp92qug2f/image/upload/v1680370427/Ecell%20website/events/ipr_tbytlp.webp",
     organizers: "E-Cell NIT Silchar",
     venue: "Online",
     eventDetails:
-      "An IPR awareness session conducted under KAPILA, AICTE-MIC, hosted by Mr Manish Soyal.",
+      "Under the flagship of KAPILA, AICTE-MIC, the Institute Innovation Cell of NIT Silchar conducted an IPR awareness session hosted by Mr Manish Soyal, to bring insight into various aspects of IPR.",
     acceptingResponse: "true",
     questions: ["Participant name?", "Department?"],
   },
