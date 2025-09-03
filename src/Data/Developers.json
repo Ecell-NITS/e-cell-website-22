@@ -1,12 +1,12 @@
 [
   {
     "id": 1,
-    "name": "Muskan Bharti",
-    "rank": "Senior Web Developer",
-    "image": "https://res.cloudinary.com/dddcd0hco/image/upload/v1724541726/20240815_145722_-_MUSKAN_BHARTI_wro0mk.webp",
-    "fb": "https://www.facebook.com/muskan.bharti.18062?mibextid=ZbWKwL",
-    "linkedln": "https://www.linkedin.com/in/muskan-bharti-a7440b28b/",
-    "git": "https://github.com/muskan170604"
+    "name": "Ayush Singh",
+    "rank": "Senior UI/UX Developer",
+    "image": "https://res.cloudinary.com/dw3n9vflw/image/upload/v1756898039/ayush_bh_ogxptn.jpg",
+    "fb": "https://www.facebook.com/profile.php?id=61550890263865&mibextid=ZbWKwL",
+    "linkedln": "https://www.linkedin.com/in/ayush-singh-1b0a8827b",
+    "git": ""
   },
   {
     "id": 2,
@@ -19,29 +19,73 @@
   },
   {
     "id": 3,
-    "name": "Ayush Singh",
-    "rank": "Senior UI/UX Developer",
-    "image": "https://res.cloudinary.com/dddcd0hco/image/upload/v1724540538/IMG_20240819_011533_620_-_AYUSH_SINGH_huhfin.webp",
-    "fb": "https://www.facebook.com/profile.php?id=61550890263865&mibextid=ZbWKwL",
-    "linkedln": "https://www.linkedin.com/in/ayush-singh-1b0a8827b",
-    "git": ""
-  },
-  {
-    "id": 4,
-    "name": "Premansh Chakraborty",
-    "rank": "Senior Flutter Developer",
-    "image": "https://res.cloudinary.com/dddcd0hco/image/upload/v1724541172/Screenshot_2024_0814_002329_-_Preeti_Chakraborty_axjy7c.webp",
-    "fb": "https://www.facebook.com/profile.php?id=61550513922111&mibextid=ZbWKwL",
-    "linkedln": "https://www.linkedin.com/in/premansh-chakraborty-825812314",
-    "git": "https://github.com/PremanshChakraborty"
-  },
-  {
-    "id": 5,
     "name": "Gulista Khatun",
     "rank": "Senior Web Associate",
     "image": "https://res.cloudinary.com/dw3n9vflw/image/upload/v1756833166/IMG_20240817_191401_-_Gulista_Khatun_dp2nu0.jpg",
     "fb": "https://www.facebook.com/profile.php?id=61555806877486&mibextid=ZbWKwL",
     "linkedln": "https://www.linkedin.com/in/gulista-khatun-9414b6314/",
     "git": "https://github.com/GulistaKhatun06"
+  },
+  {
+    "id": 4,
+    "name": "Muskan Bharti",
+    "rank": "Senior Web Developer",
+    "image": "https://res.cloudinary.com/dddcd0hco/image/upload/v1724541726/20240815_145722_-_MUSKAN_BHARTI_wro0mk.webp",
+    "fb": "https://www.facebook.com/muskan.bharti.18062?mibextid=ZbWKwL",
+    "linkedln": "https://www.linkedin.com/in/muskan-bharti-a7440b28b/",
+    "git": "https://github.com/muskan170604"
+  },
+  {
+    "id": 5,
+    "name": "Premansh Chakraborty",
+    "rank": "Senior Flutter Developer",
+    "image": "https://res.cloudinary.com/dddcd0hco/image/upload/v1724541172/Screenshot_2024_0814_002329_-_Preeti_Chakraborty_axjy7c.webp",
+    "fb": "https://www.facebook.com/profile.php?id=61550513922111&mibextid=ZbWKwL",
+    "linkedln": "https://www.linkedin.com/in/premansh-chakraborty-825812314",
+    "git": "https://github.com/PremanshChakraborty"
   }
 ]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
