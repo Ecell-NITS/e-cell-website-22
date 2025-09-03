@@ -170,10 +170,10 @@ export const pastents = [
     questions: ["Participant name?", "Team/Individual?"],
   },
   {
-    eventID: "2",
+    eventID: "1",
     moduleName: "Research",
     eventName: "International Symposium",
-    eventDate: "25th March 2023 to 26th March 2023",
+    eventDate: "25-26th March 2023",
     eventPoster:
       "https://res.cloudinary.com/dp92qug2f/image/upload/v1680505883/Ecell%20website/events/international_symposium_final_yjhtst.webp",
     organizers: "E-Cell NIT Silchar",
@@ -184,10 +184,10 @@ export const pastents = [
     questions: ["Participant name?", "Institute/Organization?"],
   },
   {
-    eventID: "3",
+    eventID: "2",
     moduleName: "Empowerment",
     eventName: "Women Empowerment",
-    eventDate: "6th Feb 2023",
+    eventDate: "6th February 2023",
     eventPoster:
       "https://res.cloudinary.com/dp92qug2f/image/upload/v1680370173/Ecell%20website/events/women_empowerment_r46kjd.webp",
     organizers: "E-Cell NIT Silchar",
@@ -198,10 +198,10 @@ export const pastents = [
     questions: ["Participant name?", "Department?"],
   },
   {
-    eventID: "4",
+    eventID: "3",
     moduleName: "Entrepreneurship",
     eventName: "Entre-pro-neurship Talk 2.0",
-    eventDate: "21st Jan 2023",
+    eventDate: "21st January 2023",
     eventPoster:
       "https://res.cloudinary.com/dp92qug2f/image/upload/v1680370761/Ecell%20website/events/etalk2.0_efhr9p.webp",
     organizers: "E-Cell NIT Silchar",
@@ -212,7 +212,7 @@ export const pastents = [
     questions: ["Participant name?", "Email?"],
   },
   {
-    eventID: "5",
+    eventID: "4",
     moduleName: "Entrepreneurship",
     eventName: "Entre-pro-neurship Talk 1.0",
     eventDate: "11th September 2022",
@@ -226,7 +226,7 @@ export const pastents = [
     questions: ["Participant name?", "Institute?"],
   },
   {
-    eventID: "6",
+    eventID: "5",
     moduleName: "Technical",
     eventName: "Smart India Hackathon",
     eventDate: "24th August 2022",
@@ -240,7 +240,7 @@ export const pastents = [
     questions: ["Team name?", "Number of members?"],
   },
   {
-    eventID: "7",
+    eventID: "6",
     moduleName: "IPR",
     eventName: "The IPR Awareness Program",
     eventDate: "25th July 2022",
