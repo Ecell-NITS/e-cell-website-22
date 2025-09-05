@@ -45,7 +45,7 @@ const GoogleAuth = () => {
   return (
     <button onClick={() => login()} className="google-btn">
       <FcGoogle className="google-icon" />
-      <span>Sign in with Google</span>
+      <span>Continue with Google</span>
     </button>
   );
 };
