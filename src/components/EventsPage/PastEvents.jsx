@@ -1,9 +1,10 @@
 import React, { useRef, useState, useEffect } from "react";
 import { pastents } from "../../Data/EventsData";
-import "./Pastevents.css";
-import "./UpcomingEvents.css";
+import "./events.css";
 import { Link } from "react-router-dom";
 import { AiOutlineArrowRight, AiOutlineArrowLeft } from "react-icons/ai";
+import PopupQuestions from "../../Data/PopupQuestions/PopupQuestions";
+
 const PastEvents = () => {
   let pastevntHolder = useRef();
 
@@ -15,7 +16,6 @@ const PastEvents = () => {
     pastevntHolder.current.scrollLeft -= pastevntHolder.current.offsetWidth;
   }
 
-  /* implementing ioa */
   const config = {
     rootMargin: "0px 0px 0px 0px",
     threshold: 0.2,
@@ -63,11 +63,11 @@ const PastEvents = () => {
         </h1>
       </div>
 
-      <div className="past-evvnts-parnt " ref={pastevntHolder}>
+      <div className="past-evvnts-parnt events-wrapper" ref={pastevntHolder}>
         {pastents.map((item) => {
           return (
-            <div className="past-evnt-indi" key={item.id}>
-              <div className="img-upcom-evnt">
+            <div className="past-evnt-indi event-card" key={item.id}>
+              <div className="img-upcom-evnt event-img">
                 <img
                   src=""
                   data-src={item.img}
@@ -77,15 +77,15 @@ const PastEvents = () => {
                 />
               </div>
 
-              <div className="title-announc-upcom-evnt">
+              <div className="title-announc-upcom-evnt event-title">
                 <h1>{item.title}</h1>
               </div>
 
-              <div className="dte-locn-upcomi-event">
+              <div className="dte-locn-upcomi-event event-date">
                 <h2>{item.date}</h2>
               </div>
 
-              <div className="btns-info-klp">
+              <div className="btns-info-klp event-btns">
                 <div className="btns-1-ent-indi">
                   <button>{item.btn1}</button>
                 </div>
@@ -94,7 +94,7 @@ const PastEvents = () => {
                 </div>
               </div>
 
-              <div className="abt-content-indi-evnt">
+              <div className="abt-content-indi-evnt event-desc">
                 <h3>{item.content}</h3>
               </div>
             </div>

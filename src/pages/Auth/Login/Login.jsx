@@ -1,11 +1,15 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import NavbarTeam from "../../../components/shared/Navbar/NavbarTeam";
 import Footer from "../../../components/shared/Footer/Footer";
 import { toast } from "react-toastify";
+
 const Login = () => {
   const navigate = useNavigate();
+  const location = useLocation();
+  const fromEvent = location.state?.fromEvent; // redirect after login if coming from event
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
@@ -19,21 +23,21 @@ const Login = () => {
     document.title = "Login | E-Cell NIT Silchar";
     const token = localStorage.getItem("token");
     if (token) {
-      navigate("/dashboard");
+      if (fromEvent) {
+        navigate("/events", {
+          state: { showQuestions: true, fromEventId: fromEvent },
+        });
+      } else {
+        navigate("/events");
+      }
     }
-  }, [navigate]);
+  }, [fromEvent, navigate]);
 
-  const handlelogin = (e) => {
+  const handlelogin = async () => {
     if (!email || !password) {
-      // setMessage("Please fill all required fields");
-      toast.error(`Please fill all required fields`, {
+      toast.error("Please fill all required fields", {
         position: "top-right",
         autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
         theme: "dark",
       });
       return;
@@ -41,63 +45,44 @@ const Login = () => {
 
     setDisablelogin(true);
     setLoggingin(true);
-    axios
-      .post(`${import.meta.env.VITE_REACT_APP_APIMAIN}/login`, { email, password })
-      .then((response) => {
-        const token = response.data.token;
-        localStorage.setItem("token", token);
-        // setMessage(response.data.message);
-        // setMessage(`Welcome, ${email}`);
-        navigate("/dashboard");
-        // setTimeout(() => {
-        //     navigate('/dashboard')
-        // },3000)
-        setLoggingin(false);
-        setDisablelogin(false);
-      })
-      .catch((error) => {
-        if (error.response) {
-          // setMessage(error.response.data.error);
-          toast.error(error.response.data.error, {
-            position: "top-right",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "dark",
-          });
-          setTimeout(() => {
-            setMessage("");
-          }, 5000);
-          // setEmail("");
-          // setPassword("");
-        } else {
-          // setMessage("Login failed. Please try again.");
-          toast.error(`Login failed. Please try again`, {
-            position: "top-right",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "dark",
-          });
-        }
-        setLoggingin(false);
-        setDisablelogin(false);
+
+    try {
+      const response = await axios.post(
+        `${import.meta.env.VITE_REACT_APP_APIMAIN}/login`,
+        { email, password }
+      );
+
+      const { token, user } = response.data;
+
+      // Save token and user info
+      localStorage.setItem("token", token);
+      if (user) {
+        localStorage.setItem("user", JSON.stringify(user));
+      }
+
+      // Redirect after login
+      if (fromEvent) {
+        navigate("/events", { state: { showQuestions: true, fromEventId: fromEvent } });
+      } else {
+        navigate("/events");
+      }
+    } catch (error) {
+      const errorMsg = error.response?.data?.error || "Login failed. Please try again.";
+      toast.error(errorMsg, {
+        position: "top-right",
+        autoClose: 5000,
+        theme: "dark",
       });
+      setMessage(errorMsg);
+      setTimeout(() => setMessage(""), 5000);
+    } finally {
+      setLoggingin(false);
+      setDisablelogin(false);
+    }
   };
 
-  const HandleSignupMove = () => {
-    navigate("/signup");
-  };
-
-  const handleForgetPwd = () => {
-    navigate("/forgot password");
-  };
+  const HandleSignupMove = () => navigate("/signup");
+  const handleForgetPwd = () => navigate("/forgot password");
 
   return (
     <>
@@ -116,6 +101,7 @@ const Login = () => {
                 onChange={(e) => setEmail(e.target.value)}
               />
             </div>
+
             <div className="inputdicdignup">
               <h3>Password</h3>
               <input
@@ -123,17 +109,12 @@ const Login = () => {
                 placeholder="Password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                onKeyDown={(e) => {
-                  e.key === "Enter" && handlelogin();
-                }}
+                onKeyDown={(e) => e.key === "Enter" && handlelogin()}
               />
-
               <label className="labelshowpass">
                 <input
                   className="inputshowpass"
                   type="checkbox"
-                  name="showPassword"
-                  id="showPassword"
                   checked={showPassword}
                   onChange={handleShowPassword}
                 />
@@ -161,9 +142,11 @@ const Login = () => {
                 cursor: disablelogin ? "not-allowed" : "pointer",
               }}
             >
-              {loggingin ? "Signing in" : "Sign in"}
+              {loggingin ? "Signing in..." : "Sign in"}
             </button>
+
             {message && <p className="msgaftersignuplogin">{message}</p>}
+
             <div className="bottomredirectlogin">
               <h4 className="logexistingaccount">Don’t have an account?</h4>
               <button

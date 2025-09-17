@@ -1,0 +1,72 @@
+[
+  {
+    "id": "1",
+    "title": "AI & Robotics Workshop",
+    "date": "2025-09-15",
+    "content": "A hands-on workshop on Artificial Intelligence and Robotics with live demonstrations and interactive sessions.",
+    "img": "https://res.cloudinary.com/dp92qug2f/image/upload/c_scale,w_360,f_auto,fl_lossy/v1676487890/ecell-events/event_pic_lxyaeo.png"
+  },
+  {
+    "id": "2",
+    "title": "Battle of Bands",
+    "date": "2025-10-01",
+    "content": "An inter-college band competition with electrifying performances.",
+    "img": "https://example.com/posters/battle-of-bands.jpg"
+  },
+  {
+    "id": "3",
+    "title": "Cricket Tournament",
+    "date": "2025-09-20",
+    "content": "Inter-department cricket matches with knockout rounds and finals.",
+    "img": "https://example.com/posters/cricket.png"
+  },
+  {
+    "id": "4",
+    "title": "Startup Pitch Competition",
+    "date": "2025-09-25",
+    "content": "Pitch your startup ideas to investors and mentors.",
+    "img": "https://example.com/posters/startup-pitch.jpg"
+  },
+  {
+    "id": "5",
+    "title": "Poetry Slam",
+    "date": "2025-09-30",
+    "content": "An evening of expressive poetry and spoken word.",
+    "img": "https://example.com/posters/poetry-slam.png"
+  },
+  {
+    "id": "6",
+    "title": "Drama Competition",
+    "date": "2025-10-02",
+    "content": "Teams perform short plays on given themes.",
+    "img": "https://example.com/posters/drama.jpg"
+  },
+  {
+    "id": "7",
+    "title": "Hackathon 24Hrs",
+    "date": "2025-09-28",
+    "content": "A 24-hour hackathon to build innovative solutions.",
+    "img": "https://example.com/posters/hackathon.png"
+  },
+  {
+    "id": "9",
+    "title": "Photo Exhibition",
+    "date": "2025-09-18",
+    "content": "An exhibition of the best clicks by our college photographers.",
+    "img": "https://example.com/posters/photo-exhibition.jpg"
+  },
+  {
+    "id": "10",
+    "title": "Line Follower Robot Race",
+    "date": "2025-09-22",
+    "content": "Robotics enthusiasts build and race line follower robots.",
+    "img": "https://example.com/posters/robot-race.png"
+  },
+  {
+    "id": "11",
+    "title": "Short Film Festival",
+    "date": "2025-09-27",
+    "content": "Screening of student-made short films followed by an award ceremony.",
+    "img": "https://example.com/posters/short-film.jpg"
+  }
+]

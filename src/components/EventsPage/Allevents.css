@@ -1,25 +1,172 @@
+/* Hero Section */
+.events-main-hero {
+  position: relative;
+  height: 60vh;
+  background: url("/assets/hero-bg.jpg") center/cover no-repeat; /* ✅ replace with real hero bg */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .top-hro-all-evnts-pol {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 .top-hro-all-evnts-pol h1 {
   color: var(--text-color-white);
   font-weight: 900;
-  font-size: 7.5vw;
+  font-size: clamp(2rem, 7.5vw, 5rem);
   font-family: "Barlow Condensed", sans-serif;
+  line-height: 1.2;
 }
 
-.eic-hd-ttle {
-  padding-left: 1.2vw;
-  padding-right: 1.2vw;
+/* Section Heading */
+.upcom-evnts-top {
+  margin: 5vw auto 2vw;
+  text-align: center;
 }
 
-@media only screen and (max-width: 660px) {
-  .eic-hd-ttle {
-    margin-top: 17vw !important;
-    /* margin-bottom: 2vw !important; */
+.upcom-evnts-top h1 span {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+/* Events Wrapper */
+.upcomi-evvnts-parnt {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 2vw;
+  padding: 2vw;
+}
+
+.upcom-evnt-indi {
+  flex: 0 0 300px;
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease;
+}
+
+.upcom-evnt-indi:hover {
+  transform: translateY(-5px);
+}
+
+/* Event Image */
+.img-upcom-evnt {
+  width: 100%;
+  height: 200px;
+  border-radius: 1rem;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.img-upcom-evnt img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Event Texts */
+.title-announc-upcom-evnt h1 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--text-color-primary);
+}
+
+.dte-locn-upcomi-event h2 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.abt-content-indi-evnt h3 {
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: #666;
+  line-height: 1.4;
+  margin-top: 1rem;
+}
+
+/* Buttons inside each card */
+.btns-info-klp {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.btns-1-ent-indi button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  background: var(--text-color-primary);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btns-1-ent-indi button:hover {
+  background: #1a2d47;
+}
+
+/* Scroll Nav Buttons */
+.btns {
+  text-align: center;
+  margin: 2vw 0;
+}
+
+.btn-testimonial {
+  background: var(--text-color-primary);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  padding: 0.8rem;
+  margin: 0 0.5rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-testimonial:hover {
+  background: #1a2d47;
+}
+
+.btn-indi-testimonial {
+  font-size: 1.2rem;
+}
+
+/* Responsive Fixes */
+@media only screen and (max-width: 768px) {
+  .upcomi-evvnts-parnt {
+    gap: 4vw;
+  }
+
+  .upcom-evnt-indi {
+    flex: 0 0 80%;
+  }
+
+  .img-upcom-evnt {
+    height: 180px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .top-hro-all-evnts-pol h1 {
+    font-size: 2rem;
+  }
+
+  .upcom-evnt-indi {
+    flex: 0 0 90%;
+    padding: 1rem;
+  }
+
+  .img-upcom-evnt {
+    height: 150px;
   }
 }
