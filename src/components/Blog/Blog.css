@@ -185,6 +185,7 @@
 
 .whoholdsthetag {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .whoholdsthetag button {
