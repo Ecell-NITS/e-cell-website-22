@@ -8,7 +8,8 @@
     "linkedln": "https://www.linkedin.com/in/anusna-pradhan",
     "git": "https://github.com/iz4nam1"
   },
-   {"id": 2,
+  {
+    "id": 2,
     "name": "Ayushman Swain",
     "rank": "Junior Web Developer",
     "image": "https://res.cloudinary.com/dw3n9vflw/image/upload/v1756824571/20241002_165333_-_Ayushman_Swain_dlwkfw.jpg",
@@ -16,30 +17,31 @@
     "linkedln": "https://www.linkedin.com/in/ayushman-swain-as?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     "git": "https://github.com/Ayushman-Swain"
   },
-    {"id": 3,
+  {
+    "id": 3,
     "name": "Debangshu Mounas",
     "rank": "Junior Flutter Developer",
     "image": "https://res.cloudinary.com/dw3n9vflw/image/upload/v1756827078/IMG-20241103-WA0103_2_-_Debangshu_Mounas_bkldr8.jpg",
     "fb": "https://www.facebook.com/profile.php?id=61561971812602&mibextid=ZbWKwL",
     "linkedln": "https://www.linkedin.com/in/debangshu-mounas-3b273b317 ",
     "git": "https://github.com/DMounas"
-    },
-    {
+  },
+  {
     "id": 4,
     "name": "Dhruba Agarwalla",
     "rank": "Junior Web Developer",
     "image": "https://res.cloudinary.com/dw3n9vflw/image/upload/v1756822796/dhruba_igzhj2.jpg",
     "fb": "https://www.facebook.com/profile.php?id=61573045432606",
-    "linkedln":"https://www.linkedin.com/in/dhruba-kumar-agarwalla-7a5346270/",
+    "linkedln": "https://www.linkedin.com/in/dhruba-kumar-agarwalla-7a5346270/",
     "git": "https://github.com/DhrubaAgarwalla"
   },
-    {
+  {
     "id": 5,
     "name": "Harshit Agarwal",
     "rank": "Junior Web Developer",
     "image": "https://res.cloudinary.com/dw3n9vflw/image/upload/v1756918762/hars_az1761.jpg",
     "fb": "https://m.facebook.com/harshit.agarwal.905220/",
-    "linkedln":"https://www.linkedin.com/in/harshit-agarwal-a119a4332/",
+    "linkedln": "https://www.linkedin.com/in/harshit-agarwal-a119a4332/",
     "git": "https://github.com/agarwal-harshit00"
   },
   {
@@ -48,7 +50,7 @@
     "rank": "Junior Web Developer",
     "image": "https://res.cloudinary.com/dw3n9vflw/image/upload/v1756826090/sas_-_MADHURJYA_KAUSHIK_b9snbk.jpg",
     "fb": "https://www.facebook.com/madhurjya.kaushik.2025/",
-    "linkedln":"https://www.linkedin.com/in/madhurjya-kaushik-752a53323",
+    "linkedln": "https://www.linkedin.com/in/madhurjya-kaushik-752a53323",
     "git": "https://github.com/xanthate8"
   },
   {
@@ -72,9 +74,9 @@
   {
     "id": 9,
     "name": "shovit sharma",
-    "rank": "Junior Flutter Developer",
-    "image":"https://res.cloudinary.com/dw3n9vflw/image/upload/v1756824950/shovit_2025_-_Shovit__Sharma_13_tegrz6.jpg",
-    "fb":"https://www.facebook.com/profile.php?id=61580164532875",
+    "rank": "Junior UI/UX Developer",
+    "image": "https://res.cloudinary.com/dw3n9vflw/image/upload/v1756824950/shovit_2025_-_Shovit__Sharma_13_tegrz6.jpg",
+    "fb": "https://www.facebook.com/profile.php?id=61580164532875",
     "linkedln": "https://www.linkedin.com/in/shovit-sharma-2b1445327/",
     "git": "https://github.com/shovitsharma"
   },
@@ -106,21 +108,3 @@
     "git": "https://github.com/studen-bot"
   }
 ]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

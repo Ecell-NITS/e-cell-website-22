@@ -83,6 +83,9 @@ const NavbarTeam = () => {
           <NavLink to="/events">EVENTS</NavLink>
         </li>
         <li>
+          <NavLink to="/empresario">EMPRESARIO</NavLink>
+        </li>
+        <li>
           <NavLink to="/resources">RESOURCES</NavLink>
         </li>
         {/* <li><a href="https://srijan-nits.in/" rel="noreferrer" target="_blank">SRIJAN</a></li> */}
