@@ -1,0 +1,625 @@
+/* Hero Section */
+.empresario-hero {
+  position: relative;
+  background: url("/images/image.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  box-shadow: inset 0 0 0 1000px var(--box-shadow-hero-color);
+  background-attachment: scroll;
+  background-position-x: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.empresario-hero-content {
+  text-align: center;
+}
+
+.empresario-hero-content h1 {
+  color: var(--text-color-white);
+  font-size: 8vw;
+  font-weight: 900;
+  font-family: "Barlow Condensed", sans-serif;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  animation: hero-fade-in 700ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* Subtle reveal-on-scroll utility */
+.reveal {
+  opacity: 0;
+  transform: translateY(12px);
+  transition:
+    opacity 600ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 600ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@keyframes hero-fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Events Section - EventsPage Style */
+.upcom-evnts-top {
+  text-align: center;
+  margin: 4vw 0 3vw 0;
+}
+
+.upcom-evnts-top h1 {
+  color: var(--light-text-color);
+  font-size: 3vw;
+  font-weight: 400;
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+.upcomi-evvnts-parnt {
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+  scroll-behavior: auto;
+  overflow: visible;
+  width: 88%;
+  margin: 0 auto;
+  margin-bottom: 5vw;
+}
+
+.upcomi-evvnts-parnt::-webkit-scrollbar {
+  display: none;
+}
+
+.upcom-evnt-indi {
+  width: 31%;
+  flex: none;
+  order: 1;
+  margin-left: 1.1%;
+  margin-right: 1.1%;
+  margin-bottom: 2.1%;
+  padding: 1vw;
+  border: 1px solid var(--light-text-color);
+  border-radius: 1vw;
+  box-shadow:
+    0 10px 20px var(--box-shadow-color-black-1),
+    0 6px 6px var(--box-shadow-color-black-2);
+  transition:
+    transform 280ms ease,
+    box-shadow 280ms ease;
+}
+
+.upcom-evnt-indi:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 12px 30px var(--box-shadow-color-black-1),
+    0 8px 12px var(--box-shadow-color-black-2);
+}
+
+/* Center the fourth card on the second row */
+.upcom-evnt-indi:nth-child(4) {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.img-upcom-evnt {
+  width: 100%;
+  height: 25vw;
+  margin: 0 auto;
+}
+
+.img-upcom-evnt img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 300ms ease;
+}
+
+.upcom-evnt-indi:hover .img-upcom-evnt img {
+  transform: scale(1.03);
+}
+
+.title-announc-upcom-evnt {
+  margin: 0.7vw 0 0 0 !important;
+}
+
+.title-announc-upcom-evnt h1 {
+  font-size: 1.7vw;
+  margin-bottom: 0;
+  color: var(--text-color-primary);
+}
+
+.btns-info-klp {
+  width: 37%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.7vw 0;
+}
+
+.dte-locn-upcomi-event {
+  margin: 0.5vw 0;
+}
+
+.dte-locn-upcomi-event h2 {
+  color: var(--text-color-grey);
+  font-weight: 400;
+  font-size: 1.2vw;
+  margin-bottom: 0;
+}
+
+.btns-1-ent-indi button {
+  background-color: var(--bg-color-primary-light);
+  color: var(--text-color-white);
+  padding: 0vw 0.5vw;
+  border-radius: 0.5vw;
+  font-size: 1.2vw;
+  border: none;
+  margin: 0.2vw;
+}
+
+.abt-content-indi-evnt {
+  overflow: auto;
+  height: 15%;
+}
+
+.abt-content-indi-evnt::-webkit-scrollbar {
+  width: 0px;
+}
+
+.abt-content-indi-evnt h3 {
+  font-size: 1.3vw;
+  color: var(--text-color-grey);
+  margin-bottom: 0;
+  font-weight: 400;
+  overflow: auto;
+}
+
+/* Navigation buttons */
+.btns {
+  display: none;
+}
+
+.btn-testimonial {
+  background-color: var(--bg-color-primary);
+  color: var(--text-color-white);
+  border: none;
+  border-radius: 50%;
+  width: 3vw;
+  height: 3vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-testimonial:hover {
+  background-color: var(--bg-color-primary-light);
+  transform: scale(1.1);
+}
+
+.btn-indi-testimonial {
+  font-size: 1.5vw;
+}
+
+/* Carousel Section */
+.empresario-carousel-section {
+  padding: 5vw 0;
+  background-color: var(--bg-color-grey-light);
+  overflow: hidden;
+}
+
+.empresario-carousel-title {
+  text-align: center;
+  margin-bottom: 4vw;
+}
+
+.empresario-carousel-title h2 {
+  color: var(--text-color-primary);
+  font-size: 4vw;
+  font-weight: 600;
+  font-family: "Barlow Condensed", sans-serif;
+  margin: 0;
+}
+
+.empresario-carousel-container {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  position: relative;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.empresario-carousel-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.empresario-carousel-container::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.empresario-carousel-container::-webkit-scrollbar-thumb {
+  background: var(--bg-color-primary);
+  border-radius: 4px;
+}
+
+.empresario-carousel-container::-webkit-scrollbar-thumb:hover {
+  background: var(--bg-color-primary-light);
+}
+
+.empresario-carousel-track {
+  display: flex;
+  animation: scroll 20s linear infinite;
+  transition: transform 0.3s ease;
+  width: calc(300px * 10); /* Adjust based on number of images */
+}
+
+.empresario-carousel-track:hover {
+  animation-play-state: paused;
+}
+
+.empresario-carousel-slide {
+  flex: 0 0 300px;
+  height: 200px;
+  margin-right: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.empresario-carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.empresario-carousel-slide:hover img {
+  transform: scale(1.05);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-300px * 5 - 100px)); /* Half the total width */
+  }
+}
+
+/* Our Sponsors section (adapted from Collaboration) */
+.our-sponsors {
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+  border-bottom: 3px solid var(--border-color-primary);
+  padding: 3rem 0 0 0;
+  margin-bottom: 3.5rem;
+}
+
+.our-sponsors h2 {
+  font-size: 4.45vw;
+  font-family: "Barlow Condensed", sans-serif;
+  color: var(--text-color-primary);
+  font-weight: 900;
+  margin: 0;
+}
+
+.sponsors-slider {
+  width: 90%;
+  margin: 0 auto 4rem auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.sponsors-track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  animation: sponsors-scroll 30s linear infinite;
+}
+
+.sponsors-track:hover {
+  animation-play-state: paused;
+}
+
+.sponsor-logo {
+  flex: 0 0 220px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+}
+
+/* grayscale hover effect similar to Collaboration */
+.ru-collab {
+  width: 70%;
+  height: 100%;
+  filter: grayscale(1);
+  transition: all 0.2s ease-out;
+  padding-bottom: 1.5vh;
+}
+
+.sponsor-logo:hover .ru-collab {
+  filter: grayscale(0);
+  transform: translateY(-1vh);
+}
+
+@keyframes sponsors-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive Design for Events Section */
+@media only screen and (min-width: 660px) {
+  .upcom-evnt-indi {
+    height: 42vw !important;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .btns-info-klp {
+    width: 42%;
+    margin: 0 0 0.7vw 0;
+  }
+
+  .btns-1-ent-indi button {
+    background-color: var(--bg-color-primary);
+    color: var(--text-color-white);
+    padding: 0vw 0.8vw;
+    border-radius: 0.5vw;
+    font-size: 1.2vw;
+    border: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .empresario-hero-content h1 {
+    font-size: 12vw;
+  }
+
+  .empresario-carousel-title h2 {
+    font-size: 6vw;
+  }
+
+  .our-sponsors h2 {
+    font-size: 7vw;
+  }
+
+  .empresario-carousel-slide {
+    flex: 0 0 250px;
+    height: 150px;
+  }
+
+  .empresario-carousel-track {
+    width: calc(250px * 10);
+  }
+
+  .sponsor-logo {
+    flex: 0 0 180px;
+    height: 100px;
+    margin-right: 16px;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-250px * 5 - 100px));
+    }
+  }
+}
+
+@media only screen and (max-width: 660px) {
+  .upcom-evnts-top {
+    margin: 6vw 0;
+  }
+
+  .upcom-evnts-top h1 {
+    font-size: 8vw;
+  }
+
+  .upcomi-evvnts-parnt {
+    width: 100%;
+    margin-bottom: 10vw;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    overflow: visible;
+  }
+
+  .upcom-evnt-indi {
+    width: 88%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2vw;
+    border: 1px solid var(--border-color-primary);
+    border-radius: 2vw;
+  }
+
+  .img-upcom-evnt {
+    width: 100%;
+    height: 70vw;
+    margin: 0 auto;
+  }
+
+  .title-announc-upcom-evnt {
+    margin: 2.5vw 0 1.7vw 0 !important;
+  }
+
+  .title-announc-upcom-evnt h1 {
+    font-size: 6vw;
+    margin-bottom: 0;
+  }
+
+  .dte-locn-upcomi-event {
+    margin-bottom: 2vw;
+  }
+
+  .dte-locn-upcomi-event h2 {
+    font-size: 3.5vw;
+    margin-bottom: 0;
+  }
+
+  /* Tags container: keep buttons close together on mobile */
+  .btns-info-klp {
+    width: max-content; /* shrink to content to avoid large gaps */
+    justify-content: flex-start; /* no space-between on mobile */
+    gap: 2.5vw; /* subtle gap between Empresario and Event */
+  }
+
+  .btns-1-ent-indi button {
+    background-color: var(--bg-color-primary);
+    color: var(--text-color-white);
+    padding: 0.5vw 3vw;
+    border-radius: 1vw;
+    font-size: 3vw;
+    margin: 0; /* remove residual margins so gap is controlled by container */
+  }
+
+  .abt-content-indi-evnt {
+    margin-top: 3vw;
+  }
+
+  .abt-content-indi-evnt h3 {
+    font-size: 4vw;
+  }
+
+  .btn-testimonial {
+    width: 8vw;
+    height: 8vw;
+  }
+
+  .btn-indi-testimonial {
+    font-size: 4vw;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .empresario-hero {
+    height: 80vh;
+  }
+
+  .empresario-carousel-section {
+    padding: 8vw 0;
+  }
+
+  .empresario-carousel-slide {
+    flex: 0 0 200px;
+    height: 120px;
+  }
+
+  .empresario-carousel-track {
+    width: calc(200px * 10);
+  }
+
+  .sponsor-logo {
+    flex: 0 0 150px;
+    height: 90px;
+    margin-right: 12px;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-200px * 5 - 100px));
+    }
+  }
+}
+
+/* View Details Button Styles */
+/* View Details Button Styles (Empresario cards) */
+.view-details-btn-container {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.view-details-btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background: var(--bg-color-primary);
+  color: var(--text-color-white);
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.view-details-btn:hover {
+  background: var(--bg-color-primary-light);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px var(--box-shadow-color-black-2);
+  text-decoration: none;
+  color: var(--text-color-white);
+}
+
+.view-details-btn:active {
+  transform: translateY(0);
+}
+
+/* Responsive styles for View Details button */
+@media only screen and (max-width: 768px) {
+  .view-details-btn {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.85rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .view-details-btn {
+    padding: 0.6rem 1rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* ----- Layout fixes for laptop/desktop ----- */
+/* Make each event card a flex column and keep content inside */
+.upcom-evnt-indi {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Let description take available space so button sits at bottom */
+.abt-content-indi-evnt {
+  height: auto;
+  flex-grow: 1;
+}
+
+/* Anchor the View Details button to card bottom */
+.view-details-btn-container {
+  margin-top: auto;
+}
+
+/* Override rigid height on larger screens so content doesn’t overflow */
+@media only screen and (min-width: 660px) {
+  .upcomi-evvnts-parnt .upcom-evnt-indi {
+    height: auto !important;
+    min-height: 36vw !important;
+  }
+}

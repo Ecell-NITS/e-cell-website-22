@@ -24,7 +24,16 @@ const Navbar = () => {
   window.addEventListener("scroll", changeToggle);
 
   const movetosection = () => {
-    document.getElementById("aboutecellnits").scrollIntoView();
+    const el = document.getElementById("aboutecellnits");
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    } else {
+      navigate("/");
+      setTimeout(() => {
+        const el2 = document.getElementById("aboutecellnits");
+        if (el2) el2.scrollIntoView({ behavior: "smooth" });
+      }, 300);
+    }
   };
 
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -87,6 +96,9 @@ const Navbar = () => {
         <li>
           {" "}
           <NavLink to="/events">EVENTS</NavLink>
+        </li>
+        <li>
+          <NavLink to="/empresario">EMPRESARIO</NavLink>
         </li>
         <li>
           <NavLink to="/resources">RESOURCES</NavLink>
