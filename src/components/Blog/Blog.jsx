@@ -237,7 +237,7 @@ const Blog = () => {
 
                         <div className="whowrittenblog">
                           <Link to={`/user/${blog.authorid}`}>
-                            <h2>{blog.writername}</h2>
+                            <h2>{blog.writernmae}</h2>
                           </Link>
                         </div>
 
@@ -254,13 +254,7 @@ const Blog = () => {
                                     id="tagbuttonidlink"
                                     // key={index}
                                   >
-                                    <button
-                                      key={index}
-                                      className={index !== 0 ? "buttonmarginlft" : ""}
-                                    >
-                                      {" "}
-                                      {word}
-                                    </button>
+                                    <button key={index}> {word}</button>
                                   </Link>
                                 )
                             )}
