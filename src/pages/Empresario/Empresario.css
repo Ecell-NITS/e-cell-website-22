@@ -5,13 +5,29 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100vh;
+  height: 100vh; /* fallback for older browsers */
+  min-height: 100vh;
   box-shadow: inset 0 0 0 1000px var(--box-shadow-hero-color);
   background-attachment: scroll;
   background-position-x: center;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* Ensure true full-screen height on mobile browsers */
+@supports (height: 100svh) {
+  .empresario-hero {
+    height: 100svh;
+    min-height: 100svh;
+  }
+}
+
+@supports (height: 100dvh) {
+  .empresario-hero {
+    height: 100dvh;
+    min-height: 100dvh;
+  }
 }
 
 .empresario-hero-content {
@@ -217,7 +233,7 @@
 /* Carousel Section */
 .empresario-carousel-section {
   padding: 5vw 0;
-  background-color: var(--bg-color-grey-light);
+  background-color: var(--bg-color-white, #ffffff);
   overflow: hidden;
 }
 
@@ -234,6 +250,17 @@
   margin: 0;
 }
 
+/* Subtle divider under the gallery title */
+.empresario-carousel-title h2::after {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 2px;
+  background: rgba(0, 0, 0, 0.12);
+  margin: 1rem auto 0;
+  border-radius: 2px;
+}
+
 .empresario-carousel-container {
   width: 100%;
   overflow-x: auto;
@@ -241,24 +268,13 @@
   position: relative;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
+  /* Hide scrollbars while keeping scroll functionality */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge legacy */
 }
 
 .empresario-carousel-container::-webkit-scrollbar {
-  height: 8px;
-}
-
-.empresario-carousel-container::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 4px;
-}
-
-.empresario-carousel-container::-webkit-scrollbar-thumb {
-  background: var(--bg-color-primary);
-  border-radius: 4px;
-}
-
-.empresario-carousel-container::-webkit-scrollbar-thumb:hover {
-  background: var(--bg-color-primary-light);
+  display: none; /* WebKit */
 }
 
 .empresario-carousel-track {
