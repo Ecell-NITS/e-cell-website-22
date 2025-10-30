@@ -196,6 +196,11 @@
     display: contents; /* enable grid items */
   }
 
+  /* Hide total registered teams in hero on laptop/desktop */
+  .hero-stats {
+    display: none;
+  }
+
   /* Left info card */
   .hero-info {
     background: linear-gradient(180deg, #ffffff, #f8fafc);
@@ -387,6 +392,24 @@
   color: var(--bg-color-primary, #224259);
   border-bottom-color: var(--bg-color-primary, #224259);
   background: rgba(34, 66, 89, 0.05);
+}
+
+/* Mobile-only Register CTA under tabs */
+.mobile-register-btn {
+  display: none;
+}
+
+.mobile-register-btn button {
+  width: 100%;
+  padding: 0.7rem 1rem; /* slightly smaller */
+  border-radius: 8px;
+  border: none;
+  background: var(--bg-color-primary, #224259);
+  color: #fff;
+  font-size: 0.95rem; /* slightly smaller */
+  font-weight: 600;
+  box-shadow: 0 8px 24px rgba(34, 66, 89, 0.2);
+  margin: 0.5rem 0 0.75rem; /* space below tags and above tabs */
 }
 
 /* Main Content Layout */
@@ -903,6 +926,23 @@
     display: none; /* Chrome, Safari, Opera */
   }
 
+  /* Mobile tab order: About, Event Details, Register, Schedule, Live Updates */
+  .tab-about {
+    order: 1;
+  }
+  .tab-event-details {
+    order: 2;
+  }
+  .tab-register {
+    order: 3;
+  }
+  .tab-schedule {
+    order: 4;
+  }
+  .tab-live-updates {
+    order: 5;
+  }
+
   .main-content {
     padding: 1rem;
     grid-template-columns: 1fr;
@@ -918,6 +958,11 @@
 
   .mobile-only {
     display: inline-block !important; /* Show Event Details tab on mobile */
+  }
+
+  .mobile-register-btn {
+    display: block;
+    padding: 0 1rem; /* align with mobile content padding */
   }
 
   .form-row {

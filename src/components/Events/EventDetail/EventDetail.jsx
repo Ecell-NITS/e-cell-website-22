@@ -351,10 +351,6 @@ const EventDetail = () => {
               <span>📍</span>
               <span>{event.location}</span>
             </div>
-            <div className="hero-meta-item">
-              <span>👥</span>
-              <span>{event.organizer}</span>
-            </div>
           </div>
         </motion.div>
 
@@ -423,6 +419,11 @@ const EventDetail = () => {
         <button className="meta-chip-btn">{event.category}</button>
       </motion.div>
 
+      {/* Mobile-only Register CTA between tags and tabs */}
+      <div className="mobile-register-btn">
+        <button onClick={goToRegister}>📝 Register Now</button>
+      </div>
+
       {/* Navigation Tabs */}
       <motion.div
         className="nav-tabs reveal"
@@ -432,31 +433,31 @@ const EventDetail = () => {
         transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
       >
         <button
-          className={`tab ${activeTab === "about" ? "active" : ""}`}
+          className={`tab tab-about ${activeTab === "about" ? "active" : ""}`}
           onClick={() => setActiveTab("about")}
         >
           About
         </button>
         <button
-          className={`tab ${activeTab === "schedule" ? "active" : ""}`}
+          className={`tab tab-schedule ${activeTab === "schedule" ? "active" : ""}`}
           onClick={() => setActiveTab("schedule")}
         >
           Schedule
         </button>
         <button
-          className={`tab ${activeTab === "register" ? "active" : ""}`}
+          className={`tab tab-register ${activeTab === "register" ? "active" : ""}`}
           onClick={() => setActiveTab("register")}
         >
           Register
         </button>
         <button
-          className={`tab ${activeTab === "live-updates" ? "active" : ""}`}
+          className={`tab tab-live-updates ${activeTab === "live-updates" ? "active" : ""}`}
           onClick={() => setActiveTab("live-updates")}
         >
           🔴 Live Updates
         </button>
         <button
-          className={`tab mobile-only ${activeTab === "event-details" ? "active" : ""}`}
+          className={`tab mobile-only tab-event-details ${activeTab === "event-details" ? "active" : ""}`}
           onClick={() => setActiveTab("event-details")}
         >
           🎯 Event Details
