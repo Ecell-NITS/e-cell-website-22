@@ -44,6 +44,58 @@
   animation: hero-fade-in 700ms cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
+/* Hero overlay text styles */
+.empresario-hero-title {
+  color: var(--text-color-white);
+  font-size: 8vw;
+  font-weight: 900;
+  font-family: "Barlow Condensed", sans-serif;
+  margin: 0 0 1vw 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.empresario-hero-subtitle {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 2.2vw;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  margin: 0.5vw 0 0.8vw 0;
+}
+
+.empresario-hero-tagline {
+  color: var(--text-color-white);
+  font-size: 4.6vw;
+  font-weight: 800;
+  font-family: "Barlow Condensed", sans-serif;
+  margin: 0.2vw 0 2.2vw 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-cta {
+  display: inline-block;
+  background: var(--bg-color-primary);
+  color: var(--text-color-white);
+  border: none;
+  outline: none;
+  padding: 0.9rem 1.4rem;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.2px;
+  box-shadow: 0 10px 20px var(--box-shadow-color-black-2);
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.hero-cta:hover {
+  background: var(--bg-color-primary-light);
+  transform: translateY(-2px);
+}
+
+.hero-cta:active {
+  transform: translateY(0);
+}
+
 /* Subtle reveal-on-scroll utility */
 .reveal {
   opacity: 0;
@@ -412,6 +464,25 @@
     font-size: 12vw;
   }
 
+  .empresario-hero-title {
+    font-size: 12vw;
+  }
+
+  .empresario-hero-subtitle {
+    font-size: 4.5vw;
+    margin-top: 2vw;
+  }
+
+  .empresario-hero-tagline {
+    font-size: 8vw;
+    margin-bottom: 4vw;
+  }
+
+  .hero-cta {
+    padding: 0.8rem 1.2rem;
+    font-size: 0.95rem;
+  }
+
   .empresario-carousel-title h2 {
     font-size: 6vw;
   }
@@ -532,6 +603,19 @@
 @media only screen and (max-width: 480px) {
   .empresario-hero {
     height: 80vh;
+  }
+
+  .empresario-hero-subtitle {
+    font-size: 5vw;
+  }
+
+  .empresario-hero-tagline {
+    font-size: 9vw;
+  }
+
+  .hero-cta {
+    padding: 0.7rem 1.1rem;
+    font-size: 0.9rem;
   }
 
   .empresario-carousel-section {

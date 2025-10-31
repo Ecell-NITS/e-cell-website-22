@@ -28,6 +28,13 @@ const Empresario = () => {
     eventsRef.current.scrollLeft -= eventsRef.current.offsetWidth;
   }
 
+  // Scroll to events section from Hero CTA
+  const scrollToEvents = () => {
+    if (eventsRef.current) {
+      eventsRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   // Lazy loading implementation
   const config = {
     rootMargin: "0px 0px 0px 0px",
@@ -230,7 +237,16 @@ const Empresario = () => {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
         >
-          <h1>EMPRESARIO</h1>
+          <h1 className="empresario-hero-title">Empresario</h1>
+          <p className="empresario-hero-subtitle">The Entrepreneurship Module of</p>
+          <h3 className="empresario-hero-tagline">Tecnoesis 2025</h3>
+          <button
+            className="hero-cta"
+            onClick={scrollToEvents}
+            aria-label="Explore events"
+          >
+            Explore Events
+          </button>
         </motion.div>
       </div>
 

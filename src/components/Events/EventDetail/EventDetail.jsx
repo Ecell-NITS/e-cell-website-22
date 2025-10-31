@@ -499,6 +499,41 @@ const EventDetail = () => {
               >
                 <h2>About the Event</h2>
                 <p>{event.description}</p>
+
+                {/* For Queries section with demo contacts */}
+                <div className="queries-section">
+                  <h3>For Queries</h3>
+                  <div className="contact-list">
+                    <div className="contact-card">
+                      <div className="contact-name">Dhruba Agarwalla</div>
+                      <div className="contact-contact">
+                        <div className="contact-phone">
+                          📞 <a href="tel:+919876543210">+91 9876543210</a>
+                        </div>
+                        <div className="contact-email">
+                          ✉️{" "}
+                          <a href="mailto:ecell-demo1@example.com">
+                            ecell-demo1@example.com
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="contact-card">
+                      <div className="contact-name">Dhruba </div>
+                      <div className="contact-contact">
+                        <div className="contact-phone">
+                          📞 <a href="tel:+919123456789">+91 9123456789</a>
+                        </div>
+                        <div className="contact-email">
+                          ✉️{" "}
+                          <a href="mailto:ecell-demo2@example.com">
+                            ecell-demo2@example.com
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </motion.div>
             )}
 

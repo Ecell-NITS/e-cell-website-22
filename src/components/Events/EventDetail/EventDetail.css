@@ -530,6 +530,68 @@
   background: #e91e63;
 }
 
+/* Queries / Contacts in About tab */
+.queries-section {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: var(--box-bg-color, #f8f9fa);
+  border-radius: 8px;
+  border-left: 4px solid var(--bg-color-primary, #224259);
+}
+
+.contact-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.contact-card {
+  background: #ffffff;
+  border: 1px solid var(--border-color, #e0e0e0);
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: var(--box-shadow, 0 4px 6px rgba(0, 0, 0, 0.05));
+}
+
+.contact-name {
+  font-weight: 600;
+  color: var(--text-color-primary, #224259);
+  margin-bottom: 0.25rem;
+}
+
+.contact-contact {
+  color: var(--text-color-secondary, #666);
+  font-size: 0.95rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.35rem;
+  line-height: 1.5;
+}
+
+.contact-phone,
+.contact-email {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.contact-contact a {
+  color: var(--bg-color-primary, #224259) !important;
+  text-decoration: none;
+  font-size: 1rem !important;
+  font-weight: 600;
+  display: inline;
+}
+
+.contact-contact a:visited {
+  color: var(--bg-color-primary, #224259) !important;
+}
+
+.contact-contact a:hover {
+  text-decoration: underline;
+}
+
 /* Schedule Content */
 .schedule-day {
   margin: 2rem 0;
@@ -971,6 +1033,11 @@
 
   .back-to-events {
     padding: 1rem;
+  }
+
+  /* Stack queries contacts on mobile */
+  .contact-list {
+    grid-template-columns: 1fr;
   }
 
   /* Event Details tab content styling for mobile */
