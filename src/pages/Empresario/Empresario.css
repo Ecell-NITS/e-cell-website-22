@@ -87,6 +87,14 @@
   cursor: pointer;
 }
 
+/* Group hero CTAs side-by-side with subtle gap */
+.hero-cta-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-top: 0.8rem;
+}
+
 .hero-cta:hover {
   background: var(--bg-color-primary-light);
   transform: translateY(-2px);
@@ -227,6 +235,22 @@
   margin-bottom: 0;
 }
 
+/* Compact, professional spacing for details */
+.dte-locn-upcomi-event p,
+.event-meta-info p {
+  margin: 0.2rem 0;
+  font-size: 0.95rem;
+  color: var(--text-color-secondary);
+  line-height: 1.45;
+}
+
+.event-meta-info {
+  margin: 0.45rem 0;
+  padding: 0.5rem 0.6rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+}
+
 .btns-1-ent-indi button {
   background-color: var(--bg-color-primary-light);
   color: var(--text-color-white);
@@ -287,6 +311,58 @@
   padding: 5vw 0;
   background-color: var(--bg-color-white, #ffffff);
   overflow: hidden;
+}
+
+/* About Section */
+.empresario-about {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.03), rgba(0, 0, 0, 0.06));
+  padding: 4rem 0 3rem 0;
+}
+
+.empresario-about-inner {
+  width: 88%;
+  margin: 0 auto;
+  text-align: left;
+  background: var(--bg-color-white);
+  border: 1px solid var(--border-color-primary);
+  border-radius: 12px;
+  padding: 2rem 2rem;
+  box-shadow:
+    0 10px 20px var(--box-shadow-color-black-1),
+    0 6px 6px var(--box-shadow-color-black-2);
+}
+
+.empresario-about-inner h2 {
+  color: var(--text-color-primary);
+  font-size: 3vw;
+  font-weight: 700;
+  font-family: "Barlow Condensed", sans-serif;
+  margin: 0 0 1rem 0;
+}
+
+/* Subtle divider under the About title */
+.empresario-about-inner h2::after {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 2px;
+  background: rgba(0, 0, 0, 0.12);
+  margin: 0.8rem 0 0 0;
+  border-radius: 2px;
+}
+
+.empresario-about-inner p {
+  color: var(--text-color-grey);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin: 0.6rem 0;
+}
+
+.empresario-about-note {
+  font-size: 0.9rem;
+  color: var(--text-color-secondary);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  padding-top: 0.75rem;
 }
 
 .empresario-carousel-title {
@@ -483,8 +559,27 @@
     font-size: 0.95rem;
   }
 
+  .hero-cta-group {
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
   .empresario-carousel-title h2 {
     font-size: 6vw;
+  }
+
+  .empresario-about-inner h2 {
+    font-size: 7vw;
+  }
+
+  .empresario-about-inner p {
+    font-size: 1rem;
+  }
+
+  .empresario-about-inner {
+    padding: 1.2rem 1.2rem;
+    border-radius: 10px;
   }
 
   .our-sponsors h2 {
@@ -566,6 +661,20 @@
     margin-bottom: 0;
   }
 
+  /* Keep details tight on mobile as well */
+  .dte-locn-upcomi-event p,
+  .event-meta-info p {
+    font-size: 3.3vw;
+    margin: 0.8vw 0;
+    line-height: 1.5;
+  }
+
+  .event-meta-info {
+    margin: 1.2vw 0;
+    padding: 1.8vw 2vw;
+    border-radius: 2vw;
+  }
+
   /* Tags container: keep buttons close together on mobile */
   .btns-info-klp {
     width: max-content; /* shrink to content to avoid large gaps */
@@ -580,6 +689,15 @@
     border-radius: 1vw;
     font-size: 3vw;
     margin: 0; /* remove residual margins so gap is controlled by container */
+  }
+
+  .empresario-about {
+    padding: 10vw 0 8vw 0;
+  }
+
+  .empresario-about-inner {
+    width: 92%;
+    padding: 4vw;
   }
 
   .abt-content-indi-evnt {

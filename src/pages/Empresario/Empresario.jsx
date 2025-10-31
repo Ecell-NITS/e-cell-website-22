@@ -10,6 +10,7 @@ const Empresario = () => {
   const carouselRef = useRef(null);
   const sponsorsRef = useRef(null);
   const eventsRef = useRef(null);
+  const aboutRef = useRef(null);
   const [isPaused, setIsPaused] = useState(false);
   const [loaded, setIsLoaded] = useState(false);
   const timeoutRef = useRef(null);
@@ -32,6 +33,13 @@ const Empresario = () => {
   const scrollToEvents = () => {
     if (eventsRef.current) {
       eventsRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
+  // Scroll to About section from Hero CTA
+  const scrollToAbout = () => {
+    if (aboutRef.current) {
+      aboutRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
 
@@ -149,43 +157,51 @@ const Empresario = () => {
     };
   }, []);
 
-  // Event data for the 4 events
+  // Event data for the 4 events - Updated with actual event details
   const empresarioEvents = [
     {
       id: 1,
-      title: "Business Hackathon",
-      date: "Coming Soon",
-      location: "NIT Silchar",
+      title: "BUSINESS HACKATHON",
+      date: "Nov 8 - Nov 21, 2025",
+      location: "Start UP Center",
       img: "https://res.cloudinary.com/dp92qug2f/image/upload/v1685019690/Ecell%20website/collaboration%20backgrounds/Empressario-1_ewb2al.webp",
       content:
-        "A competitive hackathon focused on developing innovative business solutions and entrepreneurial ideas.",
+        "It starts with a spark—a test of wit and instinct. Then comes the hustle, where ideas take shape and teams rise. Ideas ignite, strategies clash, and legacies begin. EMINENCE isn't just a battle of brains—it's a race to be remembered.",
+      teamSize: "3 to 5 members",
+      registrationDeadline: "November 8, 2025",
     },
     {
       id: 2,
-      title: "Treasure Hunt",
-      date: "Coming Soon",
-      location: "NIT Silchar",
+      title: "TREASURE HUNT",
+      date: "Apr 15, 2025",
+      location: "Campus Wide",
       img: "https://res.cloudinary.com/dp92qug2f/image/upload/v1685019690/Ecell%20website/collaboration%20backgrounds/Empressario-1_ewb2al.webp",
       content:
-        "An exciting treasure hunt event that combines problem-solving skills with entrepreneurial thinking.",
+        "Get ready to experience the thrill of business, strategy, and discovery as E-Cell NIT Silchar presents the Entrepreneurial Treasure Hunt — a campus-wide adventure that blends fun with the essence of entrepreneurship.",
+      teamSize: "3 to 5 members",
+      registrationDeadline: "April 10, 2025",
     },
     {
       id: 3,
-      title: "Bech Kae Dikhao",
-      date: "Coming Soon",
-      location: "NIT Silchar",
+      title: "BID-WISE",
+      date: "Apr 20 - Apr 21, 2025",
+      location: "Central Arena & Stall Areas",
       img: "https://res.cloudinary.com/dp92qug2f/image/upload/v1685019690/Ecell%20website/collaboration%20backgrounds/Empressario-1_ewb2al.webp",
       content:
-        "A sales and marketing competition where participants showcase their selling and presentation skills.",
+        "BID-WISE is an exciting strategic auction competition where teams compete in a silent auction format. Teams must strategically bid on items of varying difficulty levels to maximize their points while managing their limited resources.",
+      teamSize: "3 to 5 members",
+      registrationDeadline: "April 15, 2025",
     },
     {
       id: 4,
       title: "Adovation",
-      date: "Coming Soon",
-      location: "NIT Silchar",
+      date: "Nov 15 - Nov 22, 2025",
+      location: "Online Submission",
       img: "https://res.cloudinary.com/dp92qug2f/image/upload/v1685019690/Ecell%20website/collaboration%20backgrounds/Empressario-1_ewb2al.webp",
       content:
-        "An advertising and innovation challenge that tests creative thinking and marketing strategies.",
+        "A Tecnoesis 'Empressario' Module Event by Ecell. Teams will create engaging promotional videos for assigned shops, showcasing their marketing creativity and video production skills.",
+      teamSize: "3 to 6 members",
+      registrationDeadline: "November 15, 2025",
     },
   ];
 
@@ -240,15 +256,52 @@ const Empresario = () => {
           <h1 className="empresario-hero-title">Empresario</h1>
           <p className="empresario-hero-subtitle">The Entrepreneurship Module of</p>
           <h3 className="empresario-hero-tagline">Tecnoesis 2025</h3>
-          <button
-            className="hero-cta"
-            onClick={scrollToEvents}
-            aria-label="Explore events"
-          >
-            Explore Events
-          </button>
+          <div className="hero-cta-group">
+            <button
+              className="hero-cta"
+              onClick={scrollToAbout}
+              aria-label="About Empresario"
+            >
+              About Empresario
+            </button>
+            <button
+              className="hero-cta"
+              onClick={scrollToEvents}
+              aria-label="Explore events"
+            >
+              Explore Events
+            </button>
+          </div>
         </motion.div>
       </div>
+
+      {/* About Section */}
+      <section className="empresario-about" ref={aboutRef} aria-label="About Empresario">
+        <motion.div
+          className="empresario-about-inner reveal"
+          initial={{ opacity: 0, y: prefersReducedMotion ? 0 : 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+        >
+          <h2>About Empresario</h2>
+          <p>
+            Empresario is the entrepreneurship module of Tecnoesis, the annual techfest of
+            NIT Silchar. Led by E-Cell NIT Silchar, it provides a campus-wide platform for
+            students to showcase business acumen, creativity, and problem‑solving through
+            curated events and competitions.
+          </p>
+          <p>
+            Under this module, participants engage in strategy‑focused challenges such as
+            hackathons, case competitions, marketing campaigns, bidding/auction gameplay,
+            and treasure hunts—designed to build practical skills in analysis, teamwork,
+            and execution.
+          </p>
+          <p className="empresario-about-note">
+            Source: E‑Cell NIT Silchar site and Tecnoesis updates.
+          </p>
+        </motion.div>
+      </section>
 
       {/* Events Section */}
       <div className="upcom-evnts-top">
@@ -294,15 +347,12 @@ const Empresario = () => {
 
               <div className="dte-locn-upcomi-event">
                 <h2>{event.date}</h2>
+                <p>📍 {event.location}</p>
               </div>
 
-              <div className="btns-info-klp">
-                <div className="btns-1-ent-indi">
-                  <button>Empresario</button>
-                </div>
-                <div className="btns-1-ent-indi">
-                  <button>Event</button>
-                </div>
+              <div className="event-meta-info">
+                <p>👥 Team Size: {event.teamSize}</p>
+                <p>📅 Registration Deadline: {event.registrationDeadline}</p>
               </div>
 
               <div className="abt-content-indi-evnt">

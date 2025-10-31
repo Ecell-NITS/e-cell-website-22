@@ -724,9 +724,16 @@
   border: 1px solid var(--border-color, #e0e0e0);
 }
 
+.team-member-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
 .team-member h4 {
   color: var(--bg-color-primary, #224259);
-  margin-bottom: 1rem;
+  margin: 0;
 }
 
 .add-member-btn,
@@ -743,13 +750,45 @@
 
 .remove-member-btn {
   background: #e53e3e;
-  margin-left: 1rem;
+  margin: 0;
+  padding: 0;
+  font-size: 0.75rem;
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
 }
 
 .add-member-btn:hover,
 .remove-member-btn:hover {
   opacity: 0.9;
   transform: translateY(-1px);
+}
+
+/* Phone input container styling */
+.phone-input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.phone-prefix {
+  position: absolute;
+  left: 0.75rem;
+  color: var(--text-color-secondary, #666);
+  font-weight: 500;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.phone-input-container input {
+  padding-left: 3rem;
 }
 
 .submit-btn {
