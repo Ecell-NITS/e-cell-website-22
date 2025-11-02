@@ -557,30 +557,33 @@ const EventDetail = () => {
     }));
 
     try {
-      // TODO: Replace with actual API call to backend
-      // const response = await fetch('/api/send-verification-otp', {
-      //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify({ email: formData.teamLeaderEmail })
-      // });
+      const response = await fetch("http://localhost:3000/verification/sendOtp", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: formData.teamLeaderEmail }),
+      });
 
-      // Simulate API call for now
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      const data = await response.json();
 
-      setEmailVerification((prev) => ({
-        ...prev,
-        isVerificationSent: true,
-        showOtpInput: true,
-        isVerifying: false,
-      }));
+      if (response.ok) {
+        setEmailVerification((prev) => ({
+          ...prev,
+          isVerificationSent: true,
+          showOtpInput: true,
+          isVerifying: false,
+        }));
 
-      toast.success("Verification code sent to your email!");
+        toast.success("Verification code sent to your email!");
+      } else {
+        throw new Error(data.message || "Failed to send OTP");
+      }
     } catch (error) {
+      console.error("Error sending OTP:", error);
       setEmailVerification((prev) => ({
         ...prev,
         isVerifying: false,
       }));
-      toast.error("Failed to send verification code. Please try again.");
+      toast.error(error.message || "Failed to send verification code. Please try again.");
     }
   };
 
@@ -604,33 +607,36 @@ const EventDetail = () => {
     }));
 
     try {
-      // TODO: Replace with actual API call to backend
-      // const response = await fetch('/api/verify-otp', {
-      //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify({
-      //     email: formData.teamLeaderEmail,
-      //     otp: emailVerification.otp
-      //   })
-      // });
+      const response = await fetch("http://localhost:3000/verification/verifyOtp", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          email: formData.teamLeaderEmail,
+          otp: emailVerification.otp,
+        }),
+      });
 
-      // Simulate API call for now
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      const data = await response.json();
 
-      setEmailVerification((prev) => ({
-        ...prev,
-        isVerified: true,
-        isVerifying: false,
-        showOtpInput: false,
-      }));
+      if (response.ok) {
+        setEmailVerification((prev) => ({
+          ...prev,
+          isVerified: true,
+          isVerifying: false,
+          showOtpInput: false,
+        }));
 
-      toast.success("Email verified successfully!");
+        toast.success("Email verified successfully!");
+      } else {
+        throw new Error(data.message || "Invalid verification code");
+      }
     } catch (error) {
+      console.error("Error verifying OTP:", error);
       setEmailVerification((prev) => ({
         ...prev,
         isVerifying: false,
       }));
-      toast.error("Invalid verification code. Please try again.");
+      toast.error(error.message || "Invalid verification code. Please try again.");
     }
   };
 
@@ -674,7 +680,10 @@ const EventDetail = () => {
         })
       );
 
-    return basicFieldsValid && collegeFieldsValid && teamMembersValid;
+    // Email verification is required
+    const emailVerified = emailVerification.isVerified;
+
+    return basicFieldsValid && collegeFieldsValid && teamMembersValid && emailVerified;
   };
 
   // Helper: switch to Register tab and scroll to it
