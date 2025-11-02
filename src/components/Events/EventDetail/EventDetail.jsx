@@ -118,7 +118,6 @@ const EventDetail = () => {
     year: "",
     participationType: "team", // Always team for this event
     teamMembers: [],
-    expectations: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -671,37 +670,124 @@ const EventDetail = () => {
     setIsSubmitting(true);
 
     try {
-      // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 2000));
+      // Determine API endpoint based on event ID
+      const getApiEndpoint = (eventId) => {
+        const baseUrl = "http://localhost:3000";
+        switch (parseInt(eventId)) {
+          case 1: // Business Hackathon
+            return `${baseUrl}/business/register`;
+          case 2: // Treasure Hunt
+            return `${baseUrl}/treasure/register`;
+          case 3: // BID-WISE
+            return `${baseUrl}/bid-wise/register`;
+          case 4: // Adovation
+            return `${baseUrl}/adovations/register`;
+          default:
+            throw new Error("Invalid event ID");
+        }
+      };
 
-      toast.success(`Registration successful for ${event.title}!`, {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "dark",
+      // Prepare data based on event type
+      const prepareApiData = (eventId, formData) => {
+        const baseData = {
+          teamName: formData.teamName,
+          teamLeaderName: formData.teamLeaderName,
+          teamLeaderEmail: formData.teamLeaderEmail,
+          teamLeaderPhone: formData.teamLeaderPhone,
+          collegeType: formData.collegeType,
+          collegeName: formData.collegeName,
+          department: formData.department,
+          year: formData.year,
+          teamMembers: formData.teamMembers,
+        };
+
+        switch (parseInt(eventId)) {
+          case 1: // Business Hackathon
+            return {
+              ...baseData,
+              teamLeaderScholarId: formData.teamLeaderScholarId,
+            };
+          case 2: // Treasure Hunt
+            return {
+              ...baseData,
+              teamLeaderScholarId: formData.teamLeaderScholarId,
+              teamViceCaptainName: formData.teamViceCaptainName,
+              teamViceCaptainPhone: formData.teamViceCaptainPhone,
+              teamViceCaptainScholarId: formData.teamViceCaptainScholarId,
+            };
+          case 3: // BID-WISE
+            return {
+              ...baseData,
+              teamLeaderScholarId: formData.teamLeaderScholarId,
+            };
+          case 4: // Adovation
+            return {
+              ...baseData,
+              teamLeaderScholarId: formData.teamLeaderScholarId,
+            };
+          default:
+            return baseData;
+        }
+      };
+
+      const apiEndpoint = getApiEndpoint(eventId);
+      const apiData = prepareApiData(eventId, formData);
+
+      const response = await fetch(apiEndpoint, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(apiData),
       });
 
-      // Reset form
-      setFormData({
-        teamName: "",
-        teamLeaderName: "",
-        teamLeaderEmail: "",
-        teamLeaderPhone: "",
-        collegeType: "nit_silchar",
-        collegeName: "",
-        teamLeaderScholarId: "",
-        department: "",
-        year: "",
-        participationType: "team",
-        teamMembers: [],
-        expectations: "",
-      });
+      const result = await response.json();
+
+      if (response.ok) {
+        toast.success(`Registration successful for ${event.title}!`, {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+        });
+
+        // Reset form
+        setFormData({
+          teamName: "",
+          teamLeaderName: "",
+          teamLeaderEmail: "",
+          teamLeaderPhone: "",
+          collegeType: "nit_silchar",
+          collegeName: "",
+          teamLeaderScholarId: "",
+          teamViceCaptainName: "",
+          teamViceCaptainPhone: "",
+          teamViceCaptainScholarId: "",
+          department: "",
+          year: "",
+          participationType: "team",
+          teamMembers: [],
+        });
+      } else {
+        // Handle API error response
+        toast.error(result.message || "Registration failed. Please try again.", {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+        });
+      }
     } catch (error) {
-      toast.error("Registration failed. Please try again.", {
+      console.error("Registration error:", error);
+      toast.error("Registration failed. Please check your connection and try again.", {
         position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,

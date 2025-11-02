@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Footer from "../../components/shared/Footer/Footer";
 import Navbar from "../../components/shared/Navbar/Navbar";
 import { AiOutlineArrowRight, AiOutlineArrowLeft } from "react-icons/ai";
+import { RxCross2 } from "react-icons/rx";
 import "./Empresario.css";
 
 const Empresario = () => {
@@ -15,6 +16,9 @@ const Empresario = () => {
   const [loaded, setIsLoaded] = useState(false);
   const timeoutRef = useRef(null);
   const prefersReducedMotion = useReducedMotion();
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [lightboxIndex, setLightboxIndex] = useState(0);
+  const [sponsorsPaused, setSponsorsPaused] = useState(false);
 
   useEffect(() => {
     document.title = "Empresario | E-Cell NIT Silchar";
@@ -137,6 +141,11 @@ const Empresario = () => {
     if (!sponsorsTrack) return;
 
     const handleInteraction = () => {
+      // If user toggled pause, keep paused.
+      if (sponsorsPaused) {
+        sponsorsTrack.style.animationPlayState = "paused";
+        return;
+      }
       sponsorsTrack.style.animationPlayState = "paused";
       if (timeoutRef.current) clearTimeout(timeoutRef.current);
       timeoutRef.current = setTimeout(() => {
@@ -155,7 +164,14 @@ const Empresario = () => {
       sponsorsTrack.removeEventListener("wheel", handleInteraction);
       sponsorsTrack.removeEventListener("scroll", handleInteraction);
     };
-  }, []);
+  }, [sponsorsPaused]);
+
+  // Keep sponsors animation state synced with toggle
+  useEffect(() => {
+    const sponsorsTrack = sponsorsRef.current;
+    if (!sponsorsTrack) return;
+    sponsorsTrack.style.animationPlayState = sponsorsPaused ? "paused" : "running";
+  }, [sponsorsPaused]);
 
   // Event data for the 4 events - Updated with actual event details
   const empresarioEvents = [
@@ -164,7 +180,7 @@ const Empresario = () => {
       title: "BUSINESS HACKATHON",
       date: "Nov 8 - Nov 21, 2025",
       location: "Start UP Center",
-      img: "https://res.cloudinary.com/dp92qug2f/image/upload/v1685019690/Ecell%20website/collaboration%20backgrounds/Empressario-1_ewb2al.webp",
+      img: "https://res.cloudinary.com/sahincloudinary/image/upload/f_auto,q_auto/v1/Ecell/Events/empresario/Empresario ",
       content:
         "It starts with a spark—a test of wit and instinct. Then comes the hustle, where ideas take shape and teams rise. Ideas ignite, strategies clash, and legacies begin. EMINENCE isn't just a battle of brains—it's a race to be remembered.",
       teamSize: "3 to 5 members",
@@ -175,7 +191,7 @@ const Empresario = () => {
       title: "TREASURE HUNT",
       date: "Apr 15, 2025",
       location: "Campus Wide",
-      img: "https://res.cloudinary.com/dp92qug2f/image/upload/v1685019690/Ecell%20website/collaboration%20backgrounds/Empressario-1_ewb2al.webp",
+      img: "https://res.cloudinary.com/dp92qug2f/image/upload/v1680505883/Ecell%20website/events/international_symposium_final_yjhtst.webp",
       content:
         "Get ready to experience the thrill of business, strategy, and discovery as E-Cell NIT Silchar presents the Entrepreneurial Treasure Hunt — a campus-wide adventure that blends fun with the essence of entrepreneurship.",
       teamSize: "3 to 5 members",
@@ -186,7 +202,7 @@ const Empresario = () => {
       title: "BID-WISE",
       date: "Apr 20 - Apr 21, 2025",
       location: "Central Arena & Stall Areas",
-      img: "https://res.cloudinary.com/dp92qug2f/image/upload/v1685019690/Ecell%20website/collaboration%20backgrounds/Empressario-1_ewb2al.webp",
+      img: "https://res.cloudinary.com/dp92qug2f/image/upload/v1680370173/Ecell%20website/events/women_empowerment_r46kjd.webp",
       content:
         "BID-WISE is an exciting strategic auction competition where teams compete in a silent auction format. Teams must strategically bid on items of varying difficulty levels to maximize their points while managing their limited resources.",
       teamSize: "3 to 5 members",
@@ -236,6 +252,52 @@ const Empresario = () => {
     "https://res.cloudinary.com/dp92qug2f/image/upload/v1676990018/collaboration-ecell/learningWhileTraveling_bmf0fj.png",
   ];
 
+  // Simple hero stats for quick context
+  const heroStats = [
+    { label: "Events", value: empresarioEvents.length },
+    { label: "Sponsors", value: sponsorLogos.length },
+    { label: "Participants", value: "500+" },
+  ];
+
+  // Helper to derive event type badge
+  const deriveEventType = (event) => {
+    const loc = (event.location || "").toLowerCase();
+    if (loc.includes("online")) return "Online";
+    return "On-site";
+  };
+
+  // Lightbox handlers
+  const openLightbox = (index) => {
+    setLightboxIndex(index);
+    setLightboxOpen(true);
+    // Pause carousel while lightbox is open
+    if (carouselRef.current) carouselRef.current.style.animationPlayState = "paused";
+  };
+  const closeLightbox = () => {
+    setLightboxOpen(false);
+    if (carouselRef.current) carouselRef.current.style.animationPlayState = "running";
+  };
+  const prevLightbox = () => {
+    setLightboxIndex(
+      (i) => (i - 1 + previousEventImages.length) % previousEventImages.length
+    );
+  };
+  const nextLightbox = () => {
+    setLightboxIndex((i) => (i + 1) % previousEventImages.length);
+  };
+
+  // Keyboard support for lightbox
+  useEffect(() => {
+    if (!lightboxOpen) return;
+    const onKey = (e) => {
+      if (e.key === "Escape") closeLightbox();
+      if (e.key === "ArrowLeft") prevLightbox();
+      if (e.key === "ArrowRight") nextLightbox();
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [lightboxOpen]);
+
   return (
     <>
       <Navbar />
@@ -271,6 +333,21 @@ const Empresario = () => {
             >
               Explore Events
             </button>
+            <Link
+              to="/events"
+              className="hero-cta hero-cta-secondary"
+              aria-label="Go to Events page"
+            >
+              Register / Full Schedule
+            </Link>
+          </div>
+          <div className="hero-stats" aria-label="Empresario quick stats">
+            {heroStats.map((s) => (
+              <div key={s.label} className="hero-stat">
+                <div className="hero-stat-value">{s.value}</div>
+                <div className="hero-stat-label">{s.label}</div>
+              </div>
+            ))}
           </div>
         </motion.div>
       </div>
@@ -303,18 +380,53 @@ const Empresario = () => {
         </motion.div>
       </section>
 
+      {/* Highlights Section */}
+      <section className="empresario-highlights" aria-label="Program highlights">
+        <motion.div
+          className="highlights-inner reveal"
+          initial={{ opacity: 0, y: prefersReducedMotion ? 0 : 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+        >
+          <div className="highlights-header">
+            <h2>Why Join</h2>
+            <p>Build ideas, sharpen strategy, and network with the brightest minds.</p>
+          </div>
+          <div className="highlights-grid">
+            <div className="highlight-card">
+              <h3>Ideate</h3>
+              <p>
+                Turn sparks into structured concepts through fast sprints and feedback.
+              </p>
+            </div>
+            <div className="highlight-card">
+              <h3>Compete</h3>
+              <p>
+                Test strategy across hackathons, hunts, and auctions designed for impact.
+              </p>
+            </div>
+            <div className="highlight-card">
+              <h3>Network</h3>
+              <p>Collaborate with peers, mentors, and sponsors to grow your journey.</p>
+            </div>
+          </div>
+        </motion.div>
+      </section>
+
       {/* Events Section */}
       <div className="upcom-evnts-top">
         <h1>
-          Our{" "}
+          Explore
           <span
             style={{
               fontFamily: "Barlow Condensed",
               color: "var(--text-color-primary)",
               fontWeight: "900",
+              marginLeft: "0.5ch",
             }}
           >
-            Events
+            Empresario Events
           </span>
         </h1>
       </div>
@@ -339,6 +451,15 @@ const Empresario = () => {
                   onLoad={() => setIsLoaded(true)}
                   alt={event.title}
                 />
+                <div className="img-overlay">
+                  <Link
+                    to={`/event/${event.id}`}
+                    className="overlay-cta"
+                    aria-label={`View details for ${event.title}`}
+                  >
+                    View Details
+                  </Link>
+                </div>
               </div>
 
               <div className="title-announc-upcom-evnt">
@@ -348,6 +469,15 @@ const Empresario = () => {
               <div className="dte-locn-upcomi-event">
                 <h2>{event.date}</h2>
                 <p>📍 {event.location}</p>
+              </div>
+
+              <div className="event-badges" aria-label="Event badges">
+                <span
+                  className={`badge ${deriveEventType(event) === "Online" ? "badge-online" : "badge-onsite"}`}
+                >
+                  {deriveEventType(event)}
+                </span>
+                <span className="badge badge-team">Team: {event.teamSize}</span>
               </div>
 
               <div className="event-meta-info">
@@ -392,12 +522,49 @@ const Empresario = () => {
           <div className="empresario-carousel-track" ref={carouselRef}>
             {previousEventImages.concat(previousEventImages).map((image, index) => (
               <div key={index} className="empresario-carousel-slide">
-                <img src={image} alt={`Previous event ${index + 1}`} />
+                <img
+                  src={image}
+                  alt={`Previous event ${index + 1}`}
+                  onClick={() => openLightbox(index % previousEventImages.length)}
+                />
               </div>
             ))}
           </div>
         </div>
       </div>
+
+      {lightboxOpen && (
+        <div
+          className="empresario-lightbox"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Image preview"
+        >
+          <button className="lightbox-close" aria-label="Close" onClick={closeLightbox}>
+            <RxCross2 />
+          </button>
+          <div className="lightbox-content">
+            <button
+              className="lightbox-nav prev"
+              aria-label="Previous image"
+              onClick={prevLightbox}
+            >
+              <AiOutlineArrowLeft />
+            </button>
+            <img
+              src={previousEventImages[lightboxIndex]}
+              alt={`Gallery image ${lightboxIndex + 1}`}
+            />
+            <button
+              className="lightbox-nav next"
+              aria-label="Next image"
+              onClick={nextLightbox}
+            >
+              <AiOutlineArrowRight />
+            </button>
+          </div>
+        </div>
+      )}
 
       {/* Our Sponsors - design adapted from Home Collaboration, auto-sliding */}
       <motion.div
@@ -423,7 +590,46 @@ const Empresario = () => {
             </div>
           ))}
         </div>
+        <div className="sponsors-controls">
+          <button
+            className="sponsor-ctrl-btn"
+            onClick={() => setSponsorsPaused((p) => !p)}
+            aria-label={sponsorsPaused ? "Play sponsors slider" : "Pause sponsors slider"}
+          >
+            {sponsorsPaused ? "Play" : "Pause"}
+          </button>
+        </div>
       </div>
+
+      {/* FAQ Section */}
+      <section className="empresario-faq" aria-label="Frequently asked questions">
+        <motion.div
+          className="faq-inner reveal"
+          initial={{ opacity: 0, y: prefersReducedMotion ? 0 : 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+        >
+          <h2>FAQ</h2>
+          <div className="faq-grid">
+            <details className="faq-item">
+              <summary>Who can participate?</summary>
+              <p>Open to all NIT Silchar students. Team sizes vary by event.</p>
+            </details>
+            <details className="faq-item">
+              <summary>How do we register?</summary>
+              <p>Use the event details links or visit the Events page.</p>
+            </details>
+            <details className="faq-item">
+              <summary>Are there any prerequisites?</summary>
+              <p>
+                No strict prerequisites—bring curiosity, teamwork, and a willingness to
+                learn.
+              </p>
+            </details>
+          </div>
+        </motion.div>
+      </section>
 
       <Footer />
     </>

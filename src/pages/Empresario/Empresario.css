@@ -7,7 +7,8 @@
   background-repeat: no-repeat;
   height: 100vh; /* fallback for older browsers */
   min-height: 100vh;
-  box-shadow: inset 0 0 0 1000px var(--box-shadow-hero-color);
+  /* Soft overlay to improve text contrast */
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.35);
   background-attachment: scroll;
   background-position-x: center;
   display: flex;
@@ -102,6 +103,55 @@
 
 .hero-cta:active {
   transform: translateY(0);
+}
+
+.hero-cta:focus-visible {
+  outline: 2px solid var(--bg-color-primary-light);
+  outline-offset: 2px;
+}
+
+/* Secondary CTA style for link button */
+.hero-cta-secondary {
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 20px var(--box-shadow-color-black-1);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.hero-cta-secondary:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Hero stats chips */
+.hero-stats {
+  display: flex;
+  gap: 0.8rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.hero-stat {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.26);
+  backdrop-filter: blur(6px);
+  color: var(--text-color-white);
+  border-radius: 12px;
+  padding: 0.6rem 0.9rem;
+  min-width: 120px;
+  text-align: center;
+  box-shadow: 0 10px 20px var(--box-shadow-color-black-2);
+}
+
+.hero-stat-value {
+  font-size: 1.2rem;
+  font-weight: 800;
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+.hero-stat-label {
+  font-size: 0.85rem;
+  opacity: 0.95;
 }
 
 /* Subtle reveal-on-scroll utility */
@@ -313,6 +363,58 @@
   overflow: hidden;
 }
 
+/* Highlights Section */
+.empresario-highlights {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.06));
+  padding: 3.5rem 0;
+}
+
+.highlights-inner {
+  width: 88%;
+  margin: 0 auto;
+}
+
+.highlights-header h2 {
+  color: var(--text-color-primary);
+  font-size: 3.2vw;
+  font-weight: 800;
+  font-family: "Barlow Condensed", sans-serif;
+  margin: 0 0 0.6rem 0;
+}
+
+.highlights-header p {
+  color: var(--text-color-grey);
+  margin: 0 0 1.4rem 0;
+}
+
+.highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.highlight-card {
+  background: var(--bg-color-white);
+  border: 1px solid var(--border-color-primary);
+  border-radius: 12px;
+  padding: 1.2rem 1.4rem;
+  box-shadow:
+    0 10px 20px var(--box-shadow-color-black-1),
+    0 6px 6px var(--box-shadow-color-black-2);
+}
+
+.highlight-card h3 {
+  margin: 0 0 0.5rem 0;
+  color: var(--text-color-primary);
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 1.6rem;
+}
+
+.highlight-card p {
+  margin: 0;
+  color: var(--text-color-grey);
+}
+
 /* About Section */
 .empresario-about {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.03), rgba(0, 0, 0, 0.06));
@@ -512,6 +614,55 @@
   }
 }
 
+/* FAQ Section */
+.empresario-faq {
+  padding: 3rem 0 4rem 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.03), rgba(0, 0, 0, 0.06));
+}
+
+.faq-inner {
+  width: 88%;
+  margin: 0 auto;
+  background: var(--bg-color-white);
+  border: 1px solid var(--border-color-primary);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow:
+    0 10px 20px var(--box-shadow-color-black-1),
+    0 6px 6px var(--box-shadow-color-black-2);
+}
+
+.faq-inner h2 {
+  color: var(--text-color-primary);
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 3vw;
+  margin: 0 0 1rem 0;
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.faq-item {
+  background: var(--bg-color-white);
+  border: 1px solid var(--border-color-primary);
+  border-radius: 10px;
+  padding: 1rem 1.2rem;
+}
+
+.faq-item summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--text-color-primary);
+}
+
+.faq-item p {
+  color: var(--text-color-grey);
+  margin-top: 0.6rem;
+}
+
 /* Responsive Design for Events Section */
 @media only screen and (min-width: 660px) {
   .upcom-evnt-indi {
@@ -565,6 +716,10 @@
     justify-content: center;
   }
 
+  .hero-stats {
+    gap: 0.6rem;
+  }
+
   .empresario-carousel-title h2 {
     font-size: 6vw;
   }
@@ -584,6 +739,22 @@
 
   .our-sponsors h2 {
     font-size: 7vw;
+  }
+
+  .highlights-header h2 {
+    font-size: 7vw;
+  }
+
+  .highlights-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .faq-inner h2 {
+    font-size: 7vw;
+  }
+
+  .faq-grid {
+    grid-template-columns: 1fr;
   }
 
   .empresario-carousel-slide {
@@ -716,6 +887,11 @@
   .btn-indi-testimonial {
     font-size: 4vw;
   }
+
+  .hero-stat {
+    min-width: 100px;
+    padding: 0.5rem 0.8rem;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -734,6 +910,14 @@
   .hero-cta {
     padding: 0.7rem 1.1rem;
     font-size: 0.9rem;
+  }
+
+  .hero-stat-value {
+    font-size: 1.05rem;
+  }
+
+  .hero-stat-label {
+    font-size: 0.75rem;
   }
 
   .empresario-carousel-section {
@@ -800,6 +984,11 @@
   transform: translateY(0);
 }
 
+.view-details-btn:focus-visible {
+  outline: 2px solid var(--bg-color-primary-light);
+  outline-offset: 2px;
+}
+
 /* Responsive styles for View Details button */
 @media only screen and (max-width: 768px) {
   .view-details-btn {
@@ -840,4 +1029,171 @@
     height: auto !important;
     min-height: 36vw !important;
   }
+}
+
+/* ---- Enhancements: Event overlay, badges, sponsors controls, lightbox ---- */
+/* Make image container position relative for overlay */
+.img-upcom-evnt {
+  position: relative;
+}
+
+.img-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.35));
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 240ms ease-in-out;
+  padding-bottom: 0.8rem;
+}
+
+.upcom-evnt-indi:hover .img-overlay {
+  opacity: 1;
+}
+
+.overlay-cta {
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--text-color-primary);
+  text-decoration: none;
+  border-radius: 999px;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  transition:
+    transform 200ms ease,
+    background 200ms ease;
+}
+
+.overlay-cta:hover {
+  background: #fff;
+  transform: translateY(-2px);
+}
+
+/* Event badges */
+.event-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0.4rem 0 0.6rem 0;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 999px;
+  padding: 0.25rem 0.6rem;
+  border: 1px solid var(--border-color-primary);
+  background: var(--bg-color-white);
+  color: var(--text-color-primary);
+}
+
+.badge-online {
+  background: #e7f3ff;
+  border-color: #b6daff;
+}
+
+.badge-onsite {
+  background: #e9fff0;
+  border-color: #b9f0cf;
+}
+
+.badge-team {
+  background: #f7f7f7;
+}
+
+/* Gallery slide: indicate zoom */
+.empresario-carousel-slide {
+  cursor: zoom-in;
+}
+
+/* Sponsor cards and controls */
+.sponsor-logo {
+  background: var(--bg-color-white);
+  border: 1px solid var(--border-color-primary);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.sponsors-controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.sponsor-ctrl-btn {
+  background: var(--bg-color-primary);
+  color: var(--text-color-white);
+  border: none;
+  border-radius: 999px;
+  padding: 0.6rem 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.sponsor-ctrl-btn:hover {
+  background: var(--bg-color-primary-light);
+  transform: translateY(-1px);
+}
+
+/* Lightbox */
+.empresario-lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.lightbox-content {
+  position: relative;
+  width: min(88vw, 980px);
+  height: min(70vh, 680px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background: rgba(255, 255, 255, 0.85);
+  border: none;
+  border-radius: 999px;
+  padding: 0.4rem 0.5rem;
+  cursor: pointer;
+}
+
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.85);
+  border: none;
+  border-radius: 999px;
+  padding: 0.5rem 0.6rem;
+  cursor: pointer;
+}
+
+.lightbox-nav.prev {
+  left: 12px;
+}
+.lightbox-nav.next {
+  right: 12px;
 }
