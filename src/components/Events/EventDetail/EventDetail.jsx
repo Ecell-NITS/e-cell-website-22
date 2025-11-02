@@ -121,6 +121,15 @@ const EventDetail = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  // Email verification states
+  const [emailVerification, setEmailVerification] = useState({
+    isVerificationSent: false,
+    isVerified: false,
+    otp: "",
+    isVerifying: false,
+    showOtpInput: false,
+  });
+
   // Ref to the register tab content for smooth scrolling
   const registerRef = useRef(null);
   const [shouldScrollToRegister, setShouldScrollToRegister] = useState(false);
@@ -136,8 +145,7 @@ const EventDetail = () => {
       subtitle: "E-Cell, NIT Silchar welcomes you with open arms.",
       description:
         "It starts with a spark—a test of wit and instinct. Then comes the hustle, where ideas take shape and teams rise. Ideas ignite, strategies clash, and legacies begin. EMINENCE isn't just a battle of brains—it's a race to be remembered. From the first move to the final pitch, every second counts. You'll think, build, and hustle like never before. Only the fearless will outsmart, outpitch, and outlast the rest. Are you in?",
-      image:
-        "https://res.cloudinary.com/dp92qug2f/image/upload/v1685019690/Ecell%20website/collaboration%20backgrounds/Empressario-1_ewb2al.webp",
+      image: "/images/Business-Hackathon.jpg",
       date: "Nov 8 - Nov 21, 2025",
       time: "9:00 AM - 6:00 PM",
       location: "Start UP Center",
@@ -224,8 +232,7 @@ const EventDetail = () => {
       subtitle: "Experience the thrill of business, strategy, and discovery",
       description:
         "Get ready to experience the thrill of business, strategy, and discovery as E-Cell NIT Silchar presents the Entrepreneurial Treasure Hunt — a campus-wide adventure that blends fun with the essence of entrepreneurship. Around 20–25 teams, each consisting of 3–5 participants, will set out across the entire college campus — from the academic blocks to hostels, the canteen, and main ground — solving business-based riddles, completing mini challenges, and uncovering hidden clues that test their creativity and business acumen while enjoying their treasure hunt. The entire event is expected to take around 3 to 4 hours, packed with brainstorming, exploration, and high-energy competition — leading to a final round where only the sharpest teams will battle it out for the ultimate treasure symbolizing entrepreneurial triumph.",
-      image:
-        "https://res.cloudinary.com/dp92qug2f/image/upload/v1685019690/Ecell%20website/collaboration%20backgrounds/Empressario-1_ewb2al.webp",
+      image: "/images/Treasure-hunt.jpg",
       date: "Apr 15, 2025",
       time: "10:00 AM - 2:00 PM",
       location: "Campus Wide",
@@ -308,8 +315,7 @@ const EventDetail = () => {
       subtitle: "Strategic Auction & Business Competition",
       description:
         "BID-WISE is an exciting strategic auction competition where teams compete in a silent auction format. Teams must strategically bid on items of varying difficulty levels to maximize their points while managing their limited resources. With 60 items across 6 rounds, teams need to plan carefully, bid wisely, and outmaneuver their competition to advance to Round 2.",
-      image:
-        "https://res.cloudinary.com/dp92qug2f/image/upload/v1685019690/Ecell%20website/collaboration%20backgrounds/Empressario-1_ewb2al.webp",
+      image: "/images/BID-WISE.jpg",
       date: "Apr 20 - Apr 21, 2025",
       time: "10:00 AM - 6:00 PM",
       location: "Central Arena & Stall Areas",
@@ -414,8 +420,7 @@ const EventDetail = () => {
       subtitle: "The Ultimate Shop Promotion Challenge",
       description:
         "A Tecnoesis 'Empressario' Module Event by Ecell. Teams will create engaging promotional videos for assigned shops, showcasing their marketing creativity and video production skills. This challenge tests your ability to understand business identity and create compelling marketing content.",
-      image:
-        "https://res.cloudinary.com/dp92qug2f/image/upload/v1685019690/Ecell%20website/collaboration%20backgrounds/Empressario-1_ewb2al.webp",
+      image: "/images/Adovation.jpg",
       date: "Nov 15 - Nov 22, 2025",
       time: "Registration Open",
       location: "Online Submission",
@@ -531,6 +536,102 @@ const EventDetail = () => {
       ...prev,
       [name]: value,
     }));
+  };
+
+  // Email verification handlers
+  const handleSendVerification = async () => {
+    if (!formData.teamLeaderEmail) {
+      toast.error("Please enter an email address first");
+      return;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.teamLeaderEmail)) {
+      toast.error("Please enter a valid email address");
+      return;
+    }
+
+    setEmailVerification((prev) => ({
+      ...prev,
+      isVerifying: true,
+    }));
+
+    try {
+      // TODO: Replace with actual API call to backend
+      // const response = await fetch('/api/send-verification-otp', {
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json' },
+      //   body: JSON.stringify({ email: formData.teamLeaderEmail })
+      // });
+
+      // Simulate API call for now
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+
+      setEmailVerification((prev) => ({
+        ...prev,
+        isVerificationSent: true,
+        showOtpInput: true,
+        isVerifying: false,
+      }));
+
+      toast.success("Verification code sent to your email!");
+    } catch (error) {
+      setEmailVerification((prev) => ({
+        ...prev,
+        isVerifying: false,
+      }));
+      toast.error("Failed to send verification code. Please try again.");
+    }
+  };
+
+  const handleOtpChange = (e) => {
+    const value = e.target.value.replace(/\D/g, "").slice(0, 6); // Only digits, max 6
+    setEmailVerification((prev) => ({
+      ...prev,
+      otp: value,
+    }));
+  };
+
+  const handleVerifyOtp = async () => {
+    if (emailVerification.otp.length !== 6) {
+      toast.error("Please enter a 6-digit verification code");
+      return;
+    }
+
+    setEmailVerification((prev) => ({
+      ...prev,
+      isVerifying: true,
+    }));
+
+    try {
+      // TODO: Replace with actual API call to backend
+      // const response = await fetch('/api/verify-otp', {
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json' },
+      //   body: JSON.stringify({
+      //     email: formData.teamLeaderEmail,
+      //     otp: emailVerification.otp
+      //   })
+      // });
+
+      // Simulate API call for now
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+
+      setEmailVerification((prev) => ({
+        ...prev,
+        isVerified: true,
+        isVerifying: false,
+        showOtpInput: false,
+      }));
+
+      toast.success("Email verified successfully!");
+    } catch (error) {
+      setEmailVerification((prev) => ({
+        ...prev,
+        isVerifying: false,
+      }));
+      toast.error("Invalid verification code. Please try again.");
+    }
   };
 
   // Validate form
@@ -1300,25 +1401,6 @@ const EventDetail = () => {
                         />
                       </div>
 
-                      {getFormConfig(event.id).fields.includes("teamLeaderEmail") && (
-                        <div className="form-group">
-                          <label htmlFor="teamLeaderEmail">
-                            Email Address <span className="required">*</span>
-                          </label>
-                          <input
-                            type="email"
-                            id="teamLeaderEmail"
-                            name="teamLeaderEmail"
-                            value={formData.teamLeaderEmail}
-                            onChange={handleInputChange}
-                            placeholder="leader@example.com"
-                            required
-                          />
-                        </div>
-                      )}
-                    </div>
-
-                    <div className="form-row">
                       <div className="form-group">
                         <label htmlFor="teamLeaderPhone">
                           Contact Number <span className="required">*</span>
@@ -1338,6 +1420,88 @@ const EventDetail = () => {
                           />
                         </div>
                       </div>
+                    </div>
+
+                    <div className="form-row">
+                      {getFormConfig(event.id).fields.includes("teamLeaderEmail") && (
+                        <div className="form-group">
+                          <label htmlFor="teamLeaderEmail">
+                            Email Address <span className="required">*</span>
+                            {emailVerification.isVerified && (
+                              <span className="verification-status verified">
+                                ✓ Verified
+                              </span>
+                            )}
+                          </label>
+                          <div className="email-verification-container">
+                            <input
+                              type="email"
+                              id="teamLeaderEmail"
+                              name="teamLeaderEmail"
+                              value={formData.teamLeaderEmail}
+                              onChange={handleInputChange}
+                              placeholder="leader@example.com"
+                              required
+                              disabled={emailVerification.isVerified}
+                            />
+                            {!emailVerification.isVerified && (
+                              <button
+                                type="button"
+                                className="verify-email-btn"
+                                onClick={handleSendVerification}
+                                disabled={
+                                  emailVerification.isVerifying ||
+                                  !formData.teamLeaderEmail
+                                }
+                              >
+                                {emailVerification.isVerifying
+                                  ? "Sending..."
+                                  : "Verify Email"}
+                              </button>
+                            )}
+                          </div>
+
+                          {emailVerification.showOtpInput && (
+                            <div className="otp-verification-section">
+                              <label htmlFor="otpInput">
+                                Enter 6-digit verification code sent to your email
+                              </label>
+                              <div className="otp-input-container">
+                                <input
+                                  type="text"
+                                  id="otpInput"
+                                  value={emailVerification.otp}
+                                  onChange={handleOtpChange}
+                                  placeholder="000000"
+                                  maxLength="6"
+                                  className="otp-input"
+                                />
+                                <button
+                                  type="button"
+                                  className="verify-otp-btn"
+                                  onClick={handleVerifyOtp}
+                                  disabled={
+                                    emailVerification.isVerifying ||
+                                    emailVerification.otp.length !== 6
+                                  }
+                                >
+                                  {emailVerification.isVerifying
+                                    ? "Verifying..."
+                                    : "Verify"}
+                                </button>
+                              </div>
+                              <button
+                                type="button"
+                                className="resend-otp-btn"
+                                onClick={handleSendVerification}
+                                disabled={emailVerification.isVerifying}
+                              >
+                                Resend Code
+                              </button>
+                            </div>
+                          )}
+                        </div>
+                      )}
 
                       {formData.collegeType === "nit_silchar" && (
                         <div className="form-group">

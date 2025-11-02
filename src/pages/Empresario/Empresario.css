@@ -241,14 +241,14 @@
 
 .img-upcom-evnt {
   width: 100%;
-  height: 25vw;
+  height: 35vw;
   margin: 0 auto;
 }
 
 .img-upcom-evnt img {
+  object-fit: fill;
   width: 100%;
   height: 100%;
-  object-fit: cover;
   transition: transform 300ms ease;
 }
 
@@ -493,11 +493,8 @@
 
 .empresario-carousel-container {
   width: 100%;
-  overflow-x: auto;
-  overflow-y: hidden;
+  overflow: hidden;
   position: relative;
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
   /* Hide scrollbars while keeping scroll functionality */
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* IE/Edge legacy */
@@ -509,9 +506,13 @@
 
 .empresario-carousel-track {
   display: flex;
-  animation: scroll 20s linear infinite;
+  animation: seamlessScroll 30s linear infinite;
   transition: transform 0.3s ease;
-  width: calc(300px * 10); /* Adjust based on number of images */
+  width: max-content;
+  /* Performance optimizations */
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translateZ(0); /* Force hardware acceleration */
 }
 
 .empresario-carousel-track:hover {
@@ -531,18 +532,20 @@
   height: 100%;
   object-fit: cover;
   transition: transform 0.3s ease;
+  cursor: pointer;
 }
 
 .empresario-carousel-slide:hover img {
   transform: scale(1.05);
 }
 
-@keyframes scroll {
+@keyframes seamlessScroll {
   0% {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-300px * 5 - 100px)); /* Half the total width */
+    /* Move exactly half the total width (since we have 2 copies) */
+    transform: translateX(calc(-320px * 5));
   }
 }
 
@@ -718,6 +721,7 @@
 
   .hero-stats {
     gap: 0.6rem;
+    display: none;
   }
 
   .empresario-carousel-title h2 {
@@ -810,7 +814,7 @@
 
   .img-upcom-evnt {
     width: 100%;
-    height: 70vw;
+    height: 100vw;
     margin: 0 auto;
   }
 
@@ -958,26 +962,63 @@
 }
 
 .view-details-btn {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
   padding: 0.8rem 1.5rem;
-  background: var(--bg-color-primary);
+  background: linear-gradient(
+    135deg,
+    var(--bg-color-primary) 0%,
+    var(--bg-color-primary-light) 100%
+  );
   color: var(--text-color-white);
   text-decoration: none;
-  border-radius: 8px;
+  border-radius: 12px;
   font-weight: 600;
   font-size: 0.9rem;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   text-align: center;
   width: 100%;
   box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+
+.view-details-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.view-details-btn:hover::before {
+  left: 100%;
+}
+
+.view-details-icon {
+  font-size: 1rem;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .view-details-btn:hover {
-  background: var(--bg-color-primary-light);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px var(--box-shadow-color-black-2);
+  background: linear-gradient(
+    135deg,
+    var(--bg-color-primary-light) 0%,
+    var(--bg-color-primary) 100%
+  );
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px var(--box-shadow-color-black-2);
   text-decoration: none;
   color: var(--text-color-white);
+}
+
+.view-details-btn:hover .view-details-icon {
+  transform: translateX(4px);
 }
 
 .view-details-btn:active {
@@ -985,8 +1026,9 @@
 }
 
 .view-details-btn:focus-visible {
-  outline: 2px solid var(--bg-color-primary-light);
-  outline-offset: 2px;
+  outline: 3px solid var(--bg-color-primary-light);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 6px rgba(var(--bg-color-primary-rgb), 0.2);
 }
 
 /* Responsive styles for View Details button */
@@ -1175,9 +1217,22 @@
   right: 24px;
   background: rgba(255, 255, 255, 0.85);
   border: none;
-  border-radius: 999px;
-  padding: 0.4rem 0.5rem;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
+  font-size: 18px;
+  color: #333;
+  transition: all 0.2s ease;
+  z-index: 1001;
+}
+
+.lightbox-close:hover {
+  background: rgba(255, 255, 255, 0.95);
+  transform: scale(1.05);
 }
 
 .lightbox-nav {
@@ -1186,9 +1241,22 @@
   transform: translateY(-50%);
   background: rgba(255, 255, 255, 0.85);
   border: none;
-  border-radius: 999px;
-  padding: 0.5rem 0.6rem;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
+  font-size: 18px;
+  color: #333;
+  transition: all 0.2s ease;
+  z-index: 1001;
+}
+
+.lightbox-nav:hover {
+  background: rgba(255, 255, 255, 0.95);
+  transform: translateY(-50%) scale(1.05);
 }
 
 .lightbox-nav.prev {
