@@ -1178,11 +1178,7 @@
 
   .event-details-content .register-now-btn {
     width: 100%;
-    background: linear-gradient(
-      135deg,
-      var(--bg-color-primary, #224259),
-      var(--accent-color, #e74c3c)
-    );
+    background: var(--bg-color-primary, #224259);
     color: white;
     border: none;
     padding: 1rem 2rem;
@@ -1339,7 +1335,7 @@
 }
 
 .verify-otp-btn {
-  background: #22c55e;
+  background: var(--bg-color-primary, #224259);
   color: white;
   border: none;
   padding: 0.75rem 1rem;
@@ -1353,7 +1349,7 @@
 }
 
 .verify-otp-btn:hover:not(:disabled) {
-  background: #16a34a;
+  background: var(--bg-color-primary, #224259);
   transform: translateY(-1px);
 }
 
@@ -1429,4 +1425,13 @@
   .verify-otp-btn {
     margin-top: 0.5rem;
   }
+}
+
+/* Icon sizing used in meta chips */
+.meta-icon {
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 0.45rem;
 }

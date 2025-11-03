@@ -5,6 +5,7 @@ import { toast } from "react-toastify";
 import "./EventDetail.css";
 import NavbarTeam from "../../shared/Navbar/NavbarTeam";
 import Footer from "../../shared/Footer/Footer";
+import { FiCalendar, FiMapPin, FiUsers } from "react-icons/fi";
 
 const EventDetail = () => {
   const { eventId: eventSlug } = useParams();
@@ -292,8 +293,8 @@ const EventDetail = () => {
       date: "Nov 12 - Nov 23, 2025",
       time: "9:00 AM - 6:00 PM",
       location: "Startup Centre",
-      organizer: "E-CELL",
-      category: "Competition",
+      organizer: "E-CELL NIT SILCHAR",
+      category: "Hackathon",
       prizePool: "8K",
       participationType: "Team Event",
       teamSize: "3 to 5 members",
@@ -323,6 +324,7 @@ const EventDetail = () => {
         },
       },
       rules: [
+        "You are required to join whatsapp group sent on your email after registration for further updates",
         "Team Formation: Teams of 3-5 members, with cross-year collaborations encouraged",
         "Registration: Only the team leader needs to register through the link below",
         "Team Diversity: Aim for a diverse team with complementary skills",
@@ -361,7 +363,7 @@ const EventDetail = () => {
           events: [
             {
               time: "TBA",
-              title: "Event will take place during Empresario 2025",
+              title: "Round 2: Onsite Hackathon at Startup Centre",
               venue: "NIT Silchar",
             },
           ],
@@ -375,8 +377,8 @@ const EventDetail = () => {
       description:
         "Get ready for the ultimate campus adventure! E Cell is hosting a high-stakes Treasure Hunt where your wits are your greatest weapon. We have scattered a series of clues and brain twisting riddles that will storm your mind. Dive into the grids of this mind-bending challenge, unlock the codes and race to find the hidden treasure before anyone else. This isn't just a hunt, it's a battle of wits. Do you have what it takes to conquer the grid?",
       image:
-        "https://res.cloudinary.com/ecell/image/upload/v1762152610/IMG_8714_c4o4mw.png",
-      date: "Apr 15, 2025",
+        "https://res.cloudinary.com/ecell/image/upload/v1762194328/IMG_8732_vxn0yd.jpg",
+      date: "November 21, 2025",
       time: "10:00 AM - 2:00 PM",
       location: "Campus Wide",
       organizer: "E-CELL",
@@ -409,6 +411,7 @@ const EventDetail = () => {
         },
       },
       rules: [
+        "You are required to join whatsapp group sent on your email after registration for further updates",
         "Team size: 3–5 members",
         "The event would be conducted in 3 rounds",
         "The use of any vehicle (including bicycles, scooters, etc.) is strictly prohibited and will lead to disqualification",
@@ -427,7 +430,7 @@ const EventDetail = () => {
           events: [
             {
               time: "TBA",
-              title: "Event will take place during Empresario 2025",
+              title: "Treasure Hunt to be conducted",
               venue: "NIT Silchar",
             },
           ],
@@ -472,7 +475,7 @@ const EventDetail = () => {
       description:
         "A high-stakes mind game of logic, timing, and competition. This is a silent battlefield where teams must outthink, outbid, and outlast their rivals to claim victory. Where every bid tests your strategy, and every move defines your game.",
       image:
-        "https://res.cloudinary.com/ecell/image/upload/v1762152609/IMG_8713_wbfxio.png",
+        "https://res.cloudinary.com/ecell/image/upload/v1762194328/IMG_8733_pjeg3h.jpg",
       date: "Nov 21 - Nov 22, 2025",
       time: "10:00 AM - 6:00 PM",
       location: "Central Arena & Stall Areas",
@@ -517,6 +520,7 @@ const EventDetail = () => {
         },
       },
       rules: [
+        "You are required to join whatsapp group sent on your email after registration for further updates",
         "Teams: 3–5 members",
         "Purse: Each team begins with a fixed purse of 100 points to allocate among bids. Overspending leads to disqualification",
         "Items are divided into three categories based on difficulty of selling – Easy, Medium, and Hard",
@@ -546,7 +550,7 @@ const EventDetail = () => {
           events: [
             {
               time: "TBA",
-              title: "Event will take place during Empresario 2025",
+              title: "BID-WISE to be conducted",
               venue: "NIT Silchar",
             },
           ],
@@ -611,7 +615,7 @@ const EventDetail = () => {
       description:
         "This Technoesis, E-Cell NIT Silchar presents Adovation, the ultimate online ad-making showdown where creativity meets the digital realm! You and your team will be assigned a shop inside NITS. Mission: Create a 30–60 second ad that's funny, emotional, or dramatic, because in this grid, whatever sells, sells! So plug into your creative circuit, power up your storytelling core, and let your ideas light up the network. Because in Adovation, every second counts and every story sparks the grid.",
       image:
-        "https://res.cloudinary.com/ecell/image/upload/v1762152607/IMG_8716_y89plz.png",
+        "https://res.cloudinary.com/ecell/image/upload/v1762194326/IMG_8731_nxvstk.jpg",
       date: "Nov 15 - Nov 22, 2025",
       time: "Registration Open",
       location: "Online Submission",
@@ -642,6 +646,7 @@ const EventDetail = () => {
         },
       },
       rules: [
+        "You are required to join whatsapp group sent on your email after registration for further updates",
         "Team Size: 3-6 members",
         "After registration, each team will receive an email containing a list of three shops, from which they must select one",
         "E-Cell will confirm the final shop assignment via mail",
@@ -670,7 +675,7 @@ const EventDetail = () => {
           events: [
             {
               time: "TBA",
-              title: "Event will take place during Empresario 2025",
+              title: "Adovation event activities",
               venue: "NIT Silchar",
             },
           ],
@@ -1280,16 +1285,16 @@ const EventDetail = () => {
           {/* Big center text over banner (organizer) */}
           <h1 className="hero-title">{event.organizer}</h1>
           <div className="hero-image">
-            <img src={event.image} alt={event.title} />
+            <img src={event.image} alt={event.title} loading="lazy" decoding="async" />
           </div>
           {/* Mobile meta row (kept as-is) */}
           <div className="hero-meta">
             <div className="hero-meta-item">
-              <span>📅</span>
+              <FiCalendar className="meta-icon" aria-hidden="true" />
               <span>{event.date}</span>
             </div>
             <div className="hero-meta-item">
-              <span>📍</span>
+              <FiMapPin className="meta-icon" aria-hidden="true" />
               <span>{event.location}</span>
             </div>
           </div>
@@ -1330,9 +1335,18 @@ const EventDetail = () => {
             )}
 
             <div className="hero-chip-row">
-              <div className="meta-chip">📅 {event.date}</div>
-              <div className="meta-chip">📍 {event.location}</div>
-              <div className="meta-chip">👥 {event.organizer}</div>
+              <div className="meta-chip">
+                <FiCalendar className="meta-icon" aria-hidden="true" />
+                <span>{event.date}</span>
+              </div>
+              <div className="meta-chip">
+                <FiMapPin className="meta-icon" aria-hidden="true" />
+                <span>{event.location}</span>
+              </div>
+              <div className="meta-chip">
+                <FiUsers className="meta-icon" aria-hidden="true" />
+                <span>{event.organizer}</span>
+              </div>
               {event.registrationDeadline && (
                 <div className="meta-chip">Register by: {event.registrationDeadline}</div>
               )}
@@ -1469,22 +1483,22 @@ const EventDetail = () => {
                           <p>{event.eventFlow.round1.description}</p>
                           <ul>
                             <li>
-                              <strong>Last date to register for round 1:</strong>{" "}
-                              {event.eventFlow.round1.registrationDeadline}
+                              <strong>Last date to register:</strong>{" "}
+                              {event.eventFlow.round1.registrationDeadline || "TBA"}
                             </li>
                             <li>
                               <strong>Last date to give the solution:</strong>{" "}
-                              {event.eventFlow.round1.submissionDeadline}
+                              {event.eventFlow.round1.submissionDeadline || "TBA"}
                             </li>
                             <li>
                               <strong>
                                 Announcement of teams proceeding to round 2:
                               </strong>{" "}
-                              {event.eventFlow.round1.resultAnnouncement}
+                              {event.eventFlow.round1.resultAnnouncement || "TBA"}
                             </li>
                             <li>
                               <strong>Requirements:</strong>{" "}
-                              {event.eventFlow.round1.requirements}
+                              {event.eventFlow.round1.requirements || "TBA"}
                             </li>
                           </ul>
                         </div>
@@ -1494,10 +1508,12 @@ const EventDetail = () => {
                           <p>{event.eventFlow.round2.description}</p>
                           <ul>
                             <li>
-                              <strong>Date:</strong> {event.eventFlow.round2.date}
+                              <strong>Date:</strong>{" "}
+                              {event.eventFlow.round2.date || "TBA"}
                             </li>
                             <li>
-                              <strong>Location:</strong> {event.eventFlow.round2.location}
+                              <strong>Location:</strong>{" "}
+                              {event.eventFlow.round2.location || "TBA"}
                             </li>
                           </ul>
                         </div>
