@@ -129,9 +129,9 @@ const Empresario = () => {
     {
       id: 1,
       title: "BUSINESS HACKATHON",
-      date: "Nov 8 - Nov 21, 2025",
+      date: "Nov 8 - Nov 23, 2025",
       location: "Start UP Center",
-      img: "https://res.cloudinary.com/ecell/image/upload/v1762152608/IMG_8717_cnkrj5.png",
+      img: "https://res.cloudinary.com/ecell/image/upload/v1762182366/IMG_8721_zdwfuc.png ",
       content:
         "Enter the digital dimension where creativity is your code and strategy is your weapon. In this realm of visionaries, strategists, and innovators, ideas transcend boundaries and solutions reshape realities. Two rounds await: online submission and onsite hackathon.",
       teamSize: "3 to 5 members",
