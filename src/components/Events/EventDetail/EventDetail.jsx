@@ -111,7 +111,7 @@ const EventDetail = () => {
           maxTeamSize: 999,
           minTeamMembers: 0,
           maxTeamMembers: 998,
-          note: "Individual or team participation allowed (1 to unlimited members). Only the team leader/founder needs to register. Business description is required.",
+          note: "Individual or team participation allowed . Only the team leader/founder needs to register. Business description is required.",
           customFields: {
             businessDescription: {
               label: "Business Description",
@@ -221,14 +221,14 @@ const EventDetail = () => {
       case 5: // Startup Expo
         return [
           {
-            name: "E-Cell Team",
-            phone: "+91 9876543210",
-            position: "Startup Expo Coordinator",
+            name: "Shreya Agarwal",
+            phone: "+91 8136099500",
+            position: "Event Head",
           },
           {
-            name: "Innovation Team",
-            phone: "+91 9876543211",
-            position: "Exhibition Head",
+            name: "Vishara Sangule",
+            phone: "+91 8319099500",
+            position: "Event Head",
           },
         ];
       default:
@@ -723,7 +723,7 @@ const EventDetail = () => {
       category: "Exhibition",
       prizePool: "TBA",
       participationType: "Individual/Team Event",
-      teamSize: "1 to unlimited members",
+      teamSize: "NA",
       registrationDeadline: "TBA",
       eventFlow: {
         round1: {
@@ -817,6 +817,42 @@ const EventDetail = () => {
 
     return () => {
       revealEls.forEach((el) => revealObserver.unobserve(el));
+    };
+  }, []);
+
+  // Lazy loading for images
+  useEffect(() => {
+    const config = {
+      rootMargin: "0px 0px 0px 0px",
+      threshold: 0.2,
+    };
+
+    const loadImages = (image) => {
+      if (image.dataset.src) {
+        image.src = image.dataset.src;
+      }
+      // Add loaded class to remove blur effect
+      image.classList.add("loaded");
+    };
+
+    let observer = new window.IntersectionObserver(function (entries, self) {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          loadImages(entry.target);
+          self.unobserve(entry.target);
+        }
+      });
+    }, config);
+
+    const imgs = document.querySelectorAll("[data-src]");
+    imgs.forEach((img) => {
+      observer.observe(img);
+    });
+
+    return () => {
+      imgs.forEach((img) => {
+        observer.unobserve(img);
+      });
     };
   }, []);
 
@@ -1286,7 +1322,14 @@ const EventDetail = () => {
           {/* Big center text over banner (organizer) */}
           <h1 className="hero-title">{event.organizer}</h1>
           <div className="hero-image">
-            <img src={event.image} alt={event.title} loading="lazy" decoding="async" />
+            <img
+              src=""
+              data-src={event.image}
+              alt={event.title}
+              loading="lazy"
+              decoding="async"
+              className="lazy-image"
+            />
           </div>
           {/* Mobile meta row (kept as-is) */}
           <div className="hero-meta">
@@ -1374,7 +1417,14 @@ const EventDetail = () => {
           </div>
 
           <div className="hero-media">
-            <img src={event.image} alt={event.title} />
+            <img
+              src=""
+              data-src={event.image}
+              alt={event.title}
+              loading="lazy"
+              decoding="async"
+              className="lazy-image"
+            />
           </div>
         </motion.div>
       </div>

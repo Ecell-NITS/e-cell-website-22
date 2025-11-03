@@ -84,6 +84,8 @@ const Empresario = () => {
 
   const loadImages = (image) => {
     image.src = image.dataset.src;
+    // Add loaded class to remove blur effect
+    image.classList.add("loaded");
   };
 
   // Handle carousel pause/resume functionality
@@ -381,8 +383,7 @@ const Empresario = () => {
                 <img
                   src=""
                   data-src={event.img}
-                  className={loaded ? "loaded" : "loading"}
-                  onLoad={() => setIsLoaded(true)}
+                  className="lazy-image"
                   alt={event.title}
                 />
               </div>
@@ -456,9 +457,13 @@ const Empresario = () => {
             {[...previousEventImages, ...previousEventImages].map((image, index) => (
               <div key={index} className="empresario-carousel-slide">
                 <img
-                  src={image}
+                  src=""
+                  data-src={image}
                   alt={`Previous event ${(index % previousEventImages.length) + 1}`}
                   onClick={() => openLightbox(index % previousEventImages.length)}
+                  loading="lazy"
+                  decoding="async"
+                  className="carousel-image lazy-image"
                 />
               </div>
             ))}
