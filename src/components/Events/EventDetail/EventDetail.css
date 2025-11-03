@@ -907,29 +907,7 @@
   cursor: not-allowed;
 }
 
-/* Live Updates */
-.live-updates-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 2rem;
-}
-
-.post-update-btn {
-  background: var(--bg-color-primary, #224259);
-  color: white;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 0.9rem;
-}
-
-.no-updates {
-  text-align: center;
-  padding: 3rem;
-  color: var(--text-color-secondary, #666);
-}
+/* Live Updates removed */
 
 /* Event Sidebar */
 .event-sidebar {
@@ -1118,7 +1096,7 @@
     display: none; /* Chrome, Safari, Opera */
   }
 
-  /* Mobile tab order: About, Event Details, Register, Schedule, Live Updates */
+  /* Mobile tab order: About, Event Details, Register, Schedule */
   .tab-about {
     order: 1;
   }
@@ -1131,9 +1109,7 @@
   .tab-schedule {
     order: 4;
   }
-  .tab-live-updates {
-    order: 5;
-  }
+  /* Live updates tab removed */
 
   .main-content {
     padding: 1rem;
