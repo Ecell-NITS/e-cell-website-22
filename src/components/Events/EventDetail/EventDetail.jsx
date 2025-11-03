@@ -566,7 +566,7 @@ const EventDetail = () => {
 
     try {
       const baseUrl =
-        import.meta.env.REGISTRATION_API_BASE_URL || "http://localhost:3000";
+        import.meta.env.VITE_REGISTRATION_API_BASE_URL || "http://localhost:3000";
       const response = await fetch(`${baseUrl}/verification/sendOtp`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -618,7 +618,7 @@ const EventDetail = () => {
 
     try {
       const baseUrl =
-        import.meta.env.REGISTRATION_API_BASE_URL || "http://localhost:3000";
+        import.meta.env.VITE_REGISTRATION_API_BASE_URL || "http://localhost:3000";
       const response = await fetch(`${baseUrl}/verification/verifyOtp`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -795,7 +795,7 @@ const EventDetail = () => {
       // Determine API endpoint based on event ID
       const getApiEndpoint = (eventId) => {
         const baseUrl =
-          import.meta.env.REGISTRATION_API_BASE_URL || "http://localhost:3000";
+          import.meta.env.VITE_REGISTRATION_API_BASE_URL || "http://localhost:3000";
         switch (parseInt(eventId)) {
           case 1: // Business Hackathon
             return `${baseUrl}/business/register`;
