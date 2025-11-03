@@ -170,6 +170,17 @@ const Empresario = () => {
       teamSize: "3 to 6 members",
       registrationDeadline: "November 15, 2025",
     },
+    {
+      id: 5,
+      title: "STARTUP EXPO",
+      date: "Nov 10 - Nov 25, 2025",
+      location: "Innovation Hub & Exhibition Center",
+      img: "https://res.cloudinary.com/ecell/image/upload/v1762194324/IMG_8730_mjgtpn.jpg",
+      content:
+        "Transform your innovative ideas into reality at the ultimate startup showcase! Present your business concepts, connect with investors, and compete for funding opportunities. Two dynamic rounds: application submission and live exhibition.",
+      teamSize: "1 to unlimited members",
+      registrationDeadline: "November 10, 2025",
+    },
   ];
 
   // Empresario event images from GalleryTab.json
