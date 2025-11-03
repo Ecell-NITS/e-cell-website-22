@@ -152,6 +152,7 @@ const EventDetail = () => {
       location: "Start UP Center",
       organizer: "E-CELL",
       category: "Competition",
+      prizePool: "8K",
       participationType: "Team Event",
       teamSize: "3 to 5 members",
       registrationDeadline: "November 8, 2025",
@@ -240,6 +241,7 @@ const EventDetail = () => {
       location: "Campus Wide",
       organizer: "E-CELL",
       category: "Competition",
+      prizePool: "6K",
       participationType: "Team Event",
       teamSize: "3 to 5 members",
       registrationDeadline: "April 10, 2025",
@@ -324,6 +326,7 @@ const EventDetail = () => {
       location: "Central Arena & Stall Areas",
       organizer: "E-CELL",
       category: "Competition",
+      prizePool: "6K",
       participationType: "Team Event",
       teamSize: "3 to 5 members",
       registrationDeadline: "April 15, 2025",
@@ -430,6 +433,7 @@ const EventDetail = () => {
       location: "Online Submission",
       organizer: "E-CELL",
       category: "Competition",
+      prizePool: "4K",
       participationType: "Team Event",
       teamSize: "3 to 6 members",
       registrationDeadline: "November 15, 2025",
@@ -561,7 +565,8 @@ const EventDetail = () => {
     }));
 
     try {
-      const response = await fetch("http://localhost:3000/verification/sendOtp", {
+      const baseUrl = import.meta.env.VITE_API_BASE_URL || "http://localhost:3000";
+      const response = await fetch(`${baseUrl}/verification/sendOtp`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email: formData.teamLeaderEmail }),
@@ -611,7 +616,8 @@ const EventDetail = () => {
     }));
 
     try {
-      const response = await fetch("http://localhost:3000/verification/verifyOtp", {
+      const baseUrl = import.meta.env.VITE_API_BASE_URL || "http://localhost:3000";
+      const response = await fetch(`${baseUrl}/verification/verifyOtp`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -786,7 +792,7 @@ const EventDetail = () => {
     try {
       // Determine API endpoint based on event ID
       const getApiEndpoint = (eventId) => {
-        const baseUrl = "http://localhost:3000";
+        const baseUrl = import.meta.env.VITE_API_BASE_URL || "http://localhost:3000";
         switch (parseInt(eventId)) {
           case 1: // Business Hackathon
             return `${baseUrl}/business/register`;
@@ -976,6 +982,27 @@ const EventDetail = () => {
             <h1 className="hero-heading">{event.title}</h1>
             {event.subtitle && <p className="hero-subtitle">{event.subtitle}</p>}
 
+            {/* Desktop-only prize pool block (enhanced) */}
+            {event.prizePool && (
+              <div className="hero-prize" aria-label="Prize pool">
+                <div className="hero-prize-left">
+                  <span className="hero-prize-icon" aria-hidden="true">
+                    🏆
+                  </span>
+                  <div className="hero-prize-text">
+                    <span className="hero-prize-label">Prize Pool</span>
+                    <span className="hero-prize-sub">Top teams awarded</span>
+                  </div>
+                </div>
+                <div className="hero-prize-amount">
+                  {String(event.prizePool).toUpperCase() !== "TBA" && (
+                    <span className="hero-prize-currency">₹</span>
+                  )}
+                  <span className="hero-prize-value">{event.prizePool}</span>
+                </div>
+              </div>
+            )}
+
             <div className="hero-chip-row">
               <div className="meta-chip">📅 {event.date}</div>
               <div className="meta-chip">📍 {event.location}</div>
@@ -1063,7 +1090,7 @@ const EventDetail = () => {
           className={`tab tab-live-updates ${activeTab === "live-updates" ? "active" : ""}`}
           onClick={() => setActiveTab("live-updates")}
         >
-          🔴 Live Updates
+          Live Updates
         </button>
         <button
           className={`tab mobile-only tab-event-details ${activeTab === "event-details" ? "active" : ""}`}
@@ -1844,7 +1871,6 @@ const EventDetail = () => {
               >
                 <div className="live-updates-header">
                   <h2>📡 Live Event Updates</h2>
-                  <button className="post-update-btn">+ Post Update</button>
                 </div>
                 <div className="live-updates-feed">
                   <div className="no-updates">
