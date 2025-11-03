@@ -300,19 +300,31 @@ const Empresario = () => {
         >
           <h2>About Empresario</h2>
           <p>
-            Empresario is the entrepreneurship module of Tecnoesis, the annual techfest of
-            NIT Silchar. Led by E-Cell NIT Silchar, it provides a campus-wide platform for
-            students to showcase business acumen, creativity, and problem‑solving through
-            curated events and competitions.
+            EMPRESARIO, the flagship entrepreneurial challenge of E-Cell NIT Silchar is
+            back, a space where ideas begin as individual points and gradually connect,
+            like elements on a grid, forming something greater than the sum of their
+            parts. It&apos;s not just a competition; it&apos;s a environment for thinkers,
+            builders, and dreamers who believe every idea has a place, it just needs the
+            right alignment.
           </p>
           <p>
-            Under this module, participants engage in strategy‑focused challenges such as
-            hackathons, case competitions, marketing campaigns, bidding/auction gameplay,
-            and treasure hunts—designed to build practical skills in analysis, teamwork,
-            and execution.
+            Here, every pitch is a piece of the puzzle.
+            <br />
+            Every challenge shifts your perspective.
+            <br />
+            Every conversation draws a new line on your canvas.
           </p>
-          <p className="empresario-about-note">
-            Source: E‑Cell NIT Silchar site and Tecnoesis updates.
+          <p>
+            Pitch. Compete. Collaborate.
+            <br />
+            Find your pattern. Build your framework.
+            <br />
+            And grow into the entrepreneur you aspire to be.
+          </p>
+          <p>
+            <strong>21 – 23 November</strong>
+            <br />
+            Unleash your entrepreneurial spirit.
           </p>
         </motion.div>
       </section>

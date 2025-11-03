@@ -662,6 +662,10 @@ const EventDetail = () => {
       if (field === "department" || field === "year") {
         return config.fields.includes(field) ? formData[field] : true;
       }
+      if (field === "teamLeaderScholarId" || field === "teamViceCaptainScholarId") {
+        // Scholar ID required only for NIT Silchar students
+        return formData.collegeType === "nit_silchar" ? formData[field] : true;
+      }
       return formData[field];
     });
 
@@ -686,6 +690,7 @@ const EventDetail = () => {
       formData.teamMembers.every((member) =>
         config.teamMemberFields.every((field) => {
           if (field === "scholarId") {
+            // Scholar ID required only for NIT Silchar students
             return formData.collegeType === "nit_silchar" ? member[field] : true;
           }
           return member[field];
