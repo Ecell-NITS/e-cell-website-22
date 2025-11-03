@@ -140,24 +140,24 @@ const Empresario = () => {
     {
       id: 2,
       title: "TREASURE HUNT",
-      date: "Apr 15, 2025",
+      date: "Nov 15 - Nov 21, 2025",
       location: "Campus Wide",
       img: "https://res.cloudinary.com/ecell/image/upload/v1762152610/IMG_8714_c4o4mw.png",
       content:
         "Get ready for the ultimate campus adventure! Navigate through clues and riddles in this high-stakes treasure hunt where every step tests your wit and every discovery brings you closer to victory. Three thrilling rounds await the brave.",
       teamSize: "3 to 5 members",
-      registrationDeadline: "April 10, 2025",
+      registrationDeadline: "November 15, 2025",
     },
     {
       id: 3,
       title: "BID-WISE",
-      date: "Apr 20 - Apr 21, 2025",
+      date: "Nov 21 - Nov 22, 2025",
       location: "Central Arena & Stall Areas",
       img: "https://res.cloudinary.com/ecell/image/upload/v1762152609/IMG_8713_wbfxio.png",
       content:
         "Enter the strategic battlefield where Power Tokens fuel your ambitions and every bid shapes your destiny. Navigate through Phase I's silent auctions and Phase II's intense showdowns. Master the art of resource management in this ultimate test of strategy.",
       teamSize: "3 to 5 members",
-      registrationDeadline: "April 15, 2025",
+      registrationDeadline: "November 19, 2025",
     },
     {
       id: 4,

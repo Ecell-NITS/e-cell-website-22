@@ -352,7 +352,7 @@ const EventDetail = () => {
       prizePool: "6K",
       participationType: "Team Event",
       teamSize: "3 to 5 members",
-      registrationDeadline: "April 10, 2025",
+      registrationDeadline: "November 15, 2025",
       registrations: "5 teams registered",
       eventFlow: {
         round1: {
@@ -391,11 +391,11 @@ const EventDetail = () => {
       ],
       schedule: [
         {
-          date: "April 10, 2025",
+          date: "November 15, 2025",
           events: [{ time: "11:59 PM", title: "Registration Deadline", venue: "Online" }],
         },
         {
-          date: "April 15, 2025",
+          date: "November 21, 2025",
           events: [
             {
               time: "10:00 AM",
@@ -426,7 +426,7 @@ const EventDetail = () => {
         "A high-stakes mind game of logic, timing, and competition. This is a silent battlefield where teams must outthink, outbid, and outlast their rivals to claim victory. Where every bid tests your strategy, and every move defines your game.",
       image:
         "https://res.cloudinary.com/ecell/image/upload/v1762152609/IMG_8713_wbfxio.png",
-      date: "Apr 20 - Apr 21, 2025",
+      date: "Nov 21 - Nov 22, 2025",
       time: "10:00 AM - 6:00 PM",
       location: "Central Arena & Stall Areas",
       organizer: "E-CELL",
@@ -434,7 +434,7 @@ const EventDetail = () => {
       prizePool: "6K",
       participationType: "Team Event",
       teamSize: "3 to 5 members",
-      registrationDeadline: "April 15, 2025",
+      registrationDeadline: "November 19, 2025",
       registrations: "8 teams registered",
       eventFlow: {
         phase1: {
@@ -495,11 +495,11 @@ const EventDetail = () => {
       ],
       schedule: [
         {
-          date: "April 15, 2025",
+          date: "November 19, 2025",
           events: [{ time: "11:59 PM", title: "Registration Deadline", venue: "Online" }],
         },
         {
-          date: "April 20, 2025",
+          date: "November 21, 2025",
           events: [
             {
               time: "10:00 AM",
@@ -525,7 +525,7 @@ const EventDetail = () => {
           ],
         },
         {
-          date: "April 21, 2025",
+          date: "November 22, 2025",
           events: [
             {
               time: "10:00 AM",
