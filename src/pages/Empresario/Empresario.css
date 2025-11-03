@@ -239,6 +239,12 @@
   margin-right: auto;
 }
 
+/* Center the fifth card on the second row to match Adovation alignment */
+.upcom-evnt-indi:nth-child(5) {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .img-upcom-evnt {
   width: 100%;
   height: 35vw;

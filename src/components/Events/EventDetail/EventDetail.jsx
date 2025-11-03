@@ -750,7 +750,7 @@ const EventDetail = () => {
         },
       },
       rules: [
-        "Team Formation: Individual or team participation allowed (1 to unlimited members)",
+        "Team Formation: Individual or team participation allowed ",
         "Registration: Only the team leader/founder needs to register",
         "Startup Stage: All stages of startups welcome (idea, prototype, launched)",
         "Business Description: Detailed business description is mandatory",

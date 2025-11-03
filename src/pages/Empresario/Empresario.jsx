@@ -180,7 +180,7 @@ const Empresario = () => {
       img: "https://res.cloudinary.com/ecell/image/upload/v1762194324/IMG_8730_mjgtpn.jpg",
       content:
         "Transform your innovative ideas into reality at the ultimate startup showcase! Present your business concepts, connect with investors, and compete for funding opportunities. Two dynamic rounds: application submission and live exhibition.",
-      teamSize: "1 to unlimited members",
+      teamSize: "NA",
       registrationDeadline: "November 10, 2025",
     },
   ];
