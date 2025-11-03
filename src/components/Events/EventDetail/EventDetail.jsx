@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
-import { useParams, Navigate } from "react-router-dom";
+import { useParams, Navigate, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import "./EventDetail.css";
 import NavbarTeam from "../../shared/Navbar/NavbarTeam";
@@ -8,6 +8,7 @@ import Footer from "../../shared/Footer/Footer";
 
 const EventDetail = () => {
   const { eventId: eventSlug } = useParams();
+  const navigate = useNavigate();
 
   // Helper to convert event title to URL-friendly slug
   const createEventSlug = (title) => {
@@ -1085,7 +1086,7 @@ const EventDetail = () => {
 
       {/* Back to Events Button */}
       <div className="back-to-events">
-        <button onClick={() => window.history.back()}>← Back to Events</button>
+        <button onClick={() => navigate("/empresario")}>← Back to Events</button>
       </div>
 
       {/* Page Header (desktop only) */}
@@ -1242,12 +1243,6 @@ const EventDetail = () => {
           onClick={() => setActiveTab("register")}
         >
           Register
-        </button>
-        <button
-          className={`tab tab-live-updates ${activeTab === "live-updates" ? "active" : ""}`}
-          onClick={() => setActiveTab("live-updates")}
-        >
-          Live Updates
         </button>
         <button
           className={`tab mobile-only tab-event-details ${activeTab === "event-details" ? "active" : ""}`}
@@ -2000,25 +1995,7 @@ const EventDetail = () => {
               </motion.div>
             )}
 
-            {activeTab === "live-updates" && (
-              <motion.div
-                key="live-updates"
-                className="tab-content live-updates-content"
-                initial={{ opacity: 0, y: prefersReducedMotion ? 0 : 8 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: prefersReducedMotion ? 0 : -8 }}
-                transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
-              >
-                <div className="live-updates-header">
-                  <h2>📡 Live Event Updates</h2>
-                </div>
-                <div className="live-updates-feed">
-                  <div className="no-updates">
-                    <p>No updates yet. Check back for live event information!</p>
-                  </div>
-                </div>
-              </motion.div>
-            )}
+            {/* Live updates removed */}
 
             {activeTab === "event-details" && (
               <motion.div
