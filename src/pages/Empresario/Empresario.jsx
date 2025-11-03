@@ -129,7 +129,7 @@ const Empresario = () => {
     {
       id: 1,
       title: "BUSINESS HACKATHON",
-      date: "Nov 8 - Nov 23, 2025",
+      date: "Nov 12 - Nov 23, 2025",
       location: "Start UP Center",
       img: "https://res.cloudinary.com/ecell/image/upload/v1762182366/IMG_8721_zdwfuc.png ",
       content:
@@ -142,7 +142,7 @@ const Empresario = () => {
       title: "TREASURE HUNT",
       date: "Nov 15 - Nov 21, 2025",
       location: "Campus Wide",
-      img: "https://res.cloudinary.com/ecell/image/upload/v1762152610/IMG_8714_c4o4mw.png",
+      img: "https://res.cloudinary.com/ecell/image/upload/v1762194328/IMG_8732_vxn0yd.jpg",
       content:
         "Get ready for the ultimate campus adventure! Navigate through clues and riddles in this high-stakes treasure hunt where every step tests your wit and every discovery brings you closer to victory. Three thrilling rounds await the brave.",
       teamSize: "3 to 5 members",
@@ -153,7 +153,7 @@ const Empresario = () => {
       title: "BID-WISE",
       date: "Nov 21 - Nov 22, 2025",
       location: "Central Arena & Stall Areas",
-      img: "https://res.cloudinary.com/ecell/image/upload/v1762152609/IMG_8713_wbfxio.png",
+      img: "https://res.cloudinary.com/ecell/image/upload/v1762194328/IMG_8733_pjeg3h.jpg",
       content:
         "Enter the strategic battlefield where Power Tokens fuel your ambitions and every bid shapes your destiny. Navigate through Phase I's silent auctions and Phase II's intense showdowns. Master the art of resource management in this ultimate test of strategy.",
       teamSize: "3 to 5 members",
@@ -164,7 +164,7 @@ const Empresario = () => {
       title: "Adovation",
       date: "Nov 15 - Nov 22, 2025",
       location: "Online Submission",
-      img: "https://res.cloudinary.com/ecell/image/upload/v1762152607/IMG_8716_y89plz.png",
+      img: "https://res.cloudinary.com/ecell/image/upload/v1762194326/IMG_8731_nxvstk.jpg",
       content:
         "A Tecnoesis 'Empressario' Module Event by Ecell. Teams will create engaging promotional videos for assigned shops, showcasing their marketing creativity and video production skills.",
       teamSize: "3 to 6 members",
