@@ -236,32 +236,31 @@ const EventDetail = () => {
       description:
         "A realm where visionaries, strategists, and innovators collide to power the next wave of business evolution. Enter a digital dimension where creativity is your code and strategy is your weapon. This isn't just a hackathon, it's an awakening of bold ideas, limitless imagination, and futuristic problem-solving. Team up. Power up. Step into the ultimate business battleground where every decision counts and every idea sparks possibility. Challenge your limits and craft the solutions that will shape tomorrow. The future starts now!",
       image:
-        "https://res.cloudinary.com/ecell/image/upload/v1762152608/IMG_8717_cnkrj5.png",
-      date: "Nov 8 - Nov 21, 2025",
+        "https://res.cloudinary.com/ecell/image/upload/v1762182366/IMG_8721_zdwfuc.png",
+      date: "Nov 12 - Nov 23, 2025",
       time: "9:00 AM - 6:00 PM",
-      location: "Start UP Center",
+      location: "Startup Centre",
       organizer: "E-CELL",
       category: "Competition",
       prizePool: "8K",
       participationType: "Team Event",
       teamSize: "3 to 5 members",
-      registrationDeadline: "November 8, 2025",
-      registrations: "2 teams registered",
+      registrationDeadline: "November 12, 2025",
       eventFlow: {
         round1: {
           title: "Round 1: Online Submission",
           description:
-            "Teams can choose from any of the 8 problem statements provided to them. Teams must create and submit a PPT (in presentation format) and a 1 minute video explaining their idea or showcasing their presentation, as a reply to that mail. AI tools, including ChatGPT, may be used; but scoring will mainly focus on practicality, originality, relevance, and market analysis.",
-          registrationDeadline: "8th November (EOD)",
-          submissionDeadline: "10th November (EOD)",
-          resultAnnouncement: "12th November",
+            "Teams can choose from any of the 8 problem statements provided via email after registration. Teams must create and submit a PPT (in presentation format) and a 1 minute video explaining their idea or showcasing their presentation, as a reply to that mail. AI tools, including ChatGPT, may be used; but scoring will mainly focus on practicality, originality, relevance, and market analysis.",
+          registrationDeadline: "12th November (EOD)",
+          submissionDeadline: "15th November (EOD)",
+          resultAnnouncement: "Top 8 teams announced via email",
           requirements:
             "PPT (in presentation format) and a 1 minute video explaining their idea or showcasing their presentation",
           advancement: "The top 8 teams will advance to the final round",
         },
         round2: {
           title: "Round 2: Onsite Hackathon",
-          date: "21st November",
+          date: "21st - 23rd November",
           location: "Startup Centre",
           description:
             "Teams will have 8 hours to build a complete, market-ready business model. Creating a prototype is optional but recommended for a competitive edge. At least one member must be present onsite throughout the event. Accurate, traceable data is mandatory, with verification upon request. False data will lead to disqualification; keep track of all sources.",
@@ -273,21 +272,20 @@ const EventDetail = () => {
       },
       rules: [
         "Team Formation: Teams of 3-5 members, with cross-year collaborations encouraged",
-        "Registration: Only the team leader needs to register through the provided link",
+        "Registration: Only the team leader needs to register through the link below",
         "Team Diversity: Aim for a diverse team with complementary skills",
-        "Registration Deadline: 8th November (EOD)",
-        "Round 1: Teams can choose from any of the 8 problem statements provided",
-        "Round 1 Submission: PPT (in presentation format) and a 1 minute video explaining their idea",
-        "AI Tools: ChatGPT and other AI tools may be used, but scoring focuses on practicality, originality, relevance, and market analysis",
-        "Round 1 Deadline: 10th November (EOD)",
+        "Registration Deadline: 12th November (EOD)",
+        "Round 1: Choose any of the 8 problem statements (sent via email post-registration)",
+        "Round 1 Submission: Submit PPT and a 1 minute video as a reply to the registration email",
+        "AI Tools: Allowed (e.g., ChatGPT); scoring prioritizes practicality, originality, relevance, and market analysis",
         "Advancement: Top 8 teams advance to Round 2",
-        "Round 2: Onsite hackathon at Startup Centre on 21st November",
-        "Round 2 Duration: 8 hours to build a complete, market-ready business model",
-        "Prototype: Optional but recommended for competitive edge",
+        "Round 2: Onsite hackathon at Startup Centre",
+        "Round 2 Duration: 8 hours",
+        "Prototype: Optional but recommended for a competitive edge",
         "Attendance: At least one member must be present onsite throughout the event",
-        "Data Requirements: Accurate, traceable data is mandatory with verification upon request",
-        "Disqualification: False data will lead to immediate disqualification",
-        "Dress Code: Semi-formal for Round 2",
+        "Data Requirements: Accurate, traceable data is mandatory, with verification upon request",
+        "Disqualification: False data will lead to disqualification; keep track of all sources",
+        "Dress Code: Semi-formal",
       ],
       participantDetails: [
         "Team Name",
@@ -297,40 +295,22 @@ const EventDetail = () => {
       ],
       schedule: [
         {
-          date: "November 8, 2025",
-          events: [
-            { time: "11:59 PM", title: "Round 1 Registration Deadline", venue: "Online" },
-          ],
+          date: "November 12, 2025",
+          events: [{ time: "11:59 PM", title: "Registration Deadline", venue: "Online" }],
         },
         {
-          date: "November 10, 2025",
+          date: "November 15, 2025",
           events: [
             { time: "11:59 PM", title: "Round 1 Submission Deadline", venue: "Online" },
           ],
         },
         {
-          date: "November 12, 2025",
+          date: "November 21-23, 2025",
           events: [
             {
-              time: "6:00 PM",
-              title: "Round 2 Qualified Teams Announcement",
-              venue: "Online",
-            },
-          ],
-        },
-        {
-          date: "November 21, 2025",
-          events: [
-            {
-              time: "9:00 AM",
-              title: "Round 2 - Business Hackathon",
-              venue: "Start UP Center",
-            },
-            { time: "5:00 PM", title: "Final Presentations", venue: "Start UP Center" },
-            {
-              time: "6:00 PM",
-              title: "Results & Prize Distribution",
-              venue: "Start UP Center",
+              time: "TBA",
+              title: "Event will take place during Empresario 2025",
+              venue: "NIT Silchar",
             },
           ],
         },
@@ -352,7 +332,7 @@ const EventDetail = () => {
       prizePool: "6K",
       participationType: "Team Event",
       teamSize: "3 to 5 members",
-      registrationDeadline: "April 10, 2025",
+      registrationDeadline: "November 15, 2025",
       registrations: "5 teams registered",
       eventFlow: {
         round1: {
@@ -391,11 +371,25 @@ const EventDetail = () => {
       ],
       schedule: [
         {
-          date: "April 10, 2025",
+          date: "November 21-23, 2025",
+          events: [
+            {
+              time: "TBA",
+              title: "Event will take place during Empresario 2025",
+              venue: "NIT Silchar",
+            },
+          ],
+        },
+      ],
+      // Detailed schedule commented out - will be announced closer to the event
+      /*
+      schedule: [
+        {
+          date: "November 15, 2025",
           events: [{ time: "11:59 PM", title: "Registration Deadline", venue: "Online" }],
         },
         {
-          date: "April 15, 2025",
+          date: "November 21, 2025",
           events: [
             {
               time: "10:00 AM",
@@ -417,6 +411,7 @@ const EventDetail = () => {
           ],
         },
       ],
+      */
     },
     {
       id: 3,
@@ -426,7 +421,7 @@ const EventDetail = () => {
         "A high-stakes mind game of logic, timing, and competition. This is a silent battlefield where teams must outthink, outbid, and outlast their rivals to claim victory. Where every bid tests your strategy, and every move defines your game.",
       image:
         "https://res.cloudinary.com/ecell/image/upload/v1762152609/IMG_8713_wbfxio.png",
-      date: "Apr 20 - Apr 21, 2025",
+      date: "Nov 21 - Nov 22, 2025",
       time: "10:00 AM - 6:00 PM",
       location: "Central Arena & Stall Areas",
       organizer: "E-CELL",
@@ -434,7 +429,7 @@ const EventDetail = () => {
       prizePool: "6K",
       participationType: "Team Event",
       teamSize: "3 to 5 members",
-      registrationDeadline: "April 15, 2025",
+      registrationDeadline: "November 19, 2025",
       registrations: "8 teams registered",
       eventFlow: {
         phase1: {
@@ -495,11 +490,25 @@ const EventDetail = () => {
       ],
       schedule: [
         {
-          date: "April 15, 2025",
+          date: "November 21-23, 2025",
+          events: [
+            {
+              time: "TBA",
+              title: "Event will take place during Empresario 2025",
+              venue: "NIT Silchar",
+            },
+          ],
+        },
+      ],
+      // Detailed schedule commented out - will be announced closer to the event
+      /*
+      schedule: [
+        {
+          date: "November 19, 2025",
           events: [{ time: "11:59 PM", title: "Registration Deadline", venue: "Online" }],
         },
         {
-          date: "April 20, 2025",
+          date: "November 21, 2025",
           events: [
             {
               time: "10:00 AM",
@@ -525,7 +534,7 @@ const EventDetail = () => {
           ],
         },
         {
-          date: "April 21, 2025",
+          date: "November 22, 2025",
           events: [
             {
               time: "10:00 AM",
@@ -540,6 +549,7 @@ const EventDetail = () => {
           ],
         },
       ],
+      */
     },
     {
       id: 4,
@@ -604,6 +614,20 @@ const EventDetail = () => {
       ],
       schedule: [
         {
+          date: "November 21-23, 2025",
+          events: [
+            {
+              time: "TBA",
+              title: "Event will take place during Empresario 2025",
+              venue: "NIT Silchar",
+            },
+          ],
+        },
+      ],
+      // Detailed schedule commented out - will be announced closer to the event
+      /*
+      schedule: [
+        {
           date: "November 15, 2025",
           events: [{ time: "11:59 PM", title: "Registration Deadline", venue: "Online" }],
         },
@@ -624,6 +648,7 @@ const EventDetail = () => {
           ],
         },
       ],
+      */
     },
   ];
 
