@@ -715,7 +715,7 @@ const EventDetail = () => {
       description:
         "The Grid of Innovation is firing up, and E-Cell under Tecnoesis is looking for the best systems to plug in! Forget boring presentations this is your chance to showcase your genius to a massive network of creators, investors, and fellow innovators. Selected ventures get exclusive, lit-up stalls (your personal input node!) to display your ideas and products. We're giving you the platform, the spotlight, and the recognition you need to stop grinding and start dominating. If your startup stands out, get ready for activation you'll be featured in the exhibition, officially powering up the most fun Grid of Innovation ever!",
       image:
-        "https://res.cloudinary.com/ecell/image/upload/v1762152610/IMG_8715_zdgcxy.png",
+        "https://res.cloudinary.com/ecell/image/upload/v1762194324/IMG_8730_mjgtpn.jpg",
       date: "TBA",
       time: "TBA",
       location: "Exhibition Hall",
@@ -966,12 +966,13 @@ const EventDetail = () => {
       if (field === "driveLink" && config.customFields?.driveLink?.required) {
         return formData[field] && formData[field].trim().length > 0;
       }
-      // For driveLink, if it's optional but provided, validate URL format
-      if (
-        field === "driveLink" &&
-        !config.customFields?.driveLink?.required &&
-        formData[field]
-      ) {
+      // For driveLink, if it's optional
+      if (field === "driveLink" && !config.customFields?.driveLink?.required) {
+        // If empty, it's valid (optional field)
+        if (!formData[field] || formData[field].trim().length === 0) {
+          return true;
+        }
+        // If provided, validate URL format
         const urlPattern = /^https?:\/\/.+/;
         return urlPattern.test(formData[field]);
       }
