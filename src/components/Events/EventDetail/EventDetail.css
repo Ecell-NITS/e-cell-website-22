@@ -244,6 +244,88 @@
     max-width: 56ch;
   }
 
+  /* Prize pool block in hero (desktop only, enhanced) */
+  .hero-prize {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin: 0.9rem 0 1.25rem;
+    padding: 1rem 1.25rem;
+    border-radius: 16px;
+    border: 1px solid rgba(34, 66, 89, 0.12);
+    background: radial-gradient(
+        120% 120% at 0% 0%,
+        rgba(34, 66, 89, 0.08) 0%,
+        rgba(34, 66, 89, 0) 50%
+      ),
+      linear-gradient(135deg, #f3f7fb 0%, #ffffff 100%);
+    box-shadow: 0 12px 28px rgba(34, 66, 89, 0.12);
+    width: 100%;
+    max-width: 420px;
+  }
+  .hero-prize:hover {
+    box-shadow: 0 16px 32px rgba(34, 66, 89, 0.16);
+    transform: translateY(-1px);
+    transition:
+      box-shadow 200ms ease,
+      transform 200ms ease;
+  }
+
+  .hero-prize-left {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+  .hero-prize-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: #fff;
+    background: linear-gradient(
+      135deg,
+      var(--bg-color-primary, #224259) 0%,
+      #3a647f 100%
+    );
+    box-shadow: 0 8px 18px rgba(34, 66, 89, 0.25);
+  }
+  .hero-prize-text {
+    display: flex;
+    flex-direction: column;
+  }
+  .hero-prize-label {
+    font-size: 0.82rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+    color: var(--text-color-secondary, #5b6e7e);
+  }
+  .hero-prize-sub {
+    font-size: 0.8rem;
+    color: var(--text-color-secondary, #798a98);
+  }
+  .hero-prize-amount {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.25rem;
+  }
+  .hero-prize-currency {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text-color-primary, #224259);
+    opacity: 0.9;
+  }
+  .hero-prize-value {
+    font-size: 2.4rem;
+    font-weight: 900;
+    line-height: 1;
+    color: var(--text-color-primary, #224259);
+    letter-spacing: 0.6px;
+  }
+
   .hero-chip-row {
     display: flex;
     flex-wrap: wrap;
