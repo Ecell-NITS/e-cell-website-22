@@ -131,7 +131,7 @@ const Empresario = () => {
       title: "BUSINESS HACKATHON",
       date: "Nov 8 - Nov 21, 2025",
       location: "Start UP Center",
-      img: "/images/Business-Hackathon.jpg",
+      img: "https://res.cloudinary.com/ecell/image/upload/v1762152608/IMG_8717_cnkrj5.png",
       content:
         "It starts with a spark—a test of wit and instinct. Then comes the hustle, where ideas take shape and teams rise. Ideas ignite, strategies clash, and legacies begin. EMINENCE isn't just a battle of brains—it's a race to be remembered.",
       teamSize: "3 to 5 members",
@@ -142,7 +142,7 @@ const Empresario = () => {
       title: "TREASURE HUNT",
       date: "Apr 15, 2025",
       location: "Campus Wide",
-      img: "/images/Treasure-hunt.jpg",
+      img: "https://res.cloudinary.com/ecell/image/upload/v1762152610/IMG_8714_c4o4mw.png",
       content:
         "Get ready to experience the thrill of business, strategy, and discovery as E-Cell NIT Silchar presents the Entrepreneurial Treasure Hunt — a campus-wide adventure that blends fun with the essence of entrepreneurship.",
       teamSize: "3 to 5 members",
@@ -153,7 +153,7 @@ const Empresario = () => {
       title: "BID-WISE",
       date: "Apr 20 - Apr 21, 2025",
       location: "Central Arena & Stall Areas",
-      img: "/images/BID-WISE.jpg",
+      img: "https://res.cloudinary.com/ecell/image/upload/v1762152609/IMG_8713_wbfxio.png",
       content:
         "BID-WISE is an exciting strategic auction competition where teams compete in a silent auction format. Teams must strategically bid on items of varying difficulty levels to maximize their points while managing their limited resources.",
       teamSize: "3 to 5 members",
@@ -164,7 +164,7 @@ const Empresario = () => {
       title: "Adovation",
       date: "Nov 15 - Nov 22, 2025",
       location: "Online Submission",
-      img: "/images/Adovation.jpg",
+      img: "https://res.cloudinary.com/ecell/image/upload/v1762152607/IMG_8716_y89plz.png",
       content:
         "A Tecnoesis 'Empressario' Module Event by Ecell. Teams will create engaging promotional videos for assigned shops, showcasing their marketing creativity and video production skills.",
       teamSize: "3 to 6 members",

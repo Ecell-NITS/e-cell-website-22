@@ -145,7 +145,8 @@ const EventDetail = () => {
       subtitle: "E-Cell, NIT Silchar welcomes you with open arms.",
       description:
         "It starts with a spark—a test of wit and instinct. Then comes the hustle, where ideas take shape and teams rise. Ideas ignite, strategies clash, and legacies begin. EMINENCE isn't just a battle of brains—it's a race to be remembered. From the first move to the final pitch, every second counts. You'll think, build, and hustle like never before. Only the fearless will outsmart, outpitch, and outlast the rest. Are you in?",
-      image: "/images/Business-Hackathon.jpg",
+      image:
+        "https://res.cloudinary.com/ecell/image/upload/v1762152608/IMG_8717_cnkrj5.png",
       date: "Nov 8 - Nov 21, 2025",
       time: "9:00 AM - 6:00 PM",
       location: "Start UP Center",
@@ -232,7 +233,8 @@ const EventDetail = () => {
       subtitle: "Experience the thrill of business, strategy, and discovery",
       description:
         "Get ready to experience the thrill of business, strategy, and discovery as E-Cell NIT Silchar presents the Entrepreneurial Treasure Hunt — a campus-wide adventure that blends fun with the essence of entrepreneurship. Around 20–25 teams, each consisting of 3–5 participants, will set out across the entire college campus — from the academic blocks to hostels, the canteen, and main ground — solving business-based riddles, completing mini challenges, and uncovering hidden clues that test their creativity and business acumen while enjoying their treasure hunt. The entire event is expected to take around 3 to 4 hours, packed with brainstorming, exploration, and high-energy competition — leading to a final round where only the sharpest teams will battle it out for the ultimate treasure symbolizing entrepreneurial triumph.",
-      image: "/images/Treasure-hunt.jpg",
+      image:
+        "https://res.cloudinary.com/ecell/image/upload/v1762152610/IMG_8714_c4o4mw.png",
       date: "Apr 15, 2025",
       time: "10:00 AM - 2:00 PM",
       location: "Campus Wide",
@@ -315,7 +317,8 @@ const EventDetail = () => {
       subtitle: "Strategic Auction & Business Competition",
       description:
         "BID-WISE is an exciting strategic auction competition where teams compete in a silent auction format. Teams must strategically bid on items of varying difficulty levels to maximize their points while managing their limited resources. With 60 items across 6 rounds, teams need to plan carefully, bid wisely, and outmaneuver their competition to advance to Round 2.",
-      image: "/images/BID-WISE.jpg",
+      image:
+        "https://res.cloudinary.com/ecell/image/upload/v1762152609/IMG_8713_wbfxio.png",
       date: "Apr 20 - Apr 21, 2025",
       time: "10:00 AM - 6:00 PM",
       location: "Central Arena & Stall Areas",
@@ -420,7 +423,8 @@ const EventDetail = () => {
       subtitle: "The Ultimate Shop Promotion Challenge",
       description:
         "A Tecnoesis 'Empressario' Module Event by Ecell. Teams will create engaging promotional videos for assigned shops, showcasing their marketing creativity and video production skills. This challenge tests your ability to understand business identity and create compelling marketing content.",
-      image: "/images/Adovation.jpg",
+      image:
+        "https://res.cloudinary.com/ecell/image/upload/v1762152607/IMG_8716_y89plz.png",
       date: "Nov 15 - Nov 22, 2025",
       time: "Registration Open",
       location: "Online Submission",
