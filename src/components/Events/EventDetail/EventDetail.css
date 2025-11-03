@@ -530,6 +530,68 @@
   background: #e91e63;
 }
 
+/* Queries / Contacts in About tab */
+.queries-section {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: var(--box-bg-color, #f8f9fa);
+  border-radius: 8px;
+  border-left: 4px solid var(--bg-color-primary, #224259);
+}
+
+.contact-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.contact-card {
+  background: #ffffff;
+  border: 1px solid var(--border-color, #e0e0e0);
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: var(--box-shadow, 0 4px 6px rgba(0, 0, 0, 0.05));
+}
+
+.contact-name {
+  font-weight: 600;
+  color: var(--text-color-primary, #224259);
+  margin-bottom: 0.25rem;
+}
+
+.contact-contact {
+  color: var(--text-color-secondary, #666);
+  font-size: 0.95rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.35rem;
+  line-height: 1.5;
+}
+
+.contact-phone,
+.contact-email {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.contact-contact a {
+  color: var(--bg-color-primary, #224259) !important;
+  text-decoration: none;
+  font-size: 1rem !important;
+  font-weight: 600;
+  display: inline;
+}
+
+.contact-contact a:visited {
+  color: var(--bg-color-primary, #224259) !important;
+}
+
+.contact-contact a:hover {
+  text-decoration: underline;
+}
+
 /* Schedule Content */
 .schedule-day {
   margin: 2rem 0;
@@ -662,9 +724,16 @@
   border: 1px solid var(--border-color, #e0e0e0);
 }
 
+.team-member-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
 .team-member h4 {
   color: var(--bg-color-primary, #224259);
-  margin-bottom: 1rem;
+  margin: 0;
 }
 
 .add-member-btn,
@@ -681,13 +750,45 @@
 
 .remove-member-btn {
   background: #e53e3e;
-  margin-left: 1rem;
+  margin: 0;
+  padding: 0;
+  font-size: 0.75rem;
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
 }
 
 .add-member-btn:hover,
 .remove-member-btn:hover {
   opacity: 0.9;
   transform: translateY(-1px);
+}
+
+/* Phone input container styling */
+.phone-input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.phone-prefix {
+  position: absolute;
+  left: 0.75rem;
+  color: var(--text-color-secondary, #666);
+  font-weight: 500;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.phone-input-container input {
+  padding-left: 3rem;
 }
 
 .submit-btn {
@@ -863,8 +964,8 @@
   .hero-image {
     position: relative;
     width: 100%;
-    max-width: 400px;
-    height: 250px;
+    max-width: 500px;
+    height: 60vh;
     border-radius: 12px;
     overflow: hidden;
     margin-bottom: 2rem;
@@ -973,6 +1074,11 @@
     padding: 1rem;
   }
 
+  /* Stack queries contacts on mobile */
+  .contact-list {
+    grid-template-columns: 1fr;
+  }
+
   /* Event Details tab content styling for mobile */
   .event-details-content .detail-item {
     margin-bottom: 1.5rem;
@@ -1034,8 +1140,8 @@
   }
 
   .hero-image {
-    max-width: 350px;
-    height: 220px;
+    max-width: 450px;
+    height: 55vh;
     margin-bottom: 1.5rem;
   }
 
@@ -1087,4 +1193,173 @@
   background: var(--box-bg-color);
   border-color: var(--border-color);
   color: var(--light-text-color);
+}
+
+/* Email Verification Styles */
+.email-verification-container {
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-end;
+}
+
+.email-verification-container input {
+  flex: 1;
+}
+
+.verify-email-btn {
+  background: var(--bg-color-primary, #224259);
+  color: white;
+  border: none;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  min-width: 120px;
+}
+
+.verify-email-btn:hover:not(:disabled) {
+  background: var(--bg-color-primary, #224259);
+  transform: translateY(-1px);
+}
+
+.verify-email-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.verification-status {
+  margin-left: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.verification-status.verified {
+  color: #22c55e;
+}
+
+.otp-verification-section {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+}
+
+.otp-verification-section label {
+  font-size: 0.9rem;
+  color: var(--text-color-secondary, #666);
+  margin-bottom: 0.75rem;
+}
+
+.otp-input-container {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.otp-input {
+  flex: 1;
+  max-width: 150px;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+}
+
+.verify-otp-btn {
+  background: #22c55e;
+  color: white;
+  border: none;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  min-width: 100px;
+}
+
+.verify-otp-btn:hover:not(:disabled) {
+  background: #16a34a;
+  transform: translateY(-1px);
+}
+
+.verify-otp-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.resend-otp-btn {
+  background: transparent;
+  color: var(--bg-color-primary, #224259);
+  border: 1px solid var(--bg-color-primary, #224259);
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+}
+
+.resend-otp-btn:hover:not(:disabled) {
+  background: var(--bg-color-primary, #224259);
+  color: white;
+}
+
+.resend-otp-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Dark theme support for email verification */
+.dark-theme .otp-verification-section {
+  background: var(--box-bg-color);
+  border-color: var(--border-color);
+}
+
+.dark-theme .otp-verification-section label {
+  color: var(--light-text-color);
+}
+
+.dark-theme .otp-input {
+  background: var(--box-bg-color);
+  border-color: var(--border-color);
+  color: var(--light-text-color);
+}
+
+.dark-theme .resend-otp-btn {
+  color: var(--light-text-color);
+  border-color: var(--light-text-color);
+}
+
+.dark-theme .resend-otp-btn:hover:not(:disabled) {
+  background: var(--light-text-color);
+  color: var(--bg-color-primary);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .email-verification-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .verify-email-btn {
+    margin-top: 0.5rem;
+  }
+
+  .otp-input-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .verify-otp-btn {
+    margin-top: 0.5rem;
+  }
 }

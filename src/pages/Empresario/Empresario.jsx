@@ -4,29 +4,37 @@ import { Link } from "react-router-dom";
 import Footer from "../../components/shared/Footer/Footer";
 import Navbar from "../../components/shared/Navbar/Navbar";
 import { AiOutlineArrowRight, AiOutlineArrowLeft } from "react-icons/ai";
+import { RxCross2 } from "react-icons/rx";
 import "./Empresario.css";
 
 const Empresario = () => {
   const carouselRef = useRef(null);
-  const sponsorsRef = useRef(null);
   const eventsRef = useRef(null);
+  const aboutRef = useRef(null);
   const [isPaused, setIsPaused] = useState(false);
   const [loaded, setIsLoaded] = useState(false);
   const timeoutRef = useRef(null);
   const prefersReducedMotion = useReducedMotion();
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [lightboxIndex, setLightboxIndex] = useState(0);
 
   useEffect(() => {
     document.title = "Empresario | E-Cell NIT Silchar";
   }, []);
 
-  // Navigation functions for events section
-  function fwdNextgo() {
-    eventsRef.current.scrollLeft += eventsRef.current.offsetWidth;
-  }
+  // Scroll to events section from Hero CTA
+  const scrollToEvents = () => {
+    if (eventsRef.current) {
+      eventsRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
 
-  function backPrevbk() {
-    eventsRef.current.scrollLeft -= eventsRef.current.offsetWidth;
-  }
+  // Scroll to About section from Hero CTA
+  const scrollToAbout = () => {
+    if (aboutRef.current) {
+      aboutRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
 
   // Lazy loading implementation
   const config = {
@@ -116,102 +124,123 @@ const Empresario = () => {
     };
   }, []);
 
-  // Handle sponsors slider pause/resume functionality (similar to gallery)
-  useEffect(() => {
-    const sponsorsTrack = sponsorsRef.current;
-    if (!sponsorsTrack) return;
-
-    const handleInteraction = () => {
-      sponsorsTrack.style.animationPlayState = "paused";
-      if (timeoutRef.current) clearTimeout(timeoutRef.current);
-      timeoutRef.current = setTimeout(() => {
-        sponsorsTrack.style.animationPlayState = "running";
-      }, 1000);
-    };
-
-    sponsorsTrack.addEventListener("mousedown", handleInteraction);
-    sponsorsTrack.addEventListener("touchstart", handleInteraction);
-    sponsorsTrack.addEventListener("wheel", handleInteraction);
-    sponsorsTrack.addEventListener("scroll", handleInteraction);
-
-    return () => {
-      sponsorsTrack.removeEventListener("mousedown", handleInteraction);
-      sponsorsTrack.removeEventListener("touchstart", handleInteraction);
-      sponsorsTrack.removeEventListener("wheel", handleInteraction);
-      sponsorsTrack.removeEventListener("scroll", handleInteraction);
-    };
-  }, []);
-
-  // Event data for the 4 events
+  // Event data for the 4 events - Updated with actual event details
   const empresarioEvents = [
     {
       id: 1,
-      title: "Business Hackathon",
-      date: "Coming Soon",
-      location: "NIT Silchar",
-      img: "https://res.cloudinary.com/dp92qug2f/image/upload/v1685019690/Ecell%20website/collaboration%20backgrounds/Empressario-1_ewb2al.webp",
+      title: "BUSINESS HACKATHON",
+      date: "Nov 8 - Nov 21, 2025",
+      location: "Start UP Center",
+      img: "/images/Business-Hackathon.jpg",
       content:
-        "A competitive hackathon focused on developing innovative business solutions and entrepreneurial ideas.",
+        "It starts with a spark—a test of wit and instinct. Then comes the hustle, where ideas take shape and teams rise. Ideas ignite, strategies clash, and legacies begin. EMINENCE isn't just a battle of brains—it's a race to be remembered.",
+      teamSize: "3 to 5 members",
+      registrationDeadline: "November 8, 2025",
     },
     {
       id: 2,
-      title: "Treasure Hunt",
-      date: "Coming Soon",
-      location: "NIT Silchar",
-      img: "https://res.cloudinary.com/dp92qug2f/image/upload/v1685019690/Ecell%20website/collaboration%20backgrounds/Empressario-1_ewb2al.webp",
+      title: "TREASURE HUNT",
+      date: "Apr 15, 2025",
+      location: "Campus Wide",
+      img: "/images/Treasure-hunt.jpg",
       content:
-        "An exciting treasure hunt event that combines problem-solving skills with entrepreneurial thinking.",
+        "Get ready to experience the thrill of business, strategy, and discovery as E-Cell NIT Silchar presents the Entrepreneurial Treasure Hunt — a campus-wide adventure that blends fun with the essence of entrepreneurship.",
+      teamSize: "3 to 5 members",
+      registrationDeadline: "April 10, 2025",
     },
     {
       id: 3,
-      title: "Bech Kae Dikhao",
-      date: "Coming Soon",
-      location: "NIT Silchar",
-      img: "https://res.cloudinary.com/dp92qug2f/image/upload/v1685019690/Ecell%20website/collaboration%20backgrounds/Empressario-1_ewb2al.webp",
+      title: "BID-WISE",
+      date: "Apr 20 - Apr 21, 2025",
+      location: "Central Arena & Stall Areas",
+      img: "/images/BID-WISE.jpg",
       content:
-        "A sales and marketing competition where participants showcase their selling and presentation skills.",
+        "BID-WISE is an exciting strategic auction competition where teams compete in a silent auction format. Teams must strategically bid on items of varying difficulty levels to maximize their points while managing their limited resources.",
+      teamSize: "3 to 5 members",
+      registrationDeadline: "April 15, 2025",
     },
     {
       id: 4,
       title: "Adovation",
-      date: "Coming Soon",
-      location: "NIT Silchar",
-      img: "https://res.cloudinary.com/dp92qug2f/image/upload/v1685019690/Ecell%20website/collaboration%20backgrounds/Empressario-1_ewb2al.webp",
+      date: "Nov 15 - Nov 22, 2025",
+      location: "Online Submission",
+      img: "/images/Adovation.jpg",
       content:
-        "An advertising and innovation challenge that tests creative thinking and marketing strategies.",
+        "A Tecnoesis 'Empressario' Module Event by Ecell. Teams will create engaging promotional videos for assigned shops, showcasing their marketing creativity and video production skills.",
+      teamSize: "3 to 6 members",
+      registrationDeadline: "November 15, 2025",
     },
   ];
 
-  // Sample previous event images for carousel
+  // Empresario event images from GalleryTab.json
   const previousEventImages = [
-    "https://res.cloudinary.com/dp92qug2f/image/upload/v1680769435/Ecell%20website/events/backgrounds%20homepage%20events%20section/empreserrio_mzokcx.webp",
-    "https://res.cloudinary.com/dp92qug2f/image/upload/v1685019690/Ecell%20website/collaboration%20backgrounds/Empressario-1_ewb2al.webp",
-    "https://res.cloudinary.com/dp92qug2f/image/upload/v1680769436/Ecell%20website/events/backgrounds%20homepage%20events%20section/srijan_t8leer.webp",
-    "https://res.cloudinary.com/dp92qug2f/image/upload/v1680769435/Ecell%20website/events/backgrounds%20homepage%20events%20section/incubation_pyv0lv.webp",
-    "https://res.cloudinary.com/dp92qug2f/image/upload/v1680769436/Ecell%20website/events/backgrounds%20homepage%20events%20section/orientation_rmnosd.webp",
+    // 2022-2023 Empresario events
+    "https://res.cloudinary.com/dfriijrmr/image/upload/v1678297818/GalleryPage/Emprassario%202022-23/WhatsApp_Image_2022-11-16_at_7.52.20_AM_asucfg.jpg",
+    "https://res.cloudinary.com/dfriijrmr/image/upload/v1678297818/GalleryPage/Emprassario%202022-23/WhatsApp_Image_2022-11-20_at_11.43.03_AM_grnx2j.jpg",
+    "https://res.cloudinary.com/dfriijrmr/image/upload/v1678297818/GalleryPage/Emprassario%202022-23/WhatsApp_Image_2022-11-20_at_11.43.06_AM_bkovkg.jpg",
+    "https://res.cloudinary.com/dfriijrmr/image/upload/v1678297818/GalleryPage/Emprassario%202022-23/WhatsApp_Image_2022-11-20_at_11.43.05_AM_kfcxb3.jpg",
+    // 2023-2024 Empresario events
+    "https://res.cloudinary.com/sahincloudinary/image/upload/f_auto,q_auto/v1/Ecell/Events/empresario/wbkxymi0kisgsnesqeqz",
+    "https://res.cloudinary.com/sahincloudinary/image/upload/f_auto,q_auto/v1/Ecell/Events/empresario/Emp1",
+    "https://res.cloudinary.com/sahincloudinary/image/upload/f_auto,q_auto/v1/Ecell/Events/empresario/Emp2",
+    "https://res.cloudinary.com/sahincloudinary/image/upload/f_auto,q_auto/v1/Ecell/Events/empresario/Emp13",
+    "https://res.cloudinary.com/sahincloudinary/image/upload/v1711132568/Ecell/Events/empresario/Emp4.webp",
+    "https://res.cloudinary.com/sahincloudinary/image/upload/v1711132375/Ecell/Events/empresario/Emp3.webp",
+    // 2024-2025 Empresario events
+    "https://res.cloudinary.com/diu8ohkcn/image/upload/WhatsApp_Image_2025-06-05_at_23.38.56_qpxgkx",
+    "https://res.cloudinary.com/diu8ohkcn/image/upload/WhatsApp_Image_2025-06-05_at_23.38.56_2_ixazyv",
+    "https://res.cloudinary.com/diu8ohkcn/image/upload/WhatsApp_Image_2025-06-05_at_23.38.56_1_tggvsz",
+    "https://res.cloudinary.com/diu8ohkcn/image/upload/WhatsApp_Image_2025-06-05_at_23.38.53_1_yhxhf8",
+    "https://res.cloudinary.com/diu8ohkcn/image/upload/WhatsApp_Image_2025-06-05_at_23.38.53_osmp8m",
+    "https://res.cloudinary.com/diu8ohkcn/image/upload/WhatsApp_Image_2025-06-05_at_23.38.54_njqxmn",
+    "https://res.cloudinary.com/diu8ohkcn/image/upload/WhatsApp_Image_2025-06-05_at_23.49.16_a9vnlr",
+    "https://res.cloudinary.com/diu8ohkcn/image/upload/WhatsApp_Image_2025-06-05_at_23.38.54_1_l9ki4k",
   ];
 
-  // Sponsor logos pulled from Home Collaboration section
-  const sponsorLogos = [
-    "https://res.cloudinary.com/dp92qug2f/image/upload/v1685354010/Ecell%20website/edtimes_logo_bhl4ec.webp",
-    "https://res.cloudinary.com/draptrzrc/image/upload/v1707558984/Payzaql.webp",
-    "https://res.cloudinary.com/dp92qug2f/image/upload/v1676989598/collaboration-ecell/Cubeleloresized_jimc2g.png",
-    "https://res.cloudinary.com/dp92qug2f/image/upload/v1676990266/collaboration-ecell/blackmarble00_q3mowc.png",
-    "https://res.cloudinary.com/dp92qug2f/image/upload/v1676990589/collaboration-ecell/gfgre_xzhxha.png",
-    "https://res.cloudinary.com/dp92qug2f/image/upload/v1676990660/collaboration-ecell/truscholarres_korsx7.png",
-    "https://res.cloudinary.com/dp92qug2f/image/upload/v1676990737/collaboration-ecell/assamStartUpres_n2fbxv.png",
-    "https://res.cloudinary.com/dp92qug2f/image/upload/v1676989494/collaboration-ecell/finlatics_dh1suv.png",
-    "https://res.cloudinary.com/dp92qug2f/image/upload/c_scale,w_360,f_auto,fl_lossy/v1676524279/collaboration-ecell/PNB_Icon-resize_aghkjd.png",
-    "https://res.cloudinary.com/dp92qug2f/image/upload/v1676988769/collaboration-ecell/kwikpicghj_x7cy2p.png",
-    "https://res.cloudinary.com/dp92qug2f/image/upload/v1676988848/collaboration-ecell/ssstartRe_xea2cl.png",
-    "https://res.cloudinary.com/dp92qug2f/image/upload/v1676989080/collaboration-ecell/engineer_hubRe_ggety2.png",
-    "https://res.cloudinary.com/dp92qug2f/image/upload/v1676989170/collaboration-ecell/stockGroRE_ymge3d.png",
-    "https://res.cloudinary.com/dp92qug2f/image/upload/v1676989292/collaboration-ecell/yenRE_zgrknu.png",
-    "https://res.cloudinary.com/dp92qug2f/image/upload/v1676989412/collaboration-ecell/anterprerna_susjet.png",
-    "https://res.cloudinary.com/dp92qug2f/image/upload/v1676989729/collaboration-ecell/IvyCap_bnxqmc.png",
-    "https://res.cloudinary.com/dp92qug2f/image/upload/v1676989825/collaboration-ecell/jantaGroup_apsnyg.png",
-    "https://res.cloudinary.com/dp92qug2f/image/upload/v1676990018/collaboration-ecell/learningWhileTraveling_bmf0fj.png",
+  // Simple hero stats for quick context
+  const heroStats = [
+    { label: "Events", value: empresarioEvents.length },
+    { label: "Participants", value: "500+" },
   ];
+
+  // Helper to derive event type badge
+  const deriveEventType = (event) => {
+    const loc = (event.location || "").toLowerCase();
+    if (loc.includes("online")) return "Online";
+    return "On-site";
+  };
+
+  // Lightbox handlers
+  const openLightbox = (index) => {
+    setLightboxIndex(index);
+    setLightboxOpen(true);
+    // Pause carousel while lightbox is open
+    if (carouselRef.current) carouselRef.current.style.animationPlayState = "paused";
+  };
+  const closeLightbox = () => {
+    setLightboxOpen(false);
+    if (carouselRef.current) carouselRef.current.style.animationPlayState = "running";
+  };
+  const prevLightbox = () => {
+    setLightboxIndex(
+      (i) => (i - 1 + previousEventImages.length) % previousEventImages.length
+    );
+  };
+  const nextLightbox = () => {
+    setLightboxIndex((i) => (i + 1) % previousEventImages.length);
+  };
+
+  // Keyboard support for lightbox
+  useEffect(() => {
+    if (!lightboxOpen) return;
+    const onKey = (e) => {
+      if (e.key === "Escape") closeLightbox();
+      if (e.key === "ArrowLeft") prevLightbox();
+      if (e.key === "ArrowRight") nextLightbox();
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [lightboxOpen]);
 
   return (
     <>
@@ -230,22 +259,77 @@ const Empresario = () => {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
         >
-          <h1>EMPRESARIO</h1>
+          <h1 className="empresario-hero-title">Empresario</h1>
+          <p className="empresario-hero-subtitle">The Entrepreneurship Module of</p>
+          <h3 className="empresario-hero-tagline">Tecnoesis 2025</h3>
+          <div className="hero-cta-group">
+            <button
+              className="hero-cta"
+              onClick={scrollToAbout}
+              aria-label="About Empresario"
+            >
+              About Empresario
+            </button>
+            <button
+              className="hero-cta"
+              onClick={scrollToEvents}
+              aria-label="Explore events"
+            >
+              Explore Events
+            </button>
+          </div>
+          <div className="hero-stats" aria-label="Empresario quick stats">
+            {heroStats.map((s) => (
+              <div key={s.label} className="hero-stat">
+                <div className="hero-stat-value">{s.value}</div>
+                <div className="hero-stat-label">{s.label}</div>
+              </div>
+            ))}
+          </div>
         </motion.div>
       </div>
+
+      {/* About Section */}
+      <section className="empresario-about" ref={aboutRef} aria-label="About Empresario">
+        <motion.div
+          className="empresario-about-inner reveal"
+          initial={{ opacity: 0, y: prefersReducedMotion ? 0 : 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+        >
+          <h2>About Empresario</h2>
+          <p>
+            Empresario is the entrepreneurship module of Tecnoesis, the annual techfest of
+            NIT Silchar. Led by E-Cell NIT Silchar, it provides a campus-wide platform for
+            students to showcase business acumen, creativity, and problem‑solving through
+            curated events and competitions.
+          </p>
+          <p>
+            Under this module, participants engage in strategy‑focused challenges such as
+            hackathons, case competitions, marketing campaigns, bidding/auction gameplay,
+            and treasure hunts—designed to build practical skills in analysis, teamwork,
+            and execution.
+          </p>
+          <p className="empresario-about-note">
+            Source: E‑Cell NIT Silchar site and Tecnoesis updates.
+          </p>
+        </motion.div>
+      </section>
 
       {/* Events Section */}
       <div className="upcom-evnts-top">
         <h1>
-          Our{" "}
+          Explore
           <span
             style={{
               fontFamily: "Barlow Condensed",
               color: "var(--text-color-primary)",
               fontWeight: "900",
+              marginLeft: "0.5ch",
             }}
           >
-            Events
+            Empresario Events
           </span>
         </h1>
       </div>
@@ -278,15 +362,20 @@ const Empresario = () => {
 
               <div className="dte-locn-upcomi-event">
                 <h2>{event.date}</h2>
+                <p>📍 {event.location}</p>
               </div>
 
-              <div className="btns-info-klp">
-                <div className="btns-1-ent-indi">
-                  <button>Empresario</button>
-                </div>
-                <div className="btns-1-ent-indi">
-                  <button>Event</button>
-                </div>
+              <div className="event-badges" aria-label="Event badges">
+                <span
+                  className={`badge ${deriveEventType(event) === "Online" ? "badge-online" : "badge-onsite"}`}
+                >
+                  {deriveEventType(event)}
+                </span>
+                <span className="badge badge-team">Team: {event.teamSize}</span>
+              </div>
+
+              <div className="event-meta-info">
+                <p>📅 Registration Deadline: {event.registrationDeadline}</p>
               </div>
 
               <div className="abt-content-indi-evnt">
@@ -295,20 +384,13 @@ const Empresario = () => {
 
               <div className="view-details-btn-container">
                 <Link to={`/event/${event.id}`} className="view-details-btn">
-                  View Details
+                  <span>View Details</span>
+                  <AiOutlineArrowRight className="view-details-icon" />
                 </Link>
               </div>
             </motion.div>
           );
         })}
-      </div>
-      <div className="btns">
-        <button className="prev btn-testimonial" onClick={backPrevbk}>
-          <AiOutlineArrowLeft className="btn-indi-testimonial" />
-        </button>
-        <button className="next btn-testimonial" onClick={fwdNextgo}>
-          <AiOutlineArrowRight className="btn-indi-testimonial" />
-        </button>
       </div>
 
       {/* Previous Events Image Carousel */}
@@ -320,44 +402,68 @@ const Empresario = () => {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
         >
-          <h2>Previous Events Gallery</h2>
+          <h1>
+            Previous
+            <span
+              style={{
+                fontFamily: "Barlow Condensed",
+                color: "var(--text-color-primary)",
+                fontWeight: "900",
+                marginLeft: "0.5ch",
+              }}
+            >
+              Events Gallery
+            </span>
+          </h1>
         </motion.div>
         <div className="empresario-carousel-container">
           <div className="empresario-carousel-track" ref={carouselRef}>
-            {previousEventImages.concat(previousEventImages).map((image, index) => (
+            {/* Render images twice for seamless infinite scroll */}
+            {[...previousEventImages, ...previousEventImages].map((image, index) => (
               <div key={index} className="empresario-carousel-slide">
-                <img src={image} alt={`Previous event ${index + 1}`} />
+                <img
+                  src={image}
+                  alt={`Previous event ${(index % previousEventImages.length) + 1}`}
+                  onClick={() => openLightbox(index % previousEventImages.length)}
+                />
               </div>
             ))}
           </div>
         </div>
       </div>
 
-      {/* Our Sponsors - design adapted from Home Collaboration, auto-sliding */}
-      <motion.div
-        className="our-sponsors reveal"
-        initial={{ opacity: 0, y: prefersReducedMotion ? 0 : 10 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.2 }}
-        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-      >
-        <h2>Our Sponsors</h2>
-      </motion.div>
-      <div className="sponsors-slider">
-        <div className="sponsors-track" ref={sponsorsRef}>
-          {sponsorLogos.concat(sponsorLogos).map((src, idx) => (
-            <div className="sponsor-logo" key={idx}>
-              <img
-                className={`${loaded ? "loaded" : "loading"} ru-collab`}
-                onLoad={() => setIsLoaded(true)}
-                src=""
-                data-src={src}
-                alt={`Sponsor ${idx + 1}`}
-              />
-            </div>
-          ))}
+      {lightboxOpen && (
+        <div
+          className="empresario-lightbox"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Image preview"
+        >
+          <button className="lightbox-close" aria-label="Close" onClick={closeLightbox}>
+            <RxCross2 />
+          </button>
+          <div className="lightbox-content">
+            <button
+              className="lightbox-nav prev"
+              aria-label="Previous image"
+              onClick={prevLightbox}
+            >
+              <AiOutlineArrowLeft />
+            </button>
+            <img
+              src={previousEventImages[lightboxIndex]}
+              alt={`Gallery image ${lightboxIndex + 1}`}
+            />
+            <button
+              className="lightbox-nav next"
+              aria-label="Next image"
+              onClick={nextLightbox}
+            >
+              <AiOutlineArrowRight />
+            </button>
+          </div>
         </div>
-      </div>
+      )}
 
       <Footer />
     </>
