@@ -636,9 +636,18 @@
 }
 
 .contact-name {
+  font-size: 1.2rem;
   font-weight: 600;
   color: var(--text-color-primary, #224259);
   margin-bottom: 0.25rem;
+}
+
+.contact-position {
+  font-size: 1 rem;
+  color: var(--bg-color-primary, #224259);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  font-style: italic;
 }
 
 .contact-contact {

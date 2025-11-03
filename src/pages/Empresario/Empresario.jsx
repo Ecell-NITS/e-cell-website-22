@@ -133,7 +133,7 @@ const Empresario = () => {
       location: "Start UP Center",
       img: "https://res.cloudinary.com/ecell/image/upload/v1762152608/IMG_8717_cnkrj5.png",
       content:
-        "It starts with a spark—a test of wit and instinct. Then comes the hustle, where ideas take shape and teams rise. Ideas ignite, strategies clash, and legacies begin. EMINENCE isn't just a battle of brains—it's a race to be remembered.",
+        "Enter the digital dimension where creativity is your code and strategy is your weapon. In this realm of visionaries, strategists, and innovators, ideas transcend boundaries and solutions reshape realities. Two rounds await: online submission and onsite hackathon.",
       teamSize: "3 to 5 members",
       registrationDeadline: "November 8, 2025",
     },
@@ -144,7 +144,7 @@ const Empresario = () => {
       location: "Campus Wide",
       img: "https://res.cloudinary.com/ecell/image/upload/v1762152610/IMG_8714_c4o4mw.png",
       content:
-        "Get ready to experience the thrill of business, strategy, and discovery as E-Cell NIT Silchar presents the Entrepreneurial Treasure Hunt — a campus-wide adventure that blends fun with the essence of entrepreneurship.",
+        "Get ready for the ultimate campus adventure! Navigate through clues and riddles in this high-stakes treasure hunt where every step tests your wit and every discovery brings you closer to victory. Three thrilling rounds await the brave.",
       teamSize: "3 to 5 members",
       registrationDeadline: "April 10, 2025",
     },
@@ -155,7 +155,7 @@ const Empresario = () => {
       location: "Central Arena & Stall Areas",
       img: "https://res.cloudinary.com/ecell/image/upload/v1762152609/IMG_8713_wbfxio.png",
       content:
-        "BID-WISE is an exciting strategic auction competition where teams compete in a silent auction format. Teams must strategically bid on items of varying difficulty levels to maximize their points while managing their limited resources.",
+        "Enter the strategic battlefield where Power Tokens fuel your ambitions and every bid shapes your destiny. Navigate through Phase I's silent auctions and Phase II's intense showdowns. Master the art of resource management in this ultimate test of strategy.",
       teamSize: "3 to 5 members",
       registrationDeadline: "April 15, 2025",
     },
@@ -202,6 +202,14 @@ const Empresario = () => {
     { label: "Events", value: empresarioEvents.length },
     { label: "Participants", value: "500+" },
   ];
+
+  // Helper to convert event title to URL-friendly slug
+  const createEventSlug = (title) => {
+    return title
+      .toLowerCase()
+      .replace(/\s+/g, "-")
+      .replace(/[^a-z0-9-]/g, "");
+  };
 
   // Helper to derive event type badge
   const deriveEventType = (event) => {
@@ -395,7 +403,10 @@ const Empresario = () => {
               </div>
 
               <div className="view-details-btn-container">
-                <Link to={`/event/${event.id}`} className="view-details-btn">
+                <Link
+                  to={`/event/${createEventSlug(event.title)}`}
+                  className="view-details-btn"
+                >
                   <span>View Details</span>
                   <AiOutlineArrowRight className="view-details-icon" />
                 </Link>

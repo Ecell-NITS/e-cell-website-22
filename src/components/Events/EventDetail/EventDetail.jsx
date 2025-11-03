@@ -7,7 +7,15 @@ import NavbarTeam from "../../shared/Navbar/NavbarTeam";
 import Footer from "../../shared/Footer/Footer";
 
 const EventDetail = () => {
-  const { eventId } = useParams();
+  const { eventId: eventSlug } = useParams();
+
+  // Helper to convert event title to URL-friendly slug
+  const createEventSlug = (title) => {
+    return title
+      .toLowerCase()
+      .replace(/\s+/g, "-")
+      .replace(/[^a-z0-9-]/g, "");
+  };
 
   // Active tab state
   const [activeTab, setActiveTab] = useState("about");
@@ -102,6 +110,87 @@ const EventDetail = () => {
     }
   };
 
+  // Event-specific contact information
+  const getEventContacts = (eventId) => {
+    switch (parseInt(eventId)) {
+      case 1: // Business Hackathon
+        return [
+          {
+            name: "Arhan Rahman",
+            phone: "+91 6901741124",
+            position: "Event Head",
+          },
+          {
+            name: "Khushi Prasad",
+            phone: "+91 9336299515",
+            position: "Event Head",
+          },
+        ];
+      case 2: // Treasure Hunt
+        return [
+          {
+            name: "Premansh Chakraborty",
+            phone: "+91 8260094077",
+            position: "Event Head",
+          },
+          {
+            name: "Pallav Prithani",
+            phone: "+91 7099666599",
+            position: "Event Head",
+          },
+          {
+            name: "Kartika Jauhari",
+            phone: "+91 7208976771",
+            position: "Event Head",
+          },
+        ];
+      case 3: // BID-WISE
+        return [
+          {
+            name: "Krishna Harlalka",
+            phone: "+91 9101786458",
+            position: "Event Head",
+          },
+          {
+            name: "Paarisha Agarwal",
+            phone: "+91 9560707507",
+            position: "Event Head",
+          },
+          {
+            name: "Ronak Choudhary",
+            phone: "+91 6003490434",
+            position: "Event Head",
+          },
+        ];
+      case 4: // Adovation
+        return [
+          {
+            name: "Dhruv Mantri",
+            phone: "+91 6281558501",
+            position: "Event Head",
+          },
+          {
+            name: "Gaurav",
+            phone: "+91 6392622035",
+            position: "Event Head",
+          },
+          {
+            name: "Divyanshi Singh",
+            phone: "+91 6001945527",
+            position: "Event Head",
+          },
+        ];
+      default:
+        return [
+          {
+            name: "E-Cell Team",
+            phone: "+91 9876543210",
+            position: "Event Coordinator",
+          },
+        ];
+    }
+  };
+
   // Registration form state
   const [formData, setFormData] = useState({
     teamName: "",
@@ -142,9 +231,10 @@ const EventDetail = () => {
     {
       id: 1,
       title: "BUSINESS HACKATHON",
-      subtitle: "E-Cell, NIT Silchar welcomes you with open arms.",
+      subtitle:
+        "Enter the digital dimension where creativity is your code and strategy is your weapon",
       description:
-        "It starts with a spark—a test of wit and instinct. Then comes the hustle, where ideas take shape and teams rise. Ideas ignite, strategies clash, and legacies begin. EMINENCE isn't just a battle of brains—it's a race to be remembered. From the first move to the final pitch, every second counts. You'll think, build, and hustle like never before. Only the fearless will outsmart, outpitch, and outlast the rest. Are you in?",
+        "A realm where visionaries, strategists, and innovators collide to power the next wave of business evolution. Enter a digital dimension where creativity is your code and strategy is your weapon. This isn't just a hackathon, it's an awakening of bold ideas, limitless imagination, and futuristic problem-solving. Team up. Power up. Step into the ultimate business battleground where every decision counts and every idea sparks possibility. Challenge your limits and craft the solutions that will shape tomorrow. The future starts now!",
       image:
         "https://res.cloudinary.com/ecell/image/upload/v1762152608/IMG_8717_cnkrj5.png",
       date: "Nov 8 - Nov 21, 2025",
@@ -159,27 +249,45 @@ const EventDetail = () => {
       registrations: "2 teams registered",
       eventFlow: {
         round1: {
-          title: "Round 1 (Online)",
+          title: "Round 1: Online Submission",
           description:
-            "In round 1, teams can choose from any of the 8 problem statements.",
-          registrationDeadline: "8th November",
-          submissionDeadline: "10th November",
+            "Teams can choose from any of the 8 problem statements provided to them. Teams must create and submit a PPT (in presentation format) and a 1 minute video explaining their idea or showcasing their presentation, as a reply to that mail. AI tools, including ChatGPT, may be used; but scoring will mainly focus on practicality, originality, relevance, and market analysis.",
+          registrationDeadline: "8th November (EOD)",
+          submissionDeadline: "10th November (EOD)",
           resultAnnouncement: "12th November",
           requirements:
-            "Solution of the problem statement along with PPT and video explaining the solution",
+            "PPT (in presentation format) and a 1 minute video explaining their idea or showcasing their presentation",
+          advancement: "The top 8 teams will advance to the final round",
         },
         round2: {
-          title: "Round 2 (Offline)",
+          title: "Round 2: Onsite Hackathon",
           date: "21st November",
           location: "Startup Centre",
           description:
-            "Shortlisted teams will work on real business problems faced by companies and brands. Teams will be given a limited time (about 8 hrs) to brainstorm and develop actionable solutions.",
+            "Teams will have 8 hours to build a complete, market-ready business model. Creating a prototype is optional but recommended for a competitive edge. At least one member must be present onsite throughout the event. Accurate, traceable data is mandatory, with verification upon request. False data will lead to disqualification; keep track of all sources.",
+          duration: "8 hours",
+          requirements:
+            "Complete, market-ready business model with accurate, traceable data",
+          dressCode: "Semi-formal",
         },
       },
       rules: [
-        "Team size: 3 to 5 members",
-        "Mandatory submission of PPT and video explaining the solution of the problem statement chosen by the team",
-        "Solution must cover: problem, solution, business model, market potential, and impact",
+        "Team Formation: Teams of 3-5 members, with cross-year collaborations encouraged",
+        "Registration: Only the team leader needs to register through the provided link",
+        "Team Diversity: Aim for a diverse team with complementary skills",
+        "Registration Deadline: 8th November (EOD)",
+        "Round 1: Teams can choose from any of the 8 problem statements provided",
+        "Round 1 Submission: PPT (in presentation format) and a 1 minute video explaining their idea",
+        "AI Tools: ChatGPT and other AI tools may be used, but scoring focuses on practicality, originality, relevance, and market analysis",
+        "Round 1 Deadline: 10th November (EOD)",
+        "Advancement: Top 8 teams advance to Round 2",
+        "Round 2: Onsite hackathon at Startup Centre on 21st November",
+        "Round 2 Duration: 8 hours to build a complete, market-ready business model",
+        "Prototype: Optional but recommended for competitive edge",
+        "Attendance: At least one member must be present onsite throughout the event",
+        "Data Requirements: Accurate, traceable data is mandatory with verification upon request",
+        "Disqualification: False data will lead to immediate disqualification",
+        "Dress Code: Semi-formal for Round 2",
       ],
       participantDetails: [
         "Team Name",
@@ -231,9 +339,9 @@ const EventDetail = () => {
     {
       id: 2,
       title: "TREASURE HUNT",
-      subtitle: "Experience the thrill of business, strategy, and discovery",
+      subtitle: "Get ready for the ultimate campus adventure!",
       description:
-        "Get ready to experience the thrill of business, strategy, and discovery as E-Cell NIT Silchar presents the Entrepreneurial Treasure Hunt — a campus-wide adventure that blends fun with the essence of entrepreneurship. Around 20–25 teams, each consisting of 3–5 participants, will set out across the entire college campus — from the academic blocks to hostels, the canteen, and main ground — solving business-based riddles, completing mini challenges, and uncovering hidden clues that test their creativity and business acumen while enjoying their treasure hunt. The entire event is expected to take around 3 to 4 hours, packed with brainstorming, exploration, and high-energy competition — leading to a final round where only the sharpest teams will battle it out for the ultimate treasure symbolizing entrepreneurial triumph.",
+        "Get ready for the ultimate campus adventure! E Cell is hosting a high-stakes Treasure Hunt where your wits are your greatest weapon. We have scattered a series of clues and brain twisting riddles that will storm your mind. Dive into the grids of this mind-bending challenge, unlock the codes and race to find the hidden treasure before anyone else. This isn't just a hunt, it's a battle of wits. Do you have what it takes to conquer the grid?",
       image:
         "https://res.cloudinary.com/ecell/image/upload/v1762152610/IMG_8714_c4o4mw.png",
       date: "Apr 15, 2025",
@@ -269,13 +377,10 @@ const EventDetail = () => {
         },
       },
       rules: [
-        "Follow the volunteers' instructions at every location",
-        "Respect campus property and do not disturb classes or others",
-        "Any form of cheating or unfair means will lead to disqualification",
-        "Clues must not be shared between teams",
+        "Team size: 3–5 members",
+        "The event would be conducted in 3 rounds",
         "The use of any vehicle (including bicycles, scooters, etc.) is strictly prohibited and will lead to disqualification",
-        "The decision of organizers and volunteers will be final",
-        "Have fun and give your best, teamwork and creativity matter most!",
+        "Any form of cheating or unfair means will lead to disqualification",
       ],
       participantDetails: [
         "Team Name",
@@ -316,9 +421,9 @@ const EventDetail = () => {
     {
       id: 3,
       title: "BID-WISE",
-      subtitle: "Strategic Auction & Business Competition",
+      subtitle: "Where every bid tests your strategy, and every move defines your game",
       description:
-        "BID-WISE is an exciting strategic auction competition where teams compete in a silent auction format. Teams must strategically bid on items of varying difficulty levels to maximize their points while managing their limited resources. With 60 items across 6 rounds, teams need to plan carefully, bid wisely, and outmaneuver their competition to advance to Round 2.",
+        "A high-stakes mind game of logic, timing, and competition. This is a silent battlefield where teams must outthink, outbid, and outlast their rivals to claim victory. Where every bid tests your strategy, and every move defines your game.",
       image:
         "https://res.cloudinary.com/ecell/image/upload/v1762152609/IMG_8713_wbfxio.png",
       date: "Apr 20 - Apr 21, 2025",
@@ -332,10 +437,10 @@ const EventDetail = () => {
       registrationDeadline: "April 15, 2025",
       registrations: "8 teams registered",
       eventFlow: {
-        round1: {
-          title: "Round 1: Silent Auction",
+        phase1: {
+          title: "Phase I: The Silent Crucible",
           description:
-            "Teams participate in a strategic silent auction across 6 rounds of 20 minutes each. Each team receives a badge for the team leader, team number, 30 numbered tokens, and 100 points (purse).",
+            "30 Teams enter an arena filled with intriguing items based on First come First serve Basis. You have a limited time to explore, discuss, and place your bids, all without uttering a word. Success demands sharp observation, quick decisions, and smart budgeting across 6 brutal rounds where winners are declared at the end of each.",
           setup:
             "A central arena will be created for teams to gather and 10 stalls will be placed around the room edges with 60 items total.",
           roundStructure: {
@@ -343,31 +448,43 @@ const EventDetail = () => {
             discussion: "4 mins - Teams return to arena and plan bids",
             bidding: "8 mins - Only leaders bid using tokens (team no. + bid amount)",
           },
+          powerToken: {
+            title: "The Power Token: The Double-Edged Blade",
+            description:
+              "Every team receives one special token. It can double your bid and almost guarantee securing a coveted item.",
+            warning:
+              "The Catch is Deadly: In a few secret rounds, any team that uses its token faces instant elimination. Use it at your own risk.",
+          },
           scoring: {
             easy: "2 points",
             medium: "3 points",
             hard: "5 points",
           },
-          advancement: "Top 10 teams advance to Round 2",
+          advancement: "Top 10 teams advance to Phase II",
         },
-        round2: {
-          title: "Round 2",
-          description: "Yet to be decided",
-          note: "Details will be announced after Round 1 completion",
+        phase2: {
+          title: "Phase II: Final Domination",
+          description:
+            "The top 10 performing teams from the silent auction advance to the next stage. Here, strategy, adaptability, and unbreakable team synergy will decide who conquers The Grid.",
+          note: "Details will be announced after Phase I completion",
         },
       },
       rules: [
-        "Team size: 3-5 members",
+        "Teams: 3–5 members",
+        "Purse: Each team begins with a fixed purse of 100 points to allocate among bids. Overspending leads to disqualification",
         "Items are divided into three categories based on difficulty of selling – Easy, Medium, and Hard",
         "Each category has a base price, and bidding begins from that price",
         "Every team is provided with: Team Number and Leader Badge, 30 numbered bid tokens, A Marker, A pocket of 100 points (the team's total purse)",
+        "Power Token: Every team receives one special token that can double your bid and almost guarantee securing a coveted item",
+        "Power Token Warning: In a few secret rounds, any team that uses its token faces instant elimination. Use it at your own risk",
         "A total of 60 items will be auctioned across 6 rounds (20 minutes each)",
         "Round Structure (20 minutes): Exploration (8 mins), Discussion (4 mins), Bidding (8 mins)",
         "Only team leaders (with badges) can move to stalls and submit bids during bidding phase",
         "Penalty: Any team member without a badge found outside the arena during the bidding phase will result in a –5 point deduction",
-        "Every team must plan strategically—overspending leads to disqualification if the purse goes negative",
-        "The highest valid bid wins the item. In case of a tie, the item goes to the next highest unique bid",
-        "The top 10 teams with the highest total item points after all rounds will move on to Round 2",
+        "Winning Bids: The highest valid bid wins each item. Points awarded depend on the item's difficulty",
+        "Tie-breaker: If two teams tie at a bid, the item goes to the next highest bidder",
+        "Advancement: The top 10 teams from Phase I move to Phase II",
+        "Can your team strike a balance between risk and reward? Will you play The Grid or will The Grid play you?",
       ],
       participantDetails: [
         "Team leader's name and contact no., Scholar ID, Email-ID",
@@ -391,18 +508,18 @@ const EventDetail = () => {
             },
             {
               time: "10:30 AM",
-              title: "Round 1: Silent Auction - Rounds 1-3",
+              title: "Phase I: The Silent Crucible - Rounds 1-3",
               venue: "Central Arena & Stalls",
             },
             { time: "1:30 PM", title: "Lunch Break", venue: "Cafeteria" },
             {
               time: "2:30 PM",
-              title: "Round 1: Silent Auction - Rounds 4-6",
+              title: "Phase I: The Silent Crucible - Rounds 4-6",
               venue: "Central Arena & Stalls",
             },
             {
               time: "5:30 PM",
-              title: "Round 1 Results & Top 10 Announcement",
+              title: "Phase I Results & Top 10 Announcement",
               venue: "Central Arena",
             },
           ],
@@ -410,7 +527,11 @@ const EventDetail = () => {
         {
           date: "April 21, 2025",
           events: [
-            { time: "10:00 AM", title: "Round 2 (Details TBA)", venue: "TBA" },
+            {
+              time: "10:00 AM",
+              title: "Phase II: Final Domination (Details TBA)",
+              venue: "TBA",
+            },
             {
               time: "5:00 PM",
               title: "Final Results & Prize Distribution",
@@ -423,9 +544,10 @@ const EventDetail = () => {
     {
       id: 4,
       title: "Adovation",
-      subtitle: "The Ultimate Shop Promotion Challenge",
+      subtitle:
+        "The ultimate online ad-making showdown where creativity meets the digital realm!",
       description:
-        "A Tecnoesis 'Empressario' Module Event by Ecell. Teams will create engaging promotional videos for assigned shops, showcasing their marketing creativity and video production skills. This challenge tests your ability to understand business identity and create compelling marketing content.",
+        "This Technoesis, E-Cell NIT Silchar presents Adovation, the ultimate online ad-making showdown where creativity meets the digital realm! You and your team will be assigned a shop inside NITS. Mission: Create a 30–60 second ad that's funny, emotional, or dramatic, because in this grid, whatever sells, sells! So plug into your creative circuit, power up your storytelling core, and let your ideas light up the network. Because in Adovation, every second counts and every story sparks the grid.",
       image:
         "https://res.cloudinary.com/ecell/image/upload/v1762152607/IMG_8716_y89plz.png",
       date: "Nov 15 - Nov 22, 2025",
@@ -447,27 +569,26 @@ const EventDetail = () => {
         shopAssignment: {
           title: "Shop Assignment",
           description:
-            "After registration, teams receive a list of 3 shops via email. Teams choose one shop, and E-cell confirms the final assignment via email.",
+            "After registration, each team will receive an email containing a list of three shops, from which they must select one. E-Cell will confirm the final shop assignment via mail.",
         },
         videoCreation: {
           title: "Video Creation & Submission",
           description:
-            "Teams create a 59-second promotional video highlighting their assigned shop's unique selling propositions.",
+            "Teams create a 30-60 second promotional video that's funny, emotional, or dramatic, highlighting their assigned shop's unique selling propositions.",
           deadline: "22nd November",
           submissionMethod: "Google Drive link",
         },
       },
       rules: [
         "Team Size: 3-6 members",
-        "Registration through Tecnoesis website with redirection to E-cell website",
-        "Teams must register with team name, all member names, scholar IDs, and contact details",
-        "Video Length: Maximum 59 seconds",
-        "Video must be engaging, informative, and creatively highlight the shop's unique selling propositions",
-        "Strict deadline: 22nd November for video submission",
+        "After registration, each team will receive an email containing a list of three shops, from which they must select one",
+        "E-Cell will confirm the final shop assignment via mail",
+        "Video Length: 30-60 seconds",
+        "Task: Create a video that is engaging, creative, and informative, highlighting the shop's unique selling propositions (USPs) while maintaining its brand identity",
+        "Video can be funny, emotional, or dramatic - whatever sells, sells!",
+        "Submission Deadline: All videos must be submitted by 22nd November",
         "Submission method: Google Drive link",
         "Late submissions will face immediate disqualification",
-        "Teams will be assigned one shop from a list of 3 options",
-        "E-cell will confirm final shop assignment via email",
       ],
       judgingCriteria: [
         "Creativity and Originality (30%)",
@@ -506,8 +627,8 @@ const EventDetail = () => {
     },
   ];
 
-  // Find the event by ID
-  const event = empresarioEvents.find((e) => e.id === parseInt(eventId));
+  // Find the event by slug
+  const event = empresarioEvents.find((e) => createEventSlug(e.title) === eventSlug);
   const prefersReducedMotion = useReducedMotion();
 
   // Reveal-on-scroll for subtle entrance animations (unconditional)
@@ -858,8 +979,8 @@ const EventDetail = () => {
         }
       };
 
-      const apiEndpoint = getApiEndpoint(eventId);
-      const apiData = prepareApiData(eventId, formData);
+      const apiEndpoint = getApiEndpoint(event.id);
+      const apiData = prepareApiData(event.id, formData);
 
       const response = await fetch(apiEndpoint, {
         method: "POST",
@@ -872,16 +993,19 @@ const EventDetail = () => {
       const result = await response.json();
 
       if (response.ok) {
-        toast.success(`Registration successful for ${event.title}!`, {
-          position: "top-right",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "dark",
-        });
+        toast.success(
+          `Registration successful for ${event.title}! PLease check your email for further details`,
+          {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+          }
+        );
 
         // Reset form
         setFormData({
@@ -1269,38 +1393,21 @@ const EventDetail = () => {
                   </div>
                 )}
 
-                {/* For Queries section with demo contacts */}
+                {/* For Queries section with event-specific contacts */}
                 <div className="queries-section">
                   <h3>For Queries</h3>
                   <div className="contact-list">
-                    <div className="contact-card">
-                      <div className="contact-name">Dhruba Agarwalla</div>
-                      <div className="contact-contact">
-                        <div className="contact-phone">
-                          📞 <a href="tel:+919876543210">+91 9876543210</a>
-                        </div>
-                        <div className="contact-email">
-                          ✉️{" "}
-                          <a href="mailto:ecell-demo1@example.com">
-                            ecell-demo1@example.com
-                          </a>
+                    {getEventContacts(event.id).map((contact, index) => (
+                      <div key={index} className="contact-card">
+                        <div className="contact-name">{contact.name}</div>
+                        <div className="contact-position">{contact.position}</div>
+                        <div className="contact-contact">
+                          <div className="contact-phone">
+                            📞 <a href={`tel:${contact.phone}`}>{contact.phone}</a>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div className="contact-card">
-                      <div className="contact-name">Dhruba </div>
-                      <div className="contact-contact">
-                        <div className="contact-phone">
-                          📞 <a href="tel:+919123456789">+91 9123456789</a>
-                        </div>
-                        <div className="contact-email">
-                          ✉️{" "}
-                          <a href="mailto:ecell-demo2@example.com">
-                            ecell-demo2@example.com
-                          </a>
-                        </div>
-                      </div>
-                    </div>
+                    ))}
                   </div>
                 </div>
               </motion.div>
