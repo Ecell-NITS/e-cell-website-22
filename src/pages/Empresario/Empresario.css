@@ -196,6 +196,7 @@
 .upcomi-evvnts-parnt {
   display: flex;
   align-items: stretch;
+  justify-content: center;
   flex-wrap: wrap;
   scroll-behavior: auto;
   overflow: visible;
@@ -235,14 +236,10 @@
 
 /* Center the fourth card on the second row */
 .upcom-evnt-indi:nth-child(4) {
-  margin-left: auto;
-  margin-right: auto;
 }
 
 /* Center the fifth card on the second row to match Adovation alignment */
 .upcom-evnt-indi:nth-child(5) {
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .img-upcom-evnt {
@@ -812,6 +809,7 @@
     width: 88%;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 5vw;
     padding: 2vw;
     border: 1px solid var(--border-color-primary);
     border-radius: 2vw;

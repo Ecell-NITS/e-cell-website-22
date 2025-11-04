@@ -172,7 +172,7 @@ const EventDetail = () => {
             position: "Event Head",
           },
           {
-            name: "Pallav Prithani",
+            name: "Pallavi Prithani",
             phone: "+91 7099666599",
             position: "Event Head",
           },
@@ -378,7 +378,7 @@ const EventDetail = () => {
         "Get ready for the ultimate campus adventure! E Cell is hosting a high-stakes Treasure Hunt where your wits are your greatest weapon. We have scattered a series of clues and brain twisting riddles that will storm your mind. Dive into the grids of this mind-bending challenge, unlock the codes and race to find the hidden treasure before anyone else. This isn't just a hunt, it's a battle of wits. Do you have what it takes to conquer the grid?",
       image:
         "https://res.cloudinary.com/ecell/image/upload/v1762194328/IMG_8732_vxn0yd.jpg",
-      date: "November 21, 2025",
+      date: "November 21 - 23, 2025",
       time: "10:00 AM - 2:00 PM",
       location: "Campus Wide",
       organizer: "E-CELL",
@@ -476,7 +476,7 @@ const EventDetail = () => {
         "A high-stakes mind game of logic, timing, and competition. This is a silent battlefield where teams must outthink, outbid, and outlast their rivals to claim victory. Where every bid tests your strategy, and every move defines your game.",
       image:
         "https://res.cloudinary.com/ecell/image/upload/v1762194328/IMG_8733_pjeg3h.jpg",
-      date: "Nov 21 - Nov 22, 2025",
+      date: "Nov 21 - Nov 23, 2025",
       time: "10:00 AM - 6:00 PM",
       location: "Central Arena & Stall Areas",
       organizer: "E-CELL",
@@ -718,12 +718,12 @@ const EventDetail = () => {
         "https://res.cloudinary.com/ecell/image/upload/v1762194324/IMG_8730_mjgtpn.jpg",
       date: "TBA",
       time: "TBA",
-      location: "Exhibition Hall",
+      location: "New Gallery",
       organizer: "E-CELL",
       category: "Exhibition",
-      prizePool: "TBA",
+      prizePool: null,
       participationType: "Individual/Team Event",
-      teamSize: "NA",
+      teamSize: "Minimum 1 member",
       registrationDeadline: "TBA",
       eventFlow: {
         round1: {
@@ -739,8 +739,8 @@ const EventDetail = () => {
         },
         round2: {
           title: "Startup Exhibition",
-          date: "TBA",
-          location: "Exhibition Hall",
+          date: "21 - 23 November, 2025",
+          location: "New Gallery",
           description:
             "Showcase your startup to investors, mentors, and fellow entrepreneurs. Present your products, services, and business model to a diverse audience of industry experts and potential collaborators.",
           duration: "Full day exhibition",
@@ -750,6 +750,7 @@ const EventDetail = () => {
         },
       },
       rules: [
+        "You are required to join whatsapp group sent on your email after registration for further updates",
         "Team Formation: Individual or team participation allowed ",
         "Registration: Only the team leader/founder needs to register",
         "Startup Stage: All stages of startups welcome (idea, prototype, launched)",
@@ -783,12 +784,12 @@ const EventDetail = () => {
           ],
         },
         {
-          date: "TBA",
+          date: "21 -23 November, 2025",
           events: [
             {
               time: "TBA",
               title: "Startup Expo Exhibition",
-              venue: "Exhibition Hall, NIT Silchar",
+              venue: "New Gallery",
             },
           ],
         },
@@ -2122,7 +2123,9 @@ const EventDetail = () => {
                           config.maxTeamMembers !== undefined
                             ? config.maxTeamMembers
                             : config.maxTeamSize - 1;
-                        return `Add ${minMembers} to ${maxMembers} team members ${event.id === 2 ? "(excluding team leader and vice captain)" : "(excluding team leader)"}. Total team size: ${config.minTeamSize} to ${config.maxTeamSize} members.`;
+                        return maxMembers === 998
+                          ? "Add Team Members"
+                          : `Add ${minMembers} to ${maxMembers} team members ${event.id === 2 ? "(excluding team leader and vice captain)" : "(excluding team leader)"}. Total team size: ${config.minTeamSize} to ${config.maxTeamSize} members.`;
                       })()}
                     </p>
 

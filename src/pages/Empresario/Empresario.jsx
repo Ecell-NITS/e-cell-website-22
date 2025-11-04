@@ -142,7 +142,7 @@ const Empresario = () => {
     {
       id: 2,
       title: "TREASURE HUNT",
-      date: "Nov 15 - Nov 21, 2025",
+      date: "Nov 21 - Nov 23, 2025",
       location: "Campus Wide",
       img: "https://res.cloudinary.com/ecell/image/upload/v1762194328/IMG_8732_vxn0yd.jpg",
       content:
@@ -153,7 +153,7 @@ const Empresario = () => {
     {
       id: 3,
       title: "BID-WISE",
-      date: "Nov 21 - Nov 22, 2025",
+      date: "Nov 21 - Nov 23, 2025",
       location: "Central Arena & Stall Areas",
       img: "https://res.cloudinary.com/ecell/image/upload/v1762194328/IMG_8733_pjeg3h.jpg",
       content:
@@ -164,7 +164,7 @@ const Empresario = () => {
     {
       id: 4,
       title: "Adovation",
-      date: "Nov 15 - Nov 22, 2025",
+      date: "Nov 15 - Nov 23, 2025",
       location: "Online Submission",
       img: "https://res.cloudinary.com/ecell/image/upload/v1762194326/IMG_8731_nxvstk.jpg",
       content:
@@ -175,13 +175,13 @@ const Empresario = () => {
     {
       id: 5,
       title: "STARTUP EXPO",
-      date: "Nov 10 - Nov 25, 2025",
-      location: "Innovation Hub & Exhibition Center",
+      date: "Nov 21 - Nov 23, 2025",
+      location: "New Gallery",
       img: "https://res.cloudinary.com/ecell/image/upload/v1762194324/IMG_8730_mjgtpn.jpg",
       content:
         "Transform your innovative ideas into reality at the ultimate startup showcase! Present your business concepts, connect with investors, and compete for funding opportunities. Two dynamic rounds: application submission and live exhibition.",
-      teamSize: "NA",
-      registrationDeadline: "November 10, 2025",
+      teamSize: "Minimum 1 member",
+      registrationDeadline: "TBA",
     },
   ];
 

@@ -756,6 +756,7 @@
 .form-group label {
   font-weight: 600;
   margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
   color: var(--text-color-primary, #224259);
 }
 
@@ -767,6 +768,8 @@
 .form-group select,
 .form-group textarea {
   padding: 0.75rem;
+  height: auto;
+  width: auto;
   border: 1px solid var(--border-color, #e0e0e0);
   border-radius: 6px;
   font-size: 0.95rem;
