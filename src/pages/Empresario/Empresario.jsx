@@ -84,6 +84,8 @@ const Empresario = () => {
 
   const loadImages = (image) => {
     image.src = image.dataset.src;
+    // Add loaded class to remove blur effect
+    image.classList.add("loaded");
   };
 
   // Handle carousel pause/resume functionality
@@ -140,7 +142,7 @@ const Empresario = () => {
     {
       id: 2,
       title: "TREASURE HUNT",
-      date: "Nov 15 - Nov 21, 2025",
+      date: "Nov 21 - Nov 23, 2025",
       location: "Campus Wide",
       img: "https://res.cloudinary.com/ecell/image/upload/v1762194328/IMG_8732_vxn0yd.jpg",
       content:
@@ -151,7 +153,7 @@ const Empresario = () => {
     {
       id: 3,
       title: "BID-WISE",
-      date: "Nov 21 - Nov 22, 2025",
+      date: "Nov 21 - Nov 23, 2025",
       location: "Central Arena & Stall Areas",
       img: "https://res.cloudinary.com/ecell/image/upload/v1762194328/IMG_8733_pjeg3h.jpg",
       content:
@@ -162,13 +164,24 @@ const Empresario = () => {
     {
       id: 4,
       title: "Adovation",
-      date: "Nov 15 - Nov 22, 2025",
+      date: "Nov 15 - Nov 23, 2025",
       location: "Online Submission",
       img: "https://res.cloudinary.com/ecell/image/upload/v1762194326/IMG_8731_nxvstk.jpg",
       content:
         "A Tecnoesis 'Empressario' Module Event by Ecell. Teams will create engaging promotional videos for assigned shops, showcasing their marketing creativity and video production skills.",
       teamSize: "3 to 6 members",
       registrationDeadline: "November 15, 2025",
+    },
+    {
+      id: 5,
+      title: "STARTUP EXPO",
+      date: "Nov 21 - Nov 23, 2025",
+      location: "New Gallery",
+      img: "https://res.cloudinary.com/ecell/image/upload/v1762194324/IMG_8730_mjgtpn.jpg",
+      content:
+        "Transform your innovative ideas into reality at the ultimate startup showcase! Present your business concepts, connect with investors, and compete for funding opportunities. Two dynamic rounds: application submission and live exhibition.",
+      teamSize: "Minimum 1 member",
+      registrationDeadline: "TBA",
     },
   ];
 
@@ -370,8 +383,7 @@ const Empresario = () => {
                 <img
                   src=""
                   data-src={event.img}
-                  className={loaded ? "loaded" : "loading"}
-                  onLoad={() => setIsLoaded(true)}
+                  className="lazy-image"
                   alt={event.title}
                 />
               </div>
@@ -445,9 +457,13 @@ const Empresario = () => {
             {[...previousEventImages, ...previousEventImages].map((image, index) => (
               <div key={index} className="empresario-carousel-slide">
                 <img
-                  src={image}
+                  src=""
+                  data-src={image}
                   alt={`Previous event ${(index % previousEventImages.length) + 1}`}
                   onClick={() => openLightbox(index % previousEventImages.length)}
+                  loading="lazy"
+                  decoding="async"
+                  className="carousel-image lazy-image"
                 />
               </div>
             ))}

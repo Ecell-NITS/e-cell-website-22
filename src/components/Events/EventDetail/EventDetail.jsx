@@ -94,6 +94,42 @@ const EventDetail = () => {
           maxTeamMembers: 5,
           note: "Team size: 3 to 6 members. Please provide team name, all member names, scholar IDs, and contact details.",
         };
+      case 5: // Startup Expo
+        return {
+          fields: [
+            "teamName",
+            "teamLeaderName",
+            "teamLeaderEmail",
+            "teamLeaderPhone",
+            "teamLeaderScholarId",
+            "businessDescription",
+            "driveLink",
+            "teamMembers",
+          ],
+          teamMemberFields: ["name", "phone", "scholarId"],
+          minTeamSize: 1,
+          maxTeamSize: 999,
+          minTeamMembers: 0,
+          maxTeamMembers: 998,
+          note: "Individual or team participation allowed . Only the team leader/founder needs to register. Business description is required.",
+          customFields: {
+            businessDescription: {
+              label: "Business Description",
+              type: "textarea",
+              required: true,
+              placeholder:
+                "Provide a detailed description of your startup, business model, target market, and unique value proposition...",
+              rows: 6,
+            },
+            driveLink: {
+              label: "Drive Link (Optional)",
+              type: "url",
+              required: false,
+              placeholder:
+                "https://drive.google.com/... (Optional: Link to additional documents, pitch deck, demo videos, etc.)",
+            },
+          },
+        };
       default:
         return {
           fields: [
@@ -136,7 +172,7 @@ const EventDetail = () => {
             position: "Event Head",
           },
           {
-            name: "Pallav Prithani",
+            name: "Pallavi Prithani",
             phone: "+91 7099666599",
             position: "Event Head",
           },
@@ -182,6 +218,19 @@ const EventDetail = () => {
             position: "Event Head",
           },
         ];
+      case 5: // Startup Expo
+        return [
+          {
+            name: "Shreya Agarwal",
+            phone: "+91 8136099500",
+            position: "Event Head",
+          },
+          {
+            name: "Vishara Sangule",
+            phone: "+91 8319099500",
+            position: "Event Head",
+          },
+        ];
       default:
         return [
           {
@@ -209,6 +258,8 @@ const EventDetail = () => {
     year: "",
     participationType: "team", // Always team for this event
     teamMembers: [],
+    businessDescription: "", // For Startup Expo
+    driveLink: "", // For Startup Expo
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -327,7 +378,7 @@ const EventDetail = () => {
         "Get ready for the ultimate campus adventure! E Cell is hosting a high-stakes Treasure Hunt where your wits are your greatest weapon. We have scattered a series of clues and brain twisting riddles that will storm your mind. Dive into the grids of this mind-bending challenge, unlock the codes and race to find the hidden treasure before anyone else. This isn't just a hunt, it's a battle of wits. Do you have what it takes to conquer the grid?",
       image:
         "https://res.cloudinary.com/ecell/image/upload/v1762194328/IMG_8732_vxn0yd.jpg",
-      date: "November 21, 2025",
+      date: "November 21 - 23, 2025",
       time: "10:00 AM - 2:00 PM",
       location: "Campus Wide",
       organizer: "E-CELL",
@@ -425,7 +476,7 @@ const EventDetail = () => {
         "A high-stakes mind game of logic, timing, and competition. This is a silent battlefield where teams must outthink, outbid, and outlast their rivals to claim victory. Where every bid tests your strategy, and every move defines your game.",
       image:
         "https://res.cloudinary.com/ecell/image/upload/v1762194328/IMG_8733_pjeg3h.jpg",
-      date: "Nov 21 - Nov 22, 2025",
+      date: "Nov 21 - Nov 23, 2025",
       time: "10:00 AM - 6:00 PM",
       location: "Central Arena & Stall Areas",
       organizer: "E-CELL",
@@ -656,6 +707,94 @@ const EventDetail = () => {
       ],
       */
     },
+    {
+      id: 5,
+      title: "STARTUP EXPO",
+      subtitle:
+        "Got a real startup that feels like a cheat code? This is your portal to the next level!",
+      description:
+        "The Grid of Innovation is firing up, and E-Cell under Tecnoesis is looking for the best systems to plug in! Forget boring presentations this is your chance to showcase your genius to a massive network of creators, investors, and fellow innovators. Selected ventures get exclusive, lit-up stalls (your personal input node!) to display your ideas and products. We're giving you the platform, the spotlight, and the recognition you need to stop grinding and start dominating. If your startup stands out, get ready for activation you'll be featured in the exhibition, officially powering up the most fun Grid of Innovation ever!",
+      image:
+        "https://res.cloudinary.com/ecell/image/upload/v1762194324/IMG_8730_mjgtpn.jpg",
+      date: "TBA",
+      time: "TBA",
+      location: "New Gallery",
+      organizer: "E-CELL",
+      category: "Exhibition",
+      prizePool: null,
+      participationType: "Individual/Team Event",
+      teamSize: "Minimum 1 member",
+      registrationDeadline: "TBA",
+      eventFlow: {
+        round1: {
+          title: "Application Submission",
+          description:
+            "Submit your startup details including business description and supporting documents. Only team leaders need to register. Selected startups will be invited to showcase at the exhibition.",
+          registrationDeadline: "TBA",
+          submissionDeadline: "TBA",
+          resultAnnouncement: "Selected startups announced via email",
+          requirements:
+            "Complete startup details, business description, and optional supporting documents",
+          advancement: "Selected startups will get exhibition stalls",
+        },
+        round2: {
+          title: "Startup Exhibition",
+          date: "21 - 23 November, 2025",
+          location: "New Gallery",
+          description:
+            "Showcase your startup to investors, mentors, and fellow entrepreneurs. Present your products, services, and business model to a diverse audience of industry experts and potential collaborators.",
+          duration: "Full day exhibition",
+          requirements:
+            "Professional presentation setup, product demonstrations, business pitch materials",
+          dressCode: "Business formal",
+        },
+      },
+      rules: [
+        "You are required to join whatsapp group sent on your email after registration for further updates",
+        "Team Formation: Individual or team participation allowed ",
+        "Registration: Only the team leader/founder needs to register",
+        "Startup Stage: All stages of startups welcome (idea, prototype, launched)",
+        "Business Description: Detailed business description is mandatory",
+        "Supporting Documents: Drive link for additional documents is optional but recommended",
+        "Selection Process: Applications will be reviewed and selected startups will be notified",
+        "Exhibition Requirements: Selected startups must provide their own presentation materials",
+        "Networking: Opportunity to connect with investors, mentors, and industry experts",
+        "Dress Code: Business formal attire required during exhibition",
+      ],
+      participantDetails: [
+        "Startup/Team Name",
+        "Founder/Team leader's name, contact number and email id",
+        "Business Description (detailed)",
+        "Drive link for supporting documents (optional)",
+        "Team members details (if applicable)",
+      ],
+      schedule: [
+        {
+          date: "TBA",
+          events: [{ time: "TBA", title: "Registration Deadline", venue: "Online" }],
+        },
+        {
+          date: "TBA",
+          events: [
+            {
+              time: "TBA",
+              title: "Application Review Results",
+              venue: "Email Notification",
+            },
+          ],
+        },
+        {
+          date: "21 -23 November, 2025",
+          events: [
+            {
+              time: "TBA",
+              title: "Startup Expo Exhibition",
+              venue: "New Gallery",
+            },
+          ],
+        },
+      ],
+    },
   ];
 
   // Find the event by slug
@@ -679,6 +818,42 @@ const EventDetail = () => {
 
     return () => {
       revealEls.forEach((el) => revealObserver.unobserve(el));
+    };
+  }, []);
+
+  // Lazy loading for images
+  useEffect(() => {
+    const config = {
+      rootMargin: "0px 0px 0px 0px",
+      threshold: 0.2,
+    };
+
+    const loadImages = (image) => {
+      if (image.dataset.src) {
+        image.src = image.dataset.src;
+      }
+      // Add loaded class to remove blur effect
+      image.classList.add("loaded");
+    };
+
+    let observer = new window.IntersectionObserver(function (entries, self) {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          loadImages(entry.target);
+          self.unobserve(entry.target);
+        }
+      });
+    }, config);
+
+    const imgs = document.querySelectorAll("[data-src]");
+    imgs.forEach((img) => {
+      observer.observe(img);
+    });
+
+    return () => {
+      imgs.forEach((img) => {
+        observer.unobserve(img);
+      });
     };
   }, []);
 
@@ -817,6 +992,26 @@ const EventDetail = () => {
       if (field === "teamLeaderScholarId" || field === "teamViceCaptainScholarId") {
         // Scholar ID required only for NIT Silchar students
         return formData.collegeType === "nit_silchar" ? formData[field] : true;
+      }
+      // Custom field validation
+      if (
+        field === "businessDescription" &&
+        config.customFields?.businessDescription?.required
+      ) {
+        return formData[field] && formData[field].trim().length > 0;
+      }
+      if (field === "driveLink" && config.customFields?.driveLink?.required) {
+        return formData[field] && formData[field].trim().length > 0;
+      }
+      // For driveLink, if it's optional
+      if (field === "driveLink" && !config.customFields?.driveLink?.required) {
+        // If empty, it's valid (optional field)
+        if (!formData[field] || formData[field].trim().length === 0) {
+          return true;
+        }
+        // If provided, validate URL format
+        const urlPattern = /^https?:\/\/.+/;
+        return urlPattern.test(formData[field]);
       }
       return formData[field];
     });
@@ -962,6 +1157,8 @@ const EventDetail = () => {
             return `${baseUrl}/bid-wise/register`;
           case 4: // Adovation
             return `${baseUrl}/adovations/register`;
+          case 5: // Startup Expo
+            return `${baseUrl}/startup-expo/register`;
           default:
             throw new Error("Invalid event ID");
         }
@@ -1004,6 +1201,13 @@ const EventDetail = () => {
             return {
               ...baseData,
               teamLeaderScholarId: formData.teamLeaderScholarId,
+            };
+          case 5: // Startup Expo
+            return {
+              ...baseData,
+              teamLeaderScholarId: formData.teamLeaderScholarId,
+              businessDescription: formData.businessDescription,
+              driveLink: formData.driveLink,
             };
           default:
             return baseData;
@@ -1054,6 +1258,8 @@ const EventDetail = () => {
           year: "",
           participationType: "team",
           teamMembers: [],
+          businessDescription: "",
+          driveLink: "",
         });
       } else {
         // Handle API error response
@@ -1117,7 +1323,14 @@ const EventDetail = () => {
           {/* Big center text over banner (organizer) */}
           <h1 className="hero-title">{event.organizer}</h1>
           <div className="hero-image">
-            <img src={event.image} alt={event.title} loading="lazy" decoding="async" />
+            <img
+              src=""
+              data-src={event.image}
+              alt={event.title}
+              loading="lazy"
+              decoding="async"
+              className="lazy-image"
+            />
           </div>
           {/* Mobile meta row (kept as-is) */}
           <div className="hero-meta">
@@ -1205,7 +1418,14 @@ const EventDetail = () => {
           </div>
 
           <div className="hero-media">
-            <img src={event.image} alt={event.title} />
+            <img
+              src=""
+              data-src={event.image}
+              alt={event.title}
+              loading="lazy"
+              decoding="async"
+              className="lazy-image"
+            />
           </div>
         </motion.div>
       </div>
@@ -1762,6 +1982,70 @@ const EventDetail = () => {
                     )}
                   </div>
 
+                  {/* Custom Fields Section (for Startup Expo) */}
+                  {getFormConfig(event.id).customFields && (
+                    <div className="custom-fields-section">
+                      <h3>📋 Additional Information</h3>
+
+                      {/* Business Description Field */}
+                      {getFormConfig(event.id).fields.includes("businessDescription") && (
+                        <div className="form-group">
+                          <label htmlFor="businessDescription">
+                            {
+                              getFormConfig(event.id).customFields.businessDescription
+                                .label
+                            }
+                            {getFormConfig(event.id).customFields.businessDescription
+                              .required && <span className="required">*</span>}
+                          </label>
+                          <textarea
+                            id="businessDescription"
+                            name="businessDescription"
+                            value={formData.businessDescription}
+                            onChange={handleInputChange}
+                            placeholder={
+                              getFormConfig(event.id).customFields.businessDescription
+                                .placeholder
+                            }
+                            rows={
+                              getFormConfig(event.id).customFields.businessDescription
+                                .rows || 4
+                            }
+                            required={
+                              getFormConfig(event.id).customFields.businessDescription
+                                .required
+                            }
+                          />
+                        </div>
+                      )}
+
+                      {/* Drive Link Field */}
+                      {getFormConfig(event.id).fields.includes("driveLink") && (
+                        <div className="form-group">
+                          <label htmlFor="driveLink">
+                            {getFormConfig(event.id).customFields.driveLink.label}
+                            {getFormConfig(event.id).customFields.driveLink.required && (
+                              <span className="required">*</span>
+                            )}
+                          </label>
+                          <input
+                            type={getFormConfig(event.id).customFields.driveLink.type}
+                            id="driveLink"
+                            name="driveLink"
+                            value={formData.driveLink}
+                            onChange={handleInputChange}
+                            placeholder={
+                              getFormConfig(event.id).customFields.driveLink.placeholder
+                            }
+                            required={
+                              getFormConfig(event.id).customFields.driveLink.required
+                            }
+                          />
+                        </div>
+                      )}
+                    </div>
+                  )}
+
                   {/* Team Vice Captain Details (for Treasure Hunt) */}
                   {getFormConfig(event.id).fields.includes("teamViceCaptainName") && (
                     <div className="team-vice-captain-section">
@@ -1839,7 +2123,9 @@ const EventDetail = () => {
                           config.maxTeamMembers !== undefined
                             ? config.maxTeamMembers
                             : config.maxTeamSize - 1;
-                        return `Add ${minMembers} to ${maxMembers} team members ${event.id === 2 ? "(excluding team leader and vice captain)" : "(excluding team leader)"}. Total team size: ${config.minTeamSize} to ${config.maxTeamSize} members.`;
+                        return maxMembers === 998
+                          ? "Add Team Members"
+                          : `Add ${minMembers} to ${maxMembers} team members ${event.id === 2 ? "(excluding team leader and vice captain)" : "(excluding team leader)"}. Total team size: ${config.minTeamSize} to ${config.maxTeamSize} members.`;
                       })()}
                     </p>
 
