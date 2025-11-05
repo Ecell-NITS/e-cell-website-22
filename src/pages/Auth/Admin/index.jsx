@@ -19,6 +19,12 @@ import UserContext from "../../../context/UserContext";
 import AdminContextProvider from "../../../context/AdminContextProvider";
 import BlogContextProvider from "../../../context/BlogContextProvider";
 import Applications from "./Applications/Applications";
+import EventApplications from "./EventApplications/EventApplications";
+import Adovation from "./EventApplications/Adovation/Adovation";
+import BidWise from "./EventApplications/BidWise/BidWise";
+import BusinessHackathon from "./EventApplications/BusinessHackathon/BusinessHackathon";
+import StartupExpo from "./EventApplications/StartupExpo/StartupExpo";
+import TreasureHunt from "./EventApplications/TreasureHunt/TreasureHunt";
 import ApplicantsContextProvider from "../../../context/ApplicantsContextProvider";
 import TechApplications from "./TechApplications/TechApplications";
 
@@ -68,6 +74,22 @@ const Admin = () => {
                   <Route path="add-blogs" element={<AddBlogsAdmin />} />
                   <Route path="users" element={<Users />} />
                   <Route path="applications" element={<Applications />} />
+                  <Route path="applications-adovation" element={<Applications />} />
+                  <Route path="event-applications" element={<EventApplications />} />
+                  <Route path="event-applications/Adovation" element={<Adovation />} />
+                  <Route path="event-applications/BidWise" element={<BidWise />} />
+                  <Route
+                    path="event-applications/BusinessHackathon"
+                    element={<BusinessHackathon />}
+                  />
+                  <Route
+                    path="event-applications/StartupExpo"
+                    element={<StartupExpo />}
+                  />
+                  <Route
+                    path="event-applications/TreasureHunt"
+                    element={<TreasureHunt />}
+                  />
                   <Route path="applications-tech" element={<TechApplications />} />
                   <Route path="messages/:id" element={<IndiMsg />} />
                   <Route path="blogs/review/:id" element={<BlogReview />} />

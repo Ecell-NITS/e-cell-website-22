@@ -280,6 +280,12 @@ function App() {
                     <Route path="users" />
                     <Route path="applications" />
                     <Route path="applications-tech" />
+                    <Route path="event-applications" />
+                    <Route path="event-applications/Adovation" />
+                    <Route path="event-applications/BidWise" />
+                    <Route path="event-applications/BusinessHackathon" />
+                    <Route path="event-applications/StartupExpo" />
+                    <Route path="event-applications/TreasureHunt" />
                     <Route path="messages/:id" />
                     <Route path="blogs/review/:id" />
                     <Route path="/admin/users" />
