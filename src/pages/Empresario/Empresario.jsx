@@ -154,8 +154,8 @@ const Empresario = () => {
       id: 3,
       title: "BID-WISE",
       date: "Nov 21 - Nov 23, 2025",
-      location: "Central Arena & Stall Areas",
-      img: "https://res.cloudinary.com/ecell/image/upload/v1762194328/IMG_8733_pjeg3h.jpg",
+      location: "New Gallery",
+      img: "https://res.cloudinary.com/ecell/image/upload/v1762448470/bid-wise_updated_f2jmcm.png",
       content:
         "Enter the strategic battlefield where Power Tokens fuel your ambitions and every bid shapes your destiny. Navigate through Phase I's silent auctions and Phase II's intense showdowns. Master the art of resource management in this ultimate test of strategy.",
       teamSize: "3 to 5 members",
