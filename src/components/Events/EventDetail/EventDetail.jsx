@@ -388,7 +388,7 @@ const EventDetail = () => {
       teamSize: "3 to 5 members",
       registrationDeadline: "November 15, 2025",
       registrations: "5 teams registered",
-      eventFlow: {
+      /*eventFlow: {
         round1: {
           title: "Round 1: Photo Round",
           description:
@@ -409,7 +409,7 @@ const EventDetail = () => {
           requirements:
             "Win the final decider game and reach the final location first using the cycle",
         },
-      },
+      },*/
       rules: [
         "You are required to join whatsapp group sent on your email after registration for further updates",
         "Team size: 3–5 members",
