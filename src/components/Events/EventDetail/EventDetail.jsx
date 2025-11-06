@@ -475,10 +475,10 @@ const EventDetail = () => {
       description:
         "A high-stakes mind game of logic, timing, and competition. This is a silent battlefield where teams must outthink, outbid, and outlast their rivals to claim victory. Where every bid tests your strategy, and every move defines your game.",
       image:
-        "https://res.cloudinary.com/ecell/image/upload/v1762194328/IMG_8733_pjeg3h.jpg",
+        "https://res.cloudinary.com/ecell/image/upload/v1762448470/bid-wise_updated_f2jmcm.png",
       date: "Nov 21 - Nov 23, 2025",
       time: "10:00 AM - 6:00 PM",
-      location: "Central Arena & Stall Areas",
+      location: "New Gallery",
       organizer: "E-CELL",
       category: "Competition",
       prizePool: "6K",
@@ -490,7 +490,7 @@ const EventDetail = () => {
         phase1: {
           title: "Phase I: The Silent Crucible",
           description:
-            "30 Teams enter an arena filled with intriguing items based on First come First serve Basis. You have a limited time to explore, discuss, and place your bids, all without uttering a word. Success demands sharp observation, quick decisions, and smart budgeting across 6 brutal rounds where winners are declared at the end of each.",
+            "Registered Teams (Max 30) enter an arena filled with intriguing items based on First Come First Serve basis. You have a limited time to explore, discuss, and place your bids, all without uttering a word. Success demands sharp observation, quick decisions, and smart budgeting across 6 brutal rounds where winners are declared at the end of each round.",
           setup:
             "A central arena will be created for teams to gather and 10 stalls will be placed around the room edges with 60 items total.",
           roundStructure: {
@@ -523,15 +523,14 @@ const EventDetail = () => {
         "You are required to join whatsapp group sent on your email after registration for further updates",
         "Teams: 3–5 members",
         "Purse: Each team begins with a fixed purse of 100 points to allocate among bids. Overspending leads to disqualification",
+        "Points will be allocated in the form of tokens",
         "Items are divided into three categories based on difficulty of selling – Easy, Medium, and Hard",
         "Each category has a base price, and bidding begins from that price",
-        "Every team is provided with: Team Number and Leader Badge, 30 numbered bid tokens, A Marker, A pocket of 100 points (the team's total purse)",
         "Power Token: Every team receives one special token that can double your bid and almost guarantee securing a coveted item",
         "Power Token Warning: In a few secret rounds, any team that uses its token faces instant elimination. Use it at your own risk",
-        "A total of 60 items will be auctioned across 6 rounds (20 minutes each)",
-        "Round Structure (20 minutes): Exploration (8 mins), Discussion (4 mins), Bidding (8 mins)",
-        "Only team leaders (with badges) can move to stalls and submit bids during bidding phase",
-        "Penalty: Any team member without a badge found outside the arena during the bidding phase will result in a –5 point deduction",
+        "Items will be placed for auction in various stalls across various rounds ",
+        "Team members will be sent to an arena where the stalls will be made",
+        "Round Structure : Exploration of items → Discussion among team → Bidding ",
         "Winning Bids: The highest valid bid wins each item. Points awarded depend on the item's difficulty",
         "Tie-breaker: If two teams tie at a bid, the item goes to the next highest bidder",
         "Advancement: The top 10 teams from Phase I move to Phase II",
