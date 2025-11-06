@@ -627,11 +627,12 @@ const EventDetail = () => {
       registrationDeadline: "November 15, 2025",
       registrations: "0 teams registered",
       eventFlow: {
-        registration: {
+        /*registration: {
           title: "Registration Phase",
           description:
             "Teams register through Tecnoesis website and get redirected to E-cell website for detailed registration.",
         },
+        */
         shopAssignment: {
           title: "Shop Assignment",
           description:
