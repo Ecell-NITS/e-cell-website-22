@@ -471,9 +471,9 @@ const EventDetail = () => {
     {
       id: 3,
       title: "BID-WISE",
-      subtitle: "Where every bid tests your strategy, and every move defines your game",
+      subtitle: "The Silent Grid — a high-stakes battleground of wit and strategy",
       description:
-        "A high-stakes mind game of logic, timing, and competition. This is a silent battlefield where teams must outthink, outbid, and outlast their rivals to claim victory. Where every bid tests your strategy, and every move defines your game.",
+        "A high-stakes battlefield of wit, nerve, and strategy — where words fall silent, and only your moves speak. Teams enter an arena buzzing with mystery and competition, each holding a finite purse of points and a handful of tokens that decide their fate. Every bid is a gamble, every decision a test of nerve. Outthink. Outbid. Outlast. Do you have what it takes to play The Grid — or will The Grid play you?",
       image:
         "https://res.cloudinary.com/ecell/image/upload/v1762448470/bid-wise_updated_f2jmcm.png",
       date: "Nov 21 - Nov 23, 2025",
@@ -490,20 +490,19 @@ const EventDetail = () => {
         phase1: {
           title: "Phase I: The Silent Crucible",
           description:
-            "Registered Teams (Max 30) enter an arena filled with intriguing items based on First Come First Serve basis. You have a limited time to explore, discuss, and place your bids, all without uttering a word. Success demands sharp observation, quick decisions, and smart budgeting across 6 brutal rounds where winners are declared at the end of each round.",
+            "Thirty teams enter. Only strategy survives. You’ll explore an arena of stalls filled with coveted items — each one a potential game-changer. But here’s the twist: there’s no shouting, no open bidding — just your tokens, your instincts, and your team’s timing. Over six intense rounds, teams place secret bids to claim items across 10 different stalls while managing their limited purse and bidding tokens. Auction will be conducted in 6 rounds, each round has three phases — exploration, discussion, and bidding — with each round approximately 15 minutes. Some rounds may bless the bold, others may punish them — silence hides both fortune and downfall. At the end of Phase I, the top ten teams rise above the chaos to advance.",
           setup:
             "A central arena will be created for teams to gather and 10 stalls will be placed around the room edges with 60 items total.",
           roundStructure: {
-            exploration: "8 mins - Teams visit stalls to view items and base prices",
-            discussion: "4 mins - Teams return to arena and plan bids",
-            bidding: "8 mins - Only leaders bid using tokens (team no. + bid amount)",
+            exploration: "Explore stalls to view items and base prices",
+            discussion: "Return to arena and plan bids",
+            bidding:
+              "Secret bidding using pre-numbered tokens (team number + bid amount)",
           },
           powerToken: {
             title: "The Power Token: The Double-Edged Blade",
             description:
-              "Every team receives one special token. It can double your bid and almost guarantee securing a coveted item.",
-            warning:
-              "The Catch is Deadly: In a few secret rounds, any team that uses its token faces instant elimination. Use it at your own risk.",
+              "Each team receives one Special Token that doubles your bid — but beware, in a few secret rounds, using it could mean instant elimination.",
           },
           scoring: {
             easy: "2 points",
@@ -515,26 +514,20 @@ const EventDetail = () => {
         phase2: {
           title: "Phase II: Final Domination",
           description:
-            "The top 10 performing teams from the silent auction advance to the next stage. Here, strategy, adaptability, and unbreakable team synergy will decide who conquers The Grid.",
-          note: "Details will be announced after Phase I completion",
+            "Those who conquer the Crucible face the final trial — where creativity replaces coin. Your mission: Sell the impossible, blend the absurd, and make the world want what you own. Only the most innovative, strategic, and united teams will triumph.",
         },
       },
       rules: [
-        "You are required to join whatsapp group sent on your email after registration for further updates",
         "Teams: 3–5 members",
-        "Purse: Each team begins with a fixed purse of 100 points to allocate among bids. Overspending leads to disqualification",
-        "Points will be allocated in the form of tokens",
-        "Items are divided into three categories based on difficulty of selling – Easy, Medium, and Hard",
-        "Each category has a base price, and bidding begins from that price",
-        "Power Token: Every team receives one special token that can double your bid and almost guarantee securing a coveted item",
-        "Power Token Warning: In a few secret rounds, any team that uses its token faces instant elimination. Use it at your own risk",
-        "Items will be placed for auction in various stalls across various rounds ",
-        "Team members will be sent to an arena where the stalls will be made",
-        "Round Structure : Exploration of items → Discussion among team → Bidding ",
-        "Winning Bids: The highest valid bid wins each item. Points awarded depend on the item's difficulty",
-        "Tie-breaker: If two teams tie at a bid, the item goes to the next highest bidder",
-        "Advancement: The top 10 teams from Phase I move to Phase II",
-        "Can your team strike a balance between risk and reward? Will you play The Grid or will The Grid play you?",
+        "Purse: Each team begins with 100 points to allocate for bids — overspend, and face instant disqualification",
+        "Tokens: Each team gets limited pre-numbered bidding tokens, along with one Special Token; once used, they’re gone for good",
+        "Item Categories: Easy — worth 2 points; Medium — worth 3 points; Hard — worth 5 points",
+        "Power Token: Each team receives one Special Token that doubles your bid — but beware, in a few secret rounds, using it could mean instant elimination",
+        "Bidding Format: Write your team number and your bid on one of the given bidding tokens and hand it discreetly to the stall volunteer",
+        "Winning Bids: The highest valid bid wins the item; ties go to the next highest bidder",
+        "Arena Conduct: Only one member from a team may place bids; any rule breach costs points",
+        "Advancement: Top 10 teams from Phase I proceed to Phase II",
+        "Communication: Teams must join the official WhatsApp group shared via email after registration for updates",
       ],
       participantDetails: [
         "Team leader's name and contact no., Scholar ID, Email-ID",
