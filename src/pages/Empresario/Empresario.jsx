@@ -157,7 +157,7 @@ const Empresario = () => {
       location: "New Gallery",
       img: "https://res.cloudinary.com/ecell/image/upload/v1762448470/bid-wise_updated_f2jmcm.png",
       content:
-        "Enter the strategic battlefield where Power Tokens fuel your ambitions and every bid shapes your destiny. Navigate through Phase I's silent auctions and Phase II's intense showdowns. Master the art of resource management in this ultimate test of strategy.",
+        "Welcome to The Silent Grid: a high-stakes auction where words fall silent and only your moves speak. Manage a 100-point purse and limited bidding tokens across 6 rounds of exploration, discussion, and secret bidding at 10 stalls. Use the Special Token wisely—some rounds may eliminate it. Top 10 teams advance.",
       teamSize: "3 to 5 members",
       registrationDeadline: "November 19, 2025",
     },
