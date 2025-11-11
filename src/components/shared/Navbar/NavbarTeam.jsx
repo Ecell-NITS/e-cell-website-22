@@ -82,9 +82,9 @@ const NavbarTeam = () => {
           {" "}
           <NavLink to="/events">EVENTS</NavLink>
         </li>
-        <li>
+        {/* <li>
           <NavLink to="/empresario">EMPRESARIO</NavLink>
-        </li>
+        </li> */}
         <li>
           <NavLink to="/resources">RESOURCES</NavLink>
         </li>
