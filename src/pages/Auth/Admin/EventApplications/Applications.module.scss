@@ -17,12 +17,14 @@
     align-items: center;
     justify-content: center;
     padding: 0.5rem 1rem;
-    background-color: var(--bg-color-primary-light, #1E6C89);
+    background-color: var(--bg-color-primary-light, #1e6c89);
     color: var(--text-color-white);
     border-radius: 0.5rem;
     text-decoration: none;
     font-weight: 600;
-    transition: transform 0.12s ease, background-color 0.12s ease;
+    transition:
+      transform 0.12s ease,
+      background-color 0.12s ease;
     &:hover {
       transform: translateY(-2px);
       background-color: var(--bg-color-primary, #153746);
