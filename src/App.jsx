@@ -108,12 +108,14 @@ function App() {
                       key="route-empresario-screen"
                     />
                   }
-                  <Route
-                    exact
-                    path="/event/:eventId"
-                    element={<EventDetail />}
-                    key="route-event-detail-screen"
-                  />
+                  {
+                    <Route
+                      exact
+                      path="/event/:eventId"
+                      element={<EventDetail />}
+                      key="route-event-detail-screen"
+                    />
+                  }
                   <Route
                     exact
                     path="/resources"

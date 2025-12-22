@@ -131,13 +131,13 @@ const Empresario = () => {
     {
       id: 1,
       title: "BUSINESS HACKATHON",
-      date: "Nov 12 - Nov 23, 2025",
+      date: "January 17th, 2026",
       location: "Start UP Center",
-      img: "https://res.cloudinary.com/ecell/image/upload/v1762182366/IMG_8721_zdwfuc.png ",
+      img: "https://res.cloudinary.com/dtt4ftdrw/image/upload/v1766421071/bussiness_gjaocu.png",
       content:
         "Enter the digital dimension where creativity is your code and strategy is your weapon. In this realm of visionaries, strategists, and innovators, ideas transcend boundaries and solutions reshape realities. Two rounds await: online submission and onsite hackathon.",
       teamSize: "3 to 5 members",
-      registrationDeadline: "November 8, 2025",
+      registrationDeadline: "January 5th, 2026",
     },
     {
       id: 2,
@@ -282,7 +282,7 @@ const Empresario = () => {
         >
           <h1 className="empresario-hero-title">Empresario</h1>
           <p className="empresario-hero-subtitle">The Entrepreneurship Module of</p>
-          <h3 className="empresario-hero-tagline">Tecnoesis 2025</h3>
+          <h3 className="empresario-hero-tagline">Tecnoesis 2026</h3>
           <div className="hero-cta-group">
             <button
               className="hero-cta"
@@ -343,7 +343,7 @@ const Empresario = () => {
             And grow into the entrepreneur you aspire to be.
           </p>
           <p>
-            <strong>21 – 23 November</strong>
+            <strong>16th - 18th January</strong>
             <br />
             Unleash your entrepreneurial spirit.
           </p>

@@ -289,8 +289,8 @@ const EventDetail = () => {
       description:
         "A realm where visionaries, strategists, and innovators collide to power the next wave of business evolution. Enter a digital dimension where creativity is your code and strategy is your weapon. This isn't just a hackathon, it's an awakening of bold ideas, limitless imagination, and futuristic problem-solving. Team up. Power up. Step into the ultimate business battleground where every decision counts and every idea sparks possibility. Challenge your limits and craft the solutions that will shape tomorrow. The future starts now!",
       image:
-        "https://res.cloudinary.com/ecell/image/upload/v1762182366/IMG_8721_zdwfuc.png",
-      date: "Nov 12 - Nov 23, 2025",
+        "https://res.cloudinary.com/dtt4ftdrw/image/upload/v1766421071/bussiness_gjaocu.png",
+      date: "January 17th, 2026",
       time: "9:00 AM - 6:00 PM",
       location: "Startup Centre",
       organizer: "E-CELL NIT SILCHAR",
@@ -298,14 +298,14 @@ const EventDetail = () => {
       prizePool: "8K",
       participationType: "Team Event",
       teamSize: "3 to 5 members",
-      registrationDeadline: "November 12, 2025",
+      registrationDeadline: "January 5th, 2026",
       eventFlow: {
         round1: {
           title: "Round 1: Online Submission",
           description:
             "Teams can choose from any of the 8 problem statements provided via email after registration. Teams must create and submit a PPT (in presentation format) and a 1 minute video explaining their idea or showcasing their presentation, as a reply to that mail. AI tools, including ChatGPT, may be used; but scoring will mainly focus on practicality, originality, relevance, and market analysis.",
-          registrationDeadline: "12th November (EOD)",
-          submissionDeadline: "15th November (EOD)",
+          registrationDeadline: "January 5th (EOD)",
+          submissionDeadline: "January 10th (EOD)",
           resultAnnouncement: "Top 8 teams announced via email",
           requirements:
             "PPT (in presentation format) and a 1 minute video explaining their idea or showcasing their presentation",
@@ -313,7 +313,7 @@ const EventDetail = () => {
         },
         round2: {
           title: "Round 2: Onsite Hackathon",
-          date: "21st - 23rd November",
+          date: "January 17th,2026",
           location: "Startup Centre",
           description:
             "Teams will have 8 hours to build a complete, market-ready business model. Creating a prototype is optional but recommended for a competitive edge. At least one member must be present onsite throughout the event. Accurate, traceable data is mandatory, with verification upon request. False data will lead to disqualification; keep track of all sources.",
@@ -328,7 +328,7 @@ const EventDetail = () => {
         "Team Formation: Teams of 3-5 members, with cross-year collaborations encouraged",
         "Registration: Only the team leader needs to register through the link below",
         "Team Diversity: Aim for a diverse team with complementary skills",
-        "Registration Deadline: 12th November (EOD)",
+        "Registration Deadline: January 5th (EOD)",
         "Round 1: Choose any of the 8 problem statements (sent via email post-registration)",
         "Round 1 Submission: Submit PPT and a 1 minute video as a reply to the registration email",
         "AI Tools: Allowed (e.g., ChatGPT); scoring prioritizes practicality, originality, relevance, and market analysis",
@@ -349,17 +349,19 @@ const EventDetail = () => {
       ],
       schedule: [
         {
-          date: "November 12, 2025",
-          events: [{ time: "11:59 PM", title: "Registration Deadline", venue: "Online" }],
+          date: "January 5th, 2025",
+          events: [
+            { time: "11:59 PM", title: "Round 1 Registration Deadline", venue: "Online" },
+          ],
         },
         {
-          date: "November 15, 2025",
+          date: "January 10th, 2025",
           events: [
             { time: "11:59 PM", title: "Round 1 Submission Deadline", venue: "Online" },
           ],
         },
         {
-          date: "November 21-23, 2025",
+          date: "January 17th,2026",
           events: [
             {
               time: "TBA",
