@@ -9,7 +9,7 @@ import Gallery from "./pages/Gallery/Gallery";
 import Events from "./pages/Events/Events";
 import Resources from "./pages/Resources/Resources";
 import Empresario from "./pages/Empresario/Empresario";
-// import EventDetail from "./components/Events/EventDetail/EventDetail";
+import EventDetail from "./components/Events/EventDetail/EventDetail";
 import AllEvents from "./components/EventsPage/AllEvents";
 import Eventsred from "./pages/Events_red/Events_red";
 // import Recuitmentdetails from "./pages/Recruiting2425/Recuitmentdetails";
@@ -108,12 +108,14 @@ function App() {
                       key="route-empresario-screen"
                     />
                   }
-                  {/* <Route
-                    exact
-                    path="/event/:eventId"
-                    element={<EventDetail />}
-                    key="route-event-detail-screen"
-                  /> */}
+                  {
+                    <Route
+                      exact
+                      path="/event/:eventId"
+                      element={<EventDetail />}
+                      key="route-event-detail-screen"
+                    />
+                  }
                   <Route
                     exact
                     path="/resources"
