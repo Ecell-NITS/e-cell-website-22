@@ -298,7 +298,7 @@ const EventDetail = () => {
       prizePool: "8K",
       participationType: "Team Event",
       teamSize: "3 to 5 members",
-      registrationDeadline: "January 2nd, 2025",
+      registrationDeadline: "January 5th, 2026",
       eventFlow: {
         round1: {
           title: "Round 1: Online Submission",
