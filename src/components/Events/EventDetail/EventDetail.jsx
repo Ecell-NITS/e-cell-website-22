@@ -609,8 +609,8 @@ const EventDetail = () => {
       description:
         "This Technoesis, E-Cell NIT Silchar presents Adovation, the ultimate online ad-making showdown where creativity meets the digital realm! You and your team will be assigned a shop inside NITS. Mission: Create a 30–60 second ad that's funny, emotional, or dramatic, because in this grid, whatever sells, sells! So plug into your creative circuit, power up your storytelling core, and let your ideas light up the network. Because in Adovation, every second counts and every story sparks the grid.",
       image:
-        "https://res.cloudinary.com/ecell/image/upload/v1762194326/IMG_8731_nxvstk.jpg",
-      date: "Nov 15 - Nov 22, 2025",
+        "https://res.cloudinary.com/dtt4ftdrw/image/upload/v1766736053/Adovation_nxhzzv.png",
+      date: "January 18th,2026",
       time: "Registration Open",
       location: "Online Submission",
       organizer: "E-CELL",
@@ -618,7 +618,7 @@ const EventDetail = () => {
       prizePool: "4K",
       participationType: "Team Event",
       teamSize: "3 to 6 members",
-      registrationDeadline: "November 15, 2025",
+      registrationDeadline: "January 12th,2026",
       registrations: "0 teams registered",
       eventFlow: {
         /*registration: {
@@ -648,7 +648,7 @@ const EventDetail = () => {
         "Video Length: 30-60 seconds",
         "Task: Create a video that is engaging, creative, and informative, highlighting the shop's unique selling propositions (USPs) while maintaining its brand identity",
         "Video can be funny, emotional, or dramatic - whatever sells, sells!",
-        "Submission Deadline: All videos must be submitted by 22nd November",
+        "Submission Deadline: All videos must be submitted by January 18",
         "Submission method: Google Drive link",
         "Late submissions will face immediate disqualification",
       ],

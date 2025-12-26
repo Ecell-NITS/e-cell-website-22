@@ -164,13 +164,13 @@ const Empresario = () => {
     {
       id: 4,
       title: "Adovation",
-      date: "Nov 15 - Nov 23, 2025",
+      date: "January 18th,2026",
       location: "Online Submission",
-      img: "https://res.cloudinary.com/ecell/image/upload/v1762194326/IMG_8731_nxvstk.jpg",
+      img: "https://res.cloudinary.com/dtt4ftdrw/image/upload/v1766736053/Adovation_nxhzzv.png",
       content:
         "A Tecnoesis 'Empressario' Module Event by Ecell. Teams will create engaging promotional videos for assigned shops, showcasing their marketing creativity and video production skills.",
       teamSize: "3 to 6 members",
-      registrationDeadline: "November 15, 2025",
+      registrationDeadline: "January 12th,2026",
     },
     {
       id: 5,
