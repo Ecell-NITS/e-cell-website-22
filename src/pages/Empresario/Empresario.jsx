@@ -175,13 +175,13 @@ const Empresario = () => {
     {
       id: 5,
       title: "STARTUP EXPO",
-      date: "Nov 21 - Nov 23, 2025",
+      date: "January 16th,2026",
       location: "New Gallery",
-      img: "https://res.cloudinary.com/ecell/image/upload/v1762684502/start-up-expo_i3fuli.png",
+      img: "https://res.cloudinary.com/dtt4ftdrw/image/upload/v1766788108/startupexpo_lx9i2k.png",
       content:
         "Transform your innovative ideas into reality at the ultimate startup showcase! Present your business concepts, connect with investors, and compete for funding opportunities. Two dynamic rounds: application submission and live exhibition.",
       teamSize: "Minimum 1 member",
-      registrationDeadline: "November 15, 2025",
+      registrationDeadline: "January 5th,2026",
     },
   ];
 

@@ -710,8 +710,8 @@ const EventDetail = () => {
       description:
         "The Grid of Innovation is firing up, and E-Cell under Tecnoesis is looking for the best systems to plug in! Forget boring presentations this is your chance to showcase your genius to a massive network of creators, investors, and fellow innovators. Selected ventures get exclusive, lit-up stalls (your personal input node!) to display your ideas and products. We're giving you the platform, the spotlight, and the recognition you need to stop grinding and start dominating. If your startup stands out, get ready for activation you'll be featured in the exhibition, officially powering up the most fun Grid of Innovation ever!",
       image:
-        "https://res.cloudinary.com/ecell/image/upload/v1762684502/start-up-expo_i3fuli.png",
-      date: "Nov 15 - Nov 23, 2025",
+        "https://res.cloudinary.com/dtt4ftdrw/image/upload/v1766788108/startupexpo_lx9i2k.png",
+      date: "January 16th,2026",
       time: "Registration Open",
       location: "New Gallery",
       organizer: "E-CELL",
@@ -719,14 +719,14 @@ const EventDetail = () => {
       prizePool: null,
       participationType: "Individual/Team Event",
       teamSize: "Minimum 1 member",
-      registrationDeadline: "November 15, 2025",
+      registrationDeadline: "January 5th,2026",
       eventFlow: {
         round1: {
           title: "Application Submission",
           description:
             "Submit your startup details including business description and supporting documents. Only team leaders need to register. Selected startups will be invited to showcase at the exhibition.",
-          registrationDeadline: "November 15, 2025",
-          submissionDeadline: "November 15, 2025",
+          registrationDeadline: "January 5th,2026",
+          submissionDeadline: "January 5th,2026",
           resultAnnouncement: "Selected startups announced via email",
           requirements:
             "Complete startup details, business description, and optional supporting documents",
@@ -734,7 +734,7 @@ const EventDetail = () => {
         },
         round2: {
           title: "Startup Exhibition",
-          date: "21 - 23 November, 2025",
+          date: "January 16th,2026",
           location: "New Gallery",
           description:
             "Showcase your startup to investors, mentors, and fellow entrepreneurs. Present your products, services, and business model to a diverse audience of industry experts and potential collaborators.",
@@ -765,7 +765,7 @@ const EventDetail = () => {
       ],
       schedule: [
         {
-          date: "November 15, 2025",
+          date: "January 5th,2026",
           events: [{ time: "EOD", title: "Registration Deadline", venue: "Online" }],
         },
         {
@@ -779,7 +779,7 @@ const EventDetail = () => {
           ],
         },
         {
-          date: "21 -23 November, 2025",
+          date: "January 16th,2026",
           events: [
             {
               time: "TBA",
