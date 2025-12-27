@@ -142,13 +142,13 @@ const Empresario = () => {
     {
       id: 2,
       title: "TREASURE HUNT",
-      date: "Nov 21 - Nov 23, 2025",
+      date: "January 18th,2026",
       location: "Campus Wide",
-      img: "https://res.cloudinary.com/ecell/image/upload/v1762194328/IMG_8732_vxn0yd.jpg",
+      img: "https://res.cloudinary.com/dtt4ftdrw/image/upload/v1766858802/treasure_cic4vk.jpg",
       content:
         "Get ready for the ultimate campus adventure! Navigate through clues and riddles in this high-stakes treasure hunt where every step tests your wit and every discovery brings you closer to victory. Three thrilling rounds await the brave.",
       teamSize: "3 to 5 members",
-      registrationDeadline: "November 15, 2025",
+      registrationDeadline: "January 12th, 2026",
     },
     {
       id: 3,

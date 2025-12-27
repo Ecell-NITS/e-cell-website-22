@@ -379,8 +379,8 @@ const EventDetail = () => {
       description:
         "Get ready for the ultimate campus adventure! E Cell is hosting a high-stakes Treasure Hunt where your wits are your greatest weapon. We have scattered a series of clues and brain twisting riddles that will storm your mind. Dive into the grids of this mind-bending challenge, unlock the codes and race to find the hidden treasure before anyone else. This isn't just a hunt, it's a battle of wits. Do you have what it takes to conquer the grid?",
       image:
-        "https://res.cloudinary.com/ecell/image/upload/v1762194328/IMG_8732_vxn0yd.jpg",
-      date: "November 21 - 23, 2025",
+        "https://res.cloudinary.com/dtt4ftdrw/image/upload/v1766858802/treasure_cic4vk.jpg",
+      date: "January 18th,2026",
       time: "10:00 AM - 2:00 PM",
       location: "Campus Wide",
       organizer: "E-CELL",
@@ -388,7 +388,7 @@ const EventDetail = () => {
       prizePool: "6K",
       participationType: "Team Event",
       teamSize: "3 to 5 members",
-      registrationDeadline: "November 15, 2025",
+      registrationDeadline: "January 12th,2026",
       registrations: "5 teams registered",
       /*eventFlow: {
         round1: {
