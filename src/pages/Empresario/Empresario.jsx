@@ -144,7 +144,7 @@ const Empresario = () => {
       title: "TREASURE HUNT",
       date: "January 18th,2026",
       location: "Campus Wide",
-      img: "https://res.cloudinary.com/dtt4ftdrw/image/upload/v1766858802/treasure_cic4vk.jpg",
+      img: "https://res.cloudinary.com/dtt4ftdrw/image/upload/v1766924809/hunt_h4yu67.jpg",
       content:
         "Get ready for the ultimate campus adventure! Navigate through clues and riddles in this high-stakes treasure hunt where every step tests your wit and every discovery brings you closer to victory. Three thrilling rounds await the brave.",
       teamSize: "3 to 5 members",
