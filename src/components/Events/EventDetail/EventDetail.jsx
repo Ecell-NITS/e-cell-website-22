@@ -477,8 +477,8 @@ const EventDetail = () => {
       description:
         "A high-stakes battlefield of wit, nerve, and strategy — where words fall silent, and only your moves speak. Teams enter an arena buzzing with mystery and competition, each holding a finite purse of points and a handful of tokens that decide their fate. Every bid is a gamble, every decision a test of nerve. Outthink. Outbid. Outlast. Do you have what it takes to play The Grid — or will The Grid play you?",
       image:
-        "https://res.cloudinary.com/ecell/image/upload/v1762448470/bid-wise_updated_f2jmcm.png",
-      date: "Nov 21 - Nov 23, 2025",
+        "https://res.cloudinary.com/dtt4ftdrw/image/upload/v1767002111/bid_dqm9bf.jpg",
+      date: "January 17th,2026",
       time: "10:00 AM - 6:00 PM",
       location: "New Gallery",
       organizer: "E-CELL",
@@ -486,7 +486,7 @@ const EventDetail = () => {
       prizePool: "6K",
       participationType: "Team Event",
       teamSize: "3 to 5 members",
-      registrationDeadline: "November 19, 2025",
+      registrationDeadline: "January 12th,2026",
       registrations: "8 teams registered",
       eventFlow: {
         phase1: {
@@ -540,7 +540,7 @@ const EventDetail = () => {
       ],
       schedule: [
         {
-          date: "November 21-23, 2025",
+          date: "January 17th,2026",
           events: [
             {
               time: "TBA",
