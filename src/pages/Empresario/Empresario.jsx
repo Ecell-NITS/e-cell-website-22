@@ -153,13 +153,13 @@ const Empresario = () => {
     {
       id: 3,
       title: "BID-WISE",
-      date: "Nov 21 - Nov 23, 2025",
+      date: "January 17th,2026",
       location: "New Gallery",
-      img: "https://res.cloudinary.com/ecell/image/upload/v1762448470/bid-wise_updated_f2jmcm.png",
+      img: "https://res.cloudinary.com/dtt4ftdrw/image/upload/v1767002111/bid_dqm9bf.jpg",
       content:
         "Welcome to The Silent Grid: a high-stakes auction where words fall silent and only your moves speak. Manage a 100-point purse and limited bidding tokens across 6 rounds of exploration, discussion, and secret bidding at 10 stalls. Use the Special Token wisely—some rounds may eliminate it. Top 10 teams advance.",
       teamSize: "3 to 5 members",
-      registrationDeadline: "November 19, 2025",
+      registrationDeadline: "January 12th,2026",
     },
     {
       id: 4,
