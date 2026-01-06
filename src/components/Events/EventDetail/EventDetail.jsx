@@ -298,14 +298,14 @@ const EventDetail = () => {
       prizePool: "8K",
       participationType: "Team Event",
       teamSize: "3 to 5 members",
-      registrationDeadline: "January 5th, 2026",
+      registrationDeadline: "January 10th, 2026",
       eventFlow: {
         round1: {
           title: "Round 1: Online Submission",
           description:
             "Teams can choose from any of the 8 problem statements provided via email after registration. Teams must create and submit a PPT (in presentation format) and a 1 minute video explaining their idea or showcasing their presentation, as a reply to that mail. AI tools, including ChatGPT, may be used; but scoring will mainly focus on practicality, originality, relevance, and market analysis.",
-          registrationDeadline: "January 5th (EOD)",
-          submissionDeadline: "January 10th (EOD)",
+          registrationDeadline: "January 10th (EOD)",
+          submissionDeadline: "January 13th (EOD)",
           resultAnnouncement: "Top 8 teams announced via email",
           requirements:
             "PPT (in presentation format) and a 1 minute video explaining their idea or showcasing their presentation",
@@ -328,7 +328,7 @@ const EventDetail = () => {
         "Team Formation: Teams of 3-5 members, with cross-year collaborations encouraged",
         "Registration: Only the team leader needs to register through the link below",
         "Team Diversity: Aim for a diverse team with complementary skills",
-        "Registration Deadline: January 5th (EOD)",
+        "Registration Deadline: January 10th (EOD)",
         "Round 1: Choose any of the 8 problem statements (sent via email post-registration)",
         "Round 1 Submission: Submit PPT and a 1 minute video as a reply to the registration email",
         "AI Tools: Allowed (e.g., ChatGPT); scoring prioritizes practicality, originality, relevance, and market analysis",
@@ -349,13 +349,13 @@ const EventDetail = () => {
       ],
       schedule: [
         {
-          date: "January 5th, 2025",
+          date: "January 10th, 2026",
           events: [
             { time: "11:59 PM", title: "Round 1 Registration Deadline", venue: "Online" },
           ],
         },
         {
-          date: "January 10th, 2025",
+          date: "January 13th, 2026",
           events: [
             { time: "11:59 PM", title: "Round 1 Submission Deadline", venue: "Online" },
           ],
@@ -428,7 +428,7 @@ const EventDetail = () => {
       ],
       schedule: [
         {
-          date: "November 21-23, 2025",
+          date: "January 18th,2026",
           events: [
             {
               time: "TBA",
@@ -666,7 +666,7 @@ const EventDetail = () => {
       ],
       schedule: [
         {
-          date: "November 21-23, 2025",
+          date: "January 18th,2026",
           events: [
             {
               time: "TBA",
@@ -769,7 +769,7 @@ const EventDetail = () => {
           events: [{ time: "EOD", title: "Registration Deadline", venue: "Online" }],
         },
         {
-          date: "TBA, 2025",
+          date: "TBA, 2026",
           events: [
             {
               time: "TBA",
