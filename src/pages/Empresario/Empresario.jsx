@@ -131,7 +131,7 @@ const Empresario = () => {
     {
       id: 1,
       title: "BUSINESS HACKATHON",
-      date: "January 17th, 2026",
+      date: "January 16th, 2026",
       location: "Start UP Center",
       img: "https://res.cloudinary.com/dtt4ftdrw/image/upload/v1766421071/bussiness_gjaocu.png",
       content:
@@ -172,17 +172,17 @@ const Empresario = () => {
       teamSize: "3 to 6 members",
       registrationDeadline: "January 12th,2026",
     },
-    {
-      id: 5,
-      title: "STARTUP EXPO",
-      date: "January 16th,2026",
-      location: "New Gallery",
-      img: "https://res.cloudinary.com/dtt4ftdrw/image/upload/v1766788108/startupexpo_lx9i2k.png",
-      content:
-        "Transform your innovative ideas into reality at the ultimate startup showcase! Present your business concepts, connect with investors, and compete for funding opportunities. Two dynamic rounds: application submission and live exhibition.",
-      teamSize: "Minimum 1 member",
-      registrationDeadline: "January 5th,2026",
-    },
+    // {
+    //   id: 5,
+    //   title: "STARTUP EXPO",
+    //   date: "January 16th,2026",
+    //   location: "New Gallery",
+    //   img: "https://res.cloudinary.com/dtt4ftdrw/image/upload/v1766788108/startupexpo_lx9i2k.png",
+    //   content:
+    //     "Transform your innovative ideas into reality at the ultimate startup showcase! Present your business concepts, connect with investors, and compete for funding opportunities. Two dynamic rounds: application submission and live exhibition.",
+    //   teamSize: "Minimum 1 member",
+    //   registrationDeadline: "January 5th,2026",
+    // },
   ];
 
   // Empresario event images from GalleryTab.json
