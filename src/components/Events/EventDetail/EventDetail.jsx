@@ -290,7 +290,7 @@ const EventDetail = () => {
         "A realm where visionaries, strategists, and innovators collide to power the next wave of business evolution. Enter a digital dimension where creativity is your code and strategy is your weapon. This isn't just a hackathon, it's an awakening of bold ideas, limitless imagination, and futuristic problem-solving. Team up. Power up. Step into the ultimate business battleground where every decision counts and every idea sparks possibility. Challenge your limits and craft the solutions that will shape tomorrow. The future starts now!",
       image:
         "https://res.cloudinary.com/dtt4ftdrw/image/upload/v1766421071/bussiness_gjaocu.png",
-      date: "January 17th, 2026",
+      date: "January 16th, 2026",
       time: "9:00 AM - 6:00 PM",
       location: "Startup Centre",
       organizer: "E-CELL NIT SILCHAR",
@@ -299,6 +299,7 @@ const EventDetail = () => {
       participationType: "Team Event",
       teamSize: "3 to 5 members",
       registrationDeadline: "January 13th, 2026",
+      registrationDeadline: "January 10th, 2026",
       eventFlow: {
         round1: {
           title: "Round 1: Online Submission",
@@ -306,14 +307,17 @@ const EventDetail = () => {
             "Teams can choose from any of the 8 problem statements provided via email after registration. Teams must create and submit a PPT (in presentation format) and a 1 minute video explaining their idea or showcasing their presentation, as a reply to that mail. AI tools, including ChatGPT, may be used; but scoring will mainly focus on practicality, originality, relevance, and market analysis.",
           registrationDeadline: "January 13th (EOD)",
           submissionDeadline: "January 10th (EOD)",
+            "Teams can choose from any of the 8 problem statements provided via email after registration. Teams must create and submit a PPT (in presentation format) or a 1 minute video explaining their idea or showcasing their presentation, as a reply to that mail. AI tools, including ChatGPT, may be used; but scoring will mainly focus on practicality, originality, relevance, and market analysis.",
+          registrationDeadline: "January 10th (EOD)",
+          submissionDeadline: "January 13th (EOD)",
           resultAnnouncement: "Top 8 teams announced via email",
           requirements:
-            "PPT (in presentation format) and a 1 minute video explaining their idea or showcasing their presentation",
+            "PPT (in presentation format) or a 1 minute video explaining their idea or showcasing their presentation",
           advancement: "The top 8 teams will advance to the final round",
         },
         round2: {
           title: "Round 2: Onsite Hackathon",
-          date: "January 17th,2026",
+          date: "January 16th,2026",
           location: "Startup Centre",
           description:
             "Teams will have 8 hours to build a complete, market-ready business model. Creating a prototype is optional but recommended for a competitive edge. At least one member must be present onsite throughout the event. Accurate, traceable data is mandatory, with verification upon request. False data will lead to disqualification; keep track of all sources.",
@@ -329,6 +333,7 @@ const EventDetail = () => {
         "Registration: Only the team leader needs to register through the link below",
         "Team Diversity: Aim for a diverse team with complementary skills",
         "Registration Deadline: January 13th (EOD)",
+        "Registration Deadline: January 10th (EOD)",
         "Round 1: Choose any of the 8 problem statements (sent via email post-registration)",
         "Round 1 Submission: Submit PPT and a 1 minute video as a reply to the registration email",
         "AI Tools: Allowed (e.g., ChatGPT); scoring prioritizes practicality, originality, relevance, and market analysis",
@@ -350,18 +355,20 @@ const EventDetail = () => {
       schedule: [
         {
           date: "January 13th, 2026",
+          date: "January 10th, 2026",
           events: [
             { time: "11:59 PM", title: "Round 1 Registration Deadline", venue: "Online" },
           ],
         },
         {
           date: "January 10th, 2026",
+          date: "January 13th, 2026",
           events: [
             { time: "11:59 PM", title: "Round 1 Submission Deadline", venue: "Online" },
           ],
         },
         {
-          date: "January 17th,2026",
+          date: "January 16th,2026",
           events: [
             {
               time: "TBA",
@@ -428,7 +435,7 @@ const EventDetail = () => {
       ],
       schedule: [
         {
-          date: "November 21-23, 2025",
+          date: "January 18th,2026",
           events: [
             {
               time: "TBA",
@@ -666,7 +673,7 @@ const EventDetail = () => {
       ],
       schedule: [
         {
-          date: "November 21-23, 2025",
+          date: "January 18th,2026",
           events: [
             {
               time: "TBA",
@@ -702,94 +709,94 @@ const EventDetail = () => {
       ],
       */
     },
-    {
-      id: 5,
-      title: "STARTUP EXPO",
-      subtitle:
-        "Got a real startup that feels like a cheat code? This is your portal to the next level!",
-      description:
-        "The Grid of Innovation is firing up, and E-Cell under Tecnoesis is looking for the best systems to plug in! Forget boring presentations this is your chance to showcase your genius to a massive network of creators, investors, and fellow innovators. Selected ventures get exclusive, lit-up stalls (your personal input node!) to display your ideas and products. We're giving you the platform, the spotlight, and the recognition you need to stop grinding and start dominating. If your startup stands out, get ready for activation you'll be featured in the exhibition, officially powering up the most fun Grid of Innovation ever!",
-      image:
-        "https://res.cloudinary.com/dtt4ftdrw/image/upload/v1766788108/startupexpo_lx9i2k.png",
-      date: "January 16th,2026",
-      time: "Registration Open",
-      location: "New Gallery",
-      organizer: "E-CELL",
-      category: "Exhibition",
-      prizePool: null,
-      participationType: "Individual/Team Event",
-      teamSize: "Minimum 1 member",
-      registrationDeadline: "January 5th,2026",
-      eventFlow: {
-        round1: {
-          title: "Application Submission",
-          description:
-            "Submit your startup details including business description and supporting documents. Only team leaders need to register. Selected startups will be invited to showcase at the exhibition.",
-          registrationDeadline: "January 5th,2026",
-          submissionDeadline: "January 5th,2026",
-          resultAnnouncement: "Selected startups announced via email",
-          requirements:
-            "Complete startup details, business description, and optional supporting documents",
-          advancement: "Selected startups will get exhibition stalls",
-        },
-        round2: {
-          title: "Startup Exhibition",
-          date: "January 16th,2026",
-          location: "New Gallery",
-          description:
-            "Showcase your startup to investors, mentors, and fellow entrepreneurs. Present your products, services, and business model to a diverse audience of industry experts and potential collaborators.",
-          duration: "Full day exhibition",
-          requirements:
-            "Professional presentation setup, product demonstrations, business pitch materials",
-          dressCode: "Business formal",
-        },
-      },
-      rules: [
-        "You are required to join whatsapp group sent on your email after registration for further updates",
-        "Team Formation: Individual or team participation allowed ",
-        "Registration: Only the team leader/founder needs to register",
-        "Startup Stage: All stages of startups welcome (idea, prototype, launched)",
-        "Business Description: Detailed business description is mandatory",
-        "Supporting Documents: Drive link for additional documents is optional but recommended",
-        "Selection Process: Applications will be reviewed and selected startups will be notified",
-        "Exhibition Requirements: Selected startups must provide their own presentation materials",
-        "Networking: Opportunity to connect with investors, mentors, and industry experts",
-        "Dress Code: Business formal attire required during exhibition",
-      ],
-      participantDetails: [
-        "Startup/Team Name",
-        "Founder/Team leader's name, contact number and email id",
-        "Business Description (detailed)",
-        "Drive link for supporting documents (optional)",
-        "Team members details (if applicable)",
-      ],
-      schedule: [
-        {
-          date: "January 5th,2026",
-          events: [{ time: "EOD", title: "Registration Deadline", venue: "Online" }],
-        },
-        {
-          date: "TBA, 2025",
-          events: [
-            {
-              time: "TBA",
-              title: "Application Review Results",
-              venue: "Email Notification",
-            },
-          ],
-        },
-        {
-          date: "January 16th,2026",
-          events: [
-            {
-              time: "TBA",
-              title: "Startup Expo Exhibition",
-              venue: "New Gallery",
-            },
-          ],
-        },
-      ],
-    },
+    // {
+    //   id: 5,
+    //   title: "STARTUP EXPO",
+    //   subtitle:
+    //     "Got a real startup that feels like a cheat code? This is your portal to the next level!",
+    //   description:
+    //     "The Grid of Innovation is firing up, and E-Cell under Tecnoesis is looking for the best systems to plug in! Forget boring presentations this is your chance to showcase your genius to a massive network of creators, investors, and fellow innovators. Selected ventures get exclusive, lit-up stalls (your personal input node!) to display your ideas and products. We're giving you the platform, the spotlight, and the recognition you need to stop grinding and start dominating. If your startup stands out, get ready for activation you'll be featured in the exhibition, officially powering up the most fun Grid of Innovation ever!",
+    //   image:
+    //     "https://res.cloudinary.com/dtt4ftdrw/image/upload/v1766788108/startupexpo_lx9i2k.png",
+    //   date: "January 16th,2026",
+    //   time: "Registration Open",
+    //   location: "New Gallery",
+    //   organizer: "E-CELL",
+    //   category: "Exhibition",
+    //   prizePool: null,
+    //   participationType: "Individual/Team Event",
+    //   teamSize: "Minimum 1 member",
+    //   registrationDeadline: "January 5th,2026",
+    //   eventFlow: {
+    //     round1: {
+    //       title: "Application Submission",
+    //       description:
+    //         "Submit your startup details including business description and supporting documents. Only team leaders need to register. Selected startups will be invited to showcase at the exhibition.",
+    //       registrationDeadline: "January 5th,2026",
+    //       submissionDeadline: "January 5th,2026",
+    //       resultAnnouncement: "Selected startups announced via email",
+    //       requirements:
+    //         "Complete startup details, business description, and optional supporting documents",
+    //       advancement: "Selected startups will get exhibition stalls",
+    //     },
+    //     round2: {
+    //       title: "Startup Exhibition",
+    //       date: "January 16th,2026",
+    //       location: "New Gallery",
+    //       description:
+    //         "Showcase your startup to investors, mentors, and fellow entrepreneurs. Present your products, services, and business model to a diverse audience of industry experts and potential collaborators.",
+    //       duration: "Full day exhibition",
+    //       requirements:
+    //         "Professional presentation setup, product demonstrations, business pitch materials",
+    //       dressCode: "Business formal",
+    //     },
+    //   },
+    //   rules: [
+    //     "You are required to join whatsapp group sent on your email after registration for further updates",
+    //     "Team Formation: Individual or team participation allowed ",
+    //     "Registration: Only the team leader/founder needs to register",
+    //     "Startup Stage: All stages of startups welcome (idea, prototype, launched)",
+    //     "Business Description: Detailed business description is mandatory",
+    //     "Supporting Documents: Drive link for additional documents is optional but recommended",
+    //     "Selection Process: Applications will be reviewed and selected startups will be notified",
+    //     "Exhibition Requirements: Selected startups must provide their own presentation materials",
+    //     "Networking: Opportunity to connect with investors, mentors, and industry experts",
+    //     "Dress Code: Business formal attire required during exhibition",
+    //   ],
+    //   participantDetails: [
+    //     "Startup/Team Name",
+    //     "Founder/Team leader's name, contact number and email id",
+    //     "Business Description (detailed)",
+    //     "Drive link for supporting documents (optional)",
+    //     "Team members details (if applicable)",
+    //   ],
+    //   schedule: [
+    //     {
+    //       date: "January 5th,2026",
+    //       events: [{ time: "EOD", title: "Registration Deadline", venue: "Online" }],
+    //     },
+    //     {
+    //       date: "TBA, 2026",
+    //       events: [
+    //         {
+    //           time: "TBA",
+    //           title: "Application Review Results",
+    //           venue: "Email Notification",
+    //         },
+    //       ],
+    //     },
+    //     {
+    //       date: "January 16th,2026",
+    //       events: [
+    //         {
+    //           time: "TBA",
+    //           title: "Startup Expo Exhibition",
+    //           venue: "New Gallery",
+    //         },
+    //       ],
+    //     },
+    //   ],
+    // },
   ];
 
   // Find the event by slug

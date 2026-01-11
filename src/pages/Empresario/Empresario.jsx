@@ -131,13 +131,14 @@ const Empresario = () => {
     {
       id: 1,
       title: "BUSINESS HACKATHON",
-      date: "January 17th, 2026",
+      date: "January 16th, 2026",
       location: "Start UP Center",
       img: "https://res.cloudinary.com/dtt4ftdrw/image/upload/v1766421071/bussiness_gjaocu.png",
       content:
         "Enter the digital dimension where creativity is your code and strategy is your weapon. In this realm of visionaries, strategists, and innovators, ideas transcend boundaries and solutions reshape realities. Two rounds await: online submission and onsite hackathon.",
       teamSize: "3 to 5 members",
       registrationDeadline: "January 13th, 2026",
+      registrationDeadline: "January 10th, 2026",
     },
     {
       id: 2,
@@ -172,17 +173,17 @@ const Empresario = () => {
       teamSize: "3 to 6 members",
       registrationDeadline: "January 12th,2026",
     },
-    {
-      id: 5,
-      title: "STARTUP EXPO",
-      date: "January 16th,2026",
-      location: "New Gallery",
-      img: "https://res.cloudinary.com/dtt4ftdrw/image/upload/v1766788108/startupexpo_lx9i2k.png",
-      content:
-        "Transform your innovative ideas into reality at the ultimate startup showcase! Present your business concepts, connect with investors, and compete for funding opportunities. Two dynamic rounds: application submission and live exhibition.",
-      teamSize: "Minimum 1 member",
-      registrationDeadline: "January 5th,2026",
-    },
+    // {
+    //   id: 5,
+    //   title: "STARTUP EXPO",
+    //   date: "January 16th,2026",
+    //   location: "New Gallery",
+    //   img: "https://res.cloudinary.com/dtt4ftdrw/image/upload/v1766788108/startupexpo_lx9i2k.png",
+    //   content:
+    //     "Transform your innovative ideas into reality at the ultimate startup showcase! Present your business concepts, connect with investors, and compete for funding opportunities. Two dynamic rounds: application submission and live exhibition.",
+    //   teamSize: "Minimum 1 member",
+    //   registrationDeadline: "January 5th,2026",
+    // },
   ];
 
   // Empresario event images from GalleryTab.json
