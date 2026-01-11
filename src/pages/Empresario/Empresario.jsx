@@ -138,7 +138,6 @@ const Empresario = () => {
         "Enter the digital dimension where creativity is your code and strategy is your weapon. In this realm of visionaries, strategists, and innovators, ideas transcend boundaries and solutions reshape realities. Two rounds await: online submission and onsite hackathon.",
       teamSize: "3 to 5 members",
       registrationDeadline: "January 13th, 2026",
-      registrationDeadline: "January 10th, 2026",
     },
     {
       id: 2,

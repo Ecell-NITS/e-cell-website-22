@@ -299,7 +299,6 @@ const EventDetail = () => {
       participationType: "Team Event",
       teamSize: "3 to 5 members",
       registrationDeadline: "January 13th, 2026",
-      registrationDeadline: "January 10th, 2026",
       eventFlow: {
         round1: {
           title: "Round 1: Online Submission",
@@ -307,9 +306,6 @@ const EventDetail = () => {
             "Teams can choose from any of the 8 problem statements provided via email after registration. Teams must create and submit a PPT (in presentation format) and a 1 minute video explaining their idea or showcasing their presentation, as a reply to that mail. AI tools, including ChatGPT, may be used; but scoring will mainly focus on practicality, originality, relevance, and market analysis.",
           registrationDeadline: "January 13th (EOD)",
           submissionDeadline: "January 10th (EOD)",
-            "Teams can choose from any of the 8 problem statements provided via email after registration. Teams must create and submit a PPT (in presentation format) or a 1 minute video explaining their idea or showcasing their presentation, as a reply to that mail. AI tools, including ChatGPT, may be used; but scoring will mainly focus on practicality, originality, relevance, and market analysis.",
-          registrationDeadline: "January 10th (EOD)",
-          submissionDeadline: "January 13th (EOD)",
           resultAnnouncement: "Top 8 teams announced via email",
           requirements:
             "PPT (in presentation format) or a 1 minute video explaining their idea or showcasing their presentation",
@@ -333,7 +329,6 @@ const EventDetail = () => {
         "Registration: Only the team leader needs to register through the link below",
         "Team Diversity: Aim for a diverse team with complementary skills",
         "Registration Deadline: January 13th (EOD)",
-        "Registration Deadline: January 10th (EOD)",
         "Round 1: Choose any of the 8 problem statements (sent via email post-registration)",
         "Round 1 Submission: Submit PPT and a 1 minute video as a reply to the registration email",
         "AI Tools: Allowed (e.g., ChatGPT); scoring prioritizes practicality, originality, relevance, and market analysis",
@@ -355,14 +350,12 @@ const EventDetail = () => {
       schedule: [
         {
           date: "January 13th, 2026",
-          date: "January 10th, 2026",
           events: [
             { time: "11:59 PM", title: "Round 1 Registration Deadline", venue: "Online" },
           ],
         },
         {
           date: "January 10th, 2026",
-          date: "January 13th, 2026",
           events: [
             { time: "11:59 PM", title: "Round 1 Submission Deadline", venue: "Online" },
           ],
