@@ -299,6 +299,7 @@ const EventDetail = () => {
       participationType: "Team Event",
       teamSize: "3 to 5 members",
       registrationDeadline: "January 13th, 2026",
+      registrationOpen: true,
       eventFlow: {
         round1: {
           title: "Round 1: Online Submission",
@@ -389,6 +390,7 @@ const EventDetail = () => {
       participationType: "Team Event",
       teamSize: "3 to 5 members",
       registrationDeadline: "January 12th,2026",
+      registrationOpen: false,
       registrations: "5 teams registered",
       /*eventFlow: {
         round1: {
@@ -487,6 +489,7 @@ const EventDetail = () => {
       participationType: "Team Event",
       teamSize: "3 to 5 members",
       registrationDeadline: "January 12th,2026",
+      registrationOpen: true,
       registrations: "8 teams registered",
       eventFlow: {
         phase1: {
@@ -619,6 +622,7 @@ const EventDetail = () => {
       participationType: "Team Event",
       teamSize: "3 to 6 members",
       registrationDeadline: "January 12th,2026",
+      registrationOpen: true,
       registrations: "0 teams registered",
       eventFlow: {
         /*registration: {
@@ -1393,9 +1397,19 @@ const EventDetail = () => {
             </div>
 
             <div className="hero-actions">
-              <button className="hero-cta" onClick={goToRegister}>
-                Register Now
-              </button>
+              {event.registrationOpen ? (
+                <button className="hero-cta" onClick={goToRegister}>
+                  Register Now
+                </button>
+              ) : (
+                <button
+                  className="hero-cta"
+                  disabled
+                  style={{ opacity: 0.6, cursor: "not-allowed" }}
+                >
+                  Registration Closed
+                </button>
+              )}
               <button
                 className="hero-secondary"
                 onClick={() => {
@@ -1443,9 +1457,11 @@ const EventDetail = () => {
       </motion.div>
 
       {/* Mobile-only Register CTA between tags and tabs */}
-      <div className="mobile-register-btn">
-        <button onClick={goToRegister}>📝 Register Now</button>
-      </div>
+      {event.registrationOpen && (
+        <div className="mobile-register-btn">
+          <button onClick={goToRegister}>📝 Register Now</button>
+        </div>
+      )}
 
       {/* Navigation Tabs */}
       <motion.div
@@ -1467,12 +1483,14 @@ const EventDetail = () => {
         >
           Schedule
         </button>
-        <button
-          className={`tab tab-register ${activeTab === "register" ? "active" : ""}`}
-          onClick={() => setActiveTab("register")}
-        >
-          Register
-        </button>
+        {event.registrationOpen && (
+          <button
+            className={`tab tab-register ${activeTab === "register" ? "active" : ""}`}
+            onClick={() => setActiveTab("register")}
+          >
+            Register
+          </button>
+        )}
         <button
           className={`tab mobile-only tab-event-details ${activeTab === "event-details" ? "active" : ""}`}
           onClick={() => setActiveTab("event-details")}
@@ -1718,456 +1736,376 @@ const EventDetail = () => {
                 exit={{ opacity: 0, y: prefersReducedMotion ? 0 : -8 }}
                 transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
               >
-                <h2>Register for {event.title}</h2>
-                <p className="registration-note">
-                  <strong>Note:</strong> {getFormConfig(event.id).note}
-                </p>
-
-                <form onSubmit={handleSubmit} className="registration-form">
-                  {/* Team Name */}
-                  <div className="form-group">
-                    <label htmlFor="teamName">
-                      Team Name <span className="required">*</span>
-                    </label>
-                    <input
-                      type="text"
-                      id="teamName"
-                      name="teamName"
-                      value={formData.teamName}
-                      onChange={handleInputChange}
-                      placeholder="Enter your team name"
-                      required
-                    />
+                {!event.registrationOpen ? (
+                  <div className="registration-closed">
+                    <h2>Registration Closed</h2>
+                    <p>
+                      Registration for {event.title} has been closed. Thank you for your
+                      interest!
+                    </p>
                   </div>
+                ) : (
+                  <>
+                    <h2>Register for {event.title}</h2>
+                    <p className="registration-note">
+                      <strong>Note:</strong> {getFormConfig(event.id).note}
+                    </p>
 
-                  {/* College Selection */}
-                  <div className="form-group">
-                    <label htmlFor="collegeType">
-                      College <span className="required">*</span>
-                    </label>
-                    <div className="college-type-selection">
-                      <label className="radio-label">
-                        <input
-                          type="radio"
-                          name="collegeType"
-                          value="nit_silchar"
-                          checked={formData.collegeType === "nit_silchar"}
-                          onChange={handleInputChange}
-                        />
-                        NIT Silchar
-                      </label>
-                      <label className="radio-label">
-                        <input
-                          type="radio"
-                          name="collegeType"
-                          value="other"
-                          checked={formData.collegeType === "other"}
-                          onChange={handleInputChange}
-                        />
-                        Other College
-                      </label>
-                    </div>
-                  </div>
-
-                  {/* College Name (for other colleges) */}
-                  {formData.collegeType === "other" && (
-                    <div className="form-group">
-                      <label htmlFor="collegeName">
-                        College Name <span className="required">*</span>
-                      </label>
-                      <input
-                        type="text"
-                        id="collegeName"
-                        name="collegeName"
-                        value={formData.collegeName}
-                        onChange={handleInputChange}
-                        placeholder="Enter your college name"
-                        required
-                      />
-                    </div>
-                  )}
-
-                  {/* Team Leader Details */}
-                  <div className="team-leader-section">
-                    <h3>👤 Team Leader Details</h3>
-
-                    <div className="form-row">
+                    <form onSubmit={handleSubmit} className="registration-form">
+                      {/* Team Name */}
                       <div className="form-group">
-                        <label htmlFor="teamLeaderName">
-                          Full Name <span className="required">*</span>
+                        <label htmlFor="teamName">
+                          Team Name <span className="required">*</span>
                         </label>
                         <input
                           type="text"
-                          id="teamLeaderName"
-                          name="teamLeaderName"
-                          value={formData.teamLeaderName}
+                          id="teamName"
+                          name="teamName"
+                          value={formData.teamName}
                           onChange={handleInputChange}
-                          placeholder="Enter team leader's full name"
+                          placeholder="Enter your team name"
                           required
                         />
                       </div>
 
+                      {/* College Selection */}
                       <div className="form-group">
-                        <label htmlFor="teamLeaderPhone">
-                          Contact Number <span className="required">*</span>
+                        <label htmlFor="collegeType">
+                          College <span className="required">*</span>
                         </label>
-                        <div className="phone-input-container">
-                          <span className="phone-prefix">+91</span>
-                          <input
-                            type="tel"
-                            id="teamLeaderPhone"
-                            name="teamLeaderPhone"
-                            value={formData.teamLeaderPhone}
-                            onChange={handleInputChange}
-                            placeholder="Enter 10-digit number"
-                            maxLength="10"
-                            pattern="[0-9]{10}"
-                            required
-                          />
+                        <div className="college-type-selection">
+                          <label className="radio-label">
+                            <input
+                              type="radio"
+                              name="collegeType"
+                              value="nit_silchar"
+                              checked={formData.collegeType === "nit_silchar"}
+                              onChange={handleInputChange}
+                            />
+                            NIT Silchar
+                          </label>
+                          <label className="radio-label">
+                            <input
+                              type="radio"
+                              name="collegeType"
+                              value="other"
+                              checked={formData.collegeType === "other"}
+                              onChange={handleInputChange}
+                            />
+                            Other College
+                          </label>
                         </div>
                       </div>
-                    </div>
 
-                    <div className="form-row">
-                      {getFormConfig(event.id).fields.includes("teamLeaderEmail") && (
+                      {/* College Name (for other colleges) */}
+                      {formData.collegeType === "other" && (
                         <div className="form-group">
-                          <label htmlFor="teamLeaderEmail">
-                            Email Address <span className="required">*</span>
-                            {emailVerification.isVerified && (
-                              <span className="verification-status verified">
-                                ✓ Verified
-                              </span>
-                            )}
-                          </label>
-                          <div className="email-verification-container">
-                            <input
-                              type="email"
-                              id="teamLeaderEmail"
-                              name="teamLeaderEmail"
-                              value={formData.teamLeaderEmail}
-                              onChange={handleInputChange}
-                              placeholder="leader@example.com"
-                              required
-                              disabled={emailVerification.isVerified}
-                            />
-                            {!emailVerification.isVerified && (
-                              <button
-                                type="button"
-                                className="verify-email-btn"
-                                onClick={handleSendVerification}
-                                disabled={
-                                  emailVerification.isVerifying ||
-                                  !formData.teamLeaderEmail
-                                }
-                              >
-                                {emailVerification.isVerifying
-                                  ? "Sending..."
-                                  : "Verify Email"}
-                              </button>
-                            )}
-                          </div>
-
-                          {emailVerification.showOtpInput && (
-                            <div className="otp-verification-section">
-                              <label htmlFor="otpInput">
-                                Enter 6-digit verification code sent to your email
-                              </label>
-                              <div className="otp-input-container">
-                                <input
-                                  type="text"
-                                  id="otpInput"
-                                  value={emailVerification.otp}
-                                  onChange={handleOtpChange}
-                                  placeholder="000000"
-                                  maxLength="6"
-                                  className="otp-input"
-                                />
-                                <button
-                                  type="button"
-                                  className="verify-otp-btn"
-                                  onClick={handleVerifyOtp}
-                                  disabled={
-                                    emailVerification.isVerifying ||
-                                    emailVerification.otp.length !== 6
-                                  }
-                                >
-                                  {emailVerification.isVerifying
-                                    ? "Verifying..."
-                                    : "Verify"}
-                                </button>
-                              </div>
-                              <button
-                                type="button"
-                                className="resend-otp-btn"
-                                onClick={handleSendVerification}
-                                disabled={emailVerification.isVerifying}
-                              >
-                                Resend Code
-                              </button>
-                            </div>
-                          )}
-                        </div>
-                      )}
-
-                      {formData.collegeType === "nit_silchar" && (
-                        <div className="form-group">
-                          <label htmlFor="teamLeaderScholarId">
-                            Scholar ID <span className="required">*</span>
+                          <label htmlFor="collegeName">
+                            College Name <span className="required">*</span>
                           </label>
                           <input
                             type="text"
-                            id="teamLeaderScholarId"
-                            name="teamLeaderScholarId"
-                            value={formData.teamLeaderScholarId}
+                            id="collegeName"
+                            name="collegeName"
+                            value={formData.collegeName}
                             onChange={handleInputChange}
-                            placeholder="Enter scholar ID"
+                            placeholder="Enter your college name"
                             required
                           />
                         </div>
                       )}
-                    </div>
 
-                    {(getFormConfig(event.id).fields.includes("department") ||
-                      getFormConfig(event.id).fields.includes("year")) && (
-                      <div className="form-row">
-                        {getFormConfig(event.id).fields.includes("department") && (
-                          <div className="form-group">
-                            <label htmlFor="department">
-                              Department <span className="required">*</span>
-                            </label>
-                            <select
-                              id="department"
-                              name="department"
-                              value={formData.department}
-                              onChange={handleInputChange}
-                              required
-                            >
-                              <option value="">Select Department</option>
-                              <option value="cse">Computer Science & Engineering</option>
-                              <option value="ece">Electronics & Communication</option>
-                              <option value="me">Mechanical Engineering</option>
-                              <option value="ce">Civil Engineering</option>
-                              <option value="ee">Electrical Engineering</option>
-                              <option value="other">Other</option>
-                            </select>
-                          </div>
-                        )}
+                      {/* Team Leader Details */}
+                      <div className="team-leader-section">
+                        <h3>👤 Team Leader Details</h3>
 
-                        {getFormConfig(event.id).fields.includes("year") && (
-                          <div className="form-group">
-                            <label htmlFor="year">
-                              Year of Study <span className="required">*</span>
-                            </label>
-                            <select
-                              id="year"
-                              name="year"
-                              value={formData.year}
-                              onChange={handleInputChange}
-                              required
-                            >
-                              <option value="">Select Year</option>
-                              <option value="1st">1st Year</option>
-                              <option value="2nd">2nd Year</option>
-                              <option value="3rd">3rd Year</option>
-                              <option value="4th">4th Year</option>
-                            </select>
-                          </div>
-                        )}
-                      </div>
-                    )}
-                  </div>
-
-                  {/* Custom Fields Section (for Startup Expo) */}
-                  {getFormConfig(event.id).customFields && (
-                    <div className="custom-fields-section">
-                      <h3>📋 Additional Information</h3>
-
-                      {/* Business Description Field */}
-                      {getFormConfig(event.id).fields.includes("businessDescription") && (
-                        <div className="form-group">
-                          <label htmlFor="businessDescription">
-                            {
-                              getFormConfig(event.id).customFields.businessDescription
-                                .label
-                            }
-                            {getFormConfig(event.id).customFields.businessDescription
-                              .required && <span className="required">*</span>}
-                          </label>
-                          <textarea
-                            id="businessDescription"
-                            name="businessDescription"
-                            value={formData.businessDescription}
-                            onChange={handleInputChange}
-                            placeholder={
-                              getFormConfig(event.id).customFields.businessDescription
-                                .placeholder
-                            }
-                            rows={
-                              getFormConfig(event.id).customFields.businessDescription
-                                .rows || 4
-                            }
-                            required={
-                              getFormConfig(event.id).customFields.businessDescription
-                                .required
-                            }
-                          />
-                        </div>
-                      )}
-
-                      {/* Drive Link Field */}
-                      {getFormConfig(event.id).fields.includes("driveLink") && (
-                        <div className="form-group">
-                          <label htmlFor="driveLink">
-                            {getFormConfig(event.id).customFields.driveLink.label}
-                            {getFormConfig(event.id).customFields.driveLink.required && (
-                              <span className="required">*</span>
-                            )}
-                          </label>
-                          <input
-                            type={getFormConfig(event.id).customFields.driveLink.type}
-                            id="driveLink"
-                            name="driveLink"
-                            value={formData.driveLink}
-                            onChange={handleInputChange}
-                            placeholder={
-                              getFormConfig(event.id).customFields.driveLink.placeholder
-                            }
-                            required={
-                              getFormConfig(event.id).customFields.driveLink.required
-                            }
-                          />
-                        </div>
-                      )}
-                    </div>
-                  )}
-
-                  {/* Team Vice Captain Details (for Treasure Hunt) */}
-                  {getFormConfig(event.id).fields.includes("teamViceCaptainName") && (
-                    <div className="team-vice-captain-section">
-                      <h3>👤 Team Vice Captain Details</h3>
-
-                      <div className="form-row">
-                        <div className="form-group">
-                          <label htmlFor="teamViceCaptainName">
-                            Full Name <span className="required">*</span>
-                          </label>
-                          <input
-                            type="text"
-                            id="teamViceCaptainName"
-                            name="teamViceCaptainName"
-                            value={formData.teamViceCaptainName}
-                            onChange={handleInputChange}
-                            placeholder="Enter vice captain's full name"
-                            required
-                          />
-                        </div>
-
-                        <div className="form-group">
-                          <label htmlFor="teamViceCaptainPhone">
-                            Contact Number <span className="required">*</span>
-                          </label>
-                          <div className="phone-input-container">
-                            <span className="phone-prefix">+91</span>
-                            <input
-                              type="tel"
-                              id="teamViceCaptainPhone"
-                              name="teamViceCaptainPhone"
-                              value={formData.teamViceCaptainPhone}
-                              onChange={handleInputChange}
-                              placeholder="Enter 10-digit number"
-                              maxLength="10"
-                              pattern="[0-9]{10}"
-                              required
-                            />
-                          </div>
-                        </div>
-                      </div>
-
-                      {formData.collegeType === "nit_silchar" && (
                         <div className="form-row">
                           <div className="form-group">
-                            <label htmlFor="teamViceCaptainScholarId">
-                              Scholar ID <span className="required">*</span>
+                            <label htmlFor="teamLeaderName">
+                              Full Name <span className="required">*</span>
                             </label>
                             <input
                               type="text"
-                              id="teamViceCaptainScholarId"
-                              name="teamViceCaptainScholarId"
-                              value={formData.teamViceCaptainScholarId}
+                              id="teamLeaderName"
+                              name="teamLeaderName"
+                              value={formData.teamLeaderName}
                               onChange={handleInputChange}
-                              placeholder="Enter scholar ID"
+                              placeholder="Enter team leader's full name"
                               required
                             />
                           </div>
-                        </div>
-                      )}
-                    </div>
-                  )}
 
-                  {/* Team Members Section */}
-                  <div className="team-registration">
-                    <h3>👥 Team Members</h3>
-                    <p>
-                      {(() => {
-                        const config = getFormConfig(event.id);
-                        const minMembers =
-                          config.minTeamMembers !== undefined
-                            ? config.minTeamMembers
-                            : config.minTeamSize - 1;
-                        const maxMembers =
-                          config.maxTeamMembers !== undefined
-                            ? config.maxTeamMembers
-                            : config.maxTeamSize - 1;
-                        return maxMembers === 998
-                          ? "Add Team Members"
-                          : `Add ${minMembers} to ${maxMembers} team members ${event.id === 2 ? "(excluding team leader and vice captain)" : "(excluding team leader)"}. Total team size: ${config.minTeamSize} to ${config.maxTeamSize} members.`;
-                      })()}
-                    </p>
-
-                    {formData.teamMembers.map((member, index) => (
-                      <div key={index} className="team-member">
-                        <div className="team-member-header">
-                          <h4>Team Member {index + 1}</h4>
-                          <button
-                            type="button"
-                            className="remove-member-btn"
-                            onClick={() => removeTeamMember(index)}
-                            title="Remove team member"
-                          >
-                            ✕
-                          </button>
+                          <div className="form-group">
+                            <label htmlFor="teamLeaderPhone">
+                              Contact Number <span className="required">*</span>
+                            </label>
+                            <div className="phone-input-container">
+                              <span className="phone-prefix">+91</span>
+                              <input
+                                type="tel"
+                                id="teamLeaderPhone"
+                                name="teamLeaderPhone"
+                                value={formData.teamLeaderPhone}
+                                onChange={handleInputChange}
+                                placeholder="Enter 10-digit number"
+                                maxLength="10"
+                                pattern="[0-9]{10}"
+                                required
+                              />
+                            </div>
+                          </div>
                         </div>
+
                         <div className="form-row">
-                          {getFormConfig(event.id).teamMemberFields.includes("name") && (
+                          {getFormConfig(event.id).fields.includes("teamLeaderEmail") && (
                             <div className="form-group">
-                              <label>
-                                Full Name <span className="required">*</span>
+                              <label htmlFor="teamLeaderEmail">
+                                Email Address <span className="required">*</span>
+                                {emailVerification.isVerified && (
+                                  <span className="verification-status verified">
+                                    ✓ Verified
+                                  </span>
+                                )}
+                              </label>
+                              <div className="email-verification-container">
+                                <input
+                                  type="email"
+                                  id="teamLeaderEmail"
+                                  name="teamLeaderEmail"
+                                  value={formData.teamLeaderEmail}
+                                  onChange={handleInputChange}
+                                  placeholder="leader@example.com"
+                                  required
+                                  disabled={emailVerification.isVerified}
+                                />
+                                {!emailVerification.isVerified && (
+                                  <button
+                                    type="button"
+                                    className="verify-email-btn"
+                                    onClick={handleSendVerification}
+                                    disabled={
+                                      emailVerification.isVerifying ||
+                                      !formData.teamLeaderEmail
+                                    }
+                                  >
+                                    {emailVerification.isVerifying
+                                      ? "Sending..."
+                                      : "Verify Email"}
+                                  </button>
+                                )}
+                              </div>
+
+                              {emailVerification.showOtpInput && (
+                                <div className="otp-verification-section">
+                                  <label htmlFor="otpInput">
+                                    Enter 6-digit verification code sent to your email
+                                  </label>
+                                  <div className="otp-input-container">
+                                    <input
+                                      type="text"
+                                      id="otpInput"
+                                      value={emailVerification.otp}
+                                      onChange={handleOtpChange}
+                                      placeholder="000000"
+                                      maxLength="6"
+                                      className="otp-input"
+                                    />
+                                    <button
+                                      type="button"
+                                      className="verify-otp-btn"
+                                      onClick={handleVerifyOtp}
+                                      disabled={
+                                        emailVerification.isVerifying ||
+                                        emailVerification.otp.length !== 6
+                                      }
+                                    >
+                                      {emailVerification.isVerifying
+                                        ? "Verifying..."
+                                        : "Verify"}
+                                    </button>
+                                  </div>
+                                  <button
+                                    type="button"
+                                    className="resend-otp-btn"
+                                    onClick={handleSendVerification}
+                                    disabled={emailVerification.isVerifying}
+                                  >
+                                    Resend Code
+                                  </button>
+                                </div>
+                              )}
+                            </div>
+                          )}
+
+                          {formData.collegeType === "nit_silchar" && (
+                            <div className="form-group">
+                              <label htmlFor="teamLeaderScholarId">
+                                Scholar ID <span className="required">*</span>
                               </label>
                               <input
                                 type="text"
-                                value={member.name || ""}
-                                onChange={(e) =>
-                                  updateTeamMember(index, "name", e.target.value)
-                                }
-                                placeholder="Enter team member name"
+                                id="teamLeaderScholarId"
+                                name="teamLeaderScholarId"
+                                value={formData.teamLeaderScholarId}
+                                onChange={handleInputChange}
+                                placeholder="Enter scholar ID"
                                 required
                               />
                             </div>
                           )}
+                        </div>
 
-                          {getFormConfig(event.id).teamMemberFields.includes("phone") && (
+                        {(getFormConfig(event.id).fields.includes("department") ||
+                          getFormConfig(event.id).fields.includes("year")) && (
+                          <div className="form-row">
+                            {getFormConfig(event.id).fields.includes("department") && (
+                              <div className="form-group">
+                                <label htmlFor="department">
+                                  Department <span className="required">*</span>
+                                </label>
+                                <select
+                                  id="department"
+                                  name="department"
+                                  value={formData.department}
+                                  onChange={handleInputChange}
+                                  required
+                                >
+                                  <option value="">Select Department</option>
+                                  <option value="cse">
+                                    Computer Science & Engineering
+                                  </option>
+                                  <option value="ece">Electronics & Communication</option>
+                                  <option value="me">Mechanical Engineering</option>
+                                  <option value="ce">Civil Engineering</option>
+                                  <option value="ee">Electrical Engineering</option>
+                                  <option value="other">Other</option>
+                                </select>
+                              </div>
+                            )}
+
+                            {getFormConfig(event.id).fields.includes("year") && (
+                              <div className="form-group">
+                                <label htmlFor="year">
+                                  Year of Study <span className="required">*</span>
+                                </label>
+                                <select
+                                  id="year"
+                                  name="year"
+                                  value={formData.year}
+                                  onChange={handleInputChange}
+                                  required
+                                >
+                                  <option value="">Select Year</option>
+                                  <option value="1st">1st Year</option>
+                                  <option value="2nd">2nd Year</option>
+                                  <option value="3rd">3rd Year</option>
+                                  <option value="4th">4th Year</option>
+                                </select>
+                              </div>
+                            )}
+                          </div>
+                        )}
+                      </div>
+
+                      {/* Custom Fields Section (for Startup Expo) */}
+                      {getFormConfig(event.id).customFields && (
+                        <div className="custom-fields-section">
+                          <h3>📋 Additional Information</h3>
+
+                          {/* Business Description Field */}
+                          {getFormConfig(event.id).fields.includes(
+                            "businessDescription"
+                          ) && (
                             <div className="form-group">
-                              <label>
+                              <label htmlFor="businessDescription">
+                                {
+                                  getFormConfig(event.id).customFields.businessDescription
+                                    .label
+                                }
+                                {getFormConfig(event.id).customFields.businessDescription
+                                  .required && <span className="required">*</span>}
+                              </label>
+                              <textarea
+                                id="businessDescription"
+                                name="businessDescription"
+                                value={formData.businessDescription}
+                                onChange={handleInputChange}
+                                placeholder={
+                                  getFormConfig(event.id).customFields.businessDescription
+                                    .placeholder
+                                }
+                                rows={
+                                  getFormConfig(event.id).customFields.businessDescription
+                                    .rows || 4
+                                }
+                                required={
+                                  getFormConfig(event.id).customFields.businessDescription
+                                    .required
+                                }
+                              />
+                            </div>
+                          )}
+
+                          {/* Drive Link Field */}
+                          {getFormConfig(event.id).fields.includes("driveLink") && (
+                            <div className="form-group">
+                              <label htmlFor="driveLink">
+                                {getFormConfig(event.id).customFields.driveLink.label}
+                                {getFormConfig(event.id).customFields.driveLink
+                                  .required && <span className="required">*</span>}
+                              </label>
+                              <input
+                                type={getFormConfig(event.id).customFields.driveLink.type}
+                                id="driveLink"
+                                name="driveLink"
+                                value={formData.driveLink}
+                                onChange={handleInputChange}
+                                placeholder={
+                                  getFormConfig(event.id).customFields.driveLink
+                                    .placeholder
+                                }
+                                required={
+                                  getFormConfig(event.id).customFields.driveLink.required
+                                }
+                              />
+                            </div>
+                          )}
+                        </div>
+                      )}
+
+                      {/* Team Vice Captain Details (for Treasure Hunt) */}
+                      {getFormConfig(event.id).fields.includes("teamViceCaptainName") && (
+                        <div className="team-vice-captain-section">
+                          <h3>👤 Team Vice Captain Details</h3>
+
+                          <div className="form-row">
+                            <div className="form-group">
+                              <label htmlFor="teamViceCaptainName">
+                                Full Name <span className="required">*</span>
+                              </label>
+                              <input
+                                type="text"
+                                id="teamViceCaptainName"
+                                name="teamViceCaptainName"
+                                value={formData.teamViceCaptainName}
+                                onChange={handleInputChange}
+                                placeholder="Enter vice captain's full name"
+                                required
+                              />
+                            </div>
+
+                            <div className="form-group">
+                              <label htmlFor="teamViceCaptainPhone">
                                 Contact Number <span className="required">*</span>
                               </label>
                               <div className="phone-input-container">
                                 <span className="phone-prefix">+91</span>
                                 <input
                                   type="tel"
-                                  value={member.phone || ""}
-                                  onChange={(e) =>
-                                    updateTeamMember(index, "phone", e.target.value)
-                                  }
+                                  id="teamViceCaptainPhone"
+                                  name="teamViceCaptainPhone"
+                                  value={formData.teamViceCaptainPhone}
+                                  onChange={handleInputChange}
                                   placeholder="Enter 10-digit number"
                                   maxLength="10"
                                   pattern="[0-9]{10}"
@@ -2175,120 +2113,236 @@ const EventDetail = () => {
                                 />
                               </div>
                             </div>
-                          )}
+                          </div>
 
-                          {getFormConfig(event.id).teamMemberFields.includes(
-                            "scholarId"
-                          ) &&
-                            formData.collegeType === "nit_silchar" && (
+                          {formData.collegeType === "nit_silchar" && (
+                            <div className="form-row">
                               <div className="form-group">
-                                <label>
+                                <label htmlFor="teamViceCaptainScholarId">
                                   Scholar ID <span className="required">*</span>
                                 </label>
                                 <input
                                   type="text"
-                                  value={member.scholarId || ""}
-                                  onChange={(e) =>
-                                    updateTeamMember(index, "scholarId", e.target.value)
-                                  }
+                                  id="teamViceCaptainScholarId"
+                                  name="teamViceCaptainScholarId"
+                                  value={formData.teamViceCaptainScholarId}
+                                  onChange={handleInputChange}
                                   placeholder="Enter scholar ID"
                                   required
                                 />
                               </div>
-                            )}
-
-                          {getFormConfig(event.id).teamMemberFields.includes(
-                            "department"
-                          ) && (
-                            <div className="form-group">
-                              <label>
-                                Department <span className="required">*</span>
-                              </label>
-                              <select
-                                value={member.department || ""}
-                                onChange={(e) =>
-                                  updateTeamMember(index, "department", e.target.value)
-                                }
-                                required
-                              >
-                                <option value="">Select Department</option>
-                                <option value="cse">
-                                  Computer Science & Engineering
-                                </option>
-                                <option value="ece">Electronics & Communication</option>
-                                <option value="me">Mechanical Engineering</option>
-                                <option value="ce">Civil Engineering</option>
-                                <option value="ee">Electrical Engineering</option>
-                                <option value="other">Other</option>
-                              </select>
-                            </div>
-                          )}
-
-                          {getFormConfig(event.id).teamMemberFields.includes("year") && (
-                            <div className="form-group">
-                              <label>
-                                Year of Study <span className="required">*</span>
-                              </label>
-                              <select
-                                value={member.year || ""}
-                                onChange={(e) =>
-                                  updateTeamMember(index, "year", e.target.value)
-                                }
-                                required
-                              >
-                                <option value="">Select Year</option>
-                                <option value="1st">1st Year</option>
-                                <option value="2nd">2nd Year</option>
-                                <option value="3rd">3rd Year</option>
-                                <option value="4th">4th Year</option>
-                              </select>
                             </div>
                           )}
                         </div>
+                      )}
+
+                      {/* Team Members Section */}
+                      <div className="team-registration">
+                        <h3>👥 Team Members</h3>
+                        <p>
+                          {(() => {
+                            const config = getFormConfig(event.id);
+                            const minMembers =
+                              config.minTeamMembers !== undefined
+                                ? config.minTeamMembers
+                                : config.minTeamSize - 1;
+                            const maxMembers =
+                              config.maxTeamMembers !== undefined
+                                ? config.maxTeamMembers
+                                : config.maxTeamSize - 1;
+                            return maxMembers === 998
+                              ? "Add Team Members"
+                              : `Add ${minMembers} to ${maxMembers} team members ${event.id === 2 ? "(excluding team leader and vice captain)" : "(excluding team leader)"}. Total team size: ${config.minTeamSize} to ${config.maxTeamSize} members.`;
+                          })()}
+                        </p>
+
+                        {formData.teamMembers.map((member, index) => (
+                          <div key={index} className="team-member">
+                            <div className="team-member-header">
+                              <h4>Team Member {index + 1}</h4>
+                              <button
+                                type="button"
+                                className="remove-member-btn"
+                                onClick={() => removeTeamMember(index)}
+                                title="Remove team member"
+                              >
+                                ✕
+                              </button>
+                            </div>
+                            <div className="form-row">
+                              {getFormConfig(event.id).teamMemberFields.includes(
+                                "name"
+                              ) && (
+                                <div className="form-group">
+                                  <label>
+                                    Full Name <span className="required">*</span>
+                                  </label>
+                                  <input
+                                    type="text"
+                                    value={member.name || ""}
+                                    onChange={(e) =>
+                                      updateTeamMember(index, "name", e.target.value)
+                                    }
+                                    placeholder="Enter team member name"
+                                    required
+                                  />
+                                </div>
+                              )}
+
+                              {getFormConfig(event.id).teamMemberFields.includes(
+                                "phone"
+                              ) && (
+                                <div className="form-group">
+                                  <label>
+                                    Contact Number <span className="required">*</span>
+                                  </label>
+                                  <div className="phone-input-container">
+                                    <span className="phone-prefix">+91</span>
+                                    <input
+                                      type="tel"
+                                      value={member.phone || ""}
+                                      onChange={(e) =>
+                                        updateTeamMember(index, "phone", e.target.value)
+                                      }
+                                      placeholder="Enter 10-digit number"
+                                      maxLength="10"
+                                      pattern="[0-9]{10}"
+                                      required
+                                    />
+                                  </div>
+                                </div>
+                              )}
+
+                              {getFormConfig(event.id).teamMemberFields.includes(
+                                "scholarId"
+                              ) &&
+                                formData.collegeType === "nit_silchar" && (
+                                  <div className="form-group">
+                                    <label>
+                                      Scholar ID <span className="required">*</span>
+                                    </label>
+                                    <input
+                                      type="text"
+                                      value={member.scholarId || ""}
+                                      onChange={(e) =>
+                                        updateTeamMember(
+                                          index,
+                                          "scholarId",
+                                          e.target.value
+                                        )
+                                      }
+                                      placeholder="Enter scholar ID"
+                                      required
+                                    />
+                                  </div>
+                                )}
+
+                              {getFormConfig(event.id).teamMemberFields.includes(
+                                "department"
+                              ) && (
+                                <div className="form-group">
+                                  <label>
+                                    Department <span className="required">*</span>
+                                  </label>
+                                  <select
+                                    value={member.department || ""}
+                                    onChange={(e) =>
+                                      updateTeamMember(
+                                        index,
+                                        "department",
+                                        e.target.value
+                                      )
+                                    }
+                                    required
+                                  >
+                                    <option value="">Select Department</option>
+                                    <option value="cse">
+                                      Computer Science & Engineering
+                                    </option>
+                                    <option value="ece">
+                                      Electronics & Communication
+                                    </option>
+                                    <option value="me">Mechanical Engineering</option>
+                                    <option value="ce">Civil Engineering</option>
+                                    <option value="ee">Electrical Engineering</option>
+                                    <option value="other">Other</option>
+                                  </select>
+                                </div>
+                              )}
+
+                              {getFormConfig(event.id).teamMemberFields.includes(
+                                "year"
+                              ) && (
+                                <div className="form-group">
+                                  <label>
+                                    Year of Study <span className="required">*</span>
+                                  </label>
+                                  <select
+                                    value={member.year || ""}
+                                    onChange={(e) =>
+                                      updateTeamMember(index, "year", e.target.value)
+                                    }
+                                    required
+                                  >
+                                    <option value="">Select Year</option>
+                                    <option value="1st">1st Year</option>
+                                    <option value="2nd">2nd Year</option>
+                                    <option value="3rd">3rd Year</option>
+                                    <option value="4th">4th Year</option>
+                                  </select>
+                                </div>
+                              )}
+                            </div>
+                          </div>
+                        ))}
+
+                        {(() => {
+                          const config = getFormConfig(event.id);
+                          const maxMembers =
+                            config.maxTeamMembers !== undefined
+                              ? config.maxTeamMembers
+                              : config.maxTeamSize - 1;
+                          return (
+                            formData.teamMembers.length < maxMembers && (
+                              <button
+                                type="button"
+                                className="add-member-btn"
+                                onClick={addTeamMember}
+                              >
+                                + Add Team Member
+                              </button>
+                            )
+                          );
+                        })()}
+
+                        {(() => {
+                          const config = getFormConfig(event.id);
+                          const minMembers =
+                            config.minTeamMembers !== undefined
+                              ? config.minTeamMembers
+                              : config.minTeamSize - 1;
+                          return (
+                            formData.teamMembers.length < minMembers && (
+                              <p className="team-size-warning">
+                                ⚠️ You need to add at least {minMembers} team member
+                                {minMembers > 1 ? "s" : ""} to meet the minimum team size
+                                requirement.
+                              </p>
+                            )
+                          );
+                        })()}
                       </div>
-                    ))}
 
-                    {(() => {
-                      const config = getFormConfig(event.id);
-                      const maxMembers =
-                        config.maxTeamMembers !== undefined
-                          ? config.maxTeamMembers
-                          : config.maxTeamSize - 1;
-                      return (
-                        formData.teamMembers.length < maxMembers && (
-                          <button
-                            type="button"
-                            className="add-member-btn"
-                            onClick={addTeamMember}
-                          >
-                            + Add Team Member
-                          </button>
-                        )
-                      );
-                    })()}
-
-                    {(() => {
-                      const config = getFormConfig(event.id);
-                      const minMembers =
-                        config.minTeamMembers !== undefined
-                          ? config.minTeamMembers
-                          : config.minTeamSize - 1;
-                      return (
-                        formData.teamMembers.length < minMembers && (
-                          <p className="team-size-warning">
-                            ⚠️ You need to add at least {minMembers} team member
-                            {minMembers > 1 ? "s" : ""} to meet the minimum team size
-                            requirement.
-                          </p>
-                        )
-                      );
-                    })()}
-                  </div>
-
-                  <button type="submit" className="submit-btn" disabled={isSubmitting}>
-                    {isSubmitting ? "Registering..." : "📝 Register Now"}
-                  </button>
-                </form>
+                      <button
+                        type="submit"
+                        className="submit-btn"
+                        disabled={isSubmitting}
+                      >
+                        {isSubmitting ? "Registering..." : "📝 Register Now"}
+                      </button>
+                    </form>
+                  </>
+                )}
               </motion.div>
             )}
 
@@ -2332,12 +2386,22 @@ const EventDetail = () => {
                   <span className="detail-value">{event.registrationDeadline}</span>
                 </div>
 
-                <button
-                  className="register-now-btn"
-                  onClick={() => setActiveTab("register")}
-                >
-                  📝 Register Now
-                </button>
+                {event.registrationOpen ? (
+                  <button
+                    className="register-now-btn"
+                    onClick={() => setActiveTab("register")}
+                  >
+                    📝 Register Now
+                  </button>
+                ) : (
+                  <button
+                    className="register-now-btn"
+                    disabled
+                    style={{ opacity: 0.6, cursor: "not-allowed" }}
+                  >
+                    Registration Closed
+                  </button>
+                )}
               </motion.div>
             )}
           </AnimatePresence>
@@ -2381,9 +2445,22 @@ const EventDetail = () => {
               <span className="detail-value">{event.registrationDeadline}</span>
             </div>
 
-            <button className="register-now-btn" onClick={() => setActiveTab("register")}>
-              📝 Register Now
-            </button>
+            {event.registrationOpen ? (
+              <button
+                className="register-now-btn"
+                onClick={() => setActiveTab("register")}
+              >
+                📝 Register Now
+              </button>
+            ) : (
+              <button
+                className="register-now-btn"
+                disabled
+                style={{ opacity: 0.6, cursor: "not-allowed" }}
+              >
+                Registration Closed
+              </button>
+            )}
           </motion.div>
         </div>
       </div>
