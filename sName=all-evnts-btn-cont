@@ -1,0 +1,468 @@
+[33mcommit b33184247fabf923578f8b94098d4a9dcec2ebc1[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mapplynow1[m[33m, [m[1;31morigin/vite_newdev[m[33m, [m[1;31morigin/applynow1[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mvite_newdev[m[33m)[m
+Merge: 483906c b29dd66
+Author: Bishal Das <dasbishal1717@gmail.com>
+Date:   Thu Jul 17 01:19:00 2025 +0530
+
+    Merge pull request #290 from Ecell-NITS/close
+    
+    closed submission form
+
+[33mcommit b29dd667aa003224f0c5fe6ef756bd045341841d[m[33m ([m[1;31morigin/close[m[33m)[m
+Author: muskan170604 <muskan_ug_23@civil.nits.ac.in>
+Date:   Thu Jul 17 01:15:04 2025 +0530
+
+    closed submission form
+
+ src/App.jsx | 4 [32m++[m[31m--[m
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+[33mcommit 483906c8593fa6267791ae0ec62174a4f2cb1c90[m
+Merge: e145f81 d9ae279
+Author: Bishal Das <dasbishal1717@gmail.com>
+Date:   Sun Jul 13 14:22:42 2025 +0530
+
+    Merge pull request #289 from Ecell-NITS/submission
+    
+    Admin Panel Update
+
+[33mcommit d9ae279f76164553312f1650cc96d886f1c33284[m
+Merge: 52e3b35 e145f81
+Author: Bishal Das <dasbishal1717@gmail.com>
+Date:   Sun Jul 13 14:20:40 2025 +0530
+
+    Merge branch 'vite_newdev' of https://github.com/Ecell-NITS/e-cell-website-22 into submission
+
+[33mcommit 52e3b3526dd2060fead4ce02e47f79bef1b3e949[m
+Author: Bishal Das <dasbishal1717@gmail.com>
+Date:   Sun Jul 13 14:14:51 2025 +0530
+
+    Admin Panel Update
+
+ src/context/ApplicantsContextProvider.jsx                  | 5 [32m++++[m[31m-[m
+ src/pages/Auth/Admin/TechApplications/TechApplications.jsx | 4 [32m++[m[31m--[m
+ 2 files changed, 6 insertions(+), 3 deletions(-)
+
+[33mcommit e145f81ea468f8b4b4a5a1cd3f9a69c9eb435677[m
+Merge: d666d83 c48ba14
+Author: Bishal Das <dasbishal1717@gmail.com>
+Date:   Wed Jul 9 10:10:09 2025 +0530
+
+    Merge pull request #288 from Ecell-NITS/submission
+    
+    submission form updated
+
+[33mcommit c48ba14d654e16513da18d761d4ab90cab99c207[m
+Author: Bishal Das <dasbishal1717@gmail.com>
+Date:   Mon Jul 7 22:46:22 2025 +0530
+
+    Year Updated for Tech Submission
+
+ src/pages/ProjectsSubmit/Submission.jsx | 6 [32m+++[m[31m---[m
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+[33mcommit c4e22ba6fdd793143f3c96ec9406cc02f04113ea[m
+Author: Bishal Das <dasbishal1717@gmail.com>
+Date:   Mon Jul 7 22:36:05 2025 +0530
+
+    Submission Form Updated
+
+ src/pages/ProjectsSubmit/Submission.jsx         | 19 [32m++++++++++++[m[31m-------[m
+ src/pages/ProjectsSubmit/Submission.module.scss | 12 [32m++++++++++[m[31m--[m
+ src/pages/Recruiting2425/Recruiting.css         | 14 [32m++++++[m[31m--------[m
+ 3 files changed, 28 insertions(+), 17 deletions(-)
+
+[33mcommit 8179ea4edd355a147f5e82efd46ddd31e4c42e07[m
+Merge: 788df42 8d8667e
+Author: Bishal Das <dasbishal1717@gmail.com>
+Date:   Mon Jul 7 21:42:25 2025 +0530
+
+    Merge branch 'submission' of https://github.com/Ecell-NITS/e-cell-website-22 into submission
+
+[33mcommit 788df42e57811730e303419f2afc8be3c87647ba[m
+Author: Bishal Das <dasbishal1717@gmail.com>
+Date:   Mon Jul 7 21:39:09 2025 +0530
+
+    Submission Form Update
+
+ src/App.jsx                                     |  4 [32m++[m[31m--[m
+ src/pages/ProjectsSubmit/Submission.jsx         | 14 [32m+++++++++++[m[31m---[m
+ src/pages/ProjectsSubmit/Submission.module.scss |  8 [32m+++++++[m[31m-[m
+ 3 files changed, 20 insertions(+), 6 deletions(-)
+
+[33mcommit 8d8667e915a9acfde12caed312757adacfcf1d69[m
+Author: muskan170604 <muskan_ug_23@civil.nits.ac.in>
+Date:   Sun Jul 6 16:08:48 2025 +0530
+
+    submission form updated
+
+ src/App.jsx                                     |  4 [32m++[m[31m--[m
+ src/pages/ProjectsSubmit/Submission.jsx         | 14 [32m+++++++[m[31m-------[m
+ src/pages/ProjectsSubmit/Submission.module.scss |  2 [32m+[m[31m-[m
+ 3 files changed, 10 insertions(+), 10 deletions(-)
+
+[33mcommit d666d8306ac5a5f6d7d15c7330acf2c7843399f1[m
+Merge: 9ab2162 c447a1b
+Author: Bishal Das <dasbishal1717@gmail.com>
+Date:   Tue Jun 24 01:08:10 2025 +0530
+
+    Merge pull request #287 from Ecell-NITS/close
+    
+    close forms
+
+[33mcommit c447a1b199403e287104e04796b54ed71556b346[m
+Author: muskan170604 <muskan_ug_23@civil.nits.ac.in>
+Date:   Tue Jun 24 00:58:17 2025 +0530
+
+    close forms
+
+ src/App.jsx | 8 [32m++++[m[31m----[m
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+[33mcommit 9ab2162344c263fa519893e4f0aa453f103de96f[m
+Merge: 8cd706f d80c79e
+Author: E-Cell NITS <126353441+Ecell23@users.noreply.github.com>
+Date:   Fri Jun 20 21:19:42 2025 +0530
+
+    Merge pull request #286 from Ecell-NITS/allRecruit
+    
+    date update
+
+[33mcommit d80c79effb3d7210bc7f278cf108f85b35b90854[m
+Merge: c6fae38 8cd706f
+Author: Muskan Bharti <muskan_ug_23@civil.nits.ac.in>
+Date:   Fri Jun 20 21:17:12 2025 +0530
+
+    Merge branch 'vite_newdev' into allRecruit
+
+[33mcommit c6fae3855ca9aa08a6ddd7f839e31a1f96c581f7[m
+Author: muskan170604 <muskan_ug_23@civil.nits.ac.in>
+Date:   Fri Jun 20 21:13:18 2025 +0530
+
+    date update
+
+ src/pages/Recruiting2425/AllTeams/Recruit.jsx | 2 [32m+[m[31m-[m
+ src/pages/Recruiting2425/Tech/TechRecruit.jsx | 2 [32m+[m[31m-[m
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+[33mcommit 8cd706fd12d30b091dec3d5502b0c5ef39a33790[m
+Merge: 2c13468 9c24910
+Author: Bishal Das <dasbishal1717@gmail.com>
+Date:   Sun Jun 15 23:41:41 2025 +0530
+
+    Merge pull request #285 from Ecell-NITS/allRecruit
+    
+    commit
+
+[33mcommit 9c24910f5ac15a46ae3c020da0383274387c32a5[m
+Author: muskan170604 <muskan_ug_23@civil.nits.ac.in>
+Date:   Sun Jun 15 23:34:02 2025 +0530
+
+    commit
+
+ src/pages/Recruiting2425/AllTeams/Recruit.jsx | 2 [32m+[m[31m-[m
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+[33mcommit 2c13468069aec5cef8a401efb41e78acf65846f3[m
+Merge: a9af324 17fe4e0
+Author: Bishal Das <dasbishal1717@gmail.com>
+Date:   Sun Jun 15 21:24:31 2025 +0530
+
+    Merge pull request #284 from Ecell-NITS/allRecruit
+    
+    All recruit
+
+[33mcommit 17fe4e08515dbc52e1aa03504b49a1ccb3fd508a[m
+Merge: 1d5493d a9af324
+Author: Muskan Bharti <muskan_ug_23@civil.nits.ac.in>
+Date:   Sun Jun 15 20:02:54 2025 +0530
+
+    Merge branch 'vite_newdev' into allRecruit
+
+[33mcommit 1d5493d5aee5505f8fc71ac535b361ff3358570a[m
+Author: muskan170604 <muskan_ug_23@civil.nits.ac.in>
+Date:   Sun Jun 15 20:00:01 2025 +0530
+
+    commit
+
+ src/pages/Recruiting2425/AllTeams/Recruit.jsx | 2 [32m+[m[31m-[m
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+[33mcommit 7f1ae6e8e313e99008335aa361118769fc0ab160[m
+Author: muskan170604 <muskan_ug_23@civil.nits.ac.in>
+Date:   Sun Jun 15 19:48:06 2025 +0530
+
+    corrected
+
+ src/pages/Recruiting2425/AllTeams/Recruit.jsx | 2 [32m+[m[31m-[m
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+[33mcommit a9af3246402c42f7674ac2762de962c864a402c8[m
+Merge: 6d6258f 8518967
+Author: Bishal Das <dasbishal1717@gmail.com>
+Date:   Sat Jun 14 21:39:20 2025 +0530
+
+    Merge pull request #283 from Ecell-NITS/allRecruit
+    
+    All recruit
+
+[33mcommit 8518967558d7164db075be6bab2f38a28eb8b868[m
+Author: muskan170604 <muskan_ug_23@civil.nits.ac.in>
+Date:   Sat Jun 14 21:27:20 2025 +0530
+
+    commit
+
+ src/Data/GalleryTab.json                                  | 6 [32m+[m[31m-----[m
+ src/pages/Recruiting2425/AllTeams/TechRecruit.module.scss | 2 [32m+[m[31m-[m
+ src/pages/Recruiting2425/Tech/TechRecruit.module.scss     | 2 [32m+[m[31m-[m
+ 3 files changed, 3 insertions(+), 7 deletions(-)
+
+[33mcommit 6e05221d83f3d3ad5b162019c9f063c4fcc869c0[m
+Author: muskan170604 <muskan_ug_23@civil.nits.ac.in>
+Date:   Sat Jun 14 21:26:53 2025 +0530
+
+    update
+
+ src/App.jsx | 4 [32m++[m[31m--[m
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+[33mcommit 6d6258f33eeb6276c6535144ff0b9a9f1f7de313[m
+Merge: 6f98971 5e5428a
+Author: Bishal Das <dasbishal1717@gmail.com>
+Date:   Wed Jun 11 16:05:59 2025 +0530
+
+    Merge pull request #282 from Ecell-NITS/recruit
+    
+    Ecell Tech Recruitment
+
+[33mcommit 5e5428ad3d7da597945a6df6976adc1f19c06151[m
+Author: Bishal Das <dasbishal1717@gmail.com>
+Date:   Wed Jun 11 15:15:57 2025 +0530
+
+    Ecell Tech Recruitment
+
+ src/App.jsx                                   | 22 [32m+++++++++++[m[31m-----------[m
+ src/pages/Recruiting2425/AllTeams/Recruit.jsx |  7 [32m++++[m[31m---[m
+ src/pages/Recruiting2425/Tech/TechRecruit.jsx |  8 [32m++++[m[31m----[m
+ 3 files changed, 19 insertions(+), 18 deletions(-)
+
+[33mcommit 6f9897160054085d6dc0574a2c801df537fb4543[m
+Merge: 8e160e9 2ae39f6
+Author: Bishal Das <dasbishal1717@gmail.com>
+Date:   Mon Jun 9 16:57:41 2025 +0530
+
+    Merge pull request #274 from Ecell-NITS/recruit
+    
+    Recruit
+
+[33mcommit 2ae39f65a726f23129ba2340cc81eaaa99af9ed9[m
+Author: Bishal Das <dasbishal1717@gmail.com>
+Date:   Mon Jun 9 16:52:21 2025 +0530
+
+    Brochure Link Updated
+
+ src/pages/Recruiting2425/AllTeams/Recruit.jsx | 2 [32m+[m[31m-[m
+ src/pages/Recruiting2425/Tech/TechRecruit.jsx | 2 [32m+[m[31m-[m
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+[33mcommit 5bb45979b5eb2b9dc4b683da92bd7d240a36eccd[m
+Author: Bishal Das <dasbishal1717@gmail.com>
+Date:   Sun Jun 8 12:53:43 2025 +0530
+
+    Last date updated
+
+ src/pages/Recruiting2425/AllTeams/Recruit.jsx | 6 [32m+++[m[31m---[m
+ src/pages/Recruiting2425/Tech/TechRecruit.jsx | 6 [32m+++[m[31m---[m
+ 2 files changed, 6 insertions(+), 6 deletions(-)
+
+[33mcommit c78856258521d67685ba9c236373ab438a42f6f0[m
+Merge: a842cd0 c03167a
+Author: Bishal Das <dasbishal1717@gmail.com>
+Date:   Sun Jun 8 12:08:46 2025 +0530
+
+    Merge branch 'recruitmentByBishal' into recruit
+
+[33mcommit a842cd0105815364c5b1e322c2f2d46ebce35387[m
+Author: Bishal Das <dasbishal1717@gmail.com>
+Date:   Sun Jun 8 11:59:15 2025 +0530
+
+    Colours for dark theme updated
+
+ src/pages/Recruiting2425/AllTeams/TechRecruit.module.scss | 5 [32m+++++[m
+ src/pages/Recruiting2425/Tech/TechRecruit.module.scss     | 5 [32m+++++[m
+ 2 files changed, 10 insertions(+)
+
+[33mcommit e6a42e0c4aaf3e5f29083633684e5c41000ab979[m
+Merge: 8033806 8e160e9
+Author: Bishal Das <dasbishal1717@gmail.com>
+Date:   Sat Jun 7 21:07:04 2025 +0530
+
+    Merge branch 'vite_newdev' of https://github.com/Ecell-NITS/e-cell-website-22 into recruit
+
+[33mcommit 80338065afc33d5041d95bac7ec04932677b67d4[m
+Merge: af16977 586a713
+Author: Bishal Das <dasbishal1717@gmail.com>
+Date:   Sat Jun 7 20:53:55 2025 +0530
+
+    Merge branch 'recruit' of https://github.com/Ecell-NITS/e-cell-website-22 into recruit
+
+[33mcommit 8e160e9141feb9894c6a8efbb6d84777fce21db5[m
+Merge: c4405e1 7d16943
+Author: Muskan Bharti <muskan_ug_23@civil.nits.ac.in>
+Date:   Fri Jun 6 23:30:03 2025 +0530
+
+    Merge pull request #281 from Ecell-NITS/eic
+    
+    Added EIC photos
+
+[33mcommit 7d1694324343061ffd1f225724e603ba0edd08c9[m
+Author: GulistaKhatun06 <gulista_ug_23@civil.nits.ac.in>
+Date:   Fri Jun 6 23:25:24 2025 +0530
+
+    Added EIC photos
+
+ src/Data/GalleryTab.json | 48 [32m++++++++++++++++++++++++++++++++++++++++++++++++[m
+ 1 file changed, 48 insertions(+)
+
+[33mcommit c4405e184a7f670c8a613362df466675870f68a5[m
+Merge: 4ad832f 2562669
+Author: Bishal Das <dasbishal1717@gmail.com>
+Date:   Fri Jun 6 14:15:25 2025 +0530
+
+    Merge pull request #279 from Ecell-NITS/galleryUpdate
+    
+    gallery update
+
+[33mcommit 2562669f15171b11648c7bee35fc58ff72dfa087[m
+Author: muskan170604 <muskan_ug_23@civil.nits.ac.in>
+Date:   Fri Jun 6 14:09:39 2025 +0530
+
+    commit
+
+ src/Data/GalleryTab.json | 4 [32m++[m[31m--[m
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+[33mcommit 34a969d29ff7c625cf76cca7dd845312bedab19d[m
+Author: muskan170604 <muskan_ug_23@civil.nits.ac.in>
+Date:   Fri Jun 6 13:42:38 2025 +0530
+
+    gallery update
+
+ src/Data/GalleryTab.json | 128 [32m++++++++++++++++++++++++++++++++++++++++++++++[m[31m-[m
+ 1 file changed, 127 insertions(+), 1 deletion(-)
+
+[33mcommit 4ad832fa554ad460bbd19033f4887b42e5d11bcf[m
+Merge: af16977 a4a18db
+Author: Muskan Bharti <muskan_ug_23@civil.nits.ac.in>
+Date:   Fri Jun 6 12:21:12 2025 +0530
+
+    Merge pull request #278 from Ecell-NITS/empressario
+    
+    Added 2024-25 Empressario photo
+
+[33mcommit a4a18db3e4041dec0304c37580d4f066474d10ac[m
+Author: GulistaKhatun06 <gulista_ug_23@civil.nits.ac.in>
+Date:   Fri Jun 6 11:13:47 2025 +0530
+
+    Added 2024-25 Empressario photo
+
+ src/Data/GalleryTab.json | 52 [32m++++++++++++++++++++++++++++++++++++++++++++++++[m
+ 1 file changed, 52 insertions(+)
+
+[33mcommit af169771f8f1f0cf1adb5faeeac6b994adcae976[m
+Merge: 6b0b316 a65b895
+Author: Bishal Das <dasbishal1717@gmail.com>
+Date:   Wed Jun 4 14:45:48 2025 +0530
+
+    Merge pull request #277 from Ecell-NITS/teamDetailsUpdate
+    
+    Team details update
+
+[33mcommit a65b895e59022bba7499dbb127525f231bbfab90[m
+Author: muskan170604 <muskan_ug_23@civil.nits.ac.in>
+Date:   Wed Jun 4 14:22:43 2025 +0530
+
+    commit
+
+ src/Data/Core5.json | 2 [32m+[m[31m-[m
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+[33mcommit f3d5793d9ed5872f0674b4fa26b2fc8e1a40765c[m
+Author: muskan170604 <muskan_ug_23@civil.nits.ac.in>
+Date:   Wed Jun 4 14:14:21 2025 +0530
+
+    commit
+
+ src/Data/Core5.json | 2 [32m+[m[31m-[m
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+[33mcommit 5ba2eddb5982f63134496dae4c332dcfa1c3818d[m
+Author: muskan170604 <muskan_ug_23@civil.nits.ac.in>
+Date:   Tue Jun 3 15:17:54 2025 +0530
+
+    commit
+
+ src/Data/Core5.json                                |  54 [32m+++[m[31m---[m
+ src/Data/Developers.json                           |   2 [32m+[m[31m-[m
+ src/Data/GalleryTab.json                           |   8 [32m+[m[31m-[m
+ src/components/Admin/BlogCard/BlogCard.module.scss |   2 [31m-[m
+ src/components/Blog/Blog.jsx                       | 194 [32m+++++++++++[m[31m----------[m
+ .../ConnectionDropBanner/ConnectionDropBanner.jsx  |   4 [32m+[m[31m-[m
+ .../GalleryPage/GalleryCard/GalleryCard.css        |   3 [32m+[m[31m-[m
+ 7 files changed, 137 insertions(+), 130 deletions(-)
+
+[33mcommit 12e09703b9e120cc0c09069ff9727df677e796fb[m
+Author: muskan170604 <muskan_ug_23@civil.nits.ac.in>
+Date:   Tue Jun 3 15:17:23 2025 +0530
+
+    Details update for 2025-26 batch
+
+ src/Data/Core5.json                            | 299 [32m+++++++++++++++++++++++++[m
+ src/components/Teampage/CoreTeam/Coreteam5.jsx | 113 [32m++++++++++[m
+ src/components/Teampage/Tab/Tab.jsx            |   5 [32m+[m[31m-[m
+ src/pages/Recruiting2425/AllTeams/Recruit.jsx  |   4 [32m+[m
+ 4 files changed, 420 insertions(+), 1 deletion(-)
+
+[33mcommit c03167ae8f516be69d45f05b32d9a629ee3a1512[m[33m ([m[1;31morigin/recruitmentByBishal[m[33m)[m
+Author: Bishal Das <dasbishal1717@gmail.com>
+Date:   Mon Jun 2 22:26:29 2025 +0530
+
+    Export Applications from Admin Panel Updated
+
+ src/components/Admin/Sidebar/Sidebar.jsx                   | 2 [32m+[m[31m-[m
+ src/context/ApplicantsContextProvider.jsx                  | 2 [32m+[m[31m-[m
+ src/pages/Auth/Admin/Applications/Applications.jsx         | 4 [32m++++[m
+ src/pages/Auth/Admin/TechApplications/TechApplications.jsx | 1 [32m+[m
+ src/pages/Recruiting2425/AllTeams/Recruit.jsx              | 7 [32m++[m[31m-----[m
+ src/pages/Recruiting2425/Tech/TechRecruit.jsx              | 6 [32m++++[m[31m--[m
+ 6 files changed, 13 insertions(+), 9 deletions(-)
+
+[33mcommit 33dd606950215520a1652b3a1d447dcf8de30327[m
+Author: Bishal Das <dasbishal1717@gmail.com>
+Date:   Sun Jun 1 17:01:06 2025 +0530
+
+    Recruit Demo
+
+ src/App.jsx                                   | 7 [32m++++[m[31m---[m
+ src/pages/Recruiting2425/AllTeams/Recruit.jsx | 8 [32m++++++++[m
+ src/pages/Recruiting2425/Tech/TechRecruit.jsx | 4 [32m++++[m
+ 3 files changed, 16 insertions(+), 3 deletions(-)
+
+[33mcommit 586a713c5d827359c79511ba4a1eeda958ca8c5b[m
+Merge: 80ec4d3 6b0b316
+Author: Muskan Bharti <muskan_ug_23@civil.nits.ac.in>
+Date:   Sat May 31 14:02:14 2025 +0530
+
+    Merge branch 'vite_newdev' into recruit
+
+[33mcommit 80ec4d30869d6fba4aab593fadca01b8318f809a[m
+Author: muskan170604 <muskan_ug_23@civil.nits.ac.in>
+Date:   Sat May 31 13:57:55 2025 +0530
+
+    improve styling
+
+ src/components/shared/Navbar/NavbarTeam.css               | 2 [32m+[m[31m-[m
+ src/pages/Recruiting2425/AllTeams/Recruit.jsx             | 6 [32m+++[m[31m---[m
+ src/pages/Recruiting2425/AllTeams/TechRecruit.module.scss | 2 [32m+[m[31m-[m
+ src/pages/Recruiting2425/Tech/TechRecruit.jsx             | 6 [32m+++[m[31m---[m
+ src/pages/Recruiting2425/Tech/TechRecruit.module.scss     | 2 [32m+[m[31m-[m
+ 5 files changed, 9 insertions(+), 9 deletions(-)

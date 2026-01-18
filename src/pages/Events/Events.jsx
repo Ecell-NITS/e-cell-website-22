@@ -6,6 +6,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 // import UpcomingEvents from '../../components/EventsPage/UpcomingEvents';
 import PastEvents from "../../components/EventsPage/PastEvents";
+import UpcomingEvents from "../../components/EventsPage/UpcomingEvents";
 const Events = () => {
   useEffect(() => {
     document.title = "Events | E-Cell NIT Silchar";
@@ -195,8 +196,11 @@ const Events = () => {
           </div>
         </div>
       </Carousel>
-      {/* <UpcomingEvents /> */}
+
+      <UpcomingEvents />
+
       <PastEvents />
+
       <Footer />
     </>
   );

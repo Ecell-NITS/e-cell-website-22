@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import "./Signup.css";
 import NavbarTeam from "../../../components/shared/Navbar/NavbarTeam";
 import Footer from "../../../components/shared/Footer/Footer";
@@ -33,6 +33,19 @@ const Signup = () => {
       navigate("/dashboard");
     }
   }, [navigate]);
+
+  //   useEffect(() => {
+  //   document.title = "Signup | E-Cell NIT Silchar";
+  //   const token = localStorage.getItem("token");
+
+  //   // 👇 Only redirect to dashboard if NOT coming from "Apply Now"
+  //   if (token && !location.state?.fromEvent) {
+  //     navigate("/dashboard");
+  //   }
+  // }, [navigate, location.state]);
+
+  const location = useLocation();
+  const fromEvent = location.state?.fromEvent;
 
   const isSignUpFormFilled = () => {
     return (
@@ -159,7 +172,7 @@ const Signup = () => {
         );
         setTimeout(() => {
           setMessage("");
-          navigate("/login");
+          navigate("/login", { state: { fromEvent } });
         }, 5000);
         setSigningup(false);
         setDisablebtn(false);
@@ -220,7 +233,7 @@ const Signup = () => {
   };
 
   const hangleGoToLogin = () => {
-    navigate("/login");
+    navigate("/login", { state: { fromEvent } });
   };
 
   const emailPattern = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
@@ -262,6 +275,9 @@ const Signup = () => {
           email,
         }
       );
+
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+
       if (response.status === 200) {
         toast.success(
           "OTP sent successfully! Please check your inbox as well as SPAM folder.",

@@ -1,0 +1,129 @@
+[
+  {
+    "eventID": "1",
+    "moduleName": "Tech Fest 2025",
+    "eventName": "AI & Robotics Workshop",
+    "eventDate": "15th September 2025",
+    "eventPoster": "https://res.cloudinary.com/dp92qug2f/image/upload/c_scale,w_360,f_auto,fl_lossy/v1676487890/ecell-events/event_pic_lxyaeo.png",
+    "organizers": "Tech Club, CSE Department",
+    "venue": "New Gallery",
+    "eventDetails": "A hands-on workshop on Artificial Intelligence and Robotics with live demonstrations and interactive sessions.",
+    "acceptingResponse": "true",
+    "questions": [
+      "Do you have prior experience with AI/ML?",
+      "Would you like to participate in the hackathon?",
+      "Do you need a participation certificate?"
+    ]
+  },
+  {
+    "eventID": "2",
+    "moduleName": "Cultural Fest 2025",
+    "eventName": "Battle of Bands",
+    "eventDate": "1st October 2025",
+    "eventPoster": "https://example.com/posters/battle-of-bands.jpg",
+    "organizers": "Music Society",
+    "venue": "GymKhana Park",
+    "eventDetails": "An inter-college band competition with electrifying performances.",
+    "acceptingResponse": "true"
+  },
+  {
+    "eventID": "3",
+    "moduleName": "Sports Week",
+    "eventName": "Cricket Tournament",
+    "eventDate": "20th September 2025",
+    "eventPoster": "https://example.com/posters/cricket.png",
+    "organizers": "Sports Committee",
+    "venue": "Football Ground",
+    "eventDetails": "Inter-department cricket matches with knockout rounds and finals.",
+    "acceptingResponse": "false",
+    "questions": [
+      "Which department are you representing?",
+      "Do you have your own cricket kit?"
+    ]
+  },
+  {
+    "eventID": "4",
+    "moduleName": "Entrepreneurship Cell",
+    "eventName": "Startup Pitch Competition",
+    "eventDate": "25th September 2025",
+    "eventPoster": "https://example.com/posters/startup-pitch.jpg",
+    "organizers": "E-Cell",
+    "venue": "Srijan, Innovation Hub",
+    "eventDetails": "Pitch your startup ideas to investors and mentors.",
+    "acceptingResponse": "true",
+    "questions": ["What is your startup idea?", "Do you need mentorship or funding?"]
+  },
+  {
+    "eventID": "5",
+    "moduleName": "Literary Club",
+    "eventName": "Poetry Slam",
+    "eventDate": "30th September 2025",
+    "eventPoster": "https://example.com/posters/poetry-slam.png",
+    "organizers": "Literary Society",
+    "venue": "Old Gallery",
+    "eventDetails": "An evening of expressive poetry and spoken word.",
+    "acceptingResponse": "true"
+  },
+  {
+    "eventID": "6",
+    "moduleName": "Cultural Fest 2025",
+    "eventName": "Drama Competition",
+    "eventDate": "2nd October 2025",
+    "eventPoster": "https://example.com/posters/drama.jpg",
+    "organizers": "Dramatics Club",
+    "venue": "GymKhana Park",
+    "eventDetails": "Teams perform short plays on given themes.",
+    "acceptingResponse": "true",
+    "questions": ["How many members are in your group?", "Do you need stage props?"]
+  },
+  {
+    "eventID": "7",
+    "moduleName": "Coding Club",
+    "eventName": "Hackathon 24Hrs",
+    "eventDate": "28th September 2025",
+    "eventPoster": "https://example.com/posters/hackathon.png",
+    "organizers": "Coding Club",
+    "venue": "CC Lab",
+    "eventDetails": "A 24-hour hackathon to build innovative solutions.",
+    "acceptingResponse": "true",
+    "questions": ["Preferred programming language?", "Do you have a team or need one?"]
+  },
+  {
+    "eventID": "9",
+    "moduleName": "Photography Club",
+    "eventName": "Photo Exhibition",
+    "eventDate": "18th September 2025",
+    "eventPoster": "https://example.com/posters/photo-exhibition.jpg",
+    "organizers": "Photography Club",
+    "venue": "New Gallery",
+    "eventDetails": "An exhibition of the best clicks by our college photographers.",
+    "acceptingResponse": "false"
+  },
+  {
+    "eventID": "10",
+    "moduleName": "Robotics Club",
+    "eventName": "Line Follower Robot Race",
+    "eventDate": "22th September 2025",
+    "eventPoster": "https://example.com/posters/robot-race.png",
+    "organizers": "Robotics Club",
+    "venue": "Gymkhana Park",
+    "eventDetails": "Robotics enthusiasts build and race line follower robots.",
+    "acceptingResponse": "true",
+    "questions": [
+      "Do you have your own robot kit?",
+      "Do you need an Arduino setup from organizers?"
+    ]
+  },
+  {
+    "eventID": "11",
+    "moduleName": "Film Club",
+    "eventName": "Short Film Festival",
+    "eventDate": "27th September 2025",
+    "eventPoster": "https://example.com/posters/short-film.jpg",
+    "organizers": "Obiettivo",
+    "venue": "Mini Auditorium",
+    "eventDetails": "Screening of student-made short films followed by an award ceremony.",
+    "acceptingResponse": "true",
+    "questions": ["Film title?", "Duration of the short film?"]
+  }
+]
