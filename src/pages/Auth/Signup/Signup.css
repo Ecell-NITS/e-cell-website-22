@@ -204,3 +204,114 @@
     font-weight: 900;
   }
 }
+
+.google-btn {
+  /* Sizing from btnsubmittodb */
+  width: 70%;
+  border-radius: 8px;
+  padding: 0.5vw 1.5vw;
+  font-size: 2vw;
+  margin-bottom: 1vw;
+  outline: none;
+
+  /* Unique Google styles */
+  background-color: #ffffff;
+  color: #444444;
+  border: 1px solid #c9c9c9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 1vw;
+}
+
+.google-btn:hover {
+  background-color: #f7f7f7;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.google-icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* --- Responsive styles for the Google button --- */
+@media (max-width: 660px) {
+  .google-btn {
+    /* Sizing from btnsubmittodb */
+    width: 90%;
+    padding: 1vw 3vw;
+    font-size: 5vw;
+    margin-bottom: 2vw;
+
+    /* Unique Google styles */
+    margin-top: 3vw;
+    gap: 10px;
+  }
+  .google-icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #888;
+  margin: 20px 0;
+  width: 70%;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #ccc;
+}
+
+.divider:not(:empty)::before {
+  margin-right: 1em;
+}
+
+.divider:not(:empty)::after {
+  margin-left: 1em;
+}
+
+@media (max-width: 660px) {
+  .divider {
+    width: 90%;
+  }
+}
+
+.divider-container {
+  display: flex;
+  align-items: center;
+  width: 70%;
+  margin: 1.5vw 0;
+  color: var(--light-text-color);
+}
+
+.line {
+  flex-grow: 1;
+  height: 1px;
+  background-color: rgba(154, 148, 148, 1);
+}
+
+.or-text {
+  padding: 0 15px;
+  font-size: 1.2vw;
+  font-weight: 500;
+  color: rgba(154, 148, 148, 1);
+}
+
+/* Add responsive styles inside your existing media query */
+@media (max-width: 660px) {
+  .divider-container {
+    width: 90%;
+  }
+
+  .or-text {
+    font-size: 3.5vw;
+  }
+}

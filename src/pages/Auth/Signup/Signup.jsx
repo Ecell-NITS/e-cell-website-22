@@ -5,6 +5,7 @@ import "./Signup.css";
 import NavbarTeam from "../../../components/shared/Navbar/NavbarTeam";
 import Footer from "../../../components/shared/Footer/Footer";
 import { toast } from "react-toastify";
+import GoogleAuth from "/src/pages/Auth/GoogleAuth.jsx";
 const Signup = () => {
   const navigate = useNavigate();
   const [name, setName] = useState("");
@@ -49,7 +50,7 @@ const Signup = () => {
   const formhandlesubmit = async (e) => {
     e.preventDefault();
 
-    // console.log("isSignUpFormFilled:", isSignUpFormFilled());
+    // console.log("isSignUpFormFilled:", isSinUpFormFilled());
     if (!isSignUpFormFilled()) {
       toast.error("Please fill all the required fields", {
         position: "top-right",
@@ -418,7 +419,12 @@ const Signup = () => {
             >
               {signingup ? "Creating account" : "Sign up"}
             </button>
-
+            <div className="divider-container">
+              <div className="line"></div>
+              <span className="or-text">OR</span>
+              <div className="line"></div>
+            </div>
+            <GoogleAuth />
             <div className="statusmeshs">
               {message && <p className="msgaftersignuplogin">{message}</p>}
               {verifyotp && <p className="statusmsgssubmt">Verifying otp...</p>}

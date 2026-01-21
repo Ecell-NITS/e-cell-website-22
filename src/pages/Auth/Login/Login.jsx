@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import NavbarTeam from "../../../components/shared/Navbar/NavbarTeam";
 import Footer from "../../../components/shared/Footer/Footer";
 import { toast } from "react-toastify";
+import GoogleAuth from "/src/pages/Auth/GoogleAuth.jsx";
 const Login = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
@@ -163,6 +164,12 @@ const Login = () => {
             >
               {loggingin ? "Signing in" : "Sign in"}
             </button>
+            <div className="divider-container">
+              <div className="line"></div>
+              <span className="or-text">OR</span>
+              <div className="line"></div>
+            </div>
+            <GoogleAuth />
             {message && <p className="msgaftersignuplogin">{message}</p>}
             <div className="bottomredirectlogin">
               <h4 className="logexistingaccount">Don’t have an account?</h4>
